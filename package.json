@@ -1,13 +1,10 @@
 {
-  "name": "tslint-config-air",
+  "name": "@rws-air/tslint-config-air",
   "version": "1.0.0",
   "description": "Standard TSLint config for all AIR apps written in TypeScript",
   "main": "tslint.js",
-  "author": "Rijkswaterstaat",
-  "private": true,
-  "files": [
-    "tslint.js"
-  ],
+  "author": "@rws-air",
+  "license": "AGPL-3.0-or-later",
   "keywords": [
     "tslint",
     "config",
@@ -15,6 +12,9 @@
     "air",
     "typescript",
     "ts"
+  ],
+  "files": [
+    "tslint.js"
   ],
   "peerDependencies": {
     "tslint": ">=5"

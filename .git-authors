@@ -1,17 +1,16 @@
 authors:
   dc: Dominique Chalabalaki
   jm: Jeroen Mies
-  lm: Leroy Mies
   kh: Kevin Hendriks
   mb: Maikel Boom
   mc: Marcel Cullens
   ph: Pieter Henssen
   gm: Gerard Mulder
-  re: Reggie Ebendal
   jc: Jeroen Claassens
   br: Bas-Jan de Ridder
   mn: Michel van der Nol
   ya: Yvonne van Aalst
+  jl: Jonathan Li
 email_addresses:
   dc: dominique.chalabalaki@cgi.com
   jm: jeroen.mies@rws.nl
@@ -20,8 +19,8 @@ email_addresses:
   mc: marcel.cullens@cgi.com
   ph: pieter.henssen@rws.nl
   gm: gerard.mulder@rws.nl
-  re: reggie.ebendal@cgi.com
   jc: j.claassens@cgi.com
   br: bas-jan.de.ridder@cgi.com
   mn: michel.van.der.nol@cgi.com
   ya: yvonne.van.aalst@cgi.com
+  jl: jonathan.li@cgi.com
