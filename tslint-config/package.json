@@ -13,10 +13,20 @@
     "typescript",
     "ts"
   ],
+  "scripts": {
+    "build": "terser -cmo tslint.js -- ./config/tslint.config.js",
+    "prepublishOnly": "yarn build"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
   "files": [
     "tslint.js"
   ],
   "peerDependencies": {
     "tslint": ">=5"
+  },
+  "devDependencies": {
+    "terser": "^4.0.0"
   }
 }
