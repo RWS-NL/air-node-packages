@@ -1,6 +1,6 @@
 {
   "name": "@rws-air/usercreator",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Script to add users to usermanagement environments",
   "main": "./dist/usercreator.js",
   "bin": {
@@ -34,7 +34,7 @@
     "prepublishOnly": "yarn build"
   },
   "devDependencies": {
-    "@rws-air/tslint-config-air": "^1.0.0",
+    "@rws-air/tslint-config": "^1.0.0",
     "@types/common-tags": "^1.8.0",
     "@types/js-yaml": "^3.12.1",
     "@types/node": "^11.13.8",

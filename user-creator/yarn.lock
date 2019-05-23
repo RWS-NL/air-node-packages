@@ -26,10 +26,10 @@
     js-yaml "^3.13.1"
     tslib "^1.9.3"
 
-"@rws-air/tslint-config-air@^1.0.0":
+"@rws-air/tslint-config@^1.0.0":
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@rws-air/tslint-config-air/-/tslint-config-air-1.0.0.tgz#f84fa0ecc8422c0d0613daf36e4c68d10709a81c"
-  integrity sha512-PJpAlJcL4xq1ha239uZAcYJNDExQGc9kk0GgStGV+gnp3Muyf4568uywzJi5ahfzvyC2TTIK963FwOZtlwE91g==
+  resolved "https://registry.yarnpkg.com/@rws-air/tslint-config/-/tslint-config-1.0.0.tgz#0e91793af089a87e753aed5a8b04389e6ea8c17b"
+  integrity sha512-eTFoCfk9yFn1oJiVsHnnyCWCrYuC52XP7xBhb7zm4J21bf4w75M3PUWruMpZQKbP7Wx5tkgULnE6O54PPZrDIQ==
 
 "@types/common-tags@^1.8.0":
   version "1.8.0"
