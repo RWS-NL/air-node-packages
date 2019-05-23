@@ -1,3 +1,1 @@
 #pattern  filter=crypt diff=crypt
-user-creator/fixtures/sample-user.yml filter=crypt diff=crypt
-user-creator/fixtures/user.yml filter=crypt diff=crypt
