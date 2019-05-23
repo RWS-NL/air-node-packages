@@ -1,0 +1,8 @@
+  -
+      firstname: Darth
+      middlename: ""
+      lastname: Vader
+      email: darth.vader@thedeathstar.com
+      roles:
+        - SITH_LORD
+        - SKYWALKER

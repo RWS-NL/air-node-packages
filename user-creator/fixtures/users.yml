@@ -1,0 +1,16 @@
+  -
+      firstname: Darth
+      middlename: ""
+      lastname: Vader
+      email: darth.vader@thedeathstar.com
+      roles:
+        - SITH_LORD
+        - SKYWALKER
+  -
+      firstname: Robin
+      middlename: of
+      lastname: Loxley
+      email: robin.of.loxley@robinhood.com
+      roles:
+        - SHARPSHOOTER
+        - RANGER

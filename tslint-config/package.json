@@ -1,5 +1,5 @@
 {
-  "name": "@rws-air/tslint-config-air",
+  "name": "@rws-air/tslint-config",
   "version": "1.0.0",
   "description": "Standard TSLint config for all AIR apps written in TypeScript",
   "main": "tslint.js",
