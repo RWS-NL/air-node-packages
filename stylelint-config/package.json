@@ -1,0 +1,37 @@
+{
+  "name": "@rws-air/stylint-config",
+  "version": "1.0.0",
+  "description": "Standard StyleLint config for all AIR apps",
+  "main": "stylelint.js",
+  "author": "@rws-air",
+  "license": "AGPL-3.0-or-later",
+  "keywords": [
+    "stylelint",
+    "config",
+    "rws",
+    "air",
+    "scss"
+  ],
+  "scripts": {
+    "build": "terser -cmo stylelint.js -- ./config/stylelint.config.js",
+    "prepublishOnly": "yarn build"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "stylelint.js"
+  ],
+  "devDependencies": {
+    "terser": "^4.0.0"
+  },
+  "peerDependencies": {
+    "stylelint": ">=9"
+  },
+  "dependencies": {
+    "stylelint-config-recommended": "^2.2.0",
+    "stylelint-config-sass-guidelines": "^6.0.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-scss": "^3.6.1"
+  }
+}
