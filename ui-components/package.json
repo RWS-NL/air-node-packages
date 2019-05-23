@@ -1,0 +1,35 @@
+{
+  "name": "@rws-air/ui-components",
+  "version": "1.0.0",
+  "description": "Standard Webcomponents for AIR projects",
+  "main": "./dist/index.js",
+  "author": "@rws-air",
+  "license": "AGPL-3.0-or-later",
+  "dependencies": {
+    "@material-ui/core": "^3.9.3",
+    "@material-ui/icons": "^3.0.2",
+    "classnames": "^2.2.6",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@rws-air/stylelint-config": "^1.0.0",
+    "@rws-air/tslint-config": "^1.0.0",
+    "@types/classnames": "^2.2.7",
+    "@types/enzyme": "^3.9.2",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/jest": "^24.0.13",
+    "@types/node": "^12.0.2",
+    "@types/react": "^16.8.18",
+    "concurrently": "^4.1.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.13.1",
+    "jest": "^24.8.0",
+    "node-sass": "^4.12.0",
+    "stylelint": "^10.0.1",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5",
+    "webpack": "^4.32.2"
+  }
+}

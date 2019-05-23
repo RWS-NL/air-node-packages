@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "forceConsistentCasingInFileNames": true,
+        "esModuleInterop": true,
+        "lib": [ "esnext", "dom" ],
+        "target": "es2015",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "newLine": "lf",
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "removeComments": true,
+        "resolveJsonModule": true,
+        "importHelpers": true,
+        "strict": true,
+        "baseUrl": "src",
+        "declaration": true,
+        "declarationDir": "./dist"
+    },
+    "include": [ "src/**/*.ts" ],
+    "exclude": [ "node_modules", "dist" ]
+}
