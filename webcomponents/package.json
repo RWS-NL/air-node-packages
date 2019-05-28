@@ -23,7 +23,7 @@
     "styleguide:build": "styleguidist build",
     "clean": "rimraf ./dist",
     "terser": "terser-folder ./dist -eo ./dist -x .js",
-    "prepublishOnly": "concurrently \"yarn build\" \"yarn styleguide:build\""
+    "prepublishOnly": "concurrently \"yarn build\""
   },
   "dependencies": {},
   "peerDependencies": {
