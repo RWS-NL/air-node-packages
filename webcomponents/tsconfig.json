@@ -3,10 +3,13 @@
     "outDir": "build",
     "module": "esnext",
     "target": "es5",
-    "lib": ["esnext", "dom"],
+    "lib": [
+      "esnext",
+      "dom"
+    ],
     "sourceMap": true,
     "allowJs": false,
-    "jsx": "react",
+    "jsx": "preserve",
     "declaration": true,
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
@@ -14,8 +17,22 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "strict": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "src",
+    "skipLibCheck": true,
+    "noEmit": true
   },
-  "include": ["src", "package.json"],
-  "exclude": ["node_modules", "build", "dist", "example", "rollup.config.js"]
+  "include": [
+    "src",
+    "package.json"
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    "example",
+    "rollup.config.js"
+  ]
 }

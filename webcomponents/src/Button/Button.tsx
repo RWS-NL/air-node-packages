@@ -2,21 +2,23 @@
  * @class Button
  */
 
-import * as React from 'react'
+import React, { FC, ReactNode } from 'react'
 import classnames from 'classnames';
 import css from './Button.scss';
 import { Button as MUIButton } from '@material-ui/core';
 import { ButtonProps } from '@material-ui/core/Button';
 
 export type RWSButtonProps = {
-    label: React.ReactNode;
+    variant: 'text' | 'outlined' | 'contained' | undefined;
+    color: 'primary' | 'secondary' | 'default' | 'inherit' | undefined;
+    label: ReactNode;
     disabled?: boolean;
     customClasses?: string | string[];
 
     onClick(): any;
 };
 
-export const Button: React.FC<ButtonProps<'button', RWSButtonProps>> = props => (
+export const Button: FC<ButtonProps<'button', RWSButtonProps>> = props => (
     <MUIButton
         onClick={props.onClick}
         variant={props.variant}

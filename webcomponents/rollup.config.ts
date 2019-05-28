@@ -3,13 +3,12 @@ import commonjs from 'rollup-plugin-commonjs';
 import external from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
 import resolve from 'rollup-plugin-node-resolve';
-import { terser } from "rollup-plugin-terser";
 import progress from 'rollup-plugin-progress';
 import url from 'rollup-plugin-url';
 import svgr from '@svgr/rollup';
 
 export default {
-  input: 'src/index.tsx',
+  input: 'src/index.ts',
   output: [
     {
       file: './dist/index.js',
@@ -38,7 +37,6 @@ export default {
       rollupCommonJSResolveHack: true,
       clean: true
     }),
-    commonjs(),
-    terser()
+    commonjs()
   ]
 }
