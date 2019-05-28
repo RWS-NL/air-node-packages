@@ -25,7 +25,7 @@ declare module 'rollup-plugin-postcss' {
       onImport?: (id: any) => void;
     }
   
-    function postcss(options: PostCssPluginOptions): void;
+    function postcss(options?: PostCssPluginOptions): void;
   
     export default postcss;
   }

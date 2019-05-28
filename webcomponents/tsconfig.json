@@ -30,7 +30,9 @@
     "node_modules",
     "build",
     "dist",
-    "example",
-    "rollup.config.js"
+    "styleguide",
+    "rollup.config.ts",
+    "src/setupTests.ts",
+    "src/__tests__"
   ]
 }
