@@ -1,10 +1,15 @@
 {
     "compilerOptions": {
+        "outDir": "./lib",
+        "sourceRoot": "./src",
         "forceConsistentCasingInFileNames": true,
         "esModuleInterop": true,
-        "lib": [ "esnext", "dom" ],
-        "target": "es2015",
-        "module": "commonjs",
+        "lib": [
+            "esnext",
+            "dom"
+        ],
+        "target": "es5",
+        "module": "ES2015",
         "moduleResolution": "node",
         "newLine": "lf",
         "noFallthroughCasesInSwitch": true,
@@ -16,10 +21,18 @@
         "resolveJsonModule": true,
         "importHelpers": true,
         "strict": true,
-        "baseUrl": "src",
+        "baseUrl": "./",
         "declaration": true,
-        "declarationDir": "./dist"
+        "sourceMap": true,
+        "jsx": "react"
     },
-    "include": [ "src/**/*.ts" ],
-    "exclude": [ "node_modules", "dist" ]
+    "include": [
+        "./src/**/*.tsx",
+        "./src/**/*.ts",
+        "declaration.d.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "lib"
+    ]
 }

@@ -1,0 +1,5 @@
+# Rollup TypeScript cache
+.rpt2_cache/
+
+# Distributable
+lib/

@@ -1,0 +1,20 @@
+@import '../vars';
+
+.rwsButton {
+  @include font-normal;
+  background-color: $blue;
+  border-radius: 0;
+  box-shadow: none;
+  float: right;
+  height: 3.2rem;
+  line-height: initial;
+  margin-right: 1%;
+}
+
+.rwsButtonLabel {
+  @include font-normal;
+  color: $white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: none;
+}

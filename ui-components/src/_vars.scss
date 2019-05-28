@@ -1,0 +1,36 @@
+/* stylelint-disable color-no-hex */
+
+$black: #000000;
+$blue: #0B71AB;
+$bright-blue: #007BC7;
+$medium-blue: #005395;
+$dark-blue: #154273;
+$dark-orange: #FFB612;
+$dark-white: #F8F8F8;
+$green: #39870C;
+$grey: #666666;
+$inactive-blue: #85B8D5;
+$light-blue: #E5F0F9;
+$light-green: #C3DBB6;
+$light-grey: #DAD9D7;
+$light-yellow: #FDF6BB;
+$medium-grey: #979797;
+$medium-rare-grey: #777777;
+$middle-yellow: #FBED7E;
+$orange: #F6D4B2;
+$pink: #F2BFBB;
+$red: #D52B1E;
+$salmon-pink: #F9DFDD;
+$text-black: #222222;
+$very-light-grey: #F7F6F4;
+$white: #FFFFFF;
+$yellow: #F9E11E;
+
+$rws-font-text: rijksoverheidsanstext, verdana, arial, sans-serif;
+
+@mixin font-normal {
+  font-family: $rws-font-text;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+}

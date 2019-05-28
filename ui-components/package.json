@@ -2,17 +2,30 @@
   "name": "@rws-air/ui-components",
   "version": "1.0.0",
   "description": "Standard Webcomponents for AIR projects",
-  "main": "./dist/index.js",
+  "main": "./lib/index.js",
+  "module": "./lib/index.module.js",
+  "typings": "./lib/index.d.ts",
   "author": "@rws-air",
   "license": "AGPL-3.0-or-later",
+  "scripts": {
+    "test": "jest",
+    "test:ci": "CI=true jest",
+    "lint": "concurrently \"yarn tslint\" \"yarn stylelint\"",
+    "tslint": "tslint --fix -p . -c ./tslint.json --fix --format verbose",
+    "stylelint": "stylelint --fix ./src/**/*.scss ./src/*.scss",
+    "prebuild": "rimraf ./lib/",
+    "build": "rollup -c rollup.config.ts",
+    "watch": "yarn build -w"
+  },
   "dependencies": {
-    "@material-ui/core": "^3.9.3",
-    "@material-ui/icons": "^3.0.2",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
     "classnames": "^2.2.6",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
+    "@material-ui/core": "^4",
     "@rws-air/stylelint-config": "^1.0.0",
     "@rws-air/tslint-config": "^1.0.0",
     "@types/classnames": "^2.2.7",
@@ -26,10 +39,24 @@
     "enzyme-adapter-react-16": "^1.13.1",
     "jest": "^24.8.0",
     "node-sass": "^4.12.0",
+    "react-docgen-typescript": "^1.12.4",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.12.4",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-node-resolve": "^5.0.0",
+    "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-typescript2": "^0.21.1",
+    "rollup-plugin-uglify": "^6.0.2",
     "stylelint": "^10.0.1",
     "ts-jest": "^24.0.2",
+    "tslib": "^1.9.3",
     "tslint": "^5.16.0",
     "typescript": "^3.4.5",
     "webpack": "^4.32.2"
+  },
+  "peerDependencies": {
+    "@material-ui/core": "^4"
   }
 }
