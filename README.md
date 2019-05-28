@@ -21,6 +21,10 @@
 
 This is a mono-repo for all NodeJS related packages used throughout other AIR projects. Each subfolder holds a package that gets published to the NPM registry for use in other projects.
 
+## Commit Message rules for this repository
+
+Since this is a mono-repo it is desirable that we show what package we are committing to in the commit message. Therefore please prefix your commit message with the name of the package. For example: `(webcomponents) Did something` or `(tslint-config) Update TSLint rules`. When committing something that is not in one of the packages (for example changes to this readme) prefix it with `(main)`.
+
 ## Tools and prerequisites for development
 
 ### All Operating Systems
