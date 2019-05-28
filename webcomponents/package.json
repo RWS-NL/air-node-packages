@@ -1,6 +1,6 @@
 {
   "name": "@rws-air/webcomponents",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Standard Webcomponents for AIR projects",
   "author": "@rws-air",
   "license": "AGPL-3.0-or-later",
@@ -29,12 +29,12 @@
   "peerDependencies": {
     "@material-ui/core": ">=4",
     "classnames": ">=2",
-    "prop-types": ">=15",
     "react": ">=16",
     "react-dom": ">=16"
   },
   "devDependencies": {
     "@material-ui/core": "^4.0.1",
+    "@rws-air/webcomponents": "^1.0.1",
     "@svgr/rollup": "^4.3.0",
     "@types/classnames": "^2.2.7",
     "@types/enzyme": "^3.9.3",
