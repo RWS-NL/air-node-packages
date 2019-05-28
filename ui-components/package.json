@@ -18,15 +18,15 @@
     "build": "rollup -c",
     "start": "rollup -c -w",
     "prepare": "yarn run build",
-    "predeploy": "cd example && yarn install && yarn run build"
+    "start:example": "cd example && yarn install && yarn start"
   },
   "dependencies": {},
   "peerDependencies": {
     "@material-ui/core": ">=4",
     "classnames": ">=2",
     "prop-types": ">=15",
-    "react": ">=16",
-    "react-dom": ">=16"
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
   },
   "devDependencies": {
     "@material-ui/core": "^4.0.1",
@@ -40,8 +40,8 @@
     "classnames": "^2.2.6",
     "cross-env": "^5.2.0",
     "node-sass": "^4.12.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
     "react-scripts-ts": "^3.1.0",
     "rollup": "^0.62.0",
     "rollup-plugin-babel": "^3.0.7",
