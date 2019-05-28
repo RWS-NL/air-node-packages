@@ -1,0 +1,20 @@
+@import '../styles/vars';
+
+.rwsButton {
+  @include font-normal;
+  background-color: $blue !important;
+  border-radius: 0        !important;
+  box-shadow: none        !important;
+  float: right            !important;
+  height: 3.2rem          !important;
+  line-height: initial    !important;
+  margin-right: 1%        !important;
+}
+
+.rwsButtonLabel {
+  @include font-normal;
+  color: $white           !important;
+  font-size: 1rem         !important;
+  font-weight: bold       !important;
+  text-transform: none    !important;
+}
