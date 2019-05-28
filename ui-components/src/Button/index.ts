@@ -1,4 +1,2 @@
-import Button from './Button';
-
-export * from './Button';
-export default Button;
+export { default as Button } from './Button';
+export { RWSButtonProps as ButtonProps } from './Button';
