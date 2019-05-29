@@ -10,6 +10,14 @@ const Example: FC = () => (
 )
 ```
 
+**Regular size logo:**
+
 ```jsx
-< Logo />
+<Logo height={80}/>
+```
+
+**Very tiny logo:**
+
+```jsx
+<Logo height={10}/>
 ```

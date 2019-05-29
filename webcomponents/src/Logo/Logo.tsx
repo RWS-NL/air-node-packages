@@ -1,12 +1,12 @@
 import classnames from 'classnames';
-import React, { FC, Fragment } from 'react';
+import React, { FC, Fragment, SVGProps } from 'react';
 import css from './Logo.scss';
 import { ReactComponent as LogoSVG } from './logo.svg'
 
-const Logo: FC = () => {
+const Logo: FC<SVGProps<any>> = props => {
     return (
         <Fragment>
-            <LogoSVG className={classnames(css.logo)} />
+            <LogoSVG className={classnames(css.logo)} {...props} />
         </Fragment>
     );
 };

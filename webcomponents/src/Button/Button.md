@@ -17,7 +17,7 @@ const Example: FC = () => (
 **Basic Button:**
 
 ```jsx
-import { Button } from './Button';
+import { Button } from '@rws-air/webcomponents';
 
 <Button variant='contained' color='primary' label='Click Me!' onClick={() => console.log('you clicked the basic button!')} />
 ```
@@ -25,12 +25,16 @@ import { Button } from './Button';
 **Disabled Button:**
 
 ```jsx
-<Button variant='contained' color='primary' label={'You can\'t click me'} disabled />
+import { Button } from '@rws-air/webcomponents';
+
+<Button variant='contained' color='primary' label='test' disabled />
 ```
 
 **Secondary Color button:**
 
 ```jsx
+import { Button } from '@rws-air/webcomponents';
+
 <Button
   variant='contained' color='secondary'label='I am secondary!'
   onClick={() => console.log('you clicked the secondary button!')} 
@@ -40,6 +44,8 @@ import { Button } from './Button';
 **Outline Button:**
 
 ```jsx
+import { Button } from '@rws-air/webcomponents';
+
 <Button
   variant='outlined' color='primary'label='I am secondary!'
   onClick={() => console.log('you clicked the outlined button!')} 

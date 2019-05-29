@@ -26,7 +26,8 @@ $very-light-grey: #F7F6F4;
 $white: #FFFFFF;
 $yellow: #F9E11E;
 
-$rws-font-text: rijksoverheidsanstext, verdana, arial, sans-serif;
+$rws-font-text: rijksoverheidsanstext, arial, verdana, sans-serif;
+$rws-font-header: rijksoverheidsansheading, arial, verdana, sans-serif;
 
 @mixin font-normal {
   font-family: $rws-font-text;

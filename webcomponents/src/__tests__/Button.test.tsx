@@ -1,4 +1,4 @@
-import Button from 'Button/Button';
+import Button from '../Button/Button';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
 

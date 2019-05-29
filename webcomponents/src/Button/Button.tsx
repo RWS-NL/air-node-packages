@@ -8,6 +8,8 @@ import css from './Button.scss';
 import { Button as MUIButton } from '@material-ui/core';
 import { ButtonProps } from '@material-ui/core/Button';
 
+import './Button.scss';
+
 export type RWSButtonProps = {
     variant: 'text' | 'outlined' | 'contained' | undefined;
     color: 'primary' | 'secondary' | 'default' | 'inherit' | undefined;
@@ -26,7 +28,7 @@ export const Button: FC<ButtonProps<'button', RWSButtonProps>> = props => (
         disabled={props.disabled}
         className={classnames(props.customClasses)}
         classes={{ root: css.rwsButton, label: css.rwsButtonLabel }}
-        href=''
+        href={undefined}
     >
         {props.label}
     </MUIButton>

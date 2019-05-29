@@ -1,4 +1,4 @@
-@import '../styles/vars';
+@import '../styles/vars.scss';
 
 .rwsButton {
   @include font-normal;
@@ -17,4 +17,22 @@
   font-size: 1rem         !important;
   font-weight: bold       !important;
   text-transform: none    !important;
+}
+
+button[class*="Secondary"] {
+  background-color: $yellow !important;
+}
+
+button:disabled {
+  background-color: $light-grey !important;
+}
+
+button[class*="outlined"] {
+  background-color: $white !important;
+  border: 2px solid $blue !important;
+  color: $text-black !important;
+
+  > span {
+    color: $text-black !important;
+  }
 }
