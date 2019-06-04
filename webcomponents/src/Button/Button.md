@@ -12,12 +12,12 @@ const Example: FC = () => (
 )
 ```
 
-**Basic Button:**
+**Primary Button:**
 
 ```jsx
 import { Button } from '@rws-air/webcomponents';
 
-<Button variant='contained' color='primary' label='Click Me!' onClick={() => console.log('you clicked the basic button!')} />
+<Button variant='contained' color='primary' label='I am primary!' onClick={() => console.log('you clicked the basic button!')} />
 ```
 
 **Disabled Button:**
@@ -25,7 +25,7 @@ import { Button } from '@rws-air/webcomponents';
 ```jsx
 import { Button } from '@rws-air/webcomponents';
 
-<Button variant='contained' color='primary' label='test' disabled />
+<Button variant='contained' color='primary' label='I am disabled!' disabled />
 ```
 
 **Secondary Color button:**
@@ -34,7 +34,7 @@ import { Button } from '@rws-air/webcomponents';
 import { Button } from '@rws-air/webcomponents';
 
 <Button
-  variant='contained' color='secondary'label='I am secondary!'
+  variant='contained' color='secondary' label='I am secondary!'
   onClick={() => console.log('you clicked the secondary button!')} 
 />
 ```
@@ -45,7 +45,7 @@ import { Button } from '@rws-air/webcomponents';
 import { Button } from '@rws-air/webcomponents';
 
 <Button
-  variant='outlined' color='primary'label='I am secondary!'
+  variant='outlined' color='primary' label='I am outlined!'
   onClick={() => console.log('you clicked the outlined button!')} 
 />
 ```

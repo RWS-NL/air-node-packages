@@ -17,19 +17,3 @@ import { ActionBar } from '@rws-air/webcomponents';
 
 <ActionBar title='ActionBar Title' />
 ```
-
-**AcionBar with button:**
-
-```jsx
-import { ActionBar } from '@rws-air/webcomponents';
-
-<ActionBar title='ActionBar Title' buttonLabel='action-bar-button' buttonAction={() => console.log('test')} shouldHaveButton />
-```
-
-**ActionBar without button:**
-
-```jsx
-import { ActionBar } from '@rws-air/webcomponents';
-
-<ActionBar title='ActionBar Title' />
-```
