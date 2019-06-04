@@ -1,5 +1,3 @@
-
-
 ## Usage of the Button component:
 
 **Example:**

@@ -11,12 +11,18 @@ import { ButtonProps } from '@material-ui/core/Button';
 import './Button.scss';
 
 export type RWSButtonProps = {
+    /** The variant of the button */
     variant: 'text' | 'outlined' | 'contained' | undefined;
+    /** The color type of the button */
     color: 'primary' | 'secondary' | 'default' | 'inherit' | undefined;
+    /** The label to be displayed inside the button */
     label: ReactNode;
+    /** Whether this button should be disabled */
     disabled?: boolean;
+    /** Any extra CSS classes to be passed to the button */
     customClasses?: string | string[];
 
+    /** The action that should be triggered when clicking the button */
     onClick(): any;
 };
 
