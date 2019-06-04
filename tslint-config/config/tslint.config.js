@@ -103,7 +103,6 @@ module.exports = {
     ],
     'no-unsafe-finally': true,
     'no-unused-expression': true,
-    'no-use-before-declare': true,
     'no-var-keyword': true,
     'no-var-requires': true,
     'number-literal-format': true,
