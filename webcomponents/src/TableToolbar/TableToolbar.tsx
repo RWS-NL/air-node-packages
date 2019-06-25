@@ -4,7 +4,7 @@ import css from './TableToolbar.scss';
 import Grid from '@material-ui/core/Grid/Grid';
 import SearchIcon from '@material-ui/icons/Search';
 import debouncer from 'lodash.debounce';
-import { SearchBar } from '../SearchBar';
+import SearchBar from '../SearchBar/SearchBar';
 
 export type TableToolbarProps = {
     customClasses?: string | string[];

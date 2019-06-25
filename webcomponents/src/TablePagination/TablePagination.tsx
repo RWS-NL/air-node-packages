@@ -2,7 +2,7 @@ import React, { FC, ChangeEvent, ReactNode } from "react";
 import MUITablePagination, { TablePaginationProps as MUITablePaginationProps } from '@material-ui/core/TablePagination';
 import classnames from 'classnames';
 import css from './TablePagination.scss';
-import { TablePaginationActions } from '../TablePaginationActions';
+import TablePaginationActions from '../TablePaginationActions/TablePaginationActions';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 export type TablePaginationProps = {

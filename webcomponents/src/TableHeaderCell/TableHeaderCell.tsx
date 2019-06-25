@@ -3,7 +3,7 @@ import React, { FC } from "react";
 import classnames from 'classnames';
 import css from './TableHeaderCell.scss';
 import TableSortLabel from '@material-ui/core/TableSortLabel';
-import { Tooltip, TooltipProps } from '../Tooltip';
+import Tooltip, { TooltipProps } from '../Tooltip/Tooltip';
 
 export type TableHeaderProps = {
     label: string;
