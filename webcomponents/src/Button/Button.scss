@@ -35,4 +35,8 @@ button[class*="outlined"] {
   > span {
     color: $text-black !important;
   }
+
+  &:hover {
+    border-width: 2px !important;
+  }
 }
