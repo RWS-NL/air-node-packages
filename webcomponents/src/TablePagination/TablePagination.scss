@@ -1,0 +1,24 @@
+@import '../styles/vars.scss';
+
+.tablePagination {
+  @include beautifulCenter;
+  align-items: center;
+  background-color: $light-blue;
+  display: flex;
+  float: left;
+  font-size: $font-size-default;
+  height: 2.4vw;
+  width: 100%;
+
+  &Mobile {
+    height: 2.5rem;
+  }
+}
+
+.selectIcon {
+  left: 1.4rem;
+}
+
+.menuItem {
+  font-size: $font-size-default;
+}

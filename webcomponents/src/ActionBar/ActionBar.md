@@ -3,7 +3,7 @@
 **Examples:**
 
 ```tsx
-import React, { FC } from 'react';
+import React from 'react';
 
 import { ActionBar } from '@rws-air/webcomponents';
 
@@ -11,7 +11,7 @@ import { ActionBar } from '@rws-air/webcomponents';
 ```
 
 ```tsx
-import React, { FC } from 'react';
+import React from 'react';
 
 import { ActionBar } from '@rws-air/webcomponents';
 

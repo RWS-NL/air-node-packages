@@ -1,0 +1,36 @@
+@import '../styles/vars.scss';
+
+.heightCorrection {
+  flex-basis: 0%;
+  height: 4rem;
+}
+
+.toolbar {
+  @include beautifulCenter;
+  background-color: $light-grey;
+  display: flex;
+  height: 4rem;
+  margin-top: 5vh;
+  width: 100%;
+}
+
+.searchFieldContent {
+  border: 1px solid $medium-grey;
+  border-radius: 0;
+
+  box-shadow: none;
+  color: $grey;
+  font-size: $font-size-reset;
+  margin: 0 auto;
+  margin-left: 24vw;
+  width: 20vw;
+}
+
+.searchIconButton {
+  color: $blue;
+  opacity: 1;
+}
+
+.ie11-searchBarTextCorrection > div > div > input {
+  min-height: 2.5rem;
+}

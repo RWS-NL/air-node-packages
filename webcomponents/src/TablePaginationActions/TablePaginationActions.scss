@@ -1,0 +1,24 @@
+@import '../styles/vars.scss';
+
+.paginationNumbers {
+  color: $blue;
+  cursor: pointer;
+  font-family: $rws-font-text;
+  font-weight: bolder;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+}
+
+.activePageChip {
+  border-width: 2px !important;
+  font-weight: bolder;
+}
+
+.noHoverBackground:hover,
+.noHoverBackground:focus {
+  background-color: transparent !important;
+}
+
+.ie11-chipCorrection {
+  min-width: 2rem;
+}

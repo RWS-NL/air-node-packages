@@ -1,0 +1,1 @@
+export { default as TablePaginationActions, TablePaginationActionsProps } from './TablePaginationActions';

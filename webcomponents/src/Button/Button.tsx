@@ -6,11 +6,11 @@ import React, { FC, ReactNode } from 'react'
 import classnames from 'classnames';
 import css from './Button.scss';
 import { Button as MUIButton } from '@material-ui/core';
-import { ButtonProps } from '@material-ui/core/Button';
+import { ButtonProps as MUIButtonProps } from '@material-ui/core/Button';
 
 import './Button.scss';
 
-export type RWSButtonProps = {
+export type ButtonProps = {
     /** The variant of the button */
     variant: 'text' | 'outlined' | 'contained' | undefined;
     /** The color type of the button */
@@ -26,7 +26,7 @@ export type RWSButtonProps = {
     onClick(): any;
 };
 
-export const Button: FC<ButtonProps<'button', RWSButtonProps>> = props => (
+export const Button: FC<MUIButtonProps<'button', ButtonProps>> = props => (
     <MUIButton
         onClick={props.onClick}
         variant={props.variant}
