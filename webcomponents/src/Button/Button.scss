@@ -19,8 +19,18 @@
   text-transform: none    !important;
 }
 
+button[class*="Primary"] {
+  border: 2px solid $blue !important;
+}
+
 button[class*="Secondary"] {
   background-color: $yellow !important;
+  color: $text-black !important;
+  border: 2px solid $yellow !important;
+
+  > span {
+    color: $text-black !important;
+  }
 }
 
 button:disabled {
@@ -30,10 +40,10 @@ button:disabled {
 button[class*="outlined"] {
   background-color: $white !important;
   border: 2px solid $blue !important;
-  color: $text-black !important;
+  color: $blue !important;
 
   > span {
-    color: $text-black !important;
+    color: $blue !important;
   }
 
   &:hover {

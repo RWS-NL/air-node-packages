@@ -3,7 +3,7 @@
 }
 
 .header {
-  min-height: 100vh;
+  margin-top: 2rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -11,4 +11,9 @@
   font-size: calc(10px + 2vmin);
   color: black;
   flex-wrap: wrap;
+}
+
+.logo {
+  text-align: center;
+  margin-top: 2rem;
 }
