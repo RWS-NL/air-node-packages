@@ -1,0 +1,44 @@
+@import '../styles/vars';
+
+.input {
+  width: 100% !important;
+}
+
+.search {
+  &Bar {
+    height: 48px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+  }
+
+  &IconButton {
+    margin-right: -48px !important;
+  }
+
+  &Container {
+    margin: auto 16px !important;
+    width: calc(100% - 48px - 32px) !important;
+  }
+}
+
+.icon {
+  opacity: 0.54 !important;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+
+  &Button {
+    opacity: 0.54 !important;
+    transform: scale(1, 1) !important;
+    transform: transform 200ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+
+    &Hidden {
+      transform: scale(0, 0) !important;
+      & > icon {
+        opacity: 0 !important;
+      }
+    }
+
+    &Disabled {
+      opacity: 0.38 !important;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-## Usage of the Logo component:
+### Usage of the Logo component:
 
 ```tsx
 import React, { FC } from 'react'

@@ -1,4 +1,4 @@
-## Usage of the Button component:
+### Usage of the Button component:
 
 **Example:**
 

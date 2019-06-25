@@ -1,5 +1,8 @@
 /* stylelint-disable color-no-hex */
 
+// stylelint-disable-next-line number-max-precision
+$arrowModifier: 1.41421356;
+
 $black: #000000;
 $blue: #0b71ab;
 $bright-blue: #007bc7;
@@ -28,16 +31,18 @@ $yellow: #f9e11e;
 
 $rws-font-text: rijksoverheidsanstext, arial, verdana, sans-serif;
 $rws-font-header: rijksoverheidsansheading, arial, verdana, sans-serif;
+$font-size-default: 14px;
+$font-size-reset: 1rem;
 
 @mixin font-normal {
   font-family: $rws-font-text;
-  font-stretch: normal;
-  font-style: normal;
-  font-weight: normal;
+  font-stretch: normal !important;
+  font-style: normal !important;
+  font-weight: normal !important;
 }
 
 @mixin beautifulCenter {
-  margin-left: 5vw;
-  margin-right: 5vw;
-  max-width: 90vw;
+  margin-left: 5vw !important;
+  margin-right: 5vw !important;
+  max-width: 90vw !important;
 }

@@ -1,7 +1,13 @@
 import React, { FC, Fragment } from 'react';
 import css from 'styles/modules/app.module.scss';
-
-import { Button, Logo, ActionBar } from '@rws-air/ui-components'
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import EditIcon from '@material-ui/icons/Create';
+import IconButton from '@material-ui/core/IconButton';
+import TableRow from '@material-ui/core/TableRow';
+import SearchIcon from '@material-ui/icons/Search';
+import classnames from 'classnames';
+import { Button, Logo, ActionBar, TableBodyCell, SearchBar } from '@rws-air/ui-components'
 
 const Home: FC = () => {
   return (
@@ -19,6 +25,29 @@ const Home: FC = () => {
           <Button variant='outlined' color='primary' label='Outlined Primary Button' onClick={() => console.log('Clicked Outlined Primary Button')} />
           <Button variant='outlined' color='secondary' label='Outlined Secondary Button' onClick={() => console.log('Clicked Outlined Secondary Button')} />
         </header>
+      </div>
+      <div className={css.spacer}>
+        <Table>
+          <TableBody>
+            <TableRow>
+              <TableBodyCell content='cell content' />
+              <TableBodyCell content={
+                <IconButton>
+                  <EditIcon color='primary' />
+                </IconButton>
+              } />
+            </TableRow>
+          </TableBody>
+        </Table>
+      </div>
+      <div className={css.spacer}>
+        <SearchBar
+          data-qa='table-search-bar'
+          placeholder={`Search...`}
+          onChange={() => console.log('changed!')}
+          onCancelSearch={() => console.log('Canceled Search!')}
+          searchIcon={<SearchIcon className={classnames(css.searchIconButton)} />}
+        />
       </div>
     </Fragment>
   );

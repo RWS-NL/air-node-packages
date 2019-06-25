@@ -1,6 +1,6 @@
 import React, { FC, SyntheticEvent, Fragment } from "react";
 import classnames from 'classnames';
-import css from './TableBodyCell.scss';
+import css from './TablePaginationActions.scss';
 import Chip from '@material-ui/core/Chip';
 import IconButton from '@material-ui/core/IconButton';
 import FirstPageIcon from '@material-ui/icons/FirstPage';

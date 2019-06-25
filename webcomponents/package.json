@@ -23,16 +23,15 @@
     "styleguide:build": "styleguidist build",
     "clean": "rimraf ./dist",
     "terser": "terser-folder ./dist -eo ./dist -x .js",
-    "prepublishOnly": "concurrently \"yarn build\""
+    "prepublishOnly": "concurrently \"yarn build\"",
+    "modules": "rimraf node_modules yarn.lock local-sample/node_modules local-sample/yarn.lock && yarn && pushd local-sample && yarn && popd"
   },
-  "dependencies": {
-    "lodash.debounce": "^4.0.8",
-    "material-ui-search-bar": "^1.0.0-beta.13"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "@material-ui/core": ">=4",
     "@material-ui/icons": ">=4",
     "classnames": ">=2",
+    "lodash.debounce": "^4.0.8",
     "react": ">=16",
     "react-dom": ">=16"
   },
@@ -54,6 +53,7 @@
     "cross-env": "^5.2.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
+    "lodash.debounce": "^4.0.8",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-docgen-typescript": "^1.12.5",

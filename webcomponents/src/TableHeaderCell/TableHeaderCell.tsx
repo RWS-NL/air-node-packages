@@ -1,7 +1,7 @@
 import MUITableCell from '@material-ui/core/TableCell';
 import React, { FC } from "react";
 import classnames from 'classnames';
-import css from './TableBodyCell.scss';
+import css from './TableHeaderCell.scss';
 import TableSortLabel from '@material-ui/core/TableSortLabel';
 import { Tooltip, TooltipProps } from '../Tooltip';
 

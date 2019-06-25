@@ -1,17 +1,17 @@
-@import '../styles/vars.scss';
+@import '../styles/vars';
 
 .paginationNumbers {
-  color: $blue;
-  cursor: pointer;
-  font-family: $rws-font-text;
-  font-weight: bolder;
-  margin-left: 0.5vw;
-  margin-right: 0.5vw;
+  color: $blue !important;
+  cursor: pointer !important;
+  font-family: $rws-font-text !important;
+  font-weight: bolder !important;
+  margin-left: 0.5vw !important;
+  margin-right: 0.5vw !important;
 }
 
 .activePageChip {
   border-width: 2px !important;
-  font-weight: bolder;
+  font-weight: bolder !important;
 }
 
 .noHoverBackground:hover,
@@ -20,5 +20,5 @@
 }
 
 .ie11-chipCorrection {
-  min-width: 2rem;
+  min-width: 2rem !important;
 }

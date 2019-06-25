@@ -1,4 +1,4 @@
-# Usage of the ActionBar component:
+### Usage of the ActionBar component:
 
 **Examples:**
 

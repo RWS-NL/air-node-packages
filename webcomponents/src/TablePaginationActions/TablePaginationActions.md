@@ -1,45 +1,42 @@
-# Usage of TableBodyCell component:
+### Usage of the TablePaginationActions component:
 
 **Examples:**
 
 ```tsx
-import React from 'react';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import EditIcon from '@material-ui/icons/Create';
-import { TableBodyCell } from '@rws-air/webcomponents';
+import React from 'react'; 
+import TablePagination from '@material-ui/core/TablePagination'; 
+import { TablePaginationActions } from '@rws-air/webcomponents'; 
 
-<Table>
-    <TableBody>
-        <TableRow>
-            <TableBodyCell content='cell content'/>
-            <TableBodyCell content={
-                <IconButton>
-                    <EditIcon color='primary'/>
-                </IconButton>
-            }/>
-        </TableRow>
-    </TableBody>
-</Table>
+  <TablePagination
+      labelRowsPerPage={'rows per page'}
+      labelDisplayedRows={({from, to, count}) => `${from <= 9 ? ` 0${from} ` : from}-${to} of ${count}` }
+      component='div'
+      count={20}
+      onChangePage={() => console.log('Changed Page!')}
+      onChangeRowsPerPage={() => console.log('Changed amount of rows per page')}
+      page={0}
+      rowsPerPage={5}
+      rowsPerPageOptions={[5, 10, 15, 20]}
+      ActionsComponent={TablePaginationActions}
+    />
 ```
 
 ```jsx
-import React from 'react';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import EditIcon from '@material-ui/icons/Create';
-import { TableBodyCell } from '@rws-air/webcomponents';
+import React from 'react'; 
+import TablePagination from '@material-ui/core/TablePagination'; 
+import { TablePaginationActions } from '@rws-air/webcomponents'; 
 
-<Table>
-    <TableBody>
-        <TableRow>
-            <TableBodyCell content='cell content'/>
-            <TableBodyCell content={
-                <IconButton>
-                    <EditIcon color='primary'/>
-                </IconButton>
-            }/>
-        </TableRow>
-    </TableBody>
-</Table>
+  <TablePagination
+      labelRowsPerPage={'rows per page'}
+      labelDisplayedRows={({from, to, count}) => `${from <= 9 ? ` 0${from} ` : from}-${to} of ${count}` }
+      component='div'
+      count={20}
+      onChangePage={() => console.log('Changed Page!')}
+      onChangeRowsPerPage={() => console.log('Changed amount of rows per page')}
+      page={0}
+      rowsPerPage={5}
+      rowsPerPageOptions={[5, 10, 15, 20]}
+      ActionsComponent={TablePaginationActions}
+    />
 ```
+

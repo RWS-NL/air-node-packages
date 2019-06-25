@@ -1,45 +1,26 @@
-# Usage of TableBodyCell component:
+### Usage of the TableToolbar component:
 
 **Examples:**
 
 ```tsx
 import React from 'react';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import EditIcon from '@material-ui/icons/Create';
-import { TableBodyCell } from '@rws-air/webcomponents';
+import { TableToolbar } from '@rws-air/webcomponents';
 
-<Table>
-    <TableBody>
-        <TableRow>
-            <TableBodyCell content='cell content'/>
-            <TableBodyCell content={
-                <IconButton>
-                    <EditIcon color='primary'/>
-                </IconButton>
-            }/>
-        </TableRow>
-    </TableBody>
-</Table>
+<TableToolbar
+      searchPlaceholderLabel={'Search...'}
+      onSearchInput={() => console.log('Got some search input')}
+      onSearchClear={() => console.log('Cleared the search')}
+/>
 ```
 
 ```jsx
 import React from 'react';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import EditIcon from '@material-ui/icons/Create';
-import { TableBodyCell } from '@rws-air/webcomponents';
+import { TableToolbar } from '@rws-air/webcomponents';
 
-<Table>
-    <TableBody>
-        <TableRow>
-            <TableBodyCell content='cell content'/>
-            <TableBodyCell content={
-                <IconButton>
-                    <EditIcon color='primary'/>
-                </IconButton>
-            }/>
-        </TableRow>
-    </TableBody>
-</Table>
+<TableToolbar
+      searchPlaceholderLabel={'Search...'}
+      onSearchInput={() => console.log('Got some search input')}
+      onSearchClear={() => console.log('Cleared the search')} 
+/>
 ```
+

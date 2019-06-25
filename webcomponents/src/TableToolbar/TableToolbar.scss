@@ -1,36 +1,35 @@
-@import '../styles/vars.scss';
+@import '../styles/vars';
 
 .heightCorrection {
-  flex-basis: 0%;
-  height: 4rem;
+  flex-basis: 0% !important;
+  height: 4rem !important;
 }
 
 .toolbar {
   @include beautifulCenter;
-  background-color: $light-grey;
-  display: flex;
-  height: 4rem;
-  margin-top: 5vh;
-  width: 100%;
+  background-color: $light-grey !important;
+  display: flex !important;
+  height: 4rem !important;
+  margin-top: 5vh !important;
+  width: 100% !important;
 }
 
 .searchFieldContent {
-  border: 1px solid $medium-grey;
-  border-radius: 0;
-
-  box-shadow: none;
-  color: $grey;
-  font-size: $font-size-reset;
-  margin: 0 auto;
-  margin-left: 24vw;
-  width: 20vw;
+  border: 1px solid $medium-grey !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: $grey !important;
+  font-size: $font-size-reset !important;
+  margin: 0 auto !important;
+  margin-left: 24vw !important;
+  width: 20vw !important;
 }
 
 .searchIconButton {
-  color: $blue;
-  opacity: 1;
+  color: $blue !important;
+  opacity: 1 !important;
 }
 
 .ie11-searchBarTextCorrection > div > div > input {
-  min-height: 2.5rem;
+  min-height: 2.5rem !important;
 }
