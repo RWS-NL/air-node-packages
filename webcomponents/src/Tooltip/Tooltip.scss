@@ -17,7 +17,7 @@
   $[top|bottom|left|right]Offset defines the offset the arrow has to the
               tooltip. 50% puts it in the middle of the tooltip of the given side
 */
-@mixin popperArrowUpGenerator($color, $arrowSize, $borderSize, $leftOffset) {
+@mixin popperArrowUpGenerator ($color, $arrowSize, $borderSize, $leftOffset) {
   &::after,
   &::before {
     border: solid transparent !important;
@@ -43,7 +43,7 @@
   }
 }
 
-@mixin popperArrowLeftGenerator($color, $arrowSize, $borderSize, $topOffset) {
+@mixin popperArrowLeftGenerator ($color, $arrowSize, $borderSize, $topOffset) {
   &::after,
   &::before {
     border: solid transparent !important;

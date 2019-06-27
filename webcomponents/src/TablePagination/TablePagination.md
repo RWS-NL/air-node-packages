@@ -13,7 +13,6 @@ import { TablePagination } from '@rws-air/webcomponents';
           count={props.rowCount}
           onChangePage={props.onChangePage}
           onChangeRowsPerPage={props.onChangeRowsPerPage}
-          customClasses={css.tableTopPagination} 
+          customclasses={css.tableTopPagination} 
     />
 ```
-

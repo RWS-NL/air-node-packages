@@ -29,4 +29,3 @@ import SearchIcon from '@material-ui/icons/Search';
   searchIcon={<SearchIcon />}
 />
 ```
-

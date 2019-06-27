@@ -1,12 +1,13 @@
-import React, { FC, useState, ChangeEvent, KeyboardEvent, cloneElement, ReactElement } from 'react';
-import IconButton from '@material-ui/core/IconButton'
-import Input from '@material-ui/core/Input'
-import Paper from '@material-ui/core/Paper'
-import ClearIcon from '@material-ui/icons/Clear'
-import SearchIcon from '@material-ui/icons/Search'
-import { grey } from '@material-ui/core/colors'
-import classNames from 'classnames'
+import { grey } from '@material-ui/core/colors';
+import IconButton from '@material-ui/core/IconButton';
+import Input from '@material-ui/core/Input';
+import Paper from '@material-ui/core/Paper';
+import ClearIcon from '@material-ui/icons/Clear';
+import SearchIcon from '@material-ui/icons/Search';
+import classNames from 'classnames';
+import React, { ChangeEvent, cloneElement, FC, KeyboardEvent, ReactElement, useState } from 'react';
 import css from './SearchBar.scss';
+import { DataQa } from 'typings';
 
 export type SearchBarProps = {
   /** Whether to clear search on escape */
@@ -27,7 +28,7 @@ export type SearchBarProps = {
   onChange?: (event: ChangeEvent<HTMLInputElement>) => any;
   /** Fired when the search icon is clicked. */
   onRequestSearch?: (event: any) => any;
-  /** Fired when the search bar is focussed */
+  /** Fired when the search bar is focused */
   onFocus?: (event: any) => any;
   /** Fired when the focus on the search bar is lost */
   onBlur?: (event: any) => any;
@@ -37,13 +38,15 @@ export type SearchBarProps = {
   placeholder?: string;
   /** Override the inline-styles of the root element. */
   style?: any;
-}
+  /** data-qa tag to apply to the search bar and input element */
+  'data-qa'?: DataQa;
+};
 
 const SearchBar: FC<SearchBarProps> = (
   {
     className = '',
     disabled = false,
-    placeholder = 'Search',
+    placeholder = 'Search...',
     style = null,
     closeIcon = <ClearIcon style={{ color: grey[500] }} />,
     searchIcon = <SearchIcon style={{ color: grey[500] }} />,
@@ -53,27 +56,27 @@ const SearchBar: FC<SearchBarProps> = (
   const [value, setValue] = useState('');
 
   const handleFocus = (event: any): void => {
-    if (props.onFocus) props.onFocus(event)
-  }
+    if (props.onFocus) props.onFocus(event);
+  };
 
   const handleBlur = (event: any): void => {
     if (value && value.trim().length === 0) setValue('');
     if (props.onBlur) props.onBlur(event);
-  }
+  };
 
   const handleInput = (event: ChangeEvent<HTMLInputElement>): void => {
     setValue(event.target.value);
     if (props.onChange) props.onChange(event);
-  }
+  };
 
   const handleCancel = (): void => {
     setValue('');
     if (props.onCancelSearch) props.onCancelSearch();
-  }
+  };
 
   const handleRequestSearch = (): void => {
     if (props.onRequestSearch) props.onRequestSearch(value);
-  }
+  };
 
   const handleKeyUp = (event: KeyboardEvent<HTMLInputElement>): void => {
     if (event.charCode === 13 || event.key === 'Enter') {
@@ -83,7 +86,7 @@ const SearchBar: FC<SearchBarProps> = (
     }
 
     if (props.onKeyUp) props.onKeyUp(event);
-  }
+  };
 
   return (
     <Paper
@@ -101,6 +104,7 @@ const SearchBar: FC<SearchBarProps> = (
           className={css.input}
           disabled={disabled}
           placeholder={placeholder}
+          data-qa={props['data-qa']}
           disableUnderline
         />
       </div>
@@ -108,32 +112,32 @@ const SearchBar: FC<SearchBarProps> = (
         onClick={handleRequestSearch}
         classes={{
           root: classNames(css.iconButton, css.searchIconButton, {
-            [css.iconButtonHidden]: value !== ''
+            [css.iconButtonHidden]: value !== '',
           }),
-          disabled: css.iconButtonDisabled
+          disabled: css.iconButtonDisabled,
         }}
         disabled={disabled}
       >
         {cloneElement(searchIcon, {
-          classes: { root: css.icon }
+          classes: { root: css.icon },
         })}
       </IconButton>
       <IconButton
         onClick={handleCancel}
         classes={{
           root: classNames(css.iconButton, {
-            [css.iconButtonHidden]: value === ''
+            [css.iconButtonHidden]: value === '',
           }),
-          disabled: css.iconButtonDisabled
+          disabled: css.iconButtonDisabled,
         }}
         disabled={disabled}
       >
         {cloneElement(closeIcon, {
-          classes: { root: css.icon }
+          classes: { root: css.icon },
         })}
       </IconButton>
     </Paper>
-  )
-}
+  );
+};
 
 export default SearchBar;

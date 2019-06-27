@@ -23,4 +23,3 @@ import { TableToolbar } from '@rws-air/webcomponents';
       onSearchClear={() => console.log('Cleared the search')} 
 />
 ```
-

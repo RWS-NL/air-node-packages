@@ -6,8 +6,8 @@
 
 .search {
   &Bar {
-    height: 48px !important;
     display: flex !important;
+    height: 48px !important;
     justify-content: space-between !important;
   }
 
@@ -28,11 +28,12 @@
   &Button {
     opacity: 0.54 !important;
     transform: scale(1, 1) !important;
-    transform: transform 200ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1) !important;
 
     &Hidden {
       transform: scale(0, 0) !important;
-      & > icon {
+
+      > .icon {
         opacity: 0 !important;
       }
     }

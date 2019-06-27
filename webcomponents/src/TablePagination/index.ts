@@ -1,1 +1,1 @@
-export { default as TablePagination, TablePaginationProps } from './TablePagination'
+export { default as TablePagination, TablePaginationProps } from './TablePagination';

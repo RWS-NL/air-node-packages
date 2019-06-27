@@ -1,8 +1,8 @@
 import { createMuiTheme, MuiThemeProvider, Theme } from '@material-ui/core/styles';
 import { StylesProvider } from '@material-ui/styles';
-import React, { FC } from 'react';
 import { blue, red, yellow } from './utils/constants';
 import Home from './Home';
+import React, { FC } from 'react';
 
 // @ts-ignore
 const createTheme: Theme = createMuiTheme({

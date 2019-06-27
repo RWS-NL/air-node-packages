@@ -1,23 +1,48 @@
+/* stylelint-disable color-named, declaration-block-no-redundant-longhand-properties */
+@import '../vars';
+
 .app {
   text-align: center;
 }
 
 .header {
-  margin-top: 2rem;
+  align-items: center;
+  color: black;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: black;
   flex-wrap: wrap;
+  font-size: calc(10px + 2vmin);
+  justify-content: center;
+  margin-top: 2rem;
 }
 
 .logo {
-  text-align: center;
   margin-top: 2rem;
+  text-align: center;
 }
 
 .spacer {
   margin-top: 2rem;
+}
+
+.table {
+  &Row {
+    border-left: 1px solid $very-light-grey;
+
+    &:nth-of-type(1) {
+      border-top: 3px solid $light-grey;
+    }
+
+    &:nth-of-type(odd) {
+      background-color: $very-light-grey;
+    }
+
+    &:nth-of-type(even) {
+      background-color: $white;
+    }
+
+    > td:last-child {
+      padding-right: 0;
+    }
+  }
 }

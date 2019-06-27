@@ -1,1 +1,1 @@
-export { default as TableToolbar, TableToolbarProps } from './TableToolbar'
+export { default as TableToolbar, TableToolbarProps } from './TableToolbar';

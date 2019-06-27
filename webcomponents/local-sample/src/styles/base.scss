@@ -1,7 +1,8 @@
 @import './vars';
 
-html, body {
-    font-family: $rws-font-text;
-    background-color: $white;
-    color: $text-black;
+html,
+body {
+  background-color: $white;
+  color: $text-black;
+  font-family: $rws-font-text;
 }

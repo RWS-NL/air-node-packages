@@ -8,3 +8,5 @@ export * from './TablePagination';
 export * from './TablePaginationActions';
 export * from './TableToolbar';
 export * from './Tooltip';
+export * from './Table';
+export * from './typings';

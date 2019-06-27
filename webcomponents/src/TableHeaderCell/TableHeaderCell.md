@@ -17,10 +17,9 @@ import { TableHeaderCell } from '@rws-air/webcomponents';
                   header={header}
                   orderBy={props.orderBy}
                   order={props.order || 'asc'}
-                  tooltipLabel={'sort'}
+                  tooltiplabel={'sort'}
                   onRequestSort={props.onRequestSort} />
         </TableRow>
     </TableHead>
 </Table>
 ```
-

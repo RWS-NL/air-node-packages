@@ -1,52 +1,67 @@
 @import '../styles/vars';
 
-.rwsButton {
+.button {
   @include font-normal;
   background-color: $blue !important;
-  border-radius: 0        !important;
-  box-shadow: none        !important;
-  float: right            !important;
-  height: 3.2rem          !important;
-  line-height: initial    !important;
-  margin-right: 1%        !important;
-}
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  float: right !important;
+  height: 3.2rem !important;
+  line-height: initial !important;
+  margin-right: 1% !important;
 
-.rwsButtonLabel {
-  @include font-normal;
-  color: $white           !important;
-  font-size: 1rem         !important;
-  font-weight: bold       !important;
-  text-transform: none    !important;
-}
+  &Label {
+    @include font-normal;
+    color: $white !important;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+    text-transform: none !important;
+  }
 
-button[class*="Primary"] {
-  border: 2px solid $blue !important;
-}
+  &Primary {
+    border: 2px solid $blue !important;
+  }
 
-button[class*="Secondary"] {
-  background-color: $yellow !important;
-  color: $text-black !important;
-  border: 2px solid $yellow !important;
-
-  > span {
+  &Secondary {
+    background-color: $yellow !important;
+    border: 2px solid $yellow !important;
     color: $text-black !important;
+
+    > span {
+      color: $text-black !important;
+    }
   }
-}
 
-button:disabled {
-  background-color: $light-grey !important;
-}
-
-button[class*="outlined"] {
-  background-color: $white !important;
-  border: 2px solid $blue !important;
-  color: $blue !important;
-
-  > span {
+  &Outlined {
+    background-color: $white !important;
+    border: 2px solid $blue !important;
     color: $blue !important;
+
+    > span {
+      color: $blue !important;
+    }
+
+    &:hover {
+      border-width: 2px !important;
+    }
+
+    &Secondary {
+      border: 2px solid $yellow !important;
+      color: $yellow !important;
+
+      > span {
+        color: $yellow !important;
+      }
+    }
   }
 
-  &:hover {
-    border-width: 2px !important;
+  &Disabled {
+    background-color: $light-grey !important;
+    border: transparent !important;
+    color: $text-black !important;
+
+    > span {
+      color: $text-black !important;
+    }
   }
 }

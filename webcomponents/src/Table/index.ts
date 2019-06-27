@@ -1,0 +1,1 @@
+export { default as Table, TableQAs, TableProps } from './Table';
