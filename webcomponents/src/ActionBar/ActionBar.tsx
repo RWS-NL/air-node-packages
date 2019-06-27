@@ -3,7 +3,7 @@ import css from './ActionBar.scss';
 import Button from '../Button/Button';
 import classnames from 'classnames';
 import React, { FC, Fragment } from 'react';
-import { DataQa } from '../typings';
+import { customCss, dataQa } from '../typings';
 
 export type ActionBarProps = {
   /** The title to show in the ActionBar */
@@ -12,10 +12,12 @@ export type ActionBarProps = {
   shouldHaveButton?: boolean;
   /** The text that should be shown in the button */
   buttonLabel?: string;
+  /** data-qa tag to apply to the search bar and input element */
+  'data-qa'?: dataQa
+  /** Custom CSS classes to pass to the button */
+  customclasses?: customCss;
   /** The action that should be invoked when the button is clicked */
   buttonAction?: (...args: any[]) => any;
-  /** data-qa tag to apply to the search bar and input element */
-  'data-qa'?: DataQa
 };
 
 const ActionBar: FC<ActionBarProps> = props => {

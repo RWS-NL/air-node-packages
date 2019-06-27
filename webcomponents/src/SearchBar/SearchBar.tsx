@@ -7,7 +7,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import classNames from 'classnames';
 import React, { ChangeEvent, cloneElement, FC, KeyboardEvent, ReactElement, useState } from 'react';
 import css from './SearchBar.scss';
-import { DataQa } from 'typings';
+import { dataQa } from 'typings';
 
 export type SearchBarProps = {
   /** Whether to clear search on escape */
@@ -38,8 +38,10 @@ export type SearchBarProps = {
   placeholder?: string;
   /** Override the inline-styles of the root element. */
   style?: any;
+  /** Override the paper element elevation */
+  paperElevation?: number;
   /** data-qa tag to apply to the search bar and input element */
-  'data-qa'?: DataQa;
+  'data-qa'?: dataQa;
 };
 
 const SearchBar: FC<SearchBarProps> = (
@@ -50,6 +52,7 @@ const SearchBar: FC<SearchBarProps> = (
     style = null,
     closeIcon = <ClearIcon style={{ color: grey[500] }} />,
     searchIcon = <SearchIcon style={{ color: grey[500] }} />,
+    paperElevation = 2,
     ...props
   }: SearchBarProps
 ) => {
@@ -92,6 +95,7 @@ const SearchBar: FC<SearchBarProps> = (
     <Paper
       className={classNames(css.searchBar, className)}
       style={style}
+      elevation={paperElevation}
     >
       <div className={css.searchContainer}>
         <Input
@@ -106,6 +110,7 @@ const SearchBar: FC<SearchBarProps> = (
           placeholder={placeholder}
           data-qa={props['data-qa']}
           disableUnderline
+          {...props}
         />
       </div>
       <IconButton

@@ -8,7 +8,7 @@ import LastPageIcon from '@material-ui/icons/LastPage';
 import classnames from 'classnames';
 import React, { FC, SyntheticEvent } from 'react';
 import css from './TablePaginationActions.scss';
-import { DataQa } from 'typings';
+import { customCss, dataQa } from 'typings';
 
 export type TablePaginationActionsProps = {
   /** Amount of rows per page */
@@ -20,7 +20,9 @@ export type TablePaginationActionsProps = {
   /** Function triggered when changing page */
   onChangePage: (event: any, page: number) => void;
   /** data-qa tag to apply to the search bar and input element */
-  'data-qa'?: DataQa;
+  'data-qa'?: dataQa;
+  /** Custom CSS classes to pass to the button */
+  customclasses?: customCss;
 };
 
 const TablePaginationActions: FC<TablePaginationActionsProps> = props => {

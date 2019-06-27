@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import React, { FC } from 'react';
 import css from './TableHeaderCell.scss';
 import Tooltip, { TooltipProps } from '../Tooltip/Tooltip';
-import { customCss, DataQa, label } from '../typings';
+import { customCss, dataQa, label } from '../typings';
 
 export type TableHeaderProps = {
   label: string;
@@ -25,10 +25,10 @@ export type TableHeaderCellProps = {
   tooltipplacement: TooltipProps['placement'];
   /** The function triggered when a sort request is made */
   onRequestSort: (property: string) => void;
+  /** data-qa tag to apply to the search bar and input element */
+  'data-qa'?: dataQa;
   /** Custom CSS classes to pass to the button */
   customclasses?: customCss;
-  /** data-qa tag to apply to the search bar and input element */
-  'data-qa'?: DataQa;
 } & MUITableCellProps;
 
 const TableHeaderCell: FC<TableHeaderCellProps> = props => (

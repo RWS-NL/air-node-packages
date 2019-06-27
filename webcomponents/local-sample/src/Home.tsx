@@ -69,7 +69,7 @@ const propsForTable: TableProps = {
       {dataForTable
         .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
         .map(row => (
-          <TableRow hover tabIndex={-1} key={4567893} className={css.tableRow} data-qa='sample-table-body-row' >
+          <TableRow hover tabIndex={-1} key={Math.random()} className={css.tableRow} data-qa='sample-table-body-row' >
             <TableBodyCell content={row.name} />
             <TableBodyCell content={row.email} />
             <TableBodyCell content={row.id} />
@@ -78,6 +78,11 @@ const propsForTable: TableProps = {
       }
     </Fragment>
   ),
+  tablecss: {
+    table: [css.customTable, css.customTable],
+    tableToolbar: [css.customTableToolbar],
+  },
+  paperElevation: 0,
 };
 
 

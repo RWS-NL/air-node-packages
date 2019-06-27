@@ -6,7 +6,7 @@ import MUIButton, { ButtonProps as MUIButtonProps } from '@material-ui/core/Butt
 import css from './Button.scss';
 import classnames from 'classnames';
 import React, { FC, ReactNode } from 'react';
-import { customCss, DataQa } from '../typings';
+import { customCss, dataQa } from '../typings';
 
 export type ButtonProps = {
   /** The variant of the button */
@@ -18,7 +18,7 @@ export type ButtonProps = {
   /** Whether this button should be disabled */
   disabled?: boolean;
   /** data-qa tag to apply to the search bar and input element */
-  'data-qa'?: DataQa;
+  'data-qa'?: dataQa;
   /** Custom CSS classes to pass to the button */
   customclasses?: customCss;
   /** The action that should be triggered when clicking the button */

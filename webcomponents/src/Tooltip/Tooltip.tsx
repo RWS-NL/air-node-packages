@@ -2,11 +2,11 @@ import MUITooltip, { TooltipProps as MUITooltipProps } from '@material-ui/core/T
 import classnames from 'classnames';
 import React, { FC, Fragment } from 'react';
 import css from './Tooltip.scss';
-import { customCss, DataQa } from 'typings';
+import { customCss, dataQa } from 'typings';
 
 export type TooltipProps = MUITooltipProps & {
   /** data-qa tag to apply to the search bar and input element */
-  'data-qa'?: DataQa;
+  'data-qa'?: dataQa;
   /** Custom CSS classes to pass to the button */
   customclasses?: customCss;
 };

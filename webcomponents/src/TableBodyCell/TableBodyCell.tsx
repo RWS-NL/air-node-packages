@@ -2,15 +2,15 @@ import MUITableCell, { TableCellProps as MUITableCellProps } from '@material-ui/
 import classnames from 'classnames';
 import React, { FC } from 'react';
 import css from './TableBodyCell.scss';
-import { cellContent, customCss, DataQa } from '../typings';
+import { cellContent, customCss, dataQa } from '../typings';
 
 export type TableBodyCellProps = {
   /** Content for the cell */
   content: cellContent;
+  /** data-qa tag to apply to the search bar and input element */
+  'data-qa'?: dataQa;
   /** Custom CSS classes to pass to the button */
   customclasses?: customCss;
-  /** data-qa tag to apply to the search bar and input element */
-  'data-qa'?: DataQa;
 } & MUITableCellProps;
 
 const splitTableCellText = (text: string) => {

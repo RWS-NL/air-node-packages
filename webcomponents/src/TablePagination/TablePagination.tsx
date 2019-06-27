@@ -1,7 +1,7 @@
 import MUITablePagination, { TablePaginationProps as MUITablePaginationProps } from '@material-ui/core/TablePagination';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import classnames from 'classnames';
-import { customCss, DataQa } from 'index';
+import { customCss, dataQa } from 'index';
 import React, { FC } from 'react';
 import css from './TablePagination.scss';
 import TablePaginationActions from '../TablePaginationActions/TablePaginationActions';
@@ -12,10 +12,10 @@ export type TablePaginationProps = {
   labelrowsperpage: label;
   /** The label in the displayed pages, for example "of" in "page 1 of 10" */
   labelpaginationof: label;
+  /** data-qa tag to apply to the search bar and input element */
+  'data-qa'?: dataQa;
   /** Custom CSS classes to pass to the button */
   customclasses?: customCss;
-  /** data-qa tag to apply to the search bar and input element */
-  'data-qa'?: DataQa;
 } & MUITablePaginationProps;
 
 const TablePagination: FC<TablePaginationProps> = props => {

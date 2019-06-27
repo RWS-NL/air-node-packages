@@ -3,9 +3,9 @@ import SearchIcon from '@material-ui/icons/Search';
 import classnames from 'classnames';
 import debouncer from 'lodash.debounce';
 import React, { FC } from 'react';
-import SearchBar from '../SearchBar/SearchBar';
+import SearchBar, { SearchBarProps } from '../SearchBar/SearchBar';
 import css from './TableToolbar.scss';
-import { customCss, DataQa, label } from 'typings';
+import { customCss, dataQa, label } from 'typings';
 
 export type TableToolbarProps = {
   /** The debounce timeout to wait until a search action should be performed */
@@ -17,10 +17,12 @@ export type TableToolbarProps = {
   /** The action to trigger when clearing the search */
   onsearchclear: () => unknown;
   /** data-qa tag to apply to the search bar and input element */
-  'data-qa'?: DataQa;
-  /** Custom CSS classes to pass to the button */
+  'data-qa'?: dataQa;
+  /** Custom CSS classes to pass to the toolbar */
   customclasses?: customCss;
-};
+  /** Custom CSS classes to pass to the inner searchbar */
+  customSearchbarClasses?: customCss;
+} & Pick<SearchBarProps, 'paperElevation'>;
 
 const TableToolbar: FC<TableToolbarProps> = props => {
   const debouncedSearch = debouncer((input: string) => props.onsearchinput(input), props.searchdebounce || 400);
@@ -35,8 +37,9 @@ const TableToolbar: FC<TableToolbarProps> = props => {
             placeholder={`${props.searchplaceholderlabel}...`}
             onChange={e => debouncedSearch(e.target.value)}
             onCancelSearch={props.onsearchclear}
-            className={classnames(css.searchFieldContent, css['ie11-searchBarTextCorrection'])}
+            className={classnames(css.searchFieldContent, css['ie11-searchBarTextCorrection'], props.customSearchbarClasses)}
             searchIcon={<SearchIcon className={classnames(css.searchIconButton)} />}
+            paperElevation={props.paperElevation}
           />
         </Grid>
       </Grid>
