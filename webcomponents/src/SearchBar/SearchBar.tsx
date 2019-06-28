@@ -110,7 +110,6 @@ const SearchBar: FC<SearchBarProps> = (
           placeholder={placeholder}
           data-qa={props['data-qa']}
           disableUnderline
-          {...props}
         />
       </div>
       <IconButton
