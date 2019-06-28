@@ -53,7 +53,7 @@ const propsForTable: TableProps = {
     labelpaginationof: 'of',
     labelrowsperpage: 'Rows per page',
     searchplaceholderlabel: 'Search...',
-    tooltiplabel: 'Sort',
+    tooltiplabel: 'Sorteren',
   },
   tableqas: {
     header: 'table-header',

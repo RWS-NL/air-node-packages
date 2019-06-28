@@ -1,11 +1,11 @@
 @import '../styles/vars';
 
 @mixin tooltipDefaults {
-  background-color: $white !important;
-  border: 1px solid $light-grey !important;
-  border-radius: 0 !important;
-  color: $text-black !important;
-  font-size: 0.9rem !important;
+  background-color: $white;
+  border: 1px solid $light-grey;
+  border-radius: 0;
+  color: $text-black;
+  font-size: 0.9rem;
 }
 
 /*
@@ -20,66 +20,68 @@
 @mixin popperArrowUpGenerator ($color, $arrowSize, $borderSize, $leftOffset) {
   &::after,
   &::before {
-    border: solid transparent !important;
-    bottom: 100% !important;
-    content: ' ' !important;
-    height: 0 !important;
-    left: $leftOffset !important;
-    pointer-events: none !important;
-    position: absolute !important;
-    width: 0 !important;
+    border: solid transparent;
+    bottom: 100%;
+    content: ' ';
+    height: 0;
+    left: $leftOffset;
+    pointer-events: none;
+    position: absolute;
+    width: 0;
   }
 
   &::after {
-    border-bottom-color: $white !important;
-    border-width: $arrowSize !important;
-    margin-left: -$arrowSize !important;
+    border-bottom-color: $white;
+    border-width: $arrowSize;
+    margin-left: -$arrowSize;
   }
 
   &::before {
-    border-bottom-color: $color !important;
-    border-width: ($arrowSize + ($borderSize * $arrowModifier)) !important;
-    margin-left: -($arrowSize + ($borderSize * $arrowModifier)) !important;
+    border-bottom-color: $color;
+    border-width: ($arrowSize + ($borderSize * $arrowModifier));
+    margin-left: -($arrowSize + ($borderSize * $arrowModifier));
   }
 }
 
 @mixin popperArrowLeftGenerator ($color, $arrowSize, $borderSize, $topOffset) {
   &::after,
   &::before {
-    border: solid transparent !important;
-    content: ' ' !important;
-    height: 0 !important;
-    pointer-events: none !important;
-    position: absolute !important;
-    right: 100% !important;
-    top: $topOffset !important;
-    width: 0 !important;
+    border: solid transparent;
+    content: ' ';
+    height: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 100%;
+    top: $topOffset;
+    width: 0;
   }
 
   &::after {
-    border-right-color: $white !important;
-    border-width: $arrowSize !important;
-    margin-top: -$arrowSize !important;
+    border-right-color: $white;
+    border-width: $arrowSize;
+    margin-top: -$arrowSize;
   }
 
   &::before {
-    border-right-color: $color !important;
-    border-width: ($arrowSize + ($borderSize * $arrowModifier)) !important;
-    margin-top: -($arrowSize + ($borderSize * $arrowModifier)) !important;
+    border-right-color: $color;
+    border-width: ($arrowSize + ($borderSize * $arrowModifier));
+    margin-top: -($arrowSize + ($borderSize * $arrowModifier));
   }
 }
 
 .tooltip[x-placement*='right'] > div {
   @include popperArrowLeftGenerator($light-grey, 10px, 1px, 25%);
   @include tooltipDefaults;
-  font-size: 0.75rem !important;
-  margin-left: 0.7rem !important;
-  margin-top: 3.3rem !important;
-  width: 60% !important;
+  font-size: 0.75rem;
+  margin-left: 0.7rem;
+  margin-top: 3.3rem;
+  position: relative;
+  width: 60%;
 }
 
 .tooltip[x-placement*='bottom'] > div {
   @include popperArrowUpGenerator($light-grey, 10px, 1px, 25%);
   @include tooltipDefaults;
-  margin-top: 0.5rem !important;
+  margin-top: 0.5rem;
+  position: relative;
 }
