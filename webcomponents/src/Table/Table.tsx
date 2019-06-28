@@ -74,6 +74,10 @@ export type TableProps =
     tablebodycontent: ReactNode;
     /** Customization CSS classes for table components */
     tablecss?: TableCustomClasses;
+    /** Control whether the top bar pagination should be shown */
+    showTopPagination?: boolean;
+    /** Control whether the bottom bar pagination should be shown */
+    showBottomPagination?: boolean;
   };
 
 const Table: FC<TableProps> = props => {
@@ -95,18 +99,20 @@ const Table: FC<TableProps> = props => {
         customSearchbarClasses={classnames(addCustomClasses('tableSearchbar'))}
         paperElevation={props.paperElevation}
       />
-      <TablePagination
-        labelrowsperpage={props.labels.labelrowsperpage}
-        labelpaginationof={props.labels.labelpaginationof}
-        rowsPerPageOptions={props.rowsPerPageOptions}
-        rowsPerPage={props.rowsPerPage}
-        page={props.page}
-        count={props.rowcount}
-        onChangePage={props.onChangePage}
-        onChangeRowsPerPage={props.onChangeRowsPerPage}
-        customclasses={classnames(addCustomClasses('tablePagination', css.tableTopPagination))}
-        data-qa={props.tableqas.pagination}
-      />
+      {props.showTopPagination ?
+        <TablePagination
+          labelrowsperpage={props.labels.labelrowsperpage}
+          labelpaginationof={props.labels.labelpaginationof}
+          rowsPerPageOptions={props.rowsPerPageOptions}
+          rowsPerPage={props.rowsPerPage}
+          page={props.page}
+          count={props.rowcount}
+          onChangePage={props.onChangePage}
+          onChangeRowsPerPage={props.onChangeRowsPerPage}
+          customclasses={classnames(addCustomClasses('tablePagination', css.tableTopPagination))}
+          data-qa={props.tableqas.pagination}
+        /> : <Fragment />
+      }
       <MUITable className={classnames(addCustomClasses('table', css.table))} data-qa={props.tableqas.table}>
         <TableHead data-qa={props.tableqas.header} className={classnames(addCustomClasses('tableHeader'))}>
           <TableRow data-qa={props.tableqas.headerRow} className={classnames(addCustomClasses('tableHeaderRow'))}>
@@ -129,18 +135,20 @@ const Table: FC<TableProps> = props => {
           {props.tablebodycontent}
         </TableBody>
       </MUITable>
-      <TablePagination
-        labelrowsperpage={props.labels.labelrowsperpage}
-        labelpaginationof={props.labels.labelpaginationof}
-        rowsPerPageOptions={props.rowsPerPageOptions}
-        rowsPerPage={props.rowsPerPage}
-        page={props.page}
-        count={props.rowcount}
-        onChangePage={props.onChangePage}
-        onChangeRowsPerPage={props.onChangeRowsPerPage}
-        customclasses={classnames(addCustomClasses('tablePagination'))}
-        data-qa={props.tableqas.pagination}
-      />
+      {props.showBottomPagination ?
+        <TablePagination
+          labelrowsperpage={props.labels.labelrowsperpage}
+          labelpaginationof={props.labels.labelpaginationof}
+          rowsPerPageOptions={props.rowsPerPageOptions}
+          rowsPerPage={props.rowsPerPage}
+          page={props.page}
+          count={props.rowcount}
+          onChangePage={props.onChangePage}
+          onChangeRowsPerPage={props.onChangeRowsPerPage}
+          customclasses={classnames(addCustomClasses('tablePagination'))}
+          data-qa={props.tableqas.pagination}
+        /> : <Fragment />
+      }
     </Fragment>
   );
 };
