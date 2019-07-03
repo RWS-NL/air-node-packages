@@ -1,6 +1,7 @@
+import Box from '@material-ui/core/Box';
 import MUITooltip, { TooltipProps as MUITooltipProps } from '@material-ui/core/Tooltip';
 import classnames from 'classnames';
-import React, { FC, Fragment } from 'react';
+import React, { FC } from 'react';
 import css from './Tooltip.scss';
 import { customCss, dataQa } from 'typings';
 
@@ -13,12 +14,11 @@ export type TooltipProps = MUITooltipProps & {
 
 const Tooltip: FC<TooltipProps> = props => (
   <MUITooltip
-    data-qa={props['data-qa']}
     title={
-      <Fragment>
+      <Box data-qa={props['data-qa']}>
         {props.title}
         <span className={css.arrow} />
-      </Fragment>
+      </Box>
     }
     placement={props.placement}
     enterDelay={props.enterDelay || 300}

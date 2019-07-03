@@ -4,7 +4,7 @@ import TableBody from '@material-ui/core/TableBody';
 import TableRow from '@material-ui/core/TableRow';
 import EditIcon from '@material-ui/icons/Create';
 import SearchIcon from '@material-ui/icons/Search';
-import { ActionBar, Button, Logo, SearchBar, Table, TableBodyCell, TableProps } from '@rws-air/ui-components';
+import { ActionBar, Button, Logo, SearchBar, Table, TableBodyCell, TableProps, Tooltip } from '@rws-air/ui-components';
 import classnames from 'classnames';
 import React, { FC, Fragment } from 'react';
 import css from 'styles/modules/app.module.scss';
@@ -91,6 +91,13 @@ const Home: FC = () => {
     <Fragment>
       <div>
         <ActionBar title='ActionBar Title' buttonLabel='action-bar-button' buttonAction={() => console.log('test')} shouldHaveButton />
+      </div>
+      <div className={css.spacer}>
+        <Tooltip title='Cool Tooltip' data-qa='tooltip-qa'>
+          <IconButton>
+            <EditIcon />
+          </IconButton>
+        </Tooltip>
       </div>
       <div className={css.logo}>
         <Logo />
