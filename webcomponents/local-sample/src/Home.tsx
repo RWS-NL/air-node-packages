@@ -4,10 +4,11 @@ import TableBody from '@material-ui/core/TableBody';
 import TableRow from '@material-ui/core/TableRow';
 import EditIcon from '@material-ui/icons/Create';
 import SearchIcon from '@material-ui/icons/Search';
-import { ActionBar, Button, Logo, SearchBar, Table, TableBodyCell, TableProps, Tooltip } from '@rws-air/ui-components';
+import { ActionBar, Button, Logo, Modal, ModalContent, SearchBar, Table, TableBodyCell, TableProps, Tooltip } from '@rws-air/ui-components';
 import classnames from 'classnames';
-import React, { FC, Fragment } from 'react';
+import React, { FC, Fragment, useState } from 'react';
 import css from 'styles/modules/app.module.scss';
+import { Typography } from '@material-ui/core';
 
 type dataForTableType = {
   name: string;
@@ -87,6 +88,8 @@ const propsForTable: TableProps = {
 
 
 const Home: FC = () => {
+  const [open, setOpen] = useState(true);
+
   return (
     <Fragment>
       <div>
@@ -94,7 +97,7 @@ const Home: FC = () => {
       </div>
       <div className={css.spacer}>
         <Tooltip title='Cool Tooltip' data-qa='tooltip-qa'>
-          <IconButton>
+          <IconButton onClick={() => setOpen(true)}>
             <EditIcon />
           </IconButton>
         </Tooltip>
@@ -137,6 +140,32 @@ const Home: FC = () => {
       </div>
       <div className={css.spacer}>
         <Table {...propsForTable} />
+      </div>
+      <div>
+        <Modal
+          topic='Gebruiker verwijderen'
+          open={open}
+          dialogContent={
+            <ModalContent>
+              <Typography>Line 1</Typography>
+              <Typography>Line 2</Typography>
+              <Typography>Line 3</Typography>
+              <Typography>Line 4</Typography>
+            </ModalContent>
+          }
+          modalqas={{
+            modal: 'modal',
+            content: 'content',
+            title: 'title',
+          }}
+          modalHasForm={false}
+          shouldHaveActions
+          isWarningModal
+          okButtonText='ok'
+          cancelButtonText='cancel'
+          confirmAction={() => setOpen(false)}
+          closeAction={() => setOpen(false)}
+        />
       </div>
     </Fragment>
   );

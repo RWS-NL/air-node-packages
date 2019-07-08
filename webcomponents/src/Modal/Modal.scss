@@ -1,0 +1,74 @@
+@import '../styles/vars';
+
+%modal-button-extendible {
+  width: 11.5rem;
+}
+
+.modal {
+  > div > div {
+    max-width: unset;
+    min-width: 45vw;
+  }
+
+  &Actions {
+    margin-bottom: 3vh;
+    margin-right: 5vw;
+    padding-right: 1.5rem;
+  }
+
+  &Body {
+    margin: 0 5vw;
+    overflow: hidden;
+
+    &Small {
+      max-height: 10rem;
+    }
+  }
+
+  &Button {
+    &Cancel {
+      @extend %modal-button-extendible;
+      background-color: $white;
+      border-width: 2px;
+
+      > span {
+        color: $blue;
+      }
+    }
+
+    &Ok {
+      @extend %modal-button-extendible;
+      margin-left: 1%;
+    }
+  }
+}
+
+.title {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  padding-top: 3vw;
+
+  > * {
+    color: $dark-blue;
+    font-size: 1.1rem;
+    font-weight: bolder;
+  }
+
+  &Icon {
+    padding-bottom: 0.6rem;
+    padding-right: 0.8rem;
+
+    &CheckCircle {
+      color: $green;
+    }
+
+    &Offset {
+      margin-left: calc(5vw - 2.5rem);
+
+      &Header > h6 {
+        align-items: center;
+        display: flex;
+      }
+    }
+  }
+}

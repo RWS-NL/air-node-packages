@@ -1,6 +1,6 @@
 {
   "name": "@rws-air/webcomponents",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "description": "Standard Webcomponents for AIR projects",
   "author": "@rws-air",
   "license": "AGPL-3.0-or-later",
@@ -23,8 +23,6 @@
     "postbuild": "yarn terser",
     "start": "yarn build -w",
     "start:local": "pushd local-sample && yarn install && yarn start",
-    "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build",
     "clean": "rimraf ./dist",
     "terser": "terser-folder ./dist -eo ./dist -x .js",
     "prepublishOnly": "yarn lint && yarn test:ci && git co tsconfig.json && yarn build",
@@ -35,7 +33,7 @@
     "@material-ui/core": ">=4",
     "@material-ui/icons": ">=4",
     "classnames": ">=2",
-    "lodash.debounce": "^4.0.8",
+    "lodash.debounce": ">=4",
     "react": ">=16",
     "react-dom": ">=16"
   },
@@ -62,10 +60,8 @@
     "lodash.debounce": "^4.0.8",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
-    "react-docgen-typescript": "^1.12.5",
     "react-dom": "^16.8.6",
     "react-scripts": "^3.0.1",
-    "react-styleguidist": "^9.1.11",
     "rimraf": "^2.6.3",
     "rollup": "^1.16.2",
     "rollup-plugin-commonjs": "^10.0.0",
@@ -78,7 +74,8 @@
     "stylelint": "^10.1.0",
     "terser-folder": "^2.0.0",
     "tslint": "^5.18.0",
-    "typescript": "^3.5.2"
+    "typescript": "^3.5.2",
+    "utility-types": "^3.7.0"
   },
   "browserslist": {
     "production": [

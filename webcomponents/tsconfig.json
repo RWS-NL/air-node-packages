@@ -31,7 +31,6 @@
     "node_modules",
     "build",
     "dist",
-    "styleguide",
     "rollup.config.ts",
     "src/setupTests.ts",
     "src/__tests__"
