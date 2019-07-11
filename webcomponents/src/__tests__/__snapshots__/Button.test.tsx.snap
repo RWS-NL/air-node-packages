@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+<WithStyles(ForwardRef(Button))
+  className=""
+  classes={
+    Object {
+      "containedPrimary": undefined,
+      "containedSecondary": undefined,
+      "disabled": undefined,
+      "label": undefined,
+      "outlined": undefined,
+      "outlinedPrimary": undefined,
+      "outlinedSecondary": undefined,
+      "root": undefined,
+    }
+  }
+  color="primary"
+  onClick={[MockFunction]}
+  variant="contained"
+>
+  testButton
+</WithStyles(ForwardRef(Button))>
+`;

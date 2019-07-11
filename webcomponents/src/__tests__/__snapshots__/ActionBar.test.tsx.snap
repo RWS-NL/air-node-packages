@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+<div
+  className="navigation-bar"
+>
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    container={true}
+    direction="row"
+    justify="space-between"
+    style={
+      Object {
+        "height": "100%",
+      }
+    }
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      key="1"
+      xs={6}
+    >
+      <h1
+        className=""
+        data-qa="action-bar-title"
+      >
+        42
+      </h1>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      key="2"
+      xs={6}
+    >
+      <Button
+        color="primary"
+        data-qa="action-bar-button"
+        label="label"
+        onClick={[Function]}
+        variant="contained"
+      />
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+</div>
+`;

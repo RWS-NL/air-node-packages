@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render Testing should match snapshot 1`] = `
+<WithStyles(ForwardRef(Dialog))
+  classes={
+    Object {
+      "root": undefined,
+    }
+  }
+  data-qa="modal"
+  disableBackdropClick={true}
+  disableEscapeKeyDown={true}
+  onClose={[MockFunction]}
+  onKeyPress={[Function]}
+  open={false}
+>
+  <WithStyles(ForwardRef(DialogTitle))
+    className=""
+    data-qa="modal-title"
+  >
+    Awesome Topic
+  </WithStyles(ForwardRef(DialogTitle))>
+  <WithStyles(ForwardRef(DialogContent))
+    className=""
+    classes={
+      Object {
+        "root": undefined,
+      }
+    }
+    data-qa="modal-content"
+  />
+</WithStyles(ForwardRef(Dialog))>
+`;

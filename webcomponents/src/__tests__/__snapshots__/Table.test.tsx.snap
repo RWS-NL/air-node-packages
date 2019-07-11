@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+<Fragment>
+  <TableToolbar
+    customSearchbarClasses=""
+    customclasses=""
+    data-qa="table-toolbar"
+    onsearchclear={[MockFunction]}
+    onsearchinput={[MockFunction]}
+    searchplaceholderlabel="Search..."
+  />
+  <WithStyles(ForwardRef(Table))
+    className=""
+    data-qa="table"
+  >
+    <WithStyles(ForwardRef(TableHead))
+      className=""
+      data-qa="table-header"
+    >
+      <WithStyles(ForwardRef(TableRow))
+        className=""
+        data-qa="table-header-row"
+      >
+        <TableHeaderCell
+          customclasses=""
+          data-qa="table-header-cell"
+          header={
+            Object {
+              "label": "name",
+            }
+          }
+          key="name"
+          onRequestSort={[MockFunction]}
+          order="asc"
+          orderby="name"
+          tooltiplabel="Sort"
+          tooltipplacement="bottom-start"
+        />
+        <TableHeaderCell
+          customclasses=""
+          data-qa="table-header-cell"
+          header={
+            Object {
+              "label": "email",
+            }
+          }
+          key="email"
+          onRequestSort={[MockFunction]}
+          order="asc"
+          orderby="name"
+          tooltiplabel="Sort"
+          tooltipplacement="bottom-start"
+        />
+        <TableHeaderCell
+          customclasses=""
+          data-qa="table-header-cell"
+          header={
+            Object {
+              "label": "id",
+              "numeric": true,
+            }
+          }
+          key="id"
+          onRequestSort={[MockFunction]}
+          order="asc"
+          orderby="name"
+          tooltiplabel="Sort"
+          tooltipplacement="bottom-start"
+        />
+      </WithStyles(ForwardRef(TableRow))>
+    </WithStyles(ForwardRef(TableHead))>
+    <WithStyles(ForwardRef(TableBody))
+      className=""
+      data-qa="table-body"
+    >
+      <WithStyles(ForwardRef(TableRow))
+        data-qa="table-body-row"
+        hover={true}
+        key="4567893"
+        tabIndex={-1}
+      >
+        <TableBodyCell
+          content="Robin Hood"
+        />
+        <TableBodyCell
+          content="robin.hood@winked.com"
+        />
+        <TableBodyCell
+          content={23456789}
+        />
+      </WithStyles(ForwardRef(TableRow))>
+      <WithStyles(ForwardRef(TableRow))
+        data-qa="table-body-row"
+        hover={true}
+        key="4567893"
+        tabIndex={-1}
+      >
+        <TableBodyCell
+          content="Darth Vader"
+        />
+        <TableBodyCell
+          content="darth.vader@thedeathstart.com"
+        />
+        <TableBodyCell
+          content={9876}
+        />
+      </WithStyles(ForwardRef(TableRow))>
+      <WithStyles(ForwardRef(TableRow))
+        data-qa="table-body-row"
+        hover={true}
+        key="4567893"
+        tabIndex={-1}
+      >
+        <TableBodyCell
+          content="Kaladin Stormblessed"
+        />
+        <TableBodyCell
+          content="kaladin.stormblessed@thearmy.com"
+        />
+        <TableBodyCell
+          content={567890}
+        />
+      </WithStyles(ForwardRef(TableRow))>
+      <WithStyles(ForwardRef(TableRow))
+        data-qa="table-body-row"
+        hover={true}
+        key="4567893"
+        tabIndex={-1}
+      >
+        <TableBodyCell
+          content="Steve Jobs"
+        />
+        <TableBodyCell
+          content="steve.jobs@apple.com"
+        />
+        <TableBodyCell
+          content={1}
+        />
+      </WithStyles(ForwardRef(TableRow))>
+    </WithStyles(ForwardRef(TableBody))>
+  </WithStyles(ForwardRef(Table))>
+</Fragment>
+`;

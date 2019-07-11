@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+<WithStyles(ForwardRef(TablePagination))
+  ActionsComponent={[Function]}
+  className=""
+  classes={
+    Object {
+      "menuItem": undefined,
+      "selectIcon": undefined,
+    }
+  }
+  component="div"
+  count={20}
+  labelDisplayedRows={[Function]}
+  onChangePage={[MockFunction]}
+  onChangeRowsPerPage={[MockFunction]}
+  page={0}
+  rowsPerPage={5}
+  rowsPerPageOptions={
+    Array [
+      5,
+      10,
+    ]
+  }
+/>
+`;

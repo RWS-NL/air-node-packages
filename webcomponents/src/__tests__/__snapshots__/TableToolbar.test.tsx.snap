@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+<div
+  className=""
+>
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    container={true}
+    direction="row"
+    justify="space-between"
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      key="1"
+      xs={6}
+    />
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      key="2"
+      xs={6}
+    >
+      <SearchBar
+        className=""
+        data-qa="table-search-bar"
+        onCancelSearch={[MockFunction]}
+        onChange={[Function]}
+        placeholder="placeholder..."
+        searchIcon={
+          <Memo
+            className=""
+          />
+        }
+      />
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+</div>
+`;

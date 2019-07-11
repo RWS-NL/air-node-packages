@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`With Children should match snapshot 1`] = `<div />`;
+
+exports[`With Children should match snapshot 2`] = `
+<div>
+  <p>
+    The Answer is 42
+  </p>
+</div>
+`;
