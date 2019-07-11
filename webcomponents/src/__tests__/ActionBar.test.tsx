@@ -47,3 +47,31 @@ describe('ActionBar without button', () => {
     expect(actionButton.length).toBe(0);
   });
 });
+
+describe('Snapshot Testing', () => {
+  test('Required Props', () => {
+    const actionBar = shallow(<ActionBar title='42' />);
+    expect(actionBar).toMatchSnapshot();
+  });
+
+  test('With Button', () => {
+    const actionBar = shallow(
+      <ActionBar
+        title='42' buttonLabel='label'
+        buttonAction={mockCallback} shouldHaveButton
+      />
+    );
+    expect(actionBar).toMatchSnapshot();
+  });
+
+  test('AdditionalTest', () => {
+    const actionBar = shallow(
+      <ActionBar
+        title='42' buttonLabel='label'
+        buttonAction={mockCallback} shouldHaveButton
+        customclasses={'snapshot-class'} data-qa='snapshot-qa'
+      />
+    );
+    expect(actionBar).toMatchSnapshot();
+  });
+});

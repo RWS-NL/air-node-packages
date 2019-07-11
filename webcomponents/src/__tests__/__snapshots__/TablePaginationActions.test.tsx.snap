@@ -1,6 +1,82 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should match snapshot 1`] = `
+exports[`Snapshot Testing Optional Props 1`] = `
+<Styled(MuiBox)
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+    }
+  }
+>
+  <WithStyles(ForwardRef(IconButton))
+    color="primary"
+    disabled={true}
+    onClick={[Function]}
+  >
+    <FirstPageIcon />
+  </WithStyles(ForwardRef(IconButton))>
+  <WithStyles(ForwardRef(IconButton))
+    color="primary"
+    disabled={true}
+    onClick={[Function]}
+  >
+    <KeyboardArrowLeftIcon />
+  </WithStyles(ForwardRef(IconButton))>
+  <WithStyles(ForwardRef(Chip))
+    className=""
+    color="primary"
+    key="0"
+    label={1}
+    onClick={[Function]}
+    variant="default"
+  />
+  <span
+    className=""
+    key="1"
+    onClick={[Function]}
+  >
+    2
+  </span>
+  <span
+    className=""
+    key="2"
+    onClick={[Function]}
+  >
+    3
+  </span>
+  <span
+    className=""
+    key="3"
+    onClick={[Function]}
+  >
+    4
+  </span>
+  <span
+    className=""
+    key="4"
+    onClick={[Function]}
+  >
+    5
+  </span>
+  <WithStyles(ForwardRef(IconButton))
+    color="primary"
+    disabled={false}
+    onClick={[Function]}
+  >
+    <KeyboardArrowRightIcon />
+  </WithStyles(ForwardRef(IconButton))>
+  <WithStyles(ForwardRef(IconButton))
+    color="primary"
+    disabled={false}
+    onClick={[Function]}
+  >
+    <LastPageIcon />
+  </WithStyles(ForwardRef(IconButton))>
+</Styled(MuiBox)>
+`;
+
+exports[`Snapshot Testing Required Props 1`] = `
 <Styled(MuiBox)
   style={
     Object {

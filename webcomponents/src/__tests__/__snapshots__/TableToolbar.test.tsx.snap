@@ -1,6 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should match snapshot 1`] = `
+exports[`Snapshot Testing Optional Props 1`] = `
+<div
+  className="snapshot-class"
+  data-qa="snapshot-qa"
+>
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    container={true}
+    direction="row"
+    justify="space-between"
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      key="1"
+      xs={6}
+    />
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      key="2"
+      xs={6}
+    >
+      <SearchBar
+        className="snapshot-class"
+        data-qa="table-search-bar"
+        onCancelSearch={
+          [MockFunction] {
+            "calls": Array [
+              Array [],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": undefined,
+              },
+            ],
+          }
+        }
+        onChange={[Function]}
+        placeholder="placeholder..."
+        searchIcon={
+          <Memo
+            className=""
+          />
+        }
+      />
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+</div>
+`;
+
+exports[`Snapshot Testing Required Props 1`] = `
 <div
   className=""
 >
@@ -23,7 +73,19 @@ exports[`should match snapshot 1`] = `
       <SearchBar
         className=""
         data-qa="table-search-bar"
-        onCancelSearch={[MockFunction]}
+        onCancelSearch={
+          [MockFunction] {
+            "calls": Array [
+              Array [],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": undefined,
+              },
+            ],
+          }
+        }
         onChange={[Function]}
         placeholder="placeholder..."
         searchIcon={

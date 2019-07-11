@@ -1,6 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should match snapshot 1`] = `
+exports[`Snapshot Testing Optional Props 1`] = `
+<WithStyles(ForwardRef(Button))
+  className="sample-class"
+  classes={
+    Object {
+      "containedPrimary": undefined,
+      "containedSecondary": undefined,
+      "disabled": undefined,
+      "label": undefined,
+      "outlined": undefined,
+      "outlinedPrimary": undefined,
+      "outlinedSecondary": undefined,
+      "root": undefined,
+    }
+  }
+  color="secondary"
+  data-qa="button-qa"
+  disabled={true}
+  onClick={[Function]}
+  variant="outlined"
+>
+  <div>
+    snapshot label
+  </div>
+</WithStyles(ForwardRef(Button))>
+`;
+
+exports[`Snapshot Testing Required Props 1`] = `
 <WithStyles(ForwardRef(Button))
   className=""
   classes={
@@ -16,9 +43,46 @@ exports[`should match snapshot 1`] = `
     }
   }
   color="primary"
-  onClick={[MockFunction]}
+  onClick={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
   variant="contained"
 >
-  testButton
+  test
+</WithStyles(ForwardRef(Button))>
+`;
+
+exports[`Snapshot Testing Varying Props 1`] = `
+<WithStyles(ForwardRef(Button))
+  className=""
+  classes={
+    Object {
+      "containedPrimary": undefined,
+      "containedSecondary": undefined,
+      "disabled": undefined,
+      "label": undefined,
+      "outlined": undefined,
+      "outlinedPrimary": undefined,
+      "outlinedSecondary": undefined,
+      "root": undefined,
+    }
+  }
+  color="secondary"
+  onClick={[Function]}
+  variant="outlined"
+>
+  <div>
+    snapshot label
+  </div>
 </WithStyles(ForwardRef(Button))>
 `;

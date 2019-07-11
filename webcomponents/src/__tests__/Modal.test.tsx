@@ -36,11 +36,6 @@ const setup = (
   );
 
 describe('Render Testing', () => {
-  test('should match snapshot', () => {
-    setup();
-    expect(modal).toMatchSnapshot();
-  });
-
   test('should include mandatory props', () => {
     setup();
     expect(modal.find(Button).length).toBe(0);
@@ -111,5 +106,30 @@ describe('Content Testing', () => {
   test('should ', () => {
     expect(modal.find('[data-qa="modal-content"]').children().exists()).toBeTruthy();
     expect(modal.find('[data-qa="modal-content"]').children()).toStrictEqual(shallow(content));
+  });
+});
+
+describe('Snapshot Testing', () => {
+  test('Required Props', () => {
+    setup();
+    expect(modal).toMatchSnapshot();
+  });
+
+  test('Optional Props', () => {
+    setup(
+      true, true,
+      {
+        okButtonText: 'Awesome Ok Text',
+        cancelButtonText: 'Awesome Cancel Text',
+        modalType: 'warning',
+      }
+    )
+
+    expect(modal).toMatchSnapshot();
+  });
+
+  test('Open and simple modal', () => {
+    setup(true, true);
+    expect(modal).toMatchSnapshot();
   });
 });

@@ -85,63 +85,64 @@ const propsForTable: TableProps = {
 
 let table: ShallowWrapper;
 
-beforeAll(() => table = shallow(
-  <Table {...propsForTable} />
-));
+describe('Component Tests', () => {
+  beforeAll(() => table = shallow(
+    <Table {...propsForTable} />
+  ));
 
-test('should match snapshot', () => {
-  expect(table).toMatchSnapshot();
+  test('should request sorting on header click', () => {
+    const tableSortHeader = table.find(TableHeaderCell).at(0).dive().find(`[data-qa="tableSortLabel_${tableHeaders[0].label}"]`);
+    tableSortHeader.simulate('click');
+    expect(mockOnRequestSort).toHaveBeenCalled();
+    expect(mockOnRequestSort).toHaveBeenCalledTimes(1);
+  });
+
+  describe('Table Headers', () => {
+    test('should render header rows', () => {
+      expect(table.find('[data-qa="table-header-row"]')).toHaveLength(1);
+    });
+
+    test('should put header cells in header row with tableHeaders', () => {
+      // Stub out the console errors coming from Material-UI
+      // tslint:disable:no-console
+      const originalLogger = console.error;
+      console.error = jest.fn();
+
+      const firstRow = table.find('[data-qa="table-header-row"]').first();
+      const tableHeaderCell = firstRow.find(TableHeaderCell).first().dive().find(`[data-qa="tableSortLabel_${tableHeaders[0].label}"]`);
+      expect(firstRow.find(TableHeaderCell)).toHaveLength(3);
+      expect(tableHeaderCell.render().text()).toBe(tableHeaders[0].label);
+
+      // Restore console errors
+      console.error = originalLogger;
+      // tslint:enable:no-console
+    });
+  });
+
+  describe('Table Body', () => {
+    test('should render body rows for first page', () => {
+      expect(table.find('[data-qa="table-body-row"]')).toHaveLength(4);
+    });
+
+    test('should fill first row with all assigned data', () => {
+      const firstRow = table.find('[data-qa="table-body-row"]').first();
+      expect(firstRow.find(TableBodyCell)).toHaveLength(3);
+
+      expect(firstRow.find(TableBodyCell).at(0).prop('content')).toBe(dataForTable[0].name);
+      expect(firstRow.find(TableBodyCell).at(1).prop('content')).toBe(dataForTable[0].email);
+      expect(firstRow.find(TableBodyCell).at(2).prop('content')).toBe(dataForTable[0].id);
+    });
+  });
 });
 
-test('should request sorting on header click', () => {
-  const tableSortHeader = table.find(TableHeaderCell).at(0).dive().find(`[data-qa="tableSortLabel_${tableHeaders[0].label}"]`);
-  tableSortHeader.simulate('click');
-  expect(mockOnRequestSort).toHaveBeenCalled();
-  expect(mockOnRequestSort).toHaveBeenCalledTimes(1);
-});
-
-describe('Table Headers', () => {
-  test('should render header rows', () => {
-    expect(table.find('[data-qa="table-header-row"]')).toHaveLength(1);
+describe('Snapshot Testing', () => {
+  test('Required Props', () => {
+    const table = shallow(<Table {...propsForTable} />);
+    expect(table).toMatchSnapshot();
   });
 
-  test('should put header cells in header row with tableHeaders', () => {
-    // Stub out the console errors coming from Material-UI
-    // tslint:disable:no-console
-    const originalLogger = console.error;
-    console.error = jest.fn();
-
-    const firstRow = table.find('[data-qa="table-header-row"]').first();
-    const tableHeaderCell = firstRow.find(TableHeaderCell).first().dive().find(`[data-qa="tableSortLabel_${tableHeaders[0].label}"]`);
-    expect(firstRow.find(TableHeaderCell)).toHaveLength(3);
-    expect(tableHeaderCell.render().text()).toBe(tableHeaders[0].label);
-
-    // Restore console errors
-    console.error = originalLogger;
-    // tslint:enable:no-console
+  test('Optional Props', () => {
+    const table = shallow(<Table {...propsForTable} draggable showTopPagination showBottomPagination />);
+    expect(table).toMatchSnapshot();
   });
-});
-
-describe('Table Body', () => {
-  test('should render body rows for first page', () => {
-    expect(table.find('[data-qa="table-body-row"]')).toHaveLength(4);
-  });
-
-  test('should fill first row with all assigned data', () => {
-    const firstRow = table.find('[data-qa="table-body-row"]').first();
-    expect(firstRow.find(TableBodyCell)).toHaveLength(3);
-
-    expect(firstRow.find(TableBodyCell).at(0).prop('content')).toBe(dataForTable[0].name);
-    expect(firstRow.find(TableBodyCell).at(1).prop('content')).toBe(dataForTable[0].email);
-    expect(firstRow.find(TableBodyCell).at(2).prop('content')).toBe(dataForTable[0].id);
-  });
-
-  // test('disables delete button when logged in user is equal to the user of the row', () => {
-  //   userTable.find('[data-qa="user-table-body-row"]').forEach(row => {
-  //     if (row.find(TableBodyCell).at(2).prop('content') === currentLoggedInUser.personalData.email) {
-  //       const deleteIcon = row.find(TableBodyCell).at(4).dive().find(IconButton);
-  //       expect(deleteIcon.prop('disabled')).toBe(true);
-  //     }
-  //   });
-  // });
 });

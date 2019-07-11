@@ -4,6 +4,25 @@ import React from 'react';
 
 let modalContent: ShallowWrapper;
 
+describe('Snapshot Testing', () => {
+  test('Required Props', () => {
+    const modalContent = shallow(<ModalContent />);
+    expect(modalContent).toMatchSnapshot();
+  });
+
+  test('Optional Props', () => {
+    const text = 'The Answer is 42';
+    beforeAll(() => {
+      modalContent = shallow(
+        <ModalContent>
+          <p>{text}</p>
+        </ModalContent>
+      );
+    })
+    expect(modalContent).toMatchSnapshot();
+  });
+});
+
 describe('With Children', () => {
   beforeAll(() => {
     modalContent = shallow(<ModalContent />);

@@ -3,23 +3,52 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
 
 const mockCallback = jest.fn();
-let button: ShallowWrapper;
 
-beforeAll(() => button = shallow(
-  <Button variant='contained' color='primary' label='testButton'
-    onClick={mockCallback} />
-));
+describe('Component Tests', () => {
+  let button: ShallowWrapper;
 
-test('should match snapshot', () => {
-  expect(button).toMatchSnapshot();
+  beforeAll(() => button = shallow(
+    <Button variant='contained' color='primary' label='testButton'
+      onClick={mockCallback} />
+  ));
+
+  test('button function called onClick', () => {
+    button.simulate('click');
+    expect(mockCallback).toHaveBeenCalled();
+    expect(mockCallback).toHaveBeenCalledTimes(1);
+  });
+
+  test('button contains the correct translation', () => {
+    expect(button.children().text()).toBe('testButton');
+  });
 });
 
-test('button function called onClick', () => {
-  button.simulate('click');
-  expect(mockCallback).toHaveBeenCalled();
-  expect(mockCallback).toHaveBeenCalledTimes(1);
-});
+describe('Snapshot Testing', () => {
+  test('Required Props', () => {
+    const button = shallow(<Button variant='contained' color='primary' label='test' onClick={mockCallback} />);
+    expect(button).toMatchSnapshot();
+  });
 
-test('button contains the correct translation', () => {
-  expect(button.children().text()).toBe('testButton');
+  test('Varying Props', () => {
+    const button = shallow(
+      <Button
+        variant='outlined' color='secondary' label={<div>snapshot label</div>}
+        onClick={() => console.log('snapshot log')}
+      />
+    );
+    expect(button).toMatchSnapshot();
+  });
+
+  test('Optional Props', () => {
+    const button = shallow(
+      <Button
+        variant='outlined' color='secondary' label={<div>snapshot label</div>}
+        onClick={() => console.log('snapshot log')}
+        data-qa='button-qa'
+        customclasses={['sample-class']}
+        disabled
+      />
+    );
+    expect(button).toMatchSnapshot();
+  });
 });
