@@ -36,9 +36,13 @@ const setup = (
   );
 
 describe('Render Testing', () => {
-  test('should render with mandatory props', () => {
+  test('should match snapshot', () => {
     setup();
-    expect(modal.exists()).toBeTruthy();
+    expect(modal).toMatchSnapshot();
+  });
+
+  test('should include mandatory props', () => {
+    setup();
     expect(modal.find(Button).length).toBe(0);
     expect(modal.prop('disableBackdropClick')).toBeTruthy();
     expect(modal.prop('disableEscapeKeyDown')).toBeTruthy();
@@ -54,7 +58,7 @@ describe('Render Testing', () => {
     expect(modal.find('[data-qa="modal-actions"]').exists()).toBeTruthy();
   });
 
-  test('should render optional props', () => {
+  test('should include optional props', () => {
     setup(
       true, true,
       {
@@ -64,7 +68,6 @@ describe('Render Testing', () => {
       }
     );
 
-    expect(modal.exists()).toBeTruthy();
     expect(modal.find('[data-qa="modal-title"]').childAt(1).text()).toBe('Awesome Topic');
     expect(modal.find(Button).at(0).prop('label')).toBe('Awesome Cancel Text');
     expect(modal.find(Button).at(1).prop('label')).toBe('Awesome Ok Text');
@@ -80,7 +83,6 @@ describe('Render Testing', () => {
   test('should show Warning Triangle when modalType == check', () => {
     setup(true, true, { modalType: 'warning' });
 
-    expect(modal.exists()).toBeTruthy();
     expect(modal.find(WarningIcon).exists()).toBeTruthy();
   });
 });

@@ -13,8 +13,8 @@ beforeAll(() => tableToolbar = shallow(
   />
 ));
 
-test('should render without crashing', () => {
-  expect(tableToolbar).toBeTruthy();
+test('should match snapshot', () => {
+  expect(tableToolbar).toMatchSnapshot();
 });
 
 test('should trigger change when searching', () => {

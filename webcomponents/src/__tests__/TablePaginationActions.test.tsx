@@ -11,8 +11,8 @@ beforeAll(() => actions = shallow(
     onChangePage={onChangePage} />
 ));
 
-test('should render without errors', () => {
-  expect(actions).toBeTruthy();
+test('should match snapshot', () => {
+  expect(actions).toMatchSnapshot();
 });
 
 test('should jump to first page', () => {

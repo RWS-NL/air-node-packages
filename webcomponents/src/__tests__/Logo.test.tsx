@@ -1,7 +1,11 @@
-import { shallow } from 'enzyme';
+import { shallow, ShallowWrapper } from 'enzyme';
 import Logo from '../Logo/Logo';
-import React from 'react';
+import React, { SVGProps } from 'react';
 
-it('renders without crashing', () => {
-  shallow(<Logo />);
+let logo: ShallowWrapper<SVGProps<any>>;
+
+beforeAll(() => logo = shallow(<Logo />));
+
+test('should match snapshot', () => {
+  expect(logo).toMatchSnapshot();
 });

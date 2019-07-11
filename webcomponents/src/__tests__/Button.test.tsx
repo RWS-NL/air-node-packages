@@ -5,10 +5,14 @@ import React from 'react';
 const mockCallback = jest.fn();
 let button: ShallowWrapper;
 
-beforeEach(() => button = shallow(
+beforeAll(() => button = shallow(
   <Button variant='contained' color='primary' label='testButton'
     onClick={mockCallback} />
 ));
+
+test('should match snapshot', () => {
+  expect(button).toMatchSnapshot();
+});
 
 test('button function called onClick', () => {
   button.simulate('click');

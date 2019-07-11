@@ -5,6 +5,11 @@ import React from 'react';
 const mockCallback = jest.fn();
 let actionBar: ShallowWrapper;
 
+test('should match snapshot', () => {
+  actionBar = shallow(<ActionBar title='42' buttonLabel='label' buttonAction={mockCallback} shouldHaveButton />);
+  expect(actionBar).toMatchSnapshot();
+});
+
 describe('ActionBar with button', () => {
   test('confirm the button click is registered', () => {
     actionBar = shallow(<ActionBar title='42' buttonLabel='label' buttonAction={mockCallback} shouldHaveButton />);

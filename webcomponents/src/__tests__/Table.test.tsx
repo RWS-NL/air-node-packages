@@ -89,8 +89,8 @@ beforeAll(() => table = shallow(
   <Table {...propsForTable} />
 ));
 
-test('should render without errors', () => {
-  expect(table).toBeTruthy();
+test('should match snapshot', () => {
+  expect(table).toMatchSnapshot();
 });
 
 test('should request sorting on header click', () => {

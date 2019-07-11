@@ -9,6 +9,10 @@ describe('With Children', () => {
     modalContent = shallow(<ModalContent />);
   });
 
+  test('should match snapshot', () => {
+    expect(modalContent).toMatchSnapshot();
+  });
+
   test('should render without crashing', () => {
     expect(modalContent).toBeTruthy();
   });
@@ -27,6 +31,10 @@ describe('With Children', () => {
         <p>{text}</p>
       </ModalContent>
     );
+  });
+
+  test('should match snapshot', () => {
+    expect(modalContent).toMatchSnapshot();
   });
 
   test('should insert children when getting any', () => {

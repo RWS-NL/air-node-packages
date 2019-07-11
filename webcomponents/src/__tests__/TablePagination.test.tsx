@@ -15,6 +15,6 @@ beforeAll(() => tablePagination = shallow(
   />
 ));
 
-test('should render without crashing', () => {
-  expect(tablePagination).toBeTruthy();
+test('should match snapshot', () => {
+  expect(tablePagination).toMatchSnapshot();
 });
