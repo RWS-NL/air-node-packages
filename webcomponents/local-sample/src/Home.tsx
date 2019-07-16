@@ -1,14 +1,18 @@
+import { Typography } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import MUITable from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableRow from '@material-ui/core/TableRow';
 import EditIcon from '@material-ui/icons/Create';
 import SearchIcon from '@material-ui/icons/Search';
-import { ActionBar, Button, Logo, Modal, ModalContent, SearchBar, Table, TableBodyCell, TableProps, Tooltip } from '@rws-air/ui-components';
+import {
+  ActionBar, Button, LoadingSkeleton,
+  Logo, Modal, ModalContent, SearchBar, Table,
+  TableBodyCell, TableProps, Tooltip
+} from '@rws-air/webcomponents';
 import classnames from 'classnames';
 import React, { FC, Fragment, useState } from 'react';
 import css from 'styles/modules/app.module.scss';
-import { Typography } from '@material-ui/core';
 
 type dataForTableType = {
   name: string;
@@ -88,7 +92,7 @@ const propsForTable: TableProps = {
 
 
 const Home: FC = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   return (
     <Fragment>
@@ -103,7 +107,7 @@ const Home: FC = () => {
         </Tooltip>
       </div>
       <div className={css.logo}>
-        <Logo />
+        <Logo data-qa='logo' />
       </div>
       <div className={css.app}>
         <header className={css.header}>
@@ -139,6 +143,11 @@ const Home: FC = () => {
         />
       </div>
       <div className={css.spacer}>
+        <LoadingSkeleton />
+        <LoadingSkeleton width={50} height={50} circle />
+        <LoadingSkeleton />
+      </div>
+      <div className={css.spacer}>
         <Table {...propsForTable} />
       </div>
       <div>
@@ -158,9 +167,7 @@ const Home: FC = () => {
             content: 'content',
             title: 'title',
           }}
-          modalHasForm={false}
-          shouldHaveActions
-          isWarningModal
+          isSimpleModal
           okButtonText='ok'
           cancelButtonText='cancel'
           confirmAction={() => setOpen(false)}
