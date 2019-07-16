@@ -1,3 +1,5 @@
+import classnames from 'classnames';
+import { customCss, dataQa } from 'index';
 import css from './LoadingSkeleton.scss';
 import React, { CSSProperties, FC } from 'react';
 
@@ -18,17 +20,24 @@ export type LoadingSkeletonProps = {
    * for when you are creating a user card with a profile picture for instance
    */
   circle?: boolean;
+  /** Any additional CSSProperties to pass to the component */
+  style?: CSSProperties;
+  /** data-qa tag to apply to the search bar and input element */
+  'data-qa'?: dataQa;
+  /** Custom CSS classes to pass to the button */
+  customclasses?: customCss;
 };
 
 const LoadingSkeleton: FC<LoadingSkeletonProps> = props => {
   const style: CSSProperties = {
+    ...props.style,
     width: props.width,
     height: props.height,
     borderRadius: props.height && props.width && props.circle ? '50%' : '0%',
   };
 
   // Content is a zero-width-non-joiner
-  return <span className={css.skeleton} style={style}>&zwnj;</span>;
+  return <span data-qa={props['data-qa']} className={classnames(css.skeleton, props.customclasses)} style={style}>&zwnj;</span>;
 };
 
 export default LoadingSkeleton;

@@ -1,12 +1,22 @@
 import classnames from 'classnames';
+import { customCss, dataQa } from 'index';
 import css from './Logo.scss';
 import { ReactComponent as LogoSVG } from './logo.svg';
-import React, { FC, Fragment, SVGProps } from 'react';
+import React, { CSSProperties, FC, Fragment, SVGProps } from 'react';
 
-const Logo: FC<SVGProps<any>> = props => {
+export type LogoProps = SVGProps<any> & {
+    /** Any additional CSSProperties to pass to the component */
+    style?: CSSProperties;
+    /** data-qa tag to apply to the search bar and input element */
+    'data-qa'?: dataQa;
+    /** Custom CSS classes to pass to the button */
+    customclasses?: customCss;
+};
+
+const Logo: FC<LogoProps> = props => {
   return (
     <Fragment>
-      <LogoSVG {...props} className={classnames(css.logo)} />
+      <LogoSVG {...props} className={classnames(css.logo, css.customclasses)} />
     </Fragment>
   );
 };
