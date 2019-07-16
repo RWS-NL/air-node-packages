@@ -1,0 +1,26 @@
+@import '../styles/vars';
+
+@keyframes skeletonKeyframes {
+  from {
+    background-position: -200px 0;
+  }
+
+  to {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.skeleton {
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-name: skeletonKeyframes;
+  animation-timing-function: ease-in-out;
+  background-color: $very-light-grey;
+  background-image: linear-gradient(90deg, $very-light-grey, $light-grey, $very-light-grey);
+  background-repeat: no-repeat;
+  background-size: 200px 100%;
+  border-radius: 4px;
+  display: inline-block;
+  line-height: 1;
+  width: 100%;
+}

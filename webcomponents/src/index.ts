@@ -1,5 +1,6 @@
 export * from './ActionBar';
 export * from './Button';
+export * from './LoadingSkeleton';
 export * from './Logo';
 export * from './Modal';
 export * from './ModalContent';

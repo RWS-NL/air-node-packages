@@ -1,8 +1,6 @@
-import { shallow, ShallowWrapper } from 'enzyme';
+import { shallow } from 'enzyme';
 import Logo from '../Logo/Logo';
-import React, { SVGProps } from 'react';
-
-let logo: ShallowWrapper<SVGProps<any>>;
+import React from 'react';
 
 describe('Snapshot Testing', () => {
   test('Required Props', () => {

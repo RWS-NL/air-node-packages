@@ -2,11 +2,12 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
 import TableToolbar from '../TableToolbar/TableToolbar';
 
-let tableToolbar: ShallowWrapper;
 const mockOnSearchInput = jest.fn();
 const mockOnSearchClear = jest.fn();
 
 describe('Component Tests', () => {
+  let tableToolbar: ShallowWrapper;
+
   beforeAll(() => tableToolbar = shallow(
     <TableToolbar
       searchplaceholderlabel='placeholder'

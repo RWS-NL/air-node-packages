@@ -123,7 +123,7 @@ describe('Snapshot Testing', () => {
         cancelButtonText: 'Awesome Cancel Text',
         modalType: 'warning',
       }
-    )
+    );
 
     expect(modal).toMatchSnapshot();
   });

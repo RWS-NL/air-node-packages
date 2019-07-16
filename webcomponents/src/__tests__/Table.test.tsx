@@ -83,9 +83,9 @@ const propsForTable: TableProps = {
   ),
 };
 
-let table: ShallowWrapper;
-
 describe('Component Tests', () => {
+  let table: ShallowWrapper;
+
   beforeAll(() => table = shallow(
     <Table {...propsForTable} />
   ));
