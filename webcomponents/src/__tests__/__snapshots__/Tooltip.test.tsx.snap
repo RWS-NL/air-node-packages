@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Testing Optional Props 1`] = `
+<WithStyles(Tooltip)
+  PopperProps={
+    Object {
+      "popperOptions": Object {
+        "modifiers": Object {
+          "arrow": Object {
+            "enabled": true,
+          },
+        },
+      },
+    }
+  }
+  classes={
+    Object {
+      "popper": undefined,
+      "tooltip": "",
+    }
+  }
+  enterDelay={300}
+  title={
+    <ForwardRef(StyledComponent)
+      data-qa="snap-qa"
+    >
+      SnapTitle
+      <span />
+    </ForwardRef(StyledComponent)>
+  }
+>
+  <span>
+    Snappy Text
+  </span>
+</WithStyles(Tooltip)>
+`;
+
+exports[`Snapshot Testing Required Props 1`] = `
+<WithStyles(Tooltip)
+  PopperProps={
+    Object {
+      "popperOptions": Object {
+        "modifiers": Object {
+          "arrow": Object {
+            "enabled": true,
+          },
+        },
+      },
+    }
+  }
+  classes={
+    Object {
+      "popper": undefined,
+      "tooltip": "",
+    }
+  }
+  enterDelay={300}
+  title={
+    <ForwardRef(StyledComponent)>
+      SnapTitle
+      <span />
+    </ForwardRef(StyledComponent)>
+  }
+>
+  <span>
+    Snappy Text
+  </span>
+</WithStyles(Tooltip)>
+`;

@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Testing Optional Props 1`] = `
+<WithStyles(ForwardRef(Paper))
+  className=""
+  elevation={3}
+  style={Object {}}
+>
+  <div>
+    <WithStyles(ForwardRef(Input))
+      data-qa="snap-qa"
+      disableUnderline={true}
+      disabled={true}
+      fullWidth={true}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyUp={[Function]}
+      placeholder="Snaptest"
+      value=""
+    />
+  </div>
+  <WithStyles(ForwardRef(IconButton))
+    classes={
+      Object {
+        "disabled": undefined,
+        "root": "",
+      }
+    }
+    disabled={true}
+    onClick={[Function]}
+  >
+    <AddAPhotoIcon
+      classes={
+        Object {
+          "root": undefined,
+        }
+      }
+    />
+  </WithStyles(ForwardRef(IconButton))>
+  <WithStyles(ForwardRef(IconButton))
+    classes={
+      Object {
+        "disabled": undefined,
+        "root": "undefined",
+      }
+    }
+    disabled={true}
+    onClick={[Function]}
+  >
+    <AcUnitIcon
+      classes={
+        Object {
+          "root": undefined,
+        }
+      }
+    />
+  </WithStyles(ForwardRef(IconButton))>
+</WithStyles(ForwardRef(Paper))>
+`;
+
+exports[`Snapshot Testing Required Props 1`] = `
+<WithStyles(ForwardRef(Paper))
+  className=""
+  elevation={2}
+  style={Object {}}
+>
+  <div>
+    <WithStyles(ForwardRef(Input))
+      disableUnderline={true}
+      disabled={false}
+      fullWidth={true}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyUp={[Function]}
+      placeholder="Search..."
+      value=""
+    />
+  </div>
+  <WithStyles(ForwardRef(IconButton))
+    classes={
+      Object {
+        "disabled": undefined,
+        "root": "",
+      }
+    }
+    disabled={false}
+    onClick={[Function]}
+  >
+    <SearchIcon
+      classes={
+        Object {
+          "root": undefined,
+        }
+      }
+      style={
+        Object {
+          "color": "#9e9e9e",
+        }
+      }
+    />
+  </WithStyles(ForwardRef(IconButton))>
+  <WithStyles(ForwardRef(IconButton))
+    classes={
+      Object {
+        "disabled": undefined,
+        "root": "undefined",
+      }
+    }
+    disabled={false}
+    onClick={[Function]}
+  >
+    <ClearIcon
+      classes={
+        Object {
+          "root": undefined,
+        }
+      }
+      style={
+        Object {
+          "color": "#9e9e9e",
+        }
+      }
+    />
+  </WithStyles(ForwardRef(IconButton))>
+</WithStyles(ForwardRef(Paper))>
+`;
