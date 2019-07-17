@@ -1,7 +1,8 @@
+import { CSSProperties } from '@material-ui/styles';
 import classnames from 'classnames';
 import { customCss, dataQa } from 'index';
 import css from './LoadingSkeleton.scss';
-import React, { CSSProperties, FC } from 'react';
+import React, { FC } from 'react';
 
 export type LoadingSkeletonProps = {
   /**

@@ -1,0 +1,1 @@
+export { default as SimpleTooltip, SimpleTooltipProps } from './SimpleTooltip';

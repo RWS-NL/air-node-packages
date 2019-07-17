@@ -1,8 +1,9 @@
+import { CSSProperties } from '@material-ui/styles';
 import classnames from 'classnames';
 import { customCss, dataQa } from 'index';
 import css from './Logo.scss';
 import { ReactComponent as LogoSVG } from './logo.svg';
-import React, { CSSProperties, FC, Fragment, SVGProps } from 'react';
+import React, { FC, Fragment, SVGProps } from 'react';
 
 export type LogoProps = SVGProps<any> & {
     /** Any additional CSSProperties to pass to the component */

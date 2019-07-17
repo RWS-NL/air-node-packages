@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.4.0] - 2019-07-17
+### Added
+- SimpleTooltip component
+  - This is separate from Tooltip as it doesn't have an arrow and is more like the standard Material-UI tooltip
+
+### Changed
+- CSSProperties imports from Material-UI instead of React
+- style in SearchBar component uses CSSProperties as type, instead of any
+
 ## [2.3.1] - 2019-07-16
 ### Changed
 - Added passing data-qa and custom styles to LoadingSkeleton
@@ -75,6 +84,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.0.1] - 2019-05-23
 - Set up project
 
+[2.3.1]: https://github.com/RWS-NL/air-node-packages/compare/webcomponents-v2.3.1...webcomponents-v2.4.0
 [2.3.1]: https://github.com/RWS-NL/air-node-packages/compare/webcomponents-v2.3.0...webcomponents-v2.3.1
 [2.3.0]: https://github.com/RWS-NL/air-node-packages/compare/webcomponents-v2.2.5...webcomponents-v2.3.0
 [2.2.5]: https://github.com/RWS-NL/air-node-packages/compare/webcomponents-v2.2.4...webcomponents-v2.2.5

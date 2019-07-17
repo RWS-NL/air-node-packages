@@ -4,6 +4,7 @@ import Input from '@material-ui/core/Input';
 import Paper from '@material-ui/core/Paper';
 import ClearIcon from '@material-ui/icons/Clear';
 import SearchIcon from '@material-ui/icons/Search';
+import { CSSProperties } from '@material-ui/styles';
 import classNames from 'classnames';
 import React, { ChangeEvent, cloneElement, FC, KeyboardEvent, ReactElement, useState } from 'react';
 import css from './SearchBar.scss';
@@ -37,7 +38,7 @@ export type SearchBarProps = {
   /** Sets placeholder text for the embedded text field. */
   placeholder?: string;
   /** Override the inline-styles of the root element. */
-  style?: any;
+  style?: CSSProperties;
   /** Override the paper element elevation */
   paperElevation?: number;
   /** data-qa tag to apply to the search bar and input element */
@@ -49,7 +50,7 @@ const SearchBar: FC<SearchBarProps> = (
     className = '',
     disabled = false,
     placeholder = 'Search...',
-    style = null,
+    style = {},
     closeIcon = <ClearIcon style={{ color: grey[500] }} />,
     searchIcon = <SearchIcon style={{ color: grey[500] }} />,
     paperElevation = 2,

@@ -4,11 +4,12 @@ import MUITable from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableRow from '@material-ui/core/TableRow';
 import EditIcon from '@material-ui/icons/Create';
+import AccessAlarmsIcon from '@material-ui/icons/AccessAlarms';
 import SearchIcon from '@material-ui/icons/Search';
 import {
   ActionBar, Button, LoadingSkeleton,
   Logo, Modal, ModalContent, SearchBar, Table,
-  TableBodyCell, TableProps, Tooltip
+  TableBodyCell, TableProps, Tooltip, SimpleTooltip
 } from '@rws-air/webcomponents';
 import classnames from 'classnames';
 import React, { FC, Fragment, useState } from 'react';
@@ -106,6 +107,13 @@ const Home: FC = () => {
           </IconButton>
         </Tooltip>
       </div>
+      <div className={css.spacer}>
+        <SimpleTooltip title='Simple Tooltip' data-qa='tooltip-qa'>
+          <IconButton onClick={() => setOpen(true)}>
+            <AccessAlarmsIcon />
+          </IconButton>
+        </SimpleTooltip>
+      </div>
       <div className={css.logo}>
         <Logo data-qa='logo' />
       </div>
@@ -143,8 +151,6 @@ const Home: FC = () => {
         />
       </div>
       <div className={css.spacer}>
-        <LoadingSkeleton />
-        <LoadingSkeleton width={50} height={50} circle />
         <LoadingSkeleton />
       </div>
       <div className={css.spacer}>
