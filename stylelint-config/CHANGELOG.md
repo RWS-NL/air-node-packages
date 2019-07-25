@@ -17,5 +17,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Setup style linting config
 
-[2.0.0]: https://github.com/RWS-NL/air-node-packages/compare/stylelint-v1.0.0...styleling-v2.0.0
+[2.0.0]: https://github.com/RWS-NL/air-node-packages/compare/stylelint-v1.0.0...stylelint-v2.0.0
 [1.0.0]: https://github.com/RWS-NL/air-node-packages/releases/tag/stylelint-v1.0.0
