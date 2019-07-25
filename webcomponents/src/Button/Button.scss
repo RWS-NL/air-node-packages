@@ -2,66 +2,66 @@
 
 .button {
   @extend %fontNormal;
-  background-color: $blue !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  float: right !important;
-  height: 3.2rem !important;
-  line-height: initial !important;
-  margin-right: 1% !important;
+  background-color: $blue;
+  border-radius: 0;
+  box-shadow: none;
+  float: right;
+  height: 3.2rem;
+  line-height: initial;
+  margin-right: 1%;
 
   &Label {
     @extend %fontNormal;
-    color: $white !important;
-    font-size: 1rem !important;
-    font-weight: bold !important;
-    text-transform: none !important;
+    color: $white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: none;
   }
 
   &Primary {
-    border: 2px solid $blue !important;
+    border: 2px solid $blue;
   }
 
   &Secondary {
-    background-color: $yellow !important;
-    border: 2px solid $yellow !important;
-    color: $textBlack !important;
+    background-color: $yellow;
+    border: 2px solid $yellow;
+    color: $textBlack;
 
     > span {
-      color: $textBlack !important;
+      color: $textBlack;
     }
   }
 
   &Outlined {
-    background-color: $white !important;
-    border: 2px solid $blue !important;
-    color: $blue !important;
+    background-color: $white;
+    border: 2px solid $blue;
+    color: $blue;
 
     > span {
-      color: $blue !important;
+      color: $blue;
     }
 
     &:hover {
-      border-width: 2px !important;
+      border-width: 2px;
     }
 
     &Secondary {
-      border: 2px solid $yellow !important;
-      color: $yellow !important;
+      border: 2px solid $yellow;
+      color: $yellow;
 
       > span {
-        color: $yellow !important;
+        color: $yellow;
       }
     }
   }
 
   &Disabled {
-    background-color: $lightGrey !important;
-    border: transparent !important;
-    color: $textBlack !important;
+    background-color: $lightGrey;
+    border: transparent;
+    color: $textBlack;
 
     > span {
-      color: $textBlack !important;
+      color: $textBlack;
     }
   }
 }

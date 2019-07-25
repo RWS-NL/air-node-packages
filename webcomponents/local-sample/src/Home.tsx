@@ -23,9 +23,20 @@ type dataForTableType = {
 
 const dataForTable: dataForTableType[] = [
   { name: 'Robin Hood', email: 'robin.hood@winked.com', id: 23456789 },
+  { name: 'Steve Jobs', email: 'steve.jobs@apple.com', id: 1 },
   { name: 'Darth Vader', email: 'darth.vader@thedeathstart.com', id: 9876 },
   { name: 'Kaladin Stormblessed', email: 'kaladin.stormblessed@thearmy.com', id: 567890 },
-  { name: 'Steve Jobs', email: 'steve.jobs@apple.com', id: 1 }
+  { name: 'Kaladin Stormblessed', email: 'kaladin.stormblessed@thearmy.com', id: 567890 },
+  { name: 'Robin Hood', email: 'robin.hood@winked.com', id: 23456789 },
+  { name: 'Steve Jobs', email: 'steve.jobs@apple.com', id: 1 },
+  { name: 'Steve Jobs', email: 'steve.jobs@apple.com', id: 1 },
+  { name: 'Darth Vader', email: 'darth.vader@thedeathstart.com', id: 9876 },
+  { name: 'Steve Jobs', email: 'steve.jobs@apple.com', id: 1 },
+  { name: 'Kaladin Stormblessed', email: 'kaladin.stormblessed@thearmy.com', id: 567890 },
+  { name: 'Steve Jobs', email: 'steve.jobs@apple.com', id: 1 },
+  { name: 'Robin Hood', email: 'robin.hood@winked.com', id: 23456789 },
+  { name: 'Steve Jobs', email: 'steve.jobs@apple.com', id: 1 },
+  { name: 'Darth Vader', email: 'darth.vader@thedeathstart.com', id: 9876 }
 ];
 
 const dataTableHeaderMapping: Map<string, string> = new Map()
@@ -89,6 +100,7 @@ const propsForTable: TableProps = {
     tableToolbar: [css.customTableToolbar],
   },
   paperElevation: 0,
+  showBottomPagination: true
 };
 
 
