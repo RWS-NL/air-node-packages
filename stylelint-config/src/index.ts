@@ -20,14 +20,7 @@ module.exports = {
     'function-calc-no-invalid': true,
     'max-nesting-depth': [
       3,
-      {
-        ignoreAtRules: [
-          'each',
-          'media',
-          'supports',
-          'include'
-        ],
-      }
+      {ignoreAtRules: [ 'each', 'media', 'supports', 'include' ]}
     ],
     'no-invalid-double-slash-comments': null,
     'number-max-precision': 2,
@@ -46,6 +39,7 @@ module.exports = {
     'scss/double-slash-comment-whitespace-inside': 'always',
     'scss/no-duplicate-dollar-variables': true,
     'scss/percent-placeholder-pattern': patternRegex,
+    'selector-class-pattern': patternRegex,
     'value-keyword-case': 'lower',
     'value-list-comma-newline-after': 'never-multi-line',
     'value-list-comma-newline-before': 'never-multi-line',
