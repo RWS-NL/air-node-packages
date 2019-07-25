@@ -1,7 +1,7 @@
 @import '../styles/vars';
 
 .button {
-  @include font-normal;
+  @extend %fontNormal;
   background-color: $blue !important;
   border-radius: 0 !important;
   box-shadow: none !important;
@@ -11,7 +11,7 @@
   margin-right: 1% !important;
 
   &Label {
-    @include font-normal;
+    @extend %fontNormal;
     color: $white !important;
     font-size: 1rem !important;
     font-weight: bold !important;
@@ -25,10 +25,10 @@
   &Secondary {
     background-color: $yellow !important;
     border: 2px solid $yellow !important;
-    color: $text-black !important;
+    color: $textBlack !important;
 
     > span {
-      color: $text-black !important;
+      color: $textBlack !important;
     }
   }
 
@@ -56,12 +56,12 @@
   }
 
   &Disabled {
-    background-color: $light-grey !important;
+    background-color: $lightGrey !important;
     border: transparent !important;
-    color: $text-black !important;
+    color: $textBlack !important;
 
     > span {
-      color: $text-black !important;
+      color: $textBlack !important;
     }
   }
 }

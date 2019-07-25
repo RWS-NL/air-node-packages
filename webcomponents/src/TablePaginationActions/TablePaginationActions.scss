@@ -3,7 +3,7 @@
 .paginationNumbers {
   color: $blue !important;
   cursor: pointer !important;
-  font-family: $rws-font-text !important;
+  font-family: $rwsFontText !important;
   font-weight: bolder !important;
   margin-left: 0.5vw !important;
   margin-right: 0.5vw !important;
@@ -19,6 +19,6 @@
   background-color: transparent !important;
 }
 
-.ie11-chipCorrection {
+.ie11ChipCorrection {
   min-width: 2rem !important;
 }

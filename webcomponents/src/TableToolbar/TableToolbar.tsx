@@ -37,7 +37,7 @@ const TableToolbar: FC<TableToolbarProps> = props => {
             placeholder={`${props.searchplaceholderlabel}...`}
             onChange={e => debouncedSearch(e.target.value)}
             onCancelSearch={props.onsearchclear}
-            className={classnames(css.searchFieldContent, css['ie11-searchBarTextCorrection'], props.customSearchbarClasses)}
+            className={classnames(css.searchFieldContent, css.ie11SearchBarTextCorrection, props.customSearchbarClasses)}
             searchIcon={<SearchIcon className={classnames(css.searchIconButton)} />}
             paperElevation={props.paperElevation}
           />

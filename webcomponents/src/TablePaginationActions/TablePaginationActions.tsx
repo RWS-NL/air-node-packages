@@ -38,7 +38,7 @@ const TablePaginationActions: FC<TablePaginationActionsProps> = props => {
       .map((page, key) => {
         if (props.page + 1 === page) {
           return <Chip key={key} label={page} color='primary' variant='default' onClick={handlePageClick(page - 1)}
-            className={classnames(css.activePageChip, css['ie11-chipCorrection'])} />;
+            className={classnames(css.activePageChip, css.ie11ChipCorrection)} />;
         }
 
         return <span key={key} onClick={handlePageClick(page - 1)}

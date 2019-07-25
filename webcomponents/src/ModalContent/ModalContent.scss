@@ -1,9 +1,9 @@
 @import '../styles/vars';
 
 .content > * {
-  @include font-normal;
-  color: $text-black;
-  font-family: $rws-font-text !important;
+  @extend %fontNormal;
+  color: $textBlack;
+  font-family: $rwsFontText !important;
   font-size: 1rem;
   letter-spacing: 0.6px;
   line-height: 1.81;

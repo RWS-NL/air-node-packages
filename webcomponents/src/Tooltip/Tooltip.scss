@@ -2,9 +2,9 @@
 
 @mixin tooltipDefaults {
   background-color: $white;
-  border: 1px solid $light-grey;
+  border: 1px solid $lightGrey;
   border-radius: 0;
-  color: $text-black;
+  color: $textBlack;
   font-size: 0.9rem;
 }
 
@@ -70,7 +70,7 @@
 }
 
 .tooltip[x-placement*='right'] > div {
-  @include popperArrowLeftGenerator($light-grey, 10px, 1px, 25%);
+  @include popperArrowLeftGenerator($lightGrey, 10px, 1px, 25%);
   @include tooltipDefaults;
   font-size: 0.75rem;
   margin-left: 0.7rem;
@@ -80,7 +80,7 @@
 }
 
 .tooltip[x-placement*='bottom'] > div {
-  @include popperArrowUpGenerator($light-grey, 10px, 1px, 25%);
+  @include popperArrowUpGenerator($lightGrey, 10px, 1px, 25%);
   @include tooltipDefaults;
   margin-top: 0.5rem;
   position: relative;

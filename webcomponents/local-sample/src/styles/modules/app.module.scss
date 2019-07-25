@@ -27,14 +27,14 @@
 
 .table {
   &Row {
-    border-left: 1px solid $very-light-grey;
+    border-left: 1px solid $veryLightGrey;
 
     &:nth-of-type(1) {
-      border-top: 3px solid $light-grey;
+      border-top: 3px solid $lightGrey;
     }
 
     &:nth-of-type(odd) {
-      background-color: $very-light-grey;
+      background-color: $veryLightGrey;
     }
 
     &:nth-of-type(even) {

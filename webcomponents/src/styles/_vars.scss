@@ -5,43 +5,43 @@ $arrowModifier: 1.41421356;
 
 $black: #000000;
 $blue: #0B71AB;
-$bright-blue: #007BC7;
-$medium-blue: #005395;
-$dark-blue: #154273;
-$dark-orange: #FFB612;
-$dark-white: #F8F8F8;
+$brightBlue: #007BC7;
+$mediumBlue: #005395;
+$darkBlue: #154273;
+$darkOrange: #FFB612;
+$darkWhite: #F8F8F8;
 $green: #39870C;
 $grey: #666666;
-$inactive-blue: #85B8D5;
-$light-blue: #E5F0F9;
-$light-green: #C3DBB6;
-$light-grey: #DAD9D7;
-$light-yellow: #FDF6BB;
-$medium-grey: #979797;
-$medium-rare-grey: #777777;
-$middle-yellow: #FBED7E;
+$inactiveBlue: #85B8D5;
+$lightBlue: #E5F0F9;
+$lightGreen: #C3DBB6;
+$lightGrey: #DAD9D7;
+$lightYellow: #FDF6BB;
+$mediumGrey: #979797;
+$mediumRareGrey: #777777;
+$middleYellow: #FBED7E;
 $orange: #F6D4B2;
 $pink: #F2BFBB;
 $red: #D52B1E;
-$salmon-pink: #F9DFDD;
-$text-black: #222222;
-$very-light-grey: #F7F6F4;
+$salmonPink: #F9DFDD;
+$textBlack: #222222;
+$veryLightGrey: #F7F6F4;
 $white: #FFFFFF;
 $yellow: #F9E11E;
 
-$rws-font-text: rijksoverheidsanstext, arial, verdana, sans-serif;
-$rws-font-header: rijksoverheidsansheading, arial, verdana, sans-serif;
-$font-size-default: 14px;
-$font-size-reset: 1rem;
+$rwsFontText: rijksoverheidsanstext, arial, verdana, sans-serif;
+$rwsFontHeader: rijksoverheidsansheading, arial, verdana, sans-serif;
+$fontSizeDefault: 14px;
+$fontSizeReset: 1rem;
 
-@mixin font-normal {
-  font-family: $rws-font-text;
+%fontNormal {
+  font-family: $rwsFontText;
   font-stretch: normal;
   font-style: normal;
   font-weight: normal;
 }
 
-@mixin beautifulCenter {
+%beautifulCenter {
   margin-left: 5vw;
   margin-right: 5vw;
   max-width: 90vw;

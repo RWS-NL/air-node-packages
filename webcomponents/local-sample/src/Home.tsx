@@ -3,13 +3,13 @@ import IconButton from '@material-ui/core/IconButton';
 import MUITable from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableRow from '@material-ui/core/TableRow';
-import EditIcon from '@material-ui/icons/Create';
 import AccessAlarmsIcon from '@material-ui/icons/AccessAlarms';
+import EditIcon from '@material-ui/icons/Create';
 import SearchIcon from '@material-ui/icons/Search';
 import {
   ActionBar, Button, LoadingSkeleton,
-  Logo, Modal, ModalContent, SearchBar, Table,
-  TableBodyCell, TableProps, Tooltip, SimpleTooltip
+  Logo, Modal, ModalContent, SearchBar, SimpleTooltip,
+  Table, TableBodyCell, TableProps, Tooltip
 } from '@rws-air/webcomponents';
 import classnames from 'classnames';
 import React, { FC, Fragment, useState } from 'react';

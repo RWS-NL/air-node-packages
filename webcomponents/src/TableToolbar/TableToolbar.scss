@@ -6,8 +6,8 @@
 }
 
 .toolbar {
-  @include beautifulCenter;
-  background-color: $light-grey;
+  @extend %beautifulCenter;
+  background-color: $lightGrey;
   display: flex;
   height: 4rem;
   margin-top: 5vh;
@@ -15,11 +15,11 @@
 }
 
 .searchFieldContent {
-  border: 1px solid $medium-grey;
+  border: 1px solid $mediumGrey;
   border-radius: 0;
   box-shadow: none;
   color: $grey;
-  font-size: $font-size-reset;
+  font-size: $fontSizeReset;
   margin: 0 auto;
   margin-left: 24vw;
   width: 20vw;
@@ -30,6 +30,7 @@
   opacity: 1;
 }
 
-.ie11-searchBarTextCorrection > div > div > input {
+// stylelint-disable-next-line selector-max-compound-selectors
+.ie11SearchBarTextCorrection > div > div > input {
   min-height: 2.5rem;
 }

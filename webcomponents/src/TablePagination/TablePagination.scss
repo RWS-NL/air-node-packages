@@ -1,12 +1,12 @@
 @import '../styles/vars';
 
 .tablePagination {
-  @include beautifulCenter;
+  @extend %beautifulCenter;
   align-items: center !important;
-  background-color: $light-blue !important;
+  background-color: $lightBlue !important;
   display: flex !important;
   float: left !important;
-  font-size: $font-size-default !important;
+  font-size: $fontSizeDefault !important;
   height: 2.4vw !important;
   width: 100% !important;
 
@@ -20,5 +20,5 @@
 }
 
 .menuItem {
-  font-size: $font-size-default !important;
+  font-size: $fontSizeDefault !important;
 }
