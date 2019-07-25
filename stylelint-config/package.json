@@ -1,8 +1,8 @@
 {
   "name": "@rws-air/stylelint-config",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Standard StyleLint config for all AIR apps",
-  "main": "stylelint.js",
+  "main": "dist/index.js",
   "author": "@rws-air",
   "license": "AGPL-3.0-or-later",
   "keywords": [
@@ -13,25 +13,51 @@
     "scss"
   ],
   "scripts": {
-    "build": "terser -cmo stylelint.js -- ./config/stylelint.config.js",
-    "prepublishOnly": "yarn build"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "test": "yarn lint",
+    "prebuild": "yarn lint && yarn clean",
+    "build": "rollup -c rollup.config.ts",
+    "start": "yarn build -w",
+    "prepublishOnly": "yarn build",
+    "clean": "rimraf ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RWS-NL/air-node-packages.git",
+    "directory": "stylelint-config"
+  },
+  "bugs": {
+    "url": "https://github.com/RWS-NL/air-node-packages/issues"
   },
   "engines": {
-    "node": ">=8.0.0"
-  },
-  "files": [
-    "stylelint.js"
-  ],
-  "devDependencies": {
-    "terser": "^4.0.0"
+    "node": ">=8",
+    "npm": ">=5"
   },
   "peerDependencies": {
-    "stylelint": ">=9"
+    "stylelint": ">=10"
   },
   "dependencies": {
     "stylelint-config-recommended": "^2.2.0",
     "stylelint-config-sass-guidelines": "^6.0.0",
     "stylelint-config-standard": "^18.3.0",
-    "stylelint-scss": "^3.6.1"
-  }
+    "stylelint-scss": "^3.9.2"
+  },
+  "devDependencies": {
+    "eslint": "6.0.1",
+    "@favware/eslint-config": "1.0.0",
+    "stylelint": "10.1.0",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.17.0",
+    "rollup-plugin-commonjs": "^10.0.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-progress": "^1.1.1",
+    "rollup-plugin-terser": "5.1.1",
+    "rollup-plugin-typescript2": "^0.22.0",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  },
+  "files": [
+    "dist"
+  ]
 }
