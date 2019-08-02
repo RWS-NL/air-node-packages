@@ -10,12 +10,12 @@ export type LoadingSkeletonProps = {
    * Useful when you don't want to adapt the skeleton to a text element but for instance a card
    * Also needed for the prop circle (see below).
    */
-  height?: number;
+  height?: string | number;
   /**
    * Width of the skeleton
    * Useful when the skeleton is inside an inline element with no width of its own
    */
-  width?: number;
+  width?: string | number;
   /**
    * Prop for making the skeleton look like a circle
    * for when you are creating a user card with a profile picture for instance
