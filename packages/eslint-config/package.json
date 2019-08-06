@@ -1,0 +1,59 @@
+{
+  "name": "@rws-nl/eslint-config",
+  "version": "1.0.0",
+  "description": "Standard ESLint config for RWS-NL ReactJS projects written in TypeScript",
+  "author": "@rws-nl",
+  "license": "AGPL-3.0-or-later",
+  "main": "dist/index.js",
+  "homepage": "https://github.com/rws-nl/packages/eslint-config#readme",
+  "scripts": {
+    "lint": "eslint src --fix --ext .ts,.tsx",
+    "test": "yarn lint",
+    "prebuild": "yarn lint",
+    "build": "rollup -c rollup.config.ts",
+    "start": "yarn build -w",
+    "prepublishOnly": "yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rws-nl/air-node-packages.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rws-nl/air-node-packages/issues"
+  },
+  "keywords": [
+    "eslint",
+    "config",
+    "rws-nl",
+    "typescript",
+    "ts"
+  ],
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "peerDependencies": {
+    "eslint": "^5 || ^6"
+  },
+  "devDependencies": {
+    "@types/node": "12.6.9",
+    "eslint": "^5.16.0",
+    "rollup": "^1.19.3",
+    "rollup-plugin-cleaner": "^1.0.0",
+    "rollup-plugin-commonjs": "^10.0.2",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-progress": "^1.1.1",
+    "rollup-plugin-terser": "5.1.1",
+    "rollup-plugin-typescript2": "^0.22.1",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^1",
+    "@typescript-eslint/parser": "^1"
+  }
+}

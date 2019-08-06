@@ -13,13 +13,12 @@
     "scss"
   ],
   "scripts": {
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "lint": "eslint src --fix --ext .ts,.tsx",
     "test": "yarn lint",
     "prebuild": "yarn lint && yarn clean",
     "build": "rollup -c rollup.config.ts",
     "start": "yarn build -w",
-    "prepublishOnly": "yarn build",
-    "clean": "rimraf ./dist"
+    "prepublishOnly": "yarn build"
   },
   "repository": {
     "type": "git",
@@ -43,10 +42,9 @@
     "stylelint-scss": "^3.9.2"
   },
   "devDependencies": {
-    "eslint": "6.0.1",
+    "eslint": "^5.16.0",
     "@favware/eslint-config": "1.0.0",
     "stylelint": "10.1.0",
-    "rimraf": "^2.6.3",
     "rollup": "^1.17.0",
     "rollup-plugin-commonjs": "^10.0.1",
     "rollup-plugin-node-resolve": "^5.2.0",
@@ -55,7 +53,8 @@
     "rollup-plugin-terser": "5.1.1",
     "rollup-plugin-typescript2": "^0.22.0",
     "ts-node": "^8.3.0",
-    "typescript": "^3.5.3"
+    "typescript": "^3.5.3",
+    "rollup-plugin-cleaner": "^1.0.0"
   },
   "files": [
     "dist"

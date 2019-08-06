@@ -7,16 +7,25 @@ node_modules
 .env.development.local
 .env.test.local
 .env.production.local
-*.zip
+
+# Build Artifacts
 dist/
+build/
+*.zip
+*.tar
+*.tar.xz
+*.tar.gz
+*.7z
+*.rar
 
 # Logs
-*.log*
+logs/
 coverage/
+*.log*
 
 # IDE Settings
 .idea/
-**/.vscode/*
-!**/.vscode/*.code-snippets
+.vscode/*
+.vscode/*.code-snippets
 .vs/
 *.iml

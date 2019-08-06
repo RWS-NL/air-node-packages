@@ -1,24 +1,6 @@
 {
-    "compilerOptions": {
-        "outDir": "dist/",
-        "rootDir": "./src",
-        "forceConsistentCasingInFileNames": true,
-        "experimentalDecorators": true,
-        "esModuleInterop": true,
-        "lib": ["esnext", "dom"],
-        "target": "es6",
-        "module": "commonjs",
-        "moduleResolution": "node",
-        "newLine": "lf",
-        "noFallthroughCasesInSwitch": true,
-        "noImplicitAny": true,
-        "noImplicitReturns": true,
-        "noImplicitThis": true,
-        // "noUnusedLocals": true,
-        "removeComments": true,
-        "importHelpers": true,
-        "strict": true,
-    },
-    "include": ["src/*.ts"],
-    "exclude": ["node_modules", "dist"]
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "commonjs",
+  }
 }

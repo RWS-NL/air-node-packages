@@ -23,12 +23,9 @@
     "postbuild": "yarn terser",
     "start": "yarn build -w",
     "start:local": "pushd local-sample && yarn install && yarn start",
-    "clean": "rimraf ./dist",
-    "terser": "terser-folder ./dist -eo ./dist -x .js",
     "prepublishOnly": "yarn lint && yarn test:ci && git co tsconfig.json && yarn build",
-    "modules": "rimraf node_modules yarn.lock local-sample/node_modules local-sample/yarn.lock && yarn && pushd local-sample && yarn && popd"
+    "modules": "rm -rf node_modules yarn.lock local-sample/node_modules local-sample/yarn.lock && yarn && pushd local-sample && yarn && popd"
   },
-  "dependencies": {},
   "peerDependencies": {
     "@material-ui/core": ">=4",
     "@material-ui/icons": ">=4",
@@ -62,7 +59,6 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "^3.0.1",
-    "rimraf": "^2.6.3",
     "rollup": "^1.17.0",
     "rollup-plugin-commonjs": "^10.0.1",
     "rollup-plugin-node-resolve": "^5.2.0",
@@ -71,8 +67,9 @@
     "rollup-plugin-progress": "^1.1.1",
     "rollup-plugin-typescript2": "^0.22.0",
     "rollup-plugin-url": "^2.2.2",
+    "rollup-plugin-cleaner": "^1.0.0",
+    "rollup-plugin-terser": "5.1.1",
     "stylelint": "^10.1.0",
-    "terser-folder": "^2.0.0",
     "tslint": "^5.18.0",
     "typescript": "^3.5.3",
     "utility-types": "^3.7.0"
