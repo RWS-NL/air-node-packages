@@ -1235,6 +1235,35 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
+"@rws-air/stylelint-config@file:./packages/stylelint-config":
+  version "2.0.1"
+  dependencies:
+    stylelint-config-recommended "^2.2.0"
+    stylelint-config-sass-guidelines "^6.0.0"
+    stylelint-config-standard "^18.3.0"
+    stylelint-scss "^3.9.2"
+
+"@rws-air/tslint-config@file:./packages/tslint-config":
+  version "1.0.1"
+
+"@rws-air/usercreator@file:packages/user-creator":
+  version "1.0.6"
+  dependencies:
+    "@favware/yamlreader" "^1.0.2"
+    chalk "^2.4.2"
+    common-tags "^1.8.0"
+    node-fetch "^2.5.0"
+    yargs "^13.2.2"
+
+"@rws-air/webcomponents@file:packages/webcomponents":
+  version "2.4.2"
+
+"@rws-nl/eslint-config@file:packages/eslint-config":
+  version "1.0.0"
+  dependencies:
+    "@typescript-eslint/eslint-plugin" "^1"
+    "@typescript-eslint/parser" "^1"
+
 "@svgr/babel-plugin-add-jsx-attribute@^4.2.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@svgr/babel-plugin-add-jsx-attribute/-/babel-plugin-add-jsx-attribute-4.2.0.tgz#dadcb6218503532d6884b210e7f3c502caaa44b1"
@@ -1490,7 +1519,7 @@
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
-"@types/node@*", "@types/node@12.6.9", "@types/node@^12.6.9":
+"@types/node@*", "@types/node@^12.6.9":
   version "12.6.9"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.6.9.tgz#ffeee23afdc19ab16e979338e7b536fdebbbaeaf"
   integrity sha512-+YB9FtyxXGyD54p8rXwWaN1EWEyar5L58GlGWgtH2I9rGmLGBQcw63+0jw+ujqVavNuO47S1ByAjm9zdHMnskw==
@@ -10105,7 +10134,7 @@ rollup-plugin-cleaner@^1.0.0:
   dependencies:
     rimraf "^2.6.3"
 
-rollup-plugin-commonjs@^10.0.1, rollup-plugin-commonjs@^10.0.2:
+rollup-plugin-commonjs@^10.0.1:
   version "10.0.2"
   resolved "https://registry.yarnpkg.com/rollup-plugin-commonjs/-/rollup-plugin-commonjs-10.0.2.tgz#61328f3a29945e2c35f2b2e824c18944fd88a54d"
   integrity sha512-DxeR4QXTgTOFseYls1V7vgKbrSJmPYNdEMOs0OvH+7+89C3GiIonU9gFrE0u39Vv1KWm3wepq8KAvKugtoM2Zw==
@@ -10170,7 +10199,7 @@ rollup-plugin-terser@5.1.1:
     serialize-javascript "^1.7.0"
     terser "^4.1.0"
 
-rollup-plugin-typescript2@^0.22.0, rollup-plugin-typescript2@^0.22.1:
+rollup-plugin-typescript2@^0.22.0:
   version "0.22.1"
   resolved "https://registry.yarnpkg.com/rollup-plugin-typescript2/-/rollup-plugin-typescript2-0.22.1.tgz#7678b7decc6808e600ff36c32febd31081b55405"
   integrity sha512-SQEHr1s0kDWrNV3UKySZtYKFIcWCJh2PQ4ZtLNj18pf50SrxeRDlUksOOeLPyodJ7bVLaKwWDbiobF2a6gfKyg==
@@ -10196,7 +10225,7 @@ rollup-pluginutils@2.8.1, rollup-pluginutils@^2.0.1, rollup-pluginutils@^2.8.1:
   dependencies:
     estree-walker "^0.6.1"
 
-rollup@^1.17.0, rollup@^1.19.3:
+rollup@^1.17.0:
   version "1.19.3"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.19.3.tgz#77e59426faa6d8399e7b75c129e81447cf9db317"
   integrity sha512-+6VtYadkQEp6OTSa6ms1eAE/CYW+kD9rCd3fq4E2T3VaVqwTcY4vq0zBcB4nhQANnId+SwSpgCn4RFfOUAsWjQ==
@@ -11030,7 +11059,7 @@ stylelint-scss@^3.4.0, stylelint-scss@^3.9.2:
     postcss-selector-parser "^6.0.2"
     postcss-value-parser "^4.0.0"
 
-stylelint@10.1.0, stylelint@^10.1.0:
+stylelint@^10.1.0:
   version "10.1.0"
   resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-10.1.0.tgz#1bc4c4ce878107e7c396b19226d91ba28268911a"
   integrity sha512-OmlUXrgzEMLQYj1JPTpyZPR9G4bl0StidfHnGJEMpdiQ0JyTq0MPg1xkHk1/xVJ2rTPESyJCDWjG8Kbpoo7Kuw==

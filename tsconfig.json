@@ -1,8 +1,5 @@
 {
   "compilerOptions": {
-    "outDir": "build",
-    "rootDir": "src",
-    "baseUrl": "src",
     "module": "esnext",
     "target": "es5",
     "lib": [
@@ -21,13 +18,10 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "sourceMap": true,
-    "strict": true,
+    "strict": true
   },
-  "include": [
-    "src"
-  ],
   "exclude": [
-    "src/setupTests.ts",
-    "src/__tests__"
+    "node_modules",
+    "**/*.spec.ts"
   ]
 }

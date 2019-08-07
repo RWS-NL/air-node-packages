@@ -26,6 +26,6 @@ coverage/
 # IDE Settings
 .idea/
 .vscode/*
-.vscode/*.code-snippets
+!.vscode/*.code-snippets
 .vs/
 *.iml

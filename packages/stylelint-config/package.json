@@ -15,8 +15,8 @@
   "scripts": {
     "lint": "eslint src --fix --ext .ts,.tsx",
     "test": "yarn lint",
-    "prebuild": "yarn lint && yarn clean",
-    "build": "rollup -c rollup.config.ts",
+    "prebuild": "yarn lint",
+    "build": "rollup",
     "start": "yarn build -w",
     "prepublishOnly": "yarn build"
   },
@@ -41,22 +41,8 @@
     "stylelint-config-standard": "^18.3.0",
     "stylelint-scss": "^3.9.2"
   },
-  "devDependencies": {
-    "eslint": "^5.16.0",
-    "@favware/eslint-config": "1.0.0",
-    "stylelint": "10.1.0",
-    "rollup": "^1.17.0",
-    "rollup-plugin-commonjs": "^10.0.1",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-peer-deps-external": "^2.2.0",
-    "rollup-plugin-progress": "^1.1.1",
-    "rollup-plugin-terser": "5.1.1",
-    "rollup-plugin-typescript2": "^0.22.0",
-    "ts-node": "^8.3.0",
-    "typescript": "^3.5.3",
-    "rollup-plugin-cleaner": "^1.0.0"
-  },
   "files": [
     "dist"
-  ]
+  ],
+  "devDependencies": {}
 }
