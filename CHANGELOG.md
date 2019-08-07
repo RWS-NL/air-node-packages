@@ -171,7 +171,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- Spacer -->
 
-[eslint-config-1.0.0]: https://github.com/RWS-NL/air-node-packages/releases/tag/tslint-v1.0.1
+[eslint-config-1.0.0]: https://github.com/RWS-NL/air-node-packages/releases/tag/eslint-v1.0.0
 
 <!-- Spacer -->
 
