@@ -18,7 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 #### Changed
-- [LoadingSkeleton]: Allow for string based sizing
+- LoadingSkeleton: Allow for string based sizing
 
 ### [webcomponents-2.4.1] - 2019-07-25
 #### Added
@@ -105,6 +105,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Set up project
 
 ## Eslint Config
+### [eslint-config-1.0.1] - 2019-08-07
+#### Fixed
+- Fixed the new-cap exclusion regex
+
 ### [eslint-config-1.0.0] - 2019-08-07
 - Initial release
 
@@ -175,6 +179,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- Spacer -->
 
+[eslint-config-2.0.0]: https://github.com/RWS-NL/air-node-packages/compare/eslint-v1.0.0...eslint-v1.0.1
 [eslint-config-1.0.0]: https://github.com/RWS-NL/air-node-packages/releases/tag/eslint-v1.0.0
 
 <!-- Spacer -->

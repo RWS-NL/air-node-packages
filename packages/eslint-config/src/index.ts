@@ -243,7 +243,7 @@ module.exports = {
       'error',
       {max: 1}
     ],
-    'new-cap': [ 'error', { capIsNewExceptionPattern: '^(?:[A-Z]+)_(?:[A-Z]+_)+'} ],
+    'new-cap': [ 'error', { capIsNewExceptionPattern: '^(?:[A-Z]+)_'} ],
     'new-parens': 'error',
     'no-array-constructor': 'error',
     'no-lonely-if': 'error',
