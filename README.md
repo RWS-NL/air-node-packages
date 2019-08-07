@@ -19,30 +19,22 @@
 
 ## What is this?
 
-This is a mono-repo for all NodeJS related packages used throughout other AIR projects. Each subfolder holds a package that gets published to the NPM registry for use in other projects.
+This is a mono-repo for all NodeJS related packages used throughout other AIR projects. This repository is managed by [Lerna](https://github.com/lerna/lerna). Each package has its own subfolder in the `packages` folder, you can easily create a new package with the `lerna create` command.
 
-## Commit Message rules for this repository
+---
 
-Since this is a mono-repo it is desirable that we show what package we are committing to in the commit message. Therefore please prefix your commit message with the name of the package. For example: `(webcomponents) Did something` or `(tslint-config) Update TSLint rules`. When committing something that is not in one of the packages (for example changes to this readme) prefix it with `(main)`.
+To get autocompletion for Lerna follow these steps:
 
-## Tools and prerequisites for development
+1. Run this:
 
-### All Operating Systems
+```zsh
+git clone https://github.com/favware/zsh-lerna ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-lerna
+```
 
-- [IntelliJ](https://www.jetbrains.com/idea/download/) or [VSCode](https://code.visualstudio.com/)
-- [Git](https://git-scm.com/downloads)
-- [Git Duet](https://github.com/git-duet/git-duet) (for Linux: just download binaries from releases page https://github.com/git-duet/git-duet/releases and copy them in your bin directory on PATH)
-  - `brew tap git-duet/tap`
-  - `brew install git-duet`
-- [NodeJS](https://nodejs.org/en/download/)
+2. Add `zsh-lerna` in your `~/.zshrc`:
 
-### MacOS
-- [Brew](https://brew.sh/index_nl)
+```zsh
+plugins=(… zsh-lerna)
+```
 
-### Windows
-- [Microsoft Build Tools Visual Studio 2017](https://www.visualstudio.com/downloads/#build-tools-for-visual-studio-2017) (windows only)
-  - Recommended installation method: `npm install --global windows-build-tools` in administrative powershell after installing NodeJS
-- Make sure to install the SCM version of Git, including Git Bash and Git LFS.  
-  With installation select `'Check out Windows style, check in Unix style Line Endings'` and also  
-  `'Enable symbolic links'` to prevent path errors.  
-  Use ` Git lfs fetch` to make sure to download all the large data files of the repository.
+3. Reload `~/.zshrc` or reload your terminal
