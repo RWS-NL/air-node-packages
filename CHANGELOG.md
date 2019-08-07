@@ -12,7 +12,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 4. [Usercreator](#usercreator)
 
 ## Webcomponents
-### [webcomponents-2.4.2] - 2019-08-02
+### [webcomponents-3.0.0] - 2019-08-07
+#### Changed
+- Changed repo to use Lerna
+
+
 #### Changed
 - [LoadingSkeleton]: Allow for string based sizing
 
@@ -111,6 +115,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial release
 
 ## Stylelint Config
+### [stylelint-config-3.0.0] - 2019-08-07
+#### Changed
+- Changed repo to use Lerna
+
 ### [stylelint-config-2.0.1] - 2019-07-25
 #### Fixed
 - Selector-class-pattern rule should use patternRegex
@@ -141,6 +149,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### [usercreator-2.0.0] - 2019-08-07
 - Bundle with Rollup
 
+[webcomponents-3.0.0]: https://github.com/RWS-NL/air-node-packages/compare/webcomponents-v2.4.2...webcomponents-v3.0.0
 [webcomponents-2.4.2]: https://github.com/RWS-NL/air-node-packages/compare/webcomponents-v2.4.1...webcomponents-v2.4.2
 [webcomponents-2.4.1]: https://github.com/RWS-NL/air-node-packages/compare/webcomponents-v2.4.0...webcomponents-v2.4.1
 [webcomponents-2.4.0]: https://github.com/RWS-NL/air-node-packages/compare/webcomponents-v2.3.1...webcomponents-v2.4.0
@@ -165,6 +174,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- Spacer -->
 
+[stylelint-config-3.0.0]: https://github.com/RWS-NL/air-node-packages/compare/stylelint-v2.0.1...stylelint-v3.0.0
 [stylelint-config-2.0.1]: https://github.com/RWS-NL/air-node-packages/compare/stylelint-v2.0.0...stylelint-v2.0.1
 [stylelint-config-2.0.0]: https://github.com/RWS-NL/air-node-packages/compare/stylelint-v1.0.0...stylelint-v2.0.0
 [stylelint-config-1.0.0]: https://github.com/RWS-NL/air-node-packages/releases/tag/stylelint-v1.0.0
