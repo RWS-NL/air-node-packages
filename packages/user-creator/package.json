@@ -43,5 +43,5 @@
     "node-fetch": "^2.5.0",
     "yargs": "^13.2.2"
   },
-  "devDependencies": {}
+  "gitHead": "311e33a3661511bc9a4267ef6f6ec3b4ee0d6333"
 }

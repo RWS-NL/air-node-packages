@@ -15,9 +15,9 @@
   "scripts": {
     "test": "react-scripts test",
     "test:ci": "CI=true react-scripts test",
-    "lint": "concurrently \"yarn tslint\" \"yarn stylelint\"",
-    "eslint": "eslint src --fix --ext .ts,.tsx",
-    "stylelint": "stylelint --fix ./src/styles/*.scss ./src/**/*.scss",
+    "lint": "concurrently \"yarn lint:js\" \"yarn lint:scss\"",
+    "lint:js": "eslint src --fix --ext .ts,.tsx",
+    "lint:scss": "stylelint --fix ./src/styles/*.scss ./src/**/*.scss",
     "build": "rollup -c rollup.config.js",
     "start": "yarn build -w",
     "start:local": "pushd local-sample && yarn install && yarn start",
@@ -46,5 +46,6 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "gitHead": "311e33a3661511bc9a4267ef6f6ec3b4ee0d6333"
 }
