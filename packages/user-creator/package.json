@@ -1,11 +1,14 @@
 {
   "name": "@rws-air/usercreator",
-  "version": "1.0.6",
+  "version": "2.0.0",
   "description": "Script to add users to usermanagement environments",
-  "main": "./dist/usercreator.js",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "typings": "dist/index.d.ts",
   "bin": {
-    "usercreator": "./dist/usercreator.js",
-    "uc": "./dist/usercreator.js"
+    "usercreator": "dist/index.js",
+    "uc": "dist/index.js"
   },
   "author": "@rws-air",
   "license": "AGPL-3.0-or-later",
@@ -17,21 +20,21 @@
     "ts"
   ],
   "files": [
-    "dist",
-    "bin"
+    "dist"
   ],
   "engines": {
-    "node": ">=10.0.0"
+    "node": ">=8",
+    "npm": ">=5"
   },
   "scripts": {
-    "test": "tslint --fix -p . -c ./tslint.json --fix",
-    "start": "ts-node src/creator.ts",
-    "prebuild": "yarn test && yarn clean",
-    "build": "tsc",
-    "postbuild": "yarn terser",
-    "clean": "rimraf dist/",
-    "terser": "terser --compress --mangle --output dist/usercreator.js -- dist/creator.js && rimraf dist/creator.js",
-    "prepublishOnly": "yarn build"
+    "lint": "eslint src --fix --ext .ts,.tsx",
+    "test": "yarn lint",
+    "prebuild": "yarn lint",
+    "build": "rollup -c rollup.config.js",
+    "postbuild": "replace --silent \"// #!/usr/bin/env node\" \"#!/usr/bin/env node\" dist/index.js dist/index.es.js",
+    "start": "yarn build -w",
+    "prepublishOnly": "yarn build",
+    "start:ts": "ts-node src/creator.ts"
   },
   "dependencies": {
     "@favware/yamlreader": "^1.0.2",
@@ -40,7 +43,5 @@
     "node-fetch": "^2.5.0",
     "yargs": "^13.2.2"
   },
-  "git": {
-    "pre-commit": "lint"
-  }
+  "devDependencies": {}
 }

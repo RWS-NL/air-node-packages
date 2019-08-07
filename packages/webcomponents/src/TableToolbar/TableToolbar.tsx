@@ -16,7 +16,7 @@ export type TableToolbarProps = {
   onsearchinput: (searchTerms: string) => unknown;
   /** The action to trigger when clearing the search */
   onsearchclear: () => unknown;
-  /** data-qa tag to apply to the search bar and input element */
+  /** Data-qa tag to apply to the search bar and input element */
   'data-qa'?: dataQa;
   /** Custom CSS classes to pass to the toolbar */
   customclasses?: customCss;

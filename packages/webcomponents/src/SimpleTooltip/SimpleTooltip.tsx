@@ -7,7 +7,7 @@ import css from './SimpleTooltip.scss';
 import { customCss, dataQa } from 'typings';
 
 export type SimpleTooltipProps = MUITooltipProps & {
-  /** data-qa tag to apply to the tooltip */
+  /** Data-qa tag to apply to the tooltip */
   'data-qa'?: dataQa;
   /** Custom CSS classes to pass to the tooltip */
   customclasses?: customCss;

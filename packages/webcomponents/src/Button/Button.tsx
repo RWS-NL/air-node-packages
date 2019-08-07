@@ -17,7 +17,7 @@ export type ButtonProps = {
   label: ReactNode;
   /** Whether this button should be disabled */
   disabled?: boolean;
-  /** data-qa tag to apply to the search bar and input element */
+  /** Data-qa tag to apply to the search bar and input element */
   'data-qa'?: dataQa;
   /** Custom CSS classes to pass to the button */
   customclasses?: customCss;

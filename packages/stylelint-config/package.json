@@ -16,7 +16,7 @@
     "lint": "eslint src --fix --ext .ts,.tsx",
     "test": "yarn lint",
     "prebuild": "yarn lint",
-    "build": "rollup",
+    "build": "rollup -c rollup.config.js",
     "start": "yarn build -w",
     "prepublishOnly": "yarn build"
   },

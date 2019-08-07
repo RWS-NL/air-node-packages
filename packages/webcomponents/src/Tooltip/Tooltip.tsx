@@ -6,7 +6,7 @@ import css from './Tooltip.scss';
 import { customCss, dataQa } from 'typings';
 
 export type TooltipProps = MUITooltipProps & {
-  /** data-qa tag to apply to the search bar and input element */
+  /** Data-qa tag to apply to the search bar and input element */
   'data-qa'?: dataQa;
   /** Custom CSS classes to pass to the button */
   customclasses?: customCss;
@@ -23,15 +23,7 @@ const Tooltip: FC<TooltipProps> = props => (
     placement={props.placement}
     enterDelay={props.enterDelay || 300}
     classes={{ popper: css.tooltip, tooltip: classnames(css.tooltip, props.customclasses) }}
-    PopperProps={{
-      popperOptions: {
-        modifiers: {
-          arrow: {
-            enabled: true,
-          },
-        },
-      },
-    }}
+    PopperProps={{popperOptions: {modifiers: {arrow: {enabled: true}}}}}
   >
     {props.children}
   </MUITooltip>

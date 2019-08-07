@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import Button from '../Button/Button';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
@@ -7,10 +8,9 @@ const mockCallback = jest.fn();
 describe('Component Tests', () => {
   let button: ShallowWrapper;
 
-  beforeAll(() => button = shallow(
-    <Button variant='contained' color='primary' label='testButton'
-      onClick={mockCallback} />
-  ));
+  beforeAll(() => {
+    button = shallow(<Button variant='contained' color='primary' label='testButton' onClick={mockCallback} />);
+  });
 
   test('button function called onClick', () => {
     button.simulate('click');
@@ -45,7 +45,7 @@ describe('Snapshot Testing', () => {
         variant='outlined' color='secondary' label={<div>snapshot label</div>}
         onClick={() => console.log('snapshot log')}
         data-qa='button-qa'
-        customclasses={['sample-class']}
+        customclasses={[ 'sample-class' ]}
         disabled
       />
     );

@@ -1,0 +1,5 @@
+{
+  "extends": [
+    "@rws-air/eslint-config"
+  ],
+}

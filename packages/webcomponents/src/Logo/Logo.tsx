@@ -6,12 +6,12 @@ import { ReactComponent as LogoSVG } from './logo.svg';
 import React, { FC, Fragment, SVGProps } from 'react';
 
 export type LogoProps = SVGProps<any> & {
-    /** Any additional CSSProperties to pass to the component */
-    style?: CSSProperties;
-    /** data-qa tag to apply to the search bar and input element */
-    'data-qa'?: dataQa;
-    /** Custom CSS classes to pass to the button */
-    customclasses?: customCss;
+  /** Any additional CSSProperties to pass to the component */
+  style?: CSSProperties;
+  /** Data-qa tag to apply to the search bar and input element */
+  'data-qa'?: dataQa;
+  /** Custom CSS classes to pass to the button */
+  customclasses?: customCss;
 };
 
 const Logo: FC<LogoProps> = props => {

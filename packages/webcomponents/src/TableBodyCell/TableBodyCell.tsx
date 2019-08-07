@@ -7,7 +7,7 @@ import { cellContent, customCss, dataQa } from '../typings';
 export type TableBodyCellProps = {
   /** Content for the cell */
   content: cellContent;
-  /** data-qa tag to apply to the search bar and input element */
+  /** Data-qa tag to apply to the search bar and input element */
   'data-qa'?: dataQa;
   /** Custom CSS classes to pass to the button */
   customclasses?: customCss;
@@ -17,6 +17,7 @@ const splitTableCellText = (text: string) => {
   const splitContent = text.match(/.{1,75}/g);
 
   if (splitContent) return splitContent.join(' ');
+
   return text;
 };
 

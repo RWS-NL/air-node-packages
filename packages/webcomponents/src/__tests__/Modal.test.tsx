@@ -16,24 +16,24 @@ const setup = (
   props?: Pick<ModalProps, OptionalKeys<ModalProps>>,
   dialogContent: ReactNode = <Fragment />
 ) => (
-    modal = shallow<ModalProps>(<Modal
-      {...props}
-      topic='Awesome Topic'
-      dialogContent={dialogContent}
-      closeAction={closeAction}
-      confirmAction={confirmAction}
-      open={isOpen}
-      isSimpleModal={isSimpleModal}
-      modalqas={{
-        content: 'modal-content',
-        modal: 'modal',
-        title: 'modal-title',
-        actionCancel: 'modal-cancel-button',
-        actionConfirm: 'modal-confirm-button',
-        actions: 'modal-actions',
-      }}
-    />)
-  );
+  modal = shallow<ModalProps>(<Modal
+    {...props}
+    topic='Awesome Topic'
+    dialogContent={dialogContent}
+    closeAction={closeAction}
+    confirmAction={confirmAction}
+    open={isOpen}
+    isSimpleModal={isSimpleModal}
+    modalqas={{
+      content: 'modal-content',
+      modal: 'modal',
+      title: 'modal-title',
+      actionCancel: 'modal-cancel-button',
+      actionConfirm: 'modal-confirm-button',
+      actions: 'modal-actions',
+    }}
+  />)
+);
 
 describe('Render Testing', () => {
   test('should include mandatory props', () => {

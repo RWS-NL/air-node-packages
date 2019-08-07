@@ -12,8 +12,8 @@ export type ActionBarProps = {
   shouldHaveButton?: boolean;
   /** The text that should be shown in the button */
   buttonLabel?: string;
-  /** data-qa tag to apply to the search bar and input element */
-  'data-qa'?: dataQa
+  /** Data-qa tag to apply to the search bar and input element */
+  'data-qa'?: dataQa;
   /** Custom CSS classes to pass to the button */
   customclasses?: customCss;
   /** The action that should be invoked when the button is clicked */

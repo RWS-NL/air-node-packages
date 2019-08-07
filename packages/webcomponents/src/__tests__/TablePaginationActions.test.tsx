@@ -8,10 +8,12 @@ const onChangePage = jest.fn();
 describe('Component Tests', () => {
   let tablePaginationActions: ShallowWrapper;
 
-  beforeAll(() => tablePaginationActions = shallow(
-    <TablePaginationActions rowsPerPage={10} page={0} count={42}
-      onChangePage={onChangePage} />
-  ));
+  beforeAll(() => {
+    tablePaginationActions = shallow(
+      <TablePaginationActions rowsPerPage={10} page={0} count={42}
+        onChangePage={onChangePage} />
+    );
+  });
 
   test('should jump to first page', () => {
     const goToFirstPageButton = tablePaginationActions.find(IconButton).first();
@@ -57,7 +59,7 @@ describe('Snapshot Testing', () => {
     const tablePaginationActions = shallow(
       <TablePaginationActions
         rowsPerPage={10} page={0} count={42}
-        onChangePage={onChangePage} customclasses={['snapshot-class']}
+        onChangePage={onChangePage} customclasses={[ 'snapshot-class' ]}
       />
     );
     expect(tablePaginationActions).toMatchSnapshot();

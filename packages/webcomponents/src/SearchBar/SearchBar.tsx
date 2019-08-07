@@ -41,7 +41,7 @@ export type SearchBarProps = {
   style?: CSSProperties;
   /** Override the paper element elevation */
   paperElevation?: number;
-  /** data-qa tag to apply to the search bar and input element */
+  /** Data-qa tag to apply to the search bar and input element */
   'data-qa'?: dataQa;
 };
 
@@ -57,7 +57,7 @@ const SearchBar: FC<SearchBarProps> = (
     ...props
   }: SearchBarProps
 ) => {
-  const [value, setValue] = useState('');
+  const [ value, setValue ] = useState('');
 
   const handleFocus = (event: any): void => {
     if (props.onFocus) props.onFocus(event);
@@ -116,30 +116,22 @@ const SearchBar: FC<SearchBarProps> = (
       <IconButton
         onClick={handleRequestSearch}
         classes={{
-          root: classNames(css.iconButton, css.searchIconButton, {
-            [css.iconButtonHidden]: value !== '',
-          }),
+          root: classNames(css.iconButton, css.searchIconButton, {[css.iconButtonHidden]: value !== ''}),
           disabled: css.iconButtonDisabled,
         }}
         disabled={disabled}
       >
-        {cloneElement(searchIcon, {
-          classes: { root: css.icon },
-        })}
+        {cloneElement(searchIcon, {classes: { root: css.icon }})}
       </IconButton>
       <IconButton
         onClick={handleCancel}
         classes={{
-          root: classNames(css.iconButton, {
-            [css.iconButtonHidden]: value === '',
-          }),
+          root: classNames(css.iconButton, {[css.iconButtonHidden]: value === ''}),
           disabled: css.iconButtonDisabled,
         }}
         disabled={disabled}
       >
-        {cloneElement(closeIcon, {
-          classes: { root: css.icon },
-        })}
+        {cloneElement(closeIcon, {classes: { root: css.icon }})}
       </IconButton>
     </Paper>
   );

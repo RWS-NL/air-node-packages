@@ -35,7 +35,9 @@ describe('Component Testing', () => {
   });
 
   describe('ActionBar without button', () => {
-    beforeEach(() => actionBar = shallow(<ActionBar title='42' />));
+    beforeEach(() => {
+      actionBar = shallow(<ActionBar title='42' />);
+    });
 
     test('should show title', () => {
       const title = actionBar.find('[data-qa="action-bar-title"]');
@@ -44,7 +46,6 @@ describe('Component Testing', () => {
       expect(actionButton.length).toBe(0);
     });
   });
-
 });
 
 

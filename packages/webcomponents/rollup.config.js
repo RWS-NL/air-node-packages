@@ -12,5 +12,5 @@ export default configure({
     }),
     url(),
     svgr()
-  ]
+  ],
 });

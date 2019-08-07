@@ -23,7 +23,7 @@ export type LoadingSkeletonProps = {
   circle?: boolean;
   /** Any additional CSSProperties to pass to the component */
   style?: CSSProperties;
-  /** data-qa tag to apply to the search bar and input element */
+  /** Data-qa tag to apply to the search bar and input element */
   'data-qa'?: dataQa;
   /** Custom CSS classes to pass to the button */
   customclasses?: customCss;

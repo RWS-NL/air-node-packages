@@ -1,16 +1,22 @@
 {
-  "name": "@rws-nl/eslint-config",
+  "name": "@rws-air/eslint-config",
   "version": "1.0.0",
   "description": "Standard ESLint config for RWS-NL ReactJS projects written in TypeScript",
-  "author": "@rws-nl",
+  "author": "@rws-air",
   "license": "AGPL-3.0-or-later",
   "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
   "homepage": "https://github.com/rws-nl/packages/eslint-config#readme",
   "scripts": {
     "lint": "eslint src --fix --ext .ts,.tsx",
     "test": "yarn lint",
     "prebuild": "yarn lint",
-    "build": "rollup -c rollup.config.ts",
+    "build": "rollup -c rollup.config.js",
     "start": "yarn build -w",
     "prepublishOnly": "yarn build"
   },
@@ -28,10 +34,6 @@
     "typescript",
     "ts"
   ],
-  "engines": {
-    "node": ">=8",
-    "npm": ">=5"
-  },
   "peerDependencies": {
     "eslint": "^5 || ^6"
   },
@@ -39,7 +41,13 @@
     "dist"
   ],
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^1",
-    "@typescript-eslint/parser": "^1"
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0",
+    "eslint-config-react-app": "^4.0.1",
+    "eslint-plugin-flowtype": "^2.50.3",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.6.1"
   }
 }

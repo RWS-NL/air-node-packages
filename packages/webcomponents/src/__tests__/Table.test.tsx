@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { TableRow } from '@material-ui/core';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React, { Fragment } from 'react';
@@ -45,7 +46,7 @@ const propsForTable: TableProps = {
   order: 'asc',
   orderby: 'name',
   rowsPerPage,
-  rowsPerPageOptions: [2, 4, 5, 10],
+  rowsPerPageOptions: [ 2, 4, 5, 10 ],
   page,
   onChangePage: mockOnChangePage,
   onChangeRowsPerPage: mockOnChangeRowsPerPage,
@@ -86,9 +87,9 @@ const propsForTable: TableProps = {
 describe('Component Tests', () => {
   let table: ShallowWrapper;
 
-  beforeAll(() => table = shallow(
-    <Table {...propsForTable} />
-  ));
+  beforeAll(() => {
+    table = shallow(<Table {...propsForTable} />);
+  });
 
   test('should request sorting on header click', () => {
     const tableSortHeader = table.find(TableHeaderCell).at(0).dive().find(`[data-qa="tableSortLabel_${tableHeaders[0].label}"]`);
@@ -104,7 +105,7 @@ describe('Component Tests', () => {
 
     test('should put header cells in header row with tableHeaders', () => {
       // Stub out the console errors coming from Material-UI
-      // tslint:disable:no-console
+      // Tslint:disable:no-console
       const originalLogger = console.error;
       console.error = jest.fn();
 
@@ -115,7 +116,7 @@ describe('Component Tests', () => {
 
       // Restore console errors
       console.error = originalLogger;
-      // tslint:enable:no-console
+      // Tslint:enable:no-console
     });
   });
 

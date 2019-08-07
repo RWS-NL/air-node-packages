@@ -19,7 +19,7 @@ export type TablePaginationActionsProps = {
   count: number;
   /** Function triggered when changing page */
   onChangePage: (event: any, page: number) => void;
-  /** data-qa tag to apply to the search bar and input element */
+  /** Data-qa tag to apply to the search bar and input element */
   'data-qa'?: dataQa;
   /** Custom CSS classes to pass to the button */
   customclasses?: customCss;
@@ -33,7 +33,7 @@ const TablePaginationActions: FC<TablePaginationActionsProps> = props => {
   const handlePageClick = (page: number) => (event: SyntheticEvent) => props.onChangePage(event, page);
 
   const renderPages = () => (
-    [...Array(Math.ceil(props.count / props.rowsPerPage)).keys()]
+    [ ...Array(Math.ceil(props.count / props.rowsPerPage)).keys() ]
       .map(x => ++x)
       .map((page, key) => {
         if (props.page + 1 === page) {

@@ -12,7 +12,7 @@ export type TablePaginationProps = {
   labelrowsperpage: label;
   /** The label in the displayed pages, for example "of" in "page 1 of 10" */
   labelpaginationof: label;
-  /** data-qa tag to apply to the search bar and input element */
+  /** Data-qa tag to apply to the search bar and input element */
   'data-qa'?: dataQa;
   /** Custom CSS classes to pass to the button */
   customclasses?: customCss;

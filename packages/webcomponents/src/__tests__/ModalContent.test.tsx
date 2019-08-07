@@ -21,7 +21,6 @@ describe('Component Testing', () => {
     test('should render empty div when no children are given', () => {
       expect(modalContent.prop('children')).toBeUndefined();
     });
-
   });
 
   describe('With Children', () => {

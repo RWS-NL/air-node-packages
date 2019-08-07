@@ -56,9 +56,7 @@ module.exports = {
     ],
     'member-ordering': [
       true,
-      {
-        order: 'fields-first'
-      }
+      { order: 'fields-first' }
     ],
     'newline-before-return': false,
     'no-angle-bracket-type-assertion': true,
@@ -70,9 +68,7 @@ module.exports = {
       true,
       2
     ],
-    'no-console': {
-      severity: 'warning'
-    },
+    'no-console': { severity: 'warning' },
     'no-construct': true,
     'no-debugger': true,
     'no-duplicate-imports': true,
@@ -127,7 +123,7 @@ module.exports = {
       {
         'import-sources-order': 'case-insensitive',
         'named-imports-order': 'case-insensitive',
-        'module-source-path': 'basename'
+        'module-source-path': 'basename',
       }
     ],
     'prefer-conditional-expression': [
@@ -136,9 +132,7 @@ module.exports = {
     ],
     'prefer-const': [
       true,
-      {
-        destructuring: 'all'
-      }
+      { destructuring: 'all' }
     ],
     'prefer-for-of': true,
     'prefer-method-signature': false,
@@ -171,10 +165,10 @@ module.exports = {
           objects: 'always',
           arrays: 'never',
           functions: 'never',
-          typeLiterals: 'ignore'
+          typeLiterals: 'ignore',
         },
         esSpecCompliant: true,
-        singleline: 'never'
+        singleline: 'never',
       }
     ],
     'triple-equals': true,
@@ -187,6 +181,6 @@ module.exports = {
       'check-operator',
       'check-typecast',
       'check-module'
-    ]
-  }
-}
+    ],
+  },
+};

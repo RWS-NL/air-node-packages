@@ -8,12 +8,14 @@ const mockOnSearchClear = jest.fn();
 describe('Component Tests', () => {
   let tableToolbar: ShallowWrapper;
 
-  beforeAll(() => tableToolbar = shallow(
-    <TableToolbar
-      searchplaceholderlabel='placeholder'
-      onsearchinput={mockOnSearchInput} onsearchclear={mockOnSearchClear}
-    />
-  ));
+  beforeAll(() => {
+    tableToolbar = shallow(
+      <TableToolbar
+        searchplaceholderlabel='placeholder'
+        onsearchinput={mockOnSearchInput} onsearchclear={mockOnSearchClear}
+      />
+    );
+  });
 
   test('should trigger change when searching', () => {
     const inputBox = tableToolbar
@@ -62,8 +64,8 @@ describe('Snapshot Testing', () => {
         onsearchinput={mockOnSearchInput} onsearchclear={mockOnSearchClear}
         searchdebounce={50}
         data-qa='snapshot-qa'
-        customclasses={['snapshot-class']}
-        customSearchbarClasses={['snapshot-class']}
+        customclasses={[ 'snapshot-class' ]}
+        customSearchbarClasses={[ 'snapshot-class' ]}
       />
     );
     expect(tableToolbar).toMatchSnapshot();

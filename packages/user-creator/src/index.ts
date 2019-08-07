@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+/* eslint-disable no-console */
 import readYaml from '@favware/yamlreader';
 import chalk from 'chalk';
 import { stripIndent } from 'common-tags';
@@ -7,18 +6,18 @@ import fetch from 'node-fetch';
 import path from 'path';
 import yargs from 'yargs';
 
-interface User {
+type User = {
   email: string;
   firstname: string;
   middlename?: string;
   lastname: string;
   roles: string[];
-}
+};
 
-interface ResponseData extends User {
+type ResponseData = {
   id: string;
   privileges: string[];
-}
+} & User;
 
 class UsermanagementAdder {
   private file: string;
@@ -26,20 +25,19 @@ class UsermanagementAdder {
   private password: string;
   private url: string;
 
-  constructor (file: any, user: string, pass: string, url: string) {
+  public constructor(file: string, user: string, pass: string, url: string) {
     this.file = file;
     this.username = user;
     this.password = pass;
     this.url = url;
   }
 
-  public async run () {
+  public async run() {
     const users: User[] = readYaml(this.file);
     for (const user of users) await this.addUserToAPI(user);
   }
 
-  private async addUserToAPI (user: User) {
-
+  private async addUserToAPI(user: User) {
     try {
       const response = await fetch(`${this.url}/api/v1/users`, {
         body: JSON.stringify({
@@ -59,20 +57,17 @@ class UsermanagementAdder {
       console.log(`Added user with email ${user.email}, they got ID ${data.id}`);
 
       for (const role of user.roles) await this.addRoleToUser(data.id, role);
-
     } catch (err) {
       console.error(err);
     }
   }
 
-  private async addRoleToUser (userId: string, role: string) {
+  private async addRoleToUser(userId: string, role: string) {
     console.log(`Adding ${role} to user with ID ${userId}`);
 
     try {
       await fetch(`${this.url}/api/v1/users/${userId}/roles`, {
-        body: JSON.stringify({
-          name: role,
-        }),
+        body: JSON.stringify({ name: role }),
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -82,7 +77,6 @@ class UsermanagementAdder {
 
       console.log(`Added role ${role} to user with id ${userId}`);
       console.log('');
-
     } catch (err) {
       console.error(chalk.red(`an error occurred adding ${role} to user with ID ${userId}. Stacktrace:`));
       console.error(err);

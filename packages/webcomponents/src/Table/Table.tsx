@@ -17,40 +17,40 @@ export type TableLabels =
   & Pick<TableHeaderCellProps, 'tooltiplabel'>;
 
 export type TableQAs = {
-  /** data-qa applied to the root table */
+  /** Data-qa applied to the root table */
   table: dataQa;
-  /** data-qa applied to the pagination components */
+  /** Data-qa applied to the pagination components */
   pagination: dataQa;
-  /** data-qa applied to the toolbar */
+  /** Data-qa applied to the toolbar */
   toolbar: dataQa;
-  /** data-qa applied to the header wrapper */
+  /** Data-qa applied to the header wrapper */
   header: dataQa;
-  /** data-qa applied to the header row */
+  /** Data-qa applied to the header row */
   headerRow: dataQa;
-  /** data-qa applied to each header cell */
+  /** Data-qa applied to each header cell */
   headerCell: dataQa;
-  /** data-qa applied to the table body wrapper */
+  /** Data-qa applied to the table body wrapper */
   tableBody: dataQa;
 };
 
 export type TableCustomClasses = {
-  /** custom class(es) for table */
+  /** Custom class(es) for table */
   table?: string[];
-  /** custom class(es) for table toolbar */
+  /** Custom class(es) for table toolbar */
   tableToolbar?: string[];
-  /** custom class(es) for table paginations */
+  /** Custom class(es) for table paginations */
   tablePagination?: string[];
-  /** custom class(es) for table pagination actions */
+  /** Custom class(es) for table pagination actions */
   tablePaginationActions?: string[];
-  /** custom class(es) for table header */
+  /** Custom class(es) for table header */
   tableHeader?: string[];
-  /** custom class(es) for table header row */
+  /** Custom class(es) for table header row */
   tableHeaderRow?: string[];
-  /** custom class(es) for table header cell */
+  /** Custom class(es) for table header cell */
   tableHeaderCell?: string[];
-  /** custom class(es) for table body */
+  /** Custom class(es) for table body */
   tableBody?: string[];
-  /** custom class(es) for table toolbar searchbar */
+  /** Custom class(es) for table toolbar searchbar */
   tableSearchbar?: string[];
 };
 
@@ -68,7 +68,7 @@ export type TableProps =
     rowcount: number;
     /** Labels used in the table */
     labels: TableLabels;
-    /** data-qa's used in the table */
+    /** Data-qa's used in the table */
     tableqas: TableQAs;
     /** Content for the table */
     tablebodycontent: ReactNode;
@@ -85,6 +85,7 @@ const Table: FC<TableProps> = props => {
     const classes: string[] = [];
     if (baseClass) classes.push(baseClass);
     if (props.tablecss && props.tablecss[component]) classes.push(...props.tablecss[component]);
+
     return classes;
   };
 

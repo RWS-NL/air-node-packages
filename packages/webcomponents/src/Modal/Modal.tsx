@@ -11,17 +11,17 @@ import React, { FC, Fragment, KeyboardEvent, ReactNode } from 'react';
 import { dataQa } from 'typings';
 
 export type ModalQAs = {
-  /** data-qa applied to the main modal */
+  /** Data-qa applied to the main modal */
   modal: dataQa;
-  /** data-qa applied to the title */
+  /** Data-qa applied to the title */
   title: dataQa;
-  /** data-qa applied to the content */
+  /** Data-qa applied to the content */
   content: dataQa;
-  /** data-qa applied to the modal actions */
+  /** Data-qa applied to the modal actions */
   actions?: dataQa;
-  /** data-qa applied to the action confirm button */
+  /** Data-qa applied to the action confirm button */
   actionConfirm?: dataQa;
-  /** data-qa applied to the action cancel button */
+  /** Data-qa applied to the action cancel button */
   actionCancel?: dataQa;
 };
 
@@ -56,17 +56,19 @@ const Modal: FC<ModalProps> = props => {
   const handleConfirmKeyPress = (event: KeyboardEvent) => {
     return props.confirmAction && event.key.toLowerCase() === 'enter'
       ? props.confirmAction()
-      : void 0;
+      : undefined;
   };
 
   const handleConfirm = () => {
     if (props.confirmAction) return props.confirmAction();
-    return void 0;
+
+    return undefined;
   };
 
   const handleClose = () => {
     if (props.closeAction) return props.closeAction();
-    return void 0;
+
+    return undefined;
   };
 
   const renderModalActions = () => {
@@ -88,6 +90,7 @@ const Modal: FC<ModalProps> = props => {
         </DialogActions>
       );
     }
+
     return <Fragment />;
   };
 
@@ -107,7 +110,7 @@ const Modal: FC<ModalProps> = props => {
     <Dialog
       disableBackdropClick
       disableEscapeKeyDown
-      open={!!props.open} onClose={props.closeAction}
+      open={Boolean(props.open)} onClose={props.closeAction}
       classes={{ root: css.modal }}
       onKeyPress={handleConfirmKeyPress}
       data-qa={props.modalqas.modal || 'modal'}
@@ -130,9 +133,7 @@ const Modal: FC<ModalProps> = props => {
       <DialogContent
         classes={{ root: css.modalBody }}
         className={
-          classnames({
-            [css.modalContentSmall]: props.hasOwnProperty('isSimpleModal') ? props.isSimpleModal : false,
-          })
+          classnames({[css.modalContentSmall]: props.hasOwnProperty('isSimpleModal') ? props.isSimpleModal : false})
         }
         data-qa={props.modalqas.content || 'modal-content'}
       >

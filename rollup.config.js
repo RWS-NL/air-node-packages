@@ -10,25 +10,26 @@ export default opts => {
   const options = {...opts};
   const input = options.input ? options.input : 'src/index.ts';
   const plugins = options.plugins && options.plugins.length ? options.plugins : [];
-  const output = options.output && options.output.length ? options.output : [];
+  const externalConfig = options.externalConfig && options.externalConfig.length ? options.externalConfig : [];
+  const output = options.output && options.output.length ? options.output : [
+    {
+      file: './dist/index.js',
+      format: 'cjs',
+      exports: 'named',
+      sourcemap: true,
+    },
+    {
+      file: './dist/index.es.js',
+      format: 'es',
+      exports: 'named',
+      sourcemap: true,
+    }
+  ];
 
   return {
     input,
-    output: [
-      {
-        file: './dist/index.js',
-        format: 'cjs',
-        exports: 'named',
-        sourcemap: true,
-      },
-      {
-        file: './dist/index.es.js',
-        format: 'es',
-        exports: 'named',
-        sourcemap: true,
-      },
-      ...output
-    ],
+    output,
+    external: externalConfig,
     plugins: [
       cleaner({
         targets: [
@@ -37,7 +38,7 @@ export default opts => {
       }),
       progress(),
       external(),
-      resolve(),
+      resolve({preferBuiltins: true }),
       typescript({
         rollupCommonJSResolveHack: true,
         clean: true,
