@@ -104,14 +104,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### [webcomponents-0.0.1] - 2019-05-23
 - Set up project
 
-
-
-
-
-
-
 ## Eslint Config
-## [eslint-config-1.0.0] - 2019-08-07
+### [eslint-config-1.0.0] - 2019-08-07
 - Initial release
 
 ## Stylelint Config
