@@ -107,6 +107,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Set up project
 
 ## Eslint Config
+### [eslint-config-1.0.3] - 2019-08-09
+#### Fixed
+- Fixed the URL to the README
+
 ### [eslint-config-1.0.2] - 2019-08-09
 #### Fixed
 - Fixed some of the package defined URLs
@@ -154,6 +158,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Bundle with Rollup
 
 ## Jestscreenshot
+### [jestscreenshot-1.0.1] - 2019-08-09
+#### Fixed
+- Fixed the URL to the README
+
 ### [jestscreenshot-1.0.0] - 2019-08-09
 - Initial release
 
@@ -189,6 +197,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- Spacer -->
 
+[eslint-config-1.0.3]: https://github.com/RWS-NL/air-node-packages/compare/eslint-v1.0.2...eslint-v1.0.3
 [eslint-config-1.0.2]: https://github.com/RWS-NL/air-node-packages/compare/eslint-v1.0.1...eslint-v1.0.2
 [eslint-config-1.0.1]: https://github.com/RWS-NL/air-node-packages/compare/eslint-v1.0.0...eslint-v1.0.1
 [eslint-config-1.0.0]: https://github.com/RWS-NL/air-node-packages/releases/tag/eslint-v1.0.0
@@ -199,4 +208,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- Spacer -->
 
+[jestscreenshot-1.0.1]: https://github.com/RWS-NL/air-node-packages/compare/jestscreenshot-v1.0.0...jestscreenshot-v1.0.1
 [jestscreenshot-1.0.0]: https://github.com/RWS-NL/air-node-packages/releases/tag/jestscreenshot-v1.0.0
