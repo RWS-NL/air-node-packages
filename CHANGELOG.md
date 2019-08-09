@@ -9,7 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 2. [Eslint Config](#eslint_config)
 3. [Stylelint Config](#stylelint_config)
 4. [TSLint Config](#tslint_config)
-4. [Usercreator](#usercreator)
+5. [Usercreator](#usercreator)
+6. [JestScreenshot](#jestscreenshot)
+
 
 ## Webcomponents
 ### [webcomponents-3.0.0] - 2019-08-07
@@ -105,6 +107,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Set up project
 
 ## Eslint Config
+### [eslint-config-1.0.2] - 2019-08-09
+#### Fixed
+- Fixed some of the package defined URLs
+
 ### [eslint-config-1.0.1] - 2019-08-07
 #### Fixed
 - Fixed the new-cap exclusion regex
@@ -147,6 +153,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### [usercreator-2.0.0] - 2019-08-07
 - Bundle with Rollup
 
+## Jestscreenshot
+### [jestscreenshot-1.0.0] - 2019-08-09
+- Initial release
+
 [webcomponents-3.0.0]: https://github.com/RWS-NL/air-node-packages/compare/webcomponents-v2.4.2...webcomponents-v3.0.0
 [webcomponents-2.4.2]: https://github.com/RWS-NL/air-node-packages/compare/webcomponents-v2.4.1...webcomponents-v2.4.2
 [webcomponents-2.4.1]: https://github.com/RWS-NL/air-node-packages/compare/webcomponents-v2.4.0...webcomponents-v2.4.1
@@ -179,9 +189,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- Spacer -->
 
-[eslint-config-2.0.0]: https://github.com/RWS-NL/air-node-packages/compare/eslint-v1.0.0...eslint-v1.0.1
+[eslint-config-1.0.2]: https://github.com/RWS-NL/air-node-packages/compare/eslint-v1.0.1...eslint-v1.0.2
+[eslint-config-1.0.1]: https://github.com/RWS-NL/air-node-packages/compare/eslint-v1.0.0...eslint-v1.0.1
 [eslint-config-1.0.0]: https://github.com/RWS-NL/air-node-packages/releases/tag/eslint-v1.0.0
 
 <!-- Spacer -->
 
 [usercreator-2.0.0]: https://github.com/RWS-NL/air-node-packages/releases/tag/usercreator-v2.0.0
+
+<!-- Spacer -->
+
+[jestscreenshot-1.0.0]: https://github.com/RWS-NL/air-node-packages/releases/tag/jestscreenshot-v1.0.0
