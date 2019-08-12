@@ -84,10 +84,8 @@ test('And a forced failing test', () => {
 // jest.config.js
 
 module.exports = {
-  displayName: 'e2e',
   testMatch: ['<rootDir>/__tests__/index.test.ts'],
-  globalSetup: '<rootDir>/__tests__/jest.setup.ts',
-  setupFilesAfterEnv: ['expect-puppeteer']
+  globalSetup: '<rootDir>/__tests__/jest.setup.ts'
 };
 ```
 
