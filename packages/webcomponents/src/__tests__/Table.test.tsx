@@ -105,7 +105,6 @@ describe('Component Tests', () => {
 
     test('should put header cells in header row with tableHeaders', () => {
       // Stub out the console errors coming from Material-UI
-      // Tslint:disable:no-console
       const originalLogger = console.error;
       console.error = jest.fn();
 
@@ -116,7 +115,6 @@ describe('Component Tests', () => {
 
       // Restore console errors
       console.error = originalLogger;
-      // Tslint:enable:no-console
     });
   });
 

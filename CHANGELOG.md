@@ -158,6 +158,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Bundle with Rollup
 
 ## Jestscreenshot
+### [jestscreenshot-1.1.0] - 2019-08-12
+#### Added
+- Support for uploading screenshots to Slack!
+
+Provide a `slackToken` (or env var of `SLACK_WEBTOKEN`), `slackChannels` and set `slackUpload` to true and watch your screenshots magically upload to Slack!
+
 ### [jestscreenshot-1.0.1] - 2019-08-09
 #### Fixed
 - Fixed the URL to the README
@@ -208,5 +214,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- Spacer -->
 
+[jestscreenshot-1.1.0]: https://github.com/RWS-NL/air-node-packages/compare/jestscreenshot-v1.0.1...jestscreenshot-v1.1.0
 [jestscreenshot-1.0.1]: https://github.com/RWS-NL/air-node-packages/compare/jestscreenshot-v1.0.0...jestscreenshot-v1.0.1
 [jestscreenshot-1.0.0]: https://github.com/RWS-NL/air-node-packages/releases/tag/jestscreenshot-v1.0.0

@@ -37,9 +37,79 @@ When using ES6 modules:
 import JestScreenshot from '@rws-air/jestscreenshot'
 ```
 
+## About automated Slack uploading
+
+This library supports uploading your screenshots to Slack by providing the `slackToken` option (or through an environment variable called `SLACK_WEBTOKEN`), as well providing Slack Channel IDs through the option `slackChannels` and setting `slackUpload` option to `true`. However uploading to Slack comes with one major caveat: time. It takes time to upload to Slack, longer than Jest wants each test to run. Jest defaults to 5000 milliseconds which is just too short. The recommended amount to set the timeout to is 30000 milliseconds (30 seconds). You can achieve this throughout your entire test set by creating a jest setup file and loading it pre-test by defining it in your jest config. See [the slack example](#slack_example) for an implementation
+
 ## Example
 
 ```ts
+import JestScreenshot from '@rws-air/jestscreenshot'
+import path from 'path';
+import puppeteer from 'puppeteer';
+
+beforeAll(async () => {
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+  await page.setViewport({ width: 1280, height: 1024 });
+  await page.goto('https://www.google.com', { waitUntil: 'networkidle0' });
+
+  const jestScreenshotOptions: JestScreenshotOptions = {
+      page,
+      dirName: path.resolve(__dirname),
+  };
+
+  const jestScreenshot = new JestScreenshot(jestScreenshotOptions);
+
+  await jestScreenshot.run();
+});
+
+afterAll(() => browser.close());
+
+test('Confirm google hasn\'t gone whack', async () => {
+  const title = await page.title();
+  expect(title).toBe('Google');
+});
+
+test('And a forced failing test', () => {
+  const title = await page.title();
+  expect(title).toBe('Google has gone whack!');
+  fail('should fail');
+});
+```
+
+## Slack Example
+
+```js
+// jest.config.js
+
+module.exports = {
+  displayName: 'e2e',
+  testMatch: ['<rootDir>/__tests__/index.test.ts'],
+  globalSetup: '<rootDir>/__tests__/jest.setup.ts',
+  setupFilesAfterEnv: ['expect-puppeteer']
+};
+```
+
+```ts
+// __tests__/jest.setup.ts
+
+const config = async () => {
+  const setup = async (): Promise<void> => {
+    jest.setTimeout(30000);
+
+    return undefined;
+  };
+
+  setup();
+};
+
+export default config;
+```
+
+```ts
+// __tests__/index.test.ts
+
 import JestScreenshot from '@rws-air/jestscreenshot'
 import path from 'path';
 import puppeteer from 'puppeteer';
@@ -84,7 +154,10 @@ The main class of JestScreenshot that should be initialized with config
 | --- | --- | --- | --- |
 | page | <code>Page</code> |  | The Puppeteer page to take a screenshot from |
 | dirName | <code>string</code> |  | The directory to create a "screenshots" folder in |
-| [scriptName] | <code>string</code> | <code>&quot;__filename&quot;</code> | An optional name of the script that is currently being ran |
+| [scriptName] | <code>string</code> | <code>&quot;jest-test&quot;</code> | An optional name of the script that is currently being ran |
+| [slackUpload] | <code>boolean</code> | <code>false</code> | Optionally upload screenshots to slack after making them. Requires you pass a token to the slackToken option, or set the SLACK_WEBTOKEN environment variable |
+| [slackToken=] | <code>string</code> |  | Token to use when uploading to slack. Required when you pass slackUpload=true Optionally you can also pass this through the environment variable "SLACK_WEBTOKEN". This option takes priority over the environment variable |
+| [slackChannels] | <code>Array&lt;string&gt;</code> | <code>[]</code> | Channels to send the Slack upload to Should be an array of Slack channel IDs Only used when slackUpload is set to true |
 
 #### run
 Runs the JestScreenshot reporter
@@ -93,12 +166,42 @@ Runs the JestScreenshot reporter
 **Returns**: <code>Promise&lt;void&gt;</code> - JestScreenshot reporter will have been initialiazed as a side effect for this test suite  
 **Example**  
 ```ts
-   const jestScreenshotOptions: JestScreenshotOptions = {
-     page,
-     dirName: path.resolve(__dirname),
-   };
+const jestScreenshotOptions: JestScreenshotOptions = {
+  page,
+  dirName: path.resolve(__dirname),
+  slackUpload: true,
+  slackChannels: ['ABCD'],
+  slackToken: 'YOUR_TOKEN'
+};
 
-   const jestScreenshot = new JestScreenshot(jestScreenshotOptions);
+const jestScreenshot = new JestScreenshot(jestScreenshotOptions);
 
-   await jestScreenshot.run();
+await jestScreenshot.run();
 ```
+#### takeScreenshot
+Takes a screenshot of the current page
+
+**Kind**: instance method of <code>JestScreenshot</code>  
+**Returns**: <code>Promise&lt;(SlackResponse\|Buffer)&gt;</code> - Either returns the response from Slack or the screenshot as a Buffer  
+**Access**: protected  
+#### uploadToSlack
+Uploads screenshots to Slack using the provided token
+
+**Kind**: instance method of <code>JestScreenshot</code>  
+**Access**: protected  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| screenshot | <code>Buffer</code> | base64 representation of the screenshot to upload |
+
+#### objectHasProperty
+Validates if an object has a given property
+
+**Kind**: instance method of <code>JestScreenshot</code>  
+**Access**: protected  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| obj | <code>object</code> | The object to validate |
+| prop | <code>string</code> | The property to try to find |
+
