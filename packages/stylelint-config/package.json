@@ -1,6 +1,6 @@
 {
   "name": "@rws-air/stylelint-config",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Standard StyleLint config for all AIR apps",
   "main": "dist/index.js",
   "author": "@rws-air",
