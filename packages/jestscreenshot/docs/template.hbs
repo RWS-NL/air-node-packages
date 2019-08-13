@@ -1,7 +1,7 @@
 <div align="center">
 
 <p>
-<h1>Project AIR</h1>
+<h1>JestScreenshot</h1>
 </p>
 
 <p>
@@ -21,8 +21,8 @@
 
 Install with [yarn](https://yarnpkg.com) or [npm](https://www.npmjs.com/):
 ```sh
-yarn add @rws-air/jestscreenshot
-npm install @rws-air/jestscreenshot
+yarn add -D @rws-air/jestscreenshot @types/jest-environment-puppeteer jest-circus jest-environment-puppeteer
+npm install -D @rws-air/jestscreenshot @types/jest-environment-puppeteer jest-circus jest-environment-puppeteer
 ```
 
 ## Usage
@@ -39,107 +39,76 @@ import JestScreenshot from '@rws-air/jestscreenshot'
 
 ## About automated Slack uploading
 
-This library supports uploading your screenshots to Slack by providing the `slackToken` option (or through an environment variable called `SLACK_WEBTOKEN`), as well providing Slack Channel IDs through the option `slackChannels` and setting `slackUpload` option to `true`. However uploading to Slack comes with one major caveat: time. It takes time to upload to Slack, longer than Jest wants each test to run. Jest defaults to 5000 milliseconds which is just too short. The recommended amount to set the timeout to is 30000 milliseconds (30 seconds). You can achieve this throughout your entire test set by creating a jest setup file and loading it pre-test by defining it in your jest config. See [the slack example](#slack_example) for an implementation
+This library supports uploading your screenshots to Slack by providing the `SLACK_WEBTOKEN` environment variable, or, through the `slackToken` option. You will also nede to provide the Slack Channel ID(s) through the option `slackChannels` and setting `slackUpload` option to `true`.
 
 ## Example
 
-```ts
-import JestScreenshot from '@rws-air/jestscreenshot'
-import path from 'path';
-import puppeteer from 'puppeteer';
-
-beforeAll(async () => {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
-  await page.setViewport({ width: 1280, height: 1024 });
-  await page.goto('https://www.google.com', { waitUntil: 'networkidle0' });
-
-  const jestScreenshotOptions: JestScreenshotOptions = {
-      page,
-      dirName: path.resolve(__dirname),
-  };
-
-  const jestScreenshot = new JestScreenshot(jestScreenshotOptions);
-
-  await jestScreenshot.run();
-});
-
-afterAll(() => browser.close());
-
-test('Confirm google hasn\'t gone whack', async () => {
-  const title = await page.title();
-  expect(title).toBe('Google');
-});
-
-test('And a forced failing test', () => {
-  const title = await page.title();
-  expect(title).toBe('Google has gone whack!');
-  fail('should fail');
-});
-```
-
-## Slack Example
+***Please note that you cannot use ES module imports in the `jest-enviroment.ts` file. Jest does not support them.***
 
 ```js
 // jest.config.js
 
 module.exports = {
-  testMatch: ['<rootDir>/__tests__/index.test.ts'],
-  globalSetup: '<rootDir>/__tests__/jest.setup.ts'
+  testRunner: 'jest-circus/runner',
+  testEnvironment: '<rootDir>/__tests__/jest-environment.js',
+
+  testMatch: [ '<rootDir>/__tests__/index.test.ts' ],
+
+  globalSetup: 'jest-environment-puppeteer/setup',
+  globalTeardown: 'jest-environment-puppeteer/teardown',
+  setupFilesAfterEnv: [ 'expect-puppeteer', '<rootDir>/__tests__/jest-framework.ts' ],
 };
 ```
 
 ```ts
-// __tests__/jest.setup.ts
+// jest-framework.ts
 
-const config = async () => {
-  const setup = async (): Promise<void> => {
-    jest.setTimeout(30000);
-
-    return undefined;
-  };
-
-  setup();
-};
-
-export default config;
+jest.retryTimes(2);
 ```
 
 ```ts
-// __tests__/index.test.ts
+// jest-environment.ts
 
-import JestScreenshot from '@rws-air/jestscreenshot'
-import path from 'path';
-import puppeteer from 'puppeteer';
+/* eslint-disable @typescript-eslint/no-var-requires, @typescript-eslint/no-require-imports, @typescript-eslint/explicit-member-accessibility */
+const PuppeteerEnvironment = require('jest-environment-puppeteer');
+const JestScreenshot = require('@rws-air/jestscreenshot');
+require('jest-circus');
 
-beforeAll(async () => {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
-  await page.setViewport({ width: 1280, height: 1024 });
-  await page.goto('https://www.google.com', { waitUntil: 'networkidle0' });
+const retryAttempts = process.env.RETRY_ATTEMPTS || 2;
 
-  const jestScreenshotOptions: JestScreenshotOptions = {
-      page,
-      dirName: path.resolve(__dirname),
-  };
+// @ts-ignore
+class CustomEnvironment extends PuppeteerEnvironment {
+  async setup() {
+    await super.setup();
 
-  const jestScreenshot = new JestScreenshot(jestScreenshotOptions);
+    if (!process.env.CI) await this.localSetup();
+  }
 
-  await jestScreenshot.run();
-});
+  async teardown() {
+    // @ts-ignore
+    await this.global.page.waitFor(2000);
+    await super.teardown();
+  }
 
-afterAll(() => browser.close());
+  async handleTestEvent(event, state) {
+    if (event.name === 'test_fn_failure') {
+      if (state.currentlyRunningTest.invocations > retryAttempts) {
+        const testName = state.currentlyRunningTest.name;
+        const jestScreenshot = new JestScreenshot({
+          page: this.global.page,
+          dirName: __dirname,
+          testName,
+          slackChannels: [ 'ChannelID' ],
+          slackUpload: true,
+        });
 
-test('Confirm google hasn\'t gone whack', async () => {
-  const title = await page.title();
-  expect(title).toBe('Google');
-});
+        await jestScreenshot.setup();
+      }
+    }
+  }
+}
 
-test('And a forced failing test', () => {
-  const title = await page.title();
-  expect(title).toBe('Google has gone whack!');
-  fail('should fail');
-});
+module.exports = CustomEnvironment;
 ```
 
 ## Documentation

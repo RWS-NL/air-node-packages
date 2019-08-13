@@ -1,8 +1,9 @@
-import { Page } from 'puppeteer';
 import moment from 'moment';
 import mkdirp from 'mkdirp';
 import fetch from 'node-fetch';
 import Form from 'form-data';
+import path from 'path';
+import { Page } from 'puppeteer';
 
 class JestScreenshotError extends Error {
   public constructor(message: string) {
@@ -12,9 +13,6 @@ class JestScreenshotError extends Error {
   }
 }
 
-/**
- * @interface JestScreenshotOptions test
- */
 export type JestScreenshotOptions = {
   /** The Puppeteer page to take a screenshot from */
   page: Page;
@@ -22,9 +20,9 @@ export type JestScreenshotOptions = {
   dirName: string;
   /**
    * @description An optional name of the script that is currently being ran
-   * @default __filename
+   * @default jest-test
    */
-  scriptName?: string;
+  testName?: string;
   /**
    * Optionally upload screenshots to slack after making them
    * Requires you pass a token to the slackToken option, or set the SLACK_WEBTOKEN environment variable
@@ -34,6 +32,7 @@ export type JestScreenshotOptions = {
   /**
    * Token to use when uploading to Slack
    * Only used when slackUpload is set to true
+   * Recommended to pass this as SLACK_WEBTOKEN environment variable instead!
    * @default ''
    */
   slackToken?: string;
@@ -48,27 +47,6 @@ export type JestScreenshotOptions = {
    * }
    */
   slackChannels?: string[];
-};
-
-type JasmineException = {
-  actual: '';
-  error: Error;
-  expected: string;
-  matcherName: string;
-  message: string;
-  passed: boolean;
-  stack: string;
-};
-
-type JasmineResult = {
-  id: string;
-  description: string;
-  fullName: string;
-  failedExceptions: JasmineException[];
-  passedExceptions: JasmineException[];
-  pendingReason: string;
-  testPath: string;
-  status: 'failed' | 'passed' | string;
 };
 
 export type SlackFile = {
@@ -134,9 +112,9 @@ export type SlackResponse = {
  * @module JestScreenshot
  * @classdesc Jest reporter plugin to take Puppeteer screenshots on failing tests
  * @description The main class of JestScreenshot that should be initialized with config
- * @param {Page} page The Puppeteer page to take a screenshot from
+ * @param {Page} page The Puppeteer page object to screenshot
  * @param {string} dirName The directory to create a "screenshots" folder in
- * @param {string} [scriptName=jest-test] An optional name of the script that is currently being ran
+ * @param {string} [testName=jest-test] An optional name of the script that is currently being ran
  * @param {boolean} [slackUpload=false] Optionally upload screenshots to slack after making them.
  *
  * Requires you pass a token to the slackToken option, or set the SLACK_WEBTOKEN environment variable
@@ -144,7 +122,7 @@ export type SlackResponse = {
  *
  * Optionally you can also pass this through the environment variable "SLACK_WEBTOKEN".
  *
- * This option takes priority over the environment variable
+ * This environment variable will take priority over passing it as option
  *
  * @param {string[]} [slackChannels=[]] Channels to send the Slack upload to
  *
@@ -154,34 +132,33 @@ export type SlackResponse = {
  */
 export class JestScreenshot {
   private page: Page;
-  private dirname: string;
-  private sname: string;
-  private shouldUploadToSlack: boolean;
+  private dirName: string;
+  private testName: string;
+  private shouldUploadToSlack: boolean = false;
   private slackToken: string = '';
   private slackChannels: string[] = [];
 
   public constructor(options: JestScreenshotOptions) {
     if (!this.objectHasProperty(options, 'page')) {
-      throw new JestScreenshotError('You should pass the Puppeteer page to the options!!');
+      throw new JestScreenshotError('You should pass page to screenshot to options (page)!!');
     }
     if (!this.objectHasProperty(options, 'dirName')) {
-      throw new JestScreenshotError('You should pass the directory to save images to the options!!');
+      throw new JestScreenshotError('You should pass the name of the directory to save images to the options (dirName)!!');
     }
 
     this.page = options.page;
-    this.dirname = options.dirName;
-    this.sname = options.scriptName && 'scriptName' in options ? options.scriptName : 'jest-test';
+    this.dirName = `${options.dirName}/screenshots`;
+    this.testName = options.testName && 'testName' in options ? options.testName : 'jest-test';
     this.shouldUploadToSlack = options.slackUpload && 'slackUpload' in options ? options.slackUpload : false;
 
     if (this.shouldUploadToSlack) {
-      if (!this.objectHasProperty(options, 'slackToken') || process.env.SLACK_WEBTOKEN) {
-        throw new JestScreenshotError('When you want to upload to slack you should either provide the slackToken option or an environment variable called "SLACK_WEBTOKEN"');
+      if (process.env.SLACK_WEBTOKEN) {
+        this.slackToken = process.env.SLACK_WEBTOKEN;
+      } else {
+        this.slackToken = options.slackToken!;
       }
 
-      if (options.slackToken) this.slackToken = options.slackToken;
-      else this.slackToken = process.env.SLACK_WEBTOKEN!;
-
-      if (!this.slackToken) throw new JestScreenshotError('Failed to set the Slack Token, please verify your options or the SLACK_WEBTOKEN environment variable');
+      if (!this.slackToken) throw new JestScreenshotError('When you want to upload to slack you should either provide the slackToken option or an environment variable called "SLACK_WEBTOKEN"');
 
       if (!this.objectHasProperty(options, 'slackChannels')) {
         throw new JestScreenshotError('When you want to upload to slack you provide an array of channels to post the screenshot in through the "slackChannels" options');
@@ -196,56 +173,18 @@ export class JestScreenshot {
   }
 
   /**
-   * @method JestScreenshot#run
-   * @description Runs the JestScreenshot reporter
+   * @method JestScreenshot#setup
+   * @description Sets up the JestScreenshot reporter
    * @returns {Promise<void>} JestScreenshot reporter will have been initialiazed as a side effect for this test suite
-   * @example
-   * ```ts
-   * const jestScreenshotOptions: JestScreenshotOptions = {
-   *   page,
-   *   dirName: path.resolve(__dirname),
-   *   slackUpload: true,
-   *   slackChannels: ['ABCD'],
-   *   slackToken: 'YOUR_TOKEN'
-   * };
-   *
-   * const jestScreenshot = new JestScreenshot(jestScreenshotOptions);
-   *
-   * await jestScreenshot.run();
-   * ```
    */
-  public async run(): Promise<void> {
+  public async setup(): Promise<void> {
     try {
-      mkdirp.sync(`${this.dirname}/screenshots`);
+      mkdirp.sync(this.dirName);
     } catch {
       throw new Error('Failed to create screenshots directory, maybe check your permissions?');
     }
 
-    /**
-     * Jasmine reporter does not support async.
-     * So we store the screenshot promise and wait for it before each test
-     */
-    let screenshotPromise: Promise<unknown> = Promise.resolve();
-    beforeEach(() => screenshotPromise);
-    afterAll(() => screenshotPromise);
-
-    /**
-     * Take a screenshot on Failed test.
-     * Jest standard reporters run in a separate process so they don't have
-     * access to the page instance. Using jasmine reporter allows us to
-     * have access to the test result, test name and page instance at the same time.
-     *
-     * Casting jasmine to any because this is an untyped area of Jasmine
-     */
-    (jasmine as any).getEnv().addReporter({ // eslint-disable-line @typescript-eslint/no-explicit-any
-      specDone: async (result: JasmineResult) => {
-        if (result.status === 'failed') {
-          screenshotPromise = screenshotPromise
-            .catch()
-            .then(() => this.takeScreenshot(result.fullName));
-        }
-      },
-    });
+    await this.takeScreenshot();
   }
 
   /**
@@ -254,16 +193,13 @@ export class JestScreenshot {
    * @returns {Promise<SlackResponse | Buffer>} Either returns the response from Slack or the screenshot as a Buffer
    * @protected
    */
-  protected async takeScreenshot(name: string): Promise<SlackResponse | Buffer> {
-    const specName = name.replace(/\s/g, '-');
-    const fileName = `fail-${this.sname}-${specName}`;
-    const filePath = `${this.dirname}/screenshots/${fileName}-${moment().format('YYYY-MM-DD[_]HH.mm.ss')}.png`;
+  protected async takeScreenshot(): Promise<SlackResponse | Buffer> {
+    const fileName = `${this.testName}-${moment().format('YYYY-MM-DD[_]HH.mm.ss')}.png`;
+    const filePath = path.join(this.dirName, fileName);
 
     const screenshot = await this.page.screenshot({ path: filePath });
 
-    if (this.shouldUploadToSlack) {
-      return this.uploadToSlack(screenshot, fileName);
-    }
+    if (this.shouldUploadToSlack) return this.uploadToSlack(screenshot, fileName.slice(0, -4));
 
     return screenshot;
   }
