@@ -1,16 +1,12 @@
 {
   "name": "@rws-air/jestscreenshot",
-  "version": "1.1.1",
+  "version": "1.1.3",
   "description": "Jest reporter plugin to take Puppeteer screenshots on failing tests",
   "author": "@rws-air",
   "license": "AGPL-3.0-or-later",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
-  "engines": {
-    "node": ">=8",
-    "npm": ">=5"
-  },
   "homepage": "https://github.com/RWS-NL/air-node-packages/tree/master/packages/jestscreenshot#readme",
   "scripts": {
     "lint": "eslint src --fix --ext .ts,.tsx",
@@ -26,9 +22,26 @@
     "docs:build": "tsc -p ./tsconfig.docs.json",
     "docs:replace": "replace --silent \".&lt;\" \"&lt;\" ./README.md"
   },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "form-data": "^2.5.0",
+    "mkdirp": "^0.5.1",
+    "moment": "^2.24.0",
+    "node-fetch": "^2.6.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RWS-NL/air-node-packages.git"
+    "url": "git+https://github.com/RWS-NL/air-node-packages.git",
+    "directory": "packages/jestscreenshot"
   },
   "bugs": {
     "url": "https://github.com/RWS-NL/air-node-packages/issues"
@@ -36,18 +49,11 @@
   "keywords": [
     "jest",
     "puppeteer",
-    "rws-air"
-  ],
-  "files": [
-    "dist"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "dependencies": {
-    "form-data": "^2.5.0",
-    "mkdirp": "^0.5.1",
-    "moment": "^2.24.0",
-    "node-fetch": "^2.6.0"
-  }
+    "rws-air",
+    "rws-nl",
+    "rws",
+    "air",
+    "typescript",
+    "ts"
+  ]
 }

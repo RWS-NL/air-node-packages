@@ -1,16 +1,12 @@
 {
   "name": "@rws-air/eslint-config",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Standard ESLint config for RWS-NL ReactJS projects written in TypeScript",
   "author": "@rws-air",
   "license": "AGPL-3.0-or-later",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
-  "engines": {
-    "node": ">=8",
-    "npm": ">=5"
-  },
   "homepage": "https://github.com/RWS-NL/air-node-packages/tree/master/packages/eslint-config#readme",
   "scripts": {
     "lint": "eslint src --fix --ext .ts,.tsx",
@@ -20,26 +16,12 @@
     "start": "yarn build -w",
     "prepublishOnly": "yarn build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RWS-NL/air-node-packages.git"
-  },
-  "bugs": {
-    "url": "https://github.com/RWS-NL/air-node-packages/issues"
-  },
-  "keywords": [
-    "eslint",
-    "config",
-    "rws-nl",
-    "typescript",
-    "ts"
+  "files": [
+    "dist"
   ],
   "peerDependencies": {
     "eslint": ">=6"
   },
-  "files": [
-    "dist"
-  ],
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
@@ -51,5 +33,30 @@
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RWS-NL/air-node-packages.git",
+    "directory": "packages/eslint-config"
+  },
+  "bugs": {
+    "url": "https://github.com/RWS-NL/air-node-packages/issues"
+  },
+  "keywords": [
+    "eslint",
+    "config",
+    "rws-air",
+    "rws-nl",
+    "rws",
+    "air",
+    "typescript",
+    "ts"
+  ],
   "gitHead": "311e33a3661511bc9a4267ef6f6ec3b4ee0d6333"
 }

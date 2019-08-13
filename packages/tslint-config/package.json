@@ -1,32 +1,13 @@
 {
   "name": "@rws-air/tslint-config",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Standard TSLint config for all AIR apps written in TypeScript",
   "author": "@rws-air",
   "license": "AGPL-3.0-or-later",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rws-nl/air-node-packages.git"
-  },
-  "bugs": {
-    "url": "https://github.com/rws-nl/air-node-packages/issues"
-  },
-  "engines": {
-    "node": ">=8",
-    "npm": ">=5"
-  },
   "homepage": "https://github.com/rws-nl/packages/tslint-config#readme",
-  "keywords": [
-    "tslint",
-    "config",
-    "rws",
-    "air",
-    "typescript",
-    "ts"
-  ],
   "scripts": {
     "lint": "eslint src --fix --ext .ts,.tsx",
     "test": "yarn lint",
@@ -41,5 +22,30 @@
   "peerDependencies": {
     "tslint": ">=5"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rws-nl/air-node-packages.git",
+    "directory": "packages/tslint-config"
+  },
+  "bugs": {
+    "url": "https://github.com/rws-nl/air-node-packages/issues"
+  },
+  "keywords": [
+    "tslint",
+    "config",
+    "rws-air",
+    "rws-nl",
+    "rws",
+    "air",
+    "typescript",
+    "ts"
+  ],
   "gitHead": "311e33a3661511bc9a4267ef6f6ec3b4ee0d6333"
 }

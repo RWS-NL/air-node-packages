@@ -1,17 +1,13 @@
 {
   "name": "@rws-air/stylelint-config",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Standard StyleLint config for all AIR apps",
-  "main": "dist/index.js",
   "author": "@rws-air",
   "license": "AGPL-3.0-or-later",
-  "keywords": [
-    "stylelint",
-    "config",
-    "rws",
-    "air",
-    "scss"
-  ],
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "homepage": "https://github.com/RWS-NL/air-node-packages/tree/master/packages/stylelint-config#readme",
   "scripts": {
     "lint": "eslint src --fix --ext .ts,.tsx",
     "test": "yarn lint",
@@ -20,18 +16,9 @@
     "start": "yarn build -w",
     "prepublishOnly": "yarn build"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/RWS-NL/air-node-packages.git",
-    "directory": "stylelint-config"
-  },
-  "bugs": {
-    "url": "https://github.com/RWS-NL/air-node-packages/issues"
-  },
-  "engines": {
-    "node": ">=8",
-    "npm": ">=5"
-  },
+  "files": [
+    "dist"
+  ],
   "peerDependencies": {
     "stylelint": ">=10"
   },
@@ -41,8 +28,31 @@
     "stylelint-config-standard": "^18.3.0",
     "stylelint-scss": "^3.9.2"
   },
-  "files": [
-    "dist"
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RWS-NL/air-node-packages.git",
+    "directory": "packages/stylelint-config"
+  },
+  "bugs": {
+    "url": "https://github.com/RWS-NL/air-node-packages/issues"
+  },
+  "keywords": [
+    "stylelint",
+    "config",
+    "scss",
+    "rws-air",
+    "rws-nl",
+    "rws",
+    "air",
+    "typescript",
+    "ts"
   ],
   "gitHead": "311e33a3661511bc9a4267ef6f6ec3b4ee0d6333"
 }
