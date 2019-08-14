@@ -8,7 +8,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **eslint-config:** remove no-angle-bracket-type-assertion rule ([16659b4](https://github.com/rws-nl/air-node-packages/commit/16659b4))
+* **tslint-config:** remove no-angle-bracket-type-assertion rule ([16659b4](https://github.com/rws-nl/air-node-packages/commit/16659b4))
 
 
 
