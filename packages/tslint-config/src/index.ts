@@ -59,7 +59,6 @@ module.exports = {
       { order: 'fields-first' }
     ],
     'newline-before-return': false,
-    'no-angle-bracket-type-assertion': true,
     'no-arg': true,
     'no-bitwise': true,
     'no-boolean-literal-compare': true,
