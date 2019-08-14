@@ -11,14 +11,17 @@
   "scripts": {
     "test": "yarn lint",
     "test:modules": "react-scripts test",
+    "test:modules:ci": "CI=true react-scripts test",
     "posttest:modules": "git checkout tsconfig.json",
     "lint": "concurrently \"yarn lint:js\" \"yarn lint:scss\"",
     "lint:js": "eslint src --fix --ext .ts,.tsx",
     "lint:scss": "stylelint --fix ./src/styles/*.scss ./src/**/*.scss",
+    "prebuild": "yarn lint && yarn test:modules:ci && git co tsconfig.json",
     "build": "rollup -c rollup.config.js",
+    "postbuild": "rimraf dist/__tests__ dist/setupTests.d.ts",
     "start": "yarn build -w",
     "start:local": "pushd local-sample && yarn install && yarn start",
-    "prepublishOnly": "yarn lint && cross-env CI=true yarn test:modules && git co tsconfig.json && yarn build",
+    "prepublishOnly": "yarn build",
     "modules": "rm -rf node_modules yarn.lock local-sample/node_modules local-sample/yarn.lock && yarn && pushd local-sample && yarn && popd"
   },
   "files": [
