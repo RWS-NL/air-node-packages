@@ -18,7 +18,7 @@
     "build": "rollup -c rollup.config.js",
     "start": "yarn build -w",
     "start:local": "pushd local-sample && yarn install && yarn start",
-    "prepublishOnly": "yarn lint && yarn test:ci && git co tsconfig.json && yarn build",
+    "prepublishOnly": "yarn lint && cross-env CI=true yarn test:modules && git co tsconfig.json && yarn build",
     "modules": "rm -rf node_modules yarn.lock local-sample/node_modules local-sample/yarn.lock && yarn && pushd local-sample && yarn && popd"
   },
   "files": [
@@ -69,5 +69,5 @@
     "typescript",
     "ts"
   ],
-  "gitHead": "311e33a3661511bc9a4267ef6f6ec3b4ee0d6333"
+  "gitHead": "c25b59fcb1e2117f1621c22c1cc0661813253813"
 }
