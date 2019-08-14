@@ -2,7 +2,6 @@
   "packages": [
     "packages/*"
   ],
-  "version": "independent",
   "npmClient": "yarn",
   "useWorkspaces": true,
   "command": {
@@ -11,6 +10,7 @@
       "push": true
     },
     "version": {
+      "allowBranch": "master",
       "conventionalCommits": true,
       "signGitCommit": true,
       "message": "chore(release): %s",
