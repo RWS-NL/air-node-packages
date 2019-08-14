@@ -19,28 +19,28 @@ describe('Component Tests', () => {
     const goToFirstPageButton = tablePaginationActions.find(IconButton).first();
 
     goToFirstPageButton.simulate('click');
-    expect(onChangePage).toHaveBeenCalled();
+    expect(onChangePage).toHaveBeenCalledWith(undefined, 0);
   });
 
   test('should jump to last page', () => {
     const goToLastPageButton = tablePaginationActions.find(IconButton).last();
 
     goToLastPageButton.simulate('click');
-    expect(onChangePage).toHaveBeenCalled();
+    expect(onChangePage).toHaveBeenCalledWith(undefined, 4);
   });
 
   test('should jump to next page', () => {
     const goToNextPageButton = tablePaginationActions.find(IconButton).at(2);
 
     goToNextPageButton.simulate('click');
-    expect(onChangePage).toHaveBeenCalled();
+    expect(onChangePage).toHaveBeenCalledWith(undefined, 1);
   });
 
   test('should jump to previous page', () => {
     const goToPreviousPageButton = tablePaginationActions.find(IconButton).at(1);
 
     goToPreviousPageButton.simulate('click');
-    expect(onChangePage).toHaveBeenCalled();
+    expect(onChangePage).toHaveBeenCalledWith(undefined, -1);
   });
 });
 

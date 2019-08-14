@@ -12,7 +12,7 @@ describe('Component Testing', () => {
       actionBar = shallow(<ActionBar title='42' buttonLabel='label' buttonAction={mockCallback} shouldHaveButton />);
       const actionButton = actionBar.find('[data-qa="action-bar-button"]');
       actionButton.simulate('click');
-      expect(mockCallback).toHaveBeenCalled();
+      expect(mockCallback).toHaveBeenCalledWith();
       expect(actionButton.dive().text()).toBe('label');
     });
 
@@ -28,7 +28,7 @@ describe('Component Testing', () => {
 
       const actionButton = actionBar.find('[data-qa="action-bar-button"]');
       actionButton.simulate('click');
-      expect(mockCallback).toHaveBeenCalled();
+      expect(mockCallback).toHaveBeenCalledWith();
       expect(mockCallback).toHaveBeenCalledWith(param);
       expect(actionButton.dive().text()).toBe('label');
     });
@@ -43,7 +43,7 @@ describe('Component Testing', () => {
       const title = actionBar.find('[data-qa="action-bar-title"]');
       const actionButton = actionBar.find('[data-qa="action-bar-button"]');
       expect(title.text()).toBe('42');
-      expect(actionButton.length).toBe(0);
+      expect(actionButton).toHaveLength(0);
     });
   });
 });

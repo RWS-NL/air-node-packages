@@ -38,19 +38,19 @@ const setup = (
 describe('Render Testing', () => {
   test('should include mandatory props', () => {
     setup();
-    expect(modal.find(Button).length).toBe(0);
-    expect(modal.prop('disableBackdropClick')).toBeTruthy();
-    expect(modal.prop('disableEscapeKeyDown')).toBeTruthy();
+    expect(modal.find(Button)).toHaveLength(0);
+    expect(modal.prop('disableBackdropClick')).toBe(true);
+    expect(modal.prop('disableEscapeKeyDown')).toBe(true);
   });
 
   test('should pass all data-qa\'s', () => {
     setup(true, true);
 
-    expect(modal.find('[data-qa="modal"]').exists()).toBeTruthy();
-    expect(modal.find('[data-qa="modal-title"]').exists()).toBeTruthy();
-    expect(modal.find('[data-qa="modal-cancel-button"]').exists()).toBeTruthy();
-    expect(modal.find('[data-qa="modal-confirm-button"]').exists()).toBeTruthy();
-    expect(modal.find('[data-qa="modal-actions"]').exists()).toBeTruthy();
+    expect(modal.find('[data-qa="modal"]').exists()).toBe(true);
+    expect(modal.find('[data-qa="modal-title"]').exists()).toBe(true);
+    expect(modal.find('[data-qa="modal-cancel-button"]').exists()).toBe(true);
+    expect(modal.find('[data-qa="modal-confirm-button"]').exists()).toBe(true);
+    expect(modal.find('[data-qa="modal-actions"]').exists()).toBe(true);
   });
 
   test('should include optional props', () => {
@@ -71,14 +71,14 @@ describe('Render Testing', () => {
   test('should show CheckCircle when modalType == check', () => {
     setup(true, true);
 
-    expect(modal.exists()).toBeTruthy();
-    expect(modal.find(CheckCircle).exists()).toBeTruthy();
+    expect(modal.exists()).toBe(true);
+    expect(modal.find(CheckCircle).exists()).toBe(true);
   });
 
   test('should show Warning Triangle when modalType == check', () => {
     setup(true, true, { modalType: 'warning' });
 
-    expect(modal.find(WarningIcon).exists()).toBeTruthy();
+    expect(modal.find(WarningIcon).exists()).toBe(true);
   });
 });
 
@@ -87,14 +87,14 @@ describe('Action Testing', () => {
   test('Ok button should work', () => {
     const okButton = modal.find('[data-qa="modal-confirm-button"]');
     okButton.simulate('click');
-    expect(confirmAction).toHaveBeenCalled();
+    expect(confirmAction).toHaveBeenCalledWith();
     expect(confirmAction).toHaveBeenCalledTimes(1);
   });
 
   test('Cancel button should work', () => {
     const cancelButton = modal.find('[data-qa="modal-cancel-button"]');
     cancelButton.simulate('click');
-    expect(closeAction).toHaveBeenCalled();
+    expect(closeAction).toHaveBeenCalledWith();
     expect(closeAction).toHaveBeenCalledTimes(1);
   });
 });
@@ -104,7 +104,7 @@ describe('Content Testing', () => {
   beforeAll(() => setup(true, false, {}, content));
 
   test('should ', () => {
-    expect(modal.find('[data-qa="modal-content"]').children().exists()).toBeTruthy();
+    expect(modal.find('[data-qa="modal-content"]').children().exists()).toBe(true);
     expect(modal.find('[data-qa="modal-content"]').children()).toStrictEqual(shallow(content));
   });
 });

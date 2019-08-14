@@ -1,15 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component Testing With Children should match snapshot 1`] = `<div />`;
-
-exports[`Component Testing With Children should match snapshot 2`] = `
-<div>
-  <p>
-    The Answer is 42
-  </p>
-</div>
-`;
-
 exports[`Snapshot Testing Optional Props 1`] = `
 <div>
   <p>

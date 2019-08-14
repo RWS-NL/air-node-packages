@@ -94,7 +94,7 @@ describe('Component Tests', () => {
   test('should request sorting on header click', () => {
     const tableSortHeader = table.find(TableHeaderCell).at(0).dive().find(`[data-qa="tableSortLabel_${tableHeaders[0].label}"]`);
     tableSortHeader.simulate('click');
-    expect(mockOnRequestSort).toHaveBeenCalled();
+    expect(mockOnRequestSort).toHaveBeenCalledWith('name');
     expect(mockOnRequestSort).toHaveBeenCalledTimes(1);
   });
 
@@ -106,7 +106,7 @@ describe('Component Tests', () => {
     test('should put header cells in header row with tableHeaders', () => {
       // Stub out the console errors coming from Material-UI
       const originalLogger = console.error;
-      console.error = jest.fn();
+      jest.spyOn(console, 'error').mockImplementation();
 
       const firstRow = table.find('[data-qa="table-header-row"]').first();
       const tableHeaderCell = firstRow.find(TableHeaderCell).first().dive().find(`[data-qa="tableSortLabel_${tableHeaders[0].label}"]`);

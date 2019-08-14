@@ -29,7 +29,7 @@ describe('Component Tests', () => {
     expect(expectedResult).toBeUndefined();
 
     inputBox.simulate('change', expectedCalledWith);
-    expect(mockOnSearchInput).toHaveBeenCalled();
+    expect(mockOnSearchInput).toHaveBeenCalledWith({target: {value: 'DarthVader'}});
     expect(mockOnSearchInput).toHaveBeenCalledWith(expectedCalledWith);
   });
 
@@ -41,7 +41,7 @@ describe('Component Tests', () => {
       .last();
 
     cancelButton.simulate('click');
-    expect(mockOnSearchClear).toHaveBeenCalled();
+    expect(mockOnSearchClear).toHaveBeenCalledWith();
   });
 });
 

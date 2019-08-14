@@ -14,7 +14,7 @@ describe('Component Tests', () => {
 
   test('button function called onClick', () => {
     button.simulate('click');
-    expect(mockCallback).toHaveBeenCalled();
+    expect(mockCallback).toHaveBeenCalledWith();
     expect(mockCallback).toHaveBeenCalledTimes(1);
   });
 
