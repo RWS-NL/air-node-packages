@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.6](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@3.0.5...@rws-air/webcomponents@3.0.6) (2019-08-14)
+
+
+### Bug Fixes
+
+* **webcomponents:** fix prepublish script ([7b38cf1](https://github.com/RWS-NL/air-node-packages/commit/7b38cf1))
+* **webcomponents:** fixed prePublish script for real now ([108e86a](https://github.com/RWS-NL/air-node-packages/commit/108e86a))
+
+
+
+
+
 ## [3.0.5](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@3.0.4...@rws-air/webcomponents@3.0.5) (2019-08-14)
 
 **Note:** Version bump only for package @rws-air/webcomponents

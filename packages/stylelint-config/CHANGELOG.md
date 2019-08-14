@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.6](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/stylelint-config@3.0.5...@rws-air/stylelint-config@3.0.6) (2019-08-14)
+
+
+### Bug Fixes
+
+* **webcomponents:** fix prepublish script ([7b38cf1](https://github.com/RWS-NL/air-node-packages/commit/7b38cf1))
+
+
+
+
+
 ## [3.0.5](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/stylelint-config@3.0.4...@rws-air/stylelint-config@3.0.5) (2019-08-14)
 
 **Note:** Version bump only for package @rws-air/stylelint-config
