@@ -8,6 +8,15 @@
   "command": {
     "publish": {
       "conventionalCommits": true
+    },
+    "version": {
+      "conventionalCommits": true,
+      "signGitCommit": true,
+      "message": "chore(release): %s"
+    },
+    "create": {
+      "homepage": "https://github.com/RWS-NL/air-node-packages",
+      "license": "AGPL-3.0-or-later"
     }
   }
 }

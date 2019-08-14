@@ -5,8 +5,8 @@
     "packages/*"
   ],
   "scripts": {
-    "commit": "lerna version --conventional-commits --sign-git-commit",
-    "npcommit": "lerna version --conventional-commits --no-push --sign-git-commit",
+    "commit": "lerna version",
+    "npcommit": "lerna version --no-push",
     "push": "git push",
     "git:sign": "git config commit.gpgsign true"
   },
@@ -16,6 +16,8 @@
     "@rws-air/webcomponents": "file:packages/webcomponents"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
     "@favware/eslint-config": "1.0.1",
     "@material-ui/core": "^4.3.2",
     "@material-ui/icons": "^4.2.1",
@@ -41,10 +43,12 @@
     "classnames": "^2.2.6",
     "concurrently": "^4.1.1",
     "cross-env": "^5.2.0",
+    "cz-conventional-changelog": "^3.0.2",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.4.0",
     "eslint": "^6.1.0",
+    "husky": "^3.0.3",
     "jsdoc-to-markdown": "^5.0.0",
     "lodash.debounce": "^4.0.8",
     "node-sass": "^4.12.0",
@@ -71,5 +75,21 @@
     "tslint": "^5.18.0",
     "typescript": "^3.5.3",
     "utility-types": "^3.7.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "! ag 'describe\\.only|it\\.only|test\\.only' --ts packages"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }
