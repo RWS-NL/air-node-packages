@@ -21,6 +21,10 @@
 
 This is a mono-repo for all NodeJS related packages used throughout other AIR projects. This repository is managed by [Lerna](https://github.com/lerna/lerna). Each package has its own subfolder in the `packages` folder, you can easily create a new package with the `lerna create` command.
 
+## Working with this repository
+
+Please see [Lerna and working on air-node-packages](https://github.com/RWS-NL/air-dev/tree/master/docs/docker_non-aio_setup.md) on the air-dev repo
+
 ---
 
 To get autocompletion for Lerna follow these steps:

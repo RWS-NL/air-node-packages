@@ -4,6 +4,12 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "commit": "lerna version --conventional-commits --sign-git-commit",
+    "npcommit": "lerna version --conventional-commits --no-push --sign-git-commit",
+    "push": "git push",
+    "git:sign": "git config commit.gpgsign true"
+  },
   "dependencies": {
     "@rws-air/jestscreenshot": "file:packages/jestscreenshot",
     "@rws-air/usercreator": "file:packages/user-creator",
