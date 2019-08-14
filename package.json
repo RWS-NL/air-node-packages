@@ -5,9 +5,7 @@
     "packages/*"
   ],
   "scripts": {
-    "commit": "lerna version",
-    "npcommit": "lerna version --no-push",
-    "push": "git push",
+    "commit": "git cz",
     "git:sign": "git config commit.gpgsign true"
   },
   "dependencies": {

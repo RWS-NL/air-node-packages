@@ -7,12 +7,14 @@
   "useWorkspaces": true,
   "command": {
     "publish": {
-      "conventionalCommits": true
+      "conventionalCommits": true,
+      "push": true
     },
     "version": {
       "conventionalCommits": true,
       "signGitCommit": true,
-      "message": "chore(release): %s"
+      "message": "chore(release): %s",
+      "push": false
     },
     "create": {
       "homepage": "https://github.com/RWS-NL/air-node-packages",
