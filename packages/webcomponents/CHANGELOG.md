@@ -17,3 +17,102 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 3.0.3 (2019-08-14)
 
 **Note:** Version bump only for package @rws-air/webcomponents
+
+### 3.0.2 (2019-08-13)
+#### Changes
+- Package json refactoring
+
+### 3.0.1 (2019-08-13)
+#### Adds
+- This changelog
+
+### 3.0.0 (2019-08-07)
+#### Changes
+- Changed repo to use Lerna
+
+### 2.4.1 (2019-07-25)
+#### Adds
+- Restyled buttons to better match Material-UI buttons
+
+### Changes
+- LoadingSkeleton: Allow for string based sizing
+
+### 2.4.0 (2019-07-17)
+#### Adds
+- SimpleTooltip component
+  - This is separate from Tooltip as it doesn't have an arrow and is more like the standard Material-UI tooltip
+
+#### Changes
+- CSSProperties imports from Material-UI instead of React
+- style in SearchBar component uses CSSProperties as type, instead of any
+
+### 2.3.1 (2019-07-16)
+#### Changes
+- Added passing data-qa and custom styles to LoadingSkeleton
+- Added passing data-qa and custom styles to Logo
+
+### 2.3.0 (2019-07-16)
+#### Adds
+- LoadingSkeleton component
+
+#### Changes
+- Component and Snapshot test structure
+
+### 2.2.5 (2019-07-11)
+#### Changes
+- Fixed modal icon sizing
+
+### 2.2.4 (2019-07-08)
+#### Adds
+- Added Modal component
+- Added ModalContent component
+
+#### Removed
+- Styleguidist
+
+### 2.2.3 (2019-07-03)
+#### Fixes
+- Tooltip data-qa passing through
+
+### 2.2.2 (2019-06-28)
+#### Fixes
+- Tooltip positioning
+
+### 2.2.1 (2019-06-28)
+#### Fixes
+- Refactored entire Table component to fix passing its props
+
+#### Adds
+- Support for hiding either top and/or bottom pagination for Table
+
+### 1.1.0 (2019-06-25)
+#### Adds
+- Added Table component
+- Added TableBodyCell component
+- Added TableHeaderCell component
+- Added TablePagination component
+- Added TablePaginationActions component
+- Added TableToolbar component
+- Added Tooltip component
+- Added SearchBar component
+
+#### Changes
+- Changed Button internal naming
+
+### 1.0.5 (2019-06-25)
+#### Fixes
+- Fixed styling for button components
+
+### 1.0.2 (2019-06-04)
+#### Adds
+- ActionBar component
+
+### 1.0.1 (2019-05-28)
+#### Removed
+- PropTypes dependency
+
+### 1.0.0 (2019-05-28)
+- First stable release
+
+### 0.0.1 (2019-05-23)
+- Set up project
