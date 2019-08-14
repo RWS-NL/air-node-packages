@@ -5,8 +5,12 @@
     "packages/*"
   ],
   "scripts": {
+    "build": "lerna run build",
     "commit": "git cz",
-    "git:sign": "git config commit.gpgsign true"
+    "cz": "git-cz",
+    "git:sign": "git config commit.gpgsign true",
+    "postinstall": "lerna bootstrap && yarn build && lerna link",
+    "test": "lerna run test --parallel"
   },
   "dependencies": {
     "@rws-air/jestscreenshot": "file:packages/jestscreenshot",
@@ -48,6 +52,7 @@
     "eslint": "^6.1.0",
     "husky": "^3.0.3",
     "jsdoc-to-markdown": "^5.0.0",
+    "lint-staged": "^9.2.1",
     "lodash.debounce": "^4.0.8",
     "node-sass": "^4.12.0",
     "react": "^16.9.0",
@@ -82,12 +87,18 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "! ag 'describe\\.only|it\\.only|test\\.only' --ts packages"
+      "pre-commit": "! ag 'describe\\.only|it\\.only|test\\.only' --ts packages && yarn lint-staged"
     }
   },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "lerna run lint",
+      "git add"
     ]
   }
 }
