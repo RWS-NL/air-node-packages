@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.7](https://github.com/rws-nl/air-node-packages/compare/@rws-air/tslint-config@2.0.6...@rws-air/tslint-config@2.0.7) (2019-08-14)
+
+
+### Bug Fixes
+
+* **eslint-config:** remove no-angle-bracket-type-assertion rule ([16659b4](https://github.com/rws-nl/air-node-packages/commit/16659b4))
+
+
+
+
+
 ## [2.0.6](https://github.com/rws-nl/air-node-packages/compare/@rws-air/tslint-config@2.0.5...@rws-air/tslint-config@2.0.6) (2019-08-14)
 
 
