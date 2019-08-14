@@ -11,6 +11,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:jest/all',
     'react-app'
   ],
   env: {
@@ -84,6 +85,16 @@ module.exports = {
     '@typescript-eslint/unified-signatures': 'error',
     '@typescript-eslint/camelcase': [ 'error', { allow: [ 'api_key', 'app_id', 'show_alternative', 'store_link', 'grant_type' ] } ],
     '@typescript-eslint/no-explicit-any': 'off',
+
+    // Jest Rules
+    'jest/consistent-test-it': [ 'error', {fn: 'test'} ],
+    'jest/no-hooks': 'off',
+    'jest/lowercase-name': 'off',
+    'jest/no-export': 'off',
+    'jest/prefer-expect-assertions': 'off',
+    'jest/no-if': 'off',
+    'jest/prefer-inline-snapshots': 'off',
+    'jest/expect-expect': [ 'error', { assertFunctionNames: [ 'expect', 'expectSaga', 'testSaga' ] } ],
 
     // Possible Errors
     'no-console': 'warn',
