@@ -3,6 +3,7 @@
     "packages/*"
   ],
   "npmClient": "yarn",
+  "version": "independent",
   "useWorkspaces": true,
   "command": {
     "publish": {
@@ -13,8 +14,7 @@
       "allowBranch": "master",
       "conventionalCommits": true,
       "signGitCommit": true,
-      "message": "chore(release): %s",
-      "push": false
+      "message": "chore(release): publish"
     },
     "create": {
       "homepage": "https://github.com/RWS-NL/air-node-packages",
