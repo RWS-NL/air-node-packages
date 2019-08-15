@@ -23,7 +23,7 @@ This is a mono-repo for all NodeJS related packages used throughout other AIR pr
 
 ## Working with this repository
 
-Please see [Lerna and working on air-node-packages](https://github.com/RWS-NL/air-dev/tree/master/docs/docker_non-aio_setup.md) on the air-dev repo
+Please see [Lerna and working on air-node-packages](https://github.com/RWS-NL/air-dev/blob/master/docs/Lerna_and_working_on_air-node-packages.md) on the air-dev repo
 
 ---
 
