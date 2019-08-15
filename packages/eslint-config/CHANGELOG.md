@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.2](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/eslint-config@2.0.1...@rws-air/eslint-config@2.0.2) (2019-08-15)
+
+
+### Features
+
+* **eslint-config:** increase max line length ([d6fb767](https://github.com/RWS-NL/air-node-packages/commit/d6fb767))
+
+
+
+
+
 ## [2.0.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/eslint-config@2.0.0...@rws-air/eslint-config@2.0.1) (2019-08-15)
 
 
