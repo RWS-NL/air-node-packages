@@ -4,16 +4,16 @@
     "outDir": "build",
     "rootDir": "src",
     "baseUrl": "src",
+    "strict": true,
     "resolveJsonModule": true,
     "noEmit": true,
     "downlevelIteration": true,
-    "jsx": "react"
+    "declaration": false,
+    "jsx": "react",
+    "skipLibCheck": true,
+    "isolatedModules": true
   },
   "include": [
     "src"
-  ],
-  "exclude": [
-    "src/__tests__",
-    "src/setupTests.ts"
   ]
 }

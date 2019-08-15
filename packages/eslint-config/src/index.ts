@@ -2,17 +2,17 @@ module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: './tsconfig.json',
+    project: './tsconfig.eslint.json',
     sourceType: 'module',
     ecmaVersion: 2019,
     ecmaFeatures: {jsx: true},
   },
   extends: [
+    'react-app',
+    'plugin:jest/all',
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:jest/all',
-    'react-app'
+    'plugin:@typescript-eslint/recommended'
   ],
   env: {
     node: true,
@@ -85,6 +85,10 @@ module.exports = {
     '@typescript-eslint/unified-signatures': 'error',
     '@typescript-eslint/camelcase': [ 'error', { allow: [ 'api_key', 'app_id', 'show_alternative', 'store_link', 'grant_type' ] } ],
     '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-misused-promises': 'error',
+    '@typescript-eslint/prefer-regexp-exec': 'error',
+    '@typescript-eslint/no-angle-bracket-type-assertion': 'off',
+    '@typescript-eslint/ban-ts-ignore': 'off',
 
     // Jest Rules
     'jest/consistent-test-it': [ 'error', {fn: 'test'} ],
@@ -99,6 +103,7 @@ module.exports = {
     // Possible Errors
     'no-console': 'warn',
     'no-template-curly-in-string': 'error',
+    'require-atomic-updates': 'off',
 
     // Best Practices
     'accessor-pairs': 'error',

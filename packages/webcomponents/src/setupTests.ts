@@ -4,7 +4,7 @@ import { createSerializer } from 'enzyme-to-json';
 
 configure({adapter: new Adapter()});
 
-// @ts-ignore => Type definitions are off
+// @ts-ignore
 expect.addSnapshotSerializer(createSerializer({mode: 'deep'}));
 
 export default undefined;

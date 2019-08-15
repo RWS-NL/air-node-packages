@@ -55,7 +55,7 @@ const propsForTable: TableProps = {
   order: 'asc',
   orderby: 'name',
   rowsPerPage,
-  rowsPerPageOptions: [2, 4, 5, 10],
+  rowsPerPageOptions: [ 2, 4, 5, 10 ],
   page,
   onChangePage: () => console.log('changed page'),
   onChangeRowsPerPage: () => console.log('changed rows per page'),
@@ -96,16 +96,16 @@ const propsForTable: TableProps = {
     </Fragment>
   ),
   tablecss: {
-    table: [css.customTable, css.customTable],
-    tableToolbar: [css.customTableToolbar],
+    table: [ css.customTable, css.customTable ],
+    tableToolbar: [ css.customTableToolbar ],
   },
   paperElevation: 0,
-  showBottomPagination: true
+  showBottomPagination: true,
 };
 
 
 const Home: FC = () => {
-  const [open, setOpen] = useState(false);
+  const [ open, setOpen ] = useState(false);
 
   return (
     <Fragment>
@@ -156,7 +156,7 @@ const Home: FC = () => {
       <div className={css.spacer}>
         <SearchBar
           data-qa='table-search-bar'
-          placeholder={`Search...`}
+          placeholder={'Search...'}
           onChange={() => console.log('changed!')}
           onCancelSearch={() => console.log('Canceled Search!')}
           searchIcon={<SearchIcon className={classnames(css.searchIconButton)} />}

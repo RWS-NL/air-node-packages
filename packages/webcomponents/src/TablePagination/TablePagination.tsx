@@ -22,7 +22,6 @@ const TablePagination: FC<TablePaginationProps> = props => {
   const isOnMobile = useMediaQuery('(max-width: 1024px)');
 
   return (
-    // @ts-ignore
     <MUITablePagination
       component='div'
       count={props.count} page={props.page}

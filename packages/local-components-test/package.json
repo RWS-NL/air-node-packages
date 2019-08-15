@@ -1,0 +1,61 @@
+{
+  "name": "local-components-test",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Local testing app for webcomponents",
+  "author": "Jeroen Claassens <j.claassens@cgi.com>",
+  "license": "AGPL-3.0-or-later",
+  "main": "src/index.ts",
+  "homepage": "https://github.com/RWS-NL/air-node-packages/tree/master/packages/local-components-test#readme",
+  "scripts": {
+    "start": "PORT=9999 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "concurrently \"yarn lint:js\" \"yarn lint:scss\"",
+    "lint:js": "eslint src --fix --ext .ts,.tsx",
+    "lint:scss": "stylelint --fix ./src/styles/*.scss ./src/**/*.scss"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.3.2",
+    "@material-ui/icons": "^4.2.1",
+    "lodash.debounce": "^4.0.8",
+    "react": "link:./../../node_modules/react",
+    "react-dom": "link:./../../node_modules/react-dom"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RWS-NL/air-node-packages.git",
+    "directory": "packages/local-components-test"
+  },
+  "bugs": {
+    "url": "https://github.com/RWS-NL/air-node-packages/issues"
+  },
+  "keywords": [
+    "rws-air",
+    "rws-nl",
+    "rws",
+    "air",
+    "typescript",
+    "ts",
+    "react",
+    "material-ui",
+    "webcomponents"
+  ]
+}

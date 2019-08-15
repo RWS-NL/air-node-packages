@@ -18,7 +18,6 @@
     "lint:scss": "stylelint --fix ./src/styles/*.scss ./src/**/*.scss",
     "prebuild": "yarn lint && yarn test:modules:ci && git co tsconfig.json",
     "build": "rollup -c rollup.config.js",
-    "postbuild": "rimraf dist/__tests__ dist/setupTests.d.ts",
     "start": "yarn build -w",
     "start:local": "pushd local-sample && yarn install && yarn start",
     "prepublishOnly": "yarn build",

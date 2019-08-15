@@ -11,8 +11,8 @@ const closeAction = jest.fn();
 const confirmAction = jest.fn();
 
 const setup = (
-  isOpen: boolean = false,
-  isSimpleModal: boolean = false,
+  isOpen = false,
+  isSimpleModal = false,
   props?: Pick<ModalProps, OptionalKeys<ModalProps>>,
   dialogContent: ReactNode = <Fragment />
 ) => (

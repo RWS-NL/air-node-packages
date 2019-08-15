@@ -19,7 +19,15 @@
     },
     "create": {
       "homepage": "https://github.com/RWS-NL/air-node-packages",
-      "license": "AGPL-3.0-or-later"
+      "license": "AGPL-3.0-or-later",
+      "keywords": [
+        "rws-air",
+        "rws-nl",
+        "rws",
+        "air",
+        "typescript",
+        "ts"
+      ]
     }
   }
 }

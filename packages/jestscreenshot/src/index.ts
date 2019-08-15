@@ -134,8 +134,8 @@ export class JestScreenshot {
   private page: Page;
   private dirName: string;
   private testName: string;
-  private shouldUploadToSlack: boolean = false;
-  private slackToken: string = '';
+  private shouldUploadToSlack = false;
+  private slackToken = '';
   private slackChannels: string[] = [];
 
   public constructor(options: JestScreenshotOptions) {

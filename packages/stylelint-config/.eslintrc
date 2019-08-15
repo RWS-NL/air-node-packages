@@ -1,5 +1,5 @@
 {
   "extends": [
     "@favware/eslint-config"
-  ],
+  ]
 }

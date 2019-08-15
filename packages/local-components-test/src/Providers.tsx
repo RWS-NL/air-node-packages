@@ -4,7 +4,6 @@ import { blue, red, yellow } from './utils/constants';
 import Home from './Home';
 import React, { FC } from 'react';
 
-// @ts-ignore
 const createTheme: Theme = createMuiTheme({
   palette: {
     contrastThreshold: 3,
