@@ -4,7 +4,7 @@
     "allowJs": true,
     "checkJs": true
   },
-  "includes": [
+  "include": [
     "**/src",
     "**/__tests__",
     "**/*.tsx",
