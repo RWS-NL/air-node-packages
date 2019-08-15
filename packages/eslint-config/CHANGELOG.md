@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/eslint-config@2.0.0...@rws-air/eslint-config@2.0.1) (2019-08-15)
+
+
+### Features
+
+* **eslint-config:** disable react-hooks-exhaustive-deps ([c86ffa5](https://github.com/RWS-NL/air-node-packages/commit/c86ffa5))
+
+
+
+
+
 # [2.0.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/eslint-config@1.1.4...@rws-air/eslint-config@2.0.0) (2019-08-15)
 
 
