@@ -100,6 +100,9 @@ module.exports = {
     'jest/prefer-inline-snapshots': 'off',
     'jest/expect-expect': [ 'error', { assertFunctionNames: [ 'expect', 'expectSaga', 'testSaga' ] } ],
 
+    // React Hooks
+    'react-hooks/exhaustive-deps': 'off',
+
     // Possible Errors
     'no-console': 'warn',
     'no-template-curly-in-string': 'error',
