@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/jestscreenshot@2.0.3...@rws-air/jestscreenshot@3.0.0) (2019-08-15)
+
+
+### Bug Fixes
+
+* upgrade eslint-config to fully support [@typescript-eslint](https://github.com/typescript-eslint) v2.x ([0fee61f](https://github.com/RWS-NL/air-node-packages/commit/0fee61f))
+* **webcomponents:** fix prepublish script ([7b38cf1](https://github.com/RWS-NL/air-node-packages/commit/7b38cf1))
+
+
+### BREAKING CHANGES
+
+* tsconfig.eslint.json is now required in the root of the folder due to breaking
+changes made by typescript-eslint
+
+
+
+
+
 ## [2.0.3](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/jestscreenshot@2.0.2...@rws-air/jestscreenshot@2.0.3) (2019-08-14)
 
 **Note:** Version bump only for package @rws-air/jestscreenshot

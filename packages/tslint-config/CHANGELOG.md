@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/rws-nl/air-node-packages/compare/@rws-air/tslint-config@2.0.7...@rws-air/tslint-config@3.0.0) (2019-08-15)
+
+
+### Bug Fixes
+
+* upgrade eslint-config to fully support [@typescript-eslint](https://github.com/typescript-eslint) v2.x ([0fee61f](https://github.com/rws-nl/air-node-packages/commit/0fee61f))
+
+
+### BREAKING CHANGES
+
+* tsconfig.eslint.json is now required in the root of the folder due to breaking
+changes made by typescript-eslint
+
+
+
+
+
 ## [2.0.7](https://github.com/rws-nl/air-node-packages/compare/@rws-air/tslint-config@2.0.6...@rws-air/tslint-config@2.0.7) (2019-08-14)
 
 
