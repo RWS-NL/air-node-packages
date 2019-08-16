@@ -21,7 +21,7 @@
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
-    "@favware/eslint-config": "2.0.0",
+    "@favware/eslint-config": "3.0.0",
     "@material-ui/core": "^4.3.2",
     "@material-ui/icons": "^4.2.1",
     "@rws-air/eslint-config": "file:./packages/eslint-config",
@@ -41,7 +41,7 @@
     "@types/node": "12.7.2",
     "@types/node-fetch": "^2.5.0",
     "@types/puppeteer": "^1.19.1",
-    "@types/react": "^16.9.1",
+    "@types/react": "^16.9.2",
     "@types/react-dom": "^16.8.5",
     "@types/yargs": "^13.0.2",
     "classnames": "^2.2.6",
