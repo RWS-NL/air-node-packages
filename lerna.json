@@ -13,7 +13,6 @@
     "version": {
       "allowBranch": "master",
       "conventionalCommits": true,
-      "signGitCommit": true,
       "push": true,
       "message": "chore(release): publish"
     },
