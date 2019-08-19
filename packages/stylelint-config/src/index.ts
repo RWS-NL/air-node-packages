@@ -1,6 +1,7 @@
 const patternRegex = new RegExp('^[a-z](?:[A-Z0-9]*[a-z][a-z0-9]*[A-Z]|[a-z0-9]*[A-Z][A-Z0-9]*[a-z])?[A-Za-z0-9]*$');
 
 export const config = {
+  defaultSeverity: 'error',
   extends: [
     'stylelint-config-standard',
     'stylelint-config-recommended',
