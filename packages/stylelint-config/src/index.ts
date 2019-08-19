@@ -1,6 +1,6 @@
 const patternRegex = new RegExp('^[a-z](?:[A-Z0-9]*[a-z][a-z0-9]*[A-Z]|[a-z0-9]*[A-Z][A-Z0-9]*[a-z])?[A-Za-z0-9]*$');
 
-module.exports = {
+export const config = {
   extends: [
     'stylelint-config-standard',
     'stylelint-config-recommended',
@@ -45,3 +45,7 @@ module.exports = {
     'value-list-comma-newline-before': 'never-multi-line',
   },
 };
+
+module.exports = config;
+exports.default = config;
+export default config;

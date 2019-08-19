@@ -7,11 +7,14 @@
   "scripts": {
     "build": "lerna run build --parallel",
     "lint": "lerna run lint --parallel",
+    "test": "lerna run test --parallel",
+    "postinstall": "lerna bootstrap && lerna link",
     "commit": "git-cz",
     "cz": "git-cz",
-    "git:sign": "git config commit.gpgsign true",
-    "postinstall": "lerna bootstrap && lerna link",
-    "test": "lerna run test --parallel"
+    "up": "yarn upgrade-interactive",
+    "scripts:validateNoOnly": "babel-node scripts/validateNoOnly --extensions \".ts\"",
+    "scripts:duplicateESLintConfig": "babel-node scripts/duplicateESLintConfig --extensions \".ts\"",
+    "scripts:duplicateStylelintConfig": "babel-node scripts/duplicateStylelintConfig --extensions \".ts\""
   },
   "dependencies": {
     "@rws-air/jestscreenshot": "file:./packages/jestscreenshot",
@@ -19,9 +22,14 @@
     "@rws-air/webcomponents": "file:./packages/webcomponents"
   },
   "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-typescript": "^7.3.3",
+    "@babel/register": "^7.5.5",
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
-    "@favware/eslint-config": "3.0.0",
+    "@favware/eslint-config": "3.0.1",
     "@material-ui/core": "^4.3.2",
     "@material-ui/icons": "^4.2.1",
     "@rws-air/eslint-config": "file:./packages/eslint-config",
@@ -36,6 +44,7 @@
     "@types/jest": "^24.0.17",
     "@types/jest-environment-puppeteer": "^4.3.0",
     "@types/js-yaml": "^3.12.1",
+    "@types/jsonfile": "^5.0.0",
     "@types/lodash.debounce": "^4.0.6",
     "@types/mkdirp": "^0.5.2",
     "@types/node": "12.7.2",
@@ -44,18 +53,21 @@
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.8.5",
     "@types/yargs": "^13.0.2",
+    "chalk": "^2.4.2",
     "classnames": "^2.2.6",
-    "concurrently": "^4.1.1",
+    "concurrently": "^4.1.2",
     "cross-env": "^5.2.0",
     "cz-conventional-changelog": "^3.0.2",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.4.0",
-    "eslint": "^6.1.0",
+    "eslint": "^6.2.0",
     "glob": "^7.1.4",
-    "husky": "^3.0.3",
+    "husky": "^3.0.4",
     "jsdoc-to-markdown": "^5.0.0",
-    "lint-staged": "^9.2.1",
+    "jsonfile": "^5.0.0",
+    "lerna": "^3.16.4",
+    "lint-staged": "^9.2.3",
     "lodash.debounce": "^4.0.8",
     "node-sass": "^4.12.0",
     "react": "^16.9.0",
@@ -90,7 +102,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "! ag 'describe\\.only|it\\.only|test\\.only' --ts packages && yarn lint-staged"
+      "pre-commit": "yarn scripts:validateNoOnly && yarn lint-staged"
     }
   },
   "commitlint": {
@@ -101,6 +113,14 @@
   "lint-staged": {
     "*.{js,ts,tsx}": [
       "yarn lint",
+      "git add"
+    ],
+    "packages/eslint-config/src/index.ts": [
+      "yarn scripts:duplicateESLintConfig",
+      "git add"
+    ],
+    "packages/stylelint-config/src/index.ts": [
+      "yarn scripts:duplicateStylelintConfig",
       "git add"
     ]
   }
