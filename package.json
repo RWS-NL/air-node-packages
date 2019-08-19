@@ -12,6 +12,7 @@
     "commit": "git-cz",
     "cz": "git-cz",
     "up": "yarn upgrade-interactive",
+    "ci:test": "lerna run test --parallel --ignore \"@rws-air/webcomponents\" --ignore \"local-components-test\" && lerna run test:modules",
     "scripts:validateNoOnly": "babel-node scripts/validateNoOnly --extensions \".ts\"",
     "scripts:duplicateESLintConfig": "babel-node scripts/duplicateESLintConfig --extensions \".ts\"",
     "scripts:duplicateStylelintConfig": "babel-node scripts/duplicateStylelintConfig --extensions \".ts\""

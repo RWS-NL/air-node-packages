@@ -10,7 +10,9 @@
   "scripts": {
     "start": "PORT=9999 react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "yarn lint",
+    "test:modules": "react-scripts test",
+    "posttest:modules": "git checkout tsconfig.json",
     "eject": "react-scripts eject",
     "lint": "concurrently \"yarn lint:js\" \"yarn lint:scss\"",
     "lint:js": "eslint src --fix --ext .ts,.tsx",
