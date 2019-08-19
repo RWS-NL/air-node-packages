@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/RWS-NL/air-node-packages/compare/local-components-test@1.0.0...local-components-test@1.1.0) (2019-08-19)
+
+
+### Features
+
+* **stylelint-config:** set default severity to Error by default ([fb8a073](https://github.com/RWS-NL/air-node-packages/commit/fb8a073))
+
+
+
+
+
 # 1.0.0 (2019-08-15)
 
 
