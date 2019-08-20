@@ -1,4 +1,4 @@
-app-github-uri: https://github.com/RWS-NL/air-node-packages-app.git
+app-github-uri: https://github.com/RWS-NL/air-node-packages.git
 app-source-branch: master
 
 app-project-name: air-node-packages
