@@ -15,7 +15,7 @@
     "lint": "concurrently \"yarn lint:js\" \"yarn lint:scss\"",
     "lint:js": "eslint src --fix --ext .ts,.tsx",
     "lint:scss": "stylelint --fix ./src/styles/*.scss ./src/**/*.scss",
-    "prebuild": "yarn lint && yarn test:modules:ci && git co tsconfig.json",
+    "prebuild": "yarn lint && CI=true yarn test:modules && git co tsconfig.json",
     "build": "rollup -c rollup.config.js",
     "start": "yarn build -w",
     "start:local": "pushd local-sample && yarn install && yarn start",
