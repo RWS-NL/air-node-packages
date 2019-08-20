@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@4.1.0...@rws-air/webcomponents@5.0.0) (2019-08-20)
+
+
+### Bug Fixes
+
+* **webcomponents:** injects stylesheets at the top ([c00085d](https://github.com/RWS-NL/air-node-packages/commit/c00085d))
+
+
+### BREAKING CHANGES
+
+* **webcomponents:** Webcomponent stylesheets are now pushed to the top of the <head> tag
+
+
+
+
+
 # [4.1.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@4.0.0...@rws-air/webcomponents@4.1.0) (2019-08-19)
 
 

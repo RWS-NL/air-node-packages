@@ -1,6 +1,6 @@
 {
   "name": "local-components-test",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": true,
   "description": "Local testing app for webcomponents",
   "author": "Jeroen Claassens <j.claassens@cgi.com>",
