@@ -8,18 +8,12 @@
     "build": "lerna run build --parallel",
     "lint": "lerna run lint --parallel",
     "test": "lerna run test --parallel",
-    "postinstall": "lerna bootstrap && lerna link",
     "commit": "git-cz",
     "cz": "git-cz",
     "up": "yarn upgrade-interactive",
     "scripts:validateNoOnly": "babel-node scripts/validateNoOnly --extensions \".ts\"",
     "scripts:duplicateESLintConfig": "babel-node scripts/duplicateESLintConfig --extensions \".ts\"",
     "scripts:duplicateStylelintConfig": "babel-node scripts/duplicateStylelintConfig --extensions \".ts\""
-  },
-  "dependencies": {
-    "@rws-air/jestscreenshot": "file:./packages/jestscreenshot",
-    "@rws-air/usercreator": "file:./packages/user-creator",
-    "@rws-air/webcomponents": "file:./packages/webcomponents"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -32,9 +26,6 @@
     "@favware/eslint-config": "3.0.1",
     "@material-ui/core": "^4.3.2",
     "@material-ui/icons": "^4.2.1",
-    "@rws-air/eslint-config": "file:./packages/eslint-config",
-    "@rws-air/stylelint-config": "file:./packages/stylelint-config",
-    "@rws-air/tslint-config": "file:./packages/tslint-config",
     "@svgr/rollup": "^4.3.2",
     "@types/classnames": "^2.2.9",
     "@types/common-tags": "^1.8.0",

@@ -2107,51 +2107,6 @@
     universal-user-agent "^3.0.0"
     url-template "^2.0.8"
 
-"@rws-air/eslint-config@file:./packages/eslint-config":
-  version "2.0.2"
-  dependencies:
-    "@typescript-eslint/eslint-plugin" "^2.0.0"
-    "@typescript-eslint/parser" "^2.0.0"
-    babel-eslint "^10.0.2"
-    eslint-config-react-app "^5.0.1"
-    eslint-plugin-flowtype "^3.13.0"
-    eslint-plugin-import "^2.18.2"
-    eslint-plugin-jest "^22.15.1"
-    eslint-plugin-jsx-a11y "^6.2.3"
-    eslint-plugin-react "^7.14.3"
-    eslint-plugin-react-hooks "^1.7.0"
-
-"@rws-air/jestscreenshot@file:./packages/jestscreenshot":
-  version "3.0.0"
-  dependencies:
-    form-data "^2.5.0"
-    mkdirp "^0.5.1"
-    moment "^2.24.0"
-    node-fetch "^2.6.0"
-
-"@rws-air/stylelint-config@file:./packages/stylelint-config":
-  version "4.0.0"
-  dependencies:
-    stylelint-config-recommended "^2.2.0"
-    stylelint-config-sass-guidelines "^6.0.0"
-    stylelint-config-standard "^18.3.0"
-    stylelint-scss "^3.9.2"
-
-"@rws-air/tslint-config@file:./packages/tslint-config":
-  version "3.0.0"
-
-"@rws-air/usercreator@file:./packages/user-creator":
-  version "3.0.0"
-  dependencies:
-    "@favware/yamlreader" "^1.0.5"
-    chalk "^2.4.2"
-    common-tags "^1.8.0"
-    node-fetch "^2.5.0"
-    yargs "^13.2.2"
-
-"@rws-air/webcomponents@file:./packages/webcomponents":
-  version "4.0.0"
-
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@samverschueren/stream-to-observable/-/stream-to-observable-0.3.0.tgz#ecdf48d532c58ea477acfcab80348424f8d0662f"
