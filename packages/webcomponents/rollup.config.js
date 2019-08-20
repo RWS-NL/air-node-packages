@@ -9,6 +9,7 @@ export default configure({
     postcss({
       modules: true,
       minimize: true,
+      inject: { insertAt: 'top' },
     }),
     url(),
     svgr()
