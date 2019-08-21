@@ -42,3 +42,5 @@ plugins=(… zsh-lerna)
 ```
 
 3. Reload `~/.zshrc` or reload your terminal
+
+Try out one more PR
