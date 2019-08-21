@@ -4,9 +4,9 @@ app-source-branch: master
 
 app-project-name: air-node-packages
 
-app-artifactory-regex: air-node-packages-(?<version>.*).zip
-app-artifactory-filename: ./artifact/air-node-packages-*.zip
-app-artifactory-extension: zip
+app-artifactory-regex:
+app-artifactory-filename:
+app-artifactory-extension:
 
 app-undeploy-after-smoketest: true
 
