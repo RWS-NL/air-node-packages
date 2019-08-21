@@ -10,6 +10,8 @@ export type ActionBarProps = {
   title: string;
   /** Whether an action button should be displayed in the ActionBar */
   shouldHaveButton?: boolean;
+  /** Whether the button should be disabled, only relevant when `shouldHaveButton` is set to true */
+  shouldDisableButton?: boolean;
   /** The text that should be shown in the button */
   buttonLabel?: string;
   /** Data-qa tag to apply to the search bar and input element */
@@ -37,6 +39,7 @@ const ActionBar: FC<ActionBarProps> = props => {
               color='primary'
               label={props.buttonLabel}
               onClick={() => props.buttonAction ? props.buttonAction() : null}
+              disabled={props.shouldDisableButton}
             />
             : <Fragment />
           }
