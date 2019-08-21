@@ -5,7 +5,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "lerna run build --parallel",
+    "build": "lerna run build --parallel --ignore local-components-test",
     "lint": "lerna run lint --parallel",
     "test": "lerna run test --parallel",
     "commit": "git-cz",
