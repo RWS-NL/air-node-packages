@@ -10,7 +10,7 @@
   "homepage": "https://github.com/RWS-NL/air-node-packages/tree/master/packages/webcomponents#readme",
   "scripts": {
     "test": "yarn lint",
-    "test:modules": "react-scripts test",
+    "test:modules": "react-scripts test --runInBand --ci --watchAll=false",
     "posttest:modules": "git checkout tsconfig.json",
     "lint": "concurrently \"yarn lint:js\" \"yarn lint:scss\"",
     "lint:js": "eslint src --fix --ext .ts,.tsx",
