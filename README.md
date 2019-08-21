@@ -46,3 +46,5 @@ plugins=(… zsh-lerna)
 This is a concourse test
 
 something else
+
+trigger concourse
