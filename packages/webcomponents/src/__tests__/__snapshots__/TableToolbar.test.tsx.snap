@@ -40,7 +40,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
         onChange={[Function]}
         placeholder="placeholder..."
         searchIcon={
-          <Memo
+          <Memo(SearchIcon)
             className=""
           />
         }
@@ -89,7 +89,7 @@ exports[`Snapshot Testing Required Props 1`] = `
         onChange={[Function]}
         placeholder="placeholder..."
         searchIcon={
-          <Memo
+          <Memo(SearchIcon)
             className=""
           />
         }
