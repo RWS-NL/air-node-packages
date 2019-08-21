@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.1.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@5.0.0...@rws-air/webcomponents@5.1.0) (2019-08-21)
+
+
+### Features
+
+* **webcomponents (actionbar):** new optional prop: shouldDisableButton ([267e2d3](https://github.com/RWS-NL/air-node-packages/commit/267e2d3))
+
+
+
+
+
 # [5.0.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@4.1.0...@rws-air/webcomponents@5.0.0) (2019-08-20)
 
 
