@@ -26,7 +26,7 @@
     "stylelint-config-recommended": "^2.2.0",
     "stylelint-config-sass-guidelines": "^6.0.0",
     "stylelint-config-standard": "^18.3.0",
-    "stylelint-scss": "^3.9.2"
+    "stylelint-scss": "^3.9.4"
   },
   "publishConfig": {
     "access": "public"
