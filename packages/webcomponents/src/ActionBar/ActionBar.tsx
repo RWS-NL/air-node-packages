@@ -35,8 +35,8 @@ const ActionBar: FC<ActionBarProps> = props => {
           {props.shouldHaveButton ?
             <Button
               data-qa='action-bar-button'
-              variant='contained'
-              color='primary'
+              variant='outlined'
+              color='secondary'
               label={props.buttonLabel}
               onClick={() => props.buttonAction ? props.buttonAction() : null}
               disabled={props.shouldDisableButton}

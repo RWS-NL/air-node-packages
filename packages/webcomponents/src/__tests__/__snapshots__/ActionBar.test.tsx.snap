@@ -34,11 +34,11 @@ exports[`Snapshot Testing AdditionalTest 1`] = `
       xs={6}
     >
       <Button
-        color="primary"
+        color="secondary"
         data-qa="action-bar-button"
         label="label"
         onClick={[Function]}
-        variant="contained"
+        variant="outlined"
       />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
@@ -114,11 +114,11 @@ exports[`Snapshot Testing With Button 1`] = `
       xs={6}
     >
       <Button
-        color="primary"
+        color="secondary"
         data-qa="action-bar-button"
         label="label"
         onClick={[Function]}
-        variant="contained"
+        variant="outlined"
       />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>

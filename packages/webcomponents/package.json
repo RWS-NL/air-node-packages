@@ -17,7 +17,7 @@
     "lint:scss": "stylelint --fix ./src/styles/*.scss ./src/**/*.scss",
     "prebuild": "yarn lint && CI=true yarn test:modules",
     "build": "rollup -c rollup.config.js",
-    "start": "yarn build -w",
+    "start": "rollup -wc rollup.config.js",
     "start:local": "pushd local-sample && yarn install && yarn start",
     "prepublishOnly": "yarn build",
     "modules": "rm -rf node_modules yarn.lock local-sample/node_modules local-sample/yarn.lock && yarn && pushd local-sample && yarn && popd"
