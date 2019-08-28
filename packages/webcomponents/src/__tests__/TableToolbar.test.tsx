@@ -1,7 +1,6 @@
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
 import TableToolbar from '../TableToolbar/TableToolbar';
-import InputBase from '@material-ui/core/InputBase';
 
 const mockOnSearchInput = jest.fn();
 const mockOnSearchClear = jest.fn();
