@@ -1,62 +1,7 @@
 /* stylelint-disable color-named, declaration-block-no-redundant-longhand-properties */
 @import '../vars';
 
-.app {
-  text-align: center;
-}
-
-.header {
-  align-items: center;
-  color: black;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  font-size: calc(10px + 2vmin);
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.logo {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.spacer {
-  margin-top: 2rem;
-}
-
-.table {
-  &Row {
-    border-left: 1px solid $veryLightGrey;
-
-    &:nth-of-type(1) {
-      border-top: 3px solid $lightGrey;
-    }
-
-    &:nth-of-type(odd) {
-      background-color: $veryLightGrey;
-    }
-
-    &:nth-of-type(even) {
-      background-color: $white;
-    }
-
-    > td:last-child {
-      padding-right: 0;
-    }
-  }
-}
-
-.customTable {
-  background-color: $red !important;
-  margin-left: 0;
-  margin-right: 0;
-  max-width: 100vw;
-
-  &Toolbar {
-    background-color: $white;
-    margin-left: 0;
-    margin-right: 0;
-    max-width: 100vw;
-  }
+.svgIcon {
+  height: 1.3rem;
+  width: 1.3rem;
 }
