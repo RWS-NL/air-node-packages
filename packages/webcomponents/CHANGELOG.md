@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.1.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@6.0.0...@rws-air/webcomponents@6.1.0) (2019-08-28)
+
+
+### Features
+
+* **webcomponents:** add optional tooltips to PaperButtons ([f0d5e17](https://github.com/RWS-NL/air-node-packages/commit/f0d5e17))
+
+
+
+
+
 # [6.0.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@5.1.1...@rws-air/webcomponents@6.0.0) (2019-08-28)
 
 
