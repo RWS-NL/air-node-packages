@@ -62,13 +62,11 @@ exports[`Snapshot Testing Optional Props 1`] = `
 exports[`Snapshot Testing Required Props 1`] = `
 <WithStyles(ForwardRef(Paper))
   className=""
-  elevation={2}
   style={Object {}}
 >
   <div>
     <WithStyles(ForwardRef(Input))
       disableUnderline={true}
-      disabled={false}
       fullWidth={true}
       onBlur={[Function]}
       onChange={[Function]}
@@ -85,7 +83,6 @@ exports[`Snapshot Testing Required Props 1`] = `
         "root": "",
       }
     }
-    disabled={false}
     onClick={[Function]}
   >
     <SearchIcon
@@ -108,7 +105,6 @@ exports[`Snapshot Testing Required Props 1`] = `
         "root": "undefined",
       }
     }
-    disabled={false}
     onClick={[Function]}
   >
     <ClearIcon
