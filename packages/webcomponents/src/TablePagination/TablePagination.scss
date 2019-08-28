@@ -2,23 +2,23 @@
 
 .tablePagination {
   @extend %beautifulCenter;
-  align-items: center !important;
-  background-color: $lightBlue !important;
-  display: flex !important;
-  float: left !important;
-  font-size: $fontSizeDefault !important;
-  height: 2.4vw !important;
-  width: 100% !important;
+  align-items: center;
+  background-color: $skyBlue20;
+  display: flex;
+  float: left;
+  font-size: $fontSizeDefault;
+  height: 3rem;
+  width: 100%;
 
   &Mobile {
-    height: 2.5rem !important;
+    height: 2.5rem;
   }
 }
 
 .selectIcon {
-  left: 1.4rem !important;
+  left: 1.4rem;
 }
 
 .menuItem {
-  font-size: $fontSizeDefault !important;
+  font-size: $fontSizeDefault;
 }

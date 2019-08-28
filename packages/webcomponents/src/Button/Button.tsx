@@ -6,7 +6,7 @@ import MUIButton, { ButtonProps as MUIButtonProps } from '@material-ui/core/Butt
 import css from './Button.scss';
 import classnames from 'classnames';
 import React, { FC, ReactNode } from 'react';
-import { customCss, dataQa } from '../typings';
+import { customCss, dataQa } from '../constants';
 import { makeStyles, Theme, createStyles } from '@material-ui/core';
 
 export type ButtonProps = {

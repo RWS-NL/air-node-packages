@@ -3,7 +3,7 @@ import css from './ActionBar.scss';
 import Button from '../Button/Button';
 import classnames from 'classnames';
 import React, { FC, Fragment } from 'react';
-import { customCss, dataQa } from '../typings';
+import { customCss, dataQa } from '../constants';
 
 export type ActionBarProps = {
   /** The title to show in the ActionBar */

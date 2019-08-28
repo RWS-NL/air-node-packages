@@ -1,6 +1,7 @@
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
 import TableToolbar from '../TableToolbar/TableToolbar';
+import InputBase from '@material-ui/core/InputBase';
 
 const mockOnSearchInput = jest.fn();
 const mockOnSearchClear = jest.fn();
@@ -31,17 +32,6 @@ describe('Component Tests', () => {
     inputBox.simulate('change', expectedCalledWith);
     expect(mockOnSearchInput).toHaveBeenCalledWith({target: {value: 'DarthVader'}});
     expect(mockOnSearchInput).toHaveBeenCalledWith(expectedCalledWith);
-  });
-
-  test('should trigger cancel when clicking X', () => {
-    const cancelButton = tableToolbar
-      .find('[data-qa="table-search-bar"]')
-      .dive().dive()
-      .find('WithStyles(ForwardRef(IconButton))')
-      .last();
-
-    cancelButton.simulate('click');
-    expect(mockOnSearchClear).toHaveBeenCalledWith();
   });
 });
 

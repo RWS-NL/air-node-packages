@@ -2,7 +2,7 @@ import MUITableCell, { TableCellProps as MUITableCellProps } from '@material-ui/
 import classnames from 'classnames';
 import React, { FC } from 'react';
 import css from './TableBodyCell.scss';
-import { cellContent, customCss, dataQa } from '../typings';
+import { cellContent, customCss, dataQa } from '../constants';
 
 export type TableBodyCellProps = {
   /** Content for the cell */

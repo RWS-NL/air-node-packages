@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import React, { FC } from 'react';
 import css from './TableHeaderCell.scss';
 import Tooltip, { TooltipProps } from '../Tooltip/Tooltip';
-import { customCss, dataQa, label } from '../typings';
+import { customCss, dataQa, label } from '../constants';
 
 export type TableHeaderProps = {
   label: string;
@@ -38,7 +38,7 @@ const TableHeaderCell: FC<TableHeaderCellProps> = props => (
     padding={props.header.disablePadding ? 'none' : 'default'}
     sortDirection={props.orderby === props.header.label ? props.order : false}
     className={classnames(css.tableCells, props.customclasses)}>
-    <Tooltip title={props.tooltiplabel} placement={props.tooltipplacement || 'bottom-start'}
+    <Tooltip title={props.tooltiplabel} placement={props.tooltipplacement || 'top'}
       data-qa={`table-header-${props['data-qa']}`}>
       <TableSortLabel
         data-qa={`tableSortLabel_${props.header.label}`}

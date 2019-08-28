@@ -1,14 +1,13 @@
-import { grey } from '@material-ui/core/colors';
+/* eslint-disable */
 import IconButton from '@material-ui/core/IconButton';
-import Input from '@material-ui/core/Input';
 import Paper from '@material-ui/core/Paper';
-import ClearIcon from '@material-ui/icons/Clear';
 import SearchIcon from '@material-ui/icons/Search';
+import CloseIcon from '@material-ui/icons/Close';
 import { CSSProperties } from '@material-ui/styles';
-import classNames from 'classnames';
-import React, { ChangeEvent, cloneElement, FC, KeyboardEvent, ReactElement, useState } from 'react';
+import React, { ChangeEvent, FC, KeyboardEvent, useState } from 'react';
+import { dataQa } from '../constants';
 import css from './SearchBar.scss';
-import { dataQa } from 'typings';
+import InputBase from '@material-ui/core/InputBase';
 
 export type SearchBarProps = {
   /** Whether to clear search on escape */
@@ -17,10 +16,6 @@ export type SearchBarProps = {
   classes?: any;
   /** Custom top-level class */
   className?: string;
-  /** Override the close icon. */
-  closeIcon?: ReactElement;
-  /** Override the search icon. */
-  searchIcon?: ReactElement;
   /** Disables text field. */
   disabled?: boolean;
   /** Fired when the search is cancelled. */
@@ -46,10 +41,7 @@ export type SearchBarProps = {
 };
 
 const SearchBar: FC<SearchBarProps> = props => {
-  const [ value, setValue ] = useState('');
-  const searchIcon = props.searchIcon || <SearchIcon style={{ color: grey[500] }} />;
-  const closeIcon = props.closeIcon || <ClearIcon style={{ color: grey[500] }} />;
-  const style = props.style || {};
+  const [value, setValue] = useState('');
   const placeholder = props.placeholder || 'Search...';
 
   const handleFocus = (event: any): void => {
@@ -86,46 +78,32 @@ const SearchBar: FC<SearchBarProps> = props => {
   };
 
   return (
-    <Paper
-      className={classNames(css.searchBar, props.className)}
-      style={style}
-      elevation={props.paperElevation}
-    >
-      <div className={css.searchContainer}>
-        <Input
-          onBlur={handleBlur}
-          value={value}
-          onChange={handleInput}
-          onKeyUp={handleKeyUp}
-          onFocus={handleFocus}
-          fullWidth
-          className={css.input}
-          disabled={props.disabled}
-          placeholder={placeholder}
-          data-qa={props['data-qa']}
-          disableUnderline
-        />
-      </div>
-      <IconButton
-        onClick={handleRequestSearch}
-        classes={{
-          root: classNames(css.iconButton, css.searchIconButton, {[css.iconButtonHidden]: value !== ''}),
-          disabled: css.iconButtonDisabled,
-        }}
+    <Paper className={css.paper} elevation={props.paperElevation} square>
+      <InputBase
+        className={css.input}
+        placeholder={placeholder}
+        inputProps={{ 'aria-label': placeholder }}
+        onBlur={handleBlur}
+        value={value}
+        onChange={handleInput}
+        onKeyUp={handleKeyUp}
+        onFocus={handleFocus}
         disabled={props.disabled}
-      >
-        {cloneElement(searchIcon, {classes: { root: css.icon }})}
-      </IconButton>
-      <IconButton
-        onClick={handleCancel}
-        classes={{
-          root: classNames(css.iconButton, {[css.iconButtonHidden]: value === ''}),
-          disabled: css.iconButtonDisabled,
-        }}
-        disabled={props.disabled}
-      >
-        {cloneElement(closeIcon, {classes: { root: css.icon }})}
-      </IconButton>
+        data-qa={props['data-qa']}
+        fullWidth
+      />
+      {
+        !value
+          ?
+          <IconButton aria-label={placeholder} className={css.inputButton} onClick={handleRequestSearch} disabled={props.disabled} size='small' color='primary'>
+            <SearchIcon className={css.inputSVG} />
+          </IconButton>
+          :
+          <IconButton aria-label={placeholder} className={css.inputButton} onClick={handleCancel} disabled={props.disabled} size='small' color='primary'>
+            <CloseIcon className={css.inputSVG} />
+          </IconButton>
+      }
+
     </Paper>
   );
 };

@@ -1,11 +1,10 @@
 import MUITablePagination, { TablePaginationProps as MUITablePaginationProps } from '@material-ui/core/TablePagination';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import classnames from 'classnames';
-import { customCss, dataQa } from 'index';
 import React, { FC } from 'react';
 import css from './TablePagination.scss';
 import TablePaginationActions from '../TablePaginationActions/TablePaginationActions';
-import { label } from 'typings';
+import { label, dataQa, customCss } from '../constants';
 
 export type TablePaginationProps = {
   /** The label in the displayed rows per page, for example "5 rows per page" */

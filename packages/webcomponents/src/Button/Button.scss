@@ -2,7 +2,8 @@
 
 .button {
   @extend %fontNormal;
-  background-color: $blue;
+  background-color: $skyBlue100;
+  border-radius: 0;
   float: right;
   height: 3.2rem;
   line-height: initial;
@@ -16,7 +17,7 @@
   }
 
   &Secondary {
-    background-color: $yellow;
+    background-color: $yellow100;
     color: $textBlack;
 
     > span {
@@ -26,10 +27,10 @@
 
   &Outlined {
     background-color: $white;
-    color: $blue;
+    color: $skyBlue100;
 
     > span {
-      color: $blue;
+      color: $skyBlue100;
     }
 
     &Secondary {
@@ -43,7 +44,7 @@
   }
 
   &Disabled {
-    background-color: $lightGrey;
+    background-color: $grey35;
     color: $textBlack;
 
     > span {

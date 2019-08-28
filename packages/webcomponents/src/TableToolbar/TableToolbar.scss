@@ -1,13 +1,8 @@
 @import '../styles/vars';
 
-.heightCorrection {
-  flex-basis: 0%;
-  height: 4rem;
-}
-
 .toolbar {
   @extend %beautifulCenter;
-  background-color: $lightGrey;
+  background-color: $grey20;
   display: flex;
   height: 4rem;
   margin-top: 5vh;
@@ -15,19 +10,17 @@
 }
 
 .searchFieldContent {
-  border: 1px solid $mediumGrey;
+  border: 1px solid $grey35;
   border-radius: 0;
-  box-shadow: none;
-  color: $grey;
+  color: $grey35;
   font-size: $fontSizeReset;
-  margin: 0 auto;
-  margin-left: 24vw;
-  width: 20vw;
 }
 
-.searchIconButton {
-  color: $blue;
-  opacity: 1;
+.paper {
+  align-items: center;
+  display: flex;
+  height: 2.5rem;
+  padding: 4px;
 }
 
 // stylelint-disable-next-line selector-max-compound-selectors

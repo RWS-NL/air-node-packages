@@ -1,87 +1,13 @@
 @import '../styles/vars';
 
-@mixin tooltipDefaults {
-  background-color: $white;
-  border: 1px solid $lightGrey;
-  border-radius: 0;
-  color: $textBlack;
-  font-size: 0.9rem;
+.tooltip {
+  background-color: $white !important;
+  border-radius: 0 !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12) !important;
+  color: rgba(0, 0, 0, 0.87) !important;
+  font-size: 0.8rem !important;
 }
 
-/*
-  Based on CSS Arrows from: http://www.cssarrowplease.com/
-  $color is the color of the arrow
-  $arrowSize is the size of the arrow
-  $borderSize affects the size of the entire tooltip
-              and should be smaller than $arrowSize
-  $[top|bottom|left|right]Offset defines the offset the arrow has to the
-              tooltip. 50% puts it in the middle of the tooltip of the given side
-*/
-@mixin popperArrowUpGenerator ($color, $arrowSize, $borderSize, $leftOffset) {
-  &::after,
-  &::before {
-    border: solid transparent;
-    bottom: 100%;
-    content: ' ';
-    height: 0;
-    left: $leftOffset;
-    pointer-events: none;
-    position: absolute;
-    width: 0;
-  }
-
-  &::after {
-    border-bottom-color: $white;
-    border-width: $arrowSize;
-    margin-left: -$arrowSize;
-  }
-
-  &::before {
-    border-bottom-color: $color;
-    border-width: ($arrowSize + ($borderSize * $arrowModifier));
-    margin-left: -($arrowSize + ($borderSize * $arrowModifier));
-  }
-}
-
-@mixin popperArrowLeftGenerator ($color, $arrowSize, $borderSize, $topOffset) {
-  &::after,
-  &::before {
-    border: solid transparent;
-    content: ' ';
-    height: 0;
-    pointer-events: none;
-    position: absolute;
-    right: 100%;
-    top: $topOffset;
-    width: 0;
-  }
-
-  &::after {
-    border-right-color: $white;
-    border-width: $arrowSize;
-    margin-top: -$arrowSize;
-  }
-
-  &::before {
-    border-right-color: $color;
-    border-width: ($arrowSize + ($borderSize * $arrowModifier));
-    margin-top: -($arrowSize + ($borderSize * $arrowModifier));
-  }
-}
-
-.tooltip[x-placement*='right'] > div {
-  @include popperArrowLeftGenerator($lightGrey, 10px, 1px, 25%);
-  @include tooltipDefaults;
-  font-size: 0.75rem;
-  margin-left: 0.7rem;
-  margin-top: 3.3rem;
-  position: relative;
-  width: 60%;
-}
-
-.tooltip[x-placement*='bottom'] > div {
-  @include popperArrowUpGenerator($lightGrey, 10px, 1px, 25%);
-  @include tooltipDefaults;
-  margin-top: 0.5rem;
-  position: relative;
+.box {
+  padding: 8px;
 }

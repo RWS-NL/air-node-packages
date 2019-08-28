@@ -9,43 +9,25 @@ exports[`Snapshot Testing Optional Props 1`] = `
     alignItems="center"
     container={true}
     direction="row"
-    justify="space-between"
+    justify="flex-end"
+    spacing={2}
   >
     <WithStyles(ForwardRef(Grid))
       item={true}
-      key="1"
-      xs={6}
-    />
-    <WithStyles(ForwardRef(Grid))
-      item={true}
       key="2"
-      xs={6}
     >
       <SearchBar
         className="snapshot-class"
         data-qa="table-search-bar"
-        onCancelSearch={
-          [MockFunction] {
-            "calls": Array [
-              Array [],
-            ],
-            "results": Array [
-              Object {
-                "type": "return",
-                "value": undefined,
-              },
-            ],
-          }
-        }
+        onCancelSearch={[MockFunction]}
         onChange={[Function]}
         placeholder="placeholder..."
-        searchIcon={
-          <Memo(SearchIcon)
-            className=""
-          />
-        }
       />
     </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      key="1"
+    />
   </WithStyles(ForwardRef(Grid))>
 </div>
 `;
@@ -58,43 +40,25 @@ exports[`Snapshot Testing Required Props 1`] = `
     alignItems="center"
     container={true}
     direction="row"
-    justify="space-between"
+    justify="flex-end"
+    spacing={2}
   >
     <WithStyles(ForwardRef(Grid))
       item={true}
-      key="1"
-      xs={6}
-    />
-    <WithStyles(ForwardRef(Grid))
-      item={true}
       key="2"
-      xs={6}
     >
       <SearchBar
         className=""
         data-qa="table-search-bar"
-        onCancelSearch={
-          [MockFunction] {
-            "calls": Array [
-              Array [],
-            ],
-            "results": Array [
-              Object {
-                "type": "return",
-                "value": undefined,
-              },
-            ],
-          }
-        }
+        onCancelSearch={[MockFunction]}
         onChange={[Function]}
         placeholder="placeholder..."
-        searchIcon={
-          <Memo(SearchIcon)
-            className=""
-          />
-        }
       />
     </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      key="1"
+    />
   </WithStyles(ForwardRef(Grid))>
 </div>
 `;

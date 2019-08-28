@@ -8,7 +8,7 @@ import Button from '../Button/Button';
 import classnames from 'classnames';
 import css from './Modal.scss';
 import React, { FC, Fragment, KeyboardEvent, ReactNode } from 'react';
-import { dataQa } from 'typings';
+import { dataQa } from '../constants';
 
 export type ModalQAs = {
   /** Data-qa applied to the main modal */

@@ -2,17 +2,6 @@
 
 exports[`Snapshot Testing Optional Props 1`] = `
 <WithStyles(Tooltip)
-  PopperProps={
-    Object {
-      "popperOptions": Object {
-        "modifiers": Object {
-          "arrow": Object {
-            "enabled": true,
-          },
-        },
-      },
-    }
-  }
   classes={
     Object {
       "popper": undefined,
@@ -20,12 +9,17 @@ exports[`Snapshot Testing Optional Props 1`] = `
     }
   }
   enterDelay={300}
+  placement="top"
+  style={
+    Object {
+      "borderLeftColor": "red",
+    }
+  }
   title={
     <ForwardRef(StyledComponent)
       data-qa="snap-qa"
     >
       SnapTitle
-      <span />
     </ForwardRef(StyledComponent)>
   }
 >
@@ -37,17 +31,6 @@ exports[`Snapshot Testing Optional Props 1`] = `
 
 exports[`Snapshot Testing Required Props 1`] = `
 <WithStyles(Tooltip)
-  PopperProps={
-    Object {
-      "popperOptions": Object {
-        "modifiers": Object {
-          "arrow": Object {
-            "enabled": true,
-          },
-        },
-      },
-    }
-  }
   classes={
     Object {
       "popper": undefined,
@@ -55,10 +38,10 @@ exports[`Snapshot Testing Required Props 1`] = `
     }
   }
   enterDelay={300}
+  placement="top"
   title={
     <ForwardRef(StyledComponent)>
       SnapTitle
-      <span />
     </ForwardRef(StyledComponent)>
   }
 >

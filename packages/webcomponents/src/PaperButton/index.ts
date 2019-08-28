@@ -1,0 +1,1 @@
+export { default as PaperButton, PaperButtonProps } from './PaperButton';

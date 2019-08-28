@@ -32,7 +32,7 @@
       border-width: 2px;
 
       > span {
-        color: $blue;
+        color: $skyBlue100;
       }
     }
 
@@ -49,7 +49,7 @@
   padding-top: 3vw;
 
   > * {
-    color: $darkBlue;
+    color: $logoBlue;
     font-size: 1.1rem;
     font-weight: bolder;
   }
@@ -60,7 +60,7 @@
     padding-right: 0.8rem;
 
     &CheckCircle {
-      color: $green;
+      color: $green100;
     }
 
     &Offset {

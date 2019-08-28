@@ -9,7 +9,7 @@ import css from './Table.scss';
 import TableHeaderCell, { TableHeaderCellProps, TableHeaderProps } from '../TableHeaderCell/TableHeaderCell';
 import TablePagination, { TablePaginationProps } from '../TablePagination/TablePagination';
 import TableToolbar, { TableToolbarProps } from '../TableToolbar/TableToolbar';
-import { dataQa } from 'typings';
+import { dataQa } from '../constants';
 
 export type TableLabels =
   & Pick<TableToolbarProps, 'searchplaceholderlabel'>
@@ -55,7 +55,7 @@ export type TableCustomClasses = {
 };
 
 export type TableProps =
-  & Pick<TableToolbarProps, 'onsearchclear' | 'onsearchinput' | 'paperElevation'>
+  & Pick<TableToolbarProps, 'onsearchclear' | 'onsearchinput' | 'paperElevation' | 'extraIcons'>
   & Pick<TableHeaderCellProps, 'onRequestSort' | 'orderby' | 'order' | 'tooltipplacement'>
   & Pick<MUITablePaginationProps, 'rowsPerPage' | 'rowsPerPageOptions' | 'page' | 'onChangePage' | 'onChangeRowsPerPage'>
   & MUITableProps
@@ -99,6 +99,7 @@ const Table: FC<TableProps> = props => {
         customclasses={classnames(addCustomClasses('tableToolbar'))}
         customSearchbarClasses={classnames(addCustomClasses('tableSearchbar'))}
         paperElevation={props.paperElevation}
+        extraIcons={props.extraIcons}
       />
       {props.showTopPagination ?
         <TablePagination
