@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@5.1.1...@rws-air/webcomponents@6.0.0) (2019-08-28)
+
+
+### Bug Fixes
+
+* **searchbar:** actually parse paperElevation pro ([7d8dc34](https://github.com/RWS-NL/air-node-packages/commit/7d8dc34))
+
+
+### Features
+
+* **webcomponents:** many changes, see details ([0ac322d](https://github.com/RWS-NL/air-node-packages/commit/0ac322d))
+
+
+### Performance Improvements
+
+* fix snapshot tests ([efe4923](https://github.com/RWS-NL/air-node-packages/commit/efe4923))
+
+
+### BREAKING CHANGES
+
+* **webcomponents:** - Removed Tooltip
+- Renamed SimpleTooltip to Tooltip
+- TablePagination page numbers are hidden on mobile
+- Renamed "types" to "constants"
+
+
+
+
+
 ## [5.1.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@5.1.0...@rws-air/webcomponents@5.1.1) (2019-08-23)
 
 **Note:** Version bump only for package @rws-air/webcomponents
