@@ -45,19 +45,12 @@ export type SearchBarProps = {
   'data-qa'?: dataQa;
 };
 
-const SearchBar: FC<SearchBarProps> = (
-  {
-    className = '',
-    disabled = false,
-    placeholder = 'Search...',
-    style = {},
-    closeIcon = <ClearIcon style={{ color: grey[500] }} />,
-    searchIcon = <SearchIcon style={{ color: grey[500] }} />,
-    paperElevation = 2,
-    ...props
-  }: SearchBarProps
-) => {
+const SearchBar: FC<SearchBarProps> = props => {
   const [ value, setValue ] = useState('');
+  const searchIcon = props.searchIcon || <SearchIcon style={{ color: grey[500] }} />;
+  const closeIcon = props.closeIcon || <ClearIcon style={{ color: grey[500] }} />;
+  const style = props.style || {};
+  const placeholder = props.placeholder || 'Search...';
 
   const handleFocus = (event: any): void => {
     if (props.onFocus) props.onFocus(event);
@@ -94,9 +87,9 @@ const SearchBar: FC<SearchBarProps> = (
 
   return (
     <Paper
-      className={classNames(css.searchBar, className)}
+      className={classNames(css.searchBar, props.className)}
       style={style}
-      elevation={paperElevation}
+      elevation={props.paperElevation}
     >
       <div className={css.searchContainer}>
         <Input
@@ -107,7 +100,7 @@ const SearchBar: FC<SearchBarProps> = (
           onFocus={handleFocus}
           fullWidth
           className={css.input}
-          disabled={disabled}
+          disabled={props.disabled}
           placeholder={placeholder}
           data-qa={props['data-qa']}
           disableUnderline
@@ -119,7 +112,7 @@ const SearchBar: FC<SearchBarProps> = (
           root: classNames(css.iconButton, css.searchIconButton, {[css.iconButtonHidden]: value !== ''}),
           disabled: css.iconButtonDisabled,
         }}
-        disabled={disabled}
+        disabled={props.disabled}
       >
         {cloneElement(searchIcon, {classes: { root: css.icon }})}
       </IconButton>
@@ -129,7 +122,7 @@ const SearchBar: FC<SearchBarProps> = (
           root: classNames(css.iconButton, {[css.iconButtonHidden]: value === ''}),
           disabled: css.iconButtonDisabled,
         }}
-        disabled={disabled}
+        disabled={props.disabled}
       >
         {cloneElement(closeIcon, {classes: { root: css.icon }})}
       </IconButton>
