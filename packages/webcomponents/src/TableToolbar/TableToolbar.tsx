@@ -11,6 +11,9 @@ import { PaperButtonProps } from '../PaperButton';
 export type RenderIconProps = {
   icon: JSX.Element;
   clickEvent: PaperButtonProps['onClick'];
+  tooltipText?: PaperButtonProps['tooltipText'];
+  tooltipPlacement?: PaperButtonProps['tooltipPlacement'];
+  disableTooltip?: PaperButtonProps['disableTooltip'];
 };
 
 export type TableToolbarProps = {
@@ -34,11 +37,14 @@ export type TableToolbarProps = {
 
 export const renderIcons = (iconData: RenderIconProps[]) => {
   return (
-    iconData.map((icon, index) => (
+    iconData.map((data, index) => (
       <Grid item key={`icon-${index}`}>
         <PaperButton
-          icon={icon.icon}
-          onClick={icon.clickEvent}
+          icon={data.icon}
+          onClick={data.clickEvent}
+          tooltipText={data.tooltipText}
+          tooltipPlacement={data.tooltipPlacement || 'top'}
+          disableTooltip={data.disableTooltip}
         />
       </Grid>
     ))
