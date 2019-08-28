@@ -3,8 +3,6 @@
 .button {
   @extend %fontNormal;
   background-color: $blue;
-  border-radius: 0;
-  box-shadow: none;
   float: right;
   height: 3.2rem;
   line-height: initial;
@@ -17,13 +15,8 @@
     text-transform: none;
   }
 
-  &Primary {
-    border: 2px solid $blue;
-  }
-
   &Secondary {
     background-color: $yellow;
-    border: 2px solid $yellow;
     color: $textBlack;
 
     > span {
@@ -33,20 +26,14 @@
 
   &Outlined {
     background-color: $white;
-    border: 2px solid $blue;
     color: $blue;
 
     > span {
       color: $blue;
     }
 
-    &:hover {
-      border-width: 2px;
-    }
-
     &Secondary {
       background-color: $white;
-      border: 2px solid $darkOrange;
       color: $textBlack;
 
       > span {
@@ -57,7 +44,6 @@
 
   &Disabled {
     background-color: $lightGrey;
-    border: transparent;
     color: $textBlack;
 
     > span {
