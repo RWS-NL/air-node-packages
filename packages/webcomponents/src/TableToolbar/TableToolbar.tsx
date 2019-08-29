@@ -9,10 +9,24 @@ import PaperButton from '../PaperButton/PaperButton';
 import { PaperButtonProps } from '../PaperButton';
 
 export type RenderIconProps = {
+  /** The Material Icon to display in this paper button */
   icon: JSX.Element;
+  /** The function to trigger when clicking this button */
   clickEvent: PaperButtonProps['onClick'];
+  /**
+   * The text content to put in the tooltip
+   * @default 'Click Me'
+   */
   tooltipText?: PaperButtonProps['tooltipText'];
+  /**
+   * The placement for the tooltip
+   * @default top
+   */
   tooltipPlacement?: PaperButtonProps['tooltipPlacement'];
+  /**
+   * Disables the inclusion of a tooltip
+   * @default false
+   */
   disableTooltip?: PaperButtonProps['disableTooltip'];
 };
 
@@ -60,7 +74,7 @@ const TableToolbar: FC<TableToolbarProps> = props => {
         {
           props.extraIcons && props.extraIcons.length
             ? renderIcons(props.extraIcons)
-            : <Fragment/>
+            : <Fragment />
         }
         <Grid item key={2}>
           <SearchBar
