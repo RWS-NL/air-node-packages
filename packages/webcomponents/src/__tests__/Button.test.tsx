@@ -1,21 +1,20 @@
-/* eslint-disable no-console */
 import Button from '../Button/Button';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
 
-const mockCallback = jest.fn();
+const mockButtonClick = jest.fn();
 
 describe('Component Tests', () => {
   let button: ShallowWrapper;
 
   beforeAll(() => {
-    button = shallow(<Button variant='contained' color='primary' label='testButton' onClick={mockCallback} />);
+    button = shallow(<Button variant='contained' color='primary' label='testButton' onClick={mockButtonClick} />);
   });
 
   test('button function called onClick', () => {
     button.simulate('click');
-    expect(mockCallback).toHaveBeenCalledWith();
-    expect(mockCallback).toHaveBeenCalledTimes(1);
+    expect(mockButtonClick).toHaveBeenCalledWith();
+    expect(mockButtonClick).toHaveBeenCalledTimes(1);
   });
 
   test('button contains the correct translation', () => {
@@ -25,7 +24,7 @@ describe('Component Tests', () => {
 
 describe('Snapshot Testing', () => {
   test('Required Props', () => {
-    const button = shallow(<Button variant='contained' color='primary' label='test' onClick={mockCallback} />);
+    const button = shallow(<Button variant='contained' color='primary' label='test' onClick={mockButtonClick} />);
     expect(button).toMatchSnapshot();
   });
 
@@ -33,7 +32,7 @@ describe('Snapshot Testing', () => {
     const button = shallow(
       <Button
         variant='outlined' color='secondary' label={<div>snapshot label</div>}
-        onClick={() => console.log('snapshot log')}
+        onClick={mockButtonClick}
       />
     );
     expect(button).toMatchSnapshot();
@@ -43,7 +42,7 @@ describe('Snapshot Testing', () => {
     const button = shallow(
       <Button
         variant='outlined' color='secondary' label={<div>snapshot label</div>}
-        onClick={() => console.log('snapshot log')}
+        onClick={mockButtonClick}
         data-qa='button-qa'
         customclasses={[ 'sample-class' ]}
         disabled

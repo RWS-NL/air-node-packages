@@ -18,7 +18,19 @@ exports[`Snapshot Testing Optional Props 1`] = `
   color="secondary"
   data-qa="button-qa"
   disabled={true}
-  onClick={[Function]}
+  onClick={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
   variant="outlined"
 >
   <div>
@@ -78,7 +90,19 @@ exports[`Snapshot Testing Varying Props 1`] = `
     }
   }
   color="secondary"
-  onClick={[Function]}
+  onClick={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
   variant="outlined"
 >
   <div>
