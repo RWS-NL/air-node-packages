@@ -20,19 +20,38 @@
     "dist"
   ],
   "peerDependencies": {
-    "eslint": ">=6"
+    "eslint": ">=6",
+    "eslint-config-react-app": "^5",
+    "eslint-plugin-flowtype": "^3",
+    "eslint-plugin-import": "^2",
+    "eslint-plugin-jsx-a11y": "^6",
+    "eslint-plugin-react": "^7",
+    "eslint-plugin-react-hooks": "^1"
+  },
+  "peerDependenciesMeta": {
+    "eslint-config-react-app": {
+      "optional": true
+    },
+    "eslint-plugin-flowtype": {
+      "optional": true
+    },
+    "eslint-plugin-import": {
+      "optional": true
+    },
+    "eslint-plugin-jsx-a11y": {
+      "optional": true
+    },
+    "eslint-plugin-react": {
+      "optional": true
+    },
+    "eslint-plugin-react-hooks": {
+      "optional": true
+    }
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
-    "babel-eslint": "^10.0.3",
-    "eslint-config-react-app": "^5.0.1",
-    "eslint-plugin-flowtype": "^3.13.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jest": "^22.15.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-react-hooks": "^1.7.0"
+    "eslint-plugin-jest": "^22.15.2"
   },
   "publishConfig": {
     "access": "public"
