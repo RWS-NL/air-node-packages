@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/RWS-NL/air-node-packages/compare/local-components-test@1.1.2...local-components-test@1.1.3) (2019-09-03)
+
+
+### Bug Fixes
+
+* **eslint-config:** disable jest rule that we don't need ([f21be02](https://github.com/RWS-NL/air-node-packages/commit/f21be02))
+
+
+
+
+
 ## [1.1.2](https://github.com/RWS-NL/air-node-packages/compare/local-components-test@1.1.1...local-components-test@1.1.2) (2019-08-28)
 
 **Note:** Version bump only for package local-components-test

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.5](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/eslint-config@2.0.4...@rws-air/eslint-config@2.0.5) (2019-09-03)
+
+
+### Bug Fixes
+
+* **eslint-config:** disable jest rule that we don't need ([f21be02](https://github.com/RWS-NL/air-node-packages/commit/f21be02))
+
+
+
+
+
 ## [2.0.4](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/eslint-config@2.0.3...@rws-air/eslint-config@2.0.4) (2019-08-28)
 
 **Note:** Version bump only for package @rws-air/eslint-config

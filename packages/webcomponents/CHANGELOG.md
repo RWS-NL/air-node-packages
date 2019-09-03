@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.1.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@6.1.0...@rws-air/webcomponents@6.1.1) (2019-09-03)
+
+
+### Bug Fixes
+
+* **eslint-config:** disable jest rule that we don't need ([f21be02](https://github.com/RWS-NL/air-node-packages/commit/f21be02))
+
+
+
+
+
 # [6.1.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@6.0.0...@rws-air/webcomponents@6.1.0) (2019-08-28)
 
 
