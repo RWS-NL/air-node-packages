@@ -1,7 +1,7 @@
 import configure from '../../rollup.config';
 import banner from 'rollup-plugin-banner';
 import json from 'rollup-plugin-json';
-import builtins from 'rollup-plugin-node-builtins';
+import builtins from '@joseph184/rollup-plugin-node-builtins';
 
 export default configure({
   input: 'src/index.ts',
