@@ -1,6 +1,6 @@
 {
   "name": "@rws-air/jestscreenshot",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Jest reporter plugin to take Puppeteer screenshots on failing tests",
   "author": "@rws-air",
   "license": "AGPL-3.0-or-later",
