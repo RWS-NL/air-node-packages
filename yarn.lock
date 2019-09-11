@@ -1157,14 +1157,14 @@
     unique-filename "^1.1.1"
     which "^1.3.1"
 
-"@favware/eslint-config@3.0.2":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@favware/eslint-config/-/eslint-config-3.0.2.tgz#b5aac8628448be1c1c607e8f84451698a546272d"
-  integrity sha512-IQb6Urv41AkiVLE00K5OFePUK2R/5/paCB/05UzW7fDmhF8LekvtEg9F/hDb+eVmNYwa54rGbdYuUM+xYkOvng==
+"@favware/eslint-config@3.0.5":
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/@favware/eslint-config/-/eslint-config-3.0.5.tgz#dd12de5e22d23132dac2cceaca75690156ff791d"
+  integrity sha512-EVG9yXiJM94UY4Rbho87x0FbIIG4GqvS0nA9uQ7ySfQznNARb5N5zQOi+4pKXc7VOViXAiNmsGFYqt4aLYDG8g==
   dependencies:
-    "@typescript-eslint/eslint-plugin" "^2.0.0"
-    "@typescript-eslint/parser" "^2.0.0"
-    eslint-plugin-jest "^22.15.1"
+    "@typescript-eslint/eslint-plugin" "^2.2.0"
+    "@typescript-eslint/parser" "^2.2.0"
+    eslint-plugin-jest "^22.17.0"
 
 "@favware/yamlreader@^1.0.6":
   version "1.0.6"
@@ -2639,7 +2639,7 @@
     regexpp "^2.0.1"
     tsutils "^3.7.0"
 
-"@typescript-eslint/eslint-plugin@^2.0.0":
+"@typescript-eslint/eslint-plugin@^2.0.0", "@typescript-eslint/eslint-plugin@^2.2.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-2.2.0.tgz#cba8caa6ad8df544c46bca674125a31af8c9ac2f"
   integrity sha512-rOodtI+IvaO8USa6ValYOrdWm9eQBgqwsY+B0PPiB+aSiK6p6Z4l9jLn/jI3z3WM4mkABAhKIqvGIBl0AFRaLQ==
@@ -2678,7 +2678,7 @@
     "@typescript-eslint/typescript-estree" "1.13.0"
     eslint-visitor-keys "^1.0.0"
 
-"@typescript-eslint/parser@^2.0.0":
+"@typescript-eslint/parser@^2.0.0", "@typescript-eslint/parser@^2.2.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-2.2.0.tgz#3cd758ed85ae9be06667beb61bbdf8060f274fb7"
   integrity sha512-0mf893kj9L65O5sA7wP6EoYvTybefuRFavUNhT7w9kjhkdZodoViwVS+k3D+ZxKhvtL7xGtP/y/cNMJX9S8W4A==
@@ -6004,7 +6004,7 @@ eslint-plugin-import@2.18.2, eslint-plugin-import@^2.18.2:
     read-pkg-up "^2.0.0"
     resolve "^1.11.0"
 
-eslint-plugin-jest@^22.15.1, eslint-plugin-jest@^22.15.2:
+eslint-plugin-jest@^22.15.2, eslint-plugin-jest@^22.17.0:
   version "22.17.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-22.17.0.tgz#dc170ec8369cd1bff9c5dd8589344e3f73c88cf6"
   integrity sha512-WT4DP4RoGBhIQjv+5D0FM20fAdAUstfYAf/mkufLNTojsfgzc5/IYW22cIg/Q4QBavAZsROQlqppiWDpFZDS8Q==

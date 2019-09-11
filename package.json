@@ -23,7 +23,7 @@
     "@babel/register": "^7.5.5",
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
-    "@favware/eslint-config": "3.0.2",
+    "@favware/eslint-config": "3.0.5",
     "@joseph184/rollup-plugin-node-builtins": "^2.1.4",
     "@material-ui/core": "^4.3.3",
     "@material-ui/icons": "^4.2.1",
