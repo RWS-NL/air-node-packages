@@ -1167,9 +1167,9 @@
     eslint-plugin-jest "^22.17.0"
 
 "@favware/yamlreader@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@favware/yamlreader/-/yamlreader-1.0.6.tgz#a9c0a85c315296fdaf6d30f6af5bb78f2e9ca3e8"
-  integrity sha512-LE9hrciXfzEhueE4t6IBo95FONb+MsEgfuBjY3S6b0b/OSzHLKOrxCRZ9l+JWSUzTzD0gLfYfuUYXCcBc3bSTQ==
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@favware/yamlreader/-/yamlreader-1.0.8.tgz#76e5374e5f5ab6d86cf2ca7cba4c50a8f4435e27"
+  integrity sha512-W2bj2mn4cezMWVB/Ingl7XLn8vT7PArxTevuF5SlslthN3vjIzeES+da27Z/t7QZOmgBgkkfHh4ujG/Vz5qcRQ==
   dependencies:
     js-yaml "^3.13.1"
 
