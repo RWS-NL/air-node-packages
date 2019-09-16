@@ -25,7 +25,7 @@
   "dependencies": {
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-sass-guidelines": "^6.0.0",
-    "stylelint-config-standard": "^18.3.0",
+    "stylelint-config-standard": "^19.0.0",
     "stylelint-scss": "^3.9.4"
   },
   "publishConfig": {
