@@ -4,14 +4,14 @@ import React, { FC } from 'react';
 import css from './TableBodyCell.scss';
 import { cellContent, customCss, dataQa } from '../constants';
 
-export type TableBodyCellProps = {
+export interface TableBodyCellProps extends MUITableCellProps {
   /** Content for the cell */
   content: cellContent;
   /** Data-qa tag to apply to the search bar and input element */
   'data-qa'?: dataQa;
   /** Custom CSS classes to pass to the button */
   customclasses?: customCss;
-} & MUITableCellProps;
+}
 
 const splitTableCellText = (text: string) => {
   const splitContent = text.match(/.{1,75}/g);

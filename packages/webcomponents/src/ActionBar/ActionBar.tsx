@@ -5,7 +5,7 @@ import classnames from 'classnames';
 import React, { FC, Fragment } from 'react';
 import { customCss, dataQa } from '../constants';
 
-export type ActionBarProps = {
+export interface ActionBarProps {
   /** The title to show in the ActionBar */
   title: string;
   /** Whether an action button should be displayed in the ActionBar */
@@ -20,9 +20,10 @@ export type ActionBarProps = {
   customclasses?: customCss;
   /** The action that should be invoked when the button is clicked */
   buttonAction?: (...args: any[]) => any;
-};
+}
 
-const ActionBar: FC<ActionBarProps> = props => {
+/** Creates an action bar using pre-defined Rijkswatestaat styling */
+export const ActionBar: FC<ActionBarProps> = props => {
   return (
     <div className={classnames('navigation-bar', css.actionBar)} data-qa={props['data-qa']}>
       <Grid container direction='row' justify='space-between' alignItems='center' style={{ height: '100%' }}>

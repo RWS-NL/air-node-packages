@@ -8,7 +8,7 @@ import css from './TableToolbar.scss';
 import PaperButton from '../PaperButton/PaperButton';
 import { PaperButtonProps } from '../PaperButton';
 
-export type RenderIconProps = {
+export interface RenderIconProps {
   /** The Material Icon to display in this paper button */
   icon: JSX.Element;
   /** The function to trigger when clicking this button */
@@ -28,9 +28,9 @@ export type RenderIconProps = {
    * @default false
    */
   disableTooltip?: PaperButtonProps['disableTooltip'];
-};
+}
 
-export type TableToolbarProps = {
+export interface TableToolbarProps extends Pick<SearchBarProps, 'paperElevation'> {
   /** The debounce timeout to wait until a search action should be performed */
   searchdebounce?: number;
   /** The label to display when no text is in the search input box */
@@ -47,7 +47,7 @@ export type TableToolbarProps = {
   customSearchbarClasses?: customCss;
   /** Any additional icons to display before the search bar */
   extraIcons?: RenderIconProps[];
-} & Pick<SearchBarProps, 'paperElevation'>;
+}
 
 export const renderIcons = (iconData: RenderIconProps[]) => {
   return (

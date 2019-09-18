@@ -12,7 +12,7 @@ yarn add -D @rws-air/stylelint-config
 
 In `.stylelintrc`:
 
-```json5
+```json
 // ...
 {
     "extends": ["@rws-air/stylelint-config"]

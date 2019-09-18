@@ -12,7 +12,7 @@ yarn add -D @rws-air/tslint-config
 
 In `tslint.json`:
 
-```json5
+```json
 // ...
 {
     "extends": ["@rws-air/tslint-config"]

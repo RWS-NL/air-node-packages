@@ -9,7 +9,7 @@ import React, { FC, ReactNode } from 'react';
 import { customCss, dataQa } from '../constants';
 import { makeStyles, Theme, createStyles } from '@material-ui/core';
 
-export type ButtonProps = {
+export interface ButtonProps {
   /** The variant of the button */
   variant: 'text' | 'outlined' | 'contained' | undefined;
   /** The color type of the button */
@@ -24,11 +24,12 @@ export type ButtonProps = {
   customclasses?: customCss;
   /** The action that should be triggered when clicking the button */
   onClick(): any;
-};
+}
 
 const useStyles = makeStyles((theme: Theme) => createStyles({ buttonShadow: { boxShadow: theme.shadows[1], border: 'transparant' } }),
 );
 
+/** Creates a button using pre-defined Rijkswatestaat styling */
 export const Button: FC<MUIButtonProps<'button', ButtonProps>> = props => {
   const classes = useStyles();
 

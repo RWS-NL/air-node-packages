@@ -6,13 +6,13 @@ import css from 'styles/modules/app.module.scss';
 import SaveIcon from '@material-ui/icons/Save';
 import SearchIcon from '@material-ui/icons/Search';
 
-type dataForTableType = {
+interface DataForTableType {
   name: string;
   email: string;
   id: number;
-};
+}
 
-const dataForTable: dataForTableType[] = [
+const dataForTable: DataForTableType[] = [
   { name: 'Robin Hood', email: 'robin.hood@winked.com', id: 23456789 },
   { name: 'Steve Jobs', email: 'steve.jobs@apple.com', id: 1 },
   { name: 'Darth Vader', email: 'darth.vader@thedeathstart.com', id: 9876 },

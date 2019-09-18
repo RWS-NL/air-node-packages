@@ -6,13 +6,13 @@ import fetch from 'node-fetch';
 import path from 'path';
 import yargs from 'yargs';
 
-type User = {
+interface User {
   email: string;
   firstname: string;
   middlename?: string;
   lastname: string;
   roles: string[];
-};
+}
 
 type ResponseData = {
   id: string;

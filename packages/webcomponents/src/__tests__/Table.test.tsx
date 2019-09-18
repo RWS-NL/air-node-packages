@@ -6,13 +6,13 @@ import Table, { TableProps } from '../Table/Table';
 import TableBodyCell from '../TableBodyCell/TableBodyCell';
 import TableHeaderCell, { TableHeaderProps } from '../TableHeaderCell/TableHeaderCell';
 
-type dataForTableType = {
+interface DataForTableType {
   name: string;
   email: string;
   id: number;
-};
+}
 
-const dataForTable: dataForTableType[] = [
+const dataForTable: DataForTableType[] = [
   { name: 'Robin Hood', email: 'robin.hood@winked.com', id: 23456789 },
   { name: 'Darth Vader', email: 'darth.vader@thedeathstart.com', id: 9876 },
   { name: 'Kaladin Stormblessed', email: 'kaladin.stormblessed@thearmy.com', id: 567890 },

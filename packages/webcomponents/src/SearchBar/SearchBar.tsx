@@ -9,7 +9,7 @@ import { dataQa } from '../constants';
 import css from './SearchBar.scss';
 import InputBase from '@material-ui/core/InputBase';
 
-export type SearchBarProps = {
+export interface SearchBarProps {
   /** Whether to clear search on escape */
   cancelOnEscape?: boolean;
   /** Override or extend the styles applied to the component. */

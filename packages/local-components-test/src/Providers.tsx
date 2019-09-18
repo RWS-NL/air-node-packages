@@ -2,7 +2,7 @@ import { createMuiTheme, MuiThemeProvider, Theme } from '@material-ui/core/style
 import { StylesProvider } from '@material-ui/styles';
 import Home from './Home';
 import React, { FC } from 'react';
-import { ThemeColours } from 'utils/constants';
+import { ThemeColours } from './utils/constants';
 
 const createTheme: Theme = createMuiTheme({
   ...ThemeColours,

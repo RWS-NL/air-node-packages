@@ -11,7 +11,7 @@ import React, { FC, SyntheticEvent } from 'react';
 import { customCss, dataQa } from '../constants';
 import css from './TablePaginationActions.scss';
 
-export type TablePaginationActionsProps = {
+export interface TablePaginationActionsProps {
   /** Amount of rows per page */
   rowsPerPage: number;
   /** Current page */
@@ -24,7 +24,7 @@ export type TablePaginationActionsProps = {
   'data-qa'?: dataQa;
   /** Custom CSS classes to pass to the button */
   customclasses?: customCss;
-};
+}
 
 const TablePaginationActions: FC<TablePaginationActionsProps> = props => {
   const handleFirstPageButtonclick = (event: any) => props.onChangePage(event, 0);

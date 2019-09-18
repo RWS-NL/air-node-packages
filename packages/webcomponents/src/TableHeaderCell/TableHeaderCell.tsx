@@ -6,13 +6,13 @@ import css from './TableHeaderCell.scss';
 import Tooltip, { TooltipProps } from '../Tooltip/Tooltip';
 import { customCss, dataQa, label } from '../constants';
 
-export type TableHeaderProps = {
+export interface TableHeaderProps {
   label: string;
   numeric?: boolean;
   disablePadding?: boolean;
-};
+}
 
-export type TableHeaderCellProps = {
+export interface TableHeaderCellProps extends MUITableCellProps {
   /** The header data */
   header: TableHeaderProps;
   /** The property to order by */
@@ -29,7 +29,7 @@ export type TableHeaderCellProps = {
   'data-qa'?: dataQa;
   /** Custom CSS classes to pass to the button */
   customclasses?: customCss;
-} & MUITableCellProps;
+}
 
 const TableHeaderCell: FC<TableHeaderCellProps> = props => (
   <MUITableCell

@@ -10,7 +10,7 @@ yarn add @rws-air/webcomponents
 
 ## Usage
 
-```tsx
+```jsx
 import React, { FC } from 'react'
 
 import { Button } from '@rws-air/webcomponents'

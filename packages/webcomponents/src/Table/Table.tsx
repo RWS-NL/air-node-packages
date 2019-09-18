@@ -16,7 +16,7 @@ export type TableLabels =
   & Pick<TablePaginationProps, 'labelrowsperpage' | 'labelpaginationof'>
   & Pick<TableHeaderCellProps, 'tooltiplabel'>;
 
-export type TableQAs = {
+export interface TableQAs {
   /** Data-qa applied to the root table */
   table: dataQa;
   /** Data-qa applied to the pagination components */
@@ -31,9 +31,9 @@ export type TableQAs = {
   headerCell: dataQa;
   /** Data-qa applied to the table body wrapper */
   tableBody: dataQa;
-};
+}
 
-export type TableCustomClasses = {
+export interface TableCustomClasses {
   /** Custom class(es) for table */
   table?: string[];
   /** Custom class(es) for table toolbar */
@@ -52,7 +52,7 @@ export type TableCustomClasses = {
   tableBody?: string[];
   /** Custom class(es) for table toolbar searchbar */
   tableSearchbar?: string[];
-};
+}
 
 export type TableProps =
   & Pick<TableToolbarProps, 'onsearchclear' | 'onsearchinput' | 'paperElevation' | 'extraIcons'>

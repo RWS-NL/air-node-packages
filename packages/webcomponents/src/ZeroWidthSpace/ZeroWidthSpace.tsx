@@ -4,14 +4,14 @@ import classnames from 'classnames';
 import React, { FC } from 'react';
 import { customCss, dataQa } from '../constants';
 
-export type ZeroWidthSpaceProps = TypographyProps & {
+export interface ZeroWidthSpaceProps extends TypographyProps {
   /** Data-qa tag to apply to the tooltip */
   'data-qa'?: dataQa;
   /** Custom CSS classes to pass to the tooltip */
   customclasses?: customCss;
   /** Any additional CSSProperties to pass to the component */
   style?: CSSProperties;
-};
+}
 
 const ZeroWidthSpace: FC<ZeroWidthSpaceProps> = props => (
   <Typography

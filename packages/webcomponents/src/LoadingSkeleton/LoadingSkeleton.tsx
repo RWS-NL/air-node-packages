@@ -4,7 +4,7 @@ import { customCss, dataQa } from '../constants';
 import css from './LoadingSkeleton.scss';
 import React, { FC } from 'react';
 
-export type LoadingSkeletonProps = {
+export interface LoadingSkeletonProps {
   /**
    * Height of the skeleton
    * Useful when you don't want to adapt the skeleton to a text element but for instance a card
@@ -27,9 +27,10 @@ export type LoadingSkeletonProps = {
   'data-qa'?: dataQa;
   /** Custom CSS classes to pass to the button */
   customclasses?: customCss;
-};
+}
 
-const LoadingSkeleton: FC<LoadingSkeletonProps> = props => {
+/** Creates a loading skeleton to reserve space for loading data */
+export const LoadingSkeleton: FC<LoadingSkeletonProps> = props => {
   const style: CSSProperties = {
     ...props.style,
     width: props.width,

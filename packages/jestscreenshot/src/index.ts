@@ -13,7 +13,7 @@ class JestScreenshotError extends Error {
   }
 }
 
-export type JestScreenshotOptions = {
+export interface JestScreenshotOptions {
   /** The Puppeteer page to take a screenshot from */
   page: Page;
   /** The directory to create a "screenshots" folder in */
@@ -47,9 +47,9 @@ export type JestScreenshotOptions = {
    * }
    */
   slackChannels?: string[];
-};
+}
 
-export type SlackFile = {
+export interface SlackFile {
   id: string;
   created: number;
   timestamp: number;
@@ -100,12 +100,12 @@ export type SlackFile = {
   groups: string[];
   ims: string[];
   has_rich_preview: boolean;
-};
+}
 
-export type SlackResponse = {
+export interface SlackResponse {
   ok: boolean;
   file: SlackFile;
-};
+}
 
 /**
  * @class JestScreenshot

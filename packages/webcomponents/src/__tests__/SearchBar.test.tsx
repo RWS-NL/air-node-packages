@@ -1,5 +1,3 @@
-import AcUnitIcon from '@material-ui/icons/AcUnit';
-import AddAPhotoIcon from '@material-ui/icons/AddAPhoto';
 import { shallow } from 'enzyme';
 import React from 'react';
 import SearchBar from '../SearchBar/SearchBar';
@@ -13,8 +11,16 @@ describe('Snapshot Testing', () => {
   test('Optional Props', () => {
     const searchBar = shallow(
       <SearchBar
-        cancelOnEscape closeIcon={<AcUnitIcon />} searchIcon={<AddAPhotoIcon />}
-        paperElevation={3} disabled placeholder='Snaptest' data-qa='snap-qa'
+        cancelOnEscape disabled
+        paperElevation={3}
+        placeholder='Snaptest'
+        data-qa='snap-qa'
+        onCancelSearch={jest.fn()}
+        onChange={jest.fn()}
+        onBlur={jest.fn()}
+        onFocus={jest.fn()}
+        onKeyUp={jest.fn()}
+        onRequestSearch={jest.fn()}
       />
     );
     expect(searchBar).toMatchSnapshot();

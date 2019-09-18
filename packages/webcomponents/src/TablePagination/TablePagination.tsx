@@ -1,4 +1,4 @@
-import MUITablePagination, { TablePaginationProps as MUITablePaginationProps } from '@material-ui/core/TablePagination';
+import MUITablePagination, { TablePaginationTypeMap, TablePaginationBaseProps } from '@material-ui/core/TablePagination';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import classnames from 'classnames';
 import React, { FC } from 'react';
@@ -6,7 +6,9 @@ import css from './TablePagination.scss';
 import TablePaginationActions from '../TablePaginationActions/TablePaginationActions';
 import { label, dataQa, customCss } from '../constants';
 
-export type TablePaginationProps = {
+export type MutatedMUITablePaginationProps = TablePaginationTypeMap<{}, React.ComponentType<TablePaginationBaseProps>>['props'];
+
+export interface TablePaginationProps extends MutatedMUITablePaginationProps {
   /** The label in the displayed rows per page, for example "5 rows per page" */
   labelrowsperpage: label;
   /** The label in the displayed pages, for example "of" in "page 1 of 10" */
@@ -15,7 +17,7 @@ export type TablePaginationProps = {
   'data-qa'?: dataQa;
   /** Custom CSS classes to pass to the button */
   customclasses?: customCss;
-} & MUITablePaginationProps;
+}
 
 const TablePagination: FC<TablePaginationProps> = props => {
   const isOnMobile = useMediaQuery('(max-width: 1024px)');

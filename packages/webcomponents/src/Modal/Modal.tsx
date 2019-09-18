@@ -10,7 +10,7 @@ import css from './Modal.scss';
 import React, { FC, Fragment, KeyboardEvent, ReactNode } from 'react';
 import { dataQa } from '../constants';
 
-export type ModalQAs = {
+export interface ModalQAs {
   /** Data-qa applied to the main modal */
   modal: dataQa;
   /** Data-qa applied to the title */
@@ -23,9 +23,9 @@ export type ModalQAs = {
   actionConfirm?: dataQa;
   /** Data-qa applied to the action cancel button */
   actionCancel?: dataQa;
-};
+}
 
-export type ModalProps = {
+export interface ModalProps {
   /** Whether the modal should be opened or not */
   open: boolean;
   /** Object of data-qa tags to pass to the modal */
@@ -50,7 +50,7 @@ export type ModalProps = {
   disableBackdropClick?: boolean;
   /** Whether pressing the escape key should close the modal (triggers closeAction) */
   disableEscapeKeyDown?: boolean;
-};
+}
 
 const Modal: FC<ModalProps> = props => {
   const handleConfirmKeyPress = (event: KeyboardEvent) => {

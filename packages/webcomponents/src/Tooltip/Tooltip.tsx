@@ -6,14 +6,14 @@ import React, { FC } from 'react';
 import css from './Tooltip.scss';
 import { customCss, dataQa } from '../constants';
 
-export type TooltipProps = MUITooltipProps & {
+export interface TooltipProps extends MUITooltipProps {
   /** Data-qa tag to apply to the tooltip */
   'data-qa'?: dataQa;
   /** Custom CSS classes to pass to the tooltip */
   customclasses?: customCss;
   /** Any additional CSSProperties to pass to the component */
   style?: CSSProperties;
-};
+}
 
 const Tooltip: FC<TooltipProps> = props => (
   <MUITooltip

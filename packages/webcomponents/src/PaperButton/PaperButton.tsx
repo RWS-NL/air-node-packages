@@ -5,7 +5,7 @@ import css from './PaperButton.scss';
 import classnames from 'classnames';
 import Tooltip, { TooltipProps } from '../Tooltip/Tooltip';
 
-export type PaperButtonProps = {
+export interface PaperButtonProps {
   /** The Material Icon to display in this paper button */
   icon: JSX.Element;
   /**
@@ -42,7 +42,7 @@ export type PaperButtonProps = {
   'tooltip-data-qa'?: dataQa;
   /** The action to trigger when clicking the icon button */
   onClick(...args: unknown[]): unknown;
-};
+}
 
 const PaperButton: FC<PaperButtonProps> = props => {
   const elevation = objectHasProperty(props, 'paperElevation') ? props.paperElevation : 2;
