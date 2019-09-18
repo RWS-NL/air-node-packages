@@ -23,5 +23,28 @@
   "exclude": [
     "node_modules",
     "**/*.spec.ts"
-  ]
+  ],
+  "typedocOptions": {
+    "out": "./docs/",
+    "readme": "./README.md",
+    "name": "RWS-NL AIR Node Packages",
+    "exclude": [
+      "**/node_modules/**",
+      "**/*.test.ts",
+      "**/*.js"
+    ],
+    "mode": "modules",
+    "lernaExclude": [
+      "local-components-test"
+    ],
+    "pathExclude": [
+      "scripts/duplicateESLintConfig",
+      "scripts/duplicateStylelintConfig",
+      "scripts/validateNoOnly"
+    ],
+    "excludeExternals": true,
+    "excludePrivate": true,
+    "excludeProtected": true,
+    "excludeNotExported": true
+  }
 }
