@@ -42,3 +42,7 @@ plugins=(… zsh-lerna)
 ```
 
 3. Reload `~/.zshrc` or reload your terminal
+
+## API Documentation
+
+Check out [the docs on github pages](https://rws-nl.github.io/air-node-packages/)
