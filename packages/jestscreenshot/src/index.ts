@@ -5,7 +5,11 @@ import Form from 'form-data';
 import path from 'path';
 import { Page } from 'puppeteer';
 
-class JestScreenshotError extends Error {
+export class JestScreenshotError extends Error {
+  /**
+   * Constructs a new JestScreenshotError
+   * @param message Message to append to standard message for JestScreenshotError
+   */
   public constructor(message: string) {
     super();
 
@@ -49,6 +53,7 @@ export interface JestScreenshotOptions {
   slackChannels?: string[];
 }
 
+/** Represents all data returned by Slack when uploading a file */
 export interface SlackFile {
   id: string;
   created: number;
@@ -102,29 +107,30 @@ export interface SlackFile {
   has_rich_preview: boolean;
 }
 
+/** Represents the response by Slack when uploading a file */
 export interface SlackResponse {
   ok: boolean;
   file: SlackFile;
 }
 
 /**
- * @class JestScreenshot
- * @module JestScreenshot
- * @classdesc Jest reporter plugin to take Puppeteer screenshots on failing tests
- * @description The main class of JestScreenshot that should be initialized with config
- * @param {Page} page The Puppeteer page object to screenshot
- * @param {string} dirName The directory to create a "screenshots" folder in
- * @param {string} [testName=jest-test] An optional name of the script that is currently being ran
- * @param {boolean} [slackUpload=false] Optionally upload screenshots to slack after making them.
+ * The main class of JestScreenshot that should be initialized with config
+ *
+ * @remarks Jest reporter plugin to take Puppeteer screenshots on failing tests
+ *
+ * @param page The Puppeteer page object to screenshot
+ * @param dirName The directory to create a "screenshots" folder in
+ * @param testName An optional name of the script that is currently being ran
+ * @param slackUpload Optionally upload screenshots to slack after making them.
  *
  * Requires you pass a token to the slackToken option, or set the SLACK_WEBTOKEN environment variable
- * @param {string} [slackToken=] Token to use when uploading to slack. Required when you pass slackUpload=true
+ * @param slackToken Token to use when uploading to slack. Required when you pass slackUpload=true
  *
  * Optionally you can also pass this through the environment variable "SLACK_WEBTOKEN".
  *
  * This environment variable will take priority over passing it as option
  *
- * @param {string[]} [slackChannels=[]] Channels to send the Slack upload to
+ * @param slackChannels Channels to send the Slack upload to
  *
  * Should be an array of Slack channel IDs
  *
@@ -138,6 +144,10 @@ export class JestScreenshot {
   private slackToken = '';
   private slackChannels: string[] = [];
 
+  /**
+   * Constructs a new JestScreenshot
+   * @param options The options to pass to the instance of JestScreenshot
+   */
   public constructor(options: JestScreenshotOptions) {
     if (!this.objectHasProperty(options, 'page')) {
       throw new JestScreenshotError('You should pass page to screenshot to options (page)!!');
@@ -173,9 +183,9 @@ export class JestScreenshot {
   }
 
   /**
-   * @method JestScreenshot#setup
-   * @description Sets up the JestScreenshot reporter
-   * @returns {Promise<void>} JestScreenshot reporter will have been initialiazed as a side effect for this test suite
+   * Sets up the JestScreenshot reporter
+   *
+   * @returns JestScreenshot reporter will have been initialiazed as a side effect for this test suite
    */
   public async setup(): Promise<void> {
     try {
@@ -188,12 +198,10 @@ export class JestScreenshot {
   }
 
   /**
-   * @method JestScreenshot#takeScreenshot
-   * @description Takes a screenshot of the current page
-   * @returns {Promise<SlackResponse | Buffer>} Either returns the response from Slack or the screenshot as a Buffer
-   * @protected
+   * Takes a screenshot of the current page
+   * @returns Either returns the response from Slack or the screenshot as a Buffer
    */
-  protected async takeScreenshot(): Promise<SlackResponse | Buffer> {
+  public async takeScreenshot(): Promise<SlackResponse | Buffer> {
     const fileName = `${this.testName}-${moment().format('YYYY-MM-DD[_]HH.mm.ss')}.png`;
     const filePath = path.join(this.dirName, fileName);
 
@@ -205,13 +213,12 @@ export class JestScreenshot {
   }
 
   /**
-   * @method JestScreenshot#uploadToSlack
-   * @description Uploads screenshots to Slack using the provided token
-   * @param {Buffer} screenshot base64 representation of the screenshot to upload
-   * @returns {Promise<SlackResponse>}
-   * @protected
+   * Uploads screenshots to Slack using the provided token
+   *
+   * @param screenshot base64 representation of the screenshot to upload
+   * @returns {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise | Promise} of the SlackResponse
    */
-  protected async uploadToSlack(screenshot: Buffer, fileName: string): Promise<SlackResponse> {
+  public async uploadToSlack(screenshot: Buffer, fileName: string): Promise<SlackResponse> {
     const apiUrl = 'https://slack.com/api';
     const apiMethod = `${apiUrl}/files.upload`;
     const form = new Form();
@@ -240,14 +247,12 @@ export class JestScreenshot {
   }
 
   /**
-   * @method JestScreenshot#objectHasProperty
-   * @description Validates if an object has a given property
-   * @param {object} obj The object to validate
-   * @param {string} prop The property to try to find
-   * @returns {boolean}
-   * @protected
+   * Validates if an object has a given property
+   * @param obj The object to validate
+   * @param prop The property to try to find
+   * @returns Whether the object has this property or not
    */
-  protected objectHasProperty<O extends {}, K extends keyof O>(obj: O, prop: K): boolean {
+  public objectHasProperty<O extends {}, K extends keyof O>(obj: O, prop: K): boolean {
     return obj && prop in obj;
   }
 }

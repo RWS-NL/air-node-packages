@@ -13,6 +13,7 @@
     "cz": "git-cz",
     "up": "yarn upgrade-interactive",
     "docs:serve": "concurrently \"yarn serve docs/\" \"open-cli http://localhost:5000\"",
+    "prepublishOnly": "yarn build && yarn docs",
     "scripts:validateNoOnly": "babel-node scripts/validateNoOnly --extensions \".ts\"",
     "scripts:duplicateESLintConfig": "babel-node scripts/duplicateESLintConfig --extensions \".ts\"",
     "scripts:duplicateStylelintConfig": "babel-node scripts/duplicateStylelintConfig --extensions \".ts\""
@@ -67,7 +68,6 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "glob": "^7.1.4",
     "husky": "^3.0.4",
-    "jsdoc-to-markdown": "^5.0.0",
     "jsonfile": "^5.0.0",
     "lerna": "^3.16.4",
     "lint-staged": "^9.2.4",

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>SlackResponse | RWS-NL AIR Node Packages</title>
+	<title>UsermanagementAdder | RWS-NL AIR Node Packages</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,31 +52,24 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_rws_air_jestscreenshot.html">@rws-air/jestscreenshot</a>
+					<a href="../modules/_rws_air_usercreator.html">@rws-air/usercreator</a>
 				</li>
 				<li>
-					<a href="_rws_air_jestscreenshot.slackresponse.html">SlackResponse</a>
+					<a href="_rws_air_usercreator.usermanagementadder.html">UsermanagementAdder</a>
 				</li>
 			</ul>
-			<h1>Interface SlackResponse</h1>
+			<h1>Class UsermanagementAdder</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Represents the response by Slack when uploading a file</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">SlackResponse</span>
+						<span class="target">UsermanagementAdder</span>
 					</li>
 				</ul>
 			</section>
@@ -85,36 +78,103 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Properties</h3>
+							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_jestscreenshot.slackresponse.html#file" class="tsd-kind-icon">file</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_jestscreenshot.slackresponse.html#ok" class="tsd-kind-icon">ok</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_rws_air_usercreator.usermanagementadder.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_rws_air_usercreator.usermanagementadder.html#run" class="tsd-kind-icon">run</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="file" class="tsd-anchor"></a>
-					<h3>file</h3>
-					<div class="tsd-signature tsd-kind-icon">file<span class="tsd-signature-symbol">:</span> <a href="_rws_air_jestscreenshot.slackfile.html" class="tsd-signature-type">SlackFile</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/95cb4b4/packages/jestscreenshot/src/index.ts#L113">packages/jestscreenshot/src/index.ts:113</a></li>
-						</ul>
-					</aside>
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Usermanagement<wbr>Adder<span class="tsd-signature-symbol">(</span>file<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, user<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, pass<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_rws_air_usercreator.usermanagementadder.html" class="tsd-signature-type">UsermanagementAdder</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/95cb4b4/packages/user-creator/src/index.ts#L33">packages/user-creator/src/index.ts:33</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Constructs a new <a href="_rws_air_usercreator.usermanagementadder.html">UsermanagementAdder</a></p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>file: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The YAML file of userdata to read</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>user: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The admin user name to create users with</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>pass: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The password for the admin user</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The URL of the usermanagement backend</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_rws_air_usercreator.usermanagementadder.html" class="tsd-signature-type">UsermanagementAdder</a></h4>
+						</li>
+					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="ok" class="tsd-anchor"></a>
-					<h3>ok</h3>
-					<div class="tsd-signature tsd-kind-icon">ok<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/95cb4b4/packages/jestscreenshot/src/index.ts#L112">packages/jestscreenshot/src/index.ts:112</a></li>
-						</ul>
-					</aside>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="run" class="tsd-anchor"></a>
+					<h3>run</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">run<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/95cb4b4/packages/user-creator/src/index.ts#L52">packages/user-creator/src/index.ts:52</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Runs the <a href="_rws_air_usercreator.usermanagementadder.html">UsermanagementAdder</a></p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -127,7 +187,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_rws_air_eslint_config.html">@rws-<wbr>air/eslint-<wbr>config</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/_rws_air_jestscreenshot.html">@rws-<wbr>air/jestscreenshot</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -136,7 +196,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_rws_air_tslint_config.html">@rws-<wbr>air/tslint-<wbr>config</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/_rws_air_usercreator.html">@rws-<wbr>air/usercreator</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -146,33 +206,27 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/_rws_air_jestscreenshot.jestscreenshot.html" class="tsd-kind-icon">Jest<wbr>Screenshot</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/_rws_air_jestscreenshot.jestscreenshoterror.html" class="tsd-kind-icon">Jest<wbr>Screenshot<wbr>Error</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="_rws_air_jestscreenshot.jestscreenshotoptions.html" class="tsd-kind-icon">Jest<wbr>Screenshot<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="_rws_air_jestscreenshot.slackfile.html" class="tsd-kind-icon">Slack<wbr>File</a>
-					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="_rws_air_jestscreenshot.slackresponse.html" class="tsd-kind-icon">Slack<wbr>Response</a>
+					<li class="current tsd-kind-class tsd-parent-kind-module">
+						<a href="_rws_air_usercreator.usermanagementadder.html" class="tsd-kind-icon">Usermanagement<wbr>Adder</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_rws_air_jestscreenshot.slackresponse.html#file" class="tsd-kind-icon">file</a>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="_rws_air_usercreator.usermanagementadder.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_rws_air_jestscreenshot.slackresponse.html#ok" class="tsd-kind-icon">ok</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_rws_air_usercreator.usermanagementadder.html#run" class="tsd-kind-icon">run</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_rws_air_usercreator.user.html" class="tsd-kind-icon">User</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_rws_air_usercreator.html#exec" class="tsd-kind-icon">exec</a>
+					</li>
 				</ul>
 			</nav>
 		</div>

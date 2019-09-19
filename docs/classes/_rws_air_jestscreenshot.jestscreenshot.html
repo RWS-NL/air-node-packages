@@ -67,18 +67,12 @@
 		<div class="col-8 col-content">
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The main class of JestScreenshot that should be initialized with config</p>
+					</div>
 					<dl class="tsd-comment-tags">
-						<dt>class</dt>
-						<dd><p>JestScreenshot</p>
-						</dd>
-						<dt>module</dt>
-						<dd><p>JestScreenshot</p>
-						</dd>
-						<dt>classdesc</dt>
+						<dt>remarks</dt>
 						<dd><p>Jest reporter plugin to take Puppeteer screenshots on failing tests</p>
-						</dd>
-						<dt>description</dt>
-						<dd><p>The main class of JestScreenshot that should be initialized with config</p>
 						</dd>
 						<dt>param</dt>
 						<dd><p>The Puppeteer page object to screenshot</p>
@@ -127,7 +121,10 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="_rws_air_jestscreenshot.jestscreenshot.html#objecthasproperty" class="tsd-kind-icon">object<wbr>Has<wbr>Property</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_rws_air_jestscreenshot.jestscreenshot.html#setup" class="tsd-kind-icon">setup</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_rws_air_jestscreenshot.jestscreenshot.html#takescreenshot" class="tsd-kind-icon">take<wbr>Screenshot</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_rws_air_jestscreenshot.jestscreenshot.html#uploadtoslack" class="tsd-kind-icon">upload<wbr>ToSlack</a></li>
 							</ul>
 						</section>
 					</div>
@@ -145,13 +142,23 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/785a6c1/packages/jestscreenshot/src/index.ts#L139">packages/jestscreenshot/src/index.ts:139</a></li>
+									<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/95cb4b4/packages/jestscreenshot/src/index.ts#L145">packages/jestscreenshot/src/index.ts:145</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Constructs a new JestScreenshot</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>options: <a href="../interfaces/_rws_air_jestscreenshot.jestscreenshotoptions.html" class="tsd-signature-type">JestScreenshotOptions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The options to pass to the instance of JestScreenshot</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_rws_air_jestscreenshot.jestscreenshot.html" class="tsd-signature-type">JestScreenshot</a></h4>
@@ -161,6 +168,53 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+					<a name="objecthasproperty" class="tsd-anchor"></a>
+					<h3>object<wbr>Has<wbr>Property</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">object<wbr>Has<wbr>Property&lt;O, K&gt;<span class="tsd-signature-symbol">(</span>obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">O</span>, prop<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/95cb4b4/packages/jestscreenshot/src/index.ts#L255">packages/jestscreenshot/src/index.ts:255</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Validates if an object has a given property</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>O<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">__type</span></h4>
+								</li>
+								<li>
+									<h4>K<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">keyof O</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>obj: <span class="tsd-signature-type">O</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The object to validate</p>
+									</div>
+								</li>
+								<li>
+									<h5>prop: <span class="tsd-signature-type">K</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The property to try to find</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>Whether the object has this property or not</p>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="setup" class="tsd-anchor"></a>
 					<h3>setup</h3>
@@ -171,21 +225,74 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/785a6c1/packages/jestscreenshot/src/index.ts#L180">packages/jestscreenshot/src/index.ts:180</a></li>
+									<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/95cb4b4/packages/jestscreenshot/src/index.ts#L190">packages/jestscreenshot/src/index.ts:190</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
-								<dl class="tsd-comment-tags">
-									<dt>method</dt>
-									<dd><p>JestScreenshot#setup</p>
-									</dd>
-									<dt>description</dt>
-									<dd><p>Sets up the JestScreenshot reporter</p>
-									</dd>
-								</dl>
+								<div class="lead">
+									<p>Sets up the JestScreenshot reporter</p>
+								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 							<p>JestScreenshot reporter will have been initialiazed as a side effect for this test suite</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="takescreenshot" class="tsd-anchor"></a>
+					<h3>take<wbr>Screenshot</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">take<wbr>Screenshot<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_rws_air_jestscreenshot.slackresponse.html" class="tsd-signature-type">SlackResponse</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/95cb4b4/packages/jestscreenshot/src/index.ts#L204">packages/jestscreenshot/src/index.ts:204</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Takes a screenshot of the current page</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_rws_air_jestscreenshot.slackresponse.html" class="tsd-signature-type">SlackResponse</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Either returns the response from Slack or the screenshot as a Buffer</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="uploadtoslack" class="tsd-anchor"></a>
+					<h3>upload<wbr>ToSlack</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">upload<wbr>ToSlack<span class="tsd-signature-symbol">(</span>screenshot<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Buffer</span>, fileName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_rws_air_jestscreenshot.slackresponse.html" class="tsd-signature-type">SlackResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/95cb4b4/packages/jestscreenshot/src/index.ts#L221">packages/jestscreenshot/src/index.ts:221</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Uploads screenshots to Slack using the provided token</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>screenshot: <span class="tsd-signature-type">Buffer</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>base64 representation of the screenshot to upload</p>
+									</div>
+								</li>
+								<li>
+									<h5>fileName: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_rws_air_jestscreenshot.slackresponse.html" class="tsd-signature-type">SlackResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>of the SlackResponse</p>
 						</li>
 					</ul>
 				</section>
@@ -207,6 +314,12 @@
 						<a href="../modules/_rws_air_stylelint_config.html">@rws-<wbr>air/stylelint-<wbr>config</a>
 					</li>
 					<li class=" tsd-kind-module">
+						<a href="../modules/_rws_air_tslint_config.html">@rws-<wbr>air/tslint-<wbr>config</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_rws_air_usercreator.html">@rws-<wbr>air/usercreator</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="../modules/_rws_air_webcomponents.html">@rws-<wbr>air/webcomponents</a>
 					</li>
 				</ul>
@@ -221,13 +334,25 @@
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
 								<a href="_rws_air_jestscreenshot.jestscreenshot.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+								<a href="_rws_air_jestscreenshot.jestscreenshot.html#objecthasproperty" class="tsd-kind-icon">object<wbr>Has<wbr>Property</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_rws_air_jestscreenshot.jestscreenshot.html#setup" class="tsd-kind-icon">setup</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_rws_air_jestscreenshot.jestscreenshot.html#takescreenshot" class="tsd-kind-icon">take<wbr>Screenshot</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_rws_air_jestscreenshot.jestscreenshot.html#uploadtoslack" class="tsd-kind-icon">upload<wbr>ToSlack</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="_rws_air_jestscreenshot.jestscreenshoterror.html" class="tsd-kind-icon">Jest<wbr>Screenshot<wbr>Error</a>
+					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/_rws_air_jestscreenshot.jestscreenshotoptions.html" class="tsd-kind-icon">Jest<wbr>Screenshot<wbr>Options</a>
 					</li>

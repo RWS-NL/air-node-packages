@@ -19,7 +19,6 @@
     "build": "rollup -c rollup.config.js",
     "start": "rollup -wc rollup.config.js",
     "start:local": "pushd local-sample && yarn install && yarn start",
-    "prepublishOnly": "yarn build",
     "modules": "rm -rf node_modules yarn.lock local-sample/node_modules local-sample/yarn.lock && yarn && pushd local-sample && yarn && popd"
   },
   "files": [

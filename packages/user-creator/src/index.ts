@@ -6,25 +6,39 @@ import fetch from 'node-fetch';
 import path from 'path';
 import yargs from 'yargs';
 
-interface User {
+export interface User {
+  /** The e-mail for this user */
   email: string;
+  /** The firstname for this user */
   firstname: string;
+  /** The optional middle name for this user */
   middlename?: string;
+  /** The lastname for this user */
   lastname: string;
+  /** Any roles to assign to the user */
   roles: string[];
 }
 
-type ResponseData = {
+interface ResponseData extends User {
+  /** ID of the user in the database */
   id: string;
+  /** Privileges the user has */
   privileges: string[];
-} & User;
+}
 
-class UsermanagementAdder {
+export class UsermanagementAdder {
   private file: string;
   private username: string;
   private password: string;
   private url: string;
 
+  /**
+   * Constructs a new {@link UsermanagementAdder}
+   * @param file The YAML file of userdata to read
+   * @param user The admin user name to create users with
+   * @param pass The password for the admin user
+   * @param url The URL of the usermanagement backend
+   */
   public constructor(file: string, user: string, pass: string, url: string) {
     this.file = file;
     this.username = user;
@@ -32,6 +46,9 @@ class UsermanagementAdder {
     this.url = url;
   }
 
+  /**
+   * Runs the {@link UsermanagementAdder}
+   */
   public async run() {
     const users: User[] = readYaml(this.file);
     for (const user of users) await this.addUserToAPI(user);
@@ -84,15 +101,18 @@ class UsermanagementAdder {
   }
 }
 
-
-(() => {
+/**
+ * Executes the usermanagement usercreator
+ * Uses yargs to parse arguments
+ */
+export const exec = () => {
   const argv = yargs
     .usage(stripIndent`
-            ${chalk.yellow('Usermanagement user adding script')}
+          ${chalk.yellow('Usermanagement user adding script')}
 
-            Usage:
-                usercreator -f /path/to/yaml/file -u <username> -p <password> --url <url>
-                usercreator --help`
+          Usage:
+              usercreator -f /path/to/yaml/file -u <username> -p <password> --url <url>
+              usercreator --help`
     )
     .example('', 'usercreator -f users.yaml -u root -p root --url http://localhost:9003')
     .option('file', {
@@ -128,4 +148,8 @@ class UsermanagementAdder {
   } catch (err) {
     console.error(err);
   }
-})();
+};
+
+exec();
+
+export default exec;
