@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.3.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@6.2.0...@rws-air/webcomponents@6.3.0) (2019-09-19)
+
+
+### Features
+
+* **eslint-config:** change preferred type definition to interface ([74ab971](https://github.com/RWS-NL/air-node-packages/commit/74ab971))
+
+
+
+
+
 # [6.2.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@6.1.1...@rws-air/webcomponents@6.2.0) (2019-09-04)
 
 

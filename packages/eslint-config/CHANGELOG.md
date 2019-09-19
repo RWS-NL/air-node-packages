@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/eslint-config@2.0.5...@rws-air/eslint-config@2.1.0) (2019-09-19)
+
+
+### Features
+
+* **eslint-config:** change preferred type definition to interface ([74ab971](https://github.com/RWS-NL/air-node-packages/commit/74ab971))
+
+
+
+
+
 ## [2.0.5](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/eslint-config@2.0.4...@rws-air/eslint-config@2.0.5) (2019-09-03)
 
 

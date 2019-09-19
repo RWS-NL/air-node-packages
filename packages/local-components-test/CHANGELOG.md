@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/RWS-NL/air-node-packages/compare/local-components-test@1.1.3...local-components-test@1.2.0) (2019-09-19)
+
+
+### Features
+
+* **eslint-config:** change preferred type definition to interface ([74ab971](https://github.com/RWS-NL/air-node-packages/commit/74ab971))
+
+
+
+
+
 ## [1.1.3](https://github.com/RWS-NL/air-node-packages/compare/local-components-test@1.1.2...local-components-test@1.1.3) (2019-09-03)
 
 
