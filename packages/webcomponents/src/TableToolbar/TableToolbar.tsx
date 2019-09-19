@@ -49,6 +49,10 @@ export interface TableToolbarProps extends Pick<SearchBarProps, 'paperElevation'
   extraIcons?: RenderIconProps[];
 }
 
+/**
+ * Renders a set of icons in the toolbar
+ * @param iconData The icons to render
+ */
 export const renderIcons = (iconData: RenderIconProps[]) => {
   return (
     iconData.map((data, index) => (
@@ -65,7 +69,8 @@ export const renderIcons = (iconData: RenderIconProps[]) => {
   );
 };
 
-const TableToolbar: FC<TableToolbarProps> = props => {
+/** Creates a table toolbar using pre-defined Rijkswatestaat styling */
+export const TableToolbar: FC<TableToolbarProps> = props => {
   const debouncedSearch = debouncer((input: string) => props.onsearchinput(input), props.searchdebounce || 400);
 
   return (

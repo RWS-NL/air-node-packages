@@ -52,7 +52,8 @@ export interface ModalProps {
   disableEscapeKeyDown?: boolean;
 }
 
-const Modal: FC<ModalProps> = props => {
+/** Creates a modal using pre-defined Rijkswatestaat styling */
+export const Modal: FC<ModalProps> = props => {
   const handleConfirmKeyPress = (event: KeyboardEvent) => {
     return props.confirmAction && event.key.toLowerCase() === 'enter'
       ? props.confirmAction()

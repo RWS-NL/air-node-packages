@@ -44,7 +44,8 @@ export interface PaperButtonProps {
   onClick(...args: unknown[]): unknown;
 }
 
-const PaperButton: FC<PaperButtonProps> = props => {
+/** Creates a PaperButton (elevated button with Material Paper) using pre-defined Rijkswatestaat styling */
+export const PaperButton: FC<PaperButtonProps> = props => {
   const elevation = objectHasProperty(props, 'paperElevation') ? props.paperElevation : 2;
 
   const renderWithTooltip = () => (

@@ -13,6 +13,7 @@ export interface ZeroWidthSpaceProps extends TypographyProps {
   style?: CSSProperties;
 }
 
+/** Inserts a Zero Width Space as a React component */
 const ZeroWidthSpace: FC<ZeroWidthSpaceProps> = props => (
   <Typography
     variant={props.variant || 'caption'}

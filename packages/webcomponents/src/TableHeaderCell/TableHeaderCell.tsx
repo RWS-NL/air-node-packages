@@ -7,8 +7,11 @@ import Tooltip, { TooltipProps } from '../Tooltip/Tooltip';
 import { customCss, dataQa, label } from '../constants';
 
 export interface TableHeaderProps {
+  /** Label for this table header */
   label: string;
+  /** Whether this table header represents a column of numeric values */
   numeric?: boolean;
+  /** Whether the additional padding for this table header should be disabled */
   disablePadding?: boolean;
 }
 
@@ -31,7 +34,8 @@ export interface TableHeaderCellProps extends MUITableCellProps {
   customclasses?: customCss;
 }
 
-const TableHeaderCell: FC<TableHeaderCellProps> = props => (
+/** Creates a table header cell using pre-defined Rijkswatestaat styling */
+export const TableHeaderCell: FC<TableHeaderCellProps> = props => (
   <MUITableCell
     data-qa={props['data-qa']}
     align={props.header.numeric ? 'right' : 'left'}

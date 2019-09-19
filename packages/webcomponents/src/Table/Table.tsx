@@ -54,33 +54,34 @@ export interface TableCustomClasses {
   tableSearchbar?: string[];
 }
 
-export type TableProps =
-  & Pick<TableToolbarProps, 'onsearchclear' | 'onsearchinput' | 'paperElevation' | 'extraIcons'>
-  & Pick<TableHeaderCellProps, 'onRequestSort' | 'orderby' | 'order' | 'tooltipplacement'>
-  & Pick<MUITablePaginationProps, 'rowsPerPage' | 'rowsPerPageOptions' | 'page' | 'onChangePage' | 'onChangeRowsPerPage'>
-  & MUITableProps
-  & {
-    /** Headers for the table */
-    headers: TableHeaderProps[];
-    /** Map that defines how the headers are sorted, either by key or function when targeting nested properties */
-    headermapping: Map<string, string>;
-    /** The amount of rows for the table (generally the length of the data) */
-    rowcount: number;
-    /** Labels used in the table */
-    labels: TableLabels;
-    /** Data-qa's used in the table */
-    tableqas: TableQAs;
-    /** Content for the table */
-    tablebodycontent: ReactNode;
-    /** Customization CSS classes for table components */
-    tablecss?: TableCustomClasses;
-    /** Control whether the top bar pagination should be shown */
-    showTopPagination?: boolean;
-    /** Control whether the bottom bar pagination should be shown */
-    showBottomPagination?: boolean;
-  };
+export interface TableProps extends
+  Pick<TableToolbarProps, 'onsearchclear' | 'onsearchinput' | 'paperElevation' | 'extraIcons'>,
+  Pick<TableHeaderCellProps, 'onRequestSort' | 'orderby' | 'order' | 'tooltipplacement'>,
+  Pick<MUITablePaginationProps, 'rowsPerPage' | 'rowsPerPageOptions' | 'page' | 'onChangePage' | 'onChangeRowsPerPage'>,
+  MUITableProps
+{
+  /** Headers for the table */
+  headers: TableHeaderProps[];
+  /** Map that defines how the headers are sorted, either by key or function when targeting nested properties */
+  headermapping: Map<string, string>;
+  /** The amount of rows for the table (generally the length of the data) */
+  rowcount: number;
+  /** Labels used in the table */
+  labels: TableLabels;
+  /** Data-qa's used in the table */
+  tableqas: TableQAs;
+  /** Content for the table */
+  tablebodycontent: ReactNode;
+  /** Customization CSS classes for table components */
+  tablecss?: TableCustomClasses;
+  /** Control whether the top bar pagination should be shown */
+  showTopPagination?: boolean;
+  /** Control whether the bottom bar pagination should be shown */
+  showBottomPagination?: boolean;
+}
 
-const Table: FC<TableProps> = props => {
+/** Creates a table using pre-defined Rijkswatestaat styling */
+export const Table: FC<TableProps> = props => {
   const addCustomClasses = (component: keyof TableCustomClasses, baseClass?: string): string[] => {
     const classes: string[] = [];
     if (baseClass) classes.push(baseClass);

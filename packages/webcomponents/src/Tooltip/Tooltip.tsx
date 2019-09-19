@@ -15,7 +15,8 @@ export interface TooltipProps extends MUITooltipProps {
   style?: CSSProperties;
 }
 
-const Tooltip: FC<TooltipProps> = props => (
+/** Creates a tooltip using pre-defined Rijkswatestaat styling */
+export const Tooltip: FC<TooltipProps> = props => (
   <MUITooltip
     title={
       <Box data-qa={props['data-qa']} className={css.box}>

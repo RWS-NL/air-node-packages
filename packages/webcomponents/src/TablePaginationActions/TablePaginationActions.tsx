@@ -26,7 +26,8 @@ export interface TablePaginationActionsProps {
   customclasses?: customCss;
 }
 
-const TablePaginationActions: FC<TablePaginationActionsProps> = props => {
+/** Creates a table pagination action navigators using pre-defined Rijkswatestaat styling */
+export const TablePaginationActions: FC<TablePaginationActionsProps> = props => {
   const handleFirstPageButtonclick = (event: any) => props.onChangePage(event, 0);
   const handleBackButtonClick = (event: any) => props.onChangePage(event, props.page - 1);
   const handleNextButtonClick = (event: any) => props.onChangePage(event, props.page + 1);

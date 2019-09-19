@@ -13,7 +13,11 @@ export interface TableBodyCellProps extends MUITableCellProps {
   customclasses?: customCss;
 }
 
-const splitTableCellText = (text: string) => {
+/**
+ * Splits the text in table cell over multiple lines when it's longer than 75 characters
+ * @param text Text to split
+ */
+export const splitTableCellText = (text: string) => {
   const splitContent = text.match(/.{1,75}/g);
 
   if (splitContent) return splitContent.join(' ');
@@ -21,7 +25,8 @@ const splitTableCellText = (text: string) => {
   return text;
 };
 
-const TableBodyCell: FC<TableBodyCellProps> = props => (
+/** Creates a table body cell using pre-defined Rijkswatestaat styling */
+export const TableBodyCell: FC<TableBodyCellProps> = props => (
   <MUITableCell
     data-qa={props['data-qa']}
     className={classnames(css.tableCells, props.customclasses)}
