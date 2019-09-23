@@ -20,7 +20,7 @@
     "build": "rollup -c rollup.config.js",
     "postbuild": "replace --silent \"// #!/usr/bin/env node\" \"#!/usr/bin/env node\" dist/index.js dist/index.es.js",
     "start": "yarn build -w",
-    "start:ts": "ts-node src/creator.ts"
+    "start:ts": "babel-node src/creator.ts --extensions \".ts\""
   },
   "files": [
     "dist"
