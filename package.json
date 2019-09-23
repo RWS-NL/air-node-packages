@@ -17,7 +17,8 @@
     "prepublishOnly": "yarn build && yarn docs",
     "scripts:validateNoOnly": "babel-node scripts/validateNoOnly --extensions \".ts\"",
     "scripts:duplicateESLintConfig": "babel-node scripts/duplicateESLintConfig --extensions \".ts\"",
-    "scripts:duplicateStylelintConfig": "babel-node scripts/duplicateStylelintConfig --extensions \".ts\""
+    "scripts:duplicateStylelintConfig": "babel-node scripts/duplicateStylelintConfig --extensions \".ts\"",
+    "scripts:yarnAfterPull": "babel-node scripts/yarnAfterPull --extensions \".ts\""
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
@@ -109,7 +110,8 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn scripts:validateNoOnly && yarn lint-staged"
+      "pre-commit": "yarn scripts:validateNoOnly && yarn lint-staged",
+      "post-merge": "yarn scripts:yarnAfterPull"
     }
   },
   "commitlint": {
