@@ -1,20 +1,21 @@
 import path from 'path';
-import { execSync, spawnSync } from 'child_process';
+import execa from 'execa';
 import chalk from 'chalk';
 
-const ROOT_DIR = path.join(__dirname, '..');
-const log = console.log; // eslint-disable-line no-console, @typescript-eslint/unbound-method
+(async () => {
+  const ROOT_DIR = path.join(__dirname, '..');
+  const log = console.log; // eslint-disable-line no-console, @typescript-eslint/unbound-method
 
-const lastCommitFiles = execSync('git show --name-only', { cwd: ROOT_DIR }).toString().split('\n').slice(6).join('\n');
+  const { stdout } = await execa('git', [ 'show', '--name-only' ], { cwd: ROOT_DIR });
+  const lastCommitFiles = stdout.split('\n').slice(6);
 
-const hasLockfileInCommit = lastCommitFiles.includes('yarn.lock');
+  const hasLockfileInCommit = lastCommitFiles.some(commitFile => commitFile.toLowerCase() === 'yarn.lock');
 
-if (hasLockfileInCommit) {
-  log(chalk.cyan('Yarn lockfile was updated, running Yarn for you'));
-  const commandExec = spawnSync('yarn', { cwd: ROOT_DIR });
-  commandExec.output.forEach(part => {
-    if (part) log(chalk.green(part.toString()));
-  });
-}
+  if (hasLockfileInCommit) {
+    log(chalk.cyan('Yarn lockfile was updated, running Yarn for you'));
 
-process.exit(0);
+    execa('yarn', {cwd: ROOT_DIR}).stdout!.pipe(process.stdout);
+
+    log(chalk.green('Successfully ran yarn for you!'));
+  }
+})();

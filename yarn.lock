@@ -6157,7 +6157,7 @@ execa@^1.0.0:
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
 
-execa@^2.0.3:
+execa@^2.0.3, execa@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/execa/-/execa-2.0.4.tgz#2f5cc589c81db316628627004ea4e37b93391d8e"
   integrity sha512-VcQfhuGD51vQUQtKIq2fjGDLDbL6N1DTQVpYzxZ7LPIXw3HqTuIz6uxRmpV1qf8i31LHf2kjiaGI+GdHwRgbnQ==
@@ -12347,6 +12347,7 @@ react-dom@^16.9.0:
 
 "react-dom@link:./node_modules/react-dom":
   version "0.0.0"
+  uid ""
 
 react-error-overlay@^6.0.2:
   version "6.0.2"
@@ -12450,6 +12451,7 @@ react@^16.9.0:
 
 "react@link:./node_modules/react":
   version "0.0.0"
+  uid ""
 
 read-cmd-shim@^1.0.1:
   version "1.0.4"
