@@ -1,31 +1,72 @@
-# dependencies
-node_modules
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache/
 
-# misc
+### IntelliJ IDEA ###
+.idea/*
+*.iml
+*.ipr
+classes/
+
+### VSCode ###
+.vscode/
+
+# MacOS Finder
 .DS_Store
+
+# NodeJS
+node_modules/
+**/npm-debug.log
+seabiscuit-frontend/yarn.lock
+/package-lock.json
+/package.json
+/yarn.lock
+
+# Coverage Report
+.nyc_output/
+
+# Other
+runner.local.properties
+seabiscuit-backend/dump
+
+# Environment variables
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
 # Build Artifacts
-dist/
-build/
 *.zip
 *.tar
 *.tar.xz
 *.tar.gz
 *.7z
 *.rar
+.gradle
+**/dist/
+**/build/
+**/bin/
+!gradle/wrapper/gradle-wrapper.jar
+out/
+/tmp/
+gradle-cache
 
 # Logs
 logs/
 coverage/
 *.log*
+__tests__/screenshots/
 
 # IDE Settings
 .idea/
+classes/
 .vscode/*
 !.vscode/*.code-snippets
 .vs/
 *.iml
+*.ipr
