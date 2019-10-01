@@ -21,12 +21,11 @@ exports[`Snapshot Testing AdditionalTest 1`] = `
       key="1"
       xs={6}
     >
-      <h1
-        className=""
-        data-qa="action-bar-title"
+      <div
+        data-qa="action-bar-custom-title"
       >
-        42
-      </h1>
+        text
+      </div>
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
       item={true}
@@ -101,12 +100,11 @@ exports[`Snapshot Testing With Button 1`] = `
       key="1"
       xs={6}
     >
-      <h1
-        className=""
-        data-qa="action-bar-title"
+      <div
+        data-qa="action-bar-custom-title"
       >
-        42
-      </h1>
+        text
+      </div>
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
       item={true}

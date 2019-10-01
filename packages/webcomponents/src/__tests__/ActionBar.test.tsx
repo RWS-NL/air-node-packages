@@ -46,6 +46,30 @@ describe('Component Testing', () => {
       expect(actionButton).toHaveLength(0);
     });
   });
+
+  describe('ActionBar with ReactNode function based title', () => {
+    beforeEach(() => {
+      actionBar = shallow(<ActionBar title={() => <div data-qa='action-bar-custom-title'>text</div>} />);
+    });
+
+    test('should show title node', () => {
+      const title = actionBar.find('[data-qa="action-bar-custom-title"]');
+
+      expect(title.text()).toBe('text');
+    });
+  });
+
+  describe('ActionBar with ReactNode element based title', () => {
+    beforeEach(() => {
+      actionBar = shallow(<ActionBar title={<div data-qa='action-bar-custom-title'>text</div>} />);
+    });
+
+    test('should show title node', () => {
+      const title = actionBar.find('[data-qa="action-bar-custom-title"]');
+
+      expect(title.text()).toBe('text');
+    });
+  });
 });
 
 
@@ -58,7 +82,7 @@ describe('Snapshot Testing', () => {
   test('With Button', () => {
     const actionBar = shallow(
       <ActionBar
-        title='42' buttonLabel='label'
+        title={() => <div data-qa='action-bar-custom-title'>text</div>} buttonLabel='label'
         buttonAction={mockCallback} shouldHaveButton
       />
     );
@@ -68,7 +92,7 @@ describe('Snapshot Testing', () => {
   test('AdditionalTest', () => {
     const actionBar = shallow(
       <ActionBar
-        title='42' buttonLabel='label'
+        title={<div data-qa='action-bar-custom-title'>text</div>} buttonLabel='label'
         buttonAction={mockCallback} shouldHaveButton
         customclasses={'snapshot-class'} data-qa='snapshot-qa'
       />
