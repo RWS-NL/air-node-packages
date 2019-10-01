@@ -45,7 +45,8 @@
     "pathExclude": [
       "scripts/duplicateESLintConfig",
       "scripts/duplicateStylelintConfig",
-      "scripts/validateNoOnly"
+      "scripts/validateNoOnly",
+      "scripts/yarnAfterPull"
     ],
     "excludeExternals": true,
     "excludePrivate": true,
