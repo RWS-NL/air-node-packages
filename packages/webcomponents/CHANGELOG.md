@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.4.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@6.3.0...@rws-air/webcomponents@6.4.0) (2019-10-01)
+
+
+### Features
+
+* **webcomponents-actionbar:** allow for ReactNode based titles ([cd6a3e5](https://github.com/RWS-NL/air-node-packages/commit/cd6a3e5))
+
+
+
+
+
 # [6.3.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@6.2.0...@rws-air/webcomponents@6.3.0) (2019-09-19)
 
 
