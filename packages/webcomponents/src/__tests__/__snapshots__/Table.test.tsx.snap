@@ -203,7 +203,6 @@ exports[`Snapshot Testing Optional Props 1`] = `
     count={4}
     customClasses=""
     data-qa="table-pagination"
-    labelrowsperpage="Rows per page"
     onChangePage={[MockFunction]}
     onChangeRowsPerPage={[MockFunction]}
     page={0}
