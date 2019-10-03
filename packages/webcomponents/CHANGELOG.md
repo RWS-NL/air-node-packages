@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@6.4.0...@rws-air/webcomponents@7.0.0) (2019-10-03)
+
+
+### Bug Fixes
+
+* **tablepagination:** wrong propagation of labelRowsPerPage ([9833d90](https://github.com/RWS-NL/air-node-packages/commit/9833d90))
+
+
+### BREAKING CHANGES
+
+* **tablepagination:** Casing changed to have camelCasing
+
+
+
+
+
 # [6.4.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@6.3.0...@rws-air/webcomponents@6.4.0) (2019-10-01)
 
 
