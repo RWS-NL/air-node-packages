@@ -3,7 +3,7 @@
 exports[`Snapshot Testing Optional Props 1`] = `
 <WithStyles(ForwardRef(TablePagination))
   ActionsComponent={[Function]}
-  className="snapshot-class"
+  className=""
   classes={
     Object {
       "menuItem": undefined,

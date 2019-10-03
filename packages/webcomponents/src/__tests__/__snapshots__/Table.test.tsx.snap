@@ -12,10 +12,8 @@ exports[`Snapshot Testing Optional Props 1`] = `
   />
   <TablePagination
     count={4}
-    customclasses=""
+    customClasses=""
     data-qa="table-pagination"
-    labelpaginationof="of"
-    labelrowsperpage="Rows per page"
     onChangePage={[MockFunction]}
     onChangeRowsPerPage={[MockFunction]}
     page={0}
@@ -203,9 +201,8 @@ exports[`Snapshot Testing Optional Props 1`] = `
   </WithStyles(ForwardRef(Table))>
   <TablePagination
     count={4}
-    customclasses=""
+    customClasses=""
     data-qa="table-pagination"
-    labelpaginationof="of"
     labelrowsperpage="Rows per page"
     onChangePage={[MockFunction]}
     onChangeRowsPerPage={[MockFunction]}
