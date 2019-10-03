@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/RWS-NL/air-node-packages/compare/local-components-test@1.2.0...local-components-test@1.2.1) (2019-10-03)
+
+**Note:** Version bump only for package local-components-test
+
+
+
+
+
 # [1.2.0](https://github.com/RWS-NL/air-node-packages/compare/local-components-test@1.1.3...local-components-test@1.2.0) (2019-09-19)
 
 
