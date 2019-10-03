@@ -10,13 +10,13 @@ export type MutatedMUITablePaginationProps = TablePaginationTypeMap<{}, React.Co
 
 export interface TablePaginationProps extends MutatedMUITablePaginationProps {
   /** The label in the displayed rows per page, for example "5 rows per page" */
-  labelrowsperpage: label;
+  labelRowsPerPage: label;
   /** The label in the displayed pages, for example "of" in "page 1 of 10" */
-  labelpaginationof: label;
+  labelPaginationOf: label;
   /** Data-qa tag to apply to the search bar and input element */
   'data-qa'?: dataQa;
   /** Custom CSS classes to pass to the button */
-  customclasses?: customCss;
+  customClasses?: customCss;
 }
 
 const TablePagination: FC<TablePaginationProps> = props => {
@@ -27,9 +27,9 @@ const TablePagination: FC<TablePaginationProps> = props => {
       component='div'
       count={props.count} page={props.page}
       labelRowsPerPage={props.labelRowsPerPage}
-      labelDisplayedRows={({ from, to, count }) => `${from <= 9 ? `0${from}` : from}-${to} ${props.labelpaginationof} ${count}`}
+      labelDisplayedRows={({ from, to, count }) => `${from <= 9 ? `0${from}` : from}-${to} ${props.labelPaginationOf} ${count}`}
       onChangePage={props.onChangePage} onChangeRowsPerPage={props.onChangeRowsPerPage}
-      className={classnames(css.tablePagination, { [css.tablePaginationMobile]: isOnMobile }, props.customclasses)}
+      className={classnames(css.tablePagination, { [css.tablePaginationMobile]: isOnMobile }, props.customClasses)}
       classes={{ selectIcon: css.selectIcon, menuItem: css.menuItem }}
       rowsPerPage={props.rowsPerPage} rowsPerPageOptions={props.rowsPerPageOptions}
       ActionsComponent={TablePaginationActions}

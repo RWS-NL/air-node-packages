@@ -13,7 +13,7 @@ import { dataQa } from '../constants';
 
 export type TableLabels =
   & Pick<TableToolbarProps, 'searchplaceholderlabel'>
-  & Pick<TablePaginationProps, 'labelrowsperpage' | 'labelpaginationof'>
+  & Pick<TablePaginationProps, 'labelRowsPerPage' | 'labelPaginationOf'>
   & Pick<TableHeaderCellProps, 'tooltiplabel'>;
 
 export interface TableQAs {
@@ -104,15 +104,15 @@ export const Table: FC<TableProps> = props => {
       />
       {props.showTopPagination ?
         <TablePagination
-          labelrowsperpage={props.labels.labelrowsperpage}
-          labelpaginationof={props.labels.labelpaginationof}
+          labelRowsPerPage={props.labels.labelRowsPerPage}
+          labelPaginationOf={props.labels.labelPaginationOf}
           rowsPerPageOptions={props.rowsPerPageOptions}
           rowsPerPage={props.rowsPerPage}
           page={props.page}
           count={props.rowcount}
           onChangePage={props.onChangePage}
           onChangeRowsPerPage={props.onChangeRowsPerPage}
-          customclasses={classnames(addCustomClasses('tablePagination', css.tableTopPagination))}
+          customClasses={classnames(addCustomClasses('tablePagination', css.tableTopPagination))}
           data-qa={props.tableqas.pagination}
         /> : <Fragment />
       }
@@ -141,14 +141,14 @@ export const Table: FC<TableProps> = props => {
       {props.showBottomPagination ?
         <TablePagination
           labelrowsperpage={props.labels.labelrowsperpage}
-          labelpaginationof={props.labels.labelpaginationof}
+          labelPaginationOf={props.labels.labelPaginationOf}
           rowsPerPageOptions={props.rowsPerPageOptions}
           rowsPerPage={props.rowsPerPage}
           page={props.page}
           count={props.rowcount}
           onChangePage={props.onChangePage}
           onChangeRowsPerPage={props.onChangeRowsPerPage}
-          customclasses={classnames(addCustomClasses('tablePagination'))}
+          customClasses={classnames(addCustomClasses('tablePagination'))}
           data-qa={props.tableqas.pagination}
         /> : <Fragment />
       }
