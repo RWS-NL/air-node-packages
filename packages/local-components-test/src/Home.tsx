@@ -58,8 +58,8 @@ const propsForTable: TableProps = {
   headermapping: dataTableHeaderMapping,
   rowcount: dataForTable.length,
   labels: {
-    labelpaginationof: 'of',
-    labelrowsperpage: 'Rows per page',
+    labelPaginationOf: 'of',
+    labelRowsPerPage: 'Rows per page',
     searchplaceholderlabel: 'Search...',
     tooltiplabel: 'Sorteren',
   },
