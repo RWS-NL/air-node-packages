@@ -77,6 +77,40 @@ plugins=(… zsh-lerna)
 
 3. Reload `~/.zshrc` or reload your terminal
 
+### Running the linter
+
+Run `yarn lint` from repository root
+
+### Running tests
+
+Run `yarn test` from repository root
+
+### Updating snapshots for Webcomponents
+
+To easily update failing snapshots for webcomponents run this command from repository root: `yarn test:web`
+
+### Creating a build
+
+Run `yarn build`  from repository root
+
+### Publishing new versions
+
+1. Run `yarn build` to ensure lint, test and build succeeds
+2. Run `lerna publish` to start the publishing process. This automatically runs lint, test, build, doc generation, version bump, and publish to npm (in that order).
+3. Once everything has been published new documentation will have been generated in the `docs` folder. Push this to GitHub.
+
+#### If publish fails in build
+1. Go to GitHub repository -> releases: https://github.com/RWS-NL/air-node-packages/releases.
+2. Delete any tags created by the publish script.
+3. Delete the same tags locally: `git tag -d <name_of_tag> [...<name_of_other_tag>]`.
+4. Reset your HEAD to the commit before the publish.
+  - `tig` to find commit hash.
+  - `git checkout <commit_hash>`.
+5. Remove the failed commit with `git push --force`.
+6. Fix the issues.
+7. Run `yarn build` to ensure your fixes fix everything.
+8. Re-run the publish process as described above.
+
 ## API Documentation
 
 Check out [the docs on github pages](https://rws-nl.github.io/air-node-packages/)

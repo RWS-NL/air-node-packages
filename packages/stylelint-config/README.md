@@ -54,4 +54,4 @@ In `.stylelintrc`:
 
 ## API Documentation
 
-Check out [the docs on github pages](https://rws-nl.github.io/air-node-packages/modules/_rws_air_stylelint-config.html)
+Check out [the docs on github pages](https://rws-nl.github.io/air-node-packages/modules/_rws_air_stylelint_config.html)

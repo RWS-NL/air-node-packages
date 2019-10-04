@@ -8,7 +8,7 @@
     "build": "lerna run build --parallel --ignore local-components-test",
     "lint": "lerna run lint --parallel",
     "test": "lerna run test --parallel",
-    "test:web": "pushd packages/webcomponents && yarn test:modules --watchAll -u && popd",
+    "test:web": "pushd packages/webcomponents && yarn test --watchAll -u && popd",
     "docs": "typedoc",
     "commit": "git-cz",
     "cz": "git-cz",

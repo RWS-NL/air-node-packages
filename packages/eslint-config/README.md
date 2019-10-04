@@ -54,4 +54,4 @@ In `.eslintrc`:
 
 ## API Documentation
 
-Check out [the docs on github pages](https://rws-nl.github.io/air-node-packages/modules/_rws_air_eslint-config.html)
+Check out [the docs on github pages](https://rws-nl.github.io/air-node-packages/modules/_rws_air_eslint_config.html)

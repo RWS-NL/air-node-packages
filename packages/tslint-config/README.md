@@ -56,4 +56,4 @@ To fully utilize this config you should pass the [`--project`](https://palantir.
 
 ## API Documentation
 
-Check out [the docs on github pages](https://rws-nl.github.io/air-node-packages/modules/_rws_air_tslint-config.html)
+Check out [the docs on github pages](https://rws-nl.github.io/air-node-packages/modules/_rws_air_tslint_config.html)

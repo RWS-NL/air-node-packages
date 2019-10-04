@@ -29,7 +29,15 @@ export interface ButtonProps {
 const useStyles = makeStyles((theme: Theme) => createStyles({ buttonShadow: { boxShadow: theme.shadows[1], border: 'transparant' } }),
 );
 
-/** Creates a button using pre-defined Rijkswatestaat styling */
+/**
+ * Creates a button using pre-defined Rijkswatestaat styling BAAAAAAAAAAH
+ *
+ * ```jsx
+ * import { Button } from '@rws-air/webcomponents'
+ *
+ * <Button label='button' onClick={() => undefined} variant='contained' color='primary' />
+ * ```
+ */
 export const Button: FC<MUIButtonProps<'button', ButtonProps>> = props => {
   const classes = useStyles();
 
