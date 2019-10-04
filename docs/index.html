@@ -140,9 +140,26 @@
 					<h3>Publishing new versions</h3>
 				</a>
 				<ol>
-					<li>Run all linting and tests to ensure they don&#39;t fail.</li>
+					<li>Run <code>yarn build</code> to ensure lint, test and build succeeds</li>
 					<li>Run <code>lerna publish</code> to start the publishing process. This automatically runs lint, test, build, doc generation, version bump, and publish to npm (in that order).</li>
 					<li>Once everything has been published new documentation will have been generated in the <code>docs</code> folder. Push this to GitHub.</li>
+				</ol>
+				<a href="#if-publish-fails-in-build" id="if-publish-fails-in-build" style="color: inherit; text-decoration: none;">
+					<h4>If publish fails in build</h4>
+				</a>
+				<ol>
+					<li>Go to GitHub repository -&gt; releases: <a href="https://github.com/RWS-NL/air-node-packages/releases">https://github.com/RWS-NL/air-node-packages/releases</a>.</li>
+					<li>Delete any tags created by the publish script.</li>
+					<li>Delete the same tags locally: <code>git tag -d &lt;name_of_tag&gt; [...&lt;name_of_other_tag&gt;]</code>.</li>
+					<li>Reset your HEAD to the commit before the publish.<ul>
+							<li><code>tig</code> to find commit hash.</li>
+							<li><code>git checkout &lt;commit_hash&gt;</code>.</li>
+						</ul>
+					</li>
+					<li>Remove the failed commit with <code>git push --force</code>.</li>
+					<li>Fix the issues.</li>
+					<li>Run <code>yarn build</code> to ensure your fixes fix everything.</li>
+					<li>Re-run the publish process as described above.</li>
 				</ol>
 				<a href="#api-documentation" id="api-documentation" style="color: inherit; text-decoration: none;">
 					<h2>API Documentation</h2>
