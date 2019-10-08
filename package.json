@@ -93,7 +93,7 @@
     "rollup-plugin-progress": "^1.1.1",
     "rollup-plugin-terser": "5.1.2",
     "rollup-plugin-typescript2": "^0.24.3",
-    "rollup-plugin-url": "^2.2.2",
+    "rollup-plugin-url": "^3.0.0",
     "serve": "^11.2.0",
     "stylelint": "^11.0.0",
     "tslint": "^5.20.0",
