@@ -3,7 +3,6 @@ import TableRow from '@material-ui/core/TableRow';
 import { Table, TableBodyCell, TableProps } from '@rws-air/webcomponents';
 import React, { FC, Fragment } from 'react';
 import css from 'styles/modules/app.module.scss';
-import SaveIcon from '@material-ui/icons/Save';
 import SearchIcon from '@material-ui/icons/Search';
 
 interface DataForTableType {
@@ -95,8 +94,9 @@ const propsForTable: TableProps = {
   showTopPagination: true,
   extraIcons: [
     {
-      icon: <SaveIcon className={css.svgIcon} />,
+      icon: <SearchIcon className={css.svgIcon} />,
       clickEvent: () => console.log('void'),
+      disabled: true,
     },
     {
       icon: <SearchIcon className={css.svgIcon} />,
