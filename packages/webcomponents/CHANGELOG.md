@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.1.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@7.1.0...@rws-air/webcomponents@7.1.1) (2019-10-08)
+
+
+### Bug Fixes
+
+* **webcomponents:** fixed ModalContent prop types ([1025e8c](https://github.com/RWS-NL/air-node-packages/commit/1025e8c))
+
+
+
+
+
 # [7.1.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@7.0.3...@rws-air/webcomponents@7.1.0) (2019-10-08)
 
 
