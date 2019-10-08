@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.1.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@7.0.3...@rws-air/webcomponents@7.1.0) (2019-10-08)
+
+
+### Features
+
+* **webcomponents:** implement React Memoization in all components ([b9019bd](https://github.com/RWS-NL/air-node-packages/commit/b9019bd))
+* **webcomponents:** tableToolbar extraIcons can now be disabled ([7119188](https://github.com/RWS-NL/air-node-packages/commit/7119188))
+
+
+
+
+
 ## [7.0.3](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@7.0.2...@rws-air/webcomponents@7.0.3) (2019-10-08)
 
 
