@@ -2,7 +2,13 @@
 
 exports[`Snapshot Testing Optional Props 1`] = `
 <WithStyles(ForwardRef(TablePagination))
-  ActionsComponent={[Function]}
+  ActionsComponent={
+    Object {
+      "$$typeof": Symbol(react.memo),
+      "compare": null,
+      "type": [Function],
+    }
+  }
   className=""
   classes={
     Object {
@@ -30,7 +36,13 @@ exports[`Snapshot Testing Optional Props 1`] = `
 
 exports[`Snapshot Testing Required Props 1`] = `
 <WithStyles(ForwardRef(TablePagination))
-  ActionsComponent={[Function]}
+  ActionsComponent={
+    Object {
+      "$$typeof": Symbol(react.memo),
+      "compare": null,
+      "type": [Function],
+    }
+  }
   className=""
   classes={
     Object {
@@ -57,7 +69,13 @@ exports[`Snapshot Testing Required Props 1`] = `
 
 exports[`should match snapshot 1`] = `
 <WithStyles(ForwardRef(TablePagination))
-  ActionsComponent={[Function]}
+  ActionsComponent={
+    Object {
+      "$$typeof": Symbol(react.memo),
+      "compare": null,
+      "type": [Function],
+    }
+  }
   className=""
   classes={
     Object {

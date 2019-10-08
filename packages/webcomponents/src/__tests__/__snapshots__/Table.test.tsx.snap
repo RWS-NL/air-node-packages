@@ -2,7 +2,7 @@
 
 exports[`Snapshot Testing Optional Props 1`] = `
 <Fragment>
-  <TableToolbar
+  <Memo(TableToolbar)
     customSearchbarClasses=""
     customclasses=""
     data-qa="table-toolbar"
@@ -10,7 +10,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
     onsearchinput={[MockFunction]}
     searchplaceholderlabel="Search..."
   />
-  <TablePagination
+  <Memo(TablePagination)
     count={4}
     customClasses=""
     data-qa="table-pagination"
@@ -39,7 +39,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
         className=""
         data-qa="table-header-row"
       >
-        <TableHeaderCell
+        <Memo(TableHeaderCell)
           customclasses=""
           data-qa="table-header-cell"
           header={
@@ -68,7 +68,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
           tooltiplabel="Sort"
           tooltipplacement="bottom-start"
         />
-        <TableHeaderCell
+        <Memo(TableHeaderCell)
           customclasses=""
           data-qa="table-header-cell"
           header={
@@ -97,7 +97,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
           tooltiplabel="Sort"
           tooltipplacement="bottom-start"
         />
-        <TableHeaderCell
+        <Memo(TableHeaderCell)
           customclasses=""
           data-qa="table-header-cell"
           header={
@@ -139,13 +139,13 @@ exports[`Snapshot Testing Optional Props 1`] = `
         key="4567893"
         tabIndex={-1}
       >
-        <TableBodyCell
+        <Memo(TableBodyCell)
           content="Robin Hood"
         />
-        <TableBodyCell
+        <Memo(TableBodyCell)
           content="robin.hood@winked.com"
         />
-        <TableBodyCell
+        <Memo(TableBodyCell)
           content={23456789}
         />
       </WithStyles(ForwardRef(TableRow))>
@@ -155,13 +155,13 @@ exports[`Snapshot Testing Optional Props 1`] = `
         key="4567893"
         tabIndex={-1}
       >
-        <TableBodyCell
+        <Memo(TableBodyCell)
           content="Darth Vader"
         />
-        <TableBodyCell
+        <Memo(TableBodyCell)
           content="darth.vader@thedeathstart.com"
         />
-        <TableBodyCell
+        <Memo(TableBodyCell)
           content={9876}
         />
       </WithStyles(ForwardRef(TableRow))>
@@ -171,13 +171,13 @@ exports[`Snapshot Testing Optional Props 1`] = `
         key="4567893"
         tabIndex={-1}
       >
-        <TableBodyCell
+        <Memo(TableBodyCell)
           content="Kaladin Stormblessed"
         />
-        <TableBodyCell
+        <Memo(TableBodyCell)
           content="kaladin.stormblessed@thearmy.com"
         />
-        <TableBodyCell
+        <Memo(TableBodyCell)
           content={567890}
         />
       </WithStyles(ForwardRef(TableRow))>
@@ -187,19 +187,19 @@ exports[`Snapshot Testing Optional Props 1`] = `
         key="4567893"
         tabIndex={-1}
       >
-        <TableBodyCell
+        <Memo(TableBodyCell)
           content="Steve Jobs"
         />
-        <TableBodyCell
+        <Memo(TableBodyCell)
           content="steve.jobs@apple.com"
         />
-        <TableBodyCell
+        <Memo(TableBodyCell)
           content={1}
         />
       </WithStyles(ForwardRef(TableRow))>
     </WithStyles(ForwardRef(TableBody))>
   </WithStyles(ForwardRef(Table))>
-  <TablePagination
+  <Memo(TablePagination)
     count={4}
     customClasses=""
     data-qa="table-pagination"
@@ -221,7 +221,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
 
 exports[`Snapshot Testing Required Props 1`] = `
 <Fragment>
-  <TableToolbar
+  <Memo(TableToolbar)
     customSearchbarClasses=""
     customclasses=""
     data-qa="table-toolbar"
@@ -241,7 +241,7 @@ exports[`Snapshot Testing Required Props 1`] = `
         className=""
         data-qa="table-header-row"
       >
-        <TableHeaderCell
+        <Memo(TableHeaderCell)
           customclasses=""
           data-qa="table-header-cell"
           header={
@@ -270,7 +270,7 @@ exports[`Snapshot Testing Required Props 1`] = `
           tooltiplabel="Sort"
           tooltipplacement="bottom-start"
         />
-        <TableHeaderCell
+        <Memo(TableHeaderCell)
           customclasses=""
           data-qa="table-header-cell"
           header={
@@ -299,7 +299,7 @@ exports[`Snapshot Testing Required Props 1`] = `
           tooltiplabel="Sort"
           tooltipplacement="bottom-start"
         />
-        <TableHeaderCell
+        <Memo(TableHeaderCell)
           customclasses=""
           data-qa="table-header-cell"
           header={
@@ -341,13 +341,13 @@ exports[`Snapshot Testing Required Props 1`] = `
         key="4567893"
         tabIndex={-1}
       >
-        <TableBodyCell
+        <Memo(TableBodyCell)
           content="Robin Hood"
         />
-        <TableBodyCell
+        <Memo(TableBodyCell)
           content="robin.hood@winked.com"
         />
-        <TableBodyCell
+        <Memo(TableBodyCell)
           content={23456789}
         />
       </WithStyles(ForwardRef(TableRow))>
@@ -357,13 +357,13 @@ exports[`Snapshot Testing Required Props 1`] = `
         key="4567893"
         tabIndex={-1}
       >
-        <TableBodyCell
+        <Memo(TableBodyCell)
           content="Darth Vader"
         />
-        <TableBodyCell
+        <Memo(TableBodyCell)
           content="darth.vader@thedeathstart.com"
         />
-        <TableBodyCell
+        <Memo(TableBodyCell)
           content={9876}
         />
       </WithStyles(ForwardRef(TableRow))>
@@ -373,13 +373,13 @@ exports[`Snapshot Testing Required Props 1`] = `
         key="4567893"
         tabIndex={-1}
       >
-        <TableBodyCell
+        <Memo(TableBodyCell)
           content="Kaladin Stormblessed"
         />
-        <TableBodyCell
+        <Memo(TableBodyCell)
           content="kaladin.stormblessed@thearmy.com"
         />
-        <TableBodyCell
+        <Memo(TableBodyCell)
           content={567890}
         />
       </WithStyles(ForwardRef(TableRow))>
@@ -389,13 +389,13 @@ exports[`Snapshot Testing Required Props 1`] = `
         key="4567893"
         tabIndex={-1}
       >
-        <TableBodyCell
+        <Memo(TableBodyCell)
           content="Steve Jobs"
         />
-        <TableBodyCell
+        <Memo(TableBodyCell)
           content="steve.jobs@apple.com"
         />
-        <TableBodyCell
+        <Memo(TableBodyCell)
           content={1}
         />
       </WithStyles(ForwardRef(TableRow))>

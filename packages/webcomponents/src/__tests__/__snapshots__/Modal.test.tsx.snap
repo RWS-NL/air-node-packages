@@ -53,14 +53,14 @@ exports[`Snapshot Testing Open and simple modal 1`] = `
     }
     data-qa="modal-actions"
   >
-    <Button
+    <Memo(Button)
       color="primary"
       data-qa="modal-cancel-button"
       label="cancel"
       onClick={[Function]}
       variant="outlined"
     />
-    <Button
+    <Memo(Button)
       color="primary"
       data-qa="modal-confirm-button"
       label="ok"
@@ -124,14 +124,14 @@ exports[`Snapshot Testing Optional Props 1`] = `
     }
     data-qa="modal-actions"
   >
-    <Button
+    <Memo(Button)
       color="primary"
       data-qa="modal-cancel-button"
       label="Awesome Cancel Text"
       onClick={[Function]}
       variant="outlined"
     />
-    <Button
+    <Memo(Button)
       color="primary"
       data-qa="modal-confirm-button"
       label="Awesome Ok Text"

@@ -16,7 +16,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
       item={true}
       key="2"
     >
-      <SearchBar
+      <Memo(SearchBar)
         className="snapshot-class"
         data-qa="table-search-bar"
         onCancelSearch={[MockFunction]}
@@ -47,7 +47,7 @@ exports[`Snapshot Testing Required Props 1`] = `
       item={true}
       key="2"
     >
-      <SearchBar
+      <Memo(SearchBar)
         className=""
         data-qa="table-search-bar"
         onCancelSearch={[MockFunction]}

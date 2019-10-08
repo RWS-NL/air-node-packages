@@ -32,7 +32,7 @@ exports[`Snapshot Testing AdditionalTest 1`] = `
       key="2"
       xs={6}
     >
-      <Button
+      <Memo(Button)
         color="primary"
         data-qa="action-bar-button"
         label="label"
@@ -111,7 +111,7 @@ exports[`Snapshot Testing With Button 1`] = `
       key="2"
       xs={6}
     >
-      <Button
+      <Memo(Button)
         color="primary"
         data-qa="action-bar-button"
         label="label"
