@@ -1,7 +1,7 @@
 import MUITableCell, { TableCellProps as MUITableCellProps } from '@material-ui/core/TableCell';
 import TableSortLabel from '@material-ui/core/TableSortLabel';
 import classnames from 'classnames';
-import React, { FC } from 'react';
+import React, { FC, memo } from 'react';
 import css from './TableHeaderCell.scss';
 import Tooltip, { TooltipProps } from '../Tooltip/Tooltip';
 import { customCss, dataQa, label } from '../constants';
@@ -57,4 +57,4 @@ export const TableHeaderCell: FC<TableHeaderCellProps> = props => (
   </MUITableCell>
 );
 
-export default TableHeaderCell;
+export default memo(TableHeaderCell);

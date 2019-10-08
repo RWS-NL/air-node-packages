@@ -1,7 +1,7 @@
 import Grid from '@material-ui/core/Grid/Grid';
 import classnames from 'classnames';
 import debouncer from 'lodash.debounce';
-import React, { FC, Fragment } from 'react';
+import React, { FC, Fragment, memo } from 'react';
 import { customCss, dataQa, label } from '../constants';
 import SearchBar, { SearchBarProps } from '../SearchBar/SearchBar';
 import css from './TableToolbar.scss';
@@ -103,4 +103,4 @@ export const TableToolbar: FC<TableToolbarProps> = props => {
   );
 };
 
-export default TableToolbar;
+export default memo(TableToolbar);

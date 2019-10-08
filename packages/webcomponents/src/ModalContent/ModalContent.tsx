@@ -1,5 +1,5 @@
 import css from './ModalContent.scss';
-import React, { FC } from 'react';
+import React, { FC, memo } from 'react';
 
 /** Creates modal content using pre-defined Rijkswatestaat styling */
 export const ModalContent: FC = props => (
@@ -8,4 +8,4 @@ export const ModalContent: FC = props => (
   </div>
 );
 
-export default ModalContent;
+export default memo(ModalContent);

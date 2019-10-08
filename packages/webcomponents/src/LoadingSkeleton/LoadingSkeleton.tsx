@@ -2,7 +2,7 @@ import { CSSProperties } from '@material-ui/styles';
 import classnames from 'classnames';
 import { customCss, dataQa } from '../constants';
 import css from './LoadingSkeleton.scss';
-import React, { FC } from 'react';
+import React, { FC, memo } from 'react';
 
 export interface LoadingSkeletonProps {
   /**
@@ -42,4 +42,4 @@ export const LoadingSkeleton: FC<LoadingSkeletonProps> = props => {
   return <span data-qa={props['data-qa']} className={classnames(css.skeleton, props.customclasses)} style={style}>&zwnj;</span>;
 };
 
-export default LoadingSkeleton;
+export default memo(LoadingSkeleton);

@@ -4,7 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import SearchIcon from '@material-ui/icons/Search';
 import CloseIcon from '@material-ui/icons/Close';
 import { CSSProperties } from '@material-ui/styles';
-import React, { ChangeEvent, FC, KeyboardEvent, useState } from 'react';
+import React, { ChangeEvent, FC, KeyboardEvent, useState, memo } from 'react';
 import { dataQa } from '../constants';
 import css from './SearchBar.scss';
 import InputBase from '@material-ui/core/InputBase';
@@ -109,4 +109,4 @@ export const SearchBar: FC<SearchBarProps> = props => {
   );
 };
 
-export default SearchBar;
+export default memo(SearchBar);

@@ -5,7 +5,7 @@
 import MUIButton, { ButtonProps as MUIButtonProps } from '@material-ui/core/Button';
 import css from './Button.scss';
 import classnames from 'classnames';
-import React, { FC, ReactNode } from 'react';
+import React, { FC, ReactNode, memo } from 'react';
 import { customCss, dataQa } from '../constants';
 import { makeStyles, Theme, createStyles } from '@material-ui/core';
 
@@ -66,4 +66,4 @@ export const Button: FC<MUIButtonProps<'button', ButtonProps>> = props => {
   );
 };
 
-export default Button;
+export default memo(Button);

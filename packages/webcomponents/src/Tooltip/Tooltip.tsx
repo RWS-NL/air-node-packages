@@ -2,7 +2,7 @@ import Box from '@material-ui/core/Box';
 import MUITooltip, { TooltipProps as MUITooltipProps } from '@material-ui/core/Tooltip';
 import { CSSProperties } from '@material-ui/styles';
 import classnames from 'classnames';
-import React, { FC } from 'react';
+import React, { FC, memo } from 'react';
 import css from './Tooltip.scss';
 import { customCss, dataQa } from '../constants';
 
@@ -32,4 +32,4 @@ export const Tooltip: FC<TooltipProps> = props => (
   </MUITooltip>
 );
 
-export default Tooltip;
+export default memo(Tooltip);

@@ -1,7 +1,7 @@
 import Typography, {TypographyProps} from '@material-ui/core/Typography';
 import { CSSProperties } from '@material-ui/styles';
 import classnames from 'classnames';
-import React, { FC } from 'react';
+import React, { FC, memo } from 'react';
 import { customCss, dataQa } from '../constants';
 
 export interface ZeroWidthSpaceProps extends TypographyProps {
@@ -25,4 +25,4 @@ const ZeroWidthSpace: FC<ZeroWidthSpaceProps> = props => (
   </Typography>
 );
 
-export default ZeroWidthSpace;
+export default memo(ZeroWidthSpace);

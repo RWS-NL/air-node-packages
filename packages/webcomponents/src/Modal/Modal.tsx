@@ -7,7 +7,7 @@ import WarningIcon from '@material-ui/icons/Warning';
 import Button from '../Button/Button';
 import classnames from 'classnames';
 import css from './Modal.scss';
-import React, { FC, Fragment, KeyboardEvent, ReactNode } from 'react';
+import React, { FC, Fragment, KeyboardEvent, ReactNode, memo, useMemo } from 'react';
 import { dataQa } from '../constants';
 
 export interface ModalQAs {
@@ -72,30 +72,36 @@ export const Modal: FC<ModalProps> = props => {
     return undefined;
   };
 
-  const renderModalActions = () => {
-    if (props.hasOwnProperty('isSimpleModal') ? props.isSimpleModal : false) {
-      return (
-        <DialogActions classes={{ root: css.modalActions }} data-qa={props.modalqas.actions}>
-          <Button
-            data-qa={props.modalqas.actionCancel || 'modal-cancel-button'}
-            onClick={handleClose} variant='outlined' color='primary'
-            label={props.cancelButtonText ? props.cancelButtonText : 'cancel'}
-            customclasses={css.modalButtonCancel}
-          />
-          <Button
-            data-qa={props.modalqas.actionConfirm || 'modal-confirm-button'}
-            onClick={handleConfirm} variant='contained' color='primary'
-            label={props.okButtonText ? props.okButtonText : 'ok'}
-            customclasses={css.modalButtonOk}
-          />
-        </DialogActions>
-      );
-    }
+  const renderModalActions = useMemo(
+    () => {
+      if (props.hasOwnProperty('isSimpleModal') ? props.isSimpleModal : false) {
+        return (
+          <DialogActions classes={{ root: css.modalActions }} data-qa={props.modalqas.actions}>
+            <Button
+              data-qa={props.modalqas.actionCancel || 'modal-cancel-button'}
+              onClick={handleClose} variant='outlined' color='primary'
+              label={props.cancelButtonText ? props.cancelButtonText : 'cancel'}
+              customclasses={css.modalButtonCancel}
+            />
+            <Button
+              data-qa={props.modalqas.actionConfirm || 'modal-confirm-button'}
+              onClick={handleConfirm} variant='contained' color='primary'
+              label={props.okButtonText ? props.okButtonText : 'ok'}
+              customclasses={css.modalButtonOk}
+            />
+          </DialogActions>
+        );
+      }
 
-    return <Fragment />;
-  };
+      return <Fragment />;
+    },
+    [
+      handleClose, handleConfirm,
+      props.cancelButtonText, props.okButtonText
+    ]
+  );
 
-  const renderModalTitleIcon = () => {
+  const renderModalTitleIcon = useMemo(() => {
     if (props.hasOwnProperty('isSimpleModal') ? props.isSimpleModal : false) {
       return (
         props.modalType === 'warning'
@@ -105,7 +111,7 @@ export const Modal: FC<ModalProps> = props => {
     }
 
     return <Fragment />;
-  };
+  }, [ props.isSimpleModal, props.modalType ]);
 
   return (
     <Dialog
@@ -127,22 +133,22 @@ export const Modal: FC<ModalProps> = props => {
         )}
       >
         <Fragment>
-          {renderModalTitleIcon()}
+          {renderModalTitleIcon}
           {props.topic ? props.topic : ''}
         </Fragment>
       </DialogTitle>
       <DialogContent
         classes={{ root: css.modalBody }}
         className={
-          classnames({[css.modalContentSmall]: props.hasOwnProperty('isSimpleModal') ? props.isSimpleModal : false})
+          classnames({ [css.modalContentSmall]: props.hasOwnProperty('isSimpleModal') ? props.isSimpleModal : false })
         }
         data-qa={props.modalqas.content || 'modal-content'}
       >
         {props.dialogContent}
       </DialogContent>
-      {renderModalActions()}
+      {renderModalActions}
     </Dialog>
   );
 };
 
-export default Modal;
+export default memo(Modal);

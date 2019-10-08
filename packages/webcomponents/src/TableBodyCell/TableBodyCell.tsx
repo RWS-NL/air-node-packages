@@ -1,6 +1,6 @@
 import MUITableCell, { TableCellProps as MUITableCellProps } from '@material-ui/core/TableCell';
 import classnames from 'classnames';
-import React, { FC } from 'react';
+import React, { FC, memo } from 'react';
 import css from './TableBodyCell.scss';
 import { cellContent, customCss, dataQa } from '../constants';
 
@@ -37,4 +37,4 @@ export const TableBodyCell: FC<TableBodyCellProps> = props => (
   </MUITableCell>
 );
 
-export default TableBodyCell;
+export default memo(TableBodyCell);

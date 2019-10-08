@@ -7,7 +7,7 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import LastPageIcon from '@material-ui/icons/LastPage';
 import classnames from 'classnames';
-import React, { FC, SyntheticEvent } from 'react';
+import React, { FC, SyntheticEvent, memo } from 'react';
 import { customCss, dataQa } from '../constants';
 import css from './TablePaginationActions.scss';
 
@@ -77,4 +77,4 @@ export const TablePaginationActions: FC<TablePaginationActionsProps> = props => 
   );
 };
 
-export default TablePaginationActions;
+export default memo(TablePaginationActions);

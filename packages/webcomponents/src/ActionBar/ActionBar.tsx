@@ -2,7 +2,7 @@ import Grid from '@material-ui/core/Grid/Grid';
 import css from './ActionBar.scss';
 import Button from '../Button/Button';
 import classnames from 'classnames';
-import React, { FC, Fragment, ReactNode } from 'react';
+import React, { FC, Fragment, ReactNode, useMemo, memo } from 'react';
 import { customCss, dataQa } from '../constants';
 
 export interface ActionBarProps {
@@ -24,7 +24,7 @@ export interface ActionBarProps {
 
 /** Creates an action bar using pre-defined Rijkswatestaat styling */
 export const ActionBar: FC<ActionBarProps> = props => {
-  const getTitle = () => {
+  const getTitle = useMemo<ActionBarProps['title']>(() => {
     if (typeof props.title === 'string') {
       return (
         <h1 data-qa='action-bar-title' className={classnames(css.actionBarHeader)}>
@@ -36,13 +36,13 @@ export const ActionBar: FC<ActionBarProps> = props => {
     if (typeof props.title === 'function') return props.title();
 
     return props.title;
-  };
+  }, [ props.title ]);
 
   return (
     <div className={classnames('navigation-bar', css.actionBar)} data-qa={props['data-qa']}>
       <Grid container direction='row' justify='space-between' alignItems='center' style={{ height: '100%' }}>
         <Grid item key={1} xs={6}>
-          {getTitle()}
+          {getTitle}
         </Grid>
         <Grid item key={2} xs={6}>
           {props.shouldHaveButton ?
@@ -62,4 +62,4 @@ export const ActionBar: FC<ActionBarProps> = props => {
   );
 };
 
-export default ActionBar;
+export default memo(ActionBar);

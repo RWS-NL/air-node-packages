@@ -4,7 +4,7 @@ import TableHead from '@material-ui/core/TableHead';
 import { TablePaginationProps as MUITablePaginationProps } from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 import classnames from 'classnames';
-import React, { FC, Fragment, ReactNode } from 'react';
+import React, { FC, Fragment, ReactNode, memo } from 'react';
 import css from './Table.scss';
 import TableHeaderCell, { TableHeaderCellProps, TableHeaderProps } from '../TableHeaderCell/TableHeaderCell';
 import TablePagination, { TablePaginationProps } from '../TablePagination/TablePagination';
@@ -152,4 +152,4 @@ export const Table: FC<TableProps> = props => {
   );
 };
 
-export default Table;
+export default memo(Table);

@@ -1,7 +1,7 @@
 import MUITablePagination, { TablePaginationTypeMap, TablePaginationBaseProps } from '@material-ui/core/TablePagination';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import classnames from 'classnames';
-import React, { FC } from 'react';
+import React, { FC, memo } from 'react';
 import css from './TablePagination.scss';
 import TablePaginationActions from '../TablePaginationActions/TablePaginationActions';
 import { label, dataQa, customCss } from '../constants';
@@ -38,4 +38,4 @@ const TablePagination: FC<TablePaginationProps> = props => {
   );
 };
 
-export default TablePagination;
+export default memo(TablePagination);
