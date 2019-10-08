@@ -46,6 +46,7 @@ export const TableHeaderCell: FC<TableHeaderCellProps> = props => (
       data-qa={`table-header-${props['data-qa']}`}>
       <TableSortLabel
         data-qa={`tableSortLabel_${props.header.label}`}
+        classes={{icon: css.sortIcon}}
         active={props.orderby === props.header.label}
         direction={props.order}
         onClick={() => props.onRequestSort(props.header.label)}
