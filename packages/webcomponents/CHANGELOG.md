@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.1.2](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@7.1.1...@rws-air/webcomponents@7.1.2) (2019-10-08)
+
+
+### Bug Fixes
+
+* **webcomponents:** fix text size styling ([5fe032e](https://github.com/RWS-NL/air-node-packages/commit/5fe032e))
+
+
+
+
+
 ## [7.1.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@7.1.0...@rws-air/webcomponents@7.1.1) (2019-10-08)
 
 
