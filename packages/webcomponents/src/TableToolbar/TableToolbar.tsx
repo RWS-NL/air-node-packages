@@ -14,6 +14,11 @@ export interface RenderIconProps {
   /** The function to trigger when clicking this button */
   clickEvent: PaperButtonProps['onClick'];
   /**
+   * Whether this button should be disabled or not
+   * @default false
+   */
+  disabled?: PaperButtonProps['disabled'];
+  /**
    * The text content to put in the tooltip
    * @default 'Click Me'
    */
@@ -59,6 +64,7 @@ export const renderIcons = (iconData: RenderIconProps[]) => {
       <Grid item key={`icon-${index}`}>
         <PaperButton
           icon={data.icon}
+          disabled={data.disabled}
           onClick={data.clickEvent}
           tooltipText={data.tooltipText}
           tooltipPlacement={data.tooltipPlacement || 'top'}

@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useMemo, memo } from 'react';
 import { objectHasProperty, customCss, dataQa } from '../constants';
 import { Paper, IconButton } from '@material-ui/core';
 import css from './PaperButton.scss';
@@ -8,6 +8,11 @@ import Tooltip, { TooltipProps } from '../Tooltip/Tooltip';
 export interface PaperButtonProps {
   /** The Material Icon to display in this paper button */
   icon: JSX.Element;
+  /**
+   * Whether this button should be disabled or not
+   * @default false
+   */
+  disabled?: boolean;
   /**
    * The text content to put in the tooltip
    * @default 'Click Me'
@@ -46,29 +51,40 @@ export interface PaperButtonProps {
 
 /** Creates a PaperButton (elevated button with Material Paper) using pre-defined Rijkswatestaat styling */
 export const PaperButton: FC<PaperButtonProps> = props => {
-  const elevation = objectHasProperty(props, 'paperElevation') ? props.paperElevation : 2;
-
-  const renderWithTooltip = () => (
-    <Tooltip
-      data-qa={props['tooltip-data-qa']}
-      customclasses={props.tooltipCustomClasses}
-      placement={props.tooltipPlacement || 'top'}
-      title={props.tooltipText || 'Click Me'}
-    >
-      <IconButton
-        data-qa={props['iconButton-data-qa']}
-        className={classnames(css.inputButton, props.iconButtonCustomclasses)}
-        onClick={props.onClick}
-        size='small'
-        color='primary'
-      >
-        {props.icon}
-      </IconButton>
-    </Tooltip>
+  const elevation = useMemo(
+    () => objectHasProperty(props, 'paperElevation') ? props.paperElevation : 2,
+    [ props.paperElevation ]
   );
 
-  const renderWithoutTooltip = () => (
+  const renderWithTooltip = useMemo(
+    () => (
+      <Tooltip
+        data-qa={props['tooltip-data-qa']}
+        customclasses={props.tooltipCustomClasses}
+        placement={props.tooltipPlacement || 'top'}
+        title={props.tooltipText || 'Click Me'}
+      >
+        <IconButton
+          disabled={props.disabled}
+          data-qa={props['iconButton-data-qa']}
+          className={classnames(css.inputButton, props.iconButtonCustomclasses)}
+          onClick={props.onClick}
+          size='small'
+          color='primary'
+        >
+          {props.icon}
+        </IconButton>
+      </Tooltip>
+    ),
+    [
+      props.disabled, props.onClick, props.icon, props.iconButtonCustomclasses,
+      props.tooltipCustomClasses, props.tooltipPlacement, props.tooltipText
+    ]
+  );
+
+  const renderWithoutTooltip = useMemo(() => (
     <IconButton
+      disabled={props.disabled}
       data-qa={props['iconButton-data-qa']}
       className={classnames(css.inputButton, props.iconButtonCustomclasses)}
       onClick={props.onClick}
@@ -77,7 +93,14 @@ export const PaperButton: FC<PaperButtonProps> = props => {
     >
       {props.icon}
     </IconButton>
-  );
+  ), [ props.disabled, props.onClick, props.icon, props.iconButtonCustomclasses ]);
+
+  const customRender = useMemo(() => {
+    if (props.disabled) return renderWithoutTooltip;
+    if (props.disableTooltip) return renderWithoutTooltip;
+
+    return renderWithTooltip;
+  }, [ props.disabled, props.disableTooltip ]);
 
   return (
     <Paper
@@ -86,9 +109,9 @@ export const PaperButton: FC<PaperButtonProps> = props => {
       data-qa={props['paper-data-qa']}
       square
     >
-      {props.disableTooltip ? renderWithoutTooltip() : renderWithTooltip()}
+      {customRender}
     </Paper>
   );
 };
 
-export default PaperButton;
+export default memo(PaperButton);
