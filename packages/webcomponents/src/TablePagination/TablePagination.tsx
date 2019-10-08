@@ -24,13 +24,13 @@ const TablePagination: FC<TablePaginationProps> = props => {
 
   return (
     <MUITablePagination
-      component='div'
+      component='span'
       count={props.count} page={props.page}
       labelRowsPerPage={props.labelRowsPerPage}
       labelDisplayedRows={({ from, to, count }) => `${from <= 9 ? `0${from}` : from}-${to} ${props.labelPaginationOf} ${count}`}
       onChangePage={props.onChangePage} onChangeRowsPerPage={props.onChangeRowsPerPage}
       className={classnames(css.tablePagination, { [css.tablePaginationMobile]: isOnMobile }, props.customClasses)}
-      classes={{ selectIcon: css.selectIcon, menuItem: css.menuItem }}
+      classes={{ root: css.text, selectIcon: css.selectIcon, menuItem: css.text }}
       rowsPerPage={props.rowsPerPage} rowsPerPageOptions={props.rowsPerPageOptions}
       ActionsComponent={TablePaginationActions}
       data-qa={props['data-qa']}

@@ -13,10 +13,11 @@ exports[`Snapshot Testing Optional Props 1`] = `
   classes={
     Object {
       "menuItem": undefined,
+      "root": undefined,
       "selectIcon": undefined,
     }
   }
-  component="div"
+  component="span"
   count={20}
   data-qa="snapshot-qa"
   labelDisplayedRows={[Function]}
@@ -47,10 +48,11 @@ exports[`Snapshot Testing Required Props 1`] = `
   classes={
     Object {
       "menuItem": undefined,
+      "root": undefined,
       "selectIcon": undefined,
     }
   }
-  component="div"
+  component="span"
   count={20}
   labelDisplayedRows={[Function]}
   onChangePage={[MockFunction]}
@@ -80,10 +82,11 @@ exports[`should match snapshot 1`] = `
   classes={
     Object {
       "menuItem": undefined,
+      "root": undefined,
       "selectIcon": undefined,
     }
   }
-  component="div"
+  component="span"
   count={20}
   labelDisplayedRows={[Function]}
   onChangePage={[MockFunction]}

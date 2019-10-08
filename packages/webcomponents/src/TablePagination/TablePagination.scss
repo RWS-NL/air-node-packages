@@ -19,6 +19,14 @@
   left: 1.4rem;
 }
 
-.menuItem {
-  font-size: $fontSizeDefault;
+.text {
+  font-size: $fontSizeDefault !important;
+
+  > * {
+    font-size: $fontSizeDefault !important;
+
+    > * {
+      font-size: $fontSizeDefault !important;
+    }
+  }
 }
