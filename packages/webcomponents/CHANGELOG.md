@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.3](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@7.0.2...@rws-air/webcomponents@7.0.3) (2019-10-08)
+
+
+### Bug Fixes
+
+* **webcomponents:** fixed the size of the sorting label in tableheaders ([5532a45](https://github.com/RWS-NL/air-node-packages/commit/5532a45))
+
+
+
+
+
 ## [7.0.2](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@7.0.1...@rws-air/webcomponents@7.0.2) (2019-10-03)
 
 **Note:** Version bump only for package @rws-air/webcomponents
