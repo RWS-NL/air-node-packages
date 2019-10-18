@@ -1,24 +1,7 @@
 {
+  "extends": "@favware/ts-config",
   "compilerOptions": {
-    "module": "esnext",
     "target": "es5",
-    "lib": [
-      "esnext",
-      "dom"
-    ],
-    "allowJs": false,
-    "allowSyntheticDefaultImports": true,
-    "declaration": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
-    "newLine": "lf",
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "sourceMap": true,
-    "strict": true,
     "jsx": "react",
     "downlevelIteration": true
   },
