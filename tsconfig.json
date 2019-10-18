@@ -3,7 +3,8 @@
   "compilerOptions": {
     "target": "es5",
     "jsx": "react",
-    "downlevelIteration": true
+    "downlevelIteration": true,
+    "incremental": false
   },
   "exclude": [
     "node_modules",
