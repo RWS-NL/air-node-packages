@@ -1147,9 +1147,9 @@
     eslint-plugin-jest "^22.17.0"
 
 "@favware/yamlreader@^1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@favware/yamlreader/-/yamlreader-1.0.8.tgz#76e5374e5f5ab6d86cf2ca7cba4c50a8f4435e27"
-  integrity sha512-W2bj2mn4cezMWVB/Ingl7XLn8vT7PArxTevuF5SlslthN3vjIzeES+da27Z/t7QZOmgBgkkfHh4ujG/Vz5qcRQ==
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@favware/yamlreader/-/yamlreader-1.1.2.tgz#7aad19b2a3d9a83f5f0ac3dcc18a34d812733391"
+  integrity sha512-YmUfHdtFM16RJ8ctVWwjvEuMzQNL35HzytrZuPzkdIWvHA57SXOBQhRAg87u5FNULgZPSIywN0l2eQNZhYDnxg==
   dependencies:
     js-yaml "^3.13.1"
 
@@ -12427,7 +12427,6 @@ react-dom@^16.10.2:
 
 "react-dom@link:./node_modules/react-dom":
   version "0.0.0"
-  uid ""
 
 react-error-overlay@^6.0.3:
   version "6.0.3"
@@ -12531,7 +12530,6 @@ react@^16.10.2:
 
 "react@link:./node_modules/react":
   version "0.0.0"
-  uid ""
 
 read-cmd-shim@^1.0.1:
   version "1.0.4"
