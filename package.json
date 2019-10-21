@@ -20,9 +20,7 @@
     "scripts:duplicateESLintConfig": "yarn scripts:runner scripts/duplicateESLintConfig",
     "scripts:duplicateStylelintConfig": "yarn scripts:runner scripts/duplicateStylelintConfig",
     "scripts:yarnAfterPull": "yarn scripts:runner scripts/yarnAfterPull",
-    "ci:build": "lerna run build --stream --ignore local-components-test --max-buffer=1024000",
-    "ci:lint": "lerna run lint --stream --max-buffer=1024000",
-    "ci:test": "lerna run test --stream --max-buffer=1024000"
+    "ci:build": "lerna run build --stream --ignore local-components-test --max-buffer=1024000"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
