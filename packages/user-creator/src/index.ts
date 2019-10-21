@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /* eslint-disable no-console */
 import readYaml from '@favware/yamlreader';
 import chalk from 'chalk';

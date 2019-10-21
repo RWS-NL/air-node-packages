@@ -5,9 +5,9 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "lerna run build --stream --parallel --ignore local-components-test",
-    "lint": "lerna run lint --stream --parallel",
-    "test": "lerna run test --stream --parallel",
+    "build": "lerna run build --parallel --ignore local-components-test",
+    "lint": "lerna run lint --parallel",
+    "test": "lerna run test --parallel",
     "test:web": "pushd packages/webcomponents && yarn test --watchAll -u && popd",
     "docs": "typedoc",
     "commit": "git-cz",
@@ -19,8 +19,7 @@
     "scripts:validateNoOnly": "yarn scripts:runner scripts/validateNoOnly",
     "scripts:duplicateESLintConfig": "yarn scripts:runner scripts/duplicateESLintConfig",
     "scripts:duplicateStylelintConfig": "yarn scripts:runner scripts/duplicateStylelintConfig",
-    "scripts:yarnAfterPull": "yarn scripts:runner scripts/yarnAfterPull",
-    "ci:build": "lerna run build --stream --ignore local-components-test --max-buffer=1024000"
+    "scripts:yarnAfterPull": "yarn scripts:runner scripts/yarnAfterPull"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
@@ -48,8 +47,8 @@
     "@types/react": "^16.9.9",
     "@types/react-dom": "^16.9.2",
     "@types/yargs": "^13.0.3",
-    "@typescript-eslint/eslint-plugin": "^2.4.0",
-    "@typescript-eslint/parser": "^2.4.0",
+    "@typescript-eslint/eslint-plugin": "~2.3.3",
+    "@typescript-eslint/parser": "~2.3.3",
     "chalk": "^2.4.2",
     "classnames": "^2.2.6",
     "concurrently": "^5.0.0",
@@ -79,7 +78,6 @@
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-scripts": "^3.2.0",
-    "replace": "^1.1.1",
     "rimraf": "^3.0.0",
     "rollup": "^1.25.0",
     "rollup-plugin-banner": "^0.2.1",

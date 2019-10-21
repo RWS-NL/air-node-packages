@@ -17,8 +17,7 @@
     "lint": "eslint src --fix --ext .ts,.tsx",
     "test": "yarn lint",
     "prebuild": "yarn lint",
-    "build": "rollup -c rollup.config.js",
-    "postbuild": "replace --silent \"// #!/usr/bin/env node\" \"#!/usr/bin/env node\" dist/index.js dist/index.es.js",
+    "build": "tsc -p .",
     "start": "yarn build -w",
     "start:ts": "babel-node src/creator.ts --extensions \".ts\""
   },
