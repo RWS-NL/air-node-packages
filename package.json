@@ -5,9 +5,9 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "lerna run build --parallel --ignore local-components-test",
-    "lint": "lerna run lint --parallel",
-    "test": "lerna run test --parallel",
+    "build": "lerna run build --stream --parallel --ignore local-components-test",
+    "lint": "lerna run lint --stream --parallel",
+    "test": "lerna run test --stream --parallel",
     "test:web": "pushd packages/webcomponents && yarn test --watchAll -u && popd",
     "docs": "typedoc",
     "commit": "git-cz",
@@ -20,9 +20,9 @@
     "scripts:duplicateESLintConfig": "yarn scripts:runner scripts/duplicateESLintConfig",
     "scripts:duplicateStylelintConfig": "yarn scripts:runner scripts/duplicateStylelintConfig",
     "scripts:yarnAfterPull": "yarn scripts:runner scripts/yarnAfterPull",
-    "ci:build": "lerna run build --ignore local-components-test --max-buffer 1024000",
-    "ci:lint": "lerna run lint --max-buffer 1024000",
-    "ci:test": "lerna run test --max-buffer 1024000"
+    "ci:build": "lerna run build --stream --ignore local-components-test --max-buffer=1024000",
+    "ci:lint": "lerna run lint --stream --max-buffer=1024000",
+    "ci:test": "lerna run test --stream --max-buffer=1024000"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
