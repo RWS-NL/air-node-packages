@@ -18,7 +18,10 @@
     "scripts:validateNoOnly": "babel-node scripts/validateNoOnly --extensions \".ts\"",
     "scripts:duplicateESLintConfig": "babel-node scripts/duplicateESLintConfig --extensions \".ts\"",
     "scripts:duplicateStylelintConfig": "babel-node scripts/duplicateStylelintConfig --extensions \".ts\"",
-    "scripts:yarnAfterPull": "babel-node scripts/yarnAfterPull --extensions \".ts\""
+    "scripts:yarnAfterPull": "babel-node scripts/yarnAfterPull --extensions \".ts\"",
+    "ci:build": "lerna run build --ignore local-components-test",
+    "ci:lint": "lerna run lint ",
+    "ci:test": "lerna run test "
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
