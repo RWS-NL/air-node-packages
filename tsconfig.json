@@ -30,7 +30,11 @@
       "scripts/duplicateESLintConfig",
       "scripts/duplicateStylelintConfig",
       "scripts/validateNoOnly",
-      "scripts/yarnAfterPull"
+      "scripts/yarnAfterPull",
+      "packages/local-components-test/src/Home",
+      "packages/local-components-test/src/utils/constants",
+      "packages/local-components-test/src/Providers",
+      "packages/local-components-test/src/index"
     ],
     "excludeExternals": true,
     "excludePrivate": true,
