@@ -141,8 +141,15 @@
 				</a>
 				<ol>
 					<li>Run <code>yarn build</code> to ensure lint, test and build succeeds</li>
-					<li>Run <code>lerna publish</code> to start the publishing process. This automatically runs lint, test, build, doc generation, version bump, and publish to npm (in that order).</li>
-					<li>Once everything has been published new documentation will have been generated in the <code>docs</code> folder. Push this to GitHub.</li>
+					<li>Run <code>lerna publish</code> to start the publishing process. This automatically runs lint, test, build, version bump, and publish to npm (in that order).</li>
+				</ol>
+				<a href="#updating-api-documentation" id="updating-api-documentation" style="color: inherit; text-decoration: none;">
+					<h2>Updating API Documentation</h2>
+				</a>
+				<ol>
+					<li>Go to the pipeline for air-node-packages</li>
+					<li>Trigger the job for update documentation</li>
+					<li>Let it run to completion</li>
 				</ol>
 				<a href="#if-publish-fails-in-build" id="if-publish-fails-in-build" style="color: inherit; text-decoration: none;">
 					<h4>If publish fails in build</h4>
