@@ -98,7 +98,7 @@ Run `yarn build`  from repository root
 1. Run `yarn build` to ensure lint, test and build succeeds
 2. Run `lerna publish` to start the publishing process. This automatically runs lint, test, build, version bump, and publish to npm (in that order).
 
-## Updating API Documentation
+### Updating API Documentation
 
 1. Go to the pipeline for air-node-packages
 2. Trigger the job for update documentation
