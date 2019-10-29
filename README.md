@@ -93,16 +93,16 @@ To easily update failing snapshots for webcomponents run this command from repos
 
 Run `yarn build`  from repository root
 
-### Publishing new versions
-
-1. Run `yarn build` to ensure lint, test and build succeeds
-2. Run `lerna publish` to start the publishing process. This automatically runs lint, test, build, version bump, and publish to npm (in that order).
-
 ### Updating API Documentation
 
 1. Go to the pipeline for air-node-packages
 2. Trigger the job for update documentation
 3. Let it run to completion
+
+### Publishing new versions
+
+1. Run `yarn build` to ensure lint, test and build succeeds
+2. Run `lerna publish` to start the publishing process. This automatically runs lint, test, build, version bump, and publish to npm (in that order).
 
 #### If publish fails in build
 1. Go to GitHub repository -> releases: https://github.com/RWS-NL/air-node-packages/releases.
