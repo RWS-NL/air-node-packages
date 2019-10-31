@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@7.2.0...@rws-air/webcomponents@7.2.1) (2019-10-31)
+
+
+### Bug Fixes
+
+* **webcomponents->button:** fixed customLabelClasses being invalid prop ([ae2f50a](https://github.com/RWS-NL/air-node-packages/commit/ae2f50a8ef194a50dd6caccb6ea07625812e12c0))
+
+
+
+
+
 # [7.2.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@7.1.2...@rws-air/webcomponents@7.2.0) (2019-10-31)
 
 
