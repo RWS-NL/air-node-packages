@@ -25,7 +25,7 @@ export const splitTableCellText = (text: string) => {
   return text;
 };
 
-/** Creates a table body cell using pre-defined Rijkswatestaat styling */
+/** Creates a table body cell using pre-defined Rijkswaterstaat styling */
 export const TableBodyCell: FC<TableBodyCellProps> = props => (
   <MUITableCell
     data-qa={props['data-qa']}

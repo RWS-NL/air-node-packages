@@ -14,7 +14,7 @@ export interface LogoProps extends SVGProps<any> {
   customclasses?: customCss;
 }
 
-/** Creates a logo using pre-defined Rijkswatestaat SVG */
+/** Creates a logo using pre-defined Rijkswaterstaat SVG */
 export const Logo: FC<LogoProps> = props => {
   return (
     <Fragment>

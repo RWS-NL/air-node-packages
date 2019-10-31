@@ -79,7 +79,7 @@ export interface TableProps extends
   showBottomPagination?: boolean;
 }
 
-/** Creates a table using pre-defined Rijkswatestaat styling */
+/** Creates a table using pre-defined Rijkswaterstaat styling */
 export const Table: FC<TableProps> = props => {
   const addCustomClasses = (component: keyof TableCustomClasses, baseClass?: string): string[] => {
     const classes: string[] = [];

@@ -40,7 +40,7 @@ export interface SearchBarProps {
   'data-qa'?: dataQa;
 };
 
-/** Creates a search bar using pre-defined Rijkswatestaat styling */
+/** Creates a search bar using pre-defined Rijkswaterstaat styling */
 export const SearchBar: FC<SearchBarProps> = props => {
   const [value, setValue] = useState('');
   const placeholder = props.placeholder || 'Search...';

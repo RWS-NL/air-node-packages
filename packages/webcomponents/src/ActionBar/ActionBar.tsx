@@ -22,7 +22,7 @@ export interface ActionBarProps {
   buttonAction?: (...args: any[]) => any;
 }
 
-/** Creates an action bar using pre-defined Rijkswatestaat styling */
+/** Creates an action bar using pre-defined Rijkswaterstaat styling */
 export const ActionBar: FC<ActionBarProps> = props => {
   const getTitle = useMemo<ActionBarProps['title']>(() => {
     if (typeof props.title === 'string') {

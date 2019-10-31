@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({ buttonShadow: { bo
 );
 
 /**
- * Creates a button using pre-defined Rijkswatestaat styling
+ * Creates a button using pre-defined Rijkswaterstaat styling
  *
  * ```jsx
  * import { Button } from '@rws-air/webcomponents'

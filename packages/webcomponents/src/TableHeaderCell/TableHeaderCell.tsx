@@ -34,7 +34,7 @@ export interface TableHeaderCellProps extends MUITableCellProps {
   customclasses?: customCss;
 }
 
-/** Creates a table header cell using pre-defined Rijkswatestaat styling */
+/** Creates a table header cell using pre-defined Rijkswaterstaat styling */
 export const TableHeaderCell: FC<TableHeaderCellProps> = props => (
   <MUITableCell
     data-qa={props['data-qa']}

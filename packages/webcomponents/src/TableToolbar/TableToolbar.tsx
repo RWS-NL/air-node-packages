@@ -75,7 +75,7 @@ export const renderIcons = (iconData: RenderIconProps[]) => {
   );
 };
 
-/** Creates a table toolbar using pre-defined Rijkswatestaat styling */
+/** Creates a table toolbar using pre-defined Rijkswaterstaat styling */
 export const TableToolbar: FC<TableToolbarProps> = props => {
   const debouncedSearch = debouncer((input: string) => props.onsearchinput(input), props.searchdebounce || 400);
 

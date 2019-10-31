@@ -42,7 +42,7 @@ export interface DropdownbuttonProps {
 }
 
 /**
- * Creates a button using pre-defined Rijkswatestaat styling
+ * Creates a button using pre-defined Rijkswaterstaat styling
  *
  * ```jsx
  * import { Dropdownbutton } from '@rws-air/webcomponents'
