@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Testing Optional Props 1`] = `
+<WithStyles(ForwardRef(Grid))
+  alignItems="center"
+  container={true}
+  direction="column"
+>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    xs={12}
+  >
+    <WithStyles(ForwardRef(ButtonGroup))
+      aria-label="split button"
+      color="secondary"
+      variant="outlined"
+    >
+      <Memo(Button)
+        aria-haspopup="true"
+        color="secondary"
+        label="one"
+        onClick={[Function]}
+        size="small"
+        startIcon={<Memo(ArrowDropDownIcon) />}
+        variant="outlined"
+      />
+      <Memo(Button)
+        color="secondary"
+        label={<Memo(CloudDownloadIcon) />}
+        onClick={
+          [MockFunction] {
+            "calls": Array [
+              Array [],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": undefined,
+              },
+            ],
+          }
+        }
+        variant="outlined"
+      />
+    </WithStyles(ForwardRef(ButtonGroup))>
+    <ForwardRef(Popper)
+      anchorEl={null}
+      disablePortal={true}
+      open={false}
+      placement="bottom-start"
+      transition={true}
+    >
+      <Component />
+    </ForwardRef(Popper)>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
+`;
+
+exports[`Snapshot Testing Required Props 1`] = `
+<WithStyles(ForwardRef(Grid))
+  alignItems="center"
+  container={true}
+  direction="column"
+>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    xs={12}
+  >
+    <WithStyles(ForwardRef(ButtonGroup))
+      aria-label="split button"
+      color="primary"
+      variant="contained"
+    >
+      <Memo(Button)
+        aria-haspopup="true"
+        color="primary"
+        label="one"
+        onClick={[Function]}
+        size="small"
+        startIcon={<Memo(ArrowDropDownIcon) />}
+        variant="contained"
+      />
+      <Memo(Button)
+        color="primary"
+        label={<Memo(CloudDownloadIcon) />}
+        onClick={
+          [MockFunction] {
+            "calls": Array [
+              Array [],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": undefined,
+              },
+            ],
+          }
+        }
+        variant="contained"
+      />
+    </WithStyles(ForwardRef(ButtonGroup))>
+    <ForwardRef(Popper)
+      anchorEl={null}
+      disablePortal={true}
+      open={false}
+      placement="bottom-start"
+      transition={true}
+    >
+      <Component />
+    </ForwardRef(Popper)>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
+`;
