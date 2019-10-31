@@ -22,8 +22,10 @@ export interface ButtonProps {
   'data-qa'?: dataQa;
   /** Custom CSS classes to pass to the button */
   customclasses?: customCss;
+  /** Custom CSS classes to pass to the button label */
+  customLabelClasses?: customCss;
   /** The action that should be triggered when clicking the button */
-  onClick(): any;
+  onClick(): unknown;
 }
 
 const useStyles = makeStyles((theme: Theme) => createStyles({ buttonShadow: { boxShadow: theme.shadows[1], border: 'transparant' } }),
@@ -51,7 +53,7 @@ export const Button: FC<MUIButtonProps<'button', ButtonProps>> = props => {
       className={classnames(props.customclasses)}
       classes={{
         root: css.button,
-        label: css.buttonLabel,
+        label: classnames(css.buttonLabel, props.customLabelClasses),
         disabled: css.buttonDisabled,
         containedPrimary: classnames(css.buttonPrimary, classes.buttonShadow),
         containedSecondary: classnames(css.buttonSecondary, classes.buttonShadow),
