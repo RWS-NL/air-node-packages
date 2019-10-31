@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.2.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@7.1.2...@rws-air/webcomponents@7.2.0) (2019-10-31)
+
+
+### Features
+
+* **webcomponents:** parse all additional params for button ([f216fcc](https://github.com/RWS-NL/air-node-packages/commit/f216fcc7de1ec18d795142c38f3cfc0c462e85e5))
+* **webcomponents->button:** add optional prop customLabelClasses ([664ebbf](https://github.com/RWS-NL/air-node-packages/commit/664ebbf00f332ed28739f9d05d7074b7c0b6da89))
+* **webcomponents->dropdownbutton:** new component: Dropdown button! ([92d855b](https://github.com/RWS-NL/air-node-packages/commit/92d855b779ef3c796eb64becacc8170b8a0ef28b))
+
+
+
+
+
 ## [7.1.2](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@7.1.1...@rws-air/webcomponents@7.1.2) (2019-10-08)
 
 
