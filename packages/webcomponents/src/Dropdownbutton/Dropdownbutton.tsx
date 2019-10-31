@@ -92,7 +92,7 @@ export const Dropdownbutton: FC<DropdownbuttonProps> = props => {
             startIcon={<ArrowDropDownIcon />}
             label={cutText(props.options[selectedIndex], 30)}
             className={css.buttonOverwrites}
-            customLabelClasses={css.labelOverwrites}
+            customlabelclasses={css.labelOverwrites}
             data-qa={props.dropdownButtonDataQa}
             customclasses={props.dropdownButtonCustomClasses}
           />
