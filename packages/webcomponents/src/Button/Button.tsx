@@ -60,6 +60,7 @@ export const Button: FC<MUIButtonProps<'button', ButtonProps>> = props => {
         outlinedSecondary: classnames(css.buttonOutlinedSecondary, classes.buttonShadow),
       }}
       href={undefined}
+      {...props}
     >
       {props.label}
     </MUIButton>
