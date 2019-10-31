@@ -26,7 +26,7 @@ describe('Component Tests', () => {
 
     iconButton.simulate('click');
 
-    expect(mockButtonClick).toHaveBeenCalledWith();
+    expect(mockButtonClick).toHaveBeenCalledWith('one');
     expect(mockButtonClick).toHaveBeenCalledTimes(1);
   });
 });

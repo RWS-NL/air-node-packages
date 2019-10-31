@@ -27,19 +27,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
       <Memo(Button)
         color="secondary"
         label={<Memo(CloudDownloadIcon) />}
-        onClick={
-          [MockFunction] {
-            "calls": Array [
-              Array [],
-            ],
-            "results": Array [
-              Object {
-                "type": "return",
-                "value": undefined,
-              },
-            ],
-          }
-        }
+        onClick={[Function]}
         variant="outlined"
       />
     </WithStyles(ForwardRef(ButtonGroup))>
@@ -83,19 +71,7 @@ exports[`Snapshot Testing Required Props 1`] = `
       <Memo(Button)
         color="primary"
         label={<Memo(CloudDownloadIcon) />}
-        onClick={
-          [MockFunction] {
-            "calls": Array [
-              Array [],
-            ],
-            "results": Array [
-              Object {
-                "type": "return",
-                "value": undefined,
-              },
-            ],
-          }
-        }
+        onClick={[Function]}
         variant="contained"
       />
     </WithStyles(ForwardRef(ButtonGroup))>
