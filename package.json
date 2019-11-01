@@ -78,7 +78,7 @@
     "jest": "^24.9.0",
     "jest-circus": "^24.9.0",
     "jsonfile": "^5.0.0",
-    "lerna": "~3.17.0",
+    "lerna": "~3.18.3",
     "lint-staged": "^9.4.2",
     "lodash.debounce": "^4.0.8",
     "lodash.orderby": "^4.6.0",
