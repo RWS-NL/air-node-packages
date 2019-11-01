@@ -7,17 +7,21 @@ import MenuList from '@material-ui/core/MenuList';
 import Paper from '@material-ui/core/Paper';
 import Popper from '@material-ui/core/Popper';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
-import React, { FC, MouseEvent as ReactMouseEvent, useRef, useState, ReactNode, memo } from 'react';
-import { customCss, dataQa, cutText } from '../constants';
-import Button from '../Button/Button';
-import css from './Dropdownbutton.scss';
 import classnames from 'classnames';
+import React, { FC, memo, MouseEvent as ReactMouseEvent, ReactNode, useRef, useState } from 'react';
+import Button from '../Button/Button';
+import { customCss, cutText, dataQa } from '../constants';
+import css from './Dropdownbutton.scss';
 
 export interface DropdownbuttonProps {
   /** The options to show in the dropdown menu */
   options: string[];
   /** The icon displayed in the button to the right. This button is clicked to trigger {@link onClick()} */
   ButtonIcon: ReactNode;
+  /** The maximum length of the text in the button before being cut off with ellipsis @default 30 */
+  maxTextLength?: number;
+  /** The default option to select, using zero-based index for {@link options} @default 0 */
+  defaultOptionId?: number;
   /** Any options to disabled, using zero-based index for {@link options} */
   disabledOptionIds?: number[];
   /** The color type of the buttons @default primary */
@@ -57,7 +61,7 @@ export interface DropdownbuttonProps {
 export const Dropdownbutton: FC<DropdownbuttonProps> = props => {
   const [ open, setOpen ] = useState(false);
   const anchorRef = useRef<HTMLDivElement>(null);
-  const [ selectedIndex, setSelectedIndex ] = useState(0);
+  const [ selectedIndex, setSelectedIndex ] = useState(props.defaultOptionId || 0);
 
   const handleMenuItemClick = (_event: ReactMouseEvent<HTMLLIElement, MouseEvent>, index: number) => {
     setSelectedIndex(index);
@@ -76,7 +80,7 @@ export const Dropdownbutton: FC<DropdownbuttonProps> = props => {
   };
 
   return (
-    <Grid container direction='column' alignItems='center'>
+    <Grid item container direction='column'>
       <Grid item xs={12}>
         <ButtonGroup
           variant={props.variant || 'contained'}
@@ -84,7 +88,7 @@ export const Dropdownbutton: FC<DropdownbuttonProps> = props => {
           ref={anchorRef}
           aria-label='split button'
           data-qa={props.buttonGroupDataQa}
-          className={classnames(props.buttonGroupCustomClasses)}
+          className={classnames(css.buttonGroup, props.buttonGroupCustomClasses)}
         >
           <Button
             variant={props.variant || 'contained'}
@@ -94,8 +98,8 @@ export const Dropdownbutton: FC<DropdownbuttonProps> = props => {
             aria-haspopup='true'
             onClick={handleToggle}
             startIcon={<ArrowDropDownIcon />}
-            label={cutText(props.options[selectedIndex], 30)}
-            className={css.buttonOverwrites}
+            label={cutText(props.options[selectedIndex], props.maxTextLength || 30)}
+            className={css.buttonOverwritesLeft}
             customlabelclasses={css.labelOverwrites}
             data-qa={props.dropdownButtonDataQa}
             customclasses={props.dropdownButtonCustomClasses}
@@ -105,7 +109,7 @@ export const Dropdownbutton: FC<DropdownbuttonProps> = props => {
             color={props.color || 'primary'}
             onClick={() => props.onClick(props.options[selectedIndex])}
             label={props.ButtonIcon}
-            className={css.buttonOverwrites}
+            className={css.buttonOverwritesRight}
             data-qa={props.iconButtonDataQa}
             customclasses={props.iconButtonCustomClasses}
           />

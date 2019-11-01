@@ -2,9 +2,9 @@
 
 exports[`Snapshot Testing Optional Props 1`] = `
 <WithStyles(ForwardRef(Grid))
-  alignItems="center"
   container={true}
   direction="column"
+  item={true}
 >
   <WithStyles(ForwardRef(Grid))
     item={true}
@@ -47,9 +47,9 @@ exports[`Snapshot Testing Optional Props 1`] = `
 
 exports[`Snapshot Testing Required Props 1`] = `
 <WithStyles(ForwardRef(Grid))
-  alignItems="center"
   container={true}
   direction="column"
+  item={true}
 >
   <WithStyles(ForwardRef(Grid))
     item={true}

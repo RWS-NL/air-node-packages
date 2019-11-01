@@ -1,8 +1,21 @@
-.buttonOverwrites {
+/* stylelint-disable value-no-vendor-prefix */
+.buttonOverwritesLeft {
+  margin-right: 0 !important;
+  width: 100%;
+  width: -moz-available; /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+  width: fill-available;
+}
+
+.buttonOverwritesRight {
   margin-right: 0 !important;
 }
 
 .labelOverwrites {
-  justify-content: end;
-  width: 12rem;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.buttonGroup {
+  width: 100%;
 }

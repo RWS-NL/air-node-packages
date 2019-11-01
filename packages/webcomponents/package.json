@@ -67,5 +67,6 @@
     "air",
     "typescript",
     "ts"
-  ]
+  ],
+  "dependencies": {}
 }
