@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.3](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@7.2.2...@rws-air/webcomponents@7.2.3) (2019-11-01)
+
+
+### Bug Fixes
+
+* **webcomponents->dropdownbutton:** fixed sizing across screens ([abf1c8c](https://github.com/RWS-NL/air-node-packages/commit/abf1c8cd218df1b7f60cb8ba4a0961a239321a1a))
+
+
+
+
+
 ## [7.2.2](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@7.2.1...@rws-air/webcomponents@7.2.2) (2019-11-01)
 
 **Note:** Version bump only for package @rws-air/webcomponents

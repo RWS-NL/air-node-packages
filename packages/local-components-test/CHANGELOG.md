@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.6](https://github.com/RWS-NL/air-node-packages/compare/local-components-test@1.2.5...local-components-test@1.2.6) (2019-11-01)
+
+
+### Bug Fixes
+
+* **webcomponents->dropdownbutton:** fixed sizing across screens ([abf1c8c](https://github.com/RWS-NL/air-node-packages/commit/abf1c8cd218df1b7f60cb8ba4a0961a239321a1a))
+
+
+
+
+
 ## [1.2.5](https://github.com/RWS-NL/air-node-packages/compare/local-components-test@1.2.4...local-components-test@1.2.5) (2019-10-31)
 
 **Note:** Version bump only for package local-components-test
