@@ -46,9 +46,11 @@ export interface JestScreenshotOptions {
    * Should be an array of Slack channel IDs
    * Only used when slackUpload is set to true
    * @example
+   * ```typescript
    * {
    *   slackChannels: ['C1234567890', 'C2345678901', 'C3456789012']
    * }
+   * ```
    */
   slackChannels?: string[];
 }
