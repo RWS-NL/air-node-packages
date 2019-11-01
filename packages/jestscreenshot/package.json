@@ -6,7 +6,6 @@
   "license": "AGPL-3.0-or-later",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
-  "jsnext:main": "dist/index.es.js",
   "homepage": "https://github.com/RWS-NL/air-node-packages/tree/master/packages/jestscreenshot#readme",
   "scripts": {
     "lint": "eslint src --fix --ext .ts,.tsx",
