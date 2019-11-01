@@ -11,6 +11,7 @@ import React, { FC, MouseEvent as ReactMouseEvent, useRef, useState, ReactNode, 
 import { customCss, dataQa, cutText } from '../constants';
 import Button from '../Button/Button';
 import css from './Dropdownbutton.scss';
+import classnames from 'classnames';
 
 export interface DropdownbuttonProps {
   /** The options to show in the dropdown menu */
@@ -37,6 +38,8 @@ export interface DropdownbuttonProps {
   dropdownButtonCustomClasses?: customCss;
   /** Custom CSS classes to pass to the icon button */
   iconButtonCustomClasses?: customCss;
+  /** Custom CSS classes to pass to the buttonGroup */
+  buttonGroupCustomClasses?: customCss;
   /** The action to trigger when the button with {@link ButtonIcon} is pressed. Receives the currently selected option as first parameter */
   onClick(selectedOption: string): unknown;
 }
@@ -81,6 +84,7 @@ export const Dropdownbutton: FC<DropdownbuttonProps> = props => {
           ref={anchorRef}
           aria-label='split button'
           data-qa={props.buttonGroupDataQa}
+          className={classnames(props.buttonGroupCustomClasses)}
         >
           <Button
             variant={props.variant || 'contained'}
