@@ -103,7 +103,7 @@ describe('Content Testing', () => {
   const content = <div>Content</div>;
   beforeAll(() => setup(true, false, {}, content));
 
-  test('should ', () => {
+  test('should', () => {
     expect(modal.find('[data-qa="modal-content"]').children().exists()).toBe(true);
     expect(modal.find('[data-qa="modal-content"]').children()).toStrictEqual(shallow(content));
   });
