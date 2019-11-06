@@ -26,8 +26,8 @@
     "access": "public"
   },
   "engines": {
-    "node": ">=12",
-    "npm": ">=5"
+    "node": ">=10",
+    "npm": ">=6"
   },
   "repository": {
     "type": "git",
