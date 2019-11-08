@@ -18,4 +18,8 @@
 
 .buttonGroup {
   width: 100%;
+
+  &Disabled {
+    box-shadow: none;
+  }
 }

@@ -91,6 +91,7 @@ export const Dropdownbutton: FC<DropdownbuttonProps> = props => {
           aria-label='split button'
           data-qa={props.buttonGroupDataQa}
           className={classnames(css.buttonGroup, props.buttonGroupCustomClasses)}
+          classes={{ root: classnames({ [css.buttonGroupDisabled]: props.disabled }) }}
           disabled={props.disabled}
         >
           <Button

@@ -10,7 +10,7 @@ const Home: FC = () => {
   return (
     <Grid container direction='row'>
       <Grid item style={{ marginRight: '1%', width: '30vw' }}>
-        <Dropdownbutton disabledOptionIds={[ 0, 1 ]} defaultOptionId={3} options={options} ButtonIcon={<CloudDownload />} onClick={(prop: string) => console.log('I am clicked', prop)} />
+        <Dropdownbutton options={options} ButtonIcon={<CloudDownload />} onClick={(prop: string) => console.log('I am clicked', prop)} />
       </Grid>
       <Grid item style={{ marginRight: '1%' }}>
         <Button fullWidth variant='contained' color='primary' onClick={() => undefined} label='test' />
