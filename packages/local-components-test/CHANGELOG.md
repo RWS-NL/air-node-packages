@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.8](https://github.com/RWS-NL/air-node-packages/compare/local-components-test@1.2.7...local-components-test@1.2.8) (2019-11-08)
+
+
+### Bug Fixes
+
+* **webcomponents->dropdownbutton:** properly apply rws style for disable ([b459865](https://github.com/RWS-NL/air-node-packages/commit/b459865eb25c8af6c3b818f069cfdb795b949325))
+
+
+
+
+
 ## [1.2.7](https://github.com/RWS-NL/air-node-packages/compare/local-components-test@1.2.6...local-components-test@1.2.7) (2019-11-06)
 
 **Note:** Version bump only for package local-components-test
