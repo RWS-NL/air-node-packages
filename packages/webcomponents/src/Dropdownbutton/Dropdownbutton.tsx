@@ -16,6 +16,8 @@ import css from './Dropdownbutton.scss';
 export interface DropdownbuttonProps {
   /** The options to show in the dropdown menu */
   options: string[];
+  /** Disable the entire dropdown button */
+  disabled?: boolean;
   /** The icon displayed in the button to the right. This button is clicked to trigger {@link onClick()} */
   ButtonIcon: ReactNode;
   /** The maximum length of the text in the button before being cut off with ellipsis @default 30 */
@@ -89,6 +91,7 @@ export const Dropdownbutton: FC<DropdownbuttonProps> = props => {
           aria-label='split button'
           data-qa={props.buttonGroupDataQa}
           className={classnames(css.buttonGroup, props.buttonGroupCustomClasses)}
+          disabled={props.disabled}
         >
           <Button
             variant={props.variant || 'contained'}

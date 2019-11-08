@@ -1,4 +1,4 @@
-import Dropdownbutton from '../Dropdownbutton/Dropdownbutton';
+import Dropdownbutton, { DropdownbuttonProps } from '../Dropdownbutton/Dropdownbutton';
 import { shallow, ShallowWrapper } from 'enzyme';
 import CloudDownload from '@material-ui/icons/CloudDownload';
 import React from 'react';
@@ -31,6 +31,26 @@ describe('Component Tests', () => {
   });
 });
 
+describe('Component Test - Disabled Button', () => {
+  let dropdownButton: ShallowWrapper<DropdownbuttonProps>;
+
+  beforeAll(() => {
+    dropdownButton = shallow<DropdownbuttonProps>(
+      <Dropdownbutton
+        disabled
+        ButtonIcon={<CloudDownload/>}
+        onClick={mockButtonClick}
+        buttonGroupDataQa='button-group'
+        options={[ 'one', 'two' ]}/>
+    );
+  });
+
+  test('button should be disabled and no call should be made to the click function', () => {
+    const buttonGroup = dropdownButton.find('[data-qa="button-group"]');
+    expect(buttonGroup.prop('disabled')).toBe(true);
+  });
+});
+
 describe('Snapshot Testing', () => {
   test('Required Props', () => {
     const dropdownButton = shallow(<Dropdownbutton ButtonIcon={<CloudDownload/>} onClick={mockButtonClick} options={[ 'one', 'two', 'three' ]} />);
@@ -46,6 +66,7 @@ describe('Snapshot Testing', () => {
         disabledOptionIds={[ 2 ]}
         color='secondary'
         variant='outlined'
+        disabled
       />
     );
     expect(dropdownButton).toMatchSnapshot();
