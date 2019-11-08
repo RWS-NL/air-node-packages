@@ -13,6 +13,11 @@ exports[`Snapshot Testing Optional Props 1`] = `
     <WithStyles(ForwardRef(ButtonGroup))
       aria-label="split button"
       className=""
+      classes={
+        Object {
+          "root": "undefined",
+        }
+      }
       color="secondary"
       disabled={true}
       variant="outlined"
@@ -59,6 +64,11 @@ exports[`Snapshot Testing Required Props 1`] = `
     <WithStyles(ForwardRef(ButtonGroup))
       aria-label="split button"
       className=""
+      classes={
+        Object {
+          "root": "",
+        }
+      }
       color="primary"
       variant="contained"
     >
