@@ -23,7 +23,7 @@
     "jest-environment-puppeteer": ">=4"
   },
   "dependencies": {
-    "form-data": "^2.5.1",
+    "form-data": "^3.0.0",
     "mkdirp": "^0.5.1",
     "moment": "^2.24.0",
     "node-fetch": "^2.6.0"
