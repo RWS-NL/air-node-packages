@@ -9,6 +9,7 @@ import classnames from 'classnames';
 import css from './Modal.scss';
 import React, { FC, Fragment, KeyboardEvent, ReactNode, memo, useMemo } from 'react';
 import { dataQa } from '../constants';
+import { objectHasProperty } from '@rws-air/utils';
 
 export interface ModalQAs {
   /** Data-qa applied to the main modal */
@@ -50,6 +51,10 @@ export interface ModalProps {
   disableBackdropClick?: boolean;
   /** Whether pressing the escape key should close the modal (triggers closeAction) */
   disableEscapeKeyDown?: boolean;
+  /** Whether to disable the cancel button */
+  disableCancelButton?: boolean;
+  /** Whether to disable the title icon */
+  disableTitleIcon?: boolean;
 }
 
 /** Creates a modal using pre-defined Rijkswaterstaat styling */
@@ -74,15 +79,19 @@ export const Modal: FC<ModalProps> = props => {
 
   const renderModalActions = useMemo(
     () => {
-      if (props.hasOwnProperty('isSimpleModal') ? props.isSimpleModal : false) {
+      if (objectHasProperty(props, 'isSimpleModal') ? props.isSimpleModal : false) {
         return (
           <DialogActions classes={{ root: css.modalActions }} data-qa={props.modalqas.actions}>
-            <Button
-              data-qa={props.modalqas.actionCancel || 'modal-cancel-button'}
-              onClick={handleClose} variant='outlined' color='primary'
-              label={props.cancelButtonText ? props.cancelButtonText : 'cancel'}
-              customclasses={css.modalButtonCancel}
-            />
+            {
+              objectHasProperty(props, 'disableCancelButton')
+                ? <Fragment/>
+                : <Button
+                  data-qa={props.modalqas.actionCancel || 'modal-cancel-button'}
+                  onClick={handleClose} variant='outlined' color='primary'
+                  label={props.cancelButtonText ? props.cancelButtonText : 'cancel'}
+                  customclasses={css.modalButtonCancel}
+                />
+            }
             <Button
               data-qa={props.modalqas.actionConfirm || 'modal-confirm-button'}
               onClick={handleConfirm} variant='contained' color='primary'
@@ -102,7 +111,7 @@ export const Modal: FC<ModalProps> = props => {
   );
 
   const renderModalTitleIcon = useMemo(() => {
-    if (props.hasOwnProperty('isSimpleModal') ? props.isSimpleModal : false) {
+    if ((objectHasProperty(props, 'isSimpleModal') ? props.isSimpleModal : false) && (objectHasProperty(props, 'disableTitleIcon') ? !props.disableTitleIcon : true)) {
       return (
         props.modalType === 'warning'
           ? <WarningIcon color='error' className={classnames(css.titleIcon)} />
@@ -115,9 +124,10 @@ export const Modal: FC<ModalProps> = props => {
 
   return (
     <Dialog
-      disableBackdropClick
-      disableEscapeKeyDown
-      open={Boolean(props.open)} onClose={props.closeAction}
+      disableBackdropClick={objectHasProperty(props, 'disableBackdropClick') ? props.disableBackdropClick : true}
+      disableEscapeKeyDown={objectHasProperty(props, 'disableEscapeKeyDown') ? props.disableEscapeKeyDown : true}
+      open={Boolean(props.open)}
+      onClose={props.closeAction}
       classes={{ root: css.modal }}
       onKeyPress={handleConfirmKeyPress}
       data-qa={props.modalqas.modal || 'modal'}
@@ -127,8 +137,8 @@ export const Modal: FC<ModalProps> = props => {
         className={classnames(
           css.title,
           {
-            [css.titleIconOffset]: props.hasOwnProperty('isSimpleModal') ? props.isSimpleModal : false,
-            [css.titleIconOffsetHeader]: props.hasOwnProperty('isSimpleModal') ? props.isSimpleModal : false,
+            [css.titleIconOffset]: objectHasProperty(props, 'isSimpleModal') ? props.isSimpleModal : false,
+            [css.titleIconOffsetHeader]: objectHasProperty(props, 'isSimpleModal') ? props.isSimpleModal : false,
           }
         )}
       >
@@ -140,7 +150,7 @@ export const Modal: FC<ModalProps> = props => {
       <DialogContent
         classes={{ root: css.modalBody }}
         className={
-          classnames({ [css.modalContentSmall]: props.hasOwnProperty('isSimpleModal') ? props.isSimpleModal : false })
+          classnames({ [css.modalContentSmall]: objectHasProperty(props, 'isSimpleModal') ? props.isSimpleModal : false })
         }
         data-qa={props.modalqas.content || 'modal-content'}
       >

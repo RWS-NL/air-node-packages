@@ -25,10 +25,11 @@
   "peerDependencies": {
     "@material-ui/core": ">=4",
     "@material-ui/icons": ">=4",
+    "@rws-air/utils": ">=1",
     "classnames": ">=2",
     "lodash.debounce": ">=4",
-    "react": ">=16",
-    "react-dom": ">=16"
+    "react-dom": ">=16",
+    "react": ">=16"
   },
   "browserslist": {
     "production": [

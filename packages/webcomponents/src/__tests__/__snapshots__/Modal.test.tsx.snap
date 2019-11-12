@@ -185,3 +185,63 @@ exports[`Snapshot Testing Required Props 1`] = `
   />
 </WithStyles(ForwardRef(Dialog))>
 `;
+
+exports[`Snapshot Testing Simple with disabled properties 1`] = `
+<WithStyles(ForwardRef(Dialog))
+  classes={
+    Object {
+      "root": undefined,
+    }
+  }
+  data-qa="modal"
+  disableBackdropClick={true}
+  disableEscapeKeyDown={true}
+  onClose={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  onKeyPress={[Function]}
+  open={true}
+>
+  <WithStyles(ForwardRef(DialogTitle))
+    className="undefined"
+    data-qa="modal-title"
+  >
+    Awesome Topic
+  </WithStyles(ForwardRef(DialogTitle))>
+  <WithStyles(ForwardRef(DialogContent))
+    className="undefined"
+    classes={
+      Object {
+        "root": undefined,
+      }
+    }
+    data-qa="modal-content"
+  />
+  <WithStyles(ForwardRef(DialogActions))
+    classes={
+      Object {
+        "root": undefined,
+      }
+    }
+    data-qa="modal-actions"
+  >
+    <Memo(Button)
+      color="primary"
+      data-qa="modal-confirm-button"
+      label="ok"
+      onClick={[Function]}
+      variant="contained"
+    />
+  </WithStyles(ForwardRef(DialogActions))>
+</WithStyles(ForwardRef(Dialog))>
+`;

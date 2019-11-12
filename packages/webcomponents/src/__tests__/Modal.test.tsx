@@ -132,4 +132,9 @@ describe('Snapshot Testing', () => {
     setup(true, true);
     expect(modal).toMatchSnapshot();
   });
+
+  test('Simple with disabled properties', () => {
+    setup(true, true, { disableCancelButton: true, disableTitleIcon: true });
+    expect(modal).toMatchSnapshot();
+  });
 });
