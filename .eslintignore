@@ -1,4 +1,5 @@
 **/dist/*.js
+**/dist/*.d.ts
 **/node_modules/
 **/.github/
 **/.vscode/

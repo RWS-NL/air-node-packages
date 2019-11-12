@@ -7,3 +7,4 @@ export * from './StableTableSort';
 export * from './UseWindowSize';
 export * from './CapitilizeFirstLetter';
 export * from './SnakeToCamelCase';
+export * from './TimeUtils';
