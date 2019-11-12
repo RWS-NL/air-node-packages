@@ -1,6 +1,6 @@
 {
   "name": "@rws-air/webcomponents",
-  "version": "7.2.8",
+  "version": "7.3.0",
   "description": "Standard Webcomponents for AIR projects",
   "author": "@rws-air",
   "license": "AGPL-3.0-or-later",
@@ -28,8 +28,8 @@
     "@rws-air/utils": ">=1",
     "classnames": ">=2",
     "lodash.debounce": ">=4",
-    "react-dom": ">=16",
-    "react": ">=16"
+    "react": ">=16",
+    "react-dom": ">=16"
   },
   "browserslist": {
     "production": [
