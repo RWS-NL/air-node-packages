@@ -8,9 +8,8 @@
   "module": "dist/index.es.js",
   "homepage": "https://github.com/RWS-NL/air-node-packages/tree/master/packages/webcomponents#readme",
   "scripts": {
-    "test": "react-scripts test --watchAll=false",
+    "test": "jest",
     "posttest": "git checkout tsconfig.json",
-    "test:modules": "react-scripts test",
     "posttest:modules": "git checkout tsconfig.json",
     "lint": "concurrently \"yarn lint:js\" \"yarn lint:scss\"",
     "lint:js": "eslint src --fix --ext .ts,.tsx",

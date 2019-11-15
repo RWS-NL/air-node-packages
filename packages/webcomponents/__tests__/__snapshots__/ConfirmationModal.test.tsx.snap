@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Testing Required Props 1`] = `
+<WithStyles(ForwardRef(Dialog))
+  classes={
+    Object {
+      "root": "modal",
+    }
+  }
+  data-qa="modal"
+  disableBackdropClick={true}
+  disableEscapeKeyDown={true}
+  onKeyPress={[Function]}
+  open={false}
+>
+  <WithStyles(ForwardRef(DialogTitle))
+    className="title titleIconOffset titleIconOffsetHeader"
+    data-qa="modal-title"
+  >
+    <WarningIcon
+      className="titleIcon"
+      color="error"
+    />
+    Awesome Topic
+  </WithStyles(ForwardRef(DialogTitle))>
+  <WithStyles(ForwardRef(DialogContent))
+    className="modalContentSmall"
+    classes={
+      Object {
+        "root": "modalBody",
+      }
+    }
+    data-qa="modal-content"
+  >
+    <Component />
+  </WithStyles(ForwardRef(DialogContent))>
+  <WithStyles(ForwardRef(DialogActions))
+    classes={
+      Object {
+        "root": "modalActions",
+      }
+    }
+    data-qa="modal-actions"
+  >
+    <Memo(Button)
+      color="primary"
+      customclasses="modalButtonCancel"
+      data-qa="modal-cancel-button"
+      label="CANCEL"
+      onClick={[Function]}
+      variant="outlined"
+    />
+    <Memo(Button)
+      color="primary"
+      customclasses="modalButtonOk"
+      data-qa="modal-confirm-button"
+      label="OK"
+      onClick={[Function]}
+      variant="contained"
+    />
+  </WithStyles(ForwardRef(DialogActions))>
+</WithStyles(ForwardRef(Dialog))>
+`;

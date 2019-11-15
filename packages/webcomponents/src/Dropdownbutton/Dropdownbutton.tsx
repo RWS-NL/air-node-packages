@@ -10,8 +10,9 @@ import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import classnames from 'classnames';
 import React, { FC, memo, MouseEvent as ReactMouseEvent, ReactNode, useRef, useState } from 'react';
 import Button from '../Button/Button';
-import { customCss, cutText, dataQa } from '../constants';
+import { customCss, dataQa } from '../constants';
 import css from './Dropdownbutton.scss';
+import { cutText } from '@rws-air/utils';
 
 export interface DropdownbuttonProps {
   /** The options to show in the dropdown menu */

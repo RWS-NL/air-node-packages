@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Testing Optional Props 1`] = `
+<WithStyles(ForwardRef(Tooltip))
+  classes={
+    Object {
+      "popper": "popper",
+      "tooltip": "tooltip",
+    }
+  }
+  enterDelay={300}
+  placement="top"
+  style={
+    Object {
+      "borderLeftColor": "red",
+    }
+  }
+  title={
+    <ForwardRef(StyledComponent)
+      className="box"
+      data-qa="snap-qa"
+    >
+      SnapTitle
+    </ForwardRef(StyledComponent)>
+  }
+>
+  <span>
+    Snappy Text
+  </span>
+</WithStyles(ForwardRef(Tooltip))>
+`;
+
+exports[`Snapshot Testing Required Props 1`] = `
+<WithStyles(ForwardRef(Tooltip))
+  classes={
+    Object {
+      "popper": "popper",
+      "tooltip": "tooltip",
+    }
+  }
+  enterDelay={300}
+  placement="top"
+  title={
+    <ForwardRef(StyledComponent)
+      className="box"
+    >
+      SnapTitle
+    </ForwardRef(StyledComponent)>
+  }
+>
+  <span>
+    Snappy Text
+  </span>
+</WithStyles(ForwardRef(Tooltip))>
+`;
