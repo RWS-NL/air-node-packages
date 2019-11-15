@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@8.0.0...@rws-air/webcomponents@8.0.1) (2019-11-15)
+
+
+### Bug Fixes
+
+* **webcomponents:** pass children through custom prop ([6396e20](https://github.com/RWS-NL/air-node-packages/commit/6396e20b46c5844a3963c9756faa4c6171cea332))
+
+
+
+
+
 # [8.0.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@7.3.0...@rws-air/webcomponents@8.0.0) (2019-11-15)
 
 
