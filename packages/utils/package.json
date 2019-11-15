@@ -5,15 +5,15 @@
   "author": "@rws-air",
   "license": "AGPL-3.0-or-later",
   "main": "dist/index.js",
-  "module": "dist/index.es.js",
+  "typings": "dist/index.d.ts",
   "homepage": "https://github.com/RWS-NL/air-node-packages/tree/master/packages/utils#readme",
   "scripts": {
     "lint": "eslint src __tests__ --fix --ext ts",
     "test": "jest",
     "prebuild": "yarn lint && yarn test",
-    "build": "rollup -c rollup.config.js",
-    "ci:build": "rollup -c rollup.config.js",
-    "start": "yarn build -w"
+    "build": "tsc",
+    "ci:build": "tsc",
+    "start": "tsc -w"
   },
   "files": [
     "dist"
