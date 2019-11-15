@@ -95,11 +95,7 @@ export const ConfirmationModal: FC<ConfirmationModalProps> = props => {
     >
       <DialogTitle
         data-qa={props.modalqas?.title || 'modal-title'}
-        className={classnames(
-          css.title,
-          css.titleIconOffset,
-          css.titleIconOffsetHeader
-        )}
+        className={classnames(css.title, css.titleIconOffset)}
       >
         <Fragment>
           {renderModalTitleIcon}
