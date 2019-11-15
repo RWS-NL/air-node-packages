@@ -14,7 +14,7 @@ exports[`Snapshot Testing Required Props 1`] = `
   open={false}
 >
   <WithStyles(ForwardRef(DialogTitle))
-    className="title titleIconOffset titleIconOffsetHeader"
+    className="title titleIconOffset"
     data-qa="modal-title"
   >
     <WarningIcon

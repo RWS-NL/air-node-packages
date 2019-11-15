@@ -49,11 +49,11 @@
   padding-top: 3vw;
 
   > * {
+    align-content: center;
     color: $logoBlue;
+    display: flex;
     font-size: 1.1rem;
     font-weight: bolder;
-    display: flex;
-    align-content: center;
   }
 
   &Icon {
