@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Testing Circular Skeleton 1`] = `
+<span
+  className="skeleton"
+  style={
+    Object {
+      "borderRadius": "50%",
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  ‌
+</span>
+`;
+
+exports[`Snapshot Testing Optional Props 1`] = `
+<span
+  className="skeleton"
+  style={
+    Object {
+      "borderRadius": "0%",
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  ‌
+</span>
+`;
+
+exports[`Snapshot Testing Required Props 1`] = `
+<span
+  className="skeleton"
+  style={
+    Object {
+      "borderRadius": "0%",
+      "height": undefined,
+      "width": undefined,
+    }
+  }
+>
+  ‌
+</span>
+`;

@@ -1,0 +1,409 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Testing Optional Props 1`] = `
+<Fragment>
+  <Memo(TableToolbar)
+    customSearchbarClasses=""
+    customclasses=""
+    data-qa="table-toolbar"
+    onsearchclear={[MockFunction]}
+    onsearchinput={[MockFunction]}
+    searchplaceholderlabel="Search..."
+  />
+  <Memo(TablePagination)
+    count={4}
+    customClasses="tableTopPagination"
+    data-qa="table-pagination"
+    labelPaginationOf="of"
+    labelRowsPerPage="Rows per page"
+    onChangePage={[MockFunction]}
+    onChangeRowsPerPage={[MockFunction]}
+    page={0}
+    rowsPerPage={5}
+    rowsPerPageOptions={
+      Array [
+        2,
+        4,
+        5,
+        10,
+      ]
+    }
+  />
+  <WithStyles(ForwardRef(Table))
+    className="table"
+    data-qa="table"
+  >
+    <WithStyles(ForwardRef(TableHead))
+      className=""
+      data-qa="table-header"
+    >
+      <WithStyles(ForwardRef(TableRow))
+        className=""
+        data-qa="table-header-row"
+      >
+        <Memo(TableHeaderCell)
+          customclasses=""
+          data-qa="table-header-cell"
+          header={
+            Object {
+              "label": "name",
+            }
+          }
+          key="name"
+          onRequestSort={
+            [MockFunction] {
+              "calls": Array [
+                Array [
+                  "name",
+                ],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
+            }
+          }
+          order="asc"
+          orderby="name"
+          tooltiplabel="Sort"
+          tooltipplacement="bottom-start"
+        />
+        <Memo(TableHeaderCell)
+          customclasses=""
+          data-qa="table-header-cell"
+          header={
+            Object {
+              "label": "email",
+            }
+          }
+          key="email"
+          onRequestSort={
+            [MockFunction] {
+              "calls": Array [
+                Array [
+                  "name",
+                ],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
+            }
+          }
+          order="asc"
+          orderby="name"
+          tooltiplabel="Sort"
+          tooltipplacement="bottom-start"
+        />
+        <Memo(TableHeaderCell)
+          customclasses=""
+          data-qa="table-header-cell"
+          header={
+            Object {
+              "label": "id",
+              "numeric": true,
+            }
+          }
+          key="id"
+          onRequestSort={
+            [MockFunction] {
+              "calls": Array [
+                Array [
+                  "name",
+                ],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
+            }
+          }
+          order="asc"
+          orderby="name"
+          tooltiplabel="Sort"
+          tooltipplacement="bottom-start"
+        />
+      </WithStyles(ForwardRef(TableRow))>
+    </WithStyles(ForwardRef(TableHead))>
+    <WithStyles(ForwardRef(TableBody))
+      className=""
+      data-qa="table-body"
+    >
+      <WithStyles(ForwardRef(TableRow))
+        data-qa="table-body-row"
+        hover={true}
+        key="4567893"
+        tabIndex={-1}
+      >
+        <Memo(TableBodyCell)
+          content="Robin Hood"
+        />
+        <Memo(TableBodyCell)
+          content="robin.hood@winked.com"
+        />
+        <Memo(TableBodyCell)
+          content={23456789}
+        />
+      </WithStyles(ForwardRef(TableRow))>
+      <WithStyles(ForwardRef(TableRow))
+        data-qa="table-body-row"
+        hover={true}
+        key="4567893"
+        tabIndex={-1}
+      >
+        <Memo(TableBodyCell)
+          content="Darth Vader"
+        />
+        <Memo(TableBodyCell)
+          content="darth.vader@thedeathstart.com"
+        />
+        <Memo(TableBodyCell)
+          content={9876}
+        />
+      </WithStyles(ForwardRef(TableRow))>
+      <WithStyles(ForwardRef(TableRow))
+        data-qa="table-body-row"
+        hover={true}
+        key="4567893"
+        tabIndex={-1}
+      >
+        <Memo(TableBodyCell)
+          content="Kaladin Stormblessed"
+        />
+        <Memo(TableBodyCell)
+          content="kaladin.stormblessed@thearmy.com"
+        />
+        <Memo(TableBodyCell)
+          content={567890}
+        />
+      </WithStyles(ForwardRef(TableRow))>
+      <WithStyles(ForwardRef(TableRow))
+        data-qa="table-body-row"
+        hover={true}
+        key="4567893"
+        tabIndex={-1}
+      >
+        <Memo(TableBodyCell)
+          content="Steve Jobs"
+        />
+        <Memo(TableBodyCell)
+          content="steve.jobs@apple.com"
+        />
+        <Memo(TableBodyCell)
+          content={1}
+        />
+      </WithStyles(ForwardRef(TableRow))>
+    </WithStyles(ForwardRef(TableBody))>
+  </WithStyles(ForwardRef(Table))>
+  <Memo(TablePagination)
+    count={4}
+    customClasses=""
+    data-qa="table-pagination"
+    labelPaginationOf="of"
+    labelRowsPerPage="Rows per page"
+    onChangePage={[MockFunction]}
+    onChangeRowsPerPage={[MockFunction]}
+    page={0}
+    rowsPerPage={5}
+    rowsPerPageOptions={
+      Array [
+        2,
+        4,
+        5,
+        10,
+      ]
+    }
+  />
+</Fragment>
+`;
+
+exports[`Snapshot Testing Required Props 1`] = `
+<Fragment>
+  <Memo(TableToolbar)
+    customSearchbarClasses=""
+    customclasses=""
+    data-qa="table-toolbar"
+    onsearchclear={[MockFunction]}
+    onsearchinput={[MockFunction]}
+    searchplaceholderlabel="Search..."
+  />
+  <WithStyles(ForwardRef(Table))
+    className="table"
+    data-qa="table"
+  >
+    <WithStyles(ForwardRef(TableHead))
+      className=""
+      data-qa="table-header"
+    >
+      <WithStyles(ForwardRef(TableRow))
+        className=""
+        data-qa="table-header-row"
+      >
+        <Memo(TableHeaderCell)
+          customclasses=""
+          data-qa="table-header-cell"
+          header={
+            Object {
+              "label": "name",
+            }
+          }
+          key="name"
+          onRequestSort={
+            [MockFunction] {
+              "calls": Array [
+                Array [
+                  "name",
+                ],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
+            }
+          }
+          order="asc"
+          orderby="name"
+          tooltiplabel="Sort"
+          tooltipplacement="bottom-start"
+        />
+        <Memo(TableHeaderCell)
+          customclasses=""
+          data-qa="table-header-cell"
+          header={
+            Object {
+              "label": "email",
+            }
+          }
+          key="email"
+          onRequestSort={
+            [MockFunction] {
+              "calls": Array [
+                Array [
+                  "name",
+                ],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
+            }
+          }
+          order="asc"
+          orderby="name"
+          tooltiplabel="Sort"
+          tooltipplacement="bottom-start"
+        />
+        <Memo(TableHeaderCell)
+          customclasses=""
+          data-qa="table-header-cell"
+          header={
+            Object {
+              "label": "id",
+              "numeric": true,
+            }
+          }
+          key="id"
+          onRequestSort={
+            [MockFunction] {
+              "calls": Array [
+                Array [
+                  "name",
+                ],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
+            }
+          }
+          order="asc"
+          orderby="name"
+          tooltiplabel="Sort"
+          tooltipplacement="bottom-start"
+        />
+      </WithStyles(ForwardRef(TableRow))>
+    </WithStyles(ForwardRef(TableHead))>
+    <WithStyles(ForwardRef(TableBody))
+      className=""
+      data-qa="table-body"
+    >
+      <WithStyles(ForwardRef(TableRow))
+        data-qa="table-body-row"
+        hover={true}
+        key="4567893"
+        tabIndex={-1}
+      >
+        <Memo(TableBodyCell)
+          content="Robin Hood"
+        />
+        <Memo(TableBodyCell)
+          content="robin.hood@winked.com"
+        />
+        <Memo(TableBodyCell)
+          content={23456789}
+        />
+      </WithStyles(ForwardRef(TableRow))>
+      <WithStyles(ForwardRef(TableRow))
+        data-qa="table-body-row"
+        hover={true}
+        key="4567893"
+        tabIndex={-1}
+      >
+        <Memo(TableBodyCell)
+          content="Darth Vader"
+        />
+        <Memo(TableBodyCell)
+          content="darth.vader@thedeathstart.com"
+        />
+        <Memo(TableBodyCell)
+          content={9876}
+        />
+      </WithStyles(ForwardRef(TableRow))>
+      <WithStyles(ForwardRef(TableRow))
+        data-qa="table-body-row"
+        hover={true}
+        key="4567893"
+        tabIndex={-1}
+      >
+        <Memo(TableBodyCell)
+          content="Kaladin Stormblessed"
+        />
+        <Memo(TableBodyCell)
+          content="kaladin.stormblessed@thearmy.com"
+        />
+        <Memo(TableBodyCell)
+          content={567890}
+        />
+      </WithStyles(ForwardRef(TableRow))>
+      <WithStyles(ForwardRef(TableRow))
+        data-qa="table-body-row"
+        hover={true}
+        key="4567893"
+        tabIndex={-1}
+      >
+        <Memo(TableBodyCell)
+          content="Steve Jobs"
+        />
+        <Memo(TableBodyCell)
+          content="steve.jobs@apple.com"
+        />
+        <Memo(TableBodyCell)
+          content={1}
+        />
+      </WithStyles(ForwardRef(TableRow))>
+    </WithStyles(ForwardRef(TableBody))>
+  </WithStyles(ForwardRef(Table))>
+</Fragment>
+`;

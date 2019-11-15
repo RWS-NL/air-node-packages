@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Content Testing should contain content 1`] = `<Component />`;
+
+exports[`Snapshot Testing Required Props 1`] = `
+<WithStyles(ForwardRef(Dialog))
+  classes={
+    Object {
+      "root": "modal",
+    }
+  }
+  data-qa="modal"
+  disableBackdropClick={true}
+  disableEscapeKeyDown={true}
+  open={false}
+>
+  <WithStyles(ForwardRef(DialogTitle))
+    className="title"
+    data-qa="modal-title"
+  >
+    Awesome Topic
+  </WithStyles(ForwardRef(DialogTitle))>
+  <WithStyles(ForwardRef(DialogContent))
+    data-qa="modal-content"
+  >
+    <Component />
+  </WithStyles(ForwardRef(DialogContent))>
+</WithStyles(ForwardRef(Dialog))>
+`;

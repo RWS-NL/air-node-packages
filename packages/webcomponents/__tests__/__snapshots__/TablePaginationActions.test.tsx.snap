@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Testing Optional Props 1`] = `
+<Styled(MuiBox)
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+    }
+  }
+>
+  <WithStyles(ForwardRef(IconButton))
+    className="noHoverBackground"
+    color="primary"
+    disabled={true}
+    onClick={[Function]}
+  >
+    <FirstPageIcon />
+  </WithStyles(ForwardRef(IconButton))>
+  <WithStyles(ForwardRef(IconButton))
+    className="noHoverBackground"
+    color="primary"
+    disabled={true}
+    onClick={[Function]}
+  >
+    <KeyboardArrowLeftIcon />
+  </WithStyles(ForwardRef(IconButton))>
+  <WithStyles(ForwardRef(Chip))
+    className="activePageChip ie11ChipCorrection"
+    color="primary"
+    key="0"
+    label={1}
+    onClick={[Function]}
+    variant="default"
+  />
+  <span
+    className="paginationNumbers"
+    key="1"
+    onClick={[Function]}
+  >
+    2
+  </span>
+  <span
+    className="paginationNumbers"
+    key="2"
+    onClick={[Function]}
+  >
+    3
+  </span>
+  <span
+    className="paginationNumbers"
+    key="3"
+    onClick={[Function]}
+  >
+    4
+  </span>
+  <span
+    className="paginationNumbers"
+    key="4"
+    onClick={[Function]}
+  >
+    5
+  </span>
+  <WithStyles(ForwardRef(IconButton))
+    className="noHoverBackground"
+    color="primary"
+    disabled={false}
+    onClick={[Function]}
+  >
+    <KeyboardArrowRightIcon />
+  </WithStyles(ForwardRef(IconButton))>
+  <WithStyles(ForwardRef(IconButton))
+    className="noHoverBackground"
+    color="primary"
+    disabled={false}
+    onClick={[Function]}
+  >
+    <LastPageIcon />
+  </WithStyles(ForwardRef(IconButton))>
+</Styled(MuiBox)>
+`;
+
+exports[`Snapshot Testing Required Props 1`] = `
+<Styled(MuiBox)
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+    }
+  }
+>
+  <WithStyles(ForwardRef(IconButton))
+    className="noHoverBackground"
+    color="primary"
+    disabled={true}
+    onClick={[Function]}
+  >
+    <FirstPageIcon />
+  </WithStyles(ForwardRef(IconButton))>
+  <WithStyles(ForwardRef(IconButton))
+    className="noHoverBackground"
+    color="primary"
+    disabled={true}
+    onClick={[Function]}
+  >
+    <KeyboardArrowLeftIcon />
+  </WithStyles(ForwardRef(IconButton))>
+  <WithStyles(ForwardRef(Chip))
+    className="activePageChip ie11ChipCorrection"
+    color="primary"
+    key="0"
+    label={1}
+    onClick={[Function]}
+    variant="default"
+  />
+  <span
+    className="paginationNumbers"
+    key="1"
+    onClick={[Function]}
+  >
+    2
+  </span>
+  <span
+    className="paginationNumbers"
+    key="2"
+    onClick={[Function]}
+  >
+    3
+  </span>
+  <span
+    className="paginationNumbers"
+    key="3"
+    onClick={[Function]}
+  >
+    4
+  </span>
+  <span
+    className="paginationNumbers"
+    key="4"
+    onClick={[Function]}
+  >
+    5
+  </span>
+  <WithStyles(ForwardRef(IconButton))
+    className="noHoverBackground"
+    color="primary"
+    disabled={false}
+    onClick={[Function]}
+  >
+    <KeyboardArrowRightIcon />
+  </WithStyles(ForwardRef(IconButton))>
+  <WithStyles(ForwardRef(IconButton))
+    className="noHoverBackground"
+    color="primary"
+    disabled={false}
+    onClick={[Function]}
+  >
+    <LastPageIcon />
+  </WithStyles(ForwardRef(IconButton))>
+</Styled(MuiBox)>
+`;

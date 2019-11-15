@@ -1,6 +1,8 @@
 export * from './ActionBar';
 export * from './Button';
+export * from './ConfirmationModal';
 export * from './constants';
+export * from './Dropdownbutton';
 export * from './LoadingSkeleton';
 export * from './Logo';
 export * from './Modal';
@@ -15,4 +17,3 @@ export * from './TablePaginationActions';
 export * from './TableToolbar';
 export * from './Tooltip';
 export * from './ZeroWidthSpace';
-export * from './Dropdownbutton';

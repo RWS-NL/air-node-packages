@@ -1,9 +1,10 @@
 import React, { FC, useMemo, memo } from 'react';
-import { objectHasProperty, customCss, dataQa } from '../constants';
+import { customCss, dataQa } from '../constants';
 import { Paper, IconButton } from '@material-ui/core';
 import css from './PaperButton.scss';
 import classnames from 'classnames';
 import Tooltip, { TooltipProps } from '../Tooltip/Tooltip';
+import { objectHasProperty } from '@rws-air/utils';
 
 export interface PaperButtonProps {
   /** The Material Icon to display in this paper button */

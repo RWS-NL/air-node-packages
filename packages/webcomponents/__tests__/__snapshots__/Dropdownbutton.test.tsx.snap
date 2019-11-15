@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Testing Optional Props 1`] = `
+<WithStyles(ForwardRef(Grid))
+  container={true}
+  direction="column"
+  item={true}
+>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    xs={12}
+  >
+    <WithStyles(ForwardRef(ButtonGroup))
+      aria-label="split button"
+      className="buttonGroup"
+      classes={
+        Object {
+          "root": "buttonGroupDisabled",
+        }
+      }
+      color="secondary"
+      disabled={true}
+      variant="outlined"
+    >
+      <Memo(Button)
+        aria-haspopup="true"
+        className="buttonOverwritesLeft"
+        color="secondary"
+        customlabelclasses="labelOverwrites"
+        label="one"
+        onClick={[Function]}
+        size="small"
+        startIcon={<Memo(ArrowDropDownIcon) />}
+        variant="outlined"
+      />
+      <Memo(Button)
+        className="buttonOverwritesRight"
+        color="secondary"
+        label={<Memo(CloudDownloadIcon) />}
+        onClick={[Function]}
+        variant="outlined"
+      />
+    </WithStyles(ForwardRef(ButtonGroup))>
+    <ForwardRef(Popper)
+      anchorEl={null}
+      disablePortal={true}
+      open={false}
+      placement="bottom-start"
+      transition={true}
+    >
+      <Component />
+    </ForwardRef(Popper)>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
+`;
+
+exports[`Snapshot Testing Required Props 1`] = `
+<WithStyles(ForwardRef(Grid))
+  container={true}
+  direction="column"
+  item={true}
+>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    xs={12}
+  >
+    <WithStyles(ForwardRef(ButtonGroup))
+      aria-label="split button"
+      className="buttonGroup"
+      classes={
+        Object {
+          "root": "",
+        }
+      }
+      color="primary"
+      variant="contained"
+    >
+      <Memo(Button)
+        aria-haspopup="true"
+        className="buttonOverwritesLeft"
+        color="primary"
+        customlabelclasses="labelOverwrites"
+        label="one"
+        onClick={[Function]}
+        size="small"
+        startIcon={<Memo(ArrowDropDownIcon) />}
+        variant="contained"
+      />
+      <Memo(Button)
+        className="buttonOverwritesRight"
+        color="primary"
+        label={<Memo(CloudDownloadIcon) />}
+        onClick={[Function]}
+        variant="contained"
+      />
+    </WithStyles(ForwardRef(ButtonGroup))>
+    <ForwardRef(Popper)
+      anchorEl={null}
+      disablePortal={true}
+      open={false}
+      placement="bottom-start"
+      transition={true}
+    >
+      <Component />
+    </ForwardRef(Popper)>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
+`;
