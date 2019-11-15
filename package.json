@@ -6,6 +6,7 @@
   ],
   "scripts": {
     "build": "lerna run build --parallel --ignore local-components-test",
+    "ci:build": "lerna run ci:build --parallel --ignore local-components-test",
     "lint": "eslint scripts/ packages/** --fix --ext js,ts,tsx",
     "test": "lerna run test --parallel",
     "test:web": "pushd packages/webcomponents && yarn test --watchAll -u && popd",
