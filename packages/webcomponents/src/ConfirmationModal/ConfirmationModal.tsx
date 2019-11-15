@@ -10,7 +10,7 @@ import { ModalProps, ModalQAs } from '../Modal/Modal';
 import React, { FC, Fragment, KeyboardEvent, memo, useMemo } from 'react';
 import Button from '../Button/Button';
 import { dataQa } from '../constants';
-import css from './Modal.scss';
+import css from './ConfirmationModal.scss';
 
 export interface ConfirmationModalQAs extends ModalQAs {
   /** Data-qa applied to the modal actions */
