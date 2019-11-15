@@ -1,8 +1,7 @@
 ---
 name: Bug report
-about: Report incorrect or unexpected behaviour of any package
-title: '[BUG]: '
-labels: 'Bug 👾'
+about: Report incorrect or unexpected behaviour of any of the packages
+title: 'Fix(): '
 assignees: ''
 
 ---
@@ -11,7 +10,7 @@ assignees: ''
 
 
 **Include a reproducible code sample here, if possible:**
-```js
+```ts
 
 // Place your code here
 

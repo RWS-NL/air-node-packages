@@ -1,8 +1,7 @@
 ---
 name: Feature request
-about: Request a feature for any package
-title: '[Request]: '
-labels: 'Addition 📤, Improvement 🎗️'
+about: Request a feature for the library
+title: 'Feat(): '
 assignees: ''
 
 ---
