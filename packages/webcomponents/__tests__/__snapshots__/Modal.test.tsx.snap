@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Content Testing should contain content 1`] = `<Component />`;
+exports[`Content Testing should contain content 1`] = `
+<div>
+  Hello Wolrd
+</div>
+`;
 
 exports[`Snapshot Testing Required Props 1`] = `
 <WithStyles(ForwardRef(Dialog))
@@ -21,9 +25,12 @@ exports[`Snapshot Testing Required Props 1`] = `
     Awesome Topic
   </WithStyles(ForwardRef(DialogTitle))>
   <WithStyles(ForwardRef(DialogContent))
+    className="content"
     data-qa="modal-content"
   >
-    <Component />
+    <div>
+      Hello Wolrd
+    </div>
   </WithStyles(ForwardRef(DialogContent))>
 </WithStyles(ForwardRef(Dialog))>
 `;

@@ -23,6 +23,7 @@ const setup = (
       closeAction={closeAction}
       confirmAction={confirmAction}
       open={isOpen}
+      dialogContent={<div>Hello Wolrd</div>}
       modalqas={{
         content: 'modal-content',
         modal: 'modal',

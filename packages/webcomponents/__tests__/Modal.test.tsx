@@ -10,6 +10,7 @@ const setup = (isOpen = false, props?: Partial<ModalProps>, DialogContent: () =>
     <Modal
       topic='Awesome Topic'
       open={isOpen}
+      dialogContent={<div>Hello Wolrd</div>}
       modalqas={{
         content: 'modal-content',
         modal: 'modal',

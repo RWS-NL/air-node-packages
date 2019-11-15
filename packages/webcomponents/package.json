@@ -9,8 +9,6 @@
   "homepage": "https://github.com/RWS-NL/air-node-packages/tree/master/packages/webcomponents#readme",
   "scripts": {
     "test": "jest",
-    "posttest": "git checkout tsconfig.json",
-    "posttest:modules": "git checkout tsconfig.json",
     "lint": "concurrently \"yarn lint:js\" \"yarn lint:scss\"",
     "lint:js": "eslint src --fix --ext .ts,.tsx",
     "lint:scss": "stylelint --fix ./src/styles/*.scss ./src/**/*.scss",

@@ -111,7 +111,7 @@ export const ConfirmationModal: FC<ConfirmationModalProps> = props => {
         className={css.modalContentSmall}
         data-qa={props.modalqas?.content || 'modal-content'}
       >
-        {props.children}
+        {props.dialogContent}
       </DialogContent>
       {renderModalActions}
     </Dialog>

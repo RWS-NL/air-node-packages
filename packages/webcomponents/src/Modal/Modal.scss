@@ -11,10 +11,12 @@
   }
 }
 
+.content {
+  padding: 0 2rem 2rem;
+}
+
 .title {
-  margin-left: 5vw;
-  margin-right: 5vw;
-  padding-top: 3vw;
+  padding: 3vw 2rem 1rem 2rem;
 
   > * {
     color: $logoBlue;

@@ -18,6 +18,8 @@ export interface ModalQAs {
 export interface ModalProps {
   /** Whether the modal should be opened or not */
   open: boolean;
+  /** The content to show in the modal */
+  dialogContent: JSX.Element;
   /** Object of data-qa tags to pass to the modal */
   modalqas?: ModalQAs;
   /** Title for the modal */
@@ -41,8 +43,8 @@ export const Modal: FC<ModalProps> = props => {
       <DialogTitle className={css.title} data-qa={props.modalqas?.title || 'modal-title'}>
         {props.topic}
       </DialogTitle>
-      <DialogContent data-qa={props.modalqas?.content || 'modal-content'} >
-        {props.children}
+      <DialogContent className={css.content} data-qa={props.modalqas?.content || 'modal-content'} >
+        {props.dialogContent}
       </DialogContent>
     </Dialog>
   );

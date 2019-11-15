@@ -32,7 +32,9 @@ exports[`Snapshot Testing Required Props 1`] = `
     }
     data-qa="modal-content"
   >
-    <Component />
+    <div>
+      Hello Wolrd
+    </div>
   </WithStyles(ForwardRef(DialogContent))>
   <WithStyles(ForwardRef(DialogActions))
     classes={
