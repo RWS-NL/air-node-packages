@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@1.2.0...@rws-air/utils@2.0.0) (2019-11-15)
+
+
+### Bug Fixes
+
+* **utils:** fixed missing exports ([a78e84a](https://github.com/RWS-NL/air-node-packages/commit/a78e84a59efae795b4618702f143b8580e8d9abf))
+
+
+### Features
+
+* rework modal ([#143](https://github.com/RWS-NL/air-node-packages/issues/143)) ([fd0da0c](https://github.com/RWS-NL/air-node-packages/commit/fd0da0c38de50e687c36e6b1a547321eb085a2cd))
+
+
+### BREAKING CHANGES
+
+* Modal has been completely changed and takes different props. This completely breaks any pre-existing instances of modal usage.
+
+Signed-off-by: Kevin Hendriks <kevin.hendriks@cgi.com>
+
+* ci(workflows): add github action to update docs
+
+* build(deps): bump versions
+
+* ci(actions): add label sync
+
+* docs(github): update templates
+
+
+
+
+
 # [1.2.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@1.1.1...@rws-air/utils@1.2.0) (2019-11-12)
 
 

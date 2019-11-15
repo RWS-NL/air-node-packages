@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@7.3.0...@rws-air/webcomponents@8.0.0) (2019-11-15)
+
+
+### Features
+
+* rework modal ([#143](https://github.com/RWS-NL/air-node-packages/issues/143)) ([fd0da0c](https://github.com/RWS-NL/air-node-packages/commit/fd0da0c38de50e687c36e6b1a547321eb085a2cd))
+
+
+### BREAKING CHANGES
+
+* Modal has been completely changed and takes different props. This completely breaks any pre-existing instances of modal usage.
+
+Signed-off-by: Kevin Hendriks <kevin.hendriks@cgi.com>
+
+* ci(workflows): add github action to update docs
+
+* build(deps): bump versions
+
+* ci(actions): add label sync
+
+* docs(github): update templates
+
+
+
+
+
 # [7.3.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@7.2.8...@rws-air/webcomponents@7.3.0) (2019-11-12)
 
 
