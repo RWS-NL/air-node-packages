@@ -31,7 +31,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         job-name: eslint
-        custom-glob: src,__tests__,scripts
+        custom-glob: packages/**/*.ts,packages/**/*.tsx,scripts
 
   Test:
     name: Test
