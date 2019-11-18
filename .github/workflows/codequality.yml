@@ -1,0 +1,58 @@
+name: Code Quality
+
+on:
+  push:
+    branches-ignore:
+      - master
+
+jobs:
+  ESLint:
+    name: ESLint
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Project
+      uses: actions/checkout@v1
+      with:
+        token: ${{ secrets.GitHub_PAT }}
+    - name: Use Node.js 12
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12
+    - name: Restore CI Cache
+      uses: actions/cache@v1
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-12-${{ hashFiles('**/yarn.lock') }}
+    - name: Install Deps
+      run: yarn
+    - name: eslint
+      uses: icrawl/action-eslint@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        job-name: eslint
+        custom-glob: src,__tests__,scripts
+
+  Test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Project
+      uses: actions/checkout@v1
+      with:
+        token: ${{ secrets.GitHub_PAT }}
+    - name: Use Node.js 12
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12
+    - name: Restore CI Cache
+      uses: actions/cache@v1
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-12-${{ hashFiles('**/yarn.lock') }}
+    - name: Install Deps
+      run: yarn
+    - name: Build Utils
+      run: yarn ci:build --scope @rws-air/utils
+    - name: Test
+      run: yarn test
