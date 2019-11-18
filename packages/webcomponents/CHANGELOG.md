@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.4](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@8.0.2...@rws-air/webcomponents@8.0.4) (2019-11-18)
+
+
+### Bug Fixes
+
+* **webcomponents->modal:** fix padding on title ([d9ecd0d](https://github.com/RWS-NL/air-node-packages/commit/d9ecd0d8f5ae0d112cdbb4742d26bd8bb09e5672))
+
+
+
+
+
 ## [8.0.3](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@8.0.2...@rws-air/webcomponents@8.0.3) (2019-11-15)
 
 **Note:** Version bump only for package @rws-air/webcomponents
