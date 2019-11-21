@@ -38,12 +38,12 @@ export const Modal: FC<ModalProps> = props => {
       disableEscapeKeyDown={objectHasProperty(props, 'disableEscapeKeyDown') ? props.disableEscapeKeyDown : true}
       open={Boolean(props.open)}
       classes={{ root: css.modal }}
-      data-qa={props.modalqas?.modal || 'modal'}
+      data-qa={props.modalqas ? props.modalqas.modal : 'modal'}
     >
-      <DialogTitle className={css.title} data-qa={props.modalqas?.title || 'modal-title'}>
+      <DialogTitle className={css.title} data-qa={props.modalqas ? props.modalqas.title : 'modal-title'}>
         {props.topic}
       </DialogTitle>
-      <DialogContent className={css.content} data-qa={props.modalqas?.content || 'modal-content'} >
+      <DialogContent className={css.content} data-qa={props.modalqas ? props.modalqas.content : 'modal-content'} >
         {props.dialogContent}
       </DialogContent>
     </Dialog>

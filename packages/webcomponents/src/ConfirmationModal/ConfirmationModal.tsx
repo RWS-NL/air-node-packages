@@ -56,15 +56,15 @@ export const ConfirmationModal: FC<ConfirmationModalProps> = props => {
   const renderModalActions = useMemo(
     () => {
       return (
-        <DialogActions classes={{ root: css.modalActions }} data-qa={props.modalqas?.actions || 'modal-actions'}>
+        <DialogActions classes={{ root: css.modalActions }} data-qa={props.modalqas ? props.modalqas.actions : 'modal-actions'}>
           <Button
-            data-qa={props.modalqas?.actionCancel || 'modal-cancel-button'}
+            data-qa={props.modalqas ? props.modalqas.actionCancel : 'modal-cancel-button'}
             onClick={handleClose} variant='outlined' color='primary'
             label={props.cancelButtonText ? props.cancelButtonText : 'cancel'}
             customclasses={css.modalButtonCancel}
           />
           <Button
-            data-qa={props.modalqas?.actionConfirm || 'modal-confirm-button'}
+            data-qa={props.modalqas ? props.modalqas.actionConfirm : 'modal-confirm-button'}
             onClick={handleConfirm} variant='contained' color='primary'
             label={props.okButtonText ? props.okButtonText : 'ok'}
             customclasses={css.modalButtonOk}
@@ -91,10 +91,10 @@ export const ConfirmationModal: FC<ConfirmationModalProps> = props => {
       open={Boolean(props.open)}
       classes={{ root: css.modal }}
       onKeyPress={handleConfirmKeyPress}
-      data-qa={props.modalqas?.modal || 'modal'}
+      data-qa={props.modalqas ? props.modalqas.modal : 'modal'}
     >
       <DialogTitle
-        data-qa={props.modalqas?.title || 'modal-title'}
+        data-qa={props.modalqas ? props.modalqas.title : 'modal-title'}
         className={classnames(css.title, css.titleIconOffset)}
       >
         <Fragment>
@@ -105,7 +105,7 @@ export const ConfirmationModal: FC<ConfirmationModalProps> = props => {
       <DialogContent
         classes={{ root: css.modalBody }}
         className={css.modalContentSmall}
-        data-qa={props.modalqas?.content || 'modal-content'}
+        data-qa={props.modalqas ? props.modalqas.content : 'modal-content'}
       >
         {props.dialogContent}
       </DialogContent>
