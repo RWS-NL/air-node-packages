@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.6](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@8.0.5...@rws-air/webcomponents@8.0.6) (2019-11-21)
+
+
+### Reverts
+
+* "refactor: remove optional chaining" ([6e926c6](https://github.com/RWS-NL/air-node-packages/commit/6e926c68cdf37bcc46c7f26e2e3beeb37b87cf09))
+
+
+
+
+
 ## [8.0.5](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@8.0.4...@rws-air/webcomponents@8.0.5) (2019-11-21)
 
 **Note:** Version bump only for package @rws-air/webcomponents
