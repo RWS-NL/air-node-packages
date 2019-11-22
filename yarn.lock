@@ -13266,7 +13266,6 @@ react-dom@^16.11.0:
 
 "react-dom@link:./node_modules/react-dom":
   version "0.0.0"
-  uid ""
 
 react-error-overlay@^6.0.3:
   version "6.0.3"
@@ -13380,7 +13379,6 @@ react@^16.11.0:
 
 "react@link:./node_modules/react":
   version "0.0.0"
-  uid ""
 
 read-cmd-shim@^1.0.1:
   version "1.0.4"
@@ -15702,9 +15700,9 @@ trough@^1.0.0:
     glob "^7.1.2"
 
 ts-jest@^24.1.0:
-  version "24.1.0"
-  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-24.1.0.tgz#2eaa813271a2987b7e6c3fefbda196301c131734"
-  integrity sha512-HEGfrIEAZKfu1pkaxB9au17b1d9b56YZSqz5eCVE8mX68+5reOvlM93xGOzzCREIov9mdH7JBG+s0UyNAqr0tQ==
+  version "24.2.0"
+  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-24.2.0.tgz#7abca28c2b4b0a1fdd715cd667d65d047ea4e768"
+  integrity sha512-Yc+HLyldlIC9iIK8xEN7tV960Or56N49MDP7hubCZUeI7EbIOTsas6rXCMB4kQjLACJ7eDOF4xWEO5qumpKsag==
   dependencies:
     bs-logger "0.x"
     buffer-from "1.x"
