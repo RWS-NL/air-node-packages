@@ -122,7 +122,11 @@ export const Table: FC<TableProps> = props => {
         props.showTopPagination ?
           renderTablePagination(classnames(addCustomClasses('tablePagination', css.tableTopPagination))) : <Fragment />
       }
-      <MUITable className={classnames(addCustomClasses('table', css.table))} data-qa={props.tableqas.table}>
+      <MUITable
+        stickyHeader={props.stickyHeader}
+        className={classnames(addCustomClasses('table', css.table))}
+        data-qa={props.tableqas.table}
+      >
         <TableHead data-qa={props.tableqas.header} className={classnames(addCustomClasses('tableHeader'))}>
           <TableRow data-qa={props.tableqas.headerRow} className={classnames(addCustomClasses('tableHeaderRow'))}>
             {props.headers.map(header => (
