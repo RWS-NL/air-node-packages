@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.1.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@8.0.6...@rws-air/webcomponents@8.1.0) (2019-11-22)
+
+
+### Features
+
+* **webcomponents->table:** parse the "stickyHeader" prop from MUI table ([0263634](https://github.com/RWS-NL/air-node-packages/commit/02636340b4a05a7cce75e92ed7a457872381a659))
+
+
+
+
+
 ## [8.0.6](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@8.0.5...@rws-air/webcomponents@8.0.6) (2019-11-21)
 
 
