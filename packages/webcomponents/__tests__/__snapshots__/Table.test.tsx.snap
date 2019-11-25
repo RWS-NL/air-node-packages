@@ -50,21 +50,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
             }
           }
           key="name"
-          onRequestSort={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  "name",
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          onRequestSort={[MockFunction]}
           order="asc"
           orderby="name"
           tooltiplabel="Sort"
@@ -79,21 +65,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
             }
           }
           key="email"
-          onRequestSort={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  "name",
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          onRequestSort={[MockFunction]}
           order="asc"
           orderby="name"
           tooltiplabel="Sort"
@@ -109,21 +81,24 @@ exports[`Snapshot Testing Optional Props 1`] = `
             }
           }
           key="id"
-          onRequestSort={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  "name",
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
+          onRequestSort={[MockFunction]}
+          order="asc"
+          orderby="name"
+          tooltiplabel="Sort"
+          tooltipplacement="bottom-start"
+        />
+        <Memo(TableHeaderCell)
+          customclasses=""
+          data-qa="table-header-cell"
+          header={
+            Object {
+              "isActionButtonCell": true,
+              "label": "action",
             }
           }
+          isActionButtonCell={true}
+          key="action"
+          onRequestSort={[MockFunction]}
           order="asc"
           orderby="name"
           tooltiplabel="Sort"
@@ -254,21 +229,7 @@ exports[`Snapshot Testing Required Props 1`] = `
             }
           }
           key="name"
-          onRequestSort={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  "name",
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          onRequestSort={[MockFunction]}
           order="asc"
           orderby="name"
           tooltiplabel="Sort"
@@ -283,21 +244,7 @@ exports[`Snapshot Testing Required Props 1`] = `
             }
           }
           key="email"
-          onRequestSort={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  "name",
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
+          onRequestSort={[MockFunction]}
           order="asc"
           orderby="name"
           tooltiplabel="Sort"
@@ -313,21 +260,24 @@ exports[`Snapshot Testing Required Props 1`] = `
             }
           }
           key="id"
-          onRequestSort={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  "name",
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
+          onRequestSort={[MockFunction]}
+          order="asc"
+          orderby="name"
+          tooltiplabel="Sort"
+          tooltipplacement="bottom-start"
+        />
+        <Memo(TableHeaderCell)
+          customclasses=""
+          data-qa="table-header-cell"
+          header={
+            Object {
+              "isActionButtonCell": true,
+              "label": "action",
             }
           }
+          isActionButtonCell={true}
+          key="action"
+          onRequestSort={[MockFunction]}
           order="asc"
           orderby="name"
           tooltiplabel="Sort"

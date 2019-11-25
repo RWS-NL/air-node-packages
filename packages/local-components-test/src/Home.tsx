@@ -1,21 +1,158 @@
 /* eslint-disable no-console */
-import { Dropdownbutton, Button } from '@rws-air/webcomponents';
-import React, { FC } from 'react';
-import CloudDownload from '@material-ui/icons/CloudDownload';
-import { Grid } from '@material-ui/core';
+import TableRow from '@material-ui/core/TableRow';
+import { Table, TableBodyCell, TableProps } from '@rws-air/webcomponents';
+import React, { FC, Fragment } from 'react';
+import css from 'styles/modules/app.module.scss';
+import SearchIcon from '@material-ui/icons/Search';
+import { IconButton } from '@material-ui/core';
+import DeleteIcon from '@material-ui/icons/Delete';
 
-const options = [ 'short', 'Create merge commit', 'Squash and merge', 'This is a very long option that should produce a very long button because it has a lot of characters in a very long sentence' ];
+interface DataForTableType {
+  name: string;
+  email: string;
+  id: number;
+}
+
+const dataForTable: DataForTableType[] = [
+  { name: 'Robin Hood', email: 'robin.hood@winked.com', id: 23456789 },
+  { name: 'Steve Jobs', email: 'steve.jobs@apple.com', id: 1 },
+  { name: 'Darth Vader', email: 'darth.vader@thedeathstart.com', id: 9876 },
+  { name: 'Kaladin Stormblessed', email: 'kaladin.stormblessed@thearmy.com', id: 567890 },
+  { name: 'John Geary', email: 'john.geary@thelostfleet.com', id: 567890 },
+  { name: 'Robin Hood', email: 'robin.hood@winked.com', id: 23456789 },
+  { name: 'Steve Jobs', email: 'steve.jobs@apple.com', id: 1 },
+  { name: 'Steve Jobs', email: 'steve.jobs@apple.com', id: 1 },
+  { name: 'Darth Vader', email: 'darth.vader@thedeathstart.com', id: 9876 },
+  { name: 'Steve Jobs', email: 'steve.jobs@apple.com', id: 1 },
+  { name: 'Kaladin Stormblessed', email: 'kaladin.stormblessed@thearmy.com', id: 567890 },
+  { name: 'Steve Jobs', email: 'steve.jobs@apple.com', id: 1 },
+  { name: 'Robin Hood', email: 'robin.hood@winked.com', id: 23456789 },
+  { name: 'Steve Jobs', email: 'steve.jobs@apple.com', id: 1 },
+  { name: 'Darth Vader', email: 'darth.vader@thedeathstart.com', id: 9876 }
+];
+
+const dataTableHeaderMapping: Map<string, string> = new Map(
+  [
+    [
+      'id', 'id'
+    ],
+    [
+      'name', 'name'
+    ],
+    [
+      'email', 'email'
+    ],
+    [
+      'action', 'action'
+    ]
+  ]
+);
+
+const rowsPerPage = 5;
+const page = 0;
+
+const propsForTable: TableProps = {
+  onsearchclear: () => console.log('cleared the search'),
+  onsearchinput: () => console.log('got some search input'),
+  onRequestSort: () => console.log('A sort was requested'),
+  tooltipplacement: 'top',
+  order: 'asc',
+  orderby: 'name',
+  rowsPerPage,
+  rowsPerPageOptions: [ 2, 4, 5, 10 ],
+  page,
+  onChangePage: () => console.log('changed page'),
+  onChangeRowsPerPage: () => console.log('changed rows per page'),
+  headers: [
+    { label: Array.from(dataTableHeaderMapping.keys())[0], numeric: true },
+    { label: Array.from(dataTableHeaderMapping.keys())[1] },
+    { label: Array.from(dataTableHeaderMapping.keys())[2] },
+    { label: Array.from(dataTableHeaderMapping.keys())[3], isActionButtonCell: true }
+  ],
+  headermapping: dataTableHeaderMapping,
+  rowcount: dataForTable.length,
+  labels: {
+    labelPaginationOf: 'of',
+    labelRowsPerPage: 'Rows per page',
+    searchplaceholderlabel: 'Search...',
+    tooltiplabel: 'Sorteren',
+  },
+  tableqas: {
+    header: 'table-header',
+    headerRow: 'table-header-row',
+    pagination: 'table-pagination',
+    table: 'table',
+    toolbar: 'table-toolbar',
+    headerCell: 'table-header-cell',
+    tableBody: 'table-body',
+  },
+  tablebodycontent: (
+    <Fragment>
+      {dataForTable
+        .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+        .map(row => (
+          <TableRow hover tabIndex={-1} key={Math.random()} className={css.tableRow} data-qa='sample-table-body-row' >
+            <TableBodyCell content={row.name} />
+            <TableBodyCell content={row.email} />
+            <TableBodyCell content={row.id} />
+            <TableBodyCell
+              content={
+                <IconButton
+                  onClick={undefined}
+                  data-qa='edit-user-button'
+                  color='primary'
+                >
+                  <DeleteIcon />
+                </IconButton>
+              }
+            />
+          </TableRow>
+        ))
+      }
+    </Fragment>
+  ),
+  tablecss: {
+    table: [ css.customTable, css.customTable ],
+    tableToolbar: [ css.customTableToolbar ],
+  },
+  paperElevation: 1,
+  showBottomPagination: true,
+  showTopPagination: true,
+  extraIcons: [
+    {
+      icon: <SearchIcon className={css.svgIcon} />,
+      clickEvent: () => console.log('void'),
+      disabled: true,
+    },
+    {
+      icon: <SearchIcon className={css.svgIcon} />,
+      clickEvent: () => console.log('void'),
+    },
+    {
+      icon: <SearchIcon className={css.svgIcon} />,
+      clickEvent: () => console.log('void'),
+    },
+    {
+      icon: <SearchIcon className={css.svgIcon} />,
+      clickEvent: () => console.log('void'),
+    },
+    {
+      icon: <SearchIcon className={css.svgIcon} />,
+      clickEvent: () => console.log('void'),
+    },
+    {
+      icon: <SearchIcon className={css.svgIcon} />,
+      clickEvent: () => console.log('void'),
+    }
+  ],
+};
+
 
 const Home: FC = () => {
   return (
-    <Grid container direction='row'>
-      <Grid item style={{ marginRight: '1%', width: '30vw' }}>
-        <Dropdownbutton options={options} ButtonIcon={<CloudDownload />} onClick={(prop: string) => console.log('I am clicked', prop)} />
-      </Grid>
-      <Grid item style={{ marginRight: '1%' }}>
-        <Button fullWidth variant='contained' color='primary' onClick={() => undefined} label='test' />
-      </Grid>
-    </Grid>
+    <Fragment>
+      <Table {...propsForTable} />
+    </Fragment>
   );
 };
 
