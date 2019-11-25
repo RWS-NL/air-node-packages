@@ -1,14 +1,14 @@
 import MUITableCell, { TableCellProps as MUITableCellProps } from '@material-ui/core/TableCell';
 import TableSortLabel from '@material-ui/core/TableSortLabel';
 import classnames from 'classnames';
-import React, { FC, memo, ReactNode } from 'react';
+import React, { FC, memo } from 'react';
 import css from './TableHeaderCell.scss';
 import Tooltip, { TooltipProps } from '../Tooltip/Tooltip';
 import { customCss, dataQa, label } from '../constants';
 
 export interface TableHeaderProps {
   /** Label for this table header */
-  label: ReactNode;
+  label: string;
   /** Whether this table header represents a column of numeric values */
   numeric?: boolean;
   /** Whether the additional padding for this table header should be disabled */
@@ -27,7 +27,7 @@ export interface TableHeaderCellProps extends MUITableCellProps {
   /** The placement of the tooltip */
   tooltipplacement: TooltipProps['placement'];
   /** The function triggered when a sort request is made */
-  onRequestSort: (property: ReactNode) => void;
+  onRequestSort: (property: string) => void;
   /** Data-qa tag to apply to the search bar and input element */
   'data-qa'?: dataQa;
   /** Custom CSS classes to pass to the button */
