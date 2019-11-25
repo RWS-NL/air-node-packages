@@ -20,7 +20,7 @@ describe('Component Tests', () => {
   test('should trigger change when searching', () => {
     const inputBox = tableToolbar
       .find('[data-qa="table-search-bar"]')
-      .dive().dive()
+      .shallow().dive()
       .find('[data-qa="table-search-bar"]');
 
     const expectedCalledWith = { target: { value: 'DarthVader' } };

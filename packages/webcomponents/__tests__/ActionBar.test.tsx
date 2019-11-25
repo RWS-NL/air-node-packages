@@ -13,7 +13,7 @@ describe('Component Testing', () => {
       const actionButton = actionBar.find('[data-qa="action-bar-button"]');
       actionButton.simulate('click');
       expect(mockCallback).toHaveBeenCalledWith();
-      expect(actionButton.dive().text()).toBe('label');
+      expect(actionButton.shallow().text()).toBe('label');
     });
 
     test('confirm the button click passes arguments', () => {
@@ -30,7 +30,7 @@ describe('Component Testing', () => {
       actionButton.simulate('click');
       expect(mockCallback).toHaveBeenCalledWith();
       expect(mockCallback).toHaveBeenCalledWith(param);
-      expect(actionButton.dive().text()).toBe('label');
+      expect(actionButton.shallow().text()).toBe('label');
     });
   });
 

@@ -92,7 +92,7 @@ describe('Component Tests', () => {
   });
 
   test('should request sorting on header click', () => {
-    const tableSortHeader = table.find(TableHeaderCell).at(0).dive().find(`[data-qa="tableSortLabel_${tableHeaders[0].label}"]`);
+    const tableSortHeader = table.find(TableHeaderCell).at(0).shallow().find(`[data-qa="tableSortLabel_${tableHeaders[0].label}"]`);
     tableSortHeader.simulate('click');
     expect(mockOnRequestSort).toHaveBeenCalledWith('name');
     expect(mockOnRequestSort).toHaveBeenCalledTimes(1);
@@ -109,7 +109,7 @@ describe('Component Tests', () => {
       jest.spyOn(console, 'error').mockImplementation();
 
       const firstRow = table.find('[data-qa="table-header-row"]').first();
-      const tableHeaderCell = firstRow.find(TableHeaderCell).first().dive().find(`[data-qa="tableSortLabel_${tableHeaders[0].label}"]`);
+      const tableHeaderCell = firstRow.find(TableHeaderCell).first().shallow().find(`[data-qa="tableSortLabel_${tableHeaders[0].label}"]`);
       expect(firstRow.find(TableHeaderCell)).toHaveLength(3);
       expect(tableHeaderCell.render().text()).toBe(tableHeaders[0].label);
 
