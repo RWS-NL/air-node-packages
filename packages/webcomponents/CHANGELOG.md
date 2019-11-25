@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.3](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@8.1.1...@rws-air/webcomponents@8.1.3) (2019-11-25)
+
+
+### Reverts
+
+* chore(release): publish ([18c5d81](https://github.com/RWS-NL/air-node-packages/commit/18c5d81885138e791ec82887ee02e7b3454352fc))
+* refactor(webcomponents): set TableHeader label prop to ReactNode ([cde8f62](https://github.com/RWS-NL/air-node-packages/commit/cde8f62f433e7d1291da81d576f3f682fd32bafc))
+
+
+
+
+
 ## [8.1.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@8.1.0...@rws-air/webcomponents@8.1.1) (2019-11-25)
 
 **Note:** Version bump only for package @rws-air/webcomponents
