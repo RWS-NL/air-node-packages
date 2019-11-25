@@ -10,3 +10,4 @@ export * from './SplitText';
 export * from './StableTableSort';
 export * from './TimeUtils';
 export * from './UseWindowSize';
+export * from './FuzzySearcher';

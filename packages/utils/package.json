@@ -1,6 +1,6 @@
 {
   "name": "@rws-air/utils",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Utilities for rws-air libraries and applications",
   "author": "@rws-air",
   "license": "AGPL-3.0-or-later",
@@ -19,6 +19,7 @@
     "dist"
   ],
   "peerDependencies": {
+    "fuse.js": "^3",
     "lodash.orderby": ">=4",
     "react": ">=16",
     "react-dom": ">=16"
