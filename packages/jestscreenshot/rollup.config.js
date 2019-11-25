@@ -1,6 +1,6 @@
 import configure from '../../rollup.config';
 import builtins from '@joseph184/rollup-plugin-node-builtins';
-import json from 'rollup-plugin-json';
+import json from '@rollup/plugin-json';
 
 export default configure({
   input: 'src/index.ts',
