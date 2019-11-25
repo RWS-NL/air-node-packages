@@ -19,15 +19,28 @@ const dataForTable: DataForTableType[] = [
   { name: 'Steve Jobs', email: 'steve.jobs@apple.com', id: 1 }
 ];
 
-const dataTableHeaderMapping: Map<string, string> = new Map()
-  .set('name', 'name')
-  .set('email', 'email')
-  .set('id', 'id');
+const dataTableHeaderMapping: Map<string, string> = new Map(
+  [
+    [
+      'name', 'name'
+    ],
+    [
+      'email', 'email'
+    ],
+    [
+      'id', 'id'
+    ],
+    [
+      'action', 'action'
+    ]
+  ]
+);
 
 const tableHeaders: TableHeaderProps[] = [
   { label: Array.from(dataTableHeaderMapping.keys())[0] },
   { label: Array.from(dataTableHeaderMapping.keys())[1] },
-  { label: Array.from(dataTableHeaderMapping.keys())[2], numeric: true }
+  { label: Array.from(dataTableHeaderMapping.keys())[2], numeric: true },
+  { label: Array.from(dataTableHeaderMapping.keys())[3], isActionButtonCell: true }
 ];
 
 const rowsPerPage = 5;
@@ -87,15 +100,35 @@ const propsForTable: TableProps = {
 describe('Component Tests', () => {
   let table: ShallowWrapper;
 
-  beforeAll(() => {
+  beforeEach(() => {
     table = shallow(<Table {...propsForTable} />);
   });
 
+  afterEach(() => {
+    mockOnRequestSort.mockRestore();
+    mockOnSearchInput.mockRestore();
+    mockOnSearchClear.mockRestore();
+    mockOnChangePage.mockRestore();
+    mockOnChangeRowsPerPage.mockRestore();
+  });
+
   test('should request sorting on header click', () => {
-    const tableSortHeader = table.find(TableHeaderCell).at(0).shallow().find(`[data-qa="tableSortLabel_${tableHeaders[0].label}"]`);
+    const firstColumnHeaderCell = table.find(TableHeaderCell).at(0).shallow();
+    const tableSortHeader = firstColumnHeaderCell.find(`[data-qa="tableSortLabel_${tableHeaders[0].label}"]`);
+
     tableSortHeader.simulate('click');
+
     expect(mockOnRequestSort).toHaveBeenCalledWith('name');
     expect(mockOnRequestSort).toHaveBeenCalledTimes(1);
+  });
+
+  test('should not request sorting on action header click', () => {
+    const lastColumnHeaderCell = table.find(TableHeaderCell).last().shallow();
+    const tableSortHeader = lastColumnHeaderCell.find(`[data-qa="tableSortLabel_${tableHeaders[3].label}"]`);
+
+    tableSortHeader.simulate('click');
+
+    expect(mockOnRequestSort).toHaveBeenCalledTimes(0);
   });
 
   describe('Table Headers', () => {
@@ -110,7 +143,7 @@ describe('Component Tests', () => {
 
       const firstRow = table.find('[data-qa="table-header-row"]').first();
       const tableHeaderCell = firstRow.find(TableHeaderCell).first().shallow().find(`[data-qa="tableSortLabel_${tableHeaders[0].label}"]`);
-      expect(firstRow.find(TableHeaderCell)).toHaveLength(3);
+      expect(firstRow.find(TableHeaderCell)).toHaveLength(4);
       expect(tableHeaderCell.render().text()).toBe(tableHeaders[0].label);
 
       // Restore console errors

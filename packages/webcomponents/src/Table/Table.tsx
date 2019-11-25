@@ -140,6 +140,7 @@ export const Table: FC<TableProps> = props => {
                 onRequestSort={props.onRequestSort}
                 data-qa={props.tableqas.headerCell}
                 customclasses={classnames(addCustomClasses('tableHeaderCell'))}
+                isActionButtonCell={header.isActionButtonCell}
               />
             ))}
           </TableRow>
