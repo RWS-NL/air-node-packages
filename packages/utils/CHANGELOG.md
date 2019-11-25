@@ -8,6 +8,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
+* **utils:** add fuzzysearcher ([057b33b](https://github.com/RWS-NL/air-node-packages/commit/057b33b46c339d94d4dee923b508bba0e7f1e030))
+
+
+
+
+
+# [2.1.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@2.0.0...@rws-air/utils@2.1.0) (2019-11-25)
+
+
+### Features
+
 * **utils:** add fuzzysearcher ([b4b7613](https://github.com/RWS-NL/air-node-packages/commit/b4b761317489e203aa70c8c3355e7329aa1a78eb))
 
 
