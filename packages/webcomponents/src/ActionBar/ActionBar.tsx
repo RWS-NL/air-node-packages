@@ -7,7 +7,7 @@ import { customCss, dataQa } from '../constants';
 
 export interface ActionBarProps {
   /** The title to show in the ActionBar */
-  title: string | ReactNode;
+  title: ReactNode;
   /** Whether an action button should be displayed in the ActionBar */
   shouldHaveButton?: boolean;
   /** Whether the button should be disabled, only relevant when `shouldHaveButton` is set to true */

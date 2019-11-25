@@ -23,7 +23,7 @@ export interface ModalProps {
   /** Object of data-qa tags to pass to the modal */
   modalqas?: ModalQAs;
   /** Title for the modal */
-  topic: string | ReactNode;
+  topic: ReactNode;
   /** Whether clicking on the backdrop should close the modal (triggers closeAction)  */
   disableBackdropClick?: boolean;
   /** Whether pressing the escape key should close the modal (triggers closeAction) */
