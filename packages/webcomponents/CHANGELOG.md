@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.4](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@8.1.3...@rws-air/webcomponents@8.1.4) (2019-11-26)
+
+
+### Bug Fixes
+
+* **webcomponents:** fix key-by-index in table ([2ddc992](https://github.com/RWS-NL/air-node-packages/commit/2ddc99246143cecc314c2f9010af64d5e92b7748))
+
+
+
+
+
 ## [8.1.3](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@8.1.1...@rws-air/webcomponents@8.1.3) (2019-11-25)
 
 
