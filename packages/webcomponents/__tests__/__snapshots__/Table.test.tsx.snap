@@ -49,7 +49,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
               "label": "name",
             }
           }
-          key="name"
+          key="0"
           onRequestSort={[MockFunction]}
           order="asc"
           orderby="name"
@@ -64,7 +64,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
               "label": "email",
             }
           }
-          key="email"
+          key="1"
           onRequestSort={[MockFunction]}
           order="asc"
           orderby="name"
@@ -80,7 +80,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
               "numeric": true,
             }
           }
-          key="id"
+          key="2"
           onRequestSort={[MockFunction]}
           order="asc"
           orderby="name"
@@ -97,7 +97,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
             }
           }
           isActionButtonCell={true}
-          key="action"
+          key="3"
           onRequestSort={[MockFunction]}
           order="asc"
           orderby="name"
@@ -228,7 +228,7 @@ exports[`Snapshot Testing Required Props 1`] = `
               "label": "name",
             }
           }
-          key="name"
+          key="0"
           onRequestSort={[MockFunction]}
           order="asc"
           orderby="name"
@@ -243,7 +243,7 @@ exports[`Snapshot Testing Required Props 1`] = `
               "label": "email",
             }
           }
-          key="email"
+          key="1"
           onRequestSort={[MockFunction]}
           order="asc"
           orderby="name"
@@ -259,7 +259,7 @@ exports[`Snapshot Testing Required Props 1`] = `
               "numeric": true,
             }
           }
-          key="id"
+          key="2"
           onRequestSort={[MockFunction]}
           order="asc"
           orderby="name"
@@ -276,7 +276,7 @@ exports[`Snapshot Testing Required Props 1`] = `
             }
           }
           isActionButtonCell={true}
-          key="action"
+          key="3"
           onRequestSort={[MockFunction]}
           order="asc"
           orderby="name"

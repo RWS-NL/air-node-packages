@@ -129,9 +129,9 @@ export const Table: FC<TableProps> = props => {
       >
         <TableHead data-qa={props.tableqas.header} className={classnames(addCustomClasses('tableHeader'))}>
           <TableRow data-qa={props.tableqas.headerRow} className={classnames(addCustomClasses('tableHeaderRow'))}>
-            {props.headers.map(header => (
+            {props.headers.map((header, index) => (
               <TableHeaderCell
-                key={header.label}
+                key={index}
                 header={header}
                 orderby={props.orderby}
                 order={props.order || 'asc'}
