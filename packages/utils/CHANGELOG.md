@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.2](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@2.1.1...@rws-air/utils@2.1.2) (2019-11-28)
+
+
+### Bug Fixes
+
+* **utils:** fixed stable table sort typings and simplied usage ([296db8d](https://github.com/RWS-NL/air-node-packages/commit/296db8d7dec3ccddaf1e86c9948a9b959e709cc5))
+
+
+
+
+
 ## [2.1.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@2.1.0...@rws-air/utils@2.1.1) (2019-11-28)
 
 
