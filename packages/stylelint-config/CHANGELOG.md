@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.8](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/stylelint-config@4.1.7...@rws-air/stylelint-config@4.1.8) (2019-11-28)
+
+**Note:** Version bump only for package @rws-air/stylelint-config
+
+
+
+
+
 ## [4.1.7](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/stylelint-config@4.1.6...@rws-air/stylelint-config@4.1.7) (2019-11-21)
 
 **Note:** Version bump only for package @rws-air/stylelint-config
