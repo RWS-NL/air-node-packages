@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@2.1.0...@rws-air/utils@2.1.1) (2019-11-28)
+
+
+### Bug Fixes
+
+* **utils:** fixed the export for fuzzysearcher ([5738071](https://github.com/RWS-NL/air-node-packages/commit/57380718d1ec997f3bc55e9e9f1030e2162e6587))
+
+
+
+
+
 # [2.1.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@2.0.0...@rws-air/utils@2.1.0) (2019-11-25)
 
 
