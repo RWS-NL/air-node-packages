@@ -8,7 +8,7 @@ import sort from 'lodash.orderby';
  * @param headerMapping Mapping of table headers for sorting on nested properties
  * @example
  * ```typescript
- * interface ArrType extends Record<string, string | number> {
+ * interface ArrType {
  *   key: string;
  *   prop: string;
  * }
@@ -28,10 +28,10 @@ import sort from 'lodash.orderby';
  * stableTableSort(arr, 'key', 'asc', mappings);
  * ```
  */
-export const stableTableSort = <T extends Record<string, unknown>>(array: T[], orderBy: keyof T, order: TableOrder, headerMapping: Map<keyof T, string>) => {
-  const orderValue = headerMapping.get(orderBy as string);
+export const stableTableSort = <T>(array: T[], orderBy: keyof T, order: TableOrder, headerMapping: Map<keyof T, string>) => {
+  const orderValue = headerMapping.get(orderBy);
 
-  return sort(array, [ orderValue ], [ order ]);
+  return sort(array, [ orderValue ], [ order ]) as T[];
 };
 
 export type TableOrder = 'desc' | 'asc';

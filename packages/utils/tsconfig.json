@@ -6,7 +6,8 @@
     "baseUrl": "src",
     "module": "commonjs",
     "moduleResolution": "node",
-    "declarationMap": true
+    "declarationMap": true,
+    "incremental": true
   },
   "include": [
     "src"

@@ -1,20 +1,8 @@
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache/
-
-### IntelliJ IDEA ###
+### IDE ###
+.vscode/*
+!.vscode/*.code-snippets
 .idea/*
 *.iml
-*.ipr
-classes/
-
-### VSCode ###
-.vscode/
 
 # MacOS Finder
 .DS_Store
@@ -22,17 +10,7 @@ classes/
 # NodeJS
 node_modules/
 **/npm-debug.log
-seabiscuit-frontend/yarn.lock
 /package-lock.json
-/package.json
-/yarn.lock
-
-# Coverage Report
-.nyc_output/
-
-# Other
-runner.local.properties
-seabiscuit-backend/dump
 
 # Environment variables
 .env.local
@@ -42,31 +20,16 @@ seabiscuit-backend/dump
 
 # Build Artifacts
 *.zip
-*.tar
-*.tar.xz
-*.tar.gz
+*.tar*
 *.7z
 *.rar
-.gradle
 **/dist/
 **/build/
 **/bin/
-!gradle/wrapper/gradle-wrapper.jar
-out/
-/tmp/
-gradle-cache
+**/*.tsbuildinfo
 
 # Logs
 logs/
 coverage/
 *.log*
 __tests__/screenshots/
-
-# IDE Settings
-.idea/
-classes/
-.vscode/*
-!.vscode/*.code-snippets
-.vs/
-*.iml
-*.ipr
