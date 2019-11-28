@@ -1,6 +1,6 @@
 import Fuse, { FuseOptions } from 'fuse.js';
 
-export default class FuzzySearcher <O> {
+export class FuzzySearcher <O> {
   private readonly object: O[];
   private readonly fuseOptions?: FuseOptions<O>;
 
@@ -21,3 +21,5 @@ export default class FuzzySearcher <O> {
     return fuzzyFuze.search(locquery) as O[];
   }
 }
+
+export default FuzzySearcher;
