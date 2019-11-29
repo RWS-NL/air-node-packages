@@ -29,7 +29,7 @@ export interface TableHeaderCellProps extends MUITableCellProps {
   /** The placement of the tooltip */
   tooltipplacement: TooltipProps['placement'];
   /** The function triggered when a sort request is made */
-  onRequestSort: (property: string) => void;
+  onRequestSort: <T extends string>(property: T) => void;
   /** Data-qa tag to apply to the search bar and input element */
   'data-qa'?: dataQa;
   /** Custom CSS classes to pass to the button */
