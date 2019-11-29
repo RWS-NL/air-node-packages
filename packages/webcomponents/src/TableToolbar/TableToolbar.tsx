@@ -41,7 +41,7 @@ export interface TableToolbarProps extends Pick<SearchBarProps, 'paperElevation'
   /** The label to display when no text is in the search input box */
   searchplaceholderlabel: label;
   /** The action to trigger when searching (taking debounce into account) */
-  onsearchinput: (searchTerms: string) => unknown;
+  onsearchinput: <T extends string>(searchTerms: T) => unknown;
   /** The action to trigger when clearing the search */
   onsearchclear: () => unknown;
   /** Data-qa tag to apply to the search bar and input element */

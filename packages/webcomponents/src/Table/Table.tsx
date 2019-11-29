@@ -55,7 +55,7 @@ export interface TableCustomClasses {
 }
 
 export interface TableProps extends
-  Pick<TableToolbarProps, 'onsearchclear' | 'onsearchinput' | 'paperElevation' | 'extraIcons'>,
+  Pick<TableToolbarProps, 'onsearchclear' | 'onsearchinput' | 'paperElevation' | 'extraIcons' | 'searchdebounce'>,
   Pick<TableHeaderCellProps, 'onRequestSort' | 'orderby' | 'order' | 'tooltipplacement'>,
   Pick<MUITablePaginationProps, 'rowsPerPage' | 'rowsPerPageOptions' | 'page' | 'onChangePage' | 'onChangeRowsPerPage'>,
   MUITableProps {
@@ -112,6 +112,7 @@ export const Table: FC<TableProps> = props => {
         searchplaceholderlabel={props.labels.searchplaceholderlabel}
         onsearchinput={props.onsearchinput}
         onsearchclear={props.onsearchclear}
+        searchdebounce={props.searchdebounce}
         data-qa={props.tableqas.toolbar}
         customclasses={classnames(addCustomClasses('tableToolbar'))}
         customSearchbarClasses={classnames(addCustomClasses('tableSearchbar'))}
