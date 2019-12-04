@@ -59,7 +59,7 @@ export const TableHeaderCell: FC<TableHeaderCellProps> = props => {
         data-qa={`table-header-${props['data-qa']}`}>
         <TableSortLabel
           data-qa={`tableSortLabel_${props.header.label}`}
-          classes={{icon: css.sortIcon}}
+          classes={{ icon: css.sortIcon }}
           active={props.orderby === props.header.label}
           direction={props.order}
           onClick={() => props.onRequestSort(props.header.label)}
@@ -76,7 +76,7 @@ export const TableHeaderCell: FC<TableHeaderCellProps> = props => {
       align={props.header.numeric ? 'right' : 'left'}
       padding={props.header.disablePadding ? 'none' : 'default'}
       sortDirection={props.orderby === props.header.label ? props.order : false}
-      className={classnames(css.tableCells, props.customclasses)}>
+      className={classnames(css.tableCells, { [css.actionHeaderCell]: props.isActionButtonCell }, props.customclasses)}>
       {renderTableHeaderCell()}
     </MUITableCell>
   );
