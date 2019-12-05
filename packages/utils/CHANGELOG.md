@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@2.1.2...@rws-air/utils@2.2.0) (2019-12-05)
+
+
+### Features
+
+* **utils:** add mergeobjects function ([cd0bfee](https://github.com/RWS-NL/air-node-packages/commit/cd0bfeeca22011f050b0b3aaab42a65e77041a46))
+
+
+
+
+
 ## [2.1.2](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@2.1.1...@rws-air/utils@2.1.2) (2019-11-28)
 
 
