@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { isObject } from './IsObject';
 
 /**
@@ -6,8 +7,8 @@ import { isObject } from './IsObject';
  * @param objSource The object to merge
  */
 export const mergeObjects = <
-  A extends Record<string | number | symbol, unknown>,
-  B extends Record<string | number | symbol, unknown>
+  A extends Record<string | number | symbol, any>,
+  B extends Record<string | number | symbol, any>
 >(objTarget: A & Partial<B>, objSource: B): A & B => {
   for (const key in objSource) {
     // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
