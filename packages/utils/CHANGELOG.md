@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@2.2.0...@rws-air/utils@2.2.1) (2019-12-09)
+
+
+### Bug Fixes
+
+* **utils:** improve mergeObjects typings to support DeepPartial state ([967a8ab](https://github.com/RWS-NL/air-node-packages/commit/967a8ab2280007191d34c6c9ad2ee3eae708e4f0))
+
+
+
+
+
 # [2.2.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@2.1.2...@rws-air/utils@2.2.0) (2019-12-05)
 
 
