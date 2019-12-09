@@ -146,5 +146,8 @@
       "yarn scripts:duplicateStylelintConfig",
       "git add"
     ]
+  },
+  "resolutions": {
+    "**/**/serialize-javascript": "^2.1.1"
   }
 }
