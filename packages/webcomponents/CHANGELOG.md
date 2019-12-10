@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.9](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@8.1.8...@rws-air/webcomponents@8.1.9) (2019-12-10)
+
+
+### Bug Fixes
+
+* **webcomponents:** fix overflow on TablePagination to cover edge cases ([56df576](https://github.com/RWS-NL/air-node-packages/commit/56df576dc0d19782475d5dbdd700723cbea7ed6c))
+
+
+
+
+
 ## [8.1.8](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@8.1.7...@rws-air/webcomponents@8.1.8) (2019-12-04)
 
 **Note:** Version bump only for package @rws-air/webcomponents
