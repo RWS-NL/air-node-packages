@@ -12784,7 +12784,6 @@ react-dom@^16.12.0:
 
 "react-dom@link:./node_modules/react-dom":
   version "0.0.0"
-  uid ""
 
 react-error-overlay@^6.0.4:
   version "6.0.4"
@@ -12887,7 +12886,6 @@ react@^16.12.0:
 
 "react@link:./node_modules/react":
   version "0.0.0"
-  uid ""
 
 read-cmd-shim@^1.0.1:
   version "1.0.5"
@@ -13671,9 +13669,9 @@ rollup-pluginutils@^2.0.1, rollup-pluginutils@^2.5.0, rollup-pluginutils@^2.8.1,
     estree-walker "^0.6.1"
 
 rollup@^1.27.5:
-  version "1.27.9"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.27.9.tgz#742f1234c1fa935f35149a433807da675b10f9a6"
-  integrity sha512-8AfW4cJTPZfG6EXWwT/ujL4owUsDI1Xl8J1t+hvK4wDX81F5I4IbwP9gvGbHzxnV19fnU4rRABZQwZSX9J402Q==
+  version "1.27.12"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.27.12.tgz#cf84db4b4edaf187eaba95232f34de7cd4d22d9c"
+  integrity sha512-51iR7n6NQfdQJlRrIktaGmkdt395A8Vue7CdnlrK6UhY9DY2GaKsTdljWeXisJuZh+w90Gz8VFNh5X+yxP20oQ==
   dependencies:
     "@types/estree" "*"
     "@types/node" "*"
