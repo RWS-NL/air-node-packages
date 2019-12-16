@@ -2,6 +2,7 @@ export * from './CapitilizeFirstLetter';
 export * from './CreateWrappableText';
 export * from './CutText';
 export * from './FuzzySearcher';
+export * from './IsCIEnv';
 export * from './IsDevEnv';
 export * from './IsObject';
 export * from './IsTestEnv';
