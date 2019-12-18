@@ -96,11 +96,11 @@ export const SearchBar: FC<SearchBarProps> = props => {
       {
         !value
           ?
-          <IconButton aria-label={placeholder} className={css.inputButton} onClick={handleRequestSearch} disabled={props.disabled} size='small' color='primary'>
+          <IconButton aria-label={placeholder} className={css.inputButton} onClick={handleRequestSearch} disabled={props.disabled} size='small' color='primary' data-qa='search-button'>
             <SearchIcon className={css.inputSVG} />
           </IconButton>
           :
-          <IconButton aria-label={placeholder} className={css.inputButton} onClick={handleCancel} disabled={props.disabled} size='small' color='primary'>
+          <IconButton aria-label={placeholder} className={css.inputButton} onClick={handleCancel} disabled={props.disabled} size='small' color='primary' data-qa='search-close-button'>
             <CloseIcon className={css.inputSVG} />
           </IconButton>
       }
