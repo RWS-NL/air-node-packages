@@ -37,7 +37,7 @@
     "@material-ui/icons": "^4.5.1",
     "@rollup/plugin-json": "^4.0.0",
     "@rollup/plugin-url": "^4.0.0",
-    "@svgr/rollup": "^4.3.3",
+    "@svgr/rollup": "^5.0.0",
     "@types/classnames": "^2.2.9",
     "@types/common-tags": "^1.8.0",
     "@types/enzyme": "^3.10.3",
