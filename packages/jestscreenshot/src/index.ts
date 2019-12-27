@@ -254,7 +254,7 @@ export class JestScreenshot {
    * @param prop The property to try to find
    * @returns Whether the object has this property or not
    */
-  public objectHasProperty<O extends {}, K extends keyof O>(obj: O, prop: K): boolean {
+  public objectHasProperty<O extends object, K extends keyof O>(obj: O, prop: K): boolean {
     return obj && prop in obj;
   }
 }

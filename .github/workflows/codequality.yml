@@ -25,13 +25,8 @@ jobs:
         key: ${{ runner.os }}-12-${{ hashFiles('**/yarn.lock') }}
     - name: Install Deps
       run: yarn
-    - name: eslint
-      uses: icrawl/action-eslint@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        job-name: eslint
-        custom-glob: packages/**/*.ts packages/**/*.tsx scripts
+    - name: Lint code
+      run: yarn lint
 
   Test:
     name: Test

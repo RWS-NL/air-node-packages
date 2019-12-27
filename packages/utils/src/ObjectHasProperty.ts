@@ -3,6 +3,6 @@
  * @param obj Object to analyze
  * @param prop Property to check for
  */
-export const objectHasProperty = <O extends {}>(obj: O, prop: keyof O) => obj && prop in obj;
+export const objectHasProperty = <O extends object>(obj: O, prop: keyof O) => obj && prop in obj;
 
 export default objectHasProperty;

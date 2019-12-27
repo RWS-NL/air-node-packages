@@ -6,7 +6,7 @@ import css from './TablePagination.scss';
 import TablePaginationActions from '../TablePaginationActions/TablePaginationActions';
 import { label, dataQa, customCss } from '../constants';
 
-export type MutatedMUITablePaginationProps = TablePaginationTypeMap<{}, React.ComponentType<TablePaginationBaseProps>>['props'];
+export type MutatedMUITablePaginationProps = TablePaginationTypeMap<object, React.ComponentType<TablePaginationBaseProps>>['props'];
 
 export interface TablePaginationProps extends MutatedMUITablePaginationProps {
   /** The label in the displayed rows per page, for example "5 rows per page" */
