@@ -6429,9 +6429,9 @@ eslint-plugin-flowtype@3.13.0:
     lodash "^4.17.15"
 
 eslint-plugin-flowtype@^4.5.2:
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-4.5.2.tgz#5353449692663ef70e8fc8c2386cebdecac7e86b"
-  integrity sha512-ByV0EtEQOqiCl6bsrtXtTGnXlIXoyvDrvUq3Nz28huODAhnRDuMotyTrwP+TjAKZMPWbtaNGFHMoUxW3DktGOw==
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-4.5.3.tgz#21322e62c206cb4440d32ed3ba8eabe14e6d0fdf"
+  integrity sha512-9PBGkk3dQ2TnP04Zrm8ziVHyNIYzd24PEY12I5DXC/R35+3if0C1/PqTQW94v3okKWoBh2/7EysMEX9AimONjQ==
   dependencies:
     lodash "^4.17.15"
 
@@ -13176,7 +13176,6 @@ react-dom@^16.12.0:
 
 "react-dom@link:./node_modules/react-dom":
   version "0.0.0"
-  uid ""
 
 react-error-overlay@^6.0.4:
   version "6.0.4"
@@ -13279,7 +13278,6 @@ react@^16.12.0:
 
 "react@link:./node_modules/react":
   version "0.0.0"
-  uid ""
 
 read-cmd-shim@^1.0.1:
   version "1.0.5"
