@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "build",
+    "rootDir": "src",
+    "strict": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "downlevelIteration": true,
+    "declaration": false,
+    "jsx": "react",
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "allowJs": true
+  },
+  "include": [
+   "src"
+  ]
+}

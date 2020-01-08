@@ -1,5 +1,5 @@
 {
-  "name": "local-components-test",
+  "name": "@rws-air/local-components-test",
   "version": "1.2.12",
   "private": true,
   "description": "Local testing app for webcomponents",
@@ -10,14 +10,7 @@
   "scripts": {
     "start": "PORT=9999 react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --watchAll=false",
-    "posttest": "git checkout tsconfig.json",
-    "test:modules": "react-scripts test",
-    "posttest:modules": "git checkout tsconfig.json",
-    "eject": "react-scripts eject",
-    "lint": "concurrently \"yarn lint:js\" \"yarn lint:scss\"",
-    "lint:js": "eslint src --fix --ext .ts,.tsx",
-    "lint:scss": "stylelint --fix ./src/styles/*.scss ./src/**/*.scss"
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "@material-ui/core": "^4.8.2",
