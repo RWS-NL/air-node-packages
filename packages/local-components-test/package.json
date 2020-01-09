@@ -8,9 +8,7 @@
   "main": "src/index.ts",
   "homepage": "https://github.com/RWS-NL/air-node-packages/tree/master/packages/local-components-test#readme",
   "scripts": {
-    "start": "PORT=9999 react-scripts start",
-    "build": "react-scripts build",
-    "eject": "react-scripts eject"
+    "start": "PORT=9999 react-scripts start"
   },
   "dependencies": {
     "@material-ui/core": "^4.8.2",
