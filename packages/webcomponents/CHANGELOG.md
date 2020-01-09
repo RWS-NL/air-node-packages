@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.2.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@8.1.12...@rws-air/webcomponents@8.2.0) (2020-01-09)
+
+
+### Features
+
+* **webcomponents:** pass all rest props to the Tooltip component ([c853243](https://github.com/RWS-NL/air-node-packages/commit/c853243a2af9eb79c0a934b989b0d610475864a4))
+
+
+
+
+
 ## [8.1.12](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@8.1.11...@rws-air/webcomponents@8.1.12) (2019-12-18)
 
 **Note:** Version bump only for package @rws-air/webcomponents

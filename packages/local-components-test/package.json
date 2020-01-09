@@ -1,6 +1,6 @@
 {
   "name": "@rws-air/local-components-test",
-  "version": "1.2.12",
+  "version": "2.0.0",
   "private": true,
   "description": "Local testing app for webcomponents",
   "author": "Jeroen Claassens <j.claassens@cgi.com>",

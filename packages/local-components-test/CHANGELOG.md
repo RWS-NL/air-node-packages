@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2020-01-09)
+
+
+### Bug Fixes
+
+* upgrade eslint-config to fully support [@typescript-eslint](https://github.com/typescript-eslint) v2.x ([0fee61f](https://github.com/RWS-NL/air-node-packages/commit/0fee61ff50eacfa1692f90c16719e775c4e07665))
+* **eslint-config:** disable jest rule that we don't need ([f21be02](https://github.com/RWS-NL/air-node-packages/commit/f21be022b1f2dbd454bca94e356271ceb4d7c827))
+* **webcomponents->dropdownbutton:** fixed sizing across screens ([abf1c8c](https://github.com/RWS-NL/air-node-packages/commit/abf1c8cd218df1b7f60cb8ba4a0961a239321a1a))
+* **webcomponents->dropdownbutton:** properly apply rws style for disable ([b459865](https://github.com/RWS-NL/air-node-packages/commit/b459865eb25c8af6c3b818f069cfdb795b949325))
+
+
+### Features
+
+* **eslint-config:** change preferred type definition to interface ([74ab971](https://github.com/RWS-NL/air-node-packages/commit/74ab971a31055a51adea7729eaa3ddfd4d74c4bb))
+* **stylelint-config:** set default severity to Error by default ([fb8a073](https://github.com/RWS-NL/air-node-packages/commit/fb8a073d5b7cbebafaf50de502bc88a3826c5116))
+
+
+### BREAKING CHANGES
+
+* tsconfig.eslint.json is now required in the root of the folder due to breaking
+changes made by typescript-eslint
+
+
+
+
+
 ## [1.2.12](https://github.com/RWS-NL/air-node-packages/compare/local-components-test@1.2.11...local-components-test@1.2.12) (2019-12-18)
 
 **Note:** Version bump only for package local-components-test
