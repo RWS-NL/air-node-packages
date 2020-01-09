@@ -5,9 +5,10 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "lerna run build --parallel --ignore local-components-test",
-    "ci:build": "lerna run ci:build --parallel --ignore local-components-test",
-    "lint": "lerna run lint --parallel",
+    "build": "lerna run build --parallel",
+    "ci:build": "lerna run ci:build --parallel",
+    "lint": "eslint scripts/ packages/** --fix --ext js,ts,tsx",
+    "lint:parallel": "lerna run lint --parallel",
     "test": "lerna run test --parallel",
     "test:web": "pushd packages/webcomponents && yarn test --watchAll -u && popd",
     "docs": "typedoc",

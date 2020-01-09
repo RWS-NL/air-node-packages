@@ -1,3 +1,4 @@
+import { HOUR } from '@rws-air/utils/dist/TimeUtils';
 import { shallow } from 'enzyme';
 import React from 'react';
 import Tooltip from '../src/Tooltip/Tooltip';
@@ -10,7 +11,7 @@ describe('Snapshot Testing', () => {
 
   test('Optional Props', () => {
     const simpleTooltip = shallow(
-      <Tooltip title='SnapTitle' data-qa='snap-qa' style={{ borderLeftColor: 'red' }}>
+      <Tooltip leaveDelay={HOUR} title='SnapTitle' data-qa='snap-qa' style={{ borderLeftColor: 'red' }}>
         <span>Snappy Text</span>
       </Tooltip>
     );

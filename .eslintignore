@@ -1,5 +1,5 @@
-**/dist/**/*.js
-**/dist/**/*.d.ts
+packages/**/dist
+packages/eslint-config/dist
 **/node_modules/
 **/.github/
 **/.vscode/

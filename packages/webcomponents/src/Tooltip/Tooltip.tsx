@@ -16,19 +16,22 @@ export interface TooltipProps extends MUITooltipProps {
 }
 
 /** Creates a tooltip using pre-defined Rijkswaterstaat styling */
-export const Tooltip: FC<TooltipProps> = props => (
+export const Tooltip: FC<TooltipProps> = ({
+  'data-qa': qaTag, title, placement, enterDelay, customclasses, style, children, ...props
+}) => (
   <MUITooltip
+    {...props}
     title={
-      <Box data-qa={props['data-qa']} className={css.box}>
-        {props.title}
+      <Box data-qa={qaTag} className={css.box}>
+        {title}
       </Box>
     }
-    placement={props.placement || 'top'}
-    enterDelay={props.enterDelay || 300}
-    classes={{ tooltip: classnames(css.tooltip, props.customclasses), popper: css.popper }}
-    style={props.style}
+    placement={placement || 'top'}
+    enterDelay={enterDelay || 300}
+    classes={{ tooltip: classnames(css.tooltip, customclasses), popper: css.popper }}
+    style={style}
   >
-    {props.children}
+    {children}
   </MUITooltip>
 );
 

@@ -9,6 +9,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
     }
   }
   enterDelay={300}
+  leaveDelay={3600000}
   placement="top"
   style={
     Object {
