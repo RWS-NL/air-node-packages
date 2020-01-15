@@ -10,7 +10,6 @@ import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import classnames from 'classnames';
 import React, { FC, memo, MouseEvent as ReactMouseEvent, ReactNode, useRef, useState } from 'react';
 import Button from '../Button/Button';
-import { customCss, dataQa } from '../constants';
 import css from './Dropdownbutton.scss';
 import { cutText } from '@rws-air/utils';
 
@@ -32,34 +31,29 @@ export interface DropdownbuttonProps {
   /** The variant of the buttons @default contained */
   variant?: 'text' | 'outlined' | 'contained' | undefined;
   /** Data-qa tags to apply to the button group */
-  buttonGroupDataQa?: dataQa;
+  buttonGroupDataQa?: string;
   /** Data-qa tags to apply to the dropdown button */
-  dropdownButtonDataQa?: dataQa;
+  dropdownButtonDataQa?: string;
   /** Data-qa tags to apply to the icon button */
-  iconButtonDataQa?: dataQa;
+  iconButtonDataQa?: string;
   /** Data-qa tags to apply to each menu item */
-  menuItemDataQa?: dataQa;
+  menuItemDataQa?: string;
   /** Data-qa tags to apply to the popper */
-  popperDataQa?: dataQa;
+  popperDataQa?: string;
   /** Custom CSS classes to pass to the dropdown button */
-  dropdownButtonCustomClasses?: customCss;
+  dropdownButtonCustomClasses?: string | string[];
   /** Custom CSS classes to pass to the icon button */
-  iconButtonCustomClasses?: customCss;
+  iconButtonCustomClasses?: string | string[];
   /** Custom CSS classes to pass to the buttonGroup */
-  buttonGroupCustomClasses?: customCss;
+  buttonGroupCustomClasses?: string | string[];
   /** The action to trigger when the button with {@link ButtonIcon} is pressed. Receives the currently selected option as first parameter */
   onClick(selectedOption: string): unknown;
 }
 
 /**
- * Creates a button using pre-defined Rijkswaterstaat styling
- *
- * ```jsx
- * import { Dropdownbutton } from '@rws-air/webcomponents'
- * import { CloudDownload } from '@material-ui/icons';
- *
+ * Constructs a button with dropdown menu options using pre-defined Rijkswaterstaat styling
+ * @example
  * <Dropdownbutton ButtonIcon={<CloudDownload/>} onClick={() => undefined} options={[ 'one', 'two' ]} />
- * ```
  */
 export const Dropdownbutton: FC<DropdownbuttonProps> = props => {
   const [ open, setOpen ] = useState(false);

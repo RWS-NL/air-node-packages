@@ -4,18 +4,26 @@ import { CSSProperties } from '@material-ui/styles';
 import classnames from 'classnames';
 import React, { FC, memo } from 'react';
 import css from './Tooltip.scss';
-import { customCss, dataQa } from '../constants';
 
 export interface TooltipProps extends MUITooltipProps {
   /** Data-qa tag to apply to the tooltip */
-  'data-qa'?: dataQa;
+  'data-qa'?: string;
   /** Custom CSS classes to pass to the tooltip */
-  customclasses?: customCss;
+  customclasses?: string | string[];
   /** Any additional CSSProperties to pass to the component */
   style?: CSSProperties;
 }
 
-/** Creates a tooltip using pre-defined Rijkswaterstaat styling */
+/**
+ * Constructs a tooltip using pre-defined Rijkswaterstaat styling
+ * @param param Props to pass to the Tooltip
+ * @example
+ * <Tooltip title='Tooltip Content' placement='top'>
+ *   <IconButton>
+ *     <CloudDownload color='primary' />
+ *   </IconButton>
+ * </Tooltip>
+ */
 export const Tooltip: FC<TooltipProps> = ({
   'data-qa': qaTag, title, placement, enterDelay, customclasses, style, children, ...props
 }) => (

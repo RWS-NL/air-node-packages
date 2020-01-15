@@ -6,6 +6,7 @@
   - [ ] eslint-config
   - [ ] jestscreenshot
   - [ ] local-components-test
+  - [ ] storybook
   - [ ] stylelint-config
   - [ ] tslint-config
   - [ ] user-creator

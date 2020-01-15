@@ -1,25 +1,32 @@
-import Typography, {TypographyProps} from '@material-ui/core/Typography';
+import Typography, { TypographyProps } from '@material-ui/core/Typography';
 import { CSSProperties } from '@material-ui/styles';
 import classnames from 'classnames';
 import React, { FC, memo } from 'react';
-import { customCss, dataQa } from '../constants';
 
 export interface ZeroWidthSpaceProps extends TypographyProps {
   /** Data-qa tag to apply to the tooltip */
-  'data-qa'?: dataQa;
+  'data-qa'?: string;
   /** Custom CSS classes to pass to the tooltip */
-  customclasses?: customCss;
+  customclasses?: string | string[];
   /** Any additional CSSProperties to pass to the component */
   style?: CSSProperties;
 }
 
-/** Inserts a Zero Width Space as a React component */
-const ZeroWidthSpace: FC<ZeroWidthSpaceProps> = props => (
+/**
+ * Inserts a Zero Width Space as a React component
+ * @param props Props to pass to the Zero-Width Space
+ * @example
+ * <ZeroWidthSpace />
+ */
+export const ZeroWidthSpace: FC<ZeroWidthSpaceProps> = ({
+  variant, style, customclasses, 'data-qa': dataQa, ...props
+}) => (
   <Typography
-    variant={props.variant || 'caption'}
-    style={props.style}
-    className={classnames(props.customclasses)}
-    data-qa={props['data-qa']}
+    {...props}
+    variant={variant || 'caption'}
+    style={style}
+    className={classnames(customclasses)}
+    data-qa={dataQa}
   >
     &#8203;
   </Typography>

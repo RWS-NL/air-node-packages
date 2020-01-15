@@ -6,7 +6,6 @@ import MUIButton, { ButtonProps as MUIButtonProps } from '@material-ui/core/Butt
 import css from './Button.scss';
 import classnames from 'classnames';
 import React, { FC, ReactNode, memo } from 'react';
-import { customCss, dataQa } from '../constants';
 import { makeStyles, Theme, createStyles } from '@material-ui/core';
 
 export interface ButtonProps {
@@ -19,11 +18,11 @@ export interface ButtonProps {
   /** Whether this button should be disabled */
   disabled?: boolean;
   /** Data-qa tag to apply to the search bar and input element */
-  'data-qa'?: dataQa;
+  'data-qa'?: string;
   /** Custom CSS classes to pass to the button */
-  customclasses?: customCss;
+  customclasses?: string | string[];
   /** Custom CSS classes to pass to the button label */
-  customlabelclasses?: customCss;
+  customlabelclasses?: string | string[];
   /** The action that should be triggered when clicking the button */
   onClick(): unknown;
 }
@@ -32,13 +31,10 @@ const useStyles = makeStyles((theme: Theme) => createStyles({ buttonShadow: { bo
 );
 
 /**
- * Creates a button using pre-defined Rijkswaterstaat styling
- *
- * ```jsx
- * import { Button } from '@rws-air/webcomponents'
- *
+ * Constructs a button using pre-defined Rijkswaterstaat styling
+ * @param props Props to pass to the button
+ * @example
  * <Button label='button' onClick={() => undefined} variant='contained' color='primary' />
- * ```
  */
 export const Button: FC<MUIButtonProps<'button', ButtonProps>> = props => {
   const classes = useStyles();

@@ -1,0 +1,1 @@
+export { default as Pagination, TablePaginationProps, MutatedMUITablePaginationProps } from './Pagination';

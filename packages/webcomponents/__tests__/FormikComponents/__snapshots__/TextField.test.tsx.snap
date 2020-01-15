@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Testing Required Props 1`] = `
+<WithStyles(ForwardRef(TextField))
+  FormHelperTextProps={
+    Object {
+      "classes": Object {
+        "error": "errorLabel",
+      },
+      "component": "div",
+    }
+  }
+  InputLabelProps={
+    Object {
+      "classes": Object {
+        "root": "inputLabel",
+      },
+      "shrink": true,
+    }
+  }
+  InputProps={
+    Object {
+      "classes": Object {
+        "notchedOutline": "outline",
+        "root": "input",
+      },
+    }
+  }
+  autoFocus={false}
+  classes={
+    Object {
+      "root": "",
+    }
+  }
+  fullWidth={true}
+  margin="dense"
+  name="name"
+  required={false}
+  type="text"
+  variant="outlined"
+/>
+`;

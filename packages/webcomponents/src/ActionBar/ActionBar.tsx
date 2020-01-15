@@ -3,7 +3,6 @@ import css from './ActionBar.scss';
 import Button from '../Button/Button';
 import classnames from 'classnames';
 import React, { FC, Fragment, ReactNode, useMemo, memo } from 'react';
-import { customCss, dataQa } from '../constants';
 
 export interface ActionBarProps {
   /** The title to show in the ActionBar */
@@ -15,14 +14,19 @@ export interface ActionBarProps {
   /** The text that should be shown in the button */
   buttonLabel?: string;
   /** Data-qa tag to apply to the search bar and input element */
-  'data-qa'?: dataQa;
+  'data-qa'?: string;
   /** Custom CSS classes to pass to the button */
-  customclasses?: customCss;
+  customclasses?: string | string[];
   /** The action that should be invoked when the button is clicked */
   buttonAction?: (...args: any[]) => any;
 }
 
-/** Creates an action bar using pre-defined Rijkswaterstaat styling */
+/**
+ * Creates an action bar using pre-defined Rijkswaterstaat styling
+ * @param props Props to pass to the actionbar
+ * @example
+ * <ActionBar title='Cool title' />
+ */
 export const ActionBar: FC<ActionBarProps> = props => {
   const getTitle = useMemo<ActionBarProps['title']>(() => {
     if (typeof props.title === 'string') {

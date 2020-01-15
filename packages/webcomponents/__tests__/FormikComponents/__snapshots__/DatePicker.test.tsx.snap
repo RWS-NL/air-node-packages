@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Testing Required Props 1`] = `
+<PickerWithState
+  FormHelperTextProps={
+    Object {
+      "classes": Object {
+        "error": "errorLabel",
+      },
+      "component": "div",
+    }
+  }
+  InputAdornmentProps={
+    Object {
+      "className": "datePickerIcon",
+      "position": "start",
+    }
+  }
+  InputLabelProps={
+    Object {
+      "classes": Object {
+        "root": "inputLabel",
+      },
+      "shrink": true,
+    }
+  }
+  InputProps={
+    Object {
+      "classes": Object {
+        "notchedOutline": "outline",
+        "root": "input",
+      },
+    }
+  }
+  KeyboardButtonProps={
+    Object {
+      "aria-label": "change date",
+    }
+  }
+  allowKeyboardControl={true}
+  animateYearScrolling={true}
+  autoOk={true}
+  error={false}
+  format="DD/MM/YYYY"
+  fullWidth={true}
+  inputVariant="outlined"
+  invalidDateMessage="Invalid Date Format"
+  label="testDatePicker"
+  maxDate={2100-01-01T00:00:00.000Z}
+  maxDateMessage="Date should not be after maximal date"
+  minDate={2012-01-01T00:00:00.000Z}
+  minDateMessage="Date should not be before minimal date"
+  name=""
+  onBlur={[MockFunction]}
+  onChange={[Function]}
+  openTo="date"
+  variant="inline"
+  views={
+    Array [
+      "year",
+      "date",
+    ]
+  }
+/>
+`;

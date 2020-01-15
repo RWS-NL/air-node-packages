@@ -1,6 +1,5 @@
 import { CSSProperties } from '@material-ui/styles';
 import classnames from 'classnames';
-import { customCss, dataQa } from '../constants';
 import css from './LoadingSkeleton.scss';
 import React, { FC, memo } from 'react';
 
@@ -24,12 +23,20 @@ export interface LoadingSkeletonProps {
   /** Any additional CSSProperties to pass to the component */
   style?: CSSProperties;
   /** Data-qa tag to apply to the search bar and input element */
-  'data-qa'?: dataQa;
+  'data-qa'?: string;
   /** Custom CSS classes to pass to the button */
-  customclasses?: customCss;
+  customclasses?: string | string[];
 }
 
-/** Creates a loading skeleton to reserve space for loading data */
+/**
+ * Constructs a loading skeleton to reserve space for loading data
+ * @param props Props to pass to the loading skeleton
+ * @example
+ * <LoadingSkeleton
+ *   data-qa='loading-skeleton'
+ *   width={500} height={50}
+ * />
+ */
 export const LoadingSkeleton: FC<LoadingSkeletonProps> = props => {
   const style: CSSProperties = {
     ...props.style,
