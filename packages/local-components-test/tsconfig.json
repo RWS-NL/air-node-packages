@@ -1,24 +1,23 @@
 {
-  "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "outDir": "build",
     "rootDir": "src",
     "baseUrl": "src",
-    "strict": true,
-    "resolveJsonModule": true,
-    "noEmit": true,
-    "downlevelIteration": true,
-    "declaration": false,
-    "jsx": "react",
+    "allowJs": false,
     "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
     "isolatedModules": true,
-    "allowJs": true
+    "noEmit": true,
+    "declaration": false,
+    "jsx": "react"
   },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "src/__tests__",
-    "src/setupTests.ts"
-  ]
+  "include": ["src"]
 }

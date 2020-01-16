@@ -43,13 +43,11 @@ yarn add @rws-air/webcomponents
 ## Usage
 
 ```jsx
-import React, { FC } from 'react'
+import React, { FC } from 'react';
 
-import { Button } from '@rws-air/webcomponents'
+import { Button } from '@rws-air/webcomponents';
 
-const Example: FC = () => (
-  <Button label='test' onClick={() => undefined} variant='contained' color='primary' />
-)
+const Example: FC = () => <Button label='test' onClick={() => undefined} variant='contained' color='primary' />;
 ```
 
 ## API Documentation

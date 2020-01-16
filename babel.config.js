@@ -5,10 +5,10 @@ module.exports = {
       {
         targets: {
           esmodules: true,
-          node: 'current',
-        },
+          node: 'current'
+        }
       }
     ],
     '@babel/preset-typescript'
-  ],
+  ]
 };

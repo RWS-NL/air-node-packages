@@ -22,7 +22,44 @@ exports[`Snapshot Testing Required Props 1`] = `
     className="title"
     data-qa="modal-title"
   >
-    Awesome Topic
+    <WithStyles(ForwardRef(Grid))
+      alignContent="flex-end"
+      alignItems="flex-end"
+      container={true}
+      justify="space-between"
+    >
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+      >
+        Awesome Topic
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        classes={
+          Object {
+            "root": "closeIcon",
+          }
+        }
+        item={true}
+      >
+        <WithStyles(ForwardRef(IconButton))
+          color="primary"
+          disableFocusRipple={true}
+          disableRipple={true}
+          disableTouchRipple={true}
+          edge="end"
+          onClick={[MockFunction]}
+          size="small"
+        >
+          <CloseIcon
+            classes={
+              Object {
+                "root": "closeIconSVG",
+              }
+            }
+          />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(DialogTitle))>
   <WithStyles(ForwardRef(DialogContent))
     className="content"

@@ -40,7 +40,7 @@ export const ActionBar: FC<ActionBarProps> = props => {
     if (typeof props.title === 'function') return props.title();
 
     return props.title;
-  }, [ props.title ]);
+  }, [props]);
 
   return (
     <div className={classnames('navigation-bar', css.actionBar)} data-qa={props['data-qa']}>

@@ -143,8 +143,8 @@ export class JestScreenshot {
   private dirName: string;
   private testName: string;
   private shouldUploadToSlack = false;
-  private slackToken = '';
-  private slackChannels: string[] = [];
+  private slackToken: string | undefined = '';
+  private slackChannels: string[] | undefined = [];
 
   /**
    * Constructs a new JestScreenshot
@@ -167,7 +167,7 @@ export class JestScreenshot {
       if (process.env.SLACK_WEBTOKEN) {
         this.slackToken = process.env.SLACK_WEBTOKEN;
       } else {
-        this.slackToken = options.slackToken!;
+        this.slackToken = options.slackToken;
       }
 
       if (!this.slackToken) throw new JestScreenshotError('When you want to upload to slack you should either provide the slackToken option or an environment variable called "SLACK_WEBTOKEN"');
@@ -176,7 +176,7 @@ export class JestScreenshot {
         throw new JestScreenshotError('When you want to upload to slack you provide an array of channels to post the screenshot in through the "slackChannels" options');
       }
 
-      this.slackChannels = options.slackChannels!;
+      this.slackChannels = options.slackChannels;
 
       if (!this.slackChannels || !this.slackChannels.length) {
         throw new JestScreenshotError('Failed to set the Slack channels, please verify your slackChannels option');
@@ -225,7 +225,7 @@ export class JestScreenshot {
     const apiMethod = `${apiUrl}/files.upload`;
     const form = new Form();
     form.append('token', this.slackToken);
-    form.append('channels', this.slackChannels.join(','));
+    form.append('channels', this.slackChannels?.join(',') || [].join(','));
     form.append('file', screenshot, {
       contentType: 'image/png',
       filename: fileName,

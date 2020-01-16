@@ -48,7 +48,7 @@ In `tslint.json`:
 
 ```json
 {
-    "extends": ["@rws-air/tslint-config"]
+  "extends": ["@rws-air/tslint-config"]
 }
 ```
 

@@ -49,7 +49,19 @@ exports[`Snapshot Testing Required Props 1`] = `
       customclasses="modalButtonCancel"
       data-qa="modal-cancel-button"
       label="CANCEL"
-      onClick={[Function]}
+      onClick={
+        [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        }
+      }
       variant="outlined"
     />
     <Memo(Button)
@@ -57,7 +69,19 @@ exports[`Snapshot Testing Required Props 1`] = `
       customclasses="modalButtonOk"
       data-qa="modal-confirm-button"
       label="OK"
-      onClick={[Function]}
+      onClick={
+        [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        }
+      }
       variant="contained"
     />
   </WithStyles(ForwardRef(DialogActions))>

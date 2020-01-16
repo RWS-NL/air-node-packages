@@ -1,5 +1,3 @@
-const patternRegex = new RegExp('^[a-z](?:[A-Z0-9]*[a-z][a-z0-9]*[A-Z]|[a-z0-9]*[A-Z][A-Z0-9]*[a-z])?[A-Za-z0-9]*$');
-
 export const config = {
   defaultSeverity: 'error',
   extends: [
@@ -34,13 +32,13 @@ export const config = {
     'scss/at-if-closing-brace-space-after': 'always-intermediate',
     'scss/at-mixin-argumentless-call-parentheses': 'never',
     'scss/at-mixin-parentheses-space-before': 'always',
-    'scss/at-mixin-pattern': patternRegex,
+    'scss/at-mixin-pattern': "^[a-z](?:[A-Z0-9]*[a-z][a-z0-9]*[A-Z]|[a-z0-9]*[A-Z][A-Z0-9]*[a-z])?[A-Za-z0-9]*$",
     'scss/dollar-variable-no-missing-interpolation': true,
-    'scss/dollar-variable-pattern': patternRegex,
+    'scss/dollar-variable-pattern': "^[a-z](?:[A-Z0-9]*[a-z][a-z0-9]*[A-Z]|[a-z0-9]*[A-Z][A-Z0-9]*[a-z])?[A-Za-z0-9]*$",
     'scss/double-slash-comment-whitespace-inside': 'always',
     'scss/no-duplicate-dollar-variables': true,
-    'scss/percent-placeholder-pattern': patternRegex,
-    'selector-class-pattern': patternRegex,
+    'scss/percent-placeholder-pattern': "^[a-z](?:[A-Z0-9]*[a-z][a-z0-9]*[A-Z]|[a-z0-9]*[A-Z][A-Z0-9]*[a-z])?[A-Za-z0-9]*$",
+    'selector-class-pattern': "^[a-z](?:[A-Z0-9]*[a-z][a-z0-9]*[A-Z]|[a-z0-9]*[A-Z][A-Z0-9]*[a-z])?[A-Za-z0-9]*$",
     'value-keyword-case': 'lower',
     'value-list-comma-newline-after': 'never-multi-line',
     'value-list-comma-newline-before': 'never-multi-line',

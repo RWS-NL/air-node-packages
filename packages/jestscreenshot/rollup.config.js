@@ -7,8 +7,8 @@ export default configure({
   plugins: [
     json({
       preferConst: true,
-      compact: true,
+      compact: true
     })
   ],
-  externalConfig: builtins,
+  externalConfig: builtins
 });

@@ -27,13 +27,20 @@ for (const file of files) {
 
 if (shouldError) {
   // eslint-disable-next-line no-console
-  console.error(stripIndents(
-    `
+  console.error(
+    stripIndents(
+      `
       ${chalk.red('\nLooks like you left focused tests, I found these hits:')}
-      ${badPatterns.map((pattern, index) => `- ${chalk.cyan(pattern)} \t${pattern.includes('describe') ? '' : '\t'}  in \t ${badFiles[index]}`).join('\n')}
+      ${badPatterns
+        .map(
+          (pattern, index) =>
+            `- ${chalk.cyan(pattern)} \t${pattern.includes('describe') ? '' : '\t'}  in \t ${badFiles[index]}`
+        )
+        .join('\n')}
       ${chalk.cyan('Please remove all the focused tests!\n')}
     `
-  ));
+    )
+  );
   process.exit(1);
 }
 

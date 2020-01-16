@@ -48,7 +48,7 @@ In `.eslintrc`:
 
 ```json
 {
-    "extends": ["@rws-air/eslint-config"]
+  "extends": ["@rws-air/eslint-config"]
 }
 ```
 

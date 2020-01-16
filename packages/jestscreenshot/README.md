@@ -39,6 +39,7 @@
 ## Installation
 
 Install with [yarn](https://yarnpkg.com) or [npm](https://www.npmjs.com/):
+
 ```sh
 yarn add -D @rws-air/jestscreenshot @types/jest-environment-puppeteer jest-circus jest-environment-puppeteer
 ```
@@ -55,7 +56,7 @@ This library supports uploading your screenshots to Slack by providing the `SLAC
 
 ## Example
 
-***Please note that you cannot use ES module imports in the `jest-enviroment.ts` file. Jest does not support them.***
+**_Please note that you cannot use ES module imports in the `jest-enviroment.ts` file. Jest does not support them._**
 
 ```js
 // jest.config.js
@@ -64,11 +65,11 @@ module.exports = {
   testRunner: 'jest-circus/runner',
   testEnvironment: '<rootDir>/__tests__/jest-environment.js',
 
-  testMatch: [ '<rootDir>/__tests__/index.test.ts' ],
+  testMatch: ['<rootDir>/__tests__/index.test.ts'],
 
   globalSetup: 'jest-environment-puppeteer/setup',
   globalTeardown: 'jest-environment-puppeteer/teardown',
-  setupFilesAfterEnv: [ 'expect-puppeteer', '<rootDir>/__tests__/jest-framework.ts' ],
+  setupFilesAfterEnv: ['expect-puppeteer', '<rootDir>/__tests__/jest-framework.ts']
 };
 ```
 
@@ -110,8 +111,8 @@ class CustomEnvironment extends PuppeteerEnvironment {
           page: this.global.page,
           dirName: __dirname,
           testName,
-          slackChannels: [ 'ChannelID' ],
-          slackUpload: true,
+          slackChannels: ['ChannelID'],
+          slackUpload: true
         });
 
         await jestScreenshot.setup();

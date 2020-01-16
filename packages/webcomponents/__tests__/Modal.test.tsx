@@ -2,14 +2,17 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import React, { Fragment } from 'react';
 import Button from '../src/Button/Button';
 import { Modal, ModalProps } from '../src/Modal/Modal';
+import { IconButton } from '@material-ui/core';
 
 let modal: ShallowWrapper<ModalProps, any>;
+const mockCloseAction = jest.fn();
 
 const setup = (isOpen = false, props?: Partial<ModalProps>, DialogContent: () => JSX.Element = () => <Fragment />) => (
   modal = shallow<ModalProps>(
     <Modal
       topic='Awesome Topic'
       open={isOpen}
+      closeAction={mockCloseAction}
       dialogContent={<div>Hello Wolrd</div>}
       modalqas={{
         content: 'modal-content',
@@ -41,11 +44,23 @@ describe('Render Testing', () => {
 
 describe('Content Testing', () => {
   beforeAll(() => setup(true, {}, () => <div>Content</div>));
+  afterAll(() => {
+    jest.clearAllMocks();
+  });
 
   test('should contain content', () => {
     expect(modal.find('[data-qa="modal-content"]').children().exists()).toBe(true);
     expect(modal.find('[data-qa="modal-content"]').children()).toMatchSnapshot();
   });
+
+  test('should close when clicking X icon', () => {
+    const closeButton = modal.find(IconButton);
+
+    closeButton.simulate('click');
+
+    expect(mockCloseAction).toHaveBeenCalledWith();
+    expect(mockCloseAction).toHaveBeenCalledTimes(1);
+  })
 });
 
 describe('Snapshot Testing', () => {

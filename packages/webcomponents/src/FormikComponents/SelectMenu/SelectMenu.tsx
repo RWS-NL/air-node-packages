@@ -29,7 +29,9 @@ export const SelectMenu: FC<SelectMenuProps> = ({ options, ...props }) => {
   const inputLabel = useRef<HTMLLabelElement>(null);
   const [ labelWidth, setLabelWidth ] = useState(0);
   useEffect(() => {
-    setLabelWidth(inputLabel.current!.offsetWidth);
+    if(inputLabel.current) {
+      setLabelWidth(inputLabel.current.offsetWidth);
+    }
   }, []);
 
   const selectFieldHasErrors = objectHasProperty(props.form.errors, props.field.name) && objectHasProperty(props.form.touched, props.field.name);

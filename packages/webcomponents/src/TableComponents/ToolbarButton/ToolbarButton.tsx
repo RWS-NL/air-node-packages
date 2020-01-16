@@ -65,7 +65,7 @@ export interface ToolbarButtonProps {
 export const ToolbarButton: FC<ToolbarButtonProps> = props => {
   const elevation = useMemo(
     () => objectHasProperty(props, 'paperElevation') ? props.paperElevation : 2,
-    [ props.paperElevation ]
+    [props]
   );
 
   const renderWithTooltip = useMemo(
@@ -88,10 +88,7 @@ export const ToolbarButton: FC<ToolbarButtonProps> = props => {
         </IconButton>
       </Tooltip>
     ),
-    [
-      props.disabled, props.onClick, props.icon, props.iconButtonCustomclasses,
-      props.tooltipCustomClasses, props.tooltipPlacement, props.tooltipText
-    ]
+    [props]
   );
 
   const renderWithoutTooltip = useMemo(() => (
@@ -105,14 +102,14 @@ export const ToolbarButton: FC<ToolbarButtonProps> = props => {
     >
       {props.icon}
     </IconButton>
-  ), [ props.disabled, props.onClick, props.icon, props.iconButtonCustomclasses ]);
+  ), [props]);
 
   const customRender = useMemo(() => {
     if (props.disabled) return renderWithoutTooltip;
     if (props.disableTooltip) return renderWithoutTooltip;
 
     return renderWithTooltip;
-  }, [ props.disabled, props.disableTooltip ]);
+  }, [props.disabled, props.disableTooltip, renderWithoutTooltip, renderWithTooltip]);
 
   return (
     <Paper

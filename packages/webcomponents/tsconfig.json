@@ -1,19 +1,17 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "build",
+    "outDir": "./dist",
     "rootDir": "src",
     "baseUrl": "src",
     "resolveJsonModule": true,
     "noEmit": true,
     "downlevelIteration": true,
-    "jsx": "react"
+    "jsx": "react",
+    "incremental": true,
+    "target": "es6",
+    "skipLibCheck": true
   },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "src/__tests__",
-    "src/setupTests.ts"
-  ]
+  "include": ["src"],
+  "exclude": ["src/__tests__", "src/setupTests.ts"]
 }
