@@ -1,7 +1,5 @@
 {
-  "packages": [
-    "packages/*"
-  ],
+  "packages": ["packages/*"],
   "npmClient": "yarn",
   "version": "independent",
   "useWorkspaces": true,
@@ -19,14 +17,7 @@
     },
     "create": {
       "license": "AGPL-3.0-or-later",
-      "keywords": [
-        "rws-air",
-        "rws-nl",
-        "rws",
-        "air",
-        "typescript",
-        "ts"
-      ]
+      "keywords": ["rws-air", "rws-nl", "rws", "air", "typescript", "ts"]
     }
   }
 }

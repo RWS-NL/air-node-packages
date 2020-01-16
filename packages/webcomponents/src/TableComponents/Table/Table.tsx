@@ -143,7 +143,7 @@ export const Table: FC<TableProps> = props => {
   const addCustomClasses = (component: keyof TableCustomClasses, baseClass?: string): string[] => {
     const classes: string[] = [];
     if (baseClass) classes.push(baseClass);
-    if (props.tablecss && props.tablecss[component]) classes.push(...props.tablecss[component]);
+    if (props.tablecss && props.tablecss[component]) classes.push(...props.tablecss[component]!); // eslint-disable-line @typescript-eslint/no-non-null-assertion
 
     return classes;
   };

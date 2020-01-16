@@ -6,6 +6,7 @@
 
 .modal {
   > div > div {
+    border-radius: 0;
     max-width: unset;
     min-width: 45vw;
   }
@@ -22,5 +23,16 @@
     color: $logoBlue;
     font-size: 1.1rem;
     font-weight: bolder;
+  }
+}
+
+.closeIcon {
+  bottom: 3rem;
+  left: 2.7rem;
+  position: relative;
+
+  &SVG {
+    height: 0.7em;
+    width: 0.7em;
   }
 }

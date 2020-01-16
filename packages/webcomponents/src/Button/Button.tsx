@@ -41,6 +41,7 @@ export const Button: FC<MUIButtonProps<'button', ButtonProps>> = props => {
 
   return (
     <MUIButton
+      {...props}
       data-qa={props['data-qa']}
       onClick={props.onClick}
       variant={props.variant}
@@ -58,7 +59,6 @@ export const Button: FC<MUIButtonProps<'button', ButtonProps>> = props => {
         outlinedSecondary: classnames(css.buttonOutlinedSecondary, classes.buttonShadow),
       }}
       href={undefined}
-      {...props}
     >
       {props.label}
     </MUIButton>

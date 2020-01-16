@@ -7,24 +7,27 @@ import typescript from 'rollup-plugin-typescript2';
 import cleaner from 'rollup-plugin-cleaner';
 
 export default opts => {
-  const options = {...opts};
+  const options = { ...opts };
   const input = options.input ? options.input : 'src/index.ts';
   const plugins = options.plugins && options.plugins.length ? options.plugins : [];
   const externalConfig = options.externalConfig && options.externalConfig.length ? options.externalConfig : [];
-  const output = options.output && options.output.length ? options.output : [
-    {
-      file: './dist/index.js',
-      format: 'cjs',
-      exports: 'named',
-      sourcemap: true,
-    },
-    {
-      file: './dist/index.es.js',
-      format: 'es',
-      exports: 'named',
-      sourcemap: true,
-    }
-  ];
+  const output =
+    options.output && options.output.length
+      ? options.output
+      : [
+          {
+            file: './dist/index.js',
+            format: 'cjs',
+            exports: 'named',
+            sourcemap: true
+          },
+          {
+            file: './dist/index.es.js',
+            format: 'es',
+            exports: 'named',
+            sourcemap: true
+          }
+        ];
 
   return {
     input,
@@ -32,20 +35,18 @@ export default opts => {
     external: externalConfig,
     plugins: [
       cleaner({
-        targets: [
-          './dist/'
-        ],
+        targets: ['./dist/']
       }),
       progress(),
       external(),
-      resolve({preferBuiltins: true }),
+      resolve({ preferBuiltins: true }),
       typescript({
         rollupCommonJSResolveHack: true,
-        clean: true,
+        clean: true
       }),
       commonjs(),
       terser({ ecma: 5 }),
       ...plugins
-    ],
+    ]
   };
 };

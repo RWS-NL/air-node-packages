@@ -48,7 +48,7 @@ In `.stylelintrc`:
 
 ```json
 {
-    "extends": ["@rws-air/stylelint-config"]
+  "extends": ["@rws-air/stylelint-config"]
 }
 ```
 

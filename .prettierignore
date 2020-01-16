@@ -1,0 +1,9 @@
+**/*.types
+**/*.conf
+**/*.woff
+**/*.snap
+**/*.svg
+**/*.tsbuildinfo
+**/dist/
+**/docs/
+**/node_modules/

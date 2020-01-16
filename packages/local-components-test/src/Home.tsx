@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import TableRow from '@material-ui/core/TableRow';
-import { Table, TableBodyCell, TableProps } from '@rws-air/webcomponents';
-import React, { FC, Fragment } from 'react';
+import { Table, TableBodyCell, TableProps, Modal, Button, ConfirmationModal } from '@rws-air/webcomponents';
+import React, { FC, Fragment, useState } from 'react';
 import css from 'styles/modules/app.module.scss';
 import SearchIcon from '@material-ui/icons/Search';
 import { IconButton } from '@material-ui/core';
@@ -147,10 +147,44 @@ const propsForTable: TableProps = {
   ],
 };
 
+const Divider = () => (
+  <div style={{margin: '4vh', height: '4vh' }}></div>
+);
+
 
 const Home: FC = () => {
+  const [ open, setOpen ] = useState(false);
+  const [ confirmationOpen, setConfirmationOpen ] = useState(false);
+
+  const toggleModal = () => setOpen(!open);
+  const toggleConfirmationModal = () => setConfirmationOpen(!open);
+
   return (
     <Fragment>
+      <Modal
+        topic='Woopdiedoo'
+        modalqas={{
+          modal: 'modal',
+          content: 'content',
+          title: 'title',
+        }}
+        dialogContent={<div>Herp Derp</div>}
+        open={open}
+        closeAction={toggleModal}
+      />
+      <ConfirmationModal
+        closeAction={toggleConfirmationModal}
+        okButtonText='OK'
+        cancelButtonText='CANCEL'
+        modalType='warning'
+        confirmAction={console.log}
+        dialogContent={<div>HERP DERP</div>}
+        open={confirmationOpen}
+        topic='Confirmation Modal Test'
+      />
+      <Button onClick={toggleModal} label='CLICK ME TO OPEN TEST MODAL' variant='contained' color='primary' style={{ float: 'left' }} />
+      <Button onClick={toggleConfirmationModal} label='CLICK ME TO OPEN CONFIRMATION TEST MODAL' variant='contained' color='primary' style={{ float: 'left' }} />
+      <Divider/>
       <Table {...propsForTable} />
     </Fragment>
   );

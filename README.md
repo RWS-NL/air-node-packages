@@ -95,7 +95,7 @@ To easily update failing snapshots for webcomponents run this command from repos
 
 ### Creating a build
 
-Run `yarn build`  from repository root
+Run `yarn build` from repository root
 
 ### Updating API Documentation
 
@@ -109,12 +109,15 @@ Run `yarn build`  from repository root
 2. Run `lerna publish` to start the publishing process. This automatically runs lint, test, build, version bump, and publish to npm (in that order).
 
 #### If publish fails in build
+
 1. Go to GitHub repository -> releases: https://github.com/RWS-NL/air-node-packages/releases.
 2. Delete any tags created by the publish script.
 3. Delete the same tags locally: `git tag -d <name_of_tag> [...<name_of_other_tag>]`.
 4. Reset your HEAD to the commit before the publish.
-  - `tig` to find commit hash.
-  - `git checkout <commit_hash>`.
+
+- `tig` to find commit hash.
+- `git checkout <commit_hash>`.
+
 5. Remove the failed commit with `git push --force`.
 6. Fix the issues.
 7. Run `yarn build` to ensure your fixes fix everything.
