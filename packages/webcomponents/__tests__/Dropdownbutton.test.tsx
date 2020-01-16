@@ -11,7 +11,7 @@ describe('Component Tests', () => {
   beforeAll(() => {
     dropdownButton = shallow(
       <Dropdownbutton
-        ButtonIcon={<CloudDownload/>}
+        ButtonIcon={<CloudDownload />}
         onClick={mockButtonClick}
         options={[ 'one', 'two' ]}
         menuItemDataQa='menu-item'
@@ -38,10 +38,10 @@ describe('Component Test - Disabled Button', () => {
     dropdownButton = shallow<DropdownbuttonProps>(
       <Dropdownbutton
         disabled
-        ButtonIcon={<CloudDownload/>}
+        ButtonIcon={<CloudDownload />}
         onClick={mockButtonClick}
         buttonGroupDataQa='button-group'
-        options={[ 'one', 'two' ]}/>
+        options={[ 'one', 'two' ]} />
     );
   });
 
@@ -53,14 +53,14 @@ describe('Component Test - Disabled Button', () => {
 
 describe('Snapshot Testing', () => {
   test('Required Props', () => {
-    const dropdownButton = shallow(<Dropdownbutton ButtonIcon={<CloudDownload/>} onClick={mockButtonClick} options={[ 'one', 'two', 'three' ]} />);
+    const dropdownButton = shallow(<Dropdownbutton ButtonIcon={<CloudDownload />} onClick={mockButtonClick} options={[ 'one', 'two', 'three' ]} />);
     expect(dropdownButton).toMatchSnapshot();
   });
 
   test('Optional Props', () => {
     const dropdownButton = shallow(
       <Dropdownbutton
-        ButtonIcon={<CloudDownload/>}
+        ButtonIcon={<CloudDownload />}
         onClick={mockButtonClick}
         options={[ 'one', 'two', 'three' ]}
         disabledOptionIds={[ 2 ]}

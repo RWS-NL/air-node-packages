@@ -3,16 +3,15 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { objectHasProperty } from '@rws-air/utils';
 import React, { FC, memo, ReactNode } from 'react';
-import { dataQa } from '../constants';
 import css from './Modal.scss';
 
 export interface ModalQAs {
   /** Data-qa applied to the main modal */
-  modal?: dataQa;
+  modal?: string;
   /** Data-qa applied to the title */
-  title?: dataQa;
+  title?: string;
   /** Data-qa applied to the content */
-  content?: dataQa;
+  content?: string;
 }
 
 export interface ModalProps {
@@ -30,7 +29,21 @@ export interface ModalProps {
   disableEscapeKeyDown?: boolean;
 }
 
-/** Creates a modal using pre-defined Rijkswaterstaat styling */
+/**
+ * Constructs a modal using pre-defined Rijkswaterstaat styling
+ * @param props Props to pass to the modal
+ * @example
+ * <Modal
+ *   topic='topic'
+ *   modalqas={{
+ *     modal: 'modal',
+ *     content: 'content',
+ *     title: 'title',
+ *   }}
+ *   dialogContent={<div>SAMPLE</div>}
+ *   open={true}
+ * />
+ */
 export const Modal: FC<ModalProps> = props => {
   return (
     <Dialog

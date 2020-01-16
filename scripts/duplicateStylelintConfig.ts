@@ -1,7 +1,7 @@
 
 import chalk from 'chalk';
 import stylelintConfig from '../packages/stylelint-config/src/';
-import { writeFileSync as writeJson } from 'jsonfile';
+import { writeJSONAtomic } from 'fs-nextra';
 import path from 'path';
 
 const patternRegex = /^[a-z](?:[A-Z0-9]*[a-z][a-z0-9]*[A-Z]|[a-z0-9]*[A-Z][A-Z0-9]*[a-z])?[A-Za-z0-9]*$/;
@@ -13,8 +13,8 @@ const localComponentConfigPath = path.join(__dirname, '../packages/local-compone
 (stylelintConfig.rules['scss/percent-placeholder-pattern'] as unknown as string) = patternRegex.toString().replace(/\//g, '');
 (stylelintConfig.rules['selector-class-pattern'] as unknown as string) = patternRegex.toString().replace(/\//g, '');
 
-writeJson(webcomponentConfigPath, stylelintConfig);
-writeJson(localComponentConfigPath, stylelintConfig);
+writeJSONAtomic(webcomponentConfigPath, stylelintConfig);
+writeJSONAtomic(localComponentConfigPath, stylelintConfig);
 
 // eslint-disable-next-line no-console
 console.log(chalk.green('Duplicated StyleLint config'));

@@ -1,1 +1,0 @@
-export { default as TableToolbar, TableToolbarProps, RenderIconProps } from './TableToolbar';

@@ -33,6 +33,9 @@
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@rws-air/webcomponents?label=webcomponents%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@rws-air/webcomponents)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@rws-air/webcomponents?label=webcomponents%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@rws-air/webcomponents)
 
+[![npm bundle size](https://img.shields.io/bundlephobia/min/@rws-air/utils?label=utils%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@rws-air/utils)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@rws-air/utils?label=utils%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@rws-air/utils)
+
 **Versions**
 
 [![npm](https://img.shields.io/npm/v/@rws-air/eslint-config?color=crimson&label=eslint-config%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@rws-air/eslint-config)
@@ -41,6 +44,7 @@
 [![npm](https://img.shields.io/npm/v/@rws-air/tslint-config?color=crimson&label=tslint-config%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@rws-air/tslint-config)
 [![npm](https://img.shields.io/npm/v/@rws-air/usercreator?color=crimson&label=usercreator%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@rws-air/usercreator)
 [![npm](https://img.shields.io/npm/v/@rws-air/webcomponents?color=crimson&label=webcomponents%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@rws-air/webcomponents)
+[![npm](https://img.shields.io/npm/v/@rws-air/utils?color=crimson&label=utils%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@rws-air/utils)
 
 **Our Badges**
 

@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Testing Required Props 1`] = `
+<WithStyles(ForwardRef(FormControlLabel))
+  classes={
+    Object {
+      "label": "label",
+    }
+  }
+  control={
+    <ForwardRef(WithStyles)
+      checkedIcon={
+        <UNDEFINED
+          fontSize="small"
+        />
+      }
+      color="primary"
+      icon={
+        <UNDEFINED
+          className="checkBox"
+          fontSize="small"
+        />
+      }
+      name="testCheckbox"
+      onBlur={[MockFunction]}
+      onChange={[MockFunction]}
+      value="testCheckbox"
+    />
+  }
+  label="testCheckbox"
+/>
+`;

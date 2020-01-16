@@ -1,1 +1,0 @@
-export { default as TablePagination, TablePaginationProps, MutatedMUITablePaginationProps } from './TablePagination';

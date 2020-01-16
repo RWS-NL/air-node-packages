@@ -9,16 +9,15 @@ import classnames from 'classnames';
 import { ModalProps, ModalQAs } from '../Modal/Modal';
 import React, { FC, Fragment, KeyboardEvent, memo, useMemo } from 'react';
 import Button from '../Button/Button';
-import { dataQa } from '../constants';
 import css from './ConfirmationModal.scss';
 
 export interface ConfirmationModalQAs extends ModalQAs {
   /** Data-qa applied to the modal actions */
-  actions?: dataQa;
+  actions?: string;
   /** Data-qa applied to the action confirm button */
-  actionConfirm?: dataQa;
+  actionConfirm?: string;
   /** Data-qa applied to the action cancel button */
-  actionCancel?: dataQa;
+  actionCancel?: string;
 }
 
 export interface ConfirmationModalProps extends ModalProps {
@@ -41,7 +40,27 @@ export interface ConfirmationModalProps extends ModalProps {
 }
 
 /**
- * Creates a modal using pre-defined Rijkswaterstaat styling
+ * Constructs a confirmation modal using pre-defined Rijkswaterstaat styling
+ * @param props Props to pass to the confirmation modal
+ * @example
+ * <ConfirmationModal
+ *   modalType='warning'
+ *   open={true}
+ *   topic='SAMPLE TOPIC'
+ *   cancelButtonText='CANCEL'
+ *   okButtonText='OK'
+ *   confirmAction={console.log}
+ *   closeAction={console.log}
+ *   modalqas={{
+ *      modal: 'sample',
+ *      content: 'sample-content',
+ *      title: 'sample-title',
+ *      actions: 'sample-actions',
+ *      actionCancel: 'sample-action-cancel',
+ *      actionConfirm: 'sample-action-confirm',
+ *   }}
+ *   dialogContent={ <ModalContent><div>SAMPLE</div></ModalContent> }
+ * />
  */
 export const ConfirmationModal: FC<ConfirmationModalProps> = props => {
   const handleConfirmKeyPress = (event: KeyboardEvent) => {

@@ -15,7 +15,5 @@ import chalk from 'chalk';
     log(chalk.cyan('Yarn lockfile was updated, running Yarn for you'));
 
     execa('yarn', {cwd: ROOT_DIR}).stdout!.pipe(process.stdout);
-
-    log(chalk.green('Successfully ran yarn for you!'));
   }
 })();
