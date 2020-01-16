@@ -1,7 +1,3 @@
-/**
- * @class Button
- */
-
 import MUIButton, { ButtonProps as MUIButtonProps } from '@material-ui/core/Button';
 import css from './Button.scss';
 import classnames from 'classnames';

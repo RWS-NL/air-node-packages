@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Testing Optional Props 1`] = `
+<Memo(Tooltip)
+  id="tooltip"
+  title="Sample"
+>
+  <WithStyles(ForwardRef(Fab))
+    className="makeStyles-fab-1"
+    color="primary"
+    onClick={[MockFunction]}
+  >
+    <AccessAlarmIcon />
+  </WithStyles(ForwardRef(Fab))>
+</Memo(Tooltip)>
+`;
+
+exports[`Snapshot Testing Required Props 1`] = `
+<Memo(Tooltip)
+  title="Sample"
+>
+  <WithStyles(ForwardRef(Fab))
+    className="makeStyles-fab-1"
+    color="primary"
+    onClick={[MockFunction]}
+  >
+    <AccessAlarmIcon />
+  </WithStyles(ForwardRef(Fab))>
+</Memo(Tooltip)>
+`;

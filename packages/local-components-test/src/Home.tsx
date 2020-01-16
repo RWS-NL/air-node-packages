@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import TableRow from '@material-ui/core/TableRow';
-import { Table, TableBodyCell, TableProps, Modal, Button, ConfirmationModal } from '@rws-air/webcomponents';
+import { Table, TableBodyCell, TableProps, Modal, Button, ConfirmationModal, FloatingActionButton } from '@rws-air/webcomponents';
 import React, { FC, Fragment, useState } from 'react';
 import css from 'styles/modules/app.module.scss';
 import SearchIcon from '@material-ui/icons/Search';
@@ -186,6 +186,7 @@ const Home: FC = () => {
       <Button onClick={toggleConfirmationModal} label='CLICK ME TO OPEN CONFIRMATION TEST MODAL' variant='contained' color='primary' style={{ float: 'left' }} />
       <Divider/>
       <Table {...propsForTable} />
+      <FloatingActionButton tooltipContent='test' icon={<SearchIcon/>} onClick={console.log}/>
     </Fragment>
   );
 };

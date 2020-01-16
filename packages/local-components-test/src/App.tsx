@@ -15,6 +15,9 @@ const createTheme: Theme = createMuiTheme({
     ].join(','),
     fontSize: 16,
   },
+  shape: {
+    borderRadius: 0
+  }
 });
 
 const App: React.FC = () => (
