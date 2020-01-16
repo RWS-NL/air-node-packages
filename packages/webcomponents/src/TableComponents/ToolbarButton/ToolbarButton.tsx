@@ -50,8 +50,8 @@ export interface ToolbarButtonProps {
 }
 
 /**
- * Constructs a PaperButton (elevated button with Material Paper) using pre-defined Rijkswaterstaat styling
- * @param props Props to pass to the PaperButton
+ * Constructs a ToolbarButton (elevated button with Material Paper) using pre-defined Rijkswaterstaat styling
+ * @param props Props to pass to the ToolbarButton
  * @example
  * <ToolbarButton
  *   icon={<CloudDownload/>}

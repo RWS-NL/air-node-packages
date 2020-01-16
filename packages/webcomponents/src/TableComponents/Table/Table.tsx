@@ -7,12 +7,12 @@ import classnames from 'classnames';
 import React, { FC, Fragment, ReactNode, memo } from 'react';
 import css from './Table.scss';
 import TableHeaderCell, { TableHeaderCellProps, TableHeaderProps } from '../HeaderCell/HeaderCell';
-import Pagination, { TablePaginationProps } from '../Pagination/Pagination';
+import Pagination, { PaginationProps } from '../Pagination/Pagination';
 import TableToolbar, { TableToolbarProps } from '../Toolbar/Toolbar';
 
 export type TableLabels =
   & Pick<TableToolbarProps, 'searchplaceholderlabel'>
-  & Pick<TablePaginationProps, 'labelRowsPerPage' | 'labelPaginationOf'>
+  & Pick<PaginationProps, 'labelRowsPerPage' | 'labelPaginationOf'>
   & Pick<TableHeaderCellProps, 'tooltiplabel'>;
 
 export interface TableQAs {

@@ -17,6 +17,10 @@ describe('Component Tests', () => {
     );
   });
 
+  afterAll(() => {
+    jest.clearAllMocks();
+  });
+
   test('should trigger change when searching', () => {
     const inputBox = tableToolbar
       .find('[data-qa="table-search-bar"]')

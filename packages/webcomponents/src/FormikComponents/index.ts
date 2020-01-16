@@ -1,5 +1,5 @@
 export * from './Checkbox';
 export * from './DatePicker';
-// Export * fro../RadioGroupoup';
+export * from './RadioGroup';
 export * from './SelectMenu';
 export * from './TextField';

@@ -7,7 +7,7 @@ import TablePaginationActions from '../PaginationActions/PaginationActions';
 
 export type MutatedMUITablePaginationProps = TablePaginationTypeMap<object, React.ComponentType<TablePaginationBaseProps>>['props'];
 
-export interface TablePaginationProps extends MutatedMUITablePaginationProps {
+export interface PaginationProps extends MutatedMUITablePaginationProps {
   /** The label in the displayed rows per page, for example "5 rows per page" */
   labelRowsPerPage: ReactNode;
   /** The label in the displayed pages, for example "of" in "page 1 of 10" */
@@ -34,7 +34,7 @@ export interface TablePaginationProps extends MutatedMUITablePaginationProps {
  *   data-qa='table-pagination'
  * />
  */
-export const Pagination: FC<TablePaginationProps> = props => {
+export const Pagination: FC<PaginationProps> = props => {
   const isOnMobile = useMediaQuery('(max-width: 1024px)');
 
   return (
