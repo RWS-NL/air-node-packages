@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.1.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@9.1.0...@rws-air/webcomponents@9.1.1) (2020-01-17)
+
+### Bug Fixes
+
+- **webcomponents:** fix export of Form Text Field ([ae2019a](https://github.com/RWS-NL/air-node-packages/commit/ae2019a436d9b26ff0236eaf90e58f080acec0dd))
+
 # [9.1.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@9.0.4...@rws-air/webcomponents@9.1.0) (2020-01-17)
 
 ### Features
