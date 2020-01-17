@@ -1,4 +1,4 @@
-import { TextField } from '@material-ui/core';
+import { TextField as MUITextField } from '@material-ui/core';
 import { objectHasProperty } from '@rws-air/utils';
 import classnames from 'classnames';
 import { fieldToTextField, TextFieldProps } from 'formik-material-ui';
@@ -17,13 +17,13 @@ import css from './TextField.scss';
  * />
  * ```
  */
-export const FormTextField: FC<TextFieldProps> = componentProps => {
+export const TextField: FC<TextFieldProps> = componentProps => {
   const { field, form, label, ...props } = componentProps as TextFieldProps;
 
   const textFieldHasErrors = objectHasProperty(form.errors, field.name) && objectHasProperty(form.touched, field.name);
 
   return (
-    <TextField
+    <MUITextField
       {...fieldToTextField(componentProps)}
       value={field.value}
       label={label}
@@ -55,4 +55,4 @@ export const FormTextField: FC<TextFieldProps> = componentProps => {
   );
 };
 
-export default FormTextField;
+export default TextField;
