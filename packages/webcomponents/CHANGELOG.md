@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.1.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@9.0.4...@rws-air/webcomponents@9.1.0) (2020-01-17)
+
+### Features
+
+- rework webcomponents ([#224](https://github.com/RWS-NL/air-node-packages/issues/224)) ([297420d](https://github.com/RWS-NL/air-node-packages/commit/297420d7eba99d106c0a1ba50f243a31f9120be9))
+
 ## [9.0.4](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@9.0.3...@rws-air/webcomponents@9.0.4) (2020-01-17)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/local-components-test@3.0.0...@rws-air/local-components-test@3.1.0) (2020-01-17)
+
+### Features
+
+- rework webcomponents ([#224](https://github.com/RWS-NL/air-node-packages/issues/224)) ([297420d](https://github.com/RWS-NL/air-node-packages/commit/297420d7eba99d106c0a1ba50f243a31f9120be9))
+
 # [3.0.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/local-components-test@2.0.0...@rws-air/local-components-test@3.0.0) (2020-01-17)
 
 ### Feat
