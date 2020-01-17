@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.4](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@9.0.3...@rws-air/webcomponents@9.0.4) (2020-01-17)
+
+### Bug Fixes
+
+- **webcomponents:** fix SelectMenu prop typings ([86894a8](https://github.com/RWS-NL/air-node-packages/commit/86894a88a68638d8b0c1b0a19fc7835f376db4ca))
+
 ## [9.0.3](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@9.0.2...@rws-air/webcomponents@9.0.3) (2020-01-17)
 
 ### Bug Fixes
