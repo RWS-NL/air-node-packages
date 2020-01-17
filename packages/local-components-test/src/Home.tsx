@@ -1,11 +1,20 @@
 /* eslint-disable no-console */
+import { IconButton, Typography } from '@material-ui/core';
 import TableRow from '@material-ui/core/TableRow';
-import { Table, TableBodyCell, TableProps, Modal, Button, ConfirmationModal } from '@rws-air/webcomponents';
+import AddIcon from '@material-ui/icons/Add';
+import DeleteIcon from '@material-ui/icons/Delete';
+import SearchIcon from '@material-ui/icons/Search';
+import {
+  Button,
+  ConfirmationModal,
+  FloatingActionButton,
+  Modal,
+  Table,
+  TableBodyCell,
+  TableProps
+} from '@rws-air/webcomponents';
 import React, { FC, Fragment, useState } from 'react';
 import css from 'styles/modules/app.module.scss';
-import SearchIcon from '@material-ui/icons/Search';
-import { IconButton } from '@material-ui/core';
-import DeleteIcon from '@material-ui/icons/Delete';
 
 interface DataForTableType {
   name: string;
@@ -31,22 +40,12 @@ const dataForTable: DataForTableType[] = [
   { name: 'Darth Vader', email: 'darth.vader@thedeathstart.com', id: 9876 }
 ];
 
-const dataTableHeaderMapping: Map<string, string> = new Map(
-  [
-    [
-      'id', 'id'
-    ],
-    [
-      'name', 'name'
-    ],
-    [
-      'email', 'email'
-    ],
-    [
-      'action', 'action'
-    ]
-  ]
-);
+const dataTableHeaderMapping: Map<string, string> = new Map([
+  ['id', 'id'],
+  ['name', 'name'],
+  ['email', 'email'],
+  ['action', 'action']
+]);
 
 const rowsPerPage = 5;
 const page = 0;
@@ -59,7 +58,7 @@ const propsForTable: TableProps = {
   order: 'asc',
   orderby: 'name',
   rowsPerPage,
-  rowsPerPageOptions: [ 2, 4, 5, 10 ],
+  rowsPerPageOptions: [2, 4, 5, 10],
   page,
   onChangePage: () => console.log('changed page'),
   onChangeRowsPerPage: () => console.log('changed rows per page'),
@@ -75,7 +74,7 @@ const propsForTable: TableProps = {
     labelPaginationOf: 'of',
     labelRowsPerPage: 'Rows per page',
     searchplaceholderlabel: 'Search...',
-    tooltiplabel: 'Sorteren',
+    tooltiplabel: 'Sorteren'
   },
   tableqas: {
     header: 'table-header',
@@ -84,36 +83,29 @@ const propsForTable: TableProps = {
     table: 'table',
     toolbar: 'table-toolbar',
     headerCell: 'table-header-cell',
-    tableBody: 'table-body',
+    tableBody: 'table-body'
   },
   tablebodycontent: (
     <Fragment>
-      {dataForTable
-        .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-        .map(row => (
-          <TableRow hover tabIndex={-1} key={Math.random()} className={css.tableRow} data-qa='sample-table-body-row' >
-            <TableBodyCell content={row.name} />
-            <TableBodyCell content={row.email} />
-            <TableBodyCell content={row.id} />
-            <TableBodyCell
-              content={
-                <IconButton
-                  onClick={undefined}
-                  data-qa='edit-user-button'
-                  color='primary'
-                >
-                  <DeleteIcon />
-                </IconButton>
-              }
-            />
-          </TableRow>
-        ))
-      }
+      {dataForTable.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map(row => (
+        <TableRow hover tabIndex={-1} key={Math.random()} className={css.tableRow} data-qa='sample-table-body-row'>
+          <TableBodyCell content={row.name} />
+          <TableBodyCell content={row.email} />
+          <TableBodyCell content={row.id} />
+          <TableBodyCell
+            content={
+              <IconButton onClick={undefined} data-qa='edit-user-button' color='primary'>
+                <DeleteIcon />
+              </IconButton>
+            }
+          />
+        </TableRow>
+      ))}
     </Fragment>
   ),
   tablecss: {
-    table: [ css.customTable, css.customTable ],
-    tableToolbar: [ css.customTableToolbar ],
+    table: [css.customTable, css.customTable],
+    tableToolbar: [css.customTableToolbar]
   },
   paperElevation: 1,
   showBottomPagination: true,
@@ -122,39 +114,36 @@ const propsForTable: TableProps = {
     {
       icon: <SearchIcon className={css.svgIcon} />,
       clickEvent: () => console.log('void'),
-      disabled: true,
+      disabled: true
     },
     {
       icon: <SearchIcon className={css.svgIcon} />,
-      clickEvent: () => console.log('void'),
+      clickEvent: () => console.log('void')
     },
     {
       icon: <SearchIcon className={css.svgIcon} />,
-      clickEvent: () => console.log('void'),
+      clickEvent: () => console.log('void')
     },
     {
       icon: <SearchIcon className={css.svgIcon} />,
-      clickEvent: () => console.log('void'),
+      clickEvent: () => console.log('void')
     },
     {
       icon: <SearchIcon className={css.svgIcon} />,
-      clickEvent: () => console.log('void'),
+      clickEvent: () => console.log('void')
     },
     {
       icon: <SearchIcon className={css.svgIcon} />,
-      clickEvent: () => console.log('void'),
+      clickEvent: () => console.log('void')
     }
-  ],
+  ]
 };
 
-const Divider = () => (
-  <div style={{margin: '4vh', height: '4vh' }}></div>
-);
-
+const Divider = () => <div style={{ margin: '4vh', height: '4vh' }}></div>;
 
 const Home: FC = () => {
-  const [ open, setOpen ] = useState(false);
-  const [ confirmationOpen, setConfirmationOpen ] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [confirmationOpen, setConfirmationOpen] = useState(false);
 
   const toggleModal = () => setOpen(!open);
   const toggleConfirmationModal = () => setConfirmationOpen(!open);
@@ -166,7 +155,7 @@ const Home: FC = () => {
         modalqas={{
           modal: 'modal',
           content: 'content',
-          title: 'title',
+          title: 'title'
         }}
         dialogContent={<div>Herp Derp</div>}
         open={open}
@@ -182,10 +171,39 @@ const Home: FC = () => {
         open={confirmationOpen}
         topic='Confirmation Modal Test'
       />
-      <Button onClick={toggleModal} label='CLICK ME TO OPEN TEST MODAL' variant='contained' color='primary' style={{ float: 'left' }} />
-      <Button onClick={toggleConfirmationModal} label='CLICK ME TO OPEN CONFIRMATION TEST MODAL' variant='contained' color='primary' style={{ float: 'left' }} />
-      <Divider/>
+      <Button
+        onClick={toggleModal}
+        label='CLICK ME TO OPEN TEST MODAL'
+        variant='contained'
+        color='primary'
+        style={{ float: 'left' }}
+      />
+      <Button
+        onClick={toggleConfirmationModal}
+        label='CLICK ME TO OPEN CONFIRMATION TEST MODAL'
+        variant='contained'
+        color='primary'
+        style={{ float: 'left' }}
+      />
+      <Divider />
       <Table {...propsForTable} />
+      <FloatingActionButton
+        tooltipContent='test'
+        icon={<SearchIcon />}
+        onClick={console.log}
+        style={{ marginBottom: 60 }}
+      />
+      <FloatingActionButton
+        tooltipContent='Druk hier om een nieuw project aan te maken'
+        icon={
+          <Fragment>
+            <AddIcon style={{ marginRight: '1rem' }} />
+            <Typography>Maak nieuw project aan</Typography>
+          </Fragment>
+        }
+        onClick={console.log}
+        variant='extended'
+      />
     </Fragment>
   );
 };

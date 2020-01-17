@@ -4,8 +4,10 @@ import fs from 'fs';
 import chalk from 'chalk';
 import { stripIndents } from 'common-tags';
 
-let files = glob.sync('**/*.test.?(j|t)s?(x)', { cwd: path.join(__dirname, '../packages') });
-files = files.map(file => path.join(__dirname, '../packages', file));
+const files = glob
+  .sync('**/*.test.?(j|t)s?(x)', { cwd: path.join(__dirname, '../packages') })
+  .map(file => path.join(__dirname, '../packages', file));
+
 const onlyPattern = new RegExp(/(?:describe\.only|it\.only|test\.only)/, 'gm');
 
 let shouldError = false;

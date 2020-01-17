@@ -2,6 +2,7 @@ export * from './ActionBar';
 export * from './Button';
 export * from './ConfirmationModal';
 export * from './Dropdownbutton';
+export * from './FloatingActionButton';
 export * from './FormikComponents';
 export * from './I18nComponents';
 export * from './LoadingSkeleton';

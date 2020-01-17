@@ -7,14 +7,12 @@ import { ThemeColours } from 'utils/constants';
 const createTheme: Theme = createMuiTheme({
   ...ThemeColours,
   typography: {
-    fontFamily: [
-      'rijksoverheidsanstext',
-      'verdana',
-      'arial',
-      'sans-serif'
-    ].join(','),
-    fontSize: 16,
+    fontFamily: ['rijksoverheidsanstext', 'verdana', 'arial', 'sans-serif'].join(','),
+    fontSize: 16
   },
+  shape: {
+    borderRadius: 0
+  }
 });
 
 const App: React.FC = () => (
