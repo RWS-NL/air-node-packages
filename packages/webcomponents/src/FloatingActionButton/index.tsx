@@ -15,9 +15,10 @@ export interface FabProps extends MFabProps {
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     fab: {
-      position: 'absolute',
+      position: 'fixed',
       bottom: theme.spacing(2),
-      right: theme.spacing(2)
+      right: theme.spacing(2),
+      zIndex: theme.zIndex.speedDial
     }
   })
 );
