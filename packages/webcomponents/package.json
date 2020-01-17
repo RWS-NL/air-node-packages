@@ -25,7 +25,7 @@
     "@material-ui/core": "^4",
     "@material-ui/icons": "^4",
     "@material-ui/pickers": "^3",
-    "@rws-air/utils": "^2",
+    "@rws-air/utils": "^3",
     "classnames": "^2",
     "formik": "^2",
     "formik-material-ui": "^1",
