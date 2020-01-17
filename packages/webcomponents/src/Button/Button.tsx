@@ -23,7 +23,8 @@ export interface ButtonProps {
   onClick(): unknown;
 }
 
-const useStyles = makeStyles((theme: Theme) => createStyles({ buttonShadow: { boxShadow: theme.shadows[1], border: 'transparant' } }),
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({ buttonShadow: { boxShadow: theme.shadows[1], border: 'transparant' } })
 );
 
 /**
@@ -52,7 +53,7 @@ export const Button: FC<MUIButtonProps<'button', ButtonProps>> = props => {
         containedSecondary: classnames(css.buttonSecondary, classes.buttonShadow),
         outlined: classnames(css.buttonOutlined, classes.buttonShadow),
         outlinedPrimary: classnames(css.buttonOutlined, classes.buttonShadow),
-        outlinedSecondary: classnames(css.buttonOutlinedSecondary, classes.buttonShadow),
+        outlinedSecondary: classnames(css.buttonOutlinedSecondary, classes.buttonShadow)
       }}
       href={undefined}
     >

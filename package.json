@@ -147,6 +147,7 @@
   "lint-staged": {
     "*.{js,ts,tsx}": [
       "yarn lint",
+      "yarn pretty-quick",
       "git add"
     ],
     "packages/eslint-config/src/index.ts": [
