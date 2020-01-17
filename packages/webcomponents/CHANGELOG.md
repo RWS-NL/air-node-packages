@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.2](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@9.0.1...@rws-air/webcomponents@9.0.2) (2020-01-17)
+
+### Bug Fixes
+
+- **webcomponents:** fix top-level exports for table components ([42c6532](https://github.com/RWS-NL/air-node-packages/commit/42c65326d740abb3bfa4a4897a3d37a8026944d3))
+
 ## [9.0.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@9.0.0...@rws-air/webcomponents@9.0.1) (2020-01-17)
 
 ### Bug Fixes
