@@ -135,7 +135,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn scripts:validateNoOnly && yarn lint-staged",
+      "pre-commit": "yarn scripts:validateNoOnly && yarn pretty-quick --staged && yarn lint-staged",
       "post-merge": "yarn scripts:yarnAfterPull"
     }
   },
@@ -147,7 +147,6 @@
   "lint-staged": {
     "*.{js,ts,tsx}": [
       "yarn lint",
-      "yarn pretty-quick",
       "git add"
     ],
     "packages/eslint-config/src/index.ts": [

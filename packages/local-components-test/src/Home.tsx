@@ -1,19 +1,20 @@
 /* eslint-disable no-console */
+import { IconButton, Typography } from '@material-ui/core';
 import TableRow from '@material-ui/core/TableRow';
+import AddIcon from '@material-ui/icons/Add';
+import DeleteIcon from '@material-ui/icons/Delete';
+import SearchIcon from '@material-ui/icons/Search';
 import {
-  Table,
-  TableBodyCell,
-  TableProps,
-  Modal,
   Button,
   ConfirmationModal,
-  FloatingActionButton
+  FloatingActionButton,
+  Modal,
+  Table,
+  TableBodyCell,
+  TableProps
 } from '@rws-air/webcomponents';
 import React, { FC, Fragment, useState } from 'react';
 import css from 'styles/modules/app.module.scss';
-import SearchIcon from '@material-ui/icons/Search';
-import { IconButton } from '@material-ui/core';
-import DeleteIcon from '@material-ui/icons/Delete';
 
 interface DataForTableType {
   name: string;
@@ -186,7 +187,23 @@ const Home: FC = () => {
       />
       <Divider />
       <Table {...propsForTable} />
-      <FloatingActionButton tooltipContent='test' icon={<SearchIcon />} onClick={console.log} />
+      <FloatingActionButton
+        tooltipContent='test'
+        icon={<SearchIcon />}
+        onClick={console.log}
+        style={{ marginBottom: 60 }}
+      />
+      <FloatingActionButton
+        tooltipContent='Druk hier om een nieuw project aan te maken'
+        icon={
+          <Fragment>
+            <AddIcon style={{ marginRight: '1rem' }} />
+            <Typography>Maak nieuw project aan</Typography>
+          </Fragment>
+        }
+        onClick={console.log}
+        variant='extended'
+      />
     </Fragment>
   );
 };
