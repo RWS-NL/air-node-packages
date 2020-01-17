@@ -6,14 +6,13 @@ import TableRow from '@material-ui/core/TableRow';
 import classnames from 'classnames';
 import React, { FC, Fragment, ReactNode, memo } from 'react';
 import css from './Table.scss';
-import TableHeaderCell, { TableHeaderCellProps, TableHeaderProps } from '../HeaderCell/HeaderCell';
+import HeaderCell, { HeaderCellProps, HeaderProps } from '../HeaderCell/HeaderCell';
 import Pagination, { PaginationProps } from '../Pagination/Pagination';
-import TableToolbar, { TableToolbarProps } from '../Toolbar/Toolbar';
+import Toolbar, { ToolbarProps } from '../Toolbar/Toolbar';
 
-export type TableLabels =
-  & Pick<TableToolbarProps, 'searchplaceholderlabel'>
-  & Pick<PaginationProps, 'labelRowsPerPage' | 'labelPaginationOf'>
-  & Pick<TableHeaderCellProps, 'tooltiplabel'>;
+export type TableLabels = Pick<ToolbarProps, 'searchplaceholderlabel'> &
+  Pick<PaginationProps, 'labelRowsPerPage' | 'labelPaginationOf'> &
+  Pick<HeaderCellProps, 'tooltiplabel'>;
 
 export interface TableQAs {
   /** Data-qa applied to the root table */
@@ -53,13 +52,16 @@ export interface TableCustomClasses {
   tableSearchbar?: string[];
 }
 
-export interface TableProps extends
-  Pick<TableToolbarProps, 'onsearchclear' | 'onsearchinput' | 'paperElevation' | 'extraIcons' | 'searchdebounce'>,
-  Pick<TableHeaderCellProps, 'onRequestSort' | 'orderby' | 'order' | 'tooltipplacement'>,
-  Pick<MUITablePaginationProps, 'rowsPerPage' | 'rowsPerPageOptions' | 'page' | 'onChangePage' | 'onChangeRowsPerPage'>,
-  MUITableProps {
+export interface TableProps
+  extends Pick<ToolbarProps, 'onsearchclear' | 'onsearchinput' | 'paperElevation' | 'extraIcons' | 'searchdebounce'>,
+    Pick<HeaderCellProps, 'onRequestSort' | 'orderby' | 'order' | 'tooltipplacement'>,
+    Pick<
+      MUITablePaginationProps,
+      'rowsPerPage' | 'rowsPerPageOptions' | 'page' | 'onChangePage' | 'onChangeRowsPerPage'
+    >,
+    MUITableProps {
   /** Headers for the table */
-  headers: TableHeaderProps[];
+  headers: HeaderProps[];
   /** Map that defines how the headers are sorted, either by key or function when targeting nested properties */
   headermapping: Map<string, string>;
   /** The amount of rows for the table (generally the length of the data) */
@@ -167,7 +169,7 @@ export const Table: FC<TableProps> = props => {
 
   return (
     <Fragment>
-      <TableToolbar
+      <Toolbar
         searchplaceholderlabel={props.labels.searchplaceholderlabel}
         onsearchinput={props.onsearchinput}
         onsearchclear={props.onsearchclear}
@@ -178,10 +180,11 @@ export const Table: FC<TableProps> = props => {
         paperElevation={props.paperElevation}
         extraIcons={props.extraIcons}
       />
-      {
-        props.showTopPagination ?
-          renderTablePagination(classnames(addCustomClasses('tablePagination', css.tableTopPagination))) : <Fragment />
-      }
+      {props.showTopPagination ? (
+        renderTablePagination(classnames(addCustomClasses('tablePagination', css.tableTopPagination)))
+      ) : (
+        <Fragment />
+      )}
       <MUITable
         stickyHeader={props.stickyHeader}
         className={classnames(addCustomClasses('table', css.table))}
@@ -190,7 +193,7 @@ export const Table: FC<TableProps> = props => {
         <TableHead data-qa={props.tableqas.header} className={classnames(addCustomClasses('tableHeader'))}>
           <TableRow data-qa={props.tableqas.headerRow} className={classnames(addCustomClasses('tableHeaderRow'))}>
             {props.headers.map((header, index) => (
-              <TableHeaderCell
+              <HeaderCell
                 key={index}
                 header={header}
                 orderby={props.orderby}
@@ -209,10 +212,11 @@ export const Table: FC<TableProps> = props => {
           {props.tablebodycontent}
         </TableBody>
       </MUITable>
-      {
-        props.showBottomPagination ?
-          renderTablePagination(classnames(addCustomClasses('tablePagination'))) : <Fragment />
-      }
+      {props.showBottomPagination ? (
+        renderTablePagination(classnames(addCustomClasses('tablePagination')))
+      ) : (
+        <Fragment />
+      )}
     </Fragment>
   );
 };

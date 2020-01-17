@@ -1,1 +1,1 @@
-export { default as TablePaginationActions, TablePaginationActionsProps } from './PaginationActions';
+export { default as PaginationActions, PaginationActionsProps } from './PaginationActions';

@@ -1,11 +1,17 @@
-import MUITablePagination, { TablePaginationTypeMap, TablePaginationBaseProps } from '@material-ui/core/TablePagination';
+import MUITablePagination, {
+  TablePaginationTypeMap,
+  TablePaginationBaseProps
+} from '@material-ui/core/TablePagination';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import classnames from 'classnames';
 import React, { FC, memo, ReactNode } from 'react';
 import css from './Pagination.scss';
-import TablePaginationActions from '../PaginationActions/PaginationActions';
+import PaginationActions from '../PaginationActions/PaginationActions';
 
-export type MutatedMUITablePaginationProps = TablePaginationTypeMap<object, React.ComponentType<TablePaginationBaseProps>>['props'];
+export type MutatedMUITablePaginationProps = TablePaginationTypeMap<
+  object,
+  React.ComponentType<TablePaginationBaseProps>
+>['props'];
 
 export interface PaginationProps extends MutatedMUITablePaginationProps {
   /** The label in the displayed rows per page, for example "5 rows per page" */
@@ -40,14 +46,19 @@ export const Pagination: FC<PaginationProps> = props => {
   return (
     <MUITablePagination
       component='span'
-      count={props.count} page={props.page}
+      count={props.count}
+      page={props.page}
       labelRowsPerPage={props.labelRowsPerPage}
-      labelDisplayedRows={({ from, to, count }) => `${from <= 9 ? `0${from}` : from}-${to} ${props.labelPaginationOf} ${count}`}
-      onChangePage={props.onChangePage} onChangeRowsPerPage={props.onChangeRowsPerPage}
+      labelDisplayedRows={({ from, to, count }) =>
+        `${from <= 9 ? `0${from}` : from}-${to} ${props.labelPaginationOf} ${count}`
+      }
+      onChangePage={props.onChangePage}
+      onChangeRowsPerPage={props.onChangeRowsPerPage}
       className={classnames(css.tablePagination, { [css.tablePaginationMobile]: isOnMobile }, props.customClasses)}
       classes={{ root: css.text, selectIcon: css.selectIcon, menuItem: css.text }}
-      rowsPerPage={props.rowsPerPage} rowsPerPageOptions={props.rowsPerPageOptions}
-      ActionsComponent={TablePaginationActions}
+      rowsPerPage={props.rowsPerPage}
+      rowsPerPageOptions={props.rowsPerPageOptions}
+      ActionsComponent={PaginationActions}
       data-qa={props['data-qa']}
     />
   );

@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import React, { FC, memo, ReactNode } from 'react';
 import css from './BodyCell.scss';
 
-export interface TableBodyCellProps extends MUITableCellProps {
+export interface BodyCellProps extends MUITableCellProps {
   /** Content for the cell */
   content: ReactNode;
   /** Data-qa tag to apply to the search bar and input element */
@@ -26,19 +26,27 @@ export const splitTableCellText = (text: string) => {
 
 /**
  * Constructs a table body cell using pre-defined Rijkswaterstaat styling
- * @param props Props to pass to the TableBody cell
+ * @param props Props to pass to the body cell
  * @example
- * <TableBodyCell content='Cool Content' />
+ * <BodyCell content='Cool Content' />
  */
-export const TableBodyCell: FC<TableBodyCellProps> = props => (
+export const BodyCell: FC<BodyCellProps> = ({
+  customclasses,
+  scope,
+  component,
+  content,
+  'data-qa': dataQa,
+  ...props
+}) => (
   <MUITableCell
-    data-qa={props['data-qa']}
-    className={classnames(css.tableCells, props.customclasses)}
-    component={props.component}
-    scope={props.scope}
+    {...props}
+    data-qa={dataQa}
+    className={classnames(css.tableCells, customclasses)}
+    component={component}
+    scope={scope}
   >
-    {typeof props.content === 'string' ? splitTableCellText(props.content) : props.content}
+    {typeof content === 'string' ? splitTableCellText(content) : content}
   </MUITableCell>
 );
 
-export default memo(TableBodyCell);
+export default memo(BodyCell);

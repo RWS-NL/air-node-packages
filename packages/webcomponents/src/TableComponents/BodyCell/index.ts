@@ -1,1 +1,1 @@
-export { default as TableBodyCell, TableBodyCellProps } from './BodyCell';
+export { default as BodyCell, BodyCellProps } from './BodyCell';

@@ -1,1 +1,1 @@
-export { default as TableToolbar, TableToolbarProps, RenderIconProps } from './Toolbar';
+export { default as Toolbar, ToolbarProps, RenderIconProps } from './Toolbar';

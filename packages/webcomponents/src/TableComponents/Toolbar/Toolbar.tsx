@@ -33,7 +33,7 @@ export interface RenderIconProps {
   disableTooltip?: ToolbarButtonProps['disableTooltip'];
 }
 
-export interface TableToolbarProps extends Pick<SearchBarProps, 'paperElevation'> {
+export interface ToolbarProps extends Pick<SearchBarProps, 'paperElevation'> {
   /** The debounce timeout to wait until a search action should be performed */
   searchdebounce?: number;
   /** The label to display when no text is in the search input box */
@@ -57,27 +57,25 @@ export interface TableToolbarProps extends Pick<SearchBarProps, 'paperElevation'
  * @param iconData The icons to render
  */
 export const renderIcons = (iconData: RenderIconProps[]) => {
-  return (
-    iconData.map((data, index) => (
-      <Grid item key={`icon-${index}`}>
-        <ToolbarButton
-          icon={data.icon}
-          disabled={data.disabled}
-          onClick={data.clickEvent}
-          tooltipText={data.tooltipText}
-          tooltipPlacement={data.tooltipPlacement || 'top'}
-          disableTooltip={data.disableTooltip}
-        />
-      </Grid>
-    ))
-  );
+  return iconData.map((data, index) => (
+    <Grid item key={`icon-${index}`}>
+      <ToolbarButton
+        icon={data.icon}
+        disabled={data.disabled}
+        onClick={data.clickEvent}
+        tooltipText={data.tooltipText}
+        tooltipPlacement={data.tooltipPlacement || 'top'}
+        disableTooltip={data.disableTooltip}
+      />
+    </Grid>
+  ));
 };
 
 /**
  * Constructs a table toolbar using pre-defined Rijkswaterstaat styling
- * @param props Props to pass to the TableToolbar
+ * @param props Props to pass to the Toolbar
  * @example
- * <TableToolbar
+ * <Toolbar
  *   searchplaceholderlabel='Search...'
  *   onsearchinput={console.log}
  *   onsearchclear={console.log}
@@ -86,24 +84,24 @@ export const renderIcons = (iconData: RenderIconProps[]) => {
  *   extraIcons={props.extraIcons}
  * />
  */
-export const TableToolbar: FC<TableToolbarProps> = props => {
+export const Toolbar: FC<ToolbarProps> = props => {
   const debouncedSearch = debouncer((input: string) => props.onsearchinput(input), props.searchdebounce || 400);
 
   return (
     <div className={classnames(css.toolbar, props.customclasses)} data-qa={props['data-qa']}>
       <Grid container direction='row' justify='flex-end' alignItems='center' spacing={2}>
-        {
-          props.extraIcons && props.extraIcons.length
-            ? renderIcons(props.extraIcons)
-            : <Fragment />
-        }
+        {props.extraIcons && props.extraIcons.length ? renderIcons(props.extraIcons) : <Fragment />}
         <Grid item key={2}>
           <SearchBar
             data-qa='table-search-bar'
             placeholder={`${props.searchplaceholderlabel}...`}
             onChange={e => debouncedSearch(e.target.value)}
             onCancelSearch={props.onsearchclear}
-            className={classnames(css.searchFieldContent, css.ie11SearchBarTextCorrection, props.customSearchbarClasses)}
+            className={classnames(
+              css.searchFieldContent,
+              css.ie11SearchBarTextCorrection,
+              props.customSearchbarClasses
+            )}
             paperElevation={props.paperElevation}
           />
         </Grid>
@@ -113,4 +111,4 @@ export const TableToolbar: FC<TableToolbarProps> = props => {
   );
 };
 
-export default memo(TableToolbar);
+export default memo(Toolbar);

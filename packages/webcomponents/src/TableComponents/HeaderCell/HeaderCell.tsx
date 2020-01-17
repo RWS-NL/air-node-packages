@@ -5,7 +5,7 @@ import React, { FC, memo, ReactNode } from 'react';
 import Tooltip, { TooltipProps } from '../../Tooltip/Tooltip';
 import css from './HeaderCell.scss';
 
-export interface TableHeaderProps {
+export interface HeaderProps {
   /** Label for this table header */
   label: string;
   /** Whether this table header represents a column of numeric values */
@@ -16,9 +16,9 @@ export interface TableHeaderProps {
   isActionButtonCell?: boolean;
 }
 
-export interface TableHeaderCellProps extends MUITableCellProps {
+export interface HeaderCellProps extends MUITableCellProps {
   /** The header data */
-  header: TableHeaderProps;
+  header: HeaderProps;
   /** The property to order by */
   orderby: string;
   /** The order direction for the header */
@@ -41,7 +41,7 @@ export interface TableHeaderCellProps extends MUITableCellProps {
  * Constructs a table header cell using pre-defined Rijkswaterstaat styling
  * @param props Props to pass to the TableHeader cell
  */
-export const TableHeaderCell: FC<TableHeaderCellProps> = props => {
+export const HeaderCell: FC<HeaderCellProps> = props => {
   const renderTableHeaderCell = () => {
     if (props.isActionButtonCell) {
       return (
@@ -57,8 +57,11 @@ export const TableHeaderCell: FC<TableHeaderCellProps> = props => {
     }
 
     return (
-      <Tooltip title={props.tooltiplabel} placement={props.tooltipplacement || 'top'}
-        data-qa={`table-header-${props['data-qa']}`}>
+      <Tooltip
+        title={props.tooltiplabel}
+        placement={props.tooltipplacement || 'top'}
+        data-qa={`table-header-${props['data-qa']}`}
+      >
         <TableSortLabel
           data-qa={`tableSortLabel_${props.header.label}`}
           classes={{ icon: css.sortIcon }}
@@ -78,10 +81,11 @@ export const TableHeaderCell: FC<TableHeaderCellProps> = props => {
       align={props.header.numeric ? 'right' : 'left'}
       padding={props.header.disablePadding ? 'none' : 'default'}
       sortDirection={props.orderby === props.header.label ? props.order : false}
-      className={classnames(css.tableCells, { [css.actionHeaderCell]: props.isActionButtonCell }, props.customclasses)}>
+      className={classnames(css.tableCells, { [css.actionHeaderCell]: props.isActionButtonCell }, props.customclasses)}
+    >
       {renderTableHeaderCell()}
     </MUITableCell>
   );
 };
 
-export default memo(TableHeaderCell);
+export default memo(HeaderCell);
