@@ -1,6 +1,6 @@
 {
   "name": "@rws-air/tslint-config",
-  "version": "3.0.4",
+  "version": "4.0.0",
   "description": "Standard TSLint config for all AIR apps written in TypeScript",
   "author": "@rws-air",
   "license": "AGPL-3.0-or-later",

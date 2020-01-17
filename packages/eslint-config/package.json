@@ -1,6 +1,6 @@
 {
   "name": "@rws-air/eslint-config",
-  "version": "2.1.9",
+  "version": "3.0.0",
   "description": "Standard ESLint config for RWS-NL ReactJS projects written in TypeScript",
   "author": "@rws-air",
   "license": "AGPL-3.0-or-later",
@@ -20,9 +20,9 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "2.x",
     "@typescript-eslint/parser": "2.x",
-    "eslint-config-react-app": "^5.1.0",
     "babel-eslint": "10.x",
     "eslint": "6.x",
+    "eslint-config-react-app": "^5.1.0",
     "eslint-plugin-flowtype": "3.x",
     "eslint-plugin-import": "2.x",
     "eslint-plugin-jsx-a11y": "6.x",

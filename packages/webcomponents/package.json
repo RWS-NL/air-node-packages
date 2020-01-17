@@ -1,6 +1,6 @@
 {
   "name": "@rws-air/webcomponents",
-  "version": "8.2.0",
+  "version": "9.0.0",
   "description": "Standard Webcomponents for AIR projects",
   "author": "@rws-air",
   "license": "AGPL-3.0-or-later",
@@ -27,15 +27,15 @@
     "@material-ui/pickers": "^3",
     "@rws-air/utils": "^2",
     "classnames": "^2",
-    "formik-material-ui": "^1",
     "formik": "^2",
+    "formik-material-ui": "^1",
     "i18next": "^19",
     "lodash.debounce": "^4",
     "moment": "2.24.0",
+    "react": "^16",
     "react-dom": "^16",
-    "react-if": "^3",
     "react-i18next": "^11",
-    "react": "^16"
+    "react-if": "^3"
   },
   "browserslist": {
     "production": [
@@ -73,6 +73,5 @@
     "air",
     "typescript",
     "ts"
-  ],
-  "devDependencies": {}
+  ]
 }
