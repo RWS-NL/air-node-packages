@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.1.2](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@9.1.1...@rws-air/webcomponents@9.1.2) (2020-01-17)
+
+### Bug Fixes
+
+- **webcomponents:** fixed z-index and position for FloatingActionButton ([60bf0ad](https://github.com/RWS-NL/air-node-packages/commit/60bf0ad965b99bdecf187a082144e16ad3c7f312))
+
 ## [9.1.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@9.1.0...@rws-air/webcomponents@9.1.1) (2020-01-17)
 
 ### Bug Fixes
