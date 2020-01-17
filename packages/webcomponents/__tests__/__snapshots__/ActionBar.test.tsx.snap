@@ -27,19 +27,24 @@ exports[`Snapshot Testing AdditionalTest 1`] = `
         text
       </div>
     </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      item={true}
-      key="2"
-      xs={6}
+    <When
+      condition={true}
     >
-      <Memo(Button)
-        color="primary"
-        data-qa="action-bar-button"
-        label="label"
-        onClick={[Function]}
-        variant="contained"
-      />
-    </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        key="2"
+        xs={6}
+      >
+        <Memo()
+          color="primary"
+          data-qa="action-bar-button"
+          disabled={false}
+          label="label"
+          onClick={[Function]}
+          variant="contained"
+        />
+      </WithStyles(ForwardRef(Grid))>
+    </When>
   </WithStyles(ForwardRef(Grid))>
 </div>
 `;
@@ -71,11 +76,23 @@ exports[`Snapshot Testing Required Props 1`] = `
         42
       </h1>
     </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      item={true}
-      key="2"
-      xs={6}
-    />
+    <When
+      condition={false}
+    >
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        key="2"
+        xs={6}
+      >
+        <Memo()
+          color="primary"
+          data-qa="action-bar-button"
+          disabled={false}
+          onClick={[Function]}
+          variant="contained"
+        />
+      </WithStyles(ForwardRef(Grid))>
+    </When>
   </WithStyles(ForwardRef(Grid))>
 </div>
 `;
@@ -106,19 +123,24 @@ exports[`Snapshot Testing With Button 1`] = `
         text
       </div>
     </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      item={true}
-      key="2"
-      xs={6}
+    <When
+      condition={true}
     >
-      <Memo(Button)
-        color="primary"
-        data-qa="action-bar-button"
-        label="label"
-        onClick={[Function]}
-        variant="contained"
-      />
-    </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        key="2"
+        xs={6}
+      >
+        <Memo()
+          color="primary"
+          data-qa="action-bar-button"
+          disabled={false}
+          label="label"
+          onClick={[Function]}
+          variant="contained"
+        />
+      </WithStyles(ForwardRef(Grid))>
+    </When>
   </WithStyles(ForwardRef(Grid))>
 </div>
 `;

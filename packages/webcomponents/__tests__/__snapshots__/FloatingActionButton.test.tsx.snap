@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Snapshot Testing Optional Props 1`] = `
-<Memo(Tooltip)
+<Memo()
   id="tooltip"
   title="Sample"
 >
@@ -12,11 +12,11 @@ exports[`Snapshot Testing Optional Props 1`] = `
   >
     <AccessAlarmIcon />
   </WithStyles(ForwardRef(Fab))>
-</Memo(Tooltip)>
+</Memo()>
 `;
 
 exports[`Snapshot Testing Required Props 1`] = `
-<Memo(Tooltip)
+<Memo()
   title="Sample"
 >
   <WithStyles(ForwardRef(Fab))
@@ -26,5 +26,5 @@ exports[`Snapshot Testing Required Props 1`] = `
   >
     <AccessAlarmIcon />
   </WithStyles(ForwardRef(Fab))>
-</Memo(Tooltip)>
+</Memo()>
 `;

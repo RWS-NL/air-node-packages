@@ -2,9 +2,9 @@
 import { TableRow } from '@material-ui/core';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React, { Fragment } from 'react';
-import Table, { TableProps } from '../../src/TableComponents/Table/Table';
-import TableBodyCell from '../../src/TableComponents/BodyCell/BodyCell';
-import TableHeaderCell, { TableHeaderProps } from '../../src/TableComponents/HeaderCell/HeaderCell';
+import Table, { TableProps } from '../../src/TableComponents/Table';
+import BodyCell from '../../src/TableComponents/BodyCell';
+import HeaderCell, { HeaderProps } from '../../src/TableComponents/HeaderCell';
 
 interface DataForTableType {
   name: string;
@@ -14,29 +14,19 @@ interface DataForTableType {
 
 const dataForTable: DataForTableType[] = [
   { name: 'Robin Hood', email: 'robin.hood@winked.com', id: 23456789 },
-  { name: 'Darth Vader', email: 'darth.vader@thedeathstart.com', id: 9876 },
+  { name: 'Darth Vader', email: 'darth.vader@thedeathstar.com', id: 9876 },
   { name: 'Kaladin Stormblessed', email: 'kaladin.stormblessed@thearmy.com', id: 567890 },
   { name: 'Steve Jobs', email: 'steve.jobs@apple.com', id: 1 }
 ];
 
-const dataTableHeaderMapping: Map<string, string> = new Map(
-  [
-    [
-      'name', 'name'
-    ],
-    [
-      'email', 'email'
-    ],
-    [
-      'id', 'id'
-    ],
-    [
-      'action', 'action'
-    ]
-  ]
-);
+const dataTableHeaderMapping: Map<string, string> = new Map([
+  ['name', 'name'],
+  ['email', 'email'],
+  ['id', 'id'],
+  ['action', 'action']
+]);
 
-const tableHeaders: TableHeaderProps[] = [
+const tableHeaders: HeaderProps[] = [
   { label: Array.from(dataTableHeaderMapping.keys())[0] },
   { label: Array.from(dataTableHeaderMapping.keys())[1] },
   { label: Array.from(dataTableHeaderMapping.keys())[2], numeric: true },
@@ -59,7 +49,7 @@ const propsForTable: TableProps = {
   order: 'asc',
   orderby: 'name',
   rowsPerPage,
-  rowsPerPageOptions: [ 2, 4, 5, 10 ],
+  rowsPerPageOptions: [2, 4, 5, 10],
   page,
   onChangePage: mockOnChangePage,
   onChangeRowsPerPage: mockOnChangeRowsPerPage,
@@ -70,7 +60,7 @@ const propsForTable: TableProps = {
     labelRowsPerPage: 'Rows per page',
     searchplaceholderlabel: 'Search...',
     tooltiplabel: 'Sort',
-    labelPaginationOf: 'of',
+    labelPaginationOf: 'of'
   },
   tableqas: {
     header: 'table-header',
@@ -79,22 +69,19 @@ const propsForTable: TableProps = {
     table: 'table',
     toolbar: 'table-toolbar',
     headerCell: 'table-header-cell',
-    tableBody: 'table-body',
+    tableBody: 'table-body'
   },
   tablebodycontent: (
     <Fragment>
-      {dataForTable
-        .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-        .map(row => (
-          <TableRow hover tabIndex={-1} key={4567893} data-qa='table-body-row'>
-            <TableBodyCell content={row.name} />
-            <TableBodyCell content={row.email} />
-            <TableBodyCell content={row.id} />
-          </TableRow>
-        ))
-      }
+      {dataForTable.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map(row => (
+        <TableRow hover tabIndex={-1} key={4567893} data-qa='table-body-row'>
+          <BodyCell content={row.name} />
+          <BodyCell content={row.email} />
+          <BodyCell content={row.id} />
+        </TableRow>
+      ))}
     </Fragment>
-  ),
+  )
 };
 
 describe('Component Tests', () => {
@@ -113,7 +100,10 @@ describe('Component Tests', () => {
   });
 
   test('should request sorting on header click', () => {
-    const firstColumnHeaderCell = table.find(TableHeaderCell).at(0).shallow();
+    const firstColumnHeaderCell = table
+      .find(HeaderCell)
+      .at(0)
+      .shallow();
     const tableSortHeader = firstColumnHeaderCell.find(`[data-qa="tableSortLabel_${tableHeaders[0].label}"]`);
 
     tableSortHeader.simulate('click');
@@ -123,7 +113,10 @@ describe('Component Tests', () => {
   });
 
   test('should not request sorting on action header click', () => {
-    const lastColumnHeaderCell = table.find(TableHeaderCell).last().shallow();
+    const lastColumnHeaderCell = table
+      .find(HeaderCell)
+      .last()
+      .shallow();
     const tableSortHeader = lastColumnHeaderCell.find(`[data-qa="tableSortLabel_${tableHeaders[3].label}"]`);
 
     tableSortHeader.simulate('click');
@@ -142,8 +135,12 @@ describe('Component Tests', () => {
       jest.spyOn(console, 'error').mockImplementation();
 
       const firstRow = table.find('[data-qa="table-header-row"]').first();
-      const tableHeaderCell = firstRow.find(TableHeaderCell).first().shallow().find(`[data-qa="tableSortLabel_${tableHeaders[0].label}"]`);
-      expect(firstRow.find(TableHeaderCell)).toHaveLength(4);
+      const tableHeaderCell = firstRow
+        .find(HeaderCell)
+        .first()
+        .shallow()
+        .find(`[data-qa="tableSortLabel_${tableHeaders[0].label}"]`);
+      expect(firstRow.find(HeaderCell)).toHaveLength(4);
       expect(tableHeaderCell.render().text()).toBe(tableHeaders[0].label);
 
       // Restore console errors
@@ -158,11 +155,26 @@ describe('Component Tests', () => {
 
     test('should fill first row with all assigned data', () => {
       const firstRow = table.find('[data-qa="table-body-row"]').first();
-      expect(firstRow.find(TableBodyCell)).toHaveLength(3);
+      expect(firstRow.find(BodyCell)).toHaveLength(3);
 
-      expect(firstRow.find(TableBodyCell).at(0).prop('content')).toBe(dataForTable[0].name);
-      expect(firstRow.find(TableBodyCell).at(1).prop('content')).toBe(dataForTable[0].email);
-      expect(firstRow.find(TableBodyCell).at(2).prop('content')).toBe(dataForTable[0].id);
+      expect(
+        firstRow
+          .find(BodyCell)
+          .at(0)
+          .prop('content')
+      ).toBe(dataForTable[0].name);
+      expect(
+        firstRow
+          .find(BodyCell)
+          .at(1)
+          .prop('content')
+      ).toBe(dataForTable[0].email);
+      expect(
+        firstRow
+          .find(BodyCell)
+          .at(2)
+          .prop('content')
+      ).toBe(dataForTable[0].id);
     });
   });
 });

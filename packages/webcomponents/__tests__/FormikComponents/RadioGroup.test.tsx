@@ -1,7 +1,7 @@
 import { FormControlLabel } from '@material-ui/core';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
-import RadioGroup from '../../src/FormikComponents/RadioGroup/RadioGroup';
+import RadioGroup from '../../src/FormikComponents/RadioGroup';
 
 describe('Component Tests', () => {
   let radioGroup: ShallowWrapper;
@@ -9,7 +9,10 @@ describe('Component Tests', () => {
   beforeAll(() => {
     radioGroup = shallow(
       <RadioGroup<'JOHN' | 'CONNOR'>
-        options={[ { value: 'JOHN', label: 'John' }, { value: 'CONNOR', label: 'Connor' } ]}
+        options={[
+          { value: 'JOHN', label: 'John' },
+          { value: 'CONNOR', label: 'Connor' }
+        ]}
       />
     );
   });
@@ -23,8 +26,12 @@ describe('Snapshot Testing', () => {
   test('Required Props', () => {
     const radioGroup = shallow(
       <RadioGroup<'JOHN' | 'CONNOR'>
-        options={[ { value: 'JOHN', label: 'John' }, { value: 'CONNOR', label: 'Connor' } ]}
-      />);
+        options={[
+          { value: 'JOHN', label: 'John' },
+          { value: 'CONNOR', label: 'Connor' }
+        ]}
+      />
+    );
     expect(radioGroup).toMatchSnapshot();
   });
 });

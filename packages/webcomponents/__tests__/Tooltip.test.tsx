@@ -1,11 +1,15 @@
 import { HOUR } from '@rws-air/utils/dist/TimeUtils';
 import { shallow } from 'enzyme';
 import React from 'react';
-import Tooltip from '../src/Tooltip/Tooltip';
+import Tooltip from '../src/Tooltip';
 
 describe('Snapshot Testing', () => {
   test('Required Props', () => {
-    const tooltip = shallow(<Tooltip title='SnapTitle'><span>Snappy Text</span></Tooltip>);
+    const tooltip = shallow(
+      <Tooltip title='SnapTitle'>
+        <span>Snappy Text</span>
+      </Tooltip>
+    );
     expect(tooltip).toMatchSnapshot();
   });
 

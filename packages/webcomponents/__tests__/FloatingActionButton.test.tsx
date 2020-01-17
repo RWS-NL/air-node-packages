@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import FloatingActionButton from '../src/FloatingActionButton/FloatingActionButton';
+import FloatingActionButton from '../src/FloatingActionButton';
 import AccessAlarm from '@material-ui/icons/AccessAlarm';
-import { Tooltip } from '../src/Tooltip/Tooltip';
+import { Tooltip } from '../src/Tooltip';
 import { Fab } from '@material-ui/core';
 
 const mockButtonClick = jest.fn();

@@ -2,7 +2,7 @@
 
 exports[`Snapshot Testing Optional Props 1`] = `
 <Fragment>
-  <Memo(Toolbar)
+  <Memo()
     customSearchbarClasses=""
     customclasses=""
     data-qa="table-toolbar"
@@ -10,7 +10,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
     onsearchinput={[MockFunction]}
     searchplaceholderlabel="Search..."
   />
-  <Memo(Pagination)
+  <Memo()
     count={4}
     customClasses="tableTopPagination"
     data-qa="table-pagination"
@@ -41,7 +41,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
         className=""
         data-qa="table-header-row"
       >
-        <Memo(HeaderCell)
+        <Memo()
           customclasses=""
           data-qa="table-header-cell"
           header={
@@ -56,7 +56,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
           tooltiplabel="Sort"
           tooltipplacement="bottom-start"
         />
-        <Memo(HeaderCell)
+        <Memo()
           customclasses=""
           data-qa="table-header-cell"
           header={
@@ -71,7 +71,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
           tooltiplabel="Sort"
           tooltipplacement="bottom-start"
         />
-        <Memo(HeaderCell)
+        <Memo()
           customclasses=""
           data-qa="table-header-cell"
           header={
@@ -87,7 +87,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
           tooltiplabel="Sort"
           tooltipplacement="bottom-start"
         />
-        <Memo(HeaderCell)
+        <Memo()
           customclasses=""
           data-qa="table-header-cell"
           header={
@@ -116,13 +116,13 @@ exports[`Snapshot Testing Optional Props 1`] = `
         key="4567893"
         tabIndex={-1}
       >
-        <Memo(BodyCell)
+        <Memo()
           content="Robin Hood"
         />
-        <Memo(BodyCell)
+        <Memo()
           content="robin.hood@winked.com"
         />
-        <Memo(BodyCell)
+        <Memo()
           content={23456789}
         />
       </WithStyles(ForwardRef(TableRow))>
@@ -132,13 +132,13 @@ exports[`Snapshot Testing Optional Props 1`] = `
         key="4567893"
         tabIndex={-1}
       >
-        <Memo(BodyCell)
+        <Memo()
           content="Darth Vader"
         />
-        <Memo(BodyCell)
-          content="darth.vader@thedeathstart.com"
+        <Memo()
+          content="darth.vader@thedeathstar.com"
         />
-        <Memo(BodyCell)
+        <Memo()
           content={9876}
         />
       </WithStyles(ForwardRef(TableRow))>
@@ -148,13 +148,13 @@ exports[`Snapshot Testing Optional Props 1`] = `
         key="4567893"
         tabIndex={-1}
       >
-        <Memo(BodyCell)
+        <Memo()
           content="Kaladin Stormblessed"
         />
-        <Memo(BodyCell)
+        <Memo()
           content="kaladin.stormblessed@thearmy.com"
         />
-        <Memo(BodyCell)
+        <Memo()
           content={567890}
         />
       </WithStyles(ForwardRef(TableRow))>
@@ -164,19 +164,19 @@ exports[`Snapshot Testing Optional Props 1`] = `
         key="4567893"
         tabIndex={-1}
       >
-        <Memo(BodyCell)
+        <Memo()
           content="Steve Jobs"
         />
-        <Memo(BodyCell)
+        <Memo()
           content="steve.jobs@apple.com"
         />
-        <Memo(BodyCell)
+        <Memo()
           content={1}
         />
       </WithStyles(ForwardRef(TableRow))>
     </WithStyles(ForwardRef(TableBody))>
   </WithStyles(ForwardRef(Table))>
-  <Memo(Pagination)
+  <Memo()
     count={4}
     customClasses=""
     data-qa="table-pagination"
@@ -200,7 +200,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
 
 exports[`Snapshot Testing Required Props 1`] = `
 <Fragment>
-  <Memo(Toolbar)
+  <Memo()
     customSearchbarClasses=""
     customclasses=""
     data-qa="table-toolbar"
@@ -220,7 +220,7 @@ exports[`Snapshot Testing Required Props 1`] = `
         className=""
         data-qa="table-header-row"
       >
-        <Memo(HeaderCell)
+        <Memo()
           customclasses=""
           data-qa="table-header-cell"
           header={
@@ -235,7 +235,7 @@ exports[`Snapshot Testing Required Props 1`] = `
           tooltiplabel="Sort"
           tooltipplacement="bottom-start"
         />
-        <Memo(HeaderCell)
+        <Memo()
           customclasses=""
           data-qa="table-header-cell"
           header={
@@ -250,7 +250,7 @@ exports[`Snapshot Testing Required Props 1`] = `
           tooltiplabel="Sort"
           tooltipplacement="bottom-start"
         />
-        <Memo(HeaderCell)
+        <Memo()
           customclasses=""
           data-qa="table-header-cell"
           header={
@@ -266,7 +266,7 @@ exports[`Snapshot Testing Required Props 1`] = `
           tooltiplabel="Sort"
           tooltipplacement="bottom-start"
         />
-        <Memo(HeaderCell)
+        <Memo()
           customclasses=""
           data-qa="table-header-cell"
           header={
@@ -295,13 +295,13 @@ exports[`Snapshot Testing Required Props 1`] = `
         key="4567893"
         tabIndex={-1}
       >
-        <Memo(BodyCell)
+        <Memo()
           content="Robin Hood"
         />
-        <Memo(BodyCell)
+        <Memo()
           content="robin.hood@winked.com"
         />
-        <Memo(BodyCell)
+        <Memo()
           content={23456789}
         />
       </WithStyles(ForwardRef(TableRow))>
@@ -311,13 +311,13 @@ exports[`Snapshot Testing Required Props 1`] = `
         key="4567893"
         tabIndex={-1}
       >
-        <Memo(BodyCell)
+        <Memo()
           content="Darth Vader"
         />
-        <Memo(BodyCell)
-          content="darth.vader@thedeathstart.com"
+        <Memo()
+          content="darth.vader@thedeathstar.com"
         />
-        <Memo(BodyCell)
+        <Memo()
           content={9876}
         />
       </WithStyles(ForwardRef(TableRow))>
@@ -327,13 +327,13 @@ exports[`Snapshot Testing Required Props 1`] = `
         key="4567893"
         tabIndex={-1}
       >
-        <Memo(BodyCell)
+        <Memo()
           content="Kaladin Stormblessed"
         />
-        <Memo(BodyCell)
+        <Memo()
           content="kaladin.stormblessed@thearmy.com"
         />
-        <Memo(BodyCell)
+        <Memo()
           content={567890}
         />
       </WithStyles(ForwardRef(TableRow))>
@@ -343,13 +343,13 @@ exports[`Snapshot Testing Required Props 1`] = `
         key="4567893"
         tabIndex={-1}
       >
-        <Memo(BodyCell)
+        <Memo()
           content="Steve Jobs"
         />
-        <Memo(BodyCell)
+        <Memo()
           content="steve.jobs@apple.com"
         />
-        <Memo(BodyCell)
+        <Memo()
           content={1}
         />
       </WithStyles(ForwardRef(TableRow))>

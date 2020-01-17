@@ -1,6 +1,6 @@
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
-import TableToolbar from '../../src/TableComponents/Toolbar/Toolbar';
+import TableToolbar from '../../src/TableComponents/Toolbar';
 
 const mockOnSearchInput = jest.fn();
 const mockOnSearchClear = jest.fn();
@@ -12,7 +12,8 @@ describe('Component Tests', () => {
     tableToolbar = shallow(
       <TableToolbar
         searchplaceholderlabel='placeholder'
-        onsearchinput={mockOnSearchInput} onsearchclear={mockOnSearchClear}
+        onsearchinput={mockOnSearchInput}
+        onsearchclear={mockOnSearchClear}
       />
     );
   });
@@ -24,7 +25,8 @@ describe('Component Tests', () => {
   test('should trigger change when searching', () => {
     const inputBox = tableToolbar
       .find('[data-qa="table-search-bar"]')
-      .shallow().dive()
+      .shallow()
+      .dive()
       .find('[data-qa="table-search-bar"]');
 
     const expectedCalledWith = { target: { value: 'DarthVader' } };
@@ -38,13 +40,13 @@ describe('Component Tests', () => {
   });
 });
 
-
 describe('Snapshot Testing', () => {
   test('Required Props', () => {
     const tableToolbar = shallow(
       <TableToolbar
         searchplaceholderlabel='placeholder'
-        onsearchinput={mockOnSearchInput} onsearchclear={mockOnSearchClear}
+        onsearchinput={mockOnSearchInput}
+        onsearchclear={mockOnSearchClear}
       />
     );
     expect(tableToolbar).toMatchSnapshot();
@@ -54,11 +56,12 @@ describe('Snapshot Testing', () => {
     const tableToolbar = shallow(
       <TableToolbar
         searchplaceholderlabel='placeholder'
-        onsearchinput={mockOnSearchInput} onsearchclear={mockOnSearchClear}
+        onsearchinput={mockOnSearchInput}
+        onsearchclear={mockOnSearchClear}
         searchdebounce={50}
         data-qa='snapshot-qa'
-        customclasses={[ 'snapshot-class' ]}
-        customSearchbarClasses={[ 'snapshot-class' ]}
+        customclasses={['snapshot-class']}
+        customSearchbarClasses={['snapshot-class']}
       />
     );
     expect(tableToolbar).toMatchSnapshot();
