@@ -2,8 +2,8 @@ import CheckCircle from '@material-ui/icons/CheckCircle';
 import WarningIcon from '@material-ui/icons/Warning';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React, { Fragment } from 'react';
-import Button from '../src/Button/Button';
-import { ConfirmationModal, ConfirmationModalProps } from '../src/ConfirmationModal/ConfirmationModal';
+import Button from '../src/Button';
+import { ConfirmationModal, ConfirmationModalProps } from '../src/ConfirmationModal';
 
 let confirmationModal: ShallowWrapper<ConfirmationModalProps, any>;
 const closeAction = jest.fn();
@@ -13,8 +13,8 @@ const setup = (
   isOpen = false,
   props?: Partial<ConfirmationModalProps>,
   DialogContent: () => JSX.Element = () => <Fragment />
-) => (
-  confirmationModal = shallow<ConfirmationModalProps>(
+) =>
+  (confirmationModal = shallow<ConfirmationModalProps>(
     <ConfirmationModal
       topic='Awesome Topic'
       okButtonText='OK'
@@ -23,21 +23,18 @@ const setup = (
       closeAction={closeAction}
       confirmAction={confirmAction}
       open={isOpen}
-      dialogContent={<div>Hello Wolrd</div>}
+      dialogContent={<DialogContent />}
       modalqas={{
         content: 'modal-content',
         modal: 'modal',
         title: 'modal-title',
         actionCancel: 'modal-cancel-button',
         actionConfirm: 'modal-confirm-button',
-        actions: 'modal-actions',
+        actions: 'modal-actions'
       }}
       {...props}
-    >
-      <DialogContent />
-    </ConfirmationModal>
-  )
-);
+    />
+  ));
 
 describe('Render Testing', () => {
   test('should include mandatory props', () => {
@@ -47,7 +44,7 @@ describe('Render Testing', () => {
     expect(confirmationModal.prop('disableEscapeKeyDown')).toBe(true);
   });
 
-  test('should pass all data-qa\'s', () => {
+  test("should pass all data-qa's", () => {
     setup(true);
 
     expect(confirmationModal.find('[data-qa="modal"]').exists()).toBe(true);
@@ -93,7 +90,12 @@ describe('Content Testing', () => {
   beforeAll(() => setup(true, {}, Content));
 
   test('should contain content', () => {
-    expect(confirmationModal.find('[data-qa="modal-content"]').children().exists()).toBe(true);
+    expect(
+      confirmationModal
+        .find('[data-qa="modal-content"]')
+        .children()
+        .exists()
+    ).toBe(true);
   });
 });
 

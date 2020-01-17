@@ -1,4 +1,4 @@
-import { Checkbox } from '../../src/FormikComponents/Checkbox/Checkbox';
+import Checkbox from '../../src/FormikComponents/Checkbox';
 import { shallow, ShallowWrapper } from 'enzyme';
 import MUICheckbox from '@material-ui/core/Checkbox/Checkbox';
 import React from 'react';
@@ -21,7 +21,11 @@ describe('Component Tests', () => {
 
   test('checkbox function called onChange', () => {
     const changeEvent = { event: { target: { value: true } } };
-    checkBox.dive().dive().find(MUICheckbox).simulate('change', changeEvent);
+    checkBox
+      .dive()
+      .dive()
+      .find(MUICheckbox)
+      .simulate('change', changeEvent);
     expect(mockCheckboxOnChange).toHaveBeenCalledWith(changeEvent);
     expect(mockCheckboxOnChange).toHaveBeenCalledTimes(1);
   });
@@ -29,7 +33,9 @@ describe('Component Tests', () => {
 
 describe('Snapshot Testing', () => {
   test('Required Props', () => {
-    const checkBox = shallow(<Checkbox name='testCheckbox' value='testCheckbox' onBlur={mockCheckboxOnBlur} onChange={mockCheckboxOnChange} />);
+    const checkBox = shallow(
+      <Checkbox name='testCheckbox' value='testCheckbox' onBlur={mockCheckboxOnBlur} onChange={mockCheckboxOnChange} />
+    );
     expect(checkBox).toMatchSnapshot();
   });
 });

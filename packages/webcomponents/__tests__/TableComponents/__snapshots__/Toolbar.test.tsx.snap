@@ -16,7 +16,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
       item={true}
       key="2"
     >
-      <Memo(SearchBar)
+      <Memo()
         className="searchFieldContent ie11SearchBarTextCorrection snapshot-class"
         data-qa="table-search-bar"
         onCancelSearch={[MockFunction]}
@@ -47,7 +47,7 @@ exports[`Snapshot Testing Required Props 1`] = `
       item={true}
       key="2"
     >
-      <Memo(SearchBar)
+      <Memo()
         className="searchFieldContent ie11SearchBarTextCorrection"
         data-qa="table-search-bar"
         onCancelSearch={[MockFunction]}

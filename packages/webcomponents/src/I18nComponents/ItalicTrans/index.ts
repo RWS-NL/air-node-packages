@@ -1,1 +1,0 @@
-export { default as ItalicTrans, ItalicTransProps } from './ItalicTrans';

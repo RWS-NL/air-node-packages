@@ -1,7 +1,7 @@
 import { IconButton } from '@material-ui/core';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
-import TablePaginationActions from '../../src/TableComponents/PaginationActions/PaginationActions';
+import TablePaginationActions from '../../src/TableComponents/PaginationActions';
 
 const onChangePage = jest.fn();
 
@@ -10,8 +10,7 @@ describe('Component Tests', () => {
 
   beforeAll(() => {
     tablePaginationActions = shallow(
-      <TablePaginationActions rowsPerPage={10} page={0} count={42}
-        onChangePage={onChangePage} />
+      <TablePaginationActions rowsPerPage={10} page={0} count={42} onChangePage={onChangePage} />
     );
   });
 
@@ -47,10 +46,7 @@ describe('Component Tests', () => {
 describe('Snapshot Testing', () => {
   test('Required Props', () => {
     const tablePaginationActions = shallow(
-      <TablePaginationActions
-        rowsPerPage={10} page={0} count={42}
-        onChangePage={onChangePage}
-      />
+      <TablePaginationActions rowsPerPage={10} page={0} count={42} onChangePage={onChangePage} />
     );
     expect(tablePaginationActions).toMatchSnapshot();
   });
@@ -58,8 +54,11 @@ describe('Snapshot Testing', () => {
   test('Optional Props', () => {
     const tablePaginationActions = shallow(
       <TablePaginationActions
-        rowsPerPage={10} page={0} count={42}
-        onChangePage={onChangePage} customclasses={[ 'snapshot-class' ]}
+        rowsPerPage={10}
+        page={0}
+        count={42}
+        onChangePage={onChangePage}
+        customclasses={['snapshot-class']}
       />
     );
     expect(tablePaginationActions).toMatchSnapshot();

@@ -10,7 +10,7 @@ import {
   FloatingActionButton,
   Modal,
   Table,
-  TableBodyCell,
+  BodyCell,
   TableProps
 } from '@rws-air/webcomponents';
 import React, { FC, Fragment, useState } from 'react';
@@ -89,10 +89,10 @@ const propsForTable: TableProps = {
     <Fragment>
       {dataForTable.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map(row => (
         <TableRow hover tabIndex={-1} key={Math.random()} className={css.tableRow} data-qa='sample-table-body-row'>
-          <TableBodyCell content={row.name} />
-          <TableBodyCell content={row.email} />
-          <TableBodyCell content={row.id} />
-          <TableBodyCell
+          <BodyCell content={row.name} />
+          <BodyCell content={row.email} />
+          <BodyCell content={row.id} />
+          <BodyCell
             content={
               <IconButton onClick={undefined} data-qa='edit-user-button' color='primary'>
                 <DeleteIcon />

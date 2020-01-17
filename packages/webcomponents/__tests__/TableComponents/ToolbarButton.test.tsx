@@ -2,7 +2,7 @@ import { IconButton } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
-import ToolbarButton, { ToolbarButtonProps } from '../../src/TableComponents/ToolbarButton/ToolbarButton';
+import ToolbarButton, { ToolbarButtonProps } from '../../src/TableComponents/ToolbarButton';
 
 const mockButtonClick = jest.fn();
 
@@ -30,7 +30,13 @@ describe('Snapshot Testing', () => {
 
   test('Optional Props', () => {
     const toolbarButton = shallow(
-      <ToolbarButton icon={<SearchIcon />} onClick={mockButtonClick} tooltipText='tooltip' tooltipPlacement='bottom' paperElevation={5} />
+      <ToolbarButton
+        icon={<SearchIcon />}
+        onClick={mockButtonClick}
+        tooltipText='tooltip'
+        tooltipPlacement='bottom'
+        paperElevation={5}
+      />
     );
     expect(toolbarButton).toMatchSnapshot();
   });

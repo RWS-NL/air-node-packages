@@ -1,1 +1,0 @@
-export { default as ConfirmationModal, ConfirmationModalProps, ConfirmationModalQAs } from './ConfirmationModal';

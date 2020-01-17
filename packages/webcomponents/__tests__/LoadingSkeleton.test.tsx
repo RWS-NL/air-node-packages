@@ -1,5 +1,5 @@
 import { shallow } from 'enzyme';
-import LoadingSkeleton from '../src/LoadingSkeleton/LoadingSkeleton';
+import LoadingSkeleton from '../src/LoadingSkeleton';
 import React from 'react';
 
 describe('Snapshot Testing', () => {

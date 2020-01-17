@@ -1,6 +1,6 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-import SearchBar from '../../src/TableComponents/SearchBar/SearchBar';
+import SearchBar from '../../src/TableComponents/SearchBar';
 
 describe('Snapshot Testing', () => {
   test('Required Props', () => {
@@ -11,7 +11,8 @@ describe('Snapshot Testing', () => {
   test('Optional Props', () => {
     const searchBar = shallow(
       <SearchBar
-        cancelOnEscape disabled
+        cancelOnEscape
+        disabled
         paperElevation={3}
         placeholder='Snaptest'
         data-qa='snap-qa'

@@ -138,7 +138,7 @@
 				<a href="#creating-a-build" id="creating-a-build" style="color: inherit; text-decoration: none;">
 					<h3>Creating a build</h3>
 				</a>
-				<p>Run <code>yarn build</code>  from repository root</p>
+				<p>Run <code>yarn build</code> from repository root</p>
 				<a href="#updating-api-documentation" id="updating-api-documentation" style="color: inherit; text-decoration: none;">
 					<h3>Updating API Documentation</h3>
 				</a>
@@ -161,11 +161,13 @@
 					<li>Go to GitHub repository -&gt; releases: <a href="https://github.com/RWS-NL/air-node-packages/releases">https://github.com/RWS-NL/air-node-packages/releases</a>.</li>
 					<li>Delete any tags created by the publish script.</li>
 					<li>Delete the same tags locally: <code>git tag -d &lt;name_of_tag&gt; [...&lt;name_of_other_tag&gt;]</code>.</li>
-					<li>Reset your HEAD to the commit before the publish.<ul>
-							<li><code>tig</code> to find commit hash.</li>
-							<li><code>git checkout &lt;commit_hash&gt;</code>.</li>
-						</ul>
-					</li>
+					<li>Reset your HEAD to the commit before the publish.</li>
+				</ol>
+				<ul>
+					<li><code>tig</code> to find commit hash.</li>
+					<li><code>git checkout &lt;commit_hash&gt;</code>.</li>
+				</ul>
+				<ol start="5">
 					<li>Remove the failed commit with <code>git push --force</code>.</li>
 					<li>Fix the issues.</li>
 					<li>Run <code>yarn build</code> to ensure your fixes fix everything.</li>

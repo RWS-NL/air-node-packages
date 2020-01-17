@@ -35,7 +35,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
   elevation={5}
   square={true}
 >
-  <Memo(Tooltip)
+  <Memo()
     placement="bottom"
     title="tooltip"
   >
@@ -59,7 +59,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
     >
       <SearchIcon />
     </WithStyles(ForwardRef(IconButton))>
-  </Memo(Tooltip)>
+  </Memo()>
 </WithStyles(ForwardRef(Paper))>
 `;
 
@@ -69,7 +69,7 @@ exports[`Snapshot Testing Required Props 1`] = `
   elevation={2}
   square={true}
 >
-  <Memo(Tooltip)
+  <Memo()
     placement="top"
     title="Click Me"
   >
@@ -93,6 +93,6 @@ exports[`Snapshot Testing Required Props 1`] = `
     >
       <SearchIcon />
     </WithStyles(ForwardRef(IconButton))>
-  </Memo(Tooltip)>
+  </Memo()>
 </WithStyles(ForwardRef(Paper))>
 `;

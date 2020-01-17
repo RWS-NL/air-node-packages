@@ -1,4 +1,4 @@
-import Dropdownbutton, { DropdownbuttonProps } from '../src/Dropdownbutton/Dropdownbutton';
+import Dropdownbutton, { DropdownbuttonProps } from '../src/Dropdownbutton';
 import { shallow, ShallowWrapper } from 'enzyme';
 import CloudDownload from '@material-ui/icons/CloudDownload';
 import React from 'react';
@@ -13,7 +13,7 @@ describe('Component Tests', () => {
       <Dropdownbutton
         ButtonIcon={<CloudDownload />}
         onClick={mockButtonClick}
-        options={[ 'one', 'two' ]}
+        options={['one', 'two']}
         menuItemDataQa='menu-item'
         iconButtonDataQa='icon-button'
         dropdownButtonDataQa='dropdown-button'
@@ -41,7 +41,8 @@ describe('Component Test - Disabled Button', () => {
         ButtonIcon={<CloudDownload />}
         onClick={mockButtonClick}
         buttonGroupDataQa='button-group'
-        options={[ 'one', 'two' ]} />
+        options={['one', 'two']}
+      />
     );
   });
 
@@ -53,7 +54,9 @@ describe('Component Test - Disabled Button', () => {
 
 describe('Snapshot Testing', () => {
   test('Required Props', () => {
-    const dropdownButton = shallow(<Dropdownbutton ButtonIcon={<CloudDownload />} onClick={mockButtonClick} options={[ 'one', 'two', 'three' ]} />);
+    const dropdownButton = shallow(
+      <Dropdownbutton ButtonIcon={<CloudDownload />} onClick={mockButtonClick} options={['one', 'two', 'three']} />
+    );
     expect(dropdownButton).toMatchSnapshot();
   });
 
@@ -62,8 +65,8 @@ describe('Snapshot Testing', () => {
       <Dropdownbutton
         ButtonIcon={<CloudDownload />}
         onClick={mockButtonClick}
-        options={[ 'one', 'two', 'three' ]}
-        disabledOptionIds={[ 2 ]}
+        options={['one', 'two', 'three']}
+        disabledOptionIds={[2]}
         color='secondary'
         variant='outlined'
         disabled

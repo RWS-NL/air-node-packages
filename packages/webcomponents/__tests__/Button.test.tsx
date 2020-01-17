@@ -1,4 +1,4 @@
-import Button from '../src/Button/Button';
+import Button from '../src/Button';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
 
@@ -30,10 +30,7 @@ describe('Snapshot Testing', () => {
 
   test('Varying Props', () => {
     const button = shallow(
-      <Button
-        variant='outlined' color='secondary' label={<div>snapshot label</div>}
-        onClick={mockButtonClick}
-      />
+      <Button variant='outlined' color='secondary' label={<div>snapshot label</div>} onClick={mockButtonClick} />
     );
     expect(button).toMatchSnapshot();
   });
@@ -41,10 +38,12 @@ describe('Snapshot Testing', () => {
   test('Optional Props', () => {
     const button = shallow(
       <Button
-        variant='outlined' color='secondary' label={<div>snapshot label</div>}
+        variant='outlined'
+        color='secondary'
+        label={<div>snapshot label</div>}
         onClick={mockButtonClick}
         data-qa='button-qa'
-        customclasses={[ 'sample-class' ]}
+        customclasses={['sample-class']}
         disabled
       />
     );

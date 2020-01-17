@@ -1,4 +1,4 @@
-import DatePicker from '../../src/FormikComponents/DatePicker/DatePicker';
+import DatePicker from '../../src/FormikComponents/DatePicker';
 import { shallow } from 'enzyme';
 import React from 'react';
 
@@ -11,9 +11,13 @@ const mockField = { name: '', onBlur: mockOnBlur };
 describe('Snapshot Testing', () => {
   test('Required Props', () => {
     const datePicker = shallow(
-      <DatePicker variant='standard' label='testDatePicker' minDate={minimumDateForPicker}
+      <DatePicker
+        variant='standard'
+        label='testDatePicker'
+        minDate={minimumDateForPicker}
         // @ts-ignore:2322 => Required because TS doesn't know these props can be passed from Formik
-        form={mockForm} field={mockField}
+        form={mockForm}
+        field={mockField}
       />
     );
     expect(datePicker).toMatchSnapshot();

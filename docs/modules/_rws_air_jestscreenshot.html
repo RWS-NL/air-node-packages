@@ -112,11 +112,11 @@
   <span class="hljs-attr">testRunner</span>: <span class="hljs-string">'jest-circus/runner'</span>,
   <span class="hljs-attr">testEnvironment</span>: <span class="hljs-string">'&lt;rootDir&gt;/__tests__/jest-environment.js'</span>,
 
-  <span class="hljs-attr">testMatch</span>: [ <span class="hljs-string">'&lt;rootDir&gt;/__tests__/index.test.ts'</span> ],
+  <span class="hljs-attr">testMatch</span>: [<span class="hljs-string">'&lt;rootDir&gt;/__tests__/index.test.ts'</span>],
 
   <span class="hljs-attr">globalSetup</span>: <span class="hljs-string">'jest-environment-puppeteer/setup'</span>,
   <span class="hljs-attr">globalTeardown</span>: <span class="hljs-string">'jest-environment-puppeteer/teardown'</span>,
-  <span class="hljs-attr">setupFilesAfterEnv</span>: [ <span class="hljs-string">'expect-puppeteer'</span>, <span class="hljs-string">'&lt;rootDir&gt;/__tests__/jest-framework.ts'</span> ],
+  <span class="hljs-attr">setupFilesAfterEnv</span>: [<span class="hljs-string">'expect-puppeteer'</span>, <span class="hljs-string">'&lt;rootDir&gt;/__tests__/jest-framework.ts'</span>]
 };</code></pre>
 					<pre><code class="language-ts"><span class="hljs-comment">// jest-framework.ts</span>
 
@@ -152,8 +152,8 @@ jest.retryTimes(<span class="hljs-number">2</span>);</code></pre>
           page: <span class="hljs-keyword">this</span>.global.page,
           dirName: __dirname,
           testName,
-          slackChannels: [ <span class="hljs-string">'ChannelID'</span> ],
-          slackUpload: <span class="hljs-literal">true</span>,
+          slackChannels: [<span class="hljs-string">'ChannelID'</span>],
+          slackUpload: <span class="hljs-literal">true</span>
         });
 
         <span class="hljs-keyword">await</span> jestScreenshot.setup();
