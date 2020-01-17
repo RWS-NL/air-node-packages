@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.3](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@9.0.2...@rws-air/webcomponents@9.0.3) (2020-01-17)
+
+### Bug Fixes
+
+- fixed textfield export ([e71cbf0](https://github.com/RWS-NL/air-node-packages/commit/e71cbf0efe4918d57937b6464ec51f3df228563c))
+
 ## [9.0.2](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@9.0.1...@rws-air/webcomponents@9.0.2) (2020-01-17)
 
 ### Bug Fixes
