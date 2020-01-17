@@ -2,7 +2,7 @@ import { FormControl, FormHelperText, InputLabel, MenuItem, Select } from '@mate
 import ArrowDropIcon from '@material-ui/icons/ArrowDropDown';
 import { objectHasProperty } from '@rws-air/utils';
 import classnames from 'classnames';
-import { fieldToSelect, SelectProps } from 'formik-material-ui';
+import { fieldToSelect, SelectProps as FormikSelectProps } from 'formik-material-ui';
 import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { When } from 'react-if';
 import css from './SelectMenu.scss';
@@ -17,7 +17,7 @@ export interface SelectMenuOption<T extends SelectMenuOptionValues> {
   label: string;
 }
 
-export interface SelectMenuProps<T extends SelectMenuOptionValues> extends SelectProps {
+export interface SelectMenuProps<T extends SelectMenuOptionValues> {
   /** The label of the select menu */
   label: string;
   /** The selectable options for the select menu */
@@ -29,18 +29,23 @@ export interface SelectMenuProps<T extends SelectMenuOptionValues> extends Selec
  * @param props Props to pass to the select menu component
  * @example
  * <FastField
- *   name='type' type='text' label='Example' required
+ *   name='type' type='text' required
  *   placeholder='Example placeholder' variant='outlined'
  *   data-qa='sample-select-menu'
  *   component={
  *      <SelectMenu<'JOHN'|'CONNOR'>
+ *        label='Example'
  *        options={ [{ value: 'JOHN', label: 'John'}, { value: 'CONNOR', label: 'Connor'}] }
  *      />}
  *  />
  */
-export const SelectMenu = <T extends SelectMenuOptionValues>({ options, ...props }: SelectMenuProps<T>) => {
+export const SelectMenu = <T extends SelectMenuOptionValues>(componentProps: SelectMenuProps<T>) => {
+  type componentPropsType = SelectMenuProps<T> & FormikSelectProps;
+
   const inputLabel = useRef<HTMLLabelElement>(null);
   const [labelWidth, setLabelWidth] = useState(0);
+  const { field, form, meta, disabled, options, label, ...props } = componentProps as componentPropsType;
+
   useEffect(() => {
     if (inputLabel.current) {
       setLabelWidth(inputLabel.current.offsetWidth);
@@ -48,7 +53,7 @@ export const SelectMenu = <T extends SelectMenuOptionValues>({ options, ...props
   }, []);
 
   const selectFieldHasErrors =
-    objectHasProperty(props.form.errors, props.field.name) && objectHasProperty(props.form.touched, props.field.name);
+    objectHasProperty(form.errors, field.name) && objectHasProperty(form.touched, field.name);
 
   return (
     <Fragment>
@@ -56,23 +61,23 @@ export const SelectMenu = <T extends SelectMenuOptionValues>({ options, ...props
         <InputLabel
           classes={{ root: css.inputLabel, shrink: css.inputLabelShrink }}
           ref={inputLabel}
-          id={`validated-select-menu-${props.label}`}
+          id={`validated-select-menu-${label}`}
           required={objectHasProperty(props, 'required') ? props.required : false}
         >
-          {props.label}
+          {label}
         </InputLabel>
         <Select
-          {...fieldToSelect(props)}
+          {...fieldToSelect({ field, form, meta, disabled })}
           type='text'
-          labelId={`validated-select-menu-${props.label}`}
+          labelId={`validated-select-menu-${label}`}
           labelWidth={labelWidth}
           className={classnames([css.select, { [css.errorSelect]: selectFieldHasErrors }])}
           IconComponent={() => <ArrowDropIcon color={selectFieldHasErrors ? 'error' : 'primary'} />}
           fullWidth
           displayEmpty
-          value={props.field.value || ''}
-          onChange={props.field.onChange}
-          onBlur={props.field.onBlur}
+          value={field.value || ''}
+          onChange={field.onChange}
+          onBlur={field.onBlur}
           autoFocus={objectHasProperty(props, 'autoFocus') ? props.autoFocus : false}
           required={objectHasProperty(props, 'required') ? props.required : false}
           inputProps={{ classes: { root: css.input } }}
@@ -89,7 +94,7 @@ export const SelectMenu = <T extends SelectMenuOptionValues>({ options, ...props
         </Select>
         <When condition={selectFieldHasErrors}>
           <FormHelperText component='div' classes={{ root: css.errorLabel }}>
-            {props.form.errors[props.field.name]}
+            {form.errors[field.name]}
           </FormHelperText>
         </When>
       </FormControl>

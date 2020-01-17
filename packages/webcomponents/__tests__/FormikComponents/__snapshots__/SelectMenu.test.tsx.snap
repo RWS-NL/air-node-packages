@@ -13,10 +13,10 @@ exports[`Snapshot Testing Required Props 1`] = `
           "shrink": "inputLabelShrink",
         }
       }
-      id="validated-select-menu-label"
+      id="validated-select-menu-Sample Label"
       required={false}
     >
-      label
+      Sample Label
     </WithStyles(ForwardRef(InputLabel))>
     <WithStyles(ForwardRef(Select))
       IconComponent={[Function]}
@@ -31,8 +31,7 @@ exports[`Snapshot Testing Required Props 1`] = `
           },
         }
       }
-      label="label"
-      labelId="validated-select-menu-label"
+      labelId="validated-select-menu-Sample Label"
       labelWidth={0}
       name=""
       required={false}
