@@ -1,1 +1,1 @@
-export { default as SelectMenu, SelectMenuProps } from './SelectMenu';
+export { default as SelectMenu, SelectMenuProps, SelectMenuOption, SelectMenuOptionValues } from './SelectMenu';

@@ -15,10 +15,8 @@ import css from './TextField.scss';
  *  data-qa='exampleDataQA' component={TextField} required
  * />
  */
-export const ValidatedFormTextField: FC<TextFieldProps> = componentProps => {
-  const {
-    field, form, label, ...props
-  } = componentProps as TextFieldProps;
+export const FormTextField: FC<TextFieldProps> = componentProps => {
+  const { field, form, label, ...props } = componentProps as TextFieldProps;
 
   const textFieldHasErrors = objectHasProperty(form.errors, field.name) && objectHasProperty(form.touched, field.name);
 
@@ -39,23 +37,20 @@ export const ValidatedFormTextField: FC<TextFieldProps> = componentProps => {
       InputProps={{
         classes: {
           root: css.input,
-          notchedOutline: css.outline,
-        },
+          notchedOutline: css.outline
+        }
       }}
-      classes={{ root: classnames([ { [css.errorInput]: textFieldHasErrors } ]) }}
+      classes={{ root: classnames([{ [css.errorInput]: textFieldHasErrors }]) }}
       InputLabelProps={{
         shrink: true,
-        classes: { root: css.inputLabel },
+        classes: { root: css.inputLabel }
       }}
-      FormHelperTextProps={
-        {
-          component: 'div',
-          classes:
-            { error: css.errorLabel },
-        }
-      }
+      FormHelperTextProps={{
+        component: 'div',
+        classes: { error: css.errorLabel }
+      }}
     />
   );
 };
 
-export default ValidatedFormTextField;
+export default FormTextField;
