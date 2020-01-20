@@ -1,6 +1,6 @@
-import Dialog from '@material-ui/core/Dialog';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogTitle from '@material-ui/core/DialogTitle';
+import Dialog, { DialogProps } from '@material-ui/core/Dialog';
+import DialogContent, { DialogContentProps } from '@material-ui/core/DialogContent';
+import DialogTitle, { DialogTitleProps } from '@material-ui/core/DialogTitle';
 import Grid from '@material-ui/core/Grid';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
@@ -21,10 +21,16 @@ export interface ModalProps {
   open: boolean;
   /** The content to show in the modal */
   dialogContent: JSX.Element;
-  /** Object of data-qa tags to pass to the modal */
-  modalqas?: ModalQAs;
   /** Title for the modal */
   topic: string | ReactNode;
+  /** Any othe props passed to the Dialog */
+  DialogProps?: DialogProps;
+  /** Any other props passed to the DialogContent */
+  DialogContentProps?: DialogContentProps;
+  /** Any other props passed to the DialogTitle */
+  DialogTitleProps?: DialogTitleProps;
+  /** Object of data-qa tags to pass to the modal */
+  modalqas?: ModalQAs;
 
   /** The action to trigger to close this modal */
   closeAction(): void;
@@ -47,16 +53,17 @@ export interface ModalProps {
  * />
  * ```
  */
-export const Modal = memo((props: ModalProps) => {
+export const Modal = memo(({ DialogContentProps, DialogTitleProps, DialogProps, ...props }: ModalProps) => {
   return (
     <Dialog
+      {...DialogProps}
       disableBackdropClick
       disableEscapeKeyDown
       open={Boolean(props.open)}
       classes={{ root: css.modal }}
       data-qa={props.modalqas?.modal || 'modal'}
     >
-      <DialogTitle className={css.title} data-qa={props.modalqas?.title || 'modal-title'}>
+      <DialogTitle {...DialogTitleProps} className={css.title} data-qa={props.modalqas?.title || 'modal-title'}>
         <Grid container alignContent='flex-end' alignItems='flex-end' justify='space-between'>
           <Grid item>{props.topic}</Grid>
           <Grid item classes={{ root: css.closeIcon }}>
@@ -74,7 +81,11 @@ export const Modal = memo((props: ModalProps) => {
           </Grid>
         </Grid>
       </DialogTitle>
-      <DialogContent className={css.content} data-qa={props.modalqas?.content || 'modal-content'}>
+      <DialogContent
+        {...DialogContentProps}
+        className={css.content}
+        data-qa={props.modalqas?.content || 'modal-content'}
+      >
         {props.dialogContent}
       </DialogContent>
     </Dialog>
