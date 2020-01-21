@@ -1,41 +1,43 @@
 import { TextField as MUITextField } from '@material-ui/core';
-import { objectHasProperty } from '@rws-air/utils';
 import classnames from 'classnames';
-import { fieldToTextField, TextFieldProps } from 'formik-material-ui';
+import { FieldHookConfig, useField } from 'formik';
+import { TextFieldProps, useFieldToTextField } from 'formik-material-ui';
 import React, { FC } from 'react';
 import css from './TextField.scss';
 
 /**
  * Constructs a TextField with the formik validation
- * @param componentProps Props to pass to the Textield component
+ * @param props Props to pass to the Textield component
  * @example
  * ```jsx
- * <FastField
- *  name='userRef' type='text' label='Example'
+ * <TextField
+ *  name='name' type='text' label='Example'
  *  placeholder='Example placeholder' variant='outlined'
- *  data-qa='exampleDataQA' component={TextField} required
+ *  data-qa='exampleDataQA' required
  * />
  * ```
  */
-export const TextField: FC<TextFieldProps> = componentProps => {
-  const { field, form, label, ...props } = componentProps as TextFieldProps;
+export const TextField: FC<TextFieldProps> = props => {
+  const [{ value, onChange, onBlur }, { error, touched }] = useField(props as FieldHookConfig<any>);
+  const textFieldProps = useFieldToTextField(props);
 
-  const textFieldHasErrors = objectHasProperty(form.errors, field.name) && objectHasProperty(form.touched, field.name);
+  const textFieldHasErrors = Boolean(error) && touched;
 
   return (
     <MUITextField
-      {...fieldToTextField(componentProps)}
-      value={field.value}
-      label={label}
+      {...props}
+      {...textFieldProps}
+      value={value}
+      label={props.label}
       placeholder={props.placeholder}
-      onChange={field.onChange}
-      onBlur={field.onBlur}
+      onChange={onChange}
+      onBlur={onBlur}
       margin='dense'
       variant='outlined'
       className={props.className}
       fullWidth
-      autoFocus={objectHasProperty(props, 'autoFocus') ? props.autoFocus : false}
-      required={objectHasProperty(props, 'required') ? props.required : false}
+      autoFocus={props.autoFocus}
+      required={props.required}
       InputProps={{
         classes: {
           root: css.input,

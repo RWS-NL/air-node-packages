@@ -1,80 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Snapshot Testing Required Props 1`] = `
-<Fragment>
-  <WithStyles(ForwardRef(FormControl))
-    fullWidth={true}
-    variant="outlined"
-  >
-    <WithStyles(ForwardRef(InputLabel))
-      classes={
+<ContextProvider
+  value={
+    Object {
+      "dirty": false,
+      "errors": Object {},
+      "getFieldHelpers": [Function],
+      "getFieldMeta": [Function],
+      "getFieldProps": [Function],
+      "handleBlur": [Function],
+      "handleChange": [Function],
+      "handleReset": [Function],
+      "handleSubmit": [Function],
+      "initialErrors": Object {},
+      "initialStatus": undefined,
+      "initialTouched": Object {},
+      "initialValues": Object {
+        "name": "",
+      },
+      "isSubmitting": false,
+      "isValid": true,
+      "isValidating": false,
+      "registerField": [Function],
+      "resetForm": [Function],
+      "setErrors": [Function],
+      "setFieldError": [Function],
+      "setFieldTouched": [Function],
+      "setFieldValue": [Function],
+      "setFormikState": [Function],
+      "setStatus": [Function],
+      "setSubmitting": [Function],
+      "setTouched": [Function],
+      "setValues": [Function],
+      "status": undefined,
+      "submitCount": 0,
+      "submitForm": [Function],
+      "touched": Object {},
+      "unregisterField": [Function],
+      "validateField": [Function],
+      "validateForm": [Function],
+      "validateOnBlur": true,
+      "validateOnChange": true,
+      "validateOnMount": false,
+      "values": Object {
+        "name": "",
+      },
+    }
+  }
+>
+  <SelectMenu
+    label="Sample Label"
+    name="type"
+    options={
+      Array [
         Object {
-          "root": "inputLabel",
-          "shrink": "inputLabelShrink",
-        }
-      }
-      id="validated-select-menu-Sample Label"
-      required={false}
-    >
-      Sample Label
-    </WithStyles(ForwardRef(InputLabel))>
-    <WithStyles(ForwardRef(Select))
-      IconComponent={[Function]}
-      autoFocus={false}
-      className="select"
-      displayEmpty={true}
-      fullWidth={true}
-      inputProps={
+          "label": "one",
+          "value": "one",
+        },
         Object {
-          "classes": Object {
-            "root": "input",
-          },
-        }
-      }
-      labelId="validated-select-menu-Sample Label"
-      labelWidth={0}
-      name=""
-      required={false}
-      type="text"
-      value=""
-    >
-      <WithStyles(ForwardRef(MenuItem))
-        classes={
-          Object {
-            "root": "menuItem",
-            "selected": "menuItemSelected",
-          }
-        }
-        key="1"
-        value="one"
-      >
-        one
-      </WithStyles(ForwardRef(MenuItem))>
-      <WithStyles(ForwardRef(MenuItem))
-        classes={
-          Object {
-            "root": "menuItem",
-            "selected": "menuItemSelected",
-          }
-        }
-        key="2"
-        value="two"
-      >
-        two
-      </WithStyles(ForwardRef(MenuItem))>
-    </WithStyles(ForwardRef(Select))>
-    <When
-      condition={false}
-    >
-      <WithStyles(ForwardRef(FormHelperText))
-        classes={
-          Object {
-            "root": "errorLabel",
-          }
-        }
-        component="div"
-      />
-    </When>
-  </WithStyles(ForwardRef(FormControl))>
-</Fragment>
+          "label": "two",
+          "value": "two",
+        },
+      ]
+    }
+    type="text"
+  />
+</ContextProvider>
 `;

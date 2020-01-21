@@ -1,8 +1,8 @@
 import { FormControl, FormHelperText, InputLabel, MenuItem, Select } from '@material-ui/core';
 import ArrowDropIcon from '@material-ui/icons/ArrowDropDown';
-import { objectHasProperty } from '@rws-air/utils';
 import classnames from 'classnames';
-import { fieldToSelect, SelectProps as FormikSelectProps } from 'formik-material-ui';
+import { useField } from 'formik';
+import { SelectProps, useFieldToSelect } from 'formik-material-ui';
 import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { When } from 'react-if';
 import css from './SelectMenu.scss';
@@ -17,7 +17,7 @@ export interface SelectMenuOption<T extends SelectMenuOptionValues> {
   label: string;
 }
 
-export interface SelectMenuProps<T extends SelectMenuOptionValues> {
+export interface SelectMenuProps<T extends SelectMenuOptionValues> extends SelectProps {
   /** The label of the select menu */
   label: string;
   /** The selectable options for the select menu */
@@ -29,30 +29,33 @@ export interface SelectMenuProps<T extends SelectMenuOptionValues> {
  * @param props Props to pass to the select menu component
  * @example
  * ```jsx
- *  <FastField
- *    name='type'
- *    type='text'
- *    required
- *    placeholder='Example placeholder'
- *    variant='outlined'
- *    data-qa='sample-select-menu'
- * >
- *     {(fieldProps: FieldProps) => (
- *       <SelectMenu<'JOHN'|'CONNOR'>
- *         {...fieldProps}
- *         label='Example'
- *         options={ [{ value: 'JOHN', label: 'John'}, { value: 'CONNOR', label: 'Connor'}] }
- *       />
- *     )}
- * </FastField>
+ * <SelectMenu
+ *   name='type'
+ *   type='text'
+ *   required
+ *   placeholder='Example Placeholder'
+ *   variant='outlined'
+ *   data-qa='sample-select-menu'
+ *   label='Example'
+ *   options={ [{ value: 'JOHN', label: 'John'}, { value: 'CONNOR', label: 'Connor'}] }
+ * />
  * ```
  */
-export const SelectMenu = <T extends SelectMenuOptionValues>(componentProps: SelectMenuProps<T>) => {
-  type componentPropsType = SelectMenuProps<T> & FormikSelectProps;
+export const SelectMenu = <T extends SelectMenuOptionValues>({
+  label,
+  options,
+  name,
+  placeholder,
+  className,
+  autoFocus,
+  required,
+  ...props
+}: SelectMenuProps<T>) => {
+  const selectFieldProps = useFieldToSelect({ name, ...props });
+  const [{ value, onChange, onBlur }, { error, touched }] = useField(name);
 
   const inputLabel = useRef<HTMLLabelElement>(null);
   const [labelWidth, setLabelWidth] = useState(0);
-  const { field, form, meta, disabled, options, label, ...props } = componentProps as componentPropsType;
 
   useEffect(() => {
     if (inputLabel.current) {
@@ -60,8 +63,7 @@ export const SelectMenu = <T extends SelectMenuOptionValues>(componentProps: Sel
     }
   }, []);
 
-  const selectFieldHasErrors =
-    objectHasProperty(form.errors, field.name) && objectHasProperty(form.touched, field.name);
+  const selectFieldHasErrors = Boolean(error) && touched;
 
   return (
     <Fragment>
@@ -70,12 +72,13 @@ export const SelectMenu = <T extends SelectMenuOptionValues>(componentProps: Sel
           classes={{ root: css.inputLabel, shrink: css.inputLabelShrink }}
           ref={inputLabel}
           id={`validated-select-menu-${label}`}
-          required={objectHasProperty(props, 'required') ? props.required : false}
+          required={required}
         >
           {label}
         </InputLabel>
         <Select
-          {...fieldToSelect({ field, form, meta, disabled })}
+          {...selectFieldProps}
+          {...props}
           type='text'
           labelId={`validated-select-menu-${label}`}
           labelWidth={labelWidth}
@@ -83,11 +86,11 @@ export const SelectMenu = <T extends SelectMenuOptionValues>(componentProps: Sel
           IconComponent={() => <ArrowDropIcon color={selectFieldHasErrors ? 'error' : 'primary'} />}
           fullWidth
           displayEmpty
-          value={field.value || ''}
-          onChange={field.onChange}
-          onBlur={field.onBlur}
-          autoFocus={objectHasProperty(props, 'autoFocus') ? props.autoFocus : false}
-          required={objectHasProperty(props, 'required') ? props.required : false}
+          value={value || ''}
+          onChange={onChange}
+          onBlur={onBlur}
+          autoFocus={autoFocus}
+          required={required}
           inputProps={{ classes: { root: css.input } }}
         >
           {options.map((item, index) => (
@@ -102,7 +105,7 @@ export const SelectMenu = <T extends SelectMenuOptionValues>(componentProps: Sel
         </Select>
         <When condition={selectFieldHasErrors}>
           <FormHelperText component='div' classes={{ root: css.errorLabel }}>
-            {form.errors[field.name]}
+            {error || ''}
           </FormHelperText>
         </When>
       </FormControl>

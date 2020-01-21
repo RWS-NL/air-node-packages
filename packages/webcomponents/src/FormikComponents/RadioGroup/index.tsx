@@ -1,5 +1,5 @@
 import { FormControlLabel, Radio } from '@material-ui/core';
-import { RadioGroup as MUIRadioGroup, RadioGroupProps as MUIRadioGroupProps } from 'formik-material-ui';
+import { RadioGroup as MUIRadioGroup, RadioGroupProps as MUIRadopGroupProps, useFieldToRadioGroup } from 'formik-material-ui';
 import React from 'react';
 import css from './RadioGroup.scss';
 
@@ -13,9 +13,11 @@ export interface Option<T extends OptionValue> {
   label: string;
 }
 
-export interface RadioGroupProps<T extends OptionValue> {
+export interface RadioGroupProps<T extends OptionValue> extends MUIRadopGroupProps {
   /** The options for the radio buttons */
   options: Option<T>[];
+  /** Whether this field is required */
+  required?: boolean;
 }
 
 /**
@@ -23,26 +25,19 @@ export interface RadioGroupProps<T extends OptionValue> {
  * @param componentProps Props to pass to the component
  * @example
  * ```jsx
- *  <FastField
- *    name='type'
- *    type='text'
- *    required
- *    data-qa='sample-radio-group'
- * >
- *     {(fieldProps: FieldProps) => (
- *       <RadioGroup<'JOHN'|'CONNOR'>
- *         {...fieldProps}
- *         options={ [{ value: 'JOHN', label: 'John'}, { value: 'CONNOR', label: 'Connor'}] }
- *       />
- *     )}
- * </FastField>
+ * <RadioGroup
+ *   name='type'
+ *   data-qa='sample-radio-group'
+ *   required
+ *   options={ [{ value: 'JOHN', label: 'John'}, { value: 'CONNOR', label: 'Connor'}] }
+ * />
  * ```
  */
-export const RadioGroup = <T extends OptionValue>(componentProps: RadioGroupProps<T>) => {
-  const { field, form, meta, options, ...props } = componentProps as RadioGroupProps<T> & MUIRadioGroupProps;
+export const RadioGroup = <T extends OptionValue>({name, options, ...props}: RadioGroupProps<T>) => {
+  const radioFieldProps = useFieldToRadioGroup({name, ...props});
 
   return (
-    <MUIRadioGroup field={field} form={form} meta={meta} row {...props}>
+    <MUIRadioGroup {...props} {...radioFieldProps} name={name} row>
       {options.map((option, index) => (
         <FormControlLabel
           key={index}
@@ -50,7 +45,7 @@ export const RadioGroup = <T extends OptionValue>(componentProps: RadioGroupProp
           label={option.label}
           classes={{ label: css.label }}
           labelPlacement='end'
-          control={<Radio color='primary' />}
+          control={<Radio required={props.required} color='primary' />}
         />
       ))}
     </MUIRadioGroup>
