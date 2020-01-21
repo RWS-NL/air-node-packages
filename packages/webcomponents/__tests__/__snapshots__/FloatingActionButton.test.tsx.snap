@@ -1,5 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Snapshot Testing Disabling Tooltip 1`] = `
+<WithStyles(ForwardRef(Fab))
+  className="makeStyles-fab-1"
+  color="primary"
+>
+  <AccessAlarmIcon />
+</WithStyles(ForwardRef(Fab))>
+`;
+
 exports[`Snapshot Testing Optional Props 1`] = `
 <Memo()
   id="tooltip"

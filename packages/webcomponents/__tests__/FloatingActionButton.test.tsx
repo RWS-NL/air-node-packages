@@ -31,6 +31,14 @@ describe('Component Tests', () => {
 
     expect(tooltip.prop('title')).toBe('Tooltip Sample');
   });
+
+  test('GIVEN disableToolthen THEN has no Tooltip', () => {
+    floatingActionButton = shallow(<FloatingActionButton icon={<AccessAlarm />} disableTooltip />);
+
+    const tooltip = floatingActionButton.find(Tooltip);
+
+    expect(tooltip.exists()).toBe(false);
+  });
 });
 
 describe('Snapshot Testing', () => {
@@ -50,6 +58,12 @@ describe('Snapshot Testing', () => {
         onClick={mockButtonClick}
       />
     );
+    expect(floatingActionButton).toMatchSnapshot();
+  });
+
+  test('Disabling Tooltip', () => {
+    const floatingActionButton = shallow(<FloatingActionButton icon={<AccessAlarm />} disableTooltip />);
+
     expect(floatingActionButton).toMatchSnapshot();
   });
 });

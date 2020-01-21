@@ -6,8 +6,10 @@ import Tooltip, { TooltipProps } from '../Tooltip';
 export interface FabProps extends MFabProps {
   /** The icon to show inside the Floating Action Button */
   icon: ReactNode;
+  /** When true, FAB will not have a Tooltip on hover */
+  disableTooltip?: boolean;
   /** The content to put in the on-hover tooltip */
-  tooltipContent: ReactNode;
+  tooltipContent?: ReactNode;
   /** Props applied to the `Tooltip` element */
   TooltipProps?: Partial<Omit<TooltipProps, 'title'>>;
 }
@@ -35,16 +37,26 @@ const useStyles = makeStyles((theme: Theme) =>
  * <FloatingActionButton tooltipContent='Cool Tooltip' icon={<SearchIcon/>}/>
  * ```
  */
-export const FloatingActionButton = memo(({ tooltipContent, icon, TooltipProps, ...props }: FabProps) => {
-  const classes = useStyles();
+export const FloatingActionButton = memo(
+  ({ tooltipContent, icon, disableTooltip, TooltipProps, ...props }: FabProps) => {
+    const classes = useStyles();
 
-  return (
-    <Tooltip {...TooltipProps} title={tooltipContent}>
-      <Fab {...props} className={classes.fab} color='primary'>
-        {icon}
-      </Fab>
-    </Tooltip>
-  );
-});
+    if (disableTooltip) {
+      return (
+        <Fab {...props} className={classes.fab} color='primary'>
+          {icon}
+        </Fab>
+      );
+    }
+
+    return (
+      <Tooltip {...TooltipProps} title={tooltipContent}>
+        <Fab {...props} className={classes.fab} color='primary'>
+          {icon}
+        </Fab>
+      </Tooltip>
+    );
+  }
+);
 
 export default FloatingActionButton;
