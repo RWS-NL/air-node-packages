@@ -13,7 +13,7 @@ describe('Component Tests', () => {
   beforeAll(() => {
     radioGroup = shallow(
       <Formik initialValues={{ name: '' }} onSubmit={() => undefined}>
-        <RadioGroup<'JOHN' | 'CONNOR'> name='name' options={options} />
+        <RadioGroup<'JOHN' | 'CONNOR'> data-qa='formFieldName' name='name' options={options} />
       </Formik>
     ).find(RadioGroup);
   });
@@ -28,6 +28,23 @@ describe('Snapshot Testing', () => {
     const radioGroup = shallow(
       <Formik initialValues={{ name: '' }} onSubmit={() => undefined}>
         <RadioGroup<'JOHN' | 'CONNOR'>
+          name='name'
+          options={[
+            { value: 'JOHN', label: 'John' },
+            { value: 'CONNOR', label: 'Connor' }
+          ]}
+        />
+      </Formik>
+    );
+    expect(radioGroup).toMatchSnapshot();
+  });
+
+  test('Optional Props', () => {
+    const radioGroup = shallow(
+      <Formik initialValues={{ name: '' }} onSubmit={() => undefined}>
+        <RadioGroup<'JOHN' | 'CONNOR'>
+          data-qa='formFieldName'
+          required
           name='name'
           options={[
             { value: 'JOHN', label: 'John' },

@@ -1,5 +1,9 @@
 import { FormControlLabel, Radio } from '@material-ui/core';
-import { RadioGroup as MUIRadioGroup, RadioGroupProps as MUIRadopGroupProps, useFieldToRadioGroup } from 'formik-material-ui';
+import {
+  RadioGroup as MUIRadioGroup,
+  RadioGroupProps as MUIRadopGroupProps,
+  useFieldToRadioGroup
+} from 'formik-material-ui';
 import React from 'react';
 import css from './RadioGroup.scss';
 
@@ -18,6 +22,8 @@ export interface RadioGroupProps<T extends OptionValue> extends MUIRadopGroupPro
   options: Option<T>[];
   /** Whether this field is required */
   required?: boolean;
+  /** Data-qa for the Radio Group */
+  'data-qa'?: string;
 }
 
 /**
@@ -33,8 +39,13 @@ export interface RadioGroupProps<T extends OptionValue> extends MUIRadopGroupPro
  * />
  * ```
  */
-export const RadioGroup = <T extends OptionValue>({name, options, ...props}: RadioGroupProps<T>) => {
-  const radioFieldProps = useFieldToRadioGroup({name, ...props});
+export const RadioGroup = <T extends OptionValue>({
+  name,
+  options,
+  'data-qa': dataQa,
+  ...props
+}: RadioGroupProps<T>) => {
+  const radioFieldProps = useFieldToRadioGroup({ name, ...props });
 
   return (
     <MUIRadioGroup {...props} {...radioFieldProps} name={name} row>
@@ -45,7 +56,7 @@ export const RadioGroup = <T extends OptionValue>({name, options, ...props}: Rad
           label={option.label}
           classes={{ label: css.label }}
           labelPlacement='end'
-          control={<Radio required={props.required} color='primary' />}
+          control={<Radio data-qa={`${dataQa}-${option.value}`} required={props.required} color='primary' />}
         />
       ))}
     </MUIRadioGroup>
