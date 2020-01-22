@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.2.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@9.1.5...@rws-air/webcomponents@9.2.0) (2020-01-22)
+
+### Features
+
+- upgrade to formik-material-ui v2 ([#226](https://github.com/RWS-NL/air-node-packages/issues/226)) ([284a1e8](https://github.com/RWS-NL/air-node-packages/commit/284a1e8a6530184e705404282d594c9b3f6842ca))
+
 ## [9.1.5](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@9.1.4...@rws-air/webcomponents@9.1.5) (2020-01-21)
 
 **Note:** Version bump only for package @rws-air/webcomponents
