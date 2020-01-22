@@ -1,16 +1,9 @@
-import { KeyboardDatePicker, KeyboardDatePickerProps } from '@material-ui/pickers';
-import { MaterialUiPickersDate } from '@material-ui/pickers/typings/date';
-import { FieldProps } from 'formik';
+import { useField } from 'formik';
+import { KeyboardDatePicker, KeyboardDatePickerProps, useFieldToKeyboardDatePicker } from 'formik-material-ui-pickers';
 import React, { FC } from 'react';
 import css from './DatePicker.scss';
 
-type DatePickerFormProps = DatePickerProps &
-  FieldProps &
-  Omit<KeyboardDatePickerProps, 'error' | 'name' | 'onChange' | 'value' | 'variant'>;
-
-export interface DatePickerProps {
-  /** The variant of the datepicker */
-  variant: 'standard' | 'filled' | 'outlined' | undefined;
+export interface DatePickerProps extends KeyboardDatePickerProps {
   /** The label shown in the datepicker */
   label: string;
   /** The minimum date to meet */
@@ -22,33 +15,23 @@ export interface DatePickerProps {
  * @param componentProps Props to pass to the date picker component
  * @example
  * ```jsx
- * <FastField
- *   name='startDate'
- *   label='Project startdatum'
- *   minDate={new Date('2012-01-01')}
- *   component={DatePicker}
- * />
+ * <DatePicker minDate={new Date('2012-01-01')} name='date' type='date' label='Sample Date' />
  * ```
  */
-export const DatePicker: FC<DatePickerProps> = componentProps => {
-  const { field, form, label, minDate, ...props } = componentProps as DatePickerFormProps;
-
-  const currentError = form.errors[field.name];
+export const DatePicker: FC<DatePickerProps> = ({ minDate, label, name, ...props }) => {
+  const formikDatePickerProps = useFieldToKeyboardDatePicker({ name, ...props });
+  const [{ onBlur }, { error }] = useField(name);
 
   return (
     <KeyboardDatePicker
+      {...formikDatePickerProps}
       {...props}
       variant='inline'
       format='DD/MM/YYYY'
       minDate={minDate}
-      name={field.name}
-      onBlur={field.onBlur}
-      value={field.value}
-      helperText={currentError}
-      error={Boolean(currentError)}
-      onChange={(newDate: MaterialUiPickersDate | null) =>
-        form.setFieldValue(field.name, newDate?.toDate() || new Date(), true)
-      }
+      name={name}
+      onBlur={onBlur}
+      helperText={error}
       KeyboardButtonProps={{ 'aria-label': 'change date' }}
       InputAdornmentProps={{ position: 'start', className: css.datePickerIcon }}
       label={label}
@@ -68,7 +51,7 @@ export const DatePicker: FC<DatePickerProps> = componentProps => {
       }}
       FormHelperTextProps={{
         component: 'div',
-        classes: { error: css.errorLabel }
+        classes: { root: css.errorLabel }
       }}
     />
   );
