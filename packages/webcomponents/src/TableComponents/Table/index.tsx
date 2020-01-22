@@ -53,7 +53,10 @@ export interface TableCustomClasses {
 }
 
 export interface TableProps
-  extends Pick<ToolbarProps, 'onsearchclear' | 'onsearchinput' | 'paperElevation' | 'extraIcons' | 'searchdebounce'>,
+  extends Pick<
+      ToolbarProps,
+      'onsearchclear' | 'onsearchinput' | 'paperElevation' | 'extraIcons' | 'searchdebounce' | 'clearSearch'
+    >,
     Pick<HeaderCellProps, 'onRequestSort' | 'orderby' | 'order' | 'tooltipplacement'>,
     Pick<
       MUITablePaginationProps,
@@ -78,6 +81,14 @@ export interface TableProps
   showTopPagination?: boolean;
   /** Control whether the bottom bar pagination should be shown */
   showBottomPagination?: boolean;
+  /** Additional props to pass to the Material UI Table component */
+  TableProps?: MUITableProps;
+  /** Additional props to pass to each of the Header cell components */
+  HeaderCellProps?: HeaderCellProps;
+  /** Additional props to pass to the toolbar component */
+  ToolbarProps?: ToolbarProps;
+  /** Additional props to pass the the pagination component */
+  PaginationProps?: MUITablePaginationProps;
 }
 
 /**
@@ -155,6 +166,7 @@ export const Table = memo((props: TableProps) => {
   const renderTablePagination = (customClasses: string) => {
     return (
       <Pagination
+        {...props.PaginationProps}
         labelRowsPerPage={props.labels.labelRowsPerPage}
         labelPaginationOf={props.labels.labelPaginationOf}
         rowsPerPageOptions={props.rowsPerPageOptions}
@@ -172,6 +184,8 @@ export const Table = memo((props: TableProps) => {
   return (
     <Fragment>
       <Toolbar
+        {...props.ToolbarProps}
+        clearSearch={props.clearSearch}
         searchplaceholderlabel={props.labels.searchplaceholderlabel}
         onsearchinput={props.onsearchinput}
         onsearchclear={props.onsearchclear}
@@ -188,6 +202,7 @@ export const Table = memo((props: TableProps) => {
         <Fragment />
       )}
       <MUITable
+        {...props.TableProps}
         stickyHeader={props.stickyHeader}
         className={classnames(addCustomClasses('table', css.table))}
         data-qa={props.tableqas.table}
@@ -196,6 +211,7 @@ export const Table = memo((props: TableProps) => {
           <TableRow data-qa={props.tableqas.headerRow} className={classnames(addCustomClasses('tableHeaderRow'))}>
             {props.headers.map((header, index) => (
               <HeaderCell
+                {...props.HeaderCellProps}
                 key={index}
                 header={header}
                 orderby={props.orderby}

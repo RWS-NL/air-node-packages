@@ -5,7 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import CloseIcon from '@material-ui/icons/Close';
 import SearchIcon from '@material-ui/icons/Search';
 import { CSSProperties } from '@material-ui/styles';
-import React, { ChangeEvent, KeyboardEvent, memo, useState } from 'react';
+import React, { ChangeEvent, KeyboardEvent, memo, useState, useEffect } from 'react';
 import css from './SearchBar.scss';
 
 export interface SearchBarProps {
@@ -17,6 +17,8 @@ export interface SearchBarProps {
   className?: string;
   /** Disables text field. */
   disabled?: boolean;
+  /** Whenever this value is changed a clear of the search value is triggered */
+  clearSearch?: boolean;
   /** Fired when the search is cancelled. */
   onCancelSearch?: () => any;
   /** Fired when the text value changes. */
@@ -53,85 +55,106 @@ export interface SearchBarProps {
  * />
  * ```
  */
-export const SearchBar = memo((props: SearchBarProps) => {
-  const [value, setValue] = useState('');
-  const placeholder = props.placeholder || 'Search...';
+export const SearchBar = memo(
+  ({
+    onFocus,
+    onBlur,
+    onChange,
+    onCancelSearch,
+    onRequestSearch,
+    cancelOnEscape,
+    onKeyUp,
+    paperElevation,
+    disabled,
+    clearSearch = false,
+    'data-qa': dataQa,
+    placeholder,
+    ...props
+  }: SearchBarProps) => {
+    const [value, setValue] = useState('');
+    const searchPlaceholder = placeholder || 'Search...';
 
-  const handleFocus = (event: any): void => {
-    if (props.onFocus) props.onFocus(event);
-  };
+    const handleFocus = (event: any): void => {
+      if (onFocus) onFocus(event);
+    };
 
-  const handleBlur = (event: any): void => {
-    if (value && value.trim().length === 0) setValue('');
-    if (props.onBlur) props.onBlur(event);
-  };
+    const handleBlur = (event: any): void => {
+      if (value && value.trim().length === 0) setValue('');
+      if (onBlur) onBlur(event);
+    };
 
-  const handleInput = (event: ChangeEvent<HTMLInputElement>): void => {
-    setValue(event.target.value);
-    if (props.onChange) props.onChange(event);
-  };
+    const handleInput = (event: ChangeEvent<HTMLInputElement>): void => {
+      setValue(event.target.value);
+      if (onChange) onChange(event);
+    };
 
-  const handleCancel = (): void => {
-    setValue('');
-    if (props.onCancelSearch) props.onCancelSearch();
-  };
+    const handleCancel = (): void => {
+      setValue('');
+      if (onCancelSearch) onCancelSearch();
+    };
 
-  const handleRequestSearch = (): void => {
-    if (props.onRequestSearch) props.onRequestSearch(value);
-  };
+    const handleRequestSearch = (): void => {
+      if (onRequestSearch) onRequestSearch(value);
+    };
 
-  const handleKeyUp = (event: KeyboardEvent<HTMLInputElement>): void => {
-    if (event.charCode === 13 || event.key === 'Enter') {
-      handleRequestSearch();
-    } else if (props.cancelOnEscape && (event.charCode === 27 || event.key === 'Escape')) {
-      handleCancel();
-    }
+    const handleKeyUp = (event: KeyboardEvent<HTMLInputElement>): void => {
+      if (event.charCode === 13 || event.key === 'Enter') {
+        handleRequestSearch();
+      } else if (cancelOnEscape && (event.charCode === 27 || event.key === 'Escape')) {
+        handleCancel();
+      }
 
-    if (props.onKeyUp) props.onKeyUp(event);
-  };
+      if (onKeyUp) onKeyUp(event);
+    };
 
-  return (
-    <Paper className={css.paper} elevation={props.paperElevation} square>
-      <InputBase
-        className={css.input}
-        placeholder={placeholder}
-        inputProps={{ 'aria-label': placeholder }}
-        onBlur={handleBlur}
-        value={value}
-        onChange={handleInput}
-        onKeyUp={handleKeyUp}
-        onFocus={handleFocus}
-        disabled={props.disabled}
-        data-qa={props['data-qa']}
-        fullWidth
-      />
-      {!value ? (
-        <IconButton
-          aria-label={placeholder}
-          className={css.inputButton}
-          onClick={handleRequestSearch}
-          disabled={props.disabled}
-          size='small'
-          color='primary'
-          data-qa='search-button'
-        >
-          <SearchIcon className={css.inputSVG} />
-        </IconButton>
-      ) : (
-        <IconButton
-          aria-label={placeholder}
-          className={css.inputButton}
-          onClick={handleCancel}
-          disabled={props.disabled}
-          size='small'
-          color='primary'
-          data-qa='search-close-button'
-        >
-          <CloseIcon className={css.inputSVG} />
-        </IconButton>
-      )}
-    </Paper>
-  );
-});
+    useEffect(() => {
+      setValue('');
+    }, [clearSearch]);
+
+    return (
+      <Paper className={css.paper} elevation={paperElevation} square>
+        <InputBase
+          {...props}
+          className={css.input}
+          placeholder={searchPlaceholder}
+          inputProps={{ 'aria-label': searchPlaceholder }}
+          onBlur={handleBlur}
+          value={value}
+          onChange={handleInput}
+          onKeyUp={handleKeyUp}
+          onFocus={handleFocus}
+          disabled={disabled}
+          data-qa={dataQa}
+          fullWidth
+        />
+        {!value ? (
+          <IconButton
+            aria-label={searchPlaceholder}
+            className={css.inputButton}
+            onClick={handleRequestSearch}
+            disabled={disabled}
+            size='small'
+            color='primary'
+            data-qa='search-button'
+          >
+            <SearchIcon className={css.inputSVG} />
+          </IconButton>
+        ) : (
+          <IconButton
+            aria-label={searchPlaceholder}
+            className={css.inputButton}
+            onClick={handleCancel}
+            disabled={disabled}
+            size='small'
+            color='primary'
+            data-qa='search-close-button'
+          >
+            <CloseIcon className={css.inputSVG} />
+          </IconButton>
+        )}
+      </Paper>
+    );
+  }
+);
 
 export default SearchBar;

@@ -33,7 +33,7 @@ export interface RenderIconProps {
   disableTooltip?: ToolbarButtonProps['disableTooltip'];
 }
 
-export interface ToolbarProps extends Pick<SearchBarProps, 'paperElevation'> {
+export interface ToolbarProps extends Pick<SearchBarProps, 'paperElevation' | 'clearSearch'> {
   /** The debounce timeout to wait until a search action should be performed */
   searchdebounce?: number;
   /** The label to display when no text is in the search input box */
@@ -50,6 +50,8 @@ export interface ToolbarProps extends Pick<SearchBarProps, 'paperElevation'> {
   customSearchbarClasses?: string | string[];
   /** Any additional icons to display before the search bar */
   extraIcons?: RenderIconProps[];
+  /** Any additional properties passed to the search bar */
+  SearchbarProps?: SearchBarProps;
 }
 
 /**
@@ -86,31 +88,44 @@ export const renderIcons = (iconData: RenderIconProps[]) => {
  * />
  * ```
  */
-export const Toolbar = memo((props: ToolbarProps) => {
-  const debouncedSearch = debouncer((input: string) => props.onsearchinput(input), props.searchdebounce || 400);
+export const Toolbar = memo(
+  ({
+    extraIcons,
+    clearSearch,
+    searchplaceholderlabel,
+    onsearchclear,
+    onsearchinput,
+    customSearchbarClasses,
+    customclasses,
+    searchdebounce,
+    paperElevation,
+    SearchbarProps,
+    'data-qa': dataQa,
+    ...props
+  }: ToolbarProps) => {
+    const debouncedSearch = debouncer((input: string) => onsearchinput(input), searchdebounce || 400);
 
-  return (
-    <div className={classnames(css.toolbar, props.customclasses)} data-qa={props['data-qa']}>
-      <Grid container direction='row' justify='flex-end' alignItems='center' spacing={2}>
-        {props.extraIcons && props.extraIcons.length ? renderIcons(props.extraIcons) : <Fragment />}
-        <Grid item key={2}>
-          <SearchBar
-            data-qa='table-search-bar'
-            placeholder={`${props.searchplaceholderlabel}...`}
-            onChange={e => debouncedSearch(e.target.value)}
-            onCancelSearch={props.onsearchclear}
-            className={classnames(
-              css.searchFieldContent,
-              css.ie11SearchBarTextCorrection,
-              props.customSearchbarClasses
-            )}
-            paperElevation={props.paperElevation}
-          />
+    return (
+      <div {...props} className={classnames(css.toolbar, customclasses)} data-qa={dataQa}>
+        <Grid container direction='row' justify='flex-end' alignItems='center' spacing={2}>
+          {extraIcons && extraIcons.length ? renderIcons(extraIcons) : <Fragment />}
+          <Grid item key={2}>
+            <SearchBar
+              {...SearchbarProps}
+              clearSearch={clearSearch}
+              data-qa='table-search-bar'
+              placeholder={`${searchplaceholderlabel}...`}
+              onChange={e => debouncedSearch(e.target.value)}
+              onCancelSearch={onsearchclear}
+              className={classnames(css.searchFieldContent, css.ie11SearchBarTextCorrection, customSearchbarClasses)}
+              paperElevation={paperElevation}
+            />
+          </Grid>
+          <Grid item key={1} />
         </Grid>
-        <Grid item key={1} />
-      </Grid>
-    </div>
-  );
-});
+      </div>
+    );
+  }
+);
 
 export default Toolbar;
