@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.2.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@9.2.0...@rws-air/webcomponents@9.2.1) (2020-01-22)
+
+**Note:** Version bump only for package @rws-air/webcomponents
+
 # [9.2.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@9.1.5...@rws-air/webcomponents@9.2.0) (2020-01-22)
 
 ### Features
