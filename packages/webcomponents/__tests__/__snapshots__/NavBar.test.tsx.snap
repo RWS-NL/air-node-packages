@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar Tests Snapshot Testing Required Props 1`] = `
+<Fragment>
+  <WithStyles(ForwardRef(AppBar))
+    classes={
+      Object {
+        "root": "appBar",
+      }
+    }
+    color="secondary"
+    position="static"
+  >
+    <WithStyles(ForwardRef(Toolbar))
+      variant="dense"
+    >
+      <WithStyles(ForwardRef(Tabs))
+        classes={
+          Object {
+            "indicator": "tabIndicator",
+          }
+        }
+        onChange={
+          [MockFunction] {
+            "calls": Array [
+              Array [
+                undefined,
+                1,
+              ],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": 1,
+              },
+            ],
+          }
+        }
+        value={1}
+        variant="standard"
+      >
+        <Memo()
+          data-qa="link-tab-0"
+          external={false}
+          key="0"
+          label="root"
+          to="/root"
+        />
+        <Memo()
+          data-qa="link-tab-1"
+          external={true}
+          key="1"
+          label="CGI"
+          to="https://cgi.com"
+        />
+        <Memo()
+          data-qa="link-tab-2"
+          external={true}
+          key="2"
+          label="Rijkswaterstaat"
+          to="https://rijkswaterstaat.nl"
+        />
+      </WithStyles(ForwardRef(Tabs))>
+    </WithStyles(ForwardRef(Toolbar))>
+  </WithStyles(ForwardRef(AppBar))>
+  <WithStyles(ForwardRef(Grid))
+    alignItems="flex-start"
+    container={true}
+    direction="row"
+    justify="center"
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      key="1"
+      xs={12}
+    >
+      <Memo()
+        title="Title"
+      />
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+</Fragment>
+`;

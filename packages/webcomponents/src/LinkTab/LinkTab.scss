@@ -1,0 +1,17 @@
+@import '../styles/vars';
+
+.linkText {
+  font-size: 1rem;
+  font-weight: bolder;
+  text-transform: none;
+
+  &Inherit {
+    color: $textBlack;
+    opacity: 1;
+  }
+}
+
+.selectedTab {
+  background-color: $yellow20;
+  color: $textBlack;
+}
