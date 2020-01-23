@@ -1,6 +1,6 @@
 {
   "name": "@rws-air/webcomponents",
-  "version": "9.3.0",
+  "version": "9.4.0",
   "description": "Standard Webcomponents for AIR projects",
   "author": "@rws-air",
   "license": "AGPL-3.0-or-later",
@@ -35,9 +35,9 @@
     "moment": "^2",
     "react": "^16",
     "react-dom": "^16",
-    "react-router-dom": "^5",
     "react-i18next": "^11",
-    "react-if": "^3"
+    "react-if": "^3",
+    "react-router-dom": "^5"
   },
   "browserslist": {
     "production": [

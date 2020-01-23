@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.4.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@9.3.0...@rws-air/webcomponents@9.4.0) (2020-01-23)
+
+### Features
+
+- **webcomponents:** added LinkTab and NavBar to webcomponents ([53fa5dd](https://github.com/RWS-NL/air-node-packages/commit/53fa5dd509c4ab550567b8735e28aed15e3a826e)), closes [#168927565](https://github.com/RWS-NL/air-node-packages/issues/168927565)
+
 # [9.3.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@9.2.1...@rws-air/webcomponents@9.3.0) (2020-01-22)
 
 ### Features
