@@ -123,7 +123,7 @@
     "stylelint": "^13.0.0",
     "ts-jest": "^24.2.0",
     "ts-node": "^8.6.0",
-    "tslint": "^5.20.1",
+    "tslint": "^6.0.0",
     "typedoc": "~0.15.0",
     "typedoc-plugin-lerna-packages": "^0.2.2",
     "typedoc-plugin-nojekyll": "^1.0.1",
