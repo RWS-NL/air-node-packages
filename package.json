@@ -91,7 +91,7 @@
     "i18next": "^19.0.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
-    "jest-circus": "^24.9.0",
+    "jest-circus": "^25.1.0",
     "jest-environment-puppeteer": "4.4.0",
     "lerna": "^3.20.2",
     "lint-staged": "^10.0.1",
