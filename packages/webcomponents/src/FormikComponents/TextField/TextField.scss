@@ -20,6 +20,7 @@
 
 .error {
   &Label {
+    color: $red100;
     position: absolute;
     top: 2.5rem;
   }
