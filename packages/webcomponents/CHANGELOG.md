@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@9.4.1...@rws-air/webcomponents@10.0.0) (2020-01-24)
+
+- Build/bump dependencies (#236) ([8873c07](https://github.com/RWS-NL/air-node-packages/commit/8873c0755ca71f4ffdb0ace242503c5cc7124829)), closes [#236](https://github.com/RWS-NL/air-node-packages/issues/236)
+
+### BREAKING CHANGES
+
+- No longer supported
+
+- build(deps): bump dependencies
+
 ## [9.4.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@9.4.0...@rws-air/webcomponents@9.4.1) (2020-01-23)
 
 ### Bug Fixes
