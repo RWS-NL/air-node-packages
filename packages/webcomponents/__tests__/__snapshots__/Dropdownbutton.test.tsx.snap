@@ -30,13 +30,13 @@ exports[`Snapshot Testing Optional Props 1`] = `
         label="one"
         onClick={[Function]}
         size="small"
-        startIcon={<UNDEFINED />}
+        startIcon={<Memo(ArrowDropDownIcon) />}
         variant="outlined"
       />
       <Memo()
         className="buttonOverwritesRight"
         color="secondary"
-        label={<UNDEFINED />}
+        label={<Memo(CloudDownloadIcon) />}
         onClick={[Function]}
         variant="outlined"
       />
@@ -83,13 +83,13 @@ exports[`Snapshot Testing Required Props 1`] = `
         label="one"
         onClick={[Function]}
         size="small"
-        startIcon={<UNDEFINED />}
+        startIcon={<Memo(ArrowDropDownIcon) />}
         variant="contained"
       />
       <Memo()
         className="buttonOverwritesRight"
         color="primary"
-        label={<UNDEFINED />}
+        label={<Memo(CloudDownloadIcon) />}
         onClick={[Function]}
         variant="contained"
       />

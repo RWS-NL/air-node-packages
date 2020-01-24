@@ -17,12 +17,12 @@ exports[`Snapshot Testing Optional Props 1`] = `
     }
   }
   title={
-    <ForwardRef(StyledComponent)
+    <Styled(MuiBox)
       className="box"
       data-qa="snap-qa"
     >
       SnapTitle
-    </ForwardRef(StyledComponent)>
+    </Styled(MuiBox)>
   }
 >
   <span>
@@ -42,11 +42,11 @@ exports[`Snapshot Testing Required Props 1`] = `
   enterDelay={300}
   placement="top"
   title={
-    <ForwardRef(StyledComponent)
+    <Styled(MuiBox)
       className="box"
     >
       SnapTitle
-    </ForwardRef(StyledComponent)>
+    </Styled(MuiBox)>
   }
 >
   <span>
