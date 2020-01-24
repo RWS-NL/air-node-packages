@@ -1,4 +1,12 @@
 <div align="center">
+
+<h1> <b><i>DEPRECATED</i></b>
+
+TSLint has been deprecated in favor of ESLint. Please see
+<a href="https://github.com/palantir/tslint/issues/4534">this TSLint issue</a> for more information.
+
+</h1>
+
   <p>
   <a href="https://github.com/RWS-NL/air-node-packages"><img src="https://raw.githubusercontent.com/RWS-NL/air-node-packages/master/packages/webcomponents/src/Logo/logo.svg?sanitize=true" height="200" alt="logo"/></a>
   </p>
