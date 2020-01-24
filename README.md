@@ -97,12 +97,6 @@ To easily update failing snapshots for webcomponents run this command from repos
 
 Run `yarn build` from repository root
 
-### Updating API Documentation
-
-1. Go to the pipeline for air-node-packages
-2. Trigger the job for update documentation
-3. Let it run to completion
-
 ### Publishing new versions
 
 1. Run `yarn build` to ensure lint, test and build succeeds
