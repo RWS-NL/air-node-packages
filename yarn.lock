@@ -1493,9 +1493,9 @@
     eslint-plugin-jest "^23.0.3"
 
 "@favware/ts-config@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@favware/ts-config/-/ts-config-1.1.1.tgz#441d0a3ad02d021e169e560d814f59675d4fb6f7"
-  integrity sha512-Q1XO1PlY+7bpHjRFOtMT0h1dQXyf2YpIJ2+lqx9dItdcK15xEugQR9iOUFdDv+cr68sYiPGLlSPYzs01F5XoWg==
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@favware/ts-config/-/ts-config-1.1.2.tgz#a6bbdffcbe395a7d14448db5d952aedd6620320b"
+  integrity sha512-kQv1hItPw7QcQVaQuP6mFXs7zEl6XxNHToZZW89xCDNIKxKmznT0WbXsTYee+Ae/NVs1/R2dPbaIIcsR0yKEeQ==
 
 "@favware/yamlreader@^1.1.3":
   version "1.1.3"
