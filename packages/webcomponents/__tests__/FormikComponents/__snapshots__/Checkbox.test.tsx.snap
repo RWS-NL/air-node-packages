@@ -8,15 +8,15 @@ exports[`Snapshot Testing Required Props 1`] = `
     }
   }
   control={
-    <ForwardRef(WithStyles)
+    <WithStyles(ForwardRef(Checkbox))
       checkedIcon={
-        <UNDEFINED
+        <Memo(CheckBoxIcon)
           fontSize="small"
         />
       }
       color="primary"
       icon={
-        <UNDEFINED
+        <Memo(CheckBoxOutlineBlankIcon)
           className="checkBox"
           fontSize="small"
         />
