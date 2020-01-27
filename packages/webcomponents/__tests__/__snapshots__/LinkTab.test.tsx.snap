@@ -11,6 +11,7 @@ exports[`LinkTab Tests Snapshot Testing External Tab 1`] = `
   }
   component="a"
   href="https://cgi.com"
+  label="sample"
   target="_self"
 />
 `;
@@ -26,6 +27,7 @@ exports[`LinkTab Tests Snapshot Testing External Tab with Open In New Tab 1`] = 
   }
   component="a"
   href="https://rijkswaterstaat.nl"
+  label="sample"
   rel="noreferrer noopener"
   target="_blank"
 />
@@ -54,6 +56,7 @@ exports[`LinkTab Tests Snapshot Testing Required Props 1`] = `
       "render": [Function],
     }
   }
+  label="sample"
   to="/root"
 />
 `;
