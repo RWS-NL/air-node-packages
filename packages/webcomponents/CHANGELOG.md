@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.3](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@10.0.2...@rws-air/webcomponents@10.0.3) (2020-01-27)
+
+### Bug Fixes
+
+- **webcomponents:** pass label property to tab ([4826837](https://github.com/RWS-NL/air-node-packages/commit/48268375bc8acc43c7b35aecda9e068a5b5bfcf1))
+
 ## [10.0.2](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@10.0.1...@rws-air/webcomponents@10.0.2) (2020-01-24)
 
 **Note:** Version bump only for package @rws-air/webcomponents
