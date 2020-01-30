@@ -15,7 +15,7 @@ export interface StackConstructor {
  * @extends {Collection} ([GitHub Page](https://github.com/discordjs/collection)) which itself adds a lot of utility methods
  * @extends {Map} ([MDN page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map))
  */
-export default class Stack<K extends string | number | unknown, V> extends Collection<K, V> {
+export class Stack<K extends string | number | unknown, V> extends Collection<K, V> {
   public static readonly default: typeof Stack = Stack;
   public ['constructor']: typeof Stack;
 
@@ -31,3 +31,6 @@ export default class Stack<K extends string | number | unknown, V> extends Colle
     return this.array();
   }
 }
+
+export default Stack;
+module.exports = Stack;
