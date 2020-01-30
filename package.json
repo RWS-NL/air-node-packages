@@ -81,7 +81,7 @@
     "eslint-plugin-react-hooks": "1.x",
     "execa": "^4.0.0",
     "formik": "^2.1.2",
-    "formik-material-ui": "^2.0.0-alpha.3",
+    "formik-material-ui": "latest",
     "formik-material-ui-pickers": "^0.0.4",
     "fs-nextra": "^0.4.7",
     "fuse.js": "^3.4.6",

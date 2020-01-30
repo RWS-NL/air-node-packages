@@ -1,4 +1,4 @@
-import { mergeObjects } from '../src';
+import { mergeObjects } from '../src/MergeObjects';
 
 describe('Merge Objects', () => {
   test('mergeObjects(basic)', () => {

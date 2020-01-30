@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Merge Objects Function Snapshot 1`] = `
-"function (objTarget, objSource) {
-    for (var key in objSource) {
+"function mergeObjects(objTarget, objSource) {
+    for (const key in objSource) {
         // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
         // @ts-ignore
-        objTarget[key] = IsObject_1.isObject(objSource[key]) ?
-            exports.mergeObjects(objTarget[key], objSource[key]) :
-            objSource[key];
+        objTarget[key] = IsObject_1.isObject(objSource[key])
+            ? mergeObjects(objTarget[key], objSource[key])
+            : objSource[key];
     }
     return objTarget;
 }"

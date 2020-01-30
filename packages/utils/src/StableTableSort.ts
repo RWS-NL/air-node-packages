@@ -28,11 +28,16 @@ import sort from 'lodash.orderby';
  * stableTableSort(arr, 'key', 'asc', mappings);
  * ```
  */
-export const stableTableSort = <T>(array: T[], orderBy: keyof T, order: TableOrder, headerMapping: Map<keyof T, string>) => {
+export function stableTableSort<T>(
+  array: T[],
+  orderBy: keyof T,
+  order: TableOrder,
+  headerMapping: Map<keyof T, string>
+) {
   const orderValue = headerMapping.get(orderBy);
 
-  return sort(array, [ orderValue ], [ order ]) as T[];
-};
+  return sort(array, [orderValue], [order]) as T[];
+}
 
 export type TableOrder = 'desc' | 'asc';
 

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`isObject Function Snapshot 1`] = `
-"function (input) {
+"function isObject(input) {
     return input ? input.constructor === Object : false;
 }"
 `;

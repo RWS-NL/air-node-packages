@@ -3,12 +3,12 @@
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src",
-    "baseUrl": "src",
     "module": "commonjs",
     "moduleResolution": "node",
     "declarationMap": true,
     "incremental": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "target": "es6"
   },
   "include": ["src"]
 }

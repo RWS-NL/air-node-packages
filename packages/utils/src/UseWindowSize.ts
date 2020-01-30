@@ -17,12 +17,12 @@ import { useState, useEffect } from 'react';
  * }, [ width, height ]);
  * ```
  */
-export const useWindowSize = () => {
+export function useWindowSize() {
   const getSize = (): [number, number] => {
-    return [ window.innerWidth, window.innerHeight ];
+    return [window.innerWidth, window.innerHeight];
   };
 
-  const [ windowSize, setWindowSize ] = useState(getSize);
+  const [windowSize, setWindowSize] = useState(getSize);
 
   useEffect(() => {
     function handleResize() {
@@ -35,6 +35,6 @@ export const useWindowSize = () => {
   }, []);
 
   return windowSize;
-};
+}
 
 export default useWindowSize;

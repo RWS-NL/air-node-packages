@@ -12,5 +12,6 @@ export * from './SentenceCase';
 export * from './SnakeToCamelCase';
 export * from './SplitText';
 export * from './StableTableSort';
+export * from './Stack';
 export * from './TimeUtils';
 export * from './UseWindowSize';

@@ -52,7 +52,7 @@ describe('isObject', () => {
 
   test('isObject(object-non-literal)', () => {
     // eslint-disable-next-line
-    const value = new class A {}();
+    const value = new (class A {})();
     expect(isObject(value)).toBe(false);
     expect(isObject(value)).toMatchSnapshot();
   });
@@ -76,7 +76,7 @@ describe('isObject', () => {
 
   test('isObject(class)', () => {
     // eslint-disable-next-line
-    const value = class A { };
+    const value = class A {};
     expect(isObject(value)).toBe(false);
     expect(isObject(value)).toMatchSnapshot();
   });

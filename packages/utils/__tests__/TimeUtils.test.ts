@@ -23,19 +23,53 @@ test('Day should be 24 hours', () => {
 });
 
 test('DAYS should be English days of the week', () => {
-  expect(TimeUtils.DAYS).toStrictEqual([ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ]);
+  expect(TimeUtils.DAYS).toStrictEqual(['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']);
 });
 
 test('MONTHS should be English months of the year', () => {
-  expect(TimeUtils.MONTHS).toStrictEqual([ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ]);
+  expect(TimeUtils.MONTHS).toStrictEqual([
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+  ]);
 });
 
 test('DAYS_NL should be Dutch days of the week', () => {
-  expect(TimeUtils.DAYS_NL).toStrictEqual([ 'Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag' ]);
+  expect(TimeUtils.DAYS_NL).toStrictEqual([
+    'Zondag',
+    'Maandag',
+    'Dinsdag',
+    'Woensdag',
+    'Donderdag',
+    'Vrijdag',
+    'Zaterdag'
+  ]);
 });
 
 test('MONTHS_NL should be Dutch months of the year', () => {
-  expect(TimeUtils.MONTHS_NL).toStrictEqual([ 'Januari', 'Februari', 'Maart', 'April', 'Mei', 'Juni', 'July', 'Augustus', 'September', 'October', 'November', 'December' ]);
+  expect(TimeUtils.MONTHS_NL).toStrictEqual([
+    'Januari',
+    'Februari',
+    'Maart',
+    'April',
+    'Mei',
+    'Juni',
+    'July',
+    'Augustus',
+    'September',
+    'October',
+    'November',
+    'December'
+  ]);
 });
 
 test('TimeUtils should match snapshot', () => {

@@ -1,6 +1,6 @@
 import Fuse, { FuseOptions } from 'fuse.js';
 
-export class FuzzySearcher <O> {
+export class FuzzySearcher<O> {
   private readonly object: O[];
   private readonly fuseOptions?: FuseOptions<O>;
 
@@ -9,7 +9,7 @@ export class FuzzySearcher <O> {
     this.fuseOptions = {
       threshold: 0.2,
       ...options,
-      keys,
+      keys
     };
   }
 

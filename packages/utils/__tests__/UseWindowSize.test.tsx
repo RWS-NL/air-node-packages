@@ -7,10 +7,12 @@ interface ComponentProps {
 }
 
 export const Component: FC<ComponentProps> = props => {
-  const [ width, height ] = useWindowSize();
+  const [width, height] = useWindowSize();
 
   return (
-    <div>{width} {height} {props.name}</div>
+    <div>
+      {width} {height} {props.name}
+    </div>
   );
 };
 
