@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@3.1.0...@rws-air/utils@3.1.1) (2020-01-30)
+
+### Bug Fixes
+
+- **utils:** fix export for Stack ([44d6bf0](https://github.com/RWS-NL/air-node-packages/commit/44d6bf0cda74131e0a4917d12641a31789b2a2c6))
+
 # [3.1.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@3.0.0...@rws-air/utils@3.1.0) (2020-01-30)
 
 ### Features
