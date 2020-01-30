@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@3.0.0...@rws-air/utils@3.1.0) (2020-01-30)
+
+### Features
+
+- **utils:** add Stack util ([f7a63e2](https://github.com/RWS-NL/air-node-packages/commit/f7a63e2a1f46560d1204b6ddf11db11f33078c35))
+
 # [3.0.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@2.3.1...@rws-air/utils@3.0.0) (2020-01-17)
 
 ### Feat
