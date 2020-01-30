@@ -33,4 +33,3 @@ export class Stack<K extends string | number | unknown, V> extends Collection<K,
 }
 
 export default Stack;
-module.exports = Stack;
