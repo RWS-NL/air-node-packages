@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>FuzzySearcher | RWS-NL AIR Node Packages</title>
+	<title>StackConstructor | RWS-NL AIR Node Packages</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,29 +55,21 @@
 					<a href="../modules/_rws_air_utils.html">@rws-air/utils</a>
 				</li>
 				<li>
-					<a href="_rws_air_utils.fuzzysearcher.html">FuzzySearcher</a>
+					<a href="_rws_air_utils.stackconstructor.html">StackConstructor</a>
 				</li>
 			</ul>
-			<h1>Class FuzzySearcher&lt;O&gt;</h1>
+			<h1>Interface StackConstructor</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-type-parameters">
-				<h3>Type parameters</h3>
-				<ul class="tsd-type-parameters">
-					<li>
-						<h4>O</h4>
-					</li>
-				</ul>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">FuzzySearcher</span>
+						<span class="target">StackConstructor</span>
 					</li>
 				</ul>
 			</section>
@@ -88,13 +80,14 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_rws_air_utils.fuzzysearcher.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-interface tsd-has-type-parameter"><a href="_rws_air_utils.stackconstructor.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
-							<h3>Methods</h3>
+							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_rws_air_utils.fuzzysearcher.html#runfuzzy" class="tsd-kind-icon">run<wbr>Fuzzy</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_utils.stackconstructor.html#_symbol_species_" class="tsd-kind-icon">[<wbr>Symbol.species]</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_utils.stackconstructor.html#prototype" class="tsd-kind-icon">prototype</a></li>
 							</ul>
 						</section>
 					</div>
@@ -102,60 +95,93 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-interface tsd-has-type-parameter">
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Fuzzy<wbr>Searcher<span class="tsd-signature-symbol">(</span>obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">[]</span>, keys<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">keyof O</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">FuseOptions</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_rws_air_utils.fuzzysearcher.html" class="tsd-signature-type">FuzzySearcher</a></li>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-interface tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Stack<wbr>Constructor<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/_rws_air_utils.stack.html" class="tsd-signature-type">Stack</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Stack<wbr>Constructor&lt;K, V&gt;<span class="tsd-signature-symbol">(</span>entries<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">ReadonlyArray</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">keyof [K, V]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/_rws_air_utils.stack.html" class="tsd-signature-type">Stack</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Stack<wbr>Constructor&lt;K, V&gt;<span class="tsd-signature-symbol">(</span>iterable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">keyof [K, V]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/_rws_air_utils.stack.html" class="tsd-signature-type">Stack</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/ce48cef/packages/utils/src/FuzzySearcher.ts#L5">packages/utils/src/FuzzySearcher.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/ce48cef/packages/utils/src/Stack.ts#L3">packages/utils/src/Stack.ts:3</a></li>
 								</ul>
 							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/_rws_air_utils.stack.html" class="tsd-signature-type">Stack</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/ce48cef/packages/utils/src/Stack.ts#L4">packages/utils/src/Stack.ts:4</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>K</h4>
+								</li>
+								<li>
+									<h4>V</h4>
+								</li>
+							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>obj: <span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-								<li>
-									<h5>keys: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">keyof O</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">FuseOptions</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> entries: <span class="tsd-signature-type">ReadonlyArray</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">keyof [K, V]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="_rws_air_utils.fuzzysearcher.html" class="tsd-signature-type">FuzzySearcher</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/_rws_air_utils.stack.html" class="tsd-signature-type">Stack</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/ce48cef/packages/utils/src/Stack.ts#L5">packages/utils/src/Stack.ts:5</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>K</h4>
+								</li>
+								<li>
+									<h4>V</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>iterable: <span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">keyof [K, V]</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/_rws_air_utils.stack.html" class="tsd-signature-type">Stack</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="runfuzzy" class="tsd-anchor"></a>
-					<h3>run<wbr>Fuzzy</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">run<wbr>Fuzzy<span class="tsd-signature-symbol">(</span>query<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">[]</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/ce48cef/packages/utils/src/FuzzySearcher.ts#L16">packages/utils/src/FuzzySearcher.ts:16</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>query: <span class="tsd-signature-type">string</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">[]</span></h4>
-						</li>
-					</ul>
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="_symbol_species_" class="tsd-anchor"></a>
+					<h3>[<wbr>Symbol.species]</h3>
+					<div class="tsd-signature tsd-kind-icon">[<wbr>Symbol.species]<span class="tsd-signature-symbol">:</span> <a href="_rws_air_utils.stackconstructor.html" class="tsd-signature-type">StackConstructor</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/ce48cef/packages/utils/src/Stack.ts#L8">packages/utils/src/Stack.ts:8</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="prototype" class="tsd-anchor"></a>
+					<h3>prototype</h3>
+					<div class="tsd-signature tsd-kind-icon">prototype<span class="tsd-signature-symbol">:</span> <a href="../classes/_rws_air_utils.stack.html" class="tsd-signature-type">Stack</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/ce48cef/packages/utils/src/Stack.ts#L7">packages/utils/src/Stack.ts:7</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 		</div>
@@ -193,27 +219,30 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../classes/_rws_air_utils.fuzzysearcher.html" class="tsd-kind-icon">Fuzzy<wbr>Searcher</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../classes/_rws_air_utils.stack.html" class="tsd-kind-icon">Stack</a>
+					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="_rws_air_utils.fuzzysearcher.html" class="tsd-kind-icon">Fuzzy<wbr>Searcher</a>
+					<li class="current tsd-kind-interface tsd-parent-kind-module">
+						<a href="_rws_air_utils.stackconstructor.html" class="tsd-kind-icon">Stack<wbr>Constructor</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="_rws_air_utils.fuzzysearcher.html#constructor" class="tsd-kind-icon">constructor</a>
+							<li class=" tsd-kind-constructor tsd-parent-kind-interface tsd-has-type-parameter">
+								<a href="_rws_air_utils.stackconstructor.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_rws_air_utils.fuzzysearcher.html#runfuzzy" class="tsd-kind-icon">run<wbr>Fuzzy</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_rws_air_utils.stackconstructor.html#_symbol_species_" class="tsd-kind-icon">[<wbr>Symbol.species]</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_rws_air_utils.stackconstructor.html#prototype" class="tsd-kind-icon">prototype</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="_rws_air_utils.stack.html" class="tsd-kind-icon">Stack</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/_rws_air_utils.stackconstructor.html" class="tsd-kind-icon">Stack<wbr>Constructor</a>
-					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
 						<a href="../modules/_rws_air_utils.html#tableorder" class="tsd-kind-icon">Table<wbr>Order</a>
 					</li>
