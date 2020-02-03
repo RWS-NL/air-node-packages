@@ -1,8 +1,8 @@
-@import "../../styles/vars";
+@import '../../styles/vars';
 
 .toolbar {
   @extend %beautifulCenter;
-  background-color: $grey20;
+  background-color: $skyBlue20;
   display: flex;
   height: 4rem;
   margin-top: 5vh;

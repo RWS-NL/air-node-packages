@@ -2,33 +2,41 @@
 
 exports[`Snapshot Testing Optional Props 1`] = `
 <Fragment>
-  <Memo()
-    customSearchbarClasses=""
-    customclasses=""
-    data-qa="table-toolbar"
-    onsearchclear={[MockFunction]}
-    onsearchinput={[MockFunction]}
-    searchplaceholderlabel="Search..."
-  />
-  <Memo()
-    count={4}
-    customClasses="tableTopPagination"
-    data-qa="table-pagination"
-    labelPaginationOf="of"
-    labelRowsPerPage="Rows per page"
-    onChangePage={[MockFunction]}
-    onChangeRowsPerPage={[MockFunction]}
-    page={0}
-    rowsPerPage={5}
-    rowsPerPageOptions={
-      Array [
-        2,
-        4,
-        5,
-        10,
-      ]
-    }
-  />
+  <When
+    condition={true}
+  >
+    <Memo()
+      customSearchbarClasses=""
+      customclasses=""
+      data-qa="table-toolbar"
+      onsearchclear={[MockFunction]}
+      onsearchinput={[MockFunction]}
+      searchplaceholderlabel="Search..."
+    />
+  </When>
+  <When
+    condition={true}
+  >
+    <Memo()
+      count={4}
+      customClasses="tableTopPagination"
+      data-qa="table-pagination"
+      labelPaginationOf="of"
+      labelRowsPerPage="Rows per page"
+      onChangePage={[MockFunction]}
+      onChangeRowsPerPage={[MockFunction]}
+      page={0}
+      rowsPerPage={5}
+      rowsPerPageOptions={
+        Array [
+          2,
+          4,
+          5,
+          10,
+        ]
+      }
+    />
+  </When>
   <WithStyles(ForwardRef(Table))
     className="table"
     data-qa="table"
@@ -176,38 +184,69 @@ exports[`Snapshot Testing Optional Props 1`] = `
       </WithStyles(ForwardRef(TableRow))>
     </WithStyles(ForwardRef(TableBody))>
   </WithStyles(ForwardRef(Table))>
-  <Memo()
-    count={4}
-    customClasses=""
-    data-qa="table-pagination"
-    labelPaginationOf="of"
-    labelRowsPerPage="Rows per page"
-    onChangePage={[MockFunction]}
-    onChangeRowsPerPage={[MockFunction]}
-    page={0}
-    rowsPerPage={5}
-    rowsPerPageOptions={
-      Array [
-        2,
-        4,
-        5,
-        10,
-      ]
-    }
-  />
+  <When
+    condition={true}
+  >
+    <Memo()
+      count={4}
+      customClasses=""
+      data-qa="table-pagination"
+      labelPaginationOf="of"
+      labelRowsPerPage="Rows per page"
+      onChangePage={[MockFunction]}
+      onChangeRowsPerPage={[MockFunction]}
+      page={0}
+      rowsPerPage={5}
+      rowsPerPageOptions={
+        Array [
+          2,
+          4,
+          5,
+          10,
+        ]
+      }
+    />
+  </When>
 </Fragment>
 `;
 
 exports[`Snapshot Testing Required Props 1`] = `
 <Fragment>
-  <Memo()
-    customSearchbarClasses=""
-    customclasses=""
-    data-qa="table-toolbar"
-    onsearchclear={[MockFunction]}
-    onsearchinput={[MockFunction]}
-    searchplaceholderlabel="Search..."
-  />
+  <When
+    condition={true}
+  >
+    <Memo()
+      customSearchbarClasses=""
+      customclasses=""
+      data-qa="table-toolbar"
+      onsearchclear={[MockFunction]}
+      onsearchinput={[MockFunction]}
+      searchplaceholderlabel="Search..."
+    />
+  </When>
+  <When
+    condition={false}
+  >
+    <Memo()
+      count={4}
+      customClasses="tableTopPagination"
+      data-qa="table-pagination"
+      labelPaginationOf="of"
+      labelRowsPerPage="Rows per page"
+      onChangePage={[MockFunction]}
+      onChangeRowsPerPage={[MockFunction]}
+      page={0}
+      rowsPerPage={5}
+      rowsPerPageOptions={
+        Array [
+          2,
+          4,
+          5,
+          10,
+        ]
+      }
+    />
+  </When>
   <WithStyles(ForwardRef(Table))
     className="table"
     data-qa="table"
@@ -355,5 +394,28 @@ exports[`Snapshot Testing Required Props 1`] = `
       </WithStyles(ForwardRef(TableRow))>
     </WithStyles(ForwardRef(TableBody))>
   </WithStyles(ForwardRef(Table))>
+  <When
+    condition={false}
+  >
+    <Memo()
+      count={4}
+      customClasses=""
+      data-qa="table-pagination"
+      labelPaginationOf="of"
+      labelRowsPerPage="Rows per page"
+      onChangePage={[MockFunction]}
+      onChangeRowsPerPage={[MockFunction]}
+      page={0}
+      rowsPerPage={5}
+      rowsPerPageOptions={
+        Array [
+          2,
+          4,
+          5,
+          10,
+        ]
+      }
+    />
+  </When>
 </Fragment>
 `;

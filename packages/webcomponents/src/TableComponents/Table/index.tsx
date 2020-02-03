@@ -5,6 +5,7 @@ import { TablePaginationProps as MUITablePaginationProps } from '@material-ui/co
 import TableRow from '@material-ui/core/TableRow';
 import classnames from 'classnames';
 import React, { Fragment, memo, ReactNode } from 'react';
+import { When } from 'react-if';
 import HeaderCell, { HeaderCellProps, HeaderProps } from '../HeaderCell';
 import Pagination, { PaginationProps } from '../Pagination';
 import Toolbar, { ToolbarProps } from '../Toolbar';
@@ -77,10 +78,21 @@ export interface TableProps
   tablebodycontent: ReactNode;
   /** Customization CSS classes for table components */
   tablecss?: TableCustomClasses;
-  /** Control whether the top bar pagination should be shown */
+  /**
+   * Control whether the top bar pagination should be shown
+   * @default false
+   */
   showTopPagination?: boolean;
-  /** Control whether the bottom bar pagination should be shown */
+  /**
+   * Control whether the bottom bar pagination should be shown
+   * @default false
+   */
   showBottomPagination?: boolean;
+  /**
+   * Disables the table toolbar
+   * @default false
+   */
+  disableToolbar?: boolean;
   /** Additional props to pass to the Material UI Table component */
   TableProps?: MUITableProps;
   /** Additional props to pass to each of the Header cell components */
@@ -154,89 +166,92 @@ export interface TableProps
  * />
  * ```
  */
-export const Table = memo((props: TableProps) => {
-  const addCustomClasses = (component: keyof TableCustomClasses, baseClass?: string): string[] => {
-    const classes: string[] = [];
-    if (baseClass) classes.push(baseClass);
-    if (props.tablecss && props.tablecss[component]) classes.push(...props.tablecss[component]!); // eslint-disable-line @typescript-eslint/no-non-null-assertion
+export const Table = memo(
+  ({ showTopPagination = false, showBottomPagination = false, disableToolbar = false, ...props }: TableProps) => {
+    const addCustomClasses = (component: keyof TableCustomClasses, baseClass?: string): string[] => {
+      const classes: string[] = [];
+      if (baseClass) classes.push(baseClass);
+      if (props.tablecss && props.tablecss[component]) classes.push(...props.tablecss[component]!); // eslint-disable-line @typescript-eslint/no-non-null-assertion
 
-    return classes;
-  };
+      return classes;
+    };
 
-  const renderTablePagination = (customClasses: string) => {
+    const renderTablePagination = (customClasses: string) => {
+      return (
+        <Pagination
+          {...props.PaginationProps}
+          labelRowsPerPage={props.labels.labelRowsPerPage}
+          labelPaginationOf={props.labels.labelPaginationOf}
+          rowsPerPageOptions={props.rowsPerPageOptions}
+          rowsPerPage={props.rowsPerPage}
+          page={props.page}
+          count={props.rowcount}
+          onChangePage={props.onChangePage}
+          onChangeRowsPerPage={props.onChangeRowsPerPage}
+          customClasses={customClasses}
+          data-qa={props.tableqas.pagination}
+        />
+      );
+    };
+
     return (
-      <Pagination
-        {...props.PaginationProps}
-        labelRowsPerPage={props.labels.labelRowsPerPage}
-        labelPaginationOf={props.labels.labelPaginationOf}
-        rowsPerPageOptions={props.rowsPerPageOptions}
-        rowsPerPage={props.rowsPerPage}
-        page={props.page}
-        count={props.rowcount}
-        onChangePage={props.onChangePage}
-        onChangeRowsPerPage={props.onChangeRowsPerPage}
-        customClasses={customClasses}
-        data-qa={props.tableqas.pagination}
-      />
-    );
-  };
+      <Fragment>
+        <When condition={disableToolbar === false}>
+          <Toolbar
+            {...props.ToolbarProps}
+            clearSearch={props.clearSearch}
+            searchplaceholderlabel={props.labels.searchplaceholderlabel}
+            onsearchinput={props.onsearchinput}
+            onsearchclear={props.onsearchclear}
+            searchdebounce={props.searchdebounce}
+            data-qa={props.tableqas.toolbar}
+            customclasses={classnames(addCustomClasses('tableToolbar'))}
+            customSearchbarClasses={classnames(addCustomClasses('tableSearchbar'))}
+            paperElevation={props.paperElevation}
+            extraIcons={props.extraIcons}
+          />
+        </When>
 
-  return (
-    <Fragment>
-      <Toolbar
-        {...props.ToolbarProps}
-        clearSearch={props.clearSearch}
-        searchplaceholderlabel={props.labels.searchplaceholderlabel}
-        onsearchinput={props.onsearchinput}
-        onsearchclear={props.onsearchclear}
-        searchdebounce={props.searchdebounce}
-        data-qa={props.tableqas.toolbar}
-        customclasses={classnames(addCustomClasses('tableToolbar'))}
-        customSearchbarClasses={classnames(addCustomClasses('tableSearchbar'))}
-        paperElevation={props.paperElevation}
-        extraIcons={props.extraIcons}
-      />
-      {props.showTopPagination ? (
-        renderTablePagination(classnames(addCustomClasses('tablePagination', css.tableTopPagination)))
-      ) : (
-        <Fragment />
-      )}
-      <MUITable
-        {...props.TableProps}
-        stickyHeader={props.stickyHeader}
-        className={classnames(addCustomClasses('table', css.table))}
-        data-qa={props.tableqas.table}
-      >
-        <TableHead data-qa={props.tableqas.header} className={classnames(addCustomClasses('tableHeader'))}>
-          <TableRow data-qa={props.tableqas.headerRow} className={classnames(addCustomClasses('tableHeaderRow'))}>
-            {props.headers.map((header, index) => (
-              <HeaderCell
-                {...props.HeaderCellProps}
-                key={index}
-                header={header}
-                orderby={props.orderby}
-                order={props.order || 'asc'}
-                tooltiplabel={props.labels.tooltiplabel}
-                tooltipplacement={props.tooltipplacement}
-                onRequestSort={props.onRequestSort}
-                data-qa={props.tableqas.headerCell}
-                customclasses={classnames(addCustomClasses('tableHeaderCell'))}
-                isActionButtonCell={header.isActionButtonCell}
-              />
-            ))}
-          </TableRow>
-        </TableHead>
-        <TableBody data-qa={props.tableqas.tableBody} className={classnames(addCustomClasses('tableBody'))}>
-          {props.tablebodycontent}
-        </TableBody>
-      </MUITable>
-      {props.showBottomPagination ? (
-        renderTablePagination(classnames(addCustomClasses('tablePagination')))
-      ) : (
-        <Fragment />
-      )}
-    </Fragment>
-  );
-});
+        <When condition={showTopPagination}>
+          {renderTablePagination(classnames(addCustomClasses('tablePagination', css.tableTopPagination)))}
+        </When>
+
+        <MUITable
+          {...props.TableProps}
+          stickyHeader={props.stickyHeader}
+          className={classnames(addCustomClasses('table', css.table))}
+          data-qa={props.tableqas.table}
+        >
+          <TableHead data-qa={props.tableqas.header} className={classnames(addCustomClasses('tableHeader'))}>
+            <TableRow data-qa={props.tableqas.headerRow} className={classnames(addCustomClasses('tableHeaderRow'))}>
+              {props.headers.map((header, index) => (
+                <HeaderCell
+                  {...props.HeaderCellProps}
+                  key={index}
+                  header={header}
+                  orderby={props.orderby}
+                  order={props.order || 'asc'}
+                  tooltiplabel={props.labels.tooltiplabel}
+                  tooltipplacement={props.tooltipplacement}
+                  onRequestSort={props.onRequestSort}
+                  data-qa={props.tableqas.headerCell}
+                  customclasses={classnames(addCustomClasses('tableHeaderCell'))}
+                  isActionButtonCell={header.isActionButtonCell}
+                />
+              ))}
+            </TableRow>
+          </TableHead>
+          <TableBody data-qa={props.tableqas.tableBody} className={classnames(addCustomClasses('tableBody'))}>
+            {props.tablebodycontent}
+          </TableBody>
+        </MUITable>
+
+        <When condition={showBottomPagination}>
+          {renderTablePagination(classnames(addCustomClasses('tablePagination')))}
+        </When>
+      </Fragment>
+    );
+  }
+);
 
 export default Table;

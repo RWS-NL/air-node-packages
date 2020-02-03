@@ -1,9 +1,9 @@
-@import "../../styles/vars";
+@import '../../styles/vars';
 
 .tablePagination {
   @extend %beautifulCenter;
   align-items: center;
-  background-color: $skyBlue20;
+  background-color: $lightBlue20;
   display: flex;
   float: left;
   font-size: $fontSizeDefault;
