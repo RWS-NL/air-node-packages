@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.1.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@10.0.3...@rws-air/webcomponents@10.1.0) (2020-02-03)
+
+### Features
+
+- **webcomponents:** table: option to disable toolbar ([7cb27cd](https://github.com/RWS-NL/air-node-packages/commit/7cb27cdfbe17ca95cde4c8428f0293f3daeae649))
+
 ## [10.0.3](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@10.0.2...@rws-air/webcomponents@10.0.3) (2020-01-27)
 
 ### Bug Fixes
