@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "isolatedModules": false,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "resolveJsonModule": true
+  },
+  "include": ["src", "scripts", "testcafe"]
+}

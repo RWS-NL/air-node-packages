@@ -13,7 +13,7 @@
     "name": "RWS-NL AIR Node Packages",
     "exclude": ["**/node_modules/**", "**/*.test.ts", "**/*.test.tsx", "**/*.js"],
     "mode": "modules",
-    "lernaExclude": ["local-components-test"],
+    "lernaExclude": ["local-components-test", "cra-template-air"],
     "pathExclude": [
       "scripts/duplicateESLintConfig",
       "scripts/duplicateStylelintConfig",

@@ -1,0 +1,22 @@
+@import './colors';
+
+// Placeholders
+
+// Mixins
+
+// Constants
+
+$rwsFontText: rijksoverheidsanstext, verdana, arial, sans-serif;
+$rwsFontHeader: rijksoverheidsansheading, verdana, arial, sans-serif;
+$robotoFallback: robot, rijksoverheidsanstext, verdana, arial, sans-serif;
+$fontSizeReset: 1rem;
+$fontSizeDefault: 14px;
+
+// Default Overwrites
+
+// stylelint-disable-next-line scss/dollar-variable-pattern
+$toastr-width: 50rem;
+$successBgColor: $green100;
+$infoBgColor: $lightBlue100;
+$warningBgColor: $orange100;
+$errorBgColor: $red100;
