@@ -1,0 +1,1170 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@rws-air/utils | RWS-NL AIR Node Packages</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">RWS-NL AIR Node Packages</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="_rws_air_utils.html">@rws-air/utils</a>
+				</li>
+			</ul>
+			<h1>Module @rws-air/utils</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div align="center">
+						<p>
+							<a href="https://github.com/RWS-NL/air-node-packages"><img src="https://raw.githubusercontent.com/RWS-NL/air-node-packages/master/packages/webcomponents/src/Logo/logo.svg?sanitize=true" height="200" alt="logo"/></a>
+						</p>
+						<p>
+							<h1> Rijkswaterstaat Utils </h1>
+							<h3> Utils AIR projects </h3>
+						</p>
+					</div>
+					<hr>
+					<p><strong>Project Status</strong></p>
+					<p><a href="https://github.com/RWS-NL/air-node-packages/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/RWS-NL/air-node-packages?logo=github&style=flat-square" alt="GitHub"></a></p>
+					<p><strong>Bundle Sizes</strong></p>
+					<p><a href="https://bundlephobia.com/result?p=@rws-air/utils"><img src="https://img.shields.io/bundlephobia/min/@rws-air/utils?label=utils%20-%20minified&logo=webpack&style=flat-square" alt="npm bundle size"></a>
+					<a href="https://bundlephobia.com/result?p=@rws-air/utils"><img src="https://img.shields.io/bundlephobia/minzip/@rws-air/utils?label=utils%20-%20minzipped&logo=webpack&style=flat-square" alt="npm bundle size"></a></p>
+					<p><strong>Versions</strong></p>
+					<p><a href="https://www.npmjs.com/package/@rws-air/utils"><img src="https://img.shields.io/npm/v/@rws-air/utils?color=crimson&label=utils%20version&logo=npm&style=flat-square" alt="npm"></a></p>
+					<p><strong>Our Badges</strong></p>
+					<p><a href="https://www.rijkswaterstaat.nl"><img src="https://img.shields.io/badge/RWS-Approved-yellow.svg?longCache=true&style=flat-square&logo=gov.uk&logoColor=white&link=https://www.rijkswaterstaat.nl&colorA=000000&colorB=154273" alt="website"></a>
+						<a href="https://www.slack.com"><img src="https://img.shields.io/badge/Slack-Powered-green.svg?longCache=true&style=flat-square&logo=slack&logoColor=white&link=https://www.slack.com&colorA=000000&colorB=56B68B" alt="slack"></a>
+						<a href="https://trello.com/"><img src="https://img.shields.io/badge/Trello-Managed-blue.svg?longCache=true&style=flat-square&logo=trello&logoColor=white&link=https://www.slack.com&colorA=000000&colorB=0079BF" alt="trello"></a>
+						<a href="https://www.pivotaltracker.com/n/projects/1915901"><img src="https://img.shields.io/badge/Pivotal-Tracked-blue.svg?longCache=true&style=flat-square&link=https://www.pivotaltracker.com/n/projects/1915901&colorA=000000&colorB=ED7D00&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAAn5JREFUKBVNUk1IVFEUPue+lzKpNYQQtGqcbCdCuspSkzYtckjSIEEao9q4CVRcjKlo+V/kooXBTFNCNpqhi2hjVuIiyjJrYzSRBVGg9INazrx7T98bGejCu5x7z3fO+b7vXab/VnV7LFucPxeNMceJyZ9KCcWJeSrLq67daapbT8M5HVS33i7TRkeEZDcLzwnTvGJiESki4RKcv1qKguOdwVm3JlV4MhQp14YeE8kzW9nBAaf/pxFqJbaGfD0Ln06FbvkTRiLMUqIUl7vF7NLTyfVFIVqe6DpTwch+bC4YIZFaUBzP63tbvdxScPR5vHXmbv76DEbtyfZahVwViraJ6OZC+VxSl7yf79LYZiknafQoCWVYll2jtRNDk5fd1oXaVc5aQHxFEekApMyedR5kgGrM/RxtwszqBgDT0N2c0sQyd7O74T1Uz4FNpS0C91geJkl+ocEjFwQjNHsyez2bjv6rnQWcP5DHbndzkDIPWedg3JZBeX2LS8qi0wDlobTAJjuxyQqNZR6QJdnQI19aDuyDaagjslEYx4gi9yCaOrDvR/giubEWUySvEJeB2g43byjZxiTFwMdtYZ7ETeP50JBfEsOlvNVxEJNGDdEhZYOFUdBPFJWAg3EHLaV6lDdn1yA0rqxIzvDe7bnFpKxjvv5396BlCthM0Vzp610cjXrexF5bvuto/M2zk6+mHkDVpegRccw0M80QZdRPXK5ddvU4kmhQzB2NdpPXER0GzVJL2RVjnXVPU4UujROhcAW6hcE/F3bNCrumwBbhYrA/DMe/w8n68a7gk9S9u6VXfe9kzo/fq43oFsCdH79K4H8cTCYtO2tgrL1mLY39BzRkHFrrWeoEAAAAAElFTkSuQmCC" alt="Pivotal Tracked"></a>
+						<a href="https://www.sketchapp.com"><img src="https://img.shields.io/badge/Sketch-Designed-blue.svg?longCache=true&style=flat-square&link=https://www.sketchapp.com&colorA=000000&colorB=F17100&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAAV1JREFUKBWlUb8vQ0Ec/1z7qtWmNYlgKTF0aQ0YaxcRu1HCLGL20tEm/gJ/ApGwGawYaGISmg4SbC3tq9e+8/3ceQbvdfK93L3PfX5873JPIab0dWYWQWbeSAnvTi15T39tKiT0KZYx5VwgrUahZKTWrOSfAVpGT3fx0l9R67iikOCib5BFgHM4KqsZUlVgYtNOwYYTjR7jDYNoSheNHNuooAxM77KfLcGG4xH00Cul9An2pVPNuGbmgOKhgZGlsQM8P1o6Adfxmih9vdt9pveBZHM7kiEx6ATwHqw0Mo6SeZxWDfcSLguBvNw0rtp1gAeIp15wUeHNkV/FQmoMbxT67WiMHDV66KXDBNUi/EIRlWQO3U7kjwHkqNFD72+QQG3hVa5RDdoY+C0ytojJUaMn5M2J4Sa3h9v0JDa8hjz8TxGToxZyQ7+fB3D9YwScxEONcYJ3hMuuzDjtX9w3aVN9Whe7I0sAAAAASUVORK5CYII=" alt="Sketch Designed"></a>
+					<a href="https://app.zeplin.io/project/587661de593c722607342d7b"><img src="https://img.shields.io/badge/Zeplin-Based-blue.svg?longCache=true&style=flat-square&link=https://app.zeplin.io/project/587661de593c722607342d7b&colorA=000000&colorB=FEBD12&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAOCAYAAAAi2ky3AAAAAXNSR0IArs4c6QAAAjBJREFUKBWtUU1rE1EUPfe9yUyajza2TRsq2EVswQqK6N6FiOJGBbeuq+hfKLhw48qFVBRd6A8QxEVFEFy3qLhQUREqBa1JbU0ymXzMzLvXN60fsRay8cJ9vDfvnDPnnQv0qcal/HRtNnu8Dwy0E8C/kBsT0JTtSJPpZMeHPobpetk9mXKgKEZKfNpX+9TLdXoPv/a50pGNZvX5Rv4EODI0h3Iw40IfBLNCrIBQQ16OvINnrtH+2r2Et6MjWS4UzGu+pffgDFfJU3kPiFwgTgHSQyEBVGuOjlau/uNI3hYmUecFtUvNyNcBoG3JejuMmdvcMBVJR6t01hr6W0iWiiV0whfoZEYoysD4EUgnxm0pEQnZN1WjOHCyAlWQjoFUgifJ9eavwrt7D4Hj89wIZpU3mEFkXdjSwykxK61uHKFrvtOgTcL2ljtuxYiXGw2tzI0E68j96d3dbvQYgnHHswJWRIiF69yJ1+ByTaUpI2lybMhJGUFcaSXtW865wdut1eTzZnLhnfJh1uZBasyMx1W4EumfLJttO4Z9FIjswNbbMLat2Iqj6XTuZvAqEUnq9wjkWflp/Ll7LFy2uXg2GEvmiAE/BFsx7horhi9a6LrjqEfpef/DlsTW2jMO8ZwJt6WH9UJ7qVE1lbDILClFUPat7zWpBWiUssXRh8G3talekWT/R0hwBTSwqE69aW4HNS9mD7CiTt4dWvQr65PIqM1ctuP6noPLoxOJWF/g/wD8AHyJ+Mm/jBDkAAAAAElFTkSuQmCC" alt="Zeplin Based"></a></p>
+					<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
+						<h2>Installation</h2>
+					</a>
+					<pre><code class="language-sh">yarn add @rws-air/utils</code></pre>
+					<a href="#api-documentation" id="api-documentation" style="color: inherit; text-decoration: none;">
+						<h2>API Documentation</h2>
+					</a>
+					<p>Check out <a href="https://rws-nl.github.io/air-node-packages/modules/_rws_air_utils.html">the docs on github pages</a></p>
+				</div>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>References</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_rws_air_utils.html#day" class="tsd-kind-icon">DAY</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_rws_air_utils.html#days" class="tsd-kind-icon">DAYS</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_rws_air_utils.html#days_nl" class="tsd-kind-icon">DAYS_<wbr>NL</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_rws_air_utils.html#fuzzysearcher" class="tsd-kind-icon">Fuzzy<wbr>Searcher</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_rws_air_utils.html#hour" class="tsd-kind-icon">HOUR</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_rws_air_utils.html#minute" class="tsd-kind-icon">MINUTE</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_rws_air_utils.html#months" class="tsd-kind-icon">MONTHS</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_rws_air_utils.html#months_nl" class="tsd-kind-icon">MONTHS_<wbr>NL</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_rws_air_utils.html#second" class="tsd-kind-icon">SECOND</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_rws_air_utils.html#stack" class="tsd-kind-icon">Stack</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_rws_air_utils.html#stackconstructor" class="tsd-kind-icon">Stack<wbr>Constructor</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_rws_air_utils.html#tableorder" class="tsd-kind-icon">Table<wbr>Order</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_rws_air_utils.html#capitilizefirstletter" class="tsd-kind-icon">capitilize<wbr>First<wbr>Letter</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_rws_air_utils.html#createwrappabletext" class="tsd-kind-icon">create<wbr>Wrappable<wbr>Text</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_rws_air_utils.html#cuttext" class="tsd-kind-icon">cut<wbr>Text</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_rws_air_utils.html#iscienv" class="tsd-kind-icon">isCIEnv</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_rws_air_utils.html#isdevenv" class="tsd-kind-icon">is<wbr>Dev<wbr>Env</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_rws_air_utils.html#isobject" class="tsd-kind-icon">is<wbr>Object</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_rws_air_utils.html#istestenv" class="tsd-kind-icon">is<wbr>Test<wbr>Env</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_rws_air_utils.html#mergeobjects" class="tsd-kind-icon">merge<wbr>Objects</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_rws_air_utils.html#objecthasproperty" class="tsd-kind-icon">object<wbr>Has<wbr>Property</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_rws_air_utils.html#sentencecase" class="tsd-kind-icon">sentence<wbr>Case</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_rws_air_utils.html#snaketocamelcase" class="tsd-kind-icon">snake<wbr>ToCamel<wbr>Case</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_rws_air_utils.html#splittext" class="tsd-kind-icon">split<wbr>Text</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_rws_air_utils.html#stabletablesort" class="tsd-kind-icon">stable<wbr>Table<wbr>Sort</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_rws_air_utils.html#usewindowsize" class="tsd-kind-icon">use<wbr>Window<wbr>Size</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Classes</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter"><a href="../classes/_rws_air_utils.fuzzysearcher-1.html" class="tsd-kind-icon">Fuzzy<wbr>Searcher</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter"><a href="../classes/_rws_air_utils.stack-1.html" class="tsd-kind-icon">Stack</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_rws_air_utils.stackconstructor-1.html" class="tsd-kind-icon">Stack<wbr>Constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_rws_air_utils.html#tableorder-1" class="tsd-kind-icon">Table<wbr>Order</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_rws_air_utils.html#day-1" class="tsd-kind-icon">DAY</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_rws_air_utils.html#days-1" class="tsd-kind-icon">DAYS</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_rws_air_utils.html#days_nl-1" class="tsd-kind-icon">DAYS_<wbr>NL</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_rws_air_utils.html#hour-1" class="tsd-kind-icon">HOUR</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_rws_air_utils.html#minute-1" class="tsd-kind-icon">MINUTE</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_rws_air_utils.html#months-1" class="tsd-kind-icon">MONTHS</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_rws_air_utils.html#months_nl-1" class="tsd-kind-icon">MONTHS_<wbr>NL</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_rws_air_utils.html#second-1" class="tsd-kind-icon">SECOND</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_rws_air_utils.html#iscienv-1" class="tsd-kind-icon">isCIEnv</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_rws_air_utils.html#isdevenv-1" class="tsd-kind-icon">is<wbr>Dev<wbr>Env</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_rws_air_utils.html#istestenv-1" class="tsd-kind-icon">is<wbr>Test<wbr>Env</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_rws_air_utils.html#capitilizefirstletter-1" class="tsd-kind-icon">capitilize<wbr>First<wbr>Letter</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_rws_air_utils.html#createwrappabletext-1" class="tsd-kind-icon">create<wbr>Wrappable<wbr>Text</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_rws_air_utils.html#cuttext-1" class="tsd-kind-icon">cut<wbr>Text</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_rws_air_utils.html#isobject-1" class="tsd-kind-icon">is<wbr>Object</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="_rws_air_utils.html#mergeobjects-1" class="tsd-kind-icon">merge<wbr>Objects</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="_rws_air_utils.html#objecthasproperty-1" class="tsd-kind-icon">object<wbr>Has<wbr>Property</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_rws_air_utils.html#sentencecase-1" class="tsd-kind-icon">sentence<wbr>Case</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_rws_air_utils.html#snaketocamelcase-1" class="tsd-kind-icon">snake<wbr>ToCamel<wbr>Case</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_rws_air_utils.html#splittext-1" class="tsd-kind-icon">split<wbr>Text</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="_rws_air_utils.html#stabletablesort-1" class="tsd-kind-icon">stable<wbr>Table<wbr>Sort</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_rws_air_utils.html#usewindowsize-1" class="tsd-kind-icon">use<wbr>Window<wbr>Size</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>References</h2>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="day" class="tsd-anchor"></a>
+					<h3>DAY</h3>
+					Re-exports <a href="_rws_air_utils.html#day-1">DAY</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="days" class="tsd-anchor"></a>
+					<h3>DAYS</h3>
+					Re-exports <a href="_rws_air_utils.html#days-1">DAYS</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="days_nl" class="tsd-anchor"></a>
+					<h3>DAYS_<wbr>NL</h3>
+					Re-exports <a href="_rws_air_utils.html#days_nl-1">DAYS_NL</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="fuzzysearcher" class="tsd-anchor"></a>
+					<h3>Fuzzy<wbr>Searcher</h3>
+					Re-exports <a href="../classes/_rws_air_utils.fuzzysearcher-1.html">FuzzySearcher</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="hour" class="tsd-anchor"></a>
+					<h3>HOUR</h3>
+					Re-exports <a href="_rws_air_utils.html#hour-1">HOUR</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="minute" class="tsd-anchor"></a>
+					<h3>MINUTE</h3>
+					Re-exports <a href="_rws_air_utils.html#minute-1">MINUTE</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="months" class="tsd-anchor"></a>
+					<h3>MONTHS</h3>
+					Re-exports <a href="_rws_air_utils.html#months-1">MONTHS</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="months_nl" class="tsd-anchor"></a>
+					<h3>MONTHS_<wbr>NL</h3>
+					Re-exports <a href="_rws_air_utils.html#months_nl-1">MONTHS_NL</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="second" class="tsd-anchor"></a>
+					<h3>SECOND</h3>
+					Re-exports <a href="_rws_air_utils.html#second-1">SECOND</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="stack" class="tsd-anchor"></a>
+					<h3>Stack</h3>
+					Re-exports <a href="../classes/_rws_air_utils.stack-1.html">Stack</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="stackconstructor" class="tsd-anchor"></a>
+					<h3>Stack<wbr>Constructor</h3>
+					Re-exports <a href="../interfaces/_rws_air_utils.stackconstructor-1.html">StackConstructor</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="tableorder" class="tsd-anchor"></a>
+					<h3>Table<wbr>Order</h3>
+					Re-exports <a href="_rws_air_utils.html#tableorder-1">TableOrder</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="capitilizefirstletter" class="tsd-anchor"></a>
+					<h3>capitilize<wbr>First<wbr>Letter</h3>
+					Re-exports <a href="_rws_air_utils.html#capitilizefirstletter-1">capitilizeFirstLetter</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="createwrappabletext" class="tsd-anchor"></a>
+					<h3>create<wbr>Wrappable<wbr>Text</h3>
+					Re-exports <a href="_rws_air_utils.html#createwrappabletext-1">createWrappableText</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="cuttext" class="tsd-anchor"></a>
+					<h3>cut<wbr>Text</h3>
+					Re-exports <a href="_rws_air_utils.html#cuttext-1">cutText</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="iscienv" class="tsd-anchor"></a>
+					<h3>isCIEnv</h3>
+					Re-exports <a href="_rws_air_utils.html#iscienv-1">isCIEnv</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="isdevenv" class="tsd-anchor"></a>
+					<h3>is<wbr>Dev<wbr>Env</h3>
+					Re-exports <a href="_rws_air_utils.html#isdevenv-1">isDevEnv</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="isobject" class="tsd-anchor"></a>
+					<h3>is<wbr>Object</h3>
+					Re-exports <a href="_rws_air_utils.html#isobject-1">isObject</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="istestenv" class="tsd-anchor"></a>
+					<h3>is<wbr>Test<wbr>Env</h3>
+					Re-exports <a href="_rws_air_utils.html#istestenv-1">isTestEnv</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="mergeobjects" class="tsd-anchor"></a>
+					<h3>merge<wbr>Objects</h3>
+					Re-exports <a href="_rws_air_utils.html#mergeobjects-1">mergeObjects</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="objecthasproperty" class="tsd-anchor"></a>
+					<h3>object<wbr>Has<wbr>Property</h3>
+					Re-exports <a href="_rws_air_utils.html#objecthasproperty-1">objectHasProperty</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="sentencecase" class="tsd-anchor"></a>
+					<h3>sentence<wbr>Case</h3>
+					Re-exports <a href="_rws_air_utils.html#sentencecase-1">sentenceCase</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="snaketocamelcase" class="tsd-anchor"></a>
+					<h3>snake<wbr>ToCamel<wbr>Case</h3>
+					Re-exports <a href="_rws_air_utils.html#snaketocamelcase-1">snakeToCamelCase</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="splittext" class="tsd-anchor"></a>
+					<h3>split<wbr>Text</h3>
+					Re-exports <a href="_rws_air_utils.html#splittext-1">splitText</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="stabletablesort" class="tsd-anchor"></a>
+					<h3>stable<wbr>Table<wbr>Sort</h3>
+					Re-exports <a href="_rws_air_utils.html#stabletablesort-1">stableTableSort</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="usewindowsize" class="tsd-anchor"></a>
+					<h3>use<wbr>Window<wbr>Size</h3>
+					Re-exports <a href="_rws_air_utils.html#usewindowsize-1">useWindowSize</a>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="tableorder-1" class="tsd-anchor"></a>
+					<h3>Table<wbr>Order</h3>
+					<div class="tsd-signature tsd-kind-icon">Table<wbr>Order<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"desc"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"asc"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/841f302/packages/utils/src/StableTableSort.ts#L42">packages/utils/src/StableTableSort.ts:42</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="day-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> DAY</h3>
+					<div class="tsd-signature tsd-kind-icon">DAY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = HOUR * 24</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/841f302/packages/utils/src/TimeUtils.ts#L4">packages/utils/src/TimeUtils.ts:4</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="days-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> DAYS</h3>
+					<div class="tsd-signature tsd-kind-icon">DAYS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = [&#x27;Sunday&#x27;, &#x27;Monday&#x27;, &#x27;Tuesday&#x27;, &#x27;Wednesday&#x27;, &#x27;Thursday&#x27;, &#x27;Friday&#x27;, &#x27;Saturday&#x27;]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/841f302/packages/utils/src/TimeUtils.ts#L6">packages/utils/src/TimeUtils.ts:6</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="days_nl-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> DAYS_<wbr>NL</h3>
+					<div class="tsd-signature tsd-kind-icon">DAYS_<wbr>NL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = [&#x27;Zondag&#x27;, &#x27;Maandag&#x27;, &#x27;Dinsdag&#x27;, &#x27;Woensdag&#x27;, &#x27;Donderdag&#x27;, &#x27;Vrijdag&#x27;, &#x27;Zaterdag&#x27;]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/841f302/packages/utils/src/TimeUtils.ts#L21">packages/utils/src/TimeUtils.ts:21</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="hour-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> HOUR</h3>
+					<div class="tsd-signature tsd-kind-icon">HOUR<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = MINUTE * 60</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/841f302/packages/utils/src/TimeUtils.ts#L3">packages/utils/src/TimeUtils.ts:3</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="minute-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> MINUTE</h3>
+					<div class="tsd-signature tsd-kind-icon">MINUTE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = SECOND * 60</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/841f302/packages/utils/src/TimeUtils.ts#L2">packages/utils/src/TimeUtils.ts:2</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="months-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> MONTHS</h3>
+					<div class="tsd-signature tsd-kind-icon">MONTHS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = [&#x27;January&#x27;,&#x27;February&#x27;,&#x27;March&#x27;,&#x27;April&#x27;,&#x27;May&#x27;,&#x27;June&#x27;,&#x27;July&#x27;,&#x27;August&#x27;,&#x27;September&#x27;,&#x27;October&#x27;,&#x27;November&#x27;,&#x27;December&#x27;]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/841f302/packages/utils/src/TimeUtils.ts#L7">packages/utils/src/TimeUtils.ts:7</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="months_nl-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> MONTHS_<wbr>NL</h3>
+					<div class="tsd-signature tsd-kind-icon">MONTHS_<wbr>NL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = [&#x27;Januari&#x27;,&#x27;Februari&#x27;,&#x27;Maart&#x27;,&#x27;April&#x27;,&#x27;Mei&#x27;,&#x27;Juni&#x27;,&#x27;July&#x27;,&#x27;Augustus&#x27;,&#x27;September&#x27;,&#x27;October&#x27;,&#x27;November&#x27;,&#x27;December&#x27;]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/841f302/packages/utils/src/TimeUtils.ts#L22">packages/utils/src/TimeUtils.ts:22</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="second-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> SECOND</h3>
+					<div class="tsd-signature tsd-kind-icon">SECOND<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">1000</span><span class="tsd-signature-symbol"> = 1000</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/841f302/packages/utils/src/TimeUtils.ts#L1">packages/utils/src/TimeUtils.ts:1</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="iscienv-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> isCIEnv</h3>
+					<div class="tsd-signature tsd-kind-icon">isCIEnv<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = Boolean(process.env.CI)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/841f302/packages/utils/src/IsCIEnv.ts#L2">packages/utils/src/IsCIEnv.ts:2</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Validates whether the current environment is a CI environment</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="isdevenv-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> is<wbr>Dev<wbr>Env</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Dev<wbr>Env<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = process.env.NODE_ENV &#x3D;&#x3D;&#x3D; &#x27;development&#x27; ? true : process.env.NODE_ENV &#x3D;&#x3D;&#x3D; &#x27;test&#x27;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/841f302/packages/utils/src/IsDevEnv.ts#L2">packages/utils/src/IsDevEnv.ts:2</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Validates whether the current environment is either development or test</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="istestenv-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> is<wbr>Test<wbr>Env</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Test<wbr>Env<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = process.env.NODE_ENV &#x3D;&#x3D;&#x3D; &#x27;test&#x27;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/841f302/packages/utils/src/IsTestEnv.ts#L2">packages/utils/src/IsTestEnv.ts:2</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Validates whether the current environment is test</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="capitilizefirstletter-1" class="tsd-anchor"></a>
+					<h3>capitilize<wbr>First<wbr>Letter</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">capitilize<wbr>First<wbr>Letter<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/841f302/packages/utils/src/CapitilizeFirstLetter.ts#L6">packages/utils/src/CapitilizeFirstLetter.ts:6</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Transforms the first letter to a capital then adds all the rest after it
+									Differs from <a href="_rws_air_utils.html#sentencecase">sentenceCase</a> in that the casing of the text after the first letter is retained</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>str: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Text to transform</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="createwrappabletext-1" class="tsd-anchor"></a>
+					<h3>create<wbr>Wrappable<wbr>Text</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Wrappable<wbr>Text<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, maxLength<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/841f302/packages/utils/src/CreateWrappableText.ts#L6">packages/utils/src/CreateWrappableText.ts:6</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Inserts a space in any text after every maxLength amount of characters, allowing Material-UI to gracefully wrap it</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>text: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>text to split</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> maxLength: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 75</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The maximum length of a text section @default 75</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="cuttext-1" class="tsd-anchor"></a>
+					<h3>cut<wbr>Text</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">cut<wbr>Text<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, length<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/841f302/packages/utils/src/CutText.ts#L8">packages/utils/src/CutText.ts:8</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Split a text by its latest space character in a range from the character 0 to the selected one.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>str: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The text to split.</p>
+									</div>
+								</li>
+								<li>
+									<h5>length: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The length of the desired string.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="isobject-1" class="tsd-anchor"></a>
+					<h3>is<wbr>Object</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Object<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/841f302/packages/utils/src/IsObject.ts#L5">packages/utils/src/IsObject.ts:5</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Verify if the input is an object literal (or class).</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>input: <span class="tsd-signature-type">unknown</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The object to verify</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+					<a name="mergeobjects-1" class="tsd-anchor"></a>
+					<h3>merge<wbr>Objects</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">merge<wbr>Objects&lt;A, B&gt;<span class="tsd-signature-symbol">(</span>objTarget<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">B</span><span class="tsd-signature-symbol">&gt;</span>, objSource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">B</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">B</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/841f302/packages/utils/src/MergeObjects.ts#L9">packages/utils/src/MergeObjects.ts:9</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Merges two objects</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>A<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+								</li>
+								<li>
+									<h4>B<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>objTarget: <span class="tsd-signature-type">A</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">B</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The object to be merged</p>
+									</div>
+								</li>
+								<li>
+									<h5>objSource: <span class="tsd-signature-type">B</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The object to merge</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">A</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">B</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+					<a name="objecthasproperty-1" class="tsd-anchor"></a>
+					<h3>object<wbr>Has<wbr>Property</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">object<wbr>Has<wbr>Property&lt;O&gt;<span class="tsd-signature-symbol">(</span>obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">O</span>, prop<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">O</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/841f302/packages/utils/src/ObjectHasProperty.ts#L6">packages/utils/src/ObjectHasProperty.ts:6</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Type safely checks if an object includes a given property without using the prototype</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>O<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>obj: <span class="tsd-signature-type">O</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Object to analyze</p>
+									</div>
+								</li>
+								<li>
+									<h5>prop: <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">O</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Property to check for</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="sentencecase-1" class="tsd-anchor"></a>
+					<h3>sentence<wbr>Case</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">sentence<wbr>Case<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/841f302/packages/utils/src/SentenceCase.ts#L5">packages/utils/src/SentenceCase.ts:5</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Transforms given text to sentence case (First letter uppercase, rest lowercase)</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>text: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Text to transform</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="snaketocamelcase-1" class="tsd-anchor"></a>
+					<h3>snake<wbr>ToCamel<wbr>Case</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">snake<wbr>ToCamel<wbr>Case<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/841f302/packages/utils/src/SnakeToCamelCase.ts#L5">packages/utils/src/SnakeToCamelCase.ts:5</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Transforms text from snake_case to camelCase.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>str: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Text to transform</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="splittext-1" class="tsd-anchor"></a>
+					<h3>split<wbr>Text</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">split<wbr>Text<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, length<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, char<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/841f302/packages/utils/src/SplitText.ts#L7">packages/utils/src/SplitText.ts:7</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Split a string by its latest space character in a range from the character 0 to the selected one.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>str: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The text to split.</p>
+									</div>
+								</li>
+								<li>
+									<h5>length: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The length of the desired string.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> char: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot; &quot;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The character to split with</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+					<a name="stabletablesort-1" class="tsd-anchor"></a>
+					<h3>stable<wbr>Table<wbr>Sort</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">stable<wbr>Table<wbr>Sort&lt;T&gt;<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, orderBy<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span>, order<span class="tsd-signature-symbol">: </span><a href="_rws_air_utils.html#tableorder-1" class="tsd-signature-type">TableOrder</a>, headerMapping<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/841f302/packages/utils/src/StableTableSort.ts#L31">packages/utils/src/StableTableSort.ts:31</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Stabily sorts an array of objects using lodash.orderby</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript"><span class="hljs-keyword">interface</span> ArrType {
+  key: <span class="hljs-built_in">string</span>;
+  prop: <span class="hljs-built_in">string</span>;
+}
+
+<span class="hljs-keyword">const</span> arr: ArrType[] = [
+  { key: <span class="hljs-string">'1'</span>, prop: <span class="hljs-string">'2'</span> },
+  { key: <span class="hljs-string">'4'</span>, prop: <span class="hljs-string">'4'</span> }
+];
+
+<span class="hljs-keyword">const</span> mappings: Map&lt;keyof ArrType, <span class="hljs-built_in">string</span>&gt; = <span class="hljs-keyword">new</span> Map(
+  [
+    [ <span class="hljs-string">'key'</span>, <span class="hljs-function">(<span class="hljs-params">(<span class="hljs-params"><span class="hljs-keyword">type</span>: ArrType</span>) =&gt; <span class="hljs-keyword">type</span>.key.toString(<span class="hljs-params"></span>)</span>) <span class="hljs-params">as</span> <span class="hljs-params">unknown</span> <span class="hljs-params">as</span> <span class="hljs-params">string</span> ],
+    [ '<span class="hljs-params">prop</span>', (<span class="hljs-params">(<span class="hljs-params"><span class="hljs-keyword">type</span>: ArrType</span>) =&gt; <span class="hljs-keyword">type</span>.prop</span>) <span class="hljs-params">as</span> <span class="hljs-params">unknown</span> <span class="hljs-params">as</span> <span class="hljs-params">string</span> ]
+  ]
+);
+
+<span class="hljs-params">stableTableSort</span>(<span class="hljs-params">arr, 'key', 'asc', mappings</span>);</span></code></pre>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Array of objects to order</p>
+									</div>
+								</li>
+								<li>
+									<h5>orderBy: <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Key to order by</p>
+									</div>
+								</li>
+								<li>
+									<h5>order: <a href="_rws_air_utils.html#tableorder-1" class="tsd-signature-type">TableOrder</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Order ascending or descending</p>
+									</div>
+								</li>
+								<li>
+									<h5>headerMapping: <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Mapping of table headers for sorting on nested properties</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="usewindowsize-1" class="tsd-anchor"></a>
+					<h3>use<wbr>Window<wbr>Size</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">use<wbr>Window<wbr>Size<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/841f302/packages/utils/src/UseWindowSize.ts#L20">packages/utils/src/UseWindowSize.ts:20</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>React hook to get the current window size
+									Triggers on window resize.</p>
+								</div>
+								<p>Use with <a href="https://github.com/xnimorz/use-debounce " class="external"> use-debounce</a> to ensure it is not triggered instantly!!</p>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript"><span class="hljs-keyword">import</span> { useDebounce } <span class="hljs-keyword">from</span> <span class="hljs-string">'use-debounce'</span>;
+
+<span class="hljs-keyword">const</span> [ width, height ] = useDebounce(useWindowSize(), <span class="hljs-number">1000</span>);
+
+useEffect(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-comment">// Do something here</span>
+}, [ width, height ]);</code></pre>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_rws_air_eslint_config.html">@rws-<wbr>air/eslint-<wbr>config</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_rws_air_jestscreenshot.html">@rws-<wbr>air/jestscreenshot</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_rws_air_stylelint_config.html">@rws-<wbr>air/stylelint-<wbr>config</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_rws_air_tslint_config.html">@rws-<wbr>air/tslint-<wbr>config</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_rws_air_usercreator.html">@rws-<wbr>air/usercreator</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="_rws_air_utils.html">@rws-<wbr>air/utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_rws_air_webcomponents.html">@rws-<wbr>air/webcomponents</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#day" class="tsd-kind-icon">DAY</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#days" class="tsd-kind-icon">DAYS</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#days_nl" class="tsd-kind-icon">DAYS_<wbr>NL</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#fuzzysearcher" class="tsd-kind-icon">Fuzzy<wbr>Searcher</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#hour" class="tsd-kind-icon">HOUR</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#minute" class="tsd-kind-icon">MINUTE</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#months" class="tsd-kind-icon">MONTHS</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#months_nl" class="tsd-kind-icon">MONTHS_<wbr>NL</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#second" class="tsd-kind-icon">SECOND</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#stack" class="tsd-kind-icon">Stack</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#stackconstructor" class="tsd-kind-icon">Stack<wbr>Constructor</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#tableorder" class="tsd-kind-icon">Table<wbr>Order</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#capitilizefirstletter" class="tsd-kind-icon">capitilize<wbr>First<wbr>Letter</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#createwrappabletext" class="tsd-kind-icon">create<wbr>Wrappable<wbr>Text</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#cuttext" class="tsd-kind-icon">cut<wbr>Text</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#iscienv" class="tsd-kind-icon">isCIEnv</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#isdevenv" class="tsd-kind-icon">is<wbr>Dev<wbr>Env</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#isobject" class="tsd-kind-icon">is<wbr>Object</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#istestenv" class="tsd-kind-icon">is<wbr>Test<wbr>Env</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#mergeobjects" class="tsd-kind-icon">merge<wbr>Objects</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#objecthasproperty" class="tsd-kind-icon">object<wbr>Has<wbr>Property</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#sentencecase" class="tsd-kind-icon">sentence<wbr>Case</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#snaketocamelcase" class="tsd-kind-icon">snake<wbr>ToCamel<wbr>Case</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#splittext" class="tsd-kind-icon">split<wbr>Text</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#stabletablesort" class="tsd-kind-icon">stable<wbr>Table<wbr>Sort</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#usewindowsize" class="tsd-kind-icon">use<wbr>Window<wbr>Size</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../classes/_rws_air_utils.fuzzysearcher-1.html" class="tsd-kind-icon">Fuzzy<wbr>Searcher</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../classes/_rws_air_utils.stack-1.html" class="tsd-kind-icon">Stack</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_rws_air_utils.stackconstructor-1.html" class="tsd-kind-icon">Stack<wbr>Constructor</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#tableorder-1" class="tsd-kind-icon">Table<wbr>Order</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#day-1" class="tsd-kind-icon">DAY</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#days-1" class="tsd-kind-icon">DAYS</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#days_nl-1" class="tsd-kind-icon">DAYS_<wbr>NL</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#hour-1" class="tsd-kind-icon">HOUR</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#minute-1" class="tsd-kind-icon">MINUTE</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#months-1" class="tsd-kind-icon">MONTHS</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#months_nl-1" class="tsd-kind-icon">MONTHS_<wbr>NL</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#second-1" class="tsd-kind-icon">SECOND</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#iscienv-1" class="tsd-kind-icon">isCIEnv</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#isdevenv-1" class="tsd-kind-icon">is<wbr>Dev<wbr>Env</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#istestenv-1" class="tsd-kind-icon">is<wbr>Test<wbr>Env</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#capitilizefirstletter-1" class="tsd-kind-icon">capitilize<wbr>First<wbr>Letter</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#createwrappabletext-1" class="tsd-kind-icon">create<wbr>Wrappable<wbr>Text</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#cuttext-1" class="tsd-kind-icon">cut<wbr>Text</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#isobject-1" class="tsd-kind-icon">is<wbr>Object</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="_rws_air_utils.html#mergeobjects-1" class="tsd-kind-icon">merge<wbr>Objects</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="_rws_air_utils.html#objecthasproperty-1" class="tsd-kind-icon">object<wbr>Has<wbr>Property</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#sentencecase-1" class="tsd-kind-icon">sentence<wbr>Case</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#snaketocamelcase-1" class="tsd-kind-icon">snake<wbr>ToCamel<wbr>Case</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#splittext-1" class="tsd-kind-icon">split<wbr>Text</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="_rws_air_utils.html#stabletablesort-1" class="tsd-kind-icon">stable<wbr>Table<wbr>Sort</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_rws_air_utils.html#usewindowsize-1" class="tsd-kind-icon">use<wbr>Window<wbr>Size</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>
