@@ -83,11 +83,13 @@ export const PaginationActions = memo(
     return (
       <Box style={{ display: 'flex', alignItems: 'center' }} data-qa={dataQa}>
         <PaginationButton
+          data-qa={`${dataQa ? `${dataQa}-` : ''}first-page-button`}
           onClick={handleFirstPageButtonclick}
           disabled={previousButtonShouldBeDisabled}
           icon={<FirstPageIcon />}
         />
         <PaginationButton
+          data-qa={`${dataQa ? `${dataQa}-` : ''}previous-page-button`}
           onClick={handleBackButtonClick}
           disabled={previousButtonShouldBeDisabled}
           icon={<KeyboardArrowLeft />}
@@ -99,11 +101,13 @@ export const PaginationActions = memo(
         </If>
 
         <PaginationButton
+          data-qa={`${dataQa ? `${dataQa}-` : ''}next-page-button`}
           onClick={handleNextButtonClick}
           disabled={nextButtonShouldBeDisabled}
           icon={<KeyboardArrowRight />}
         />
         <PaginationButton
+          data-qa={`${dataQa ? `${dataQa}-` : ''}last-page-button`}
           onClick={handleLastPageButtonClick}
           disabled={nextButtonShouldBeDisabled}
           icon={<LastPageIcon />}
