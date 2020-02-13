@@ -1,4 +1,4 @@
-name: Update Documentation
+name: Generate API Documentation
 
 on:
   push:
@@ -6,8 +6,8 @@ on:
       - master
 
 jobs:
-  TypeDocs:
-    name: TypeDocs
+  TypeDoc:
+    name: Generate API Documentation
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Project
