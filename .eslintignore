@@ -1,6 +1,5 @@
 packages/**/dist
 packages/eslint-config/dist
-packages/cra-template-air/**
 **/node_modules/
 **/.github/
 **/.vscode/

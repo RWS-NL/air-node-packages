@@ -12,6 +12,7 @@
     "test": "yarn lint",
     "prebuild": "yarn lint",
     "build": "rollup -c rollup.config.js",
+    "ci:build": "rollup -c rollup.config.js",
     "start": "yarn build -w"
   },
   "files": [

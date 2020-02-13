@@ -1,4 +1,4 @@
-import { all, fork } from 'redux-saga/effects';
+import { all } from 'redux-saga/effects';
 
 export function* rootSaga() {
   yield all();
