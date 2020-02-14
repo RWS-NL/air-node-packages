@@ -1,26 +1,44 @@
 @import '../styles/vars';
+@import '../styles/breakpoints';
 
-.actionBar {
-  background-color: $yellow20 !important;
-  height: 5rem !important;
-  line-height: 5rem !important;
-}
-
-.actionBarHeader {
-  color: $textBlack !important;
-  font-size: 2.2rem !important;
-  margin: 0 !important;
-  padding-left: 26px !important;
-}
-
-@media only screen and (max-width: 1024px) {
-  .actionBarHeader {
-    font-size: 1.6rem !important;
+.action {
+  &Bar {
+    background-color: $yellow20;
+    height: 5rem;
+    line-height: 5rem;
   }
-}
 
-@media only screen and (max-width: 800px) {
-  .actionBarHeader {
-    font-size: 1.2rem !important;
+  &Header {
+    font-size: 2.2rem;
+
+    @include md {
+      font-size: 1.6rem;
+    }
+
+    @include smallLaptop {
+      font-size: 1.6rem;
+    }
+
+    @include sm {
+      font-size: 1.1rem;
+    }
+  }
+
+  &Grid {
+    &Left {
+      height: 100%;
+      padding-left: 2rem;
+
+      @include sm {
+        padding-left: 1rem;
+      }
+    }
+    &Right {
+      padding-right: 2rem;
+
+      @include sm {
+        padding-right: 1rem;
+      }
+    }
   }
 }

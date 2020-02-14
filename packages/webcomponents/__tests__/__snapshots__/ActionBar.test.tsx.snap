@@ -1,20 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Snapshot Testing AdditionalTest 1`] = `
-<div
-  className="navigation-bar actionBar"
+<Styled(MuiBox)
+  className="actionBar"
+  component="div"
   data-qa="snapshot-qa"
 >
   <WithStyles(ForwardRef(Grid))
     alignItems="center"
+    className="actionGridLeft"
     container={true}
     direction="row"
     justify="space-between"
-    style={
-      Object {
-        "height": "100%",
-      }
-    }
   >
     <WithStyles(ForwardRef(Grid))
       item={true}
@@ -31,9 +28,11 @@ exports[`Snapshot Testing AdditionalTest 1`] = `
       condition={true}
     >
       <WithStyles(ForwardRef(Grid))
+        className="actionGridRight"
         item={true}
         key="2"
-        xs={6}
+        sm={6}
+        xs={5}
       >
         <Memo()
           color="primary"
@@ -46,43 +45,44 @@ exports[`Snapshot Testing AdditionalTest 1`] = `
       </WithStyles(ForwardRef(Grid))>
     </When>
   </WithStyles(ForwardRef(Grid))>
-</div>
+</Styled(MuiBox)>
 `;
 
 exports[`Snapshot Testing Required Props 1`] = `
-<div
-  className="navigation-bar actionBar"
+<Styled(MuiBox)
+  className="actionBar"
+  component="div"
 >
   <WithStyles(ForwardRef(Grid))
     alignItems="center"
+    className="actionGridLeft"
     container={true}
     direction="row"
     justify="space-between"
-    style={
-      Object {
-        "height": "100%",
-      }
-    }
   >
     <WithStyles(ForwardRef(Grid))
       item={true}
       key="1"
       xs={6}
     >
-      <h1
-        className="actionBarHeader"
+      <WithStyles(ForwardRef(Typography))
+        className="actionHeader"
+        color="textPrimary"
         data-qa="action-bar-title"
+        variant="h1"
       >
         42
-      </h1>
+      </WithStyles(ForwardRef(Typography))>
     </WithStyles(ForwardRef(Grid))>
     <When
       condition={false}
     >
       <WithStyles(ForwardRef(Grid))
+        className="actionGridRight"
         item={true}
         key="2"
-        xs={6}
+        sm={6}
+        xs={5}
       >
         <Memo()
           color="primary"
@@ -94,23 +94,20 @@ exports[`Snapshot Testing Required Props 1`] = `
       </WithStyles(ForwardRef(Grid))>
     </When>
   </WithStyles(ForwardRef(Grid))>
-</div>
+</Styled(MuiBox)>
 `;
 
 exports[`Snapshot Testing With Button 1`] = `
-<div
-  className="navigation-bar actionBar"
+<Styled(MuiBox)
+  className="actionBar"
+  component="div"
 >
   <WithStyles(ForwardRef(Grid))
     alignItems="center"
+    className="actionGridLeft"
     container={true}
     direction="row"
     justify="space-between"
-    style={
-      Object {
-        "height": "100%",
-      }
-    }
   >
     <WithStyles(ForwardRef(Grid))
       item={true}
@@ -127,9 +124,11 @@ exports[`Snapshot Testing With Button 1`] = `
       condition={true}
     >
       <WithStyles(ForwardRef(Grid))
+        className="actionGridRight"
         item={true}
         key="2"
-        xs={6}
+        sm={6}
+        xs={5}
       >
         <Memo()
           color="primary"
@@ -142,5 +141,5 @@ exports[`Snapshot Testing With Button 1`] = `
       </WithStyles(ForwardRef(Grid))>
     </When>
   </WithStyles(ForwardRef(Grid))>
-</div>
+</Styled(MuiBox)>
 `;
