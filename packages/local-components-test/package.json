@@ -7,7 +7,7 @@
   "license": "AGPL-3.0-or-later",
   "homepage": "https://github.com/RWS-NL/air-node-packages/tree/master/packages/local-components-test#readme",
   "scripts": {
-    "start": "PORT=9999 react-scripts start"
+    "start": "react-scripts start"
   },
   "browserslist": {
     "production": [

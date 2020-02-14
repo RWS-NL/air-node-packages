@@ -3,6 +3,7 @@ import { StylesProvider } from '@material-ui/styles';
 import React from 'react';
 import Home from './Home';
 import { ThemeColours } from './utils/constants';
+import { BrowserRouter } from 'react-router-dom';
 
 const createTheme: Theme = createMuiTheme({
   ...ThemeColours,
@@ -18,7 +19,9 @@ const createTheme: Theme = createMuiTheme({
 const App: React.FC = () => (
   <StylesProvider injectFirst>
     <MuiThemeProvider theme={createTheme}>
-      <Home />
+      <BrowserRouter>
+        <Home />
+      </BrowserRouter>
     </MuiThemeProvider>
   </StylesProvider>
 );
