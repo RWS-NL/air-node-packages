@@ -1,6 +1,6 @@
 {
   "name": "@rws-air/stylelint-config",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Standard StyleLint config for all AIR apps",
   "author": "@rws-air",
   "license": "AGPL-3.0-or-later",
