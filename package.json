@@ -51,7 +51,7 @@
     "@types/js-yaml": "^3.12.1",
     "@types/lodash.debounce": "^4.0.6",
     "@types/lodash.orderby": "^4.6.6",
-    "@types/mkdirp": "^0.5.2",
+    "@types/mkdirp": "^1.0.0",
     "@types/node": "^13.7.0",
     "@types/node-fetch": "^2.5.4",
     "@types/puppeteer": "^2.0.0",
