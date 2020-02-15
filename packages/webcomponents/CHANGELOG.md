@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.0.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@10.1.1...@rws-air/webcomponents@11.0.0) (2020-02-15)
+
+### Code Refactoring
+
+- **webcomponents,utils:** remove default exports ([11558f9](https://github.com/RWS-NL/air-node-packages/commit/11558f9c5505244efffeec97e47902657995df9c))
+
+### BREAKING CHANGES
+
+- **webcomponents,utils:** Default exports are removed, please use named importing!
+
 ## [10.1.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@10.1.0...@rws-air/webcomponents@10.1.1) (2020-02-14)
 
 **Note:** Version bump only for package @rws-air/webcomponents
