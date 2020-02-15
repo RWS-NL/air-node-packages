@@ -1,4 +1,4 @@
-import FuzzySearcher from '../src/FuzzySearcher';
+import { FuzzySearcher } from '../src/FuzzySearcher';
 
 const SAMPLE_DATA = [
   {

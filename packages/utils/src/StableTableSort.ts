@@ -40,5 +40,3 @@ export function stableTableSort<T>(
 }
 
 export type TableOrder = 'desc' | 'asc';
-
-export default stableTableSort;

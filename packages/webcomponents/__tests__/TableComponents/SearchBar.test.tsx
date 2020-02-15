@@ -1,6 +1,6 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-import SearchBar from '../../src/TableComponents/SearchBar';
+import { SearchBar } from '../../src/TableComponents/SearchBar';
 
 describe('Snapshot Testing', () => {
   test('Required Props', () => {

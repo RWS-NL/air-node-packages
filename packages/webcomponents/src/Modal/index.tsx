@@ -91,5 +91,3 @@ export const Modal = memo(({ DialogContentProps, DialogTitleProps, DialogProps, 
     </Dialog>
   );
 });
-
-export default Modal;

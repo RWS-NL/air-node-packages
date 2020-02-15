@@ -6,9 +6,9 @@ import TableRow from '@material-ui/core/TableRow';
 import classnames from 'classnames';
 import React, { Fragment, memo, ReactNode } from 'react';
 import { When } from 'react-if';
-import HeaderCell, { HeaderCellProps, HeaderProps } from '../HeaderCell';
-import Pagination, { PaginationProps } from '../Pagination';
-import Toolbar, { ToolbarProps } from '../Toolbar';
+import { HeaderCell, HeaderCellProps, HeaderProps } from '../HeaderCell';
+import { Pagination, PaginationProps } from '../Pagination';
+import { Toolbar, ToolbarProps } from '../Toolbar';
 import css from './Table.scss';
 
 export type TableLabels = Pick<ToolbarProps, 'searchplaceholderlabel'> &
@@ -253,5 +253,3 @@ export const Table = memo(
     );
   }
 );
-
-export default Table;

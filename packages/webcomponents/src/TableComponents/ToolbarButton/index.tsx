@@ -2,7 +2,7 @@ import { IconButton, Paper } from '@material-ui/core';
 import { objectHasProperty } from '@rws-air/utils';
 import classnames from 'classnames';
 import React, { memo, useMemo } from 'react';
-import Tooltip, { TooltipProps } from '../../Tooltip';
+import { Tooltip, TooltipProps } from '../../Tooltip';
 import css from './ToolbarButton.scss';
 
 export interface ToolbarButtonProps {
@@ -124,5 +124,3 @@ export const ToolbarButton = memo((props: ToolbarButtonProps) => {
     </Paper>
   );
 });
-
-export default ToolbarButton;

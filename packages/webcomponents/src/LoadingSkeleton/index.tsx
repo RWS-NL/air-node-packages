@@ -56,5 +56,3 @@ export const LoadingSkeleton = memo(
     );
   }
 );
-
-export default LoadingSkeleton;

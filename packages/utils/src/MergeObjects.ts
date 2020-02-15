@@ -20,5 +20,3 @@ export function mergeObjects<
 
   return objTarget as A & B;
 }
-
-export default mergeObjects;

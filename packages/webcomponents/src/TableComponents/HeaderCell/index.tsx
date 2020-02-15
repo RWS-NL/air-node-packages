@@ -2,7 +2,7 @@ import MUITableCell, { TableCellProps as MUITableCellProps } from '@material-ui/
 import TableSortLabel from '@material-ui/core/TableSortLabel';
 import classnames from 'classnames';
 import React, { memo, ReactNode } from 'react';
-import Tooltip, { TooltipProps } from '../../Tooltip';
+import { Tooltip, TooltipProps } from '../../Tooltip';
 import css from './HeaderCell.scss';
 
 export interface HeaderProps {
@@ -87,5 +87,3 @@ export const HeaderCell = memo((props: HeaderCellProps) => {
     </MUITableCell>
   );
 });
-
-export default HeaderCell;

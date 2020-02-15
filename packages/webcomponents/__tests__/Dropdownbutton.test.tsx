@@ -1,4 +1,4 @@
-import Dropdownbutton, { DropdownbuttonProps } from '../src/Dropdownbutton';
+import { Dropdownbutton, DropdownbuttonProps } from '../src/Dropdownbutton';
 import { shallow, ShallowWrapper } from 'enzyme';
 import CloudDownload from '@material-ui/icons/CloudDownload';
 import React from 'react';

@@ -12,5 +12,3 @@ export function cutText(str: string, length: number) {
 
   return `${cut.slice(0, length - 3)}...`;
 }
-
-export default cutText;

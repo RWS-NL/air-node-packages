@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid/Grid';
 import classnames from 'classnames';
 import React, { memo, ReactNode, useMemo } from 'react';
 import { When } from 'react-if';
-import Button from '../Button';
+import { Button } from '../Button';
 import css from './ActionBar.scss';
 
 export interface ActionBarProps {
@@ -93,5 +93,3 @@ export const ActionBar = memo(
     );
   }
 );
-
-export default ActionBar;

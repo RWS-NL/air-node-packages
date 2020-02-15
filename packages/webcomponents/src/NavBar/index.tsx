@@ -2,8 +2,8 @@ import React, { memo, Fragment, ChangeEvent } from 'react';
 import css from './NavBar.scss';
 
 import { AppBar, Tabs, Toolbar, Grid, AppBarProps, ToolbarProps, TabsProps } from '@material-ui/core';
-import ActionBar, { ActionBarProps } from '../ActionBar';
-import LinkTab, { LinkTabProps } from '../LinkTab';
+import { ActionBar, ActionBarProps } from '../ActionBar';
+import { LinkTab, LinkTabProps } from '../LinkTab';
 
 export interface NavBarProps {
   /** The tabs to render */
@@ -69,5 +69,3 @@ export const NavBar = memo(
     </Fragment>
   )
 );
-
-export default NavBar;

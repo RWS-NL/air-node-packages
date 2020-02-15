@@ -21,5 +21,3 @@ export class FuzzySearcher<O> {
     return fuzzyFuze.search(locquery) as O[];
   }
 }
-
-export default FuzzySearcher;

@@ -1,7 +1,7 @@
 import { shallow } from 'enzyme';
 import { Formik } from 'formik';
 import React from 'react';
-import TextField from '../../src/FormikComponents/TextField';
+import { TextField } from '../../src/FormikComponents/TextField';
 
 describe('Snapshot Testing', () => {
   test('Required Props', () => {

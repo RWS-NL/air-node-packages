@@ -1,7 +1,7 @@
 import Fab, { FabProps as MFabProps } from '@material-ui/core/Fab';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import React, { memo, ReactNode } from 'react';
-import Tooltip, { TooltipProps } from '../Tooltip';
+import { Tooltip, TooltipProps } from '../Tooltip';
 
 export interface FabProps extends MFabProps {
   /** The icon to show inside the Floating Action Button */
@@ -58,5 +58,3 @@ export const FloatingActionButton = memo(
     );
   }
 );
-
-export default FloatingActionButton;

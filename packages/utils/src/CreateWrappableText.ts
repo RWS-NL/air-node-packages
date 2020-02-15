@@ -11,5 +11,3 @@ export function createWrappableText(text: string, maxLength = 75) {
 
   return text;
 }
-
-export default createWrappableText;

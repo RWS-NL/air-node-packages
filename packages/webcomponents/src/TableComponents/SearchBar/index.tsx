@@ -156,5 +156,3 @@ export const SearchBar = memo(
     );
   }
 );
-
-export default SearchBar;

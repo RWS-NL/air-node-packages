@@ -63,5 +63,3 @@ export const Button = memo((props: MUIButtonProps<'button', ButtonProps>) => {
     </MUIButton>
   );
 });
-
-export default Button;

@@ -31,5 +31,3 @@ export class Stack<K extends string | number | unknown, V> extends Collection<K,
     return this.array();
   }
 }
-
-export default Stack;

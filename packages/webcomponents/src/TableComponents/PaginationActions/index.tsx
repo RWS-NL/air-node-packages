@@ -9,7 +9,7 @@ import classnames from 'classnames';
 import React, { memo, SyntheticEvent } from 'react';
 import { Else, If, Then } from 'react-if';
 import css from './PaginationActions.scss';
-import PaginationButton, { PaginationButtonProps } from './PaginationButton';
+import { PaginationButton, PaginationButtonProps } from './PaginationButton';
 
 export interface PaginationActionsProps {
   /** Amount of rows per page */
@@ -118,4 +118,3 @@ export const PaginationActions = memo(
 );
 
 export { PaginationButtonProps, PaginationButton };
-export default PaginationActions;

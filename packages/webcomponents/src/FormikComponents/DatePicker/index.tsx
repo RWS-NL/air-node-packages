@@ -56,5 +56,3 @@ export const DatePicker: FC<DatePickerProps> = ({ minDate, label, name, ...props
     />
   );
 };
-
-export default DatePicker;

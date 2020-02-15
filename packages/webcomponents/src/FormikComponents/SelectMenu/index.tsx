@@ -112,5 +112,3 @@ export const SelectMenu = <T extends SelectMenuOptionValues>({
     </Fragment>
   );
 };
-
-export default SelectMenu;

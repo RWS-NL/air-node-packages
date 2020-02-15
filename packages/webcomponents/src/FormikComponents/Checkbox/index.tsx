@@ -80,5 +80,3 @@ export const Checkbox: ForwardRefExoticComponent<CheckboxProps> = forwardRef(
     />
   )
 );
-
-export default Checkbox;

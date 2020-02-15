@@ -1,4 +1,4 @@
-import ActionBar from '../src/ActionBar';
+import { ActionBar } from '../src/ActionBar';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
 

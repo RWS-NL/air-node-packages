@@ -1,5 +1,5 @@
 import { shallow } from 'enzyme';
-import Logo from '../src/Logo';
+import { Logo } from '../src/Logo';
 import React from 'react';
 
 describe('Snapshot Testing', () => {

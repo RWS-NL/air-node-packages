@@ -1,7 +1,7 @@
 import { HOUR } from '@rws-air/utils/dist/TimeUtils';
 import { shallow } from 'enzyme';
 import React from 'react';
-import Tooltip from '../src/Tooltip';
+import { Tooltip } from '../src/Tooltip';
 
 describe('Snapshot Testing', () => {
   test('Required Props', () => {

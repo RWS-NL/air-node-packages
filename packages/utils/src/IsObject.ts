@@ -5,5 +5,3 @@
 export function isObject(input: unknown): boolean {
   return input ? (input as object).constructor === Object : false;
 }
-
-export default isObject;

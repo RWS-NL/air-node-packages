@@ -1,6 +1,6 @@
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
-import TablePagination from '../../src/TableComponents/Pagination';
+import { Pagination } from '../../src/TableComponents/Pagination';
 
 let tablePaginations: ShallowWrapper;
 const mockOnChangePage = jest.fn();
@@ -8,7 +8,7 @@ const mockOnchangeRowsPerPage = jest.fn();
 
 beforeAll(() => {
   tablePaginations = shallow(
-    <TablePagination
+    <Pagination
       labelRowsPerPage='rows per page'
       labelPaginationOf='of'
       rowsPerPageOptions={[5, 10]}
@@ -28,7 +28,7 @@ test('should match snapshot', () => {
 describe('Snapshot Testing', () => {
   test('Required Props', () => {
     const tablePagination = shallow(
-      <TablePagination
+      <Pagination
         labelRowsPerPage='rows per page'
         labelPaginationOf='of'
         rowsPerPageOptions={[2, 5, 10]}
@@ -44,7 +44,7 @@ describe('Snapshot Testing', () => {
 
   test('Optional Props', () => {
     const tablePagination = shallow(
-      <TablePagination
+      <Pagination
         labelRowsPerPage='rows per page'
         labelPaginationOf='of'
         rowsPerPageOptions={[2, 5, 10]}

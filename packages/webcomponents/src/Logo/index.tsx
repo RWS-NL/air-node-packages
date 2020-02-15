@@ -23,5 +23,3 @@ export interface LogoProps extends SVGProps<any> {
 export const Logo = memo((props: LogoProps) => (
   <LogoSVG {...props} className={classnames(css.logo, css.customclasses)} />
 ));
-
-export default Logo;

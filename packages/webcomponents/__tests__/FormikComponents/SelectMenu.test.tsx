@@ -1,6 +1,6 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-import SelectMenu from '../../src/FormikComponents/SelectMenu';
+import { SelectMenu } from '../../src/FormikComponents/SelectMenu';
 import { Formik } from 'formik';
 
 describe('Snapshot Testing', () => {

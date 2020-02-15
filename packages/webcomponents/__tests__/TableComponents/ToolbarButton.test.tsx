@@ -2,7 +2,7 @@ import { IconButton } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
-import ToolbarButton, { ToolbarButtonProps } from '../../src/TableComponents/ToolbarButton';
+import { ToolbarButton, ToolbarButtonProps } from '../../src/TableComponents/ToolbarButton';
 
 const mockButtonClick = jest.fn();
 

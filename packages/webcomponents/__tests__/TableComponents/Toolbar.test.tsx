@@ -1,6 +1,6 @@
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
-import TableToolbar from '../../src/TableComponents/Toolbar';
+import { Toolbar } from '../../src/TableComponents/Toolbar';
 
 const mockOnSearchInput = jest.fn();
 const mockOnSearchClear = jest.fn();
@@ -10,7 +10,7 @@ describe('Component Tests', () => {
 
   beforeAll(() => {
     tableToolbar = shallow(
-      <TableToolbar
+      <Toolbar
         searchplaceholderlabel='placeholder'
         onsearchinput={mockOnSearchInput}
         onsearchclear={mockOnSearchClear}
@@ -43,7 +43,7 @@ describe('Component Tests', () => {
 describe('Snapshot Testing', () => {
   test('Required Props', () => {
     const tableToolbar = shallow(
-      <TableToolbar
+      <Toolbar
         searchplaceholderlabel='placeholder'
         onsearchinput={mockOnSearchInput}
         onsearchclear={mockOnSearchClear}
@@ -54,7 +54,7 @@ describe('Snapshot Testing', () => {
 
   test('Optional Props', () => {
     const tableToolbar = shallow(
-      <TableToolbar
+      <Toolbar
         searchplaceholderlabel='placeholder'
         onsearchinput={mockOnSearchInput}
         onsearchclear={mockOnSearchClear}

@@ -22,5 +22,3 @@ export const ItalicTrans = memo(({ titleKey, italicKey }: ItalicTransProps) => (
     </em>
   </Fragment>
 ));
-
-export default ItalicTrans;

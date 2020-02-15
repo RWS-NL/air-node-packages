@@ -1,7 +1,7 @@
 import { shallow } from 'enzyme';
 import { Formik } from 'formik';
 import React from 'react';
-import DatePicker from '../../src/FormikComponents/DatePicker';
+import { DatePicker } from '../../src/FormikComponents/DatePicker';
 
 const minimumDateForPicker = new Date('2012-01-01');
 

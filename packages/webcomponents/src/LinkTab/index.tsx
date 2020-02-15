@@ -50,5 +50,3 @@ export const LinkTab = memo(({ to, label, external = false, openInNewTab = false
     />
   );
 });
-
-export default LinkTab;

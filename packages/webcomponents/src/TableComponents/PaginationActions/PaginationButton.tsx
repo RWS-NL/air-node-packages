@@ -12,5 +12,3 @@ export const PaginationButton = memo(({ onClick, disabled, icon, ...props }: Pag
     {icon}
   </IconButton>
 ));
-
-export default PaginationButton;

@@ -62,5 +62,3 @@ export const RadioGroup = <T extends OptionValue>({
     </MUIRadioGroup>
   );
 };
-
-export default RadioGroup;

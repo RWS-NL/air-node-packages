@@ -6,5 +6,3 @@
 export function objectHasProperty<O extends object>(obj: O, prop: keyof O) {
   return obj && prop in obj;
 }
-
-export default objectHasProperty;

@@ -10,5 +10,3 @@ export function snakeToCamelCase(str: string) {
       .replace('_', '')
   );
 }
-
-export default snakeToCamelCase;

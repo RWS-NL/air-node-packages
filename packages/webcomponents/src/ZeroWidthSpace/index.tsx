@@ -33,5 +33,3 @@ export const ZeroWidthSpace = memo(
     </Typography>
   )
 );
-
-export default ZeroWidthSpace;

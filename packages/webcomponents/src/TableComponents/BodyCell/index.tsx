@@ -45,5 +45,3 @@ export const BodyCell = memo(
     </MUITableCell>
   )
 );
-
-export default BodyCell;

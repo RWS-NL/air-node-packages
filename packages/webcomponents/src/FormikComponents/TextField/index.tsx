@@ -56,5 +56,3 @@ export const TextField: FC<TextFieldProps> = props => {
     />
   );
 };
-
-export default TextField;

@@ -6,7 +6,7 @@ import CheckCircle from '@material-ui/icons/CheckCircle';
 import WarningIcon from '@material-ui/icons/Warning';
 import classnames from 'classnames';
 import React, { Fragment, KeyboardEvent, memo, useMemo } from 'react';
-import Button from '../Button';
+import { Button } from '../Button';
 import { ModalProps, ModalQAs } from '../Modal';
 import css from './ConfirmationModal.scss';
 
@@ -123,5 +123,3 @@ export const ConfirmationModal = memo((props: ConfirmationModalProps) => {
     </Dialog>
   );
 });
-
-export default ConfirmationModal;

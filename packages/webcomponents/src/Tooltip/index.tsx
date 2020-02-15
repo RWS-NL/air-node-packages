@@ -44,5 +44,3 @@ export const Tooltip = memo(
     </MUITooltip>
   )
 );
-
-export default Tooltip;

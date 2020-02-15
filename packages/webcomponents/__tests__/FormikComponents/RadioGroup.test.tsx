@@ -1,7 +1,7 @@
 import { shallow, ShallowWrapper } from 'enzyme';
 import { Formik } from 'formik';
 import React from 'react';
-import RadioGroup, { Option } from '../../src/FormikComponents/RadioGroup';
+import { RadioGroup, Option } from '../../src/FormikComponents/RadioGroup';
 
 describe('Component Tests', () => {
   let radioGroup: ShallowWrapper;

@@ -5,7 +5,7 @@ import MUITablePagination, {
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import classnames from 'classnames';
 import React, { memo, ReactNode } from 'react';
-import PaginationActions from '../PaginationActions';
+import { PaginationActions } from '../PaginationActions';
 import css from './Pagination.scss';
 
 export type MutatedMUITablePaginationProps = TablePaginationTypeMap<
@@ -65,5 +65,3 @@ export const Pagination = memo((props: PaginationProps) => {
     />
   );
 });
-
-export default Pagination;

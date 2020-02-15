@@ -1,4 +1,4 @@
-import Checkbox from '../../src/FormikComponents/Checkbox';
+import { Checkbox } from '../../src/FormikComponents/Checkbox';
 import { shallow, ShallowWrapper } from 'enzyme';
 import MUICheckbox from '@material-ui/core/Checkbox/Checkbox';
 import React from 'react';

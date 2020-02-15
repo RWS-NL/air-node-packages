@@ -16,5 +16,3 @@ export const ModalContent = memo(props => (
     {props.children}
   </div>
 ));
-
-export default ModalContent;

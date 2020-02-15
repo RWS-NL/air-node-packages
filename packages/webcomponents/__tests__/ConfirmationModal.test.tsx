@@ -2,7 +2,7 @@ import CheckCircle from '@material-ui/icons/CheckCircle';
 import WarningIcon from '@material-ui/icons/Warning';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React, { Fragment } from 'react';
-import Button from '../src/Button';
+import { Button } from '../src/Button';
 import { ConfirmationModal, ConfirmationModalProps } from '../src/ConfirmationModal';
 
 let confirmationModal: ShallowWrapper<ConfirmationModalProps, any>;

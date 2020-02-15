@@ -1,6 +1,6 @@
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
-import TablePaginationActions from '../../src/TableComponents/PaginationActions';
+import { PaginationActions } from '../../src/TableComponents/PaginationActions';
 
 const onChangePage = jest.fn();
 
@@ -9,7 +9,7 @@ describe('Component Tests', () => {
 
   beforeAll(() => {
     tablePaginationActions = shallow(
-      <TablePaginationActions rowsPerPage={10} page={0} count={42} onChangePage={onChangePage} />
+      <PaginationActions rowsPerPage={10} page={0} count={42} onChangePage={onChangePage} />
     );
   });
 
@@ -45,14 +45,14 @@ describe('Component Tests', () => {
 describe('Snapshot Testing', () => {
   test('Required Props', () => {
     const tablePaginationActions = shallow(
-      <TablePaginationActions rowsPerPage={10} page={0} count={42} onChangePage={onChangePage} />
+      <PaginationActions rowsPerPage={10} page={0} count={42} onChangePage={onChangePage} />
     );
     expect(tablePaginationActions).toMatchSnapshot();
   });
 
   test('Optional Props', () => {
     const tablePaginationActions = shallow(
-      <TablePaginationActions
+      <PaginationActions
         rowsPerPage={10}
         page={0}
         count={42}

@@ -2,7 +2,7 @@ import Grid from '@material-ui/core/Grid/Grid';
 import classnames from 'classnames';
 import debouncer from 'lodash.debounce';
 import React, { Fragment, memo, ReactNode } from 'react';
-import SearchBar, { SearchBarProps } from '../SearchBar';
+import { SearchBar, SearchBarProps } from '../SearchBar';
 import { ToolbarButton, ToolbarButtonProps } from '../ToolbarButton';
 import css from './Toolbar.scss';
 
@@ -127,5 +127,3 @@ export const Toolbar = memo(
     );
   }
 );
-
-export default Toolbar;

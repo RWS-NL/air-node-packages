@@ -1,4 +1,4 @@
-import NavBar, { NavBarProps } from '../src/NavBar';
+import { NavBar, NavBarProps } from '../src/NavBar';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React, { ChangeEvent } from 'react';
 import { LinkTabProps } from '../src/LinkTab';

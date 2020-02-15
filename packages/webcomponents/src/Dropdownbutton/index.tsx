@@ -10,7 +10,7 @@ import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import { cutText } from '@rws-air/utils';
 import classnames from 'classnames';
 import React, { memo, MouseEvent as ReactMouseEvent, ReactNode, useRef, useState } from 'react';
-import Button from '../Button';
+import { Button } from '../Button';
 import css from './Dropdownbutton.scss';
 
 export interface DropdownbuttonProps {
@@ -154,5 +154,3 @@ export const Dropdownbutton = memo((props: DropdownbuttonProps) => {
     </Grid>
   );
 });
-
-export default Dropdownbutton;
