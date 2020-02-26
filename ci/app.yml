@@ -1,19 +1,4 @@
 app-github-uri: https://github.com/RWS-NL/air-node-packages.git
 app-github-repo: RWS-NL/air-node-packages
 app-source-branch: master
-
 app-project-name: air-node-packages
-
-app-artifactory-regex:
-app-artifactory-filename:
-app-artifactory-extension:
-
-app-undeploy-after-smoketest: true
-
-# fill for nfs-binding
-app-nfs-service-name:
-app-nfs-config-file:
-
-# fill for extra path mapping on the route
-app-extra-route-path:
-app-other-host-name:
