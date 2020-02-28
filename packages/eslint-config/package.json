@@ -19,9 +19,9 @@
     "dist"
   ],
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "2.20.0",
-    "@typescript-eslint/parser": "2.20.0",
-    "babel-eslint": "10.x",
+    "@typescript-eslint/eslint-plugin": "2.21.0",
+    "@typescript-eslint/parser": "2.21.0",
+    "babel-eslint": "10.1.0",
     "eslint": "6.x",
     "eslint-config-react-app": "^5.1.0",
     "eslint-plugin-flowtype": "3.x",
