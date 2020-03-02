@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.6](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/eslint-config@3.0.5...@rws-air/eslint-config@3.0.6) (2020-03-02)
+
+### Bug Fixes
+
+- **eslint-config:** fixed dependencies again ([2cc0568](https://github.com/RWS-NL/air-node-packages/commit/2cc0568a7d0bb7f6656dd7df4848bf642b93aec6))
+
 ## [3.0.5](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/eslint-config@3.0.4...@rws-air/eslint-config@3.0.5) (2020-03-02)
 
 ### Bug Fixes
