@@ -2,7 +2,7 @@
 
 exports[`isObject Function Snapshot 1`] = `
 "function isObject(input) {
-    return input ? input.constructor === Object : false;
+    return typeof input === 'object' && input ? input.constructor === Object : false;
 }"
 `;
 
