@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserInfo tests Snapshot Testing Required Props 1`] = `
+<Styled(MuiBox)
+  className="authInfo"
+  component="div"
+>
+  <Styled(MuiBox)
+    component="div"
+    data-qa="logged-in-email"
+  >
+    <When
+      condition={true}
+    >
+      <WithStyles(ForwardRef(Typography))
+        align="center"
+        color="textPrimary"
+        variant="subtitle2"
+      >
+        john.connor@rws.nl
+      </WithStyles(ForwardRef(Typography))>
+    </When>
+  </Styled(MuiBox)>
+  <WithStyles(ForwardRef(Button))
+    className="relogin"
+    data-qa="re-login-link"
+    onClick={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    size="small"
+  >
+    <WithStyles(ForwardRef(Typography))
+      align="center"
+      color="textPrimary"
+      variant="subtitle2"
+    >
+      relogin
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Button))>
+</Styled(MuiBox)>
+`;
