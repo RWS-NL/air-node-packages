@@ -1,4 +1,5 @@
 export * from './ActionBar';
+export * from './Bar';
 export * from './Button';
 export * from './ConfirmationModal';
 export * from './Dropdownbutton';
@@ -13,4 +14,5 @@ export * from './ModalContent';
 export * from './NavBar';
 export * from './TableComponents';
 export * from './Tooltip';
+export * from './UserInfo';
 export * from './ZeroWidthSpace';
