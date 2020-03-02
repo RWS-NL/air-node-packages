@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.1.2](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@11.1.1...@rws-air/webcomponents@11.1.2) (2020-03-02)
+
+### Bug Fixes
+
+- **webcomponents:** fix style import for Bar component ([72bf510](https://github.com/RWS-NL/air-node-packages/commit/72bf510b8c1d2667048cec9b24e13ef325cc75b7)), closes [#171018308](https://github.com/RWS-NL/air-node-packages/issues/171018308)
+
 ## [11.1.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@11.1.0...@rws-air/webcomponents@11.1.1) (2020-03-02)
 
 ### Bug Fixes
