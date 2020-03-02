@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@4.0.0...@rws-air/utils@4.1.0) (2020-03-02)
+
+### Features
+
+- add groupBy and toStack methods ([4c45f34](https://github.com/RWS-NL/air-node-packages/commit/4c45f34d51d7feebd331e88ed9aaf67aa157449b))
+
 # [4.0.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@3.1.2...@rws-air/utils@4.0.0) (2020-02-15)
 
 ### Code Refactoring
