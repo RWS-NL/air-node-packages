@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.2.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@4.1.0...@rws-air/utils@4.2.0) (2020-03-02)
+
+### Features
+
+- **utils:** add findByDataQa and toBeCalled testing functions ([dcd6638](https://github.com/RWS-NL/air-node-packages/commit/dcd66385aa98de178d0cc3e868a03053c8e95ad0))
+
 # [4.1.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@4.0.0...@rws-air/utils@4.1.0) (2020-03-02)
 
 ### Features

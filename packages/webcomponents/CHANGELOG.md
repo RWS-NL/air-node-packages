@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.1.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@11.0.1...@rws-air/webcomponents@11.1.0) (2020-03-02)
+
+### Features
+
+- **webcomponents:** add userinfo and bar components ([71e7667](https://github.com/RWS-NL/air-node-packages/commit/71e7667d191a1c9e02399828d3943f8a4f6e37df))
+
 ## [11.0.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@11.0.0...@rws-air/webcomponents@11.0.1) (2020-03-02)
 
 **Note:** Version bump only for package @rws-air/webcomponents
