@@ -1,7 +1,7 @@
 import { Box } from '@material-ui/core';
 import classnames from 'classnames';
 import React, { memo, PropsWithChildren } from 'react';
-import css from 'styles/modules/Bar.module.scss';
+import css from './Bar.scss';
 
 interface BarProps {
   /** Additional CSS classes to apply to the Bar component */
