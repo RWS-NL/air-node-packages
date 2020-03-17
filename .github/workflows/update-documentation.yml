@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+  pull_request:
 
 jobs:
   TypeDoc:
@@ -50,10 +51,10 @@ jobs:
 
           echo -e "\n# Commit and push"
           cd out
-          git add --all .
+          git add --all
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_EMAIL}"
-          git commit -m "docs: api docs build for${GITHUB_SHA}" || true
+          git commit -m "docs: api docs build for ${GITHUB_SHA}" || true
           git push origin $TARGET_BRANCH
         env:
           GITHUB_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
