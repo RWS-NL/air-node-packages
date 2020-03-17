@@ -16,7 +16,8 @@
     "start": "tsc -w"
   },
   "files": [
-    "dist"
+    "dist",
+    "!dist/.tsbuildinfo"
   ],
   "peerDependencies": {
     "fuse.js": "^3",

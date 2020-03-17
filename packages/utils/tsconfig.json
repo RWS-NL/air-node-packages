@@ -3,12 +3,11 @@
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src",
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
     "declarationMap": true,
-    "incremental": true,
-    "skipLibCheck": true,
-    "target": "es6"
+    "target": "ES6",
+    "tsBuildInfoFile": "dist/.tsbuildinfo"
   },
   "include": ["src"]
 }

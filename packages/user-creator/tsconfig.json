@@ -3,8 +3,10 @@
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src",
-    "baseUrl": "src",
-    "skipLibCheck": true
+    "module": "CommonJS",
+    "tsBuildInfoFile": "dist/.tsbuildinfo",
+    "sourceMap": false,
+    "declaration": false
   },
   "include": ["src"]
 }

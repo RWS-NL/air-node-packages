@@ -5,17 +5,18 @@
   "author": "@rws-air",
   "license": "AGPL-3.0-or-later",
   "main": "dist/index.js",
-  "module": "dist/index.es.js",
+  "typings": "dist/index.d.ts",
   "homepage": "https://github.com/RWS-NL/air-node-packages/tree/master/packages/jestscreenshot#readme",
   "scripts": {
     "lint": "eslint src --fix --ext .ts,.tsx",
     "test": "yarn lint",
     "prebuild": "yarn lint",
-    "build": "rollup -c rollup.config.js",
-    "start": "yarn build -w"
+    "build": "tsc",
+    "start": "tsc -w"
   },
   "files": [
-    "dist"
+    "dist",
+    "!dist/.tsbuildinfo"
   ],
   "peerDependencies": {
     "@types/jest-environment-puppeteer": ">=4",

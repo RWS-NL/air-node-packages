@@ -1,10 +1,10 @@
 {
   "extends": "@favware/ts-config",
   "compilerOptions": {
-    "target": "es5",
-    "jsx": "react",
+    "target": "ES2019",
     "downlevelIteration": true,
-    "incremental": false
+    "importHelpers": false,
+    "skipLibCheck": true
   },
   "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.tsx", "**/*.test.ts"],
   "typedocOptions": {

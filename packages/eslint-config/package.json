@@ -5,22 +5,22 @@
   "author": "@rws-air",
   "license": "AGPL-3.0-or-later",
   "main": "dist/index.js",
-  "module": "dist/index.es.js",
   "homepage": "https://github.com/RWS-NL/air-node-packages/tree/master/packages/eslint-config#readme",
   "scripts": {
     "lint": "eslint src --fix --ext .ts,.tsx",
     "test": "yarn lint",
     "prebuild": "yarn lint",
-    "build": "rollup -c rollup.config.js",
-    "ci:build": "rollup -c rollup.config.js",
-    "start": "yarn build -w"
+    "build": "tsc",
+    "ci:build": "tsc",
+    "start": "tsc -w"
   },
   "files": [
-    "dist"
+    "dist",
+    "!dist/.tsbuildinfo"
   ],
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "2.x",
-    "@typescript-eslint/parser": "2.x",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
     "babel-eslint": "10.0.3",
     "eslint": "6.x",
     "eslint-config-react-app": "^5.2.0",

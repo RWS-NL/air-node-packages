@@ -1,10 +1,12 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "build",
+    "outDir": "dist",
     "rootDir": "src",
-    "baseUrl": "src"
+    "module": "CommonJS",
+    "tsBuildInfoFile": "dist/.tsbuildinfo",
+    "sourceMap": false,
+    "declaration": false
   },
-  "include": ["src"],
-  "exclude": ["src/setupTests.ts", "src/__tests__"]
+  "include": ["src"]
 }
