@@ -27,6 +27,7 @@ node_modules/
 **/build/
 **/bin/
 **/*.tsbuildinfo
+docs/
 
 # Logs
 logs/

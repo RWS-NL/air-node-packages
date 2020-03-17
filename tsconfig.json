@@ -4,7 +4,8 @@
     "target": "ES2019",
     "downlevelIteration": true,
     "importHelpers": false,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "jsx": "react"
   },
   "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.tsx", "**/*.test.ts"],
   "typedocOptions": {
@@ -27,6 +28,7 @@
     "excludeExternals": true,
     "excludePrivate": true,
     "excludeProtected": true,
-    "excludeNotExported": true
+    "excludeNotExported": true,
+    "lernaExclude": ["cra-template-air", "@rws-air/local-components-test"]
   }
 }
