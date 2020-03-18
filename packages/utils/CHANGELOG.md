@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.2](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@4.2.1...@rws-air/utils@4.2.2) (2020-03-18)
+
+**Note:** Version bump only for package @rws-air/utils
+
 ## [4.2.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@4.2.0...@rws-air/utils@4.2.1) (2020-03-17)
 
 **Note:** Version bump only for package @rws-air/utils
