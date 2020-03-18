@@ -156,7 +156,7 @@
   },
   "resolutions": {
     "serialize-javascript": "^3.0.0",
-    "acorn": "^7.1.1",
+    "acorn": "^6.4.1",
     "minimist": "^1.2.2"
   }
 }
