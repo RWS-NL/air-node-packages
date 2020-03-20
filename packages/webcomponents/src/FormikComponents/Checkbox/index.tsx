@@ -1,10 +1,11 @@
-import { Checkbox as MUICheckbox, FormControlLabel } from '@material-ui/core';
+import MUICheckbox, { CheckboxProps as MUICheckboxProps } from '@material-ui/core/Checkbox';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 import CheckBoxOutlineFilledIcon from '@material-ui/icons/CheckBox';
 import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
 import React, { ChangeEvent, forwardRef, ForwardRefExoticComponent } from 'react';
 import css from './Checkbox.scss';
 
-export interface CheckboxProps {
+export interface CheckboxProps extends MUICheckboxProps {
   /** The name for the checkbox field */
   name: string;
   /** A tracker for the current value of the checkbox */
@@ -29,7 +30,7 @@ export interface CheckboxProps {
  * @example
  * ```jsx
  * <FieldArray
- *     name='fieldArray'
+ *     name='fieldArrayNamne'
  *     render={arrayHelpers => (
  *     <Fragment>
  *         {arrayWithObjects.map((item, index) => (
@@ -40,7 +41,7 @@ export interface CheckboxProps {
  *                 value={item.name}
  *                 data-qa={`checkbox-${item.name.toLowerCase()}`}
  *                 name={`form.title.${item.name.toLowerCase()}`}
- *                 onChange={(e: React.ChangeEvent<{ checked: boolean }>) => {
+ *                 onChange={(e: ChangeEvent<{ checked: boolean }>) => {
  *                 if (e.target.checked) {
  *                     arrayHelpers.push(item.name);
  *                 } else {
@@ -59,12 +60,12 @@ export interface CheckboxProps {
  * ```
  */
 export const Checkbox: ForwardRefExoticComponent<CheckboxProps> = forwardRef(
-  ({ name, value, onChange, onBlur, 'data-qa': dataQa, ...props }, ref) => (
+  ({ name, value, onChange, onBlur, 'data-qa': dataQa, checked, ...props }, ref) => (
     <FormControlLabel
-      {...props}
       ref={ref}
       control={
         <MUICheckbox
+          {...props}
           icon={<CheckBoxOutlineBlankIcon className={css.checkBox} fontSize='small' />}
           checkedIcon={<CheckBoxOutlineFilledIcon fontSize='small' />}
           name={name}
@@ -73,6 +74,7 @@ export const Checkbox: ForwardRefExoticComponent<CheckboxProps> = forwardRef(
           onBlur={onBlur}
           color='primary'
           data-qa={dataQa}
+          checked={checked}
         />
       }
       label={name}

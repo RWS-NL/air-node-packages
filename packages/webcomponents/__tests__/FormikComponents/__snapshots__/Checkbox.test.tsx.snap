@@ -1,5 +1,80 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Snapshot Testing Passing a bunch of additional props 1`] = `
+<WithStyles(ForwardRef(FormControlLabel))
+  classes={
+    Object {
+      "label": "label",
+    }
+  }
+  control={
+    <WithStyles(ForwardRef(Checkbox))
+      autoCapitalize="yes"
+      buttonRef={
+        Object {
+          "current": null,
+        }
+      }
+      checked={false}
+      checkedIcon={
+        <Memo(CheckBoxIcon)
+          fontSize="small"
+        />
+      }
+      color="primary"
+      disableFocusRipple={true}
+      disableRipple={true}
+      disableTouchRipple={true}
+      disabled={true}
+      icon={
+        <Memo(CheckBoxOutlineBlankIcon)
+          className="checkBox"
+          fontSize="small"
+        />
+      }
+      name="testCheckbox"
+      onAbort={[MockFunction]}
+      onBlur={[MockFunction]}
+      onChange={[MockFunction]}
+      value="testCheckbox"
+    />
+  }
+  label="testCheckbox"
+/>
+`;
+
+exports[`Snapshot Testing Passing custom checked property 1`] = `
+<WithStyles(ForwardRef(FormControlLabel))
+  classes={
+    Object {
+      "label": "label",
+    }
+  }
+  control={
+    <WithStyles(ForwardRef(Checkbox))
+      checked={true}
+      checkedIcon={
+        <Memo(CheckBoxIcon)
+          fontSize="small"
+        />
+      }
+      color="primary"
+      icon={
+        <Memo(CheckBoxOutlineBlankIcon)
+          className="checkBox"
+          fontSize="small"
+        />
+      }
+      name="testCheckbox"
+      onBlur={[MockFunction]}
+      onChange={[MockFunction]}
+      value="testCheckbox"
+    />
+  }
+  label="testCheckbox"
+/>
+`;
+
 exports[`Snapshot Testing Required Props 1`] = `
 <WithStyles(ForwardRef(FormControlLabel))
   classes={

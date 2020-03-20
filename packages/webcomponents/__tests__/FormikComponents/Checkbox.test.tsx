@@ -1,7 +1,7 @@
-import { Checkbox } from '../../src/FormikComponents/Checkbox';
-import { shallow, ShallowWrapper } from 'enzyme';
 import MUICheckbox from '@material-ui/core/Checkbox/Checkbox';
-import React from 'react';
+import { shallow, ShallowWrapper } from 'enzyme';
+import React, { createRef } from 'react';
+import { Checkbox } from '../../src/FormikComponents/Checkbox';
 
 const mockCheckboxOnChange = jest.fn();
 const mockCheckboxOnBlur = jest.fn();
@@ -35,6 +35,40 @@ describe('Snapshot Testing', () => {
   test('Required Props', () => {
     const checkBox = shallow(
       <Checkbox name='testCheckbox' value='testCheckbox' onBlur={mockCheckboxOnBlur} onChange={mockCheckboxOnChange} />
+    );
+    expect(checkBox).toMatchSnapshot();
+  });
+
+  test('Passing custom checked property', () => {
+    const checkBox = shallow(
+      <Checkbox
+        name='testCheckbox'
+        value='testCheckbox'
+        onBlur={mockCheckboxOnBlur}
+        onChange={mockCheckboxOnChange}
+        checked={['one', 'two', 'three'].includes('one')}
+      />
+    );
+    expect(checkBox).toMatchSnapshot();
+  });
+
+  test('Passing a bunch of additional props', () => {
+    const checkBox = shallow(
+      <Checkbox
+        autoCapitalize='yes'
+        buttonRef={createRef()}
+        checked={false}
+        color='primary'
+        disabled
+        disableFocusRipple
+        disableRipple
+        disableTouchRipple
+        name='testCheckbox'
+        onAbort={jest.fn()}
+        onBlur={mockCheckboxOnBlur}
+        onChange={mockCheckboxOnChange}
+        value='testCheckbox'
+      />
     );
     expect(checkBox).toMatchSnapshot();
   });
