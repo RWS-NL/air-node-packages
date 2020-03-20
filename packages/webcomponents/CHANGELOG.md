@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.1.5](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@11.1.4...@rws-air/webcomponents@11.1.5) (2020-03-20)
+
+### Bug Fixes
+
+- **webcomponents:** fixed possible properties in Checkbox component ([7f6865e](https://github.com/RWS-NL/air-node-packages/commit/7f6865e5f695e2fde31374619e10239aa2f947d0))
+
 ## [11.1.4](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@11.1.3...@rws-air/webcomponents@11.1.4) (2020-03-18)
 
 **Note:** Version bump only for package @rws-air/webcomponents
