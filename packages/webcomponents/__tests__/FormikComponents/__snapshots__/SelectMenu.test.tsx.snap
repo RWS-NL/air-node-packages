@@ -49,7 +49,8 @@ exports[`Snapshot Testing Required Props 1`] = `
     }
   }
 >
-  <SelectMenu
+  <Field
+    component={[Function]}
     label="Sample Label"
     name="type"
     options={

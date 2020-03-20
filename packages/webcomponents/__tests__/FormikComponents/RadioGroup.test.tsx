@@ -1,7 +1,7 @@
 import { shallow, ShallowWrapper } from 'enzyme';
-import { Formik } from 'formik';
+import { Field, Formik } from 'formik';
 import React from 'react';
-import { RadioGroup, Option } from '../../src/FormikComponents/RadioGroup';
+import { Option, RadioGroup } from '../../src/FormikComponents/RadioGroup';
 
 describe('Component Tests', () => {
   let radioGroup: ShallowWrapper;
@@ -13,9 +13,9 @@ describe('Component Tests', () => {
   beforeAll(() => {
     radioGroup = shallow(
       <Formik initialValues={{ name: '' }} onSubmit={() => undefined}>
-        <RadioGroup<'JOHN' | 'CONNOR'> data-qa='formFieldName' name='name' options={options} />
+        <Field component={RadioGroup} data-qa='formFieldName' name='name' options={options} />
       </Formik>
-    ).find(RadioGroup);
+    ).find(Field);
   });
 
   test('GIVEN RadioGroup with 2 options THEN has 2 radio group with options of length 2', () => {
@@ -27,7 +27,8 @@ describe('Snapshot Testing', () => {
   test('Required Props', () => {
     const radioGroup = shallow(
       <Formik initialValues={{ name: '' }} onSubmit={() => undefined}>
-        <RadioGroup<'JOHN' | 'CONNOR'>
+        <Field
+          component={RadioGroup}
           name='name'
           options={[
             { value: 'JOHN', label: 'John' },
@@ -42,7 +43,8 @@ describe('Snapshot Testing', () => {
   test('Optional Props', () => {
     const radioGroup = shallow(
       <Formik initialValues={{ name: '' }} onSubmit={() => undefined}>
-        <RadioGroup<'JOHN' | 'CONNOR'>
+        <Field
+          component={RadioGroup}
           data-qa='formFieldName'
           required
           name='name'

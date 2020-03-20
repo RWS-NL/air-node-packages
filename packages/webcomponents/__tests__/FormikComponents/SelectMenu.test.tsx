@@ -1,13 +1,14 @@
 import { shallow } from 'enzyme';
+import { Field, Formik } from 'formik';
 import React from 'react';
 import { SelectMenu } from '../../src/FormikComponents/SelectMenu';
-import { Formik } from 'formik';
 
 describe('Snapshot Testing', () => {
   test('Required Props', () => {
     const selectMenu = shallow(
       <Formik initialValues={{ name: '' }} onSubmit={() => undefined}>
-        <SelectMenu
+        <Field
+          component={SelectMenu}
           name='type'
           label='Sample Label'
           options={[

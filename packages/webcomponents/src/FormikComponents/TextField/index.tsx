@@ -1,7 +1,7 @@
 import { TextField as MUITextField } from '@material-ui/core';
 import classnames from 'classnames';
-import { FieldHookConfig, useField } from 'formik';
-import { TextFieldProps, useFieldToTextField } from 'formik-material-ui';
+import { useField } from 'formik';
+import { fieldToTextField, TextFieldProps } from 'formik-material-ui';
 import React, { FC } from 'react';
 import css from './TextField.scss';
 
@@ -10,23 +10,27 @@ import css from './TextField.scss';
  * @param props Props to pass to the Textield component
  * @example
  * ```jsx
- * <TextField
- *  name='name' type='text' label='Example'
- *  placeholder='Example placeholder' variant='outlined'
- *  data-qa='exampleDataQA' required
+ * <Field
+ *   component={TextField}
+ *   name='name'
+ *   type='text'
+ *   label='Example'
+ *   placeholder='Example placeholder'
+ *   variant='outlined'
+ *   data-qa='exampleDataQA'
+ *   required
  * />
  * ```
  */
 export const TextField: FC<TextFieldProps> = props => {
-  const [{ value, onChange, onBlur }, { error, touched }] = useField(props as FieldHookConfig<any>);
-  const textFieldProps = useFieldToTextField(props);
+  const [{ value, onChange, onBlur }, { error, touched }] = useField(props.field.name);
 
   const textFieldHasErrors = Boolean(error) && touched;
 
   return (
     <MUITextField
       {...props}
-      {...textFieldProps}
+      {...fieldToTextField(props)}
       value={value}
       label={props.label}
       placeholder={props.placeholder}
@@ -50,6 +54,7 @@ export const TextField: FC<TextFieldProps> = props => {
         classes: { root: css.inputLabel }
       }}
       FormHelperTextProps={{
+        // @ts-ignore
         component: 'div',
         classes: { error: css.errorLabel }
       }}

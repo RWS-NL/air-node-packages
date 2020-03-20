@@ -2,7 +2,7 @@ import { FormControl, FormHelperText, InputLabel, MenuItem, Select } from '@mate
 import ArrowDropIcon from '@material-ui/icons/ArrowDropDown';
 import classnames from 'classnames';
 import { useField } from 'formik';
-import { SelectProps, useFieldToSelect } from 'formik-material-ui';
+import { fieldToSelect, SelectProps } from 'formik-material-ui';
 import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { When } from 'react-if';
 import css from './SelectMenu.scss';
@@ -29,7 +29,8 @@ export interface SelectMenuProps<T extends SelectMenuOptionValues> extends Selec
  * @param props Props to pass to the select menu component
  * @example
  * ```jsx
- * <SelectMenu
+ * <Field
+ *   component={SelectMenu}
  *   name='type'
  *   type='text'
  *   required
@@ -44,15 +45,13 @@ export interface SelectMenuProps<T extends SelectMenuOptionValues> extends Selec
 export const SelectMenu = <T extends SelectMenuOptionValues>({
   label,
   options,
-  name,
   placeholder,
   className,
   autoFocus,
   required,
   ...props
 }: SelectMenuProps<T>) => {
-  const selectFieldProps = useFieldToSelect({ name, ...props });
-  const [{ value, onChange, onBlur }, { error, touched }] = useField(name);
+  const [{ value, onChange, onBlur }, { error, touched }] = useField(props.field.name);
 
   const inputLabel = useRef<HTMLLabelElement>(null);
   const [labelWidth, setLabelWidth] = useState(0);
@@ -77,8 +76,8 @@ export const SelectMenu = <T extends SelectMenuOptionValues>({
           {label}
         </InputLabel>
         <Select
-          {...selectFieldProps}
           {...props}
+          {...fieldToSelect(props)}
           type='text'
           labelId={`validated-select-menu-${label}`}
           labelWidth={labelWidth}

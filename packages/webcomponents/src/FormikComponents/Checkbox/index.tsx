@@ -1,7 +1,8 @@
-import MUICheckbox, { CheckboxProps as MUICheckboxProps } from '@material-ui/core/Checkbox';
+import MUICheckbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import CheckBoxOutlineFilledIcon from '@material-ui/icons/CheckBox';
 import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
+import { CheckboxProps as MUICheckboxProps, fieldToCheckbox } from 'formik-material-ui';
 import React, { ChangeEvent, forwardRef, ForwardRefExoticComponent } from 'react';
 import css from './Checkbox.scss';
 
@@ -12,6 +13,11 @@ export interface CheckboxProps extends MUICheckboxProps {
   value: string;
   /** Data-QA to send to the checkbox for testing */
   'data-qa'?: string;
+  /**
+   * Whether the current checkbox should be in checked state
+   * @default false
+   */
+  checked?: boolean;
   /**
    * The formik onChange event
    * @example `formikProps.handlechange`
@@ -36,8 +42,10 @@ export interface CheckboxProps extends MUICheckboxProps {
  *         {arrayWithObjects.map((item, index) => (
  *         <Grid item xs={4} key={index}>
  *             <Tooltip title={`form.title.${item.name.toLowerCase()}`} placement='top'>
- *             <Checkbox
+ *             <Field
  *                 key={index}
+ *                 component={Checkbox}
+ *                 type='checkbox'
  *                 value={item.name}
  *                 data-qa={`checkbox-${item.name.toLowerCase()}`}
  *                 name={`form.title.${item.name.toLowerCase()}`}
@@ -60,21 +68,23 @@ export interface CheckboxProps extends MUICheckboxProps {
  * ```
  */
 export const Checkbox: ForwardRefExoticComponent<CheckboxProps> = forwardRef(
-  ({ name, value, onChange, onBlur, 'data-qa': dataQa, checked, ...props }, ref) => (
+  ({ name, value, onChange, onBlur, 'data-qa': dataQa, checked = false, form, type, ...props }, ref) => (
     <FormControlLabel
       ref={ref}
       control={
         <MUICheckbox
           {...props}
-          icon={<CheckBoxOutlineBlankIcon className={css.checkBox} fontSize='small' />}
+          {...fieldToCheckbox({ form, ...props })}
+          checked={checked}
           checkedIcon={<CheckBoxOutlineFilledIcon fontSize='small' />}
-          name={name}
-          value={value}
-          onChange={onChange}
-          onBlur={onBlur}
           color='primary'
           data-qa={dataQa}
-          checked={checked}
+          icon={<CheckBoxOutlineBlankIcon className={css.checkBox} fontSize='small' />}
+          name={name}
+          onBlur={onBlur}
+          onChange={onChange}
+          type='button'
+          value={value}
         />
       }
       label={name}

@@ -49,7 +49,8 @@ exports[`Snapshot Testing Optional Props 1`] = `
     }
   }
 >
-  <RadioGroup
+  <Field
+    component={[Function]}
     data-qa="formFieldName"
     name="name"
     options={
@@ -118,7 +119,8 @@ exports[`Snapshot Testing Required Props 1`] = `
     }
   }
 >
-  <RadioGroup
+  <Field
+    component={[Function]}
     name="name"
     options={
       Array [

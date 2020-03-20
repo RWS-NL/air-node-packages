@@ -1,6 +1,7 @@
-import MUICheckbox from '@material-ui/core/Checkbox/Checkbox';
+import { toBeCalled } from '@rws-air/utils';
 import { shallow, ShallowWrapper } from 'enzyme';
-import React, { createRef } from 'react';
+import { Field, Formik } from 'formik';
+import React, { createRef, FC } from 'react';
 import { Checkbox } from '../../src/FormikComponents/Checkbox';
 
 const mockCheckboxOnChange = jest.fn();
@@ -11,8 +12,16 @@ describe('Component Tests', () => {
 
   beforeAll(() => {
     checkBox = shallow(
-      <Checkbox name='testCheckbox' value='testCheckbox' onBlur={mockCheckboxOnBlur} onChange={mockCheckboxOnChange} />
-    );
+      <BaseFormik>
+        <Field
+          component={Checkbox}
+          name='testCheckbox'
+          onBlur={mockCheckboxOnBlur}
+          onChange={mockCheckboxOnChange}
+          value='testCheckbox'
+        />
+      </BaseFormik>
+    ).find(Field);
   });
 
   afterAll(() => {
@@ -21,55 +30,71 @@ describe('Component Tests', () => {
 
   test('checkbox function called onChange', () => {
     const changeEvent = { event: { target: { value: true } } };
-    checkBox
-      .dive()
-      .dive()
-      .find(MUICheckbox)
-      .simulate('change', changeEvent);
-    expect(mockCheckboxOnChange).toHaveBeenCalledWith(changeEvent);
-    expect(mockCheckboxOnChange).toHaveBeenCalledTimes(1);
+    checkBox.simulate('change', changeEvent);
+
+    toBeCalled(mockCheckboxOnChange, 1, changeEvent);
   });
 });
 
 describe('Snapshot Testing', () => {
   test('Required Props', () => {
     const checkBox = shallow(
-      <Checkbox name='testCheckbox' value='testCheckbox' onBlur={mockCheckboxOnBlur} onChange={mockCheckboxOnChange} />
+      <BaseFormik>
+        <Field
+          component={Checkbox}
+          name='testCheckbox'
+          onBlur={mockCheckboxOnBlur}
+          onChange={mockCheckboxOnChange}
+          value='testCheckbox'
+        />
+      </BaseFormik>
     );
     expect(checkBox).toMatchSnapshot();
   });
 
   test('Passing custom checked property', () => {
     const checkBox = shallow(
-      <Checkbox
-        name='testCheckbox'
-        value='testCheckbox'
-        onBlur={mockCheckboxOnBlur}
-        onChange={mockCheckboxOnChange}
-        checked={['one', 'two', 'three'].includes('one')}
-      />
+      <BaseFormik>
+        <Field
+          checked={['one', 'two', 'three'].includes('one')}
+          component={Checkbox}
+          name='testCheckbox'
+          onBlur={mockCheckboxOnBlur}
+          onChange={mockCheckboxOnChange}
+          value='testCheckbox'
+        />
+      </BaseFormik>
     );
     expect(checkBox).toMatchSnapshot();
   });
 
   test('Passing a bunch of additional props', () => {
     const checkBox = shallow(
-      <Checkbox
-        autoCapitalize='yes'
-        buttonRef={createRef()}
-        checked={false}
-        color='primary'
-        disabled
-        disableFocusRipple
-        disableRipple
-        disableTouchRipple
-        name='testCheckbox'
-        onAbort={jest.fn()}
-        onBlur={mockCheckboxOnBlur}
-        onChange={mockCheckboxOnChange}
-        value='testCheckbox'
-      />
+      <BaseFormik>
+        <Field
+          autoCapitalize='yes'
+          buttonRef={createRef()}
+          checked={false}
+          color='primary'
+          component={Checkbox}
+          disabled
+          disableFocusRipple
+          disableRipple
+          disableTouchRipple
+          name='testCheckbox'
+          onAbort={jest.fn()}
+          onBlur={mockCheckboxOnBlur}
+          onChange={mockCheckboxOnChange}
+          value='testCheckbox'
+        />
+      </BaseFormik>
     );
     expect(checkBox).toMatchSnapshot();
   });
 });
+
+const BaseFormik: FC = ({ children }) => (
+  <Formik initialValues={{ name: '' }} onSubmit={() => undefined}>
+    {children}
+  </Formik>
+);

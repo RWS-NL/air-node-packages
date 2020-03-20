@@ -1,5 +1,5 @@
-import { useField } from 'formik';
-import { KeyboardDatePicker, KeyboardDatePickerProps, useFieldToKeyboardDatePicker } from 'formik-material-ui-pickers';
+import { KeyboardDatePicker } from '@material-ui/pickers';
+import { fieldToKeyboardDatePicker, KeyboardDatePickerProps } from 'formik-material-ui-pickers';
 import React, { FC } from 'react';
 import css from './DatePicker.scss';
 
@@ -15,30 +15,25 @@ export interface DatePickerProps extends KeyboardDatePickerProps {
  * @param componentProps Props to pass to the date picker component
  * @example
  * ```jsx
- * <DatePicker minDate={new Date('2012-01-01')} name='date' type='date' label='Sample Date' />
+ * <Field component={DatePicker} minDate={new Date('2012-01-01')} name='date' label='Sample Date' />
  * ```
  */
-export const DatePicker: FC<DatePickerProps> = ({ minDate, label, name, ...props }) => {
-  const formikDatePickerProps = useFieldToKeyboardDatePicker({ name, ...props });
-  const [{ onBlur }, { error }] = useField(name);
-
+export const DatePicker: FC<DatePickerProps> = ({ minDate, label, ...props }) => {
   return (
     <KeyboardDatePicker
-      {...formikDatePickerProps}
       {...props}
-      variant='inline'
-      format='DD/MM/YYYY'
-      minDate={minDate}
-      name={name}
-      onBlur={onBlur}
-      helperText={error}
-      KeyboardButtonProps={{ 'aria-label': 'change date' }}
-      InputAdornmentProps={{ position: 'start', className: css.datePickerIcon }}
-      label={label}
-      inputVariant='outlined'
-      fullWidth
-      autoOk
+      {...fieldToKeyboardDatePicker(props)}
       animateYearScrolling
+      autoOk
+      format='DD/MM/YYYY'
+      fullWidth
+      InputAdornmentProps={{ position: 'start', className: css.datePickerIcon }}
+      inputVariant='outlined'
+      KeyboardButtonProps={{ 'aria-label': 'change date' }}
+      label={label}
+      minDate={minDate}
+      type='date'
+      variant='inline'
       InputProps={{
         classes: {
           root: css.input,
@@ -50,6 +45,7 @@ export const DatePicker: FC<DatePickerProps> = ({ minDate, label, name, ...props
         classes: { root: css.inputLabel }
       }}
       FormHelperTextProps={{
+        // @ts-ignore
         component: 'div',
         classes: { root: css.errorLabel }
       }}
