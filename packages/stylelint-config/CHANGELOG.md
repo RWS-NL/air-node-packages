@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/stylelint-config@5.0.3...@rws-air/stylelint-config@6.0.0) (2020-03-20)
+
+### Code Refactoring
+
+- **webcomponents:** upgrade material-ui & formik-material-ui ([b4ca5f1](https://github.com/RWS-NL/air-node-packages/commit/b4ca5f1b56b81dfd2c8e453110a3ea0efbbe4dfd))
+
+### BREAKING CHANGES
+
+- **webcomponents:** formik-material-ui introduced breaking changes so this release is subsequently also
+  breaking
+
 ## [5.0.3](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/stylelint-config@5.0.2...@rws-air/stylelint-config@5.0.3) (2020-03-18)
 
 **Note:** Version bump only for package @rws-air/stylelint-config
