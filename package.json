@@ -21,7 +21,8 @@
     "scripts:validateNoOnly": "yarn scripts:runner scripts/validateNoOnly",
     "scripts:duplicateESLintConfig": "yarn scripts:runner scripts/duplicateESLintConfig",
     "scripts:duplicateStylelintConfig": "yarn scripts:runner scripts/duplicateStylelintConfig",
-    "scripts:yarnAfterPull": "yarn scripts:runner scripts/yarnAfterPull"
+    "scripts:yarnAfterPull": "yarn scripts:runner scripts/yarnAfterPull",
+    "now.sh": "rm -rf packages scripts node_modules"
   },
   "devDependencies": {
     "@babel/core": "^7.8.7",
