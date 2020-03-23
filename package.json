@@ -1,0 +1,8 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "build": "echo \"no build on gh-pages branch\"",
+    "now.sh": "rm -rf packages scripts node_modules"
+  }
+}
