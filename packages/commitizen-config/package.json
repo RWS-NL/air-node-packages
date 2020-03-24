@@ -1,0 +1,61 @@
+{
+  "name": "@rws-air/commitizen-config",
+  "version": "1.0.0",
+  "description": "Commitizen adapter following the @rws-air/commitlint-config format",
+  "author": "@rws-air",
+  "license": "AGPL-3.0-or-later",
+  "main": "dist/index.js",
+  "homepage": "https://github.com/RWS-NL/air-node-packages/tree/master/packages/commitizen-config#readme",
+  "scripts": {
+    "lint": "eslint src --fix --ext .ts,.tsx",
+    "test": "jest",
+    "prebuild": "run-p lint test",
+    "build": "tsc",
+    "ci:build": "tsc",
+    "start": "tsc -w"
+  },
+  "files": [
+    "dist",
+    "!dist/.tsbuildinfo"
+  ],
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "commitizen": "^4.0.3",
+    "lodash.map": "^4.6.0",
+    "longest": "^2.0.1",
+    "right-pad": "^1.0.1",
+    "word-wrap": "^1.2.3"
+  },
+  "devDependencies": {
+    "@types/lodash.map": "^4.6.13"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RWS-NL/air-node-packages.git",
+    "directory": "packages/commitizen-config"
+  },
+  "bugs": {
+    "url": "https://github.com/RWS-NL/air-node-packages/issues"
+  },
+  "keywords": [
+    "commitlint",
+    "conventional",
+    "commit",
+    "commit message",
+    "commitizen",
+    "config",
+    "rws-air",
+    "rws-nl",
+    "rws",
+    "air",
+    "typescript",
+    "ts"
+  ]
+}

@@ -12,7 +12,7 @@
     "style": "prettier --config .prettierrc --write packages/**/*.{scss,tsx,ts,json}",
     "test": "lerna run test --parallel",
     "test:web": "pushd packages/webcomponents && yarn test --watchAll -u && popd",
-    "docs": "typedoc",
+    "docs": "typedoc packages",
     "commit": "git-cz",
     "cz": "git-cz",
     "up": "yarn upgrade-interactive --latest",
@@ -68,7 +68,6 @@
     "babel-plugin-transform-export-extensions": "^6.22.0",
     "chalk": "^3.0.0",
     "classnames": "^2.2.6",
-    "cz-conventional-changelog": "^3.0.2",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.3",
@@ -129,7 +128,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "./node_modules/@rws-air/commitizen-config"
     }
   },
   "husky": {
@@ -141,7 +140,7 @@
   },
   "commitlint": {
     "extends": [
-      "@commitlint/config-conventional"
+      "@rws-air"
     ]
   },
   "lint-staged": {

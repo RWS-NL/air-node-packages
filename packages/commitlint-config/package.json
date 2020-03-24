@@ -1,0 +1,57 @@
+{
+  "name": "@rws-air/commitlint-config",
+  "version": "1.0.0",
+  "description": "Rules to write conventional commits for AIR packages",
+  "author": "@rws-air",
+  "license": "AGPL-3.0-or-later",
+  "main": "dist/index.js",
+  "homepage": "https://github.com/RWS-NL/air-node-packages/tree/master/packages/commitlint-config#readme",
+  "scripts": {
+    "lint": "eslint src --fix --ext .ts,.tsx",
+    "test": "jest",
+    "prebuild": "run-p lint test",
+    "build": "tsc -b src",
+    "ci:build": "tsc -b src",
+    "start": "tsc -b src -w"
+  },
+  "files": [
+    "dist",
+    "!dist/.tsbuildinfo"
+  ],
+  "devDependencies": {
+    "@commitlint/lint": "^8.3.4",
+    "@commitlint/utils": "^8.3.4"
+  },
+  "dependencies": {
+    "conventional-changelog-conventionalcommits": "4.2.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RWS-NL/air-node-packages.git",
+    "directory": "packages/commitlint-config"
+  },
+  "bugs": {
+    "url": "https://github.com/RWS-NL/air-node-packages/issues"
+  },
+  "keywords": [
+    "commitlint",
+    "conventional",
+    "commit",
+    "commit message",
+    "commitizen",
+    "config",
+    "rws-air",
+    "rws-nl",
+    "rws",
+    "air",
+    "typescript",
+    "ts"
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "extends": "../tsconfig.json",
+  "references": [{ "path": "../src" }],
+  "files": ["index.test.ts", "types_commitlint_lint.d.ts"]
+}

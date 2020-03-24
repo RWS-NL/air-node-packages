@@ -7,7 +7,7 @@
     "skipLibCheck": true,
     "jsx": "react"
   },
-  "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.tsx", "**/*.test.ts"],
+  "exclude": ["**/node_modules/**", "**/dist/**"],
   "typedocOptions": {
     "out": "./docs/",
     "readme": "./README.md",
@@ -15,14 +15,10 @@
     "exclude": [
       "**/node_modules/**",
       "**/dist/**",
-      "**/*.test.ts",
-      "**/*.test.tsx",
-      "**/*.test.js",
-      "**/*.test.jsx",
+      "**/__tests__/**",
       "**/*.js",
-      "packages/cra-template-air/**/*",
-      "packages/local-components-test/**/*",
-      "scripts/*"
+      "packages/cra-template-air/**",
+      "packages/local-components-test/**"
     ],
     "mode": "modules",
     "excludeExternals": true,

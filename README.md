@@ -35,6 +35,11 @@
 
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@rws-air/utils?label=utils%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@rws-air/utils)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@rws-air/utils?label=utils%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@rws-air/utils)
+[![npm bundle size](https://img.shields.io/bundlephobia/min/@rws-air/commitlint-config?label=commitlint-config%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@rws-air/commitlint-config)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@rws-air/commitlint-config?label=commitlint-config%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@rws-air/commitlint-config)
+
+[![npm bundle size](https://img.shields.io/bundlephobia/min/@rws-air/commitizen-config?label=commitizen-config%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@rws-air/commitizen-config)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@rws-air/commitizen-config?label=commitizen-config%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@rws-air/commitizen-config)
 
 **Versions**
 
@@ -45,6 +50,8 @@
 [![npm](https://img.shields.io/npm/v/@rws-air/usercreator?color=crimson&label=usercreator%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@rws-air/usercreator)
 [![npm](https://img.shields.io/npm/v/@rws-air/webcomponents?color=crimson&label=webcomponents%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@rws-air/webcomponents)
 [![npm](https://img.shields.io/npm/v/@rws-air/utils?color=crimson&label=utils%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@rws-air/utils)
+[![npm](https://img.shields.io/npm/v/@rws-air/commitlint-config?color=crimson&label=commitlint-config%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@rws-air/commitlint-config)
+[![npm](https://img.shields.io/npm/v/@rws-air/commitizen-config?color=crimson&label=commitizen-config%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@rws-air/commitizen-config)
 
 **Our Badges**
 
