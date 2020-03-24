@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/commitlint-config@1.1.0...@rws-air/commitlint-config@1.1.1) (2020-03-24)
+
+
+### Bug Fixes
+
+* **commitlint-config:** fixed the exports for commitizen ([91815cc](https://github.com/RWS-NL/air-node-packages/commit/91815ccd05f0a786ce51ec13b866aa5e97108cb8))
+
+
+
+
+
 # 1.1.0 (2020-03-24)
 
 
