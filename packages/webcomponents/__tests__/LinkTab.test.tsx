@@ -2,7 +2,7 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import { LinkTab } from '../src/LinkTab';
 
-describe('LinkTab Tests', function() {
+describe('LinkTab Tests', function () {
   describe('Snapshot Testing', () => {
     test('Required Props', () => {
       const linkTab = shallow(<LinkTab to='/root' label='sample' />);

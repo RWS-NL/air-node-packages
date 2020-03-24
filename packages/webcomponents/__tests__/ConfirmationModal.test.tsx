@@ -90,12 +90,7 @@ describe('Content Testing', () => {
   beforeAll(() => setup(true, {}, Content));
 
   test('should contain content', () => {
-    expect(
-      confirmationModal
-        .find('[data-qa="modal-content"]')
-        .children()
-        .exists()
-    ).toBe(true);
+    expect(confirmationModal.find('[data-qa="modal-content"]').children().exists()).toBe(true);
   });
 });
 

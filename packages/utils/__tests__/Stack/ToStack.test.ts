@@ -7,8 +7,8 @@ describe('toStack', () => {
 
     const result = toStack(
       input,
-      i => i % 10,
-      i => i + 10
+      (i) => i % 10,
+      (i) => i + 10
     );
 
     expect(result).toStrictEqual(

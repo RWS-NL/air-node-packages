@@ -155,7 +155,9 @@ export class JestScreenshot {
       throw new JestScreenshotError('You should pass page to screenshot to options (page)!!');
     }
     if (!this.objectHasProperty(options, 'dirName')) {
-      throw new JestScreenshotError('You should pass the name of the directory to save images to the options (dirName)!!');
+      throw new JestScreenshotError(
+        'You should pass the name of the directory to save images to the options (dirName)!!'
+      );
     }
 
     this.page = options.page;
@@ -170,10 +172,15 @@ export class JestScreenshot {
         this.slackToken = options.slackToken;
       }
 
-      if (!this.slackToken) throw new JestScreenshotError('When you want to upload to slack you should either provide the slackToken option or an environment variable called "SLACK_WEBTOKEN"');
+      if (!this.slackToken)
+        throw new JestScreenshotError(
+          'When you want to upload to slack you should either provide the slackToken option or an environment variable called "SLACK_WEBTOKEN"'
+        );
 
       if (!this.objectHasProperty(options, 'slackChannels')) {
-        throw new JestScreenshotError('When you want to upload to slack you provide an array of channels to post the screenshot in through the "slackChannels" options');
+        throw new JestScreenshotError(
+          'When you want to upload to slack you provide an array of channels to post the screenshot in through the "slackChannels" options'
+        );
       }
 
       this.slackChannels = options.slackChannels;
@@ -228,7 +235,7 @@ export class JestScreenshot {
     form.append('channels', this.slackChannels?.join(',') || [].join(','));
     form.append('file', screenshot, {
       contentType: 'image/png',
-      filename: fileName,
+      filename: fileName
     });
     form.append('filename', fileName);
     form.append('title', fileName);
@@ -237,10 +244,10 @@ export class JestScreenshot {
     try {
       const request = await fetch(apiMethod, {
         method: 'POST',
-        body: form,
+        body: form
       });
 
-      const data = await request.json() as SlackResponse;
+      const data = (await request.json()) as SlackResponse;
 
       return data;
     } catch (err) {

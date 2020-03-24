@@ -11,7 +11,7 @@ import css from './ModalContent.scss';
  * </ModalContent>
  * ```
  */
-export const ModalContent = memo(props => (
+export const ModalContent = memo((props) => (
   <div {...props} className={css.content}>
     {props.children}
   </div>

@@ -6,7 +6,7 @@ interface ComponentProps {
   name: string;
 }
 
-export const Component: FC<ComponentProps> = props => {
+export const Component: FC<ComponentProps> = (props) => {
   const [width, height] = useWindowSize();
 
   return (

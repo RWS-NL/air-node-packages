@@ -22,7 +22,7 @@ import css from './TextField.scss';
  * />
  * ```
  */
-export const TextField: FC<TextFieldProps> = props => {
+export const TextField: FC<TextFieldProps> = (props) => {
   const [{ value, onChange, onBlur }, { error, touched }] = useField(props.field.name);
 
   const textFieldHasErrors = Boolean(error) && touched;

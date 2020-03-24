@@ -87,8 +87,8 @@ describe('Stack tests', () => {
     stack.set('a', 1);
     stack.set('b', 2);
 
-    expect(stack.find(x => x === 1)).toBe(1);
-    expect(stack.find(x => x === 10)).toBeUndefined();
+    expect(stack.find((x) => x === 1)).toBe(1);
+    expect(stack.find((x) => x === 10)).toBeUndefined();
   });
 
   test('sweep items from the Stack', () => {
@@ -96,12 +96,12 @@ describe('Stack tests', () => {
     stack.set('a', 1);
     stack.set('b', 2);
     stack.set('c', 3);
-    const n1 = stack.sweep(x => x === 2);
+    const n1 = stack.sweep((x) => x === 2);
 
     expect(n1).toBe(1);
     expect(stack.array()).toStrictEqual([1, 3]);
 
-    const n2 = stack.sweep(x => x === 4);
+    const n2 = stack.sweep((x) => x === 4);
     expect(n2).toBe(0);
     expect(stack.array()).toStrictEqual([1, 3]);
   });
@@ -111,7 +111,7 @@ describe('Stack tests', () => {
     stack.set('a', 1);
     stack.set('b', 2);
     stack.set('c', 3);
-    const filtered = stack.filter(x => x % 2 === 1);
+    const filtered = stack.filter((x) => x % 2 === 1);
 
     expect(stack.size).toBe(3);
     expect(filtered.size).toBe(2);
@@ -126,7 +126,7 @@ describe('Stack tests', () => {
     stack.set('d', 4);
     stack.set('e', 5);
     stack.set('f', 6);
-    const [even, odd] = stack.partition(x => x % 2 === 0);
+    const [even, odd] = stack.partition((x) => x % 2 === 0);
 
     expect(even.array()).toStrictEqual([2, 4, 6]);
     expect(odd.array()).toStrictEqual([1, 3, 5]);
@@ -137,7 +137,7 @@ describe('Stack tests', () => {
     stack.set('a', 1);
     stack.set('b', 2);
     stack.set('c', 3);
-    const mapped = stack.map(x => x + 1);
+    const mapped = stack.map((x) => x + 1);
 
     expect(mapped).toStrictEqual([2, 3, 4]);
   });
@@ -147,7 +147,7 @@ describe('Stack tests', () => {
     stack.set('a', 1);
     stack.set('b', 2);
     stack.set('c', 3);
-    const mapped = stack.mapValues(x => x + 1);
+    const mapped = stack.mapValues((x) => x + 1);
 
     expect(mapped.array()).toStrictEqual([2, 3, 4]);
   });
@@ -166,7 +166,7 @@ describe('Stack tests', () => {
     combinedStack.set('a', { a: firstSack });
     combinedStack.set('b', { a: secondStack });
 
-    const mapped = combinedStack.flatMap(x => x.a);
+    const mapped = combinedStack.flatMap((x) => x.a);
 
     expect(mapped.array()).toStrictEqual([1, 2, 3, 4]);
   });
@@ -177,7 +177,7 @@ describe('Stack tests', () => {
     stack.set('b', 2);
     stack.set('c', 3);
 
-    expect(stack.some(x => x === 2)).toBeTruthy();
+    expect(stack.some((x) => x === 2)).toBeTruthy();
   });
 
   test('check if every items pass a predicate', () => {
@@ -186,7 +186,7 @@ describe('Stack tests', () => {
     stack.set('b', 2);
     stack.set('c', 3);
 
-    expect(!stack.every(x => x === 2)).toBeTruthy();
+    expect(!stack.every((x) => x === 2)).toBeTruthy();
   });
 
   test('reduce Stack into a single value with initial value', () => {
@@ -234,7 +234,7 @@ describe('Stack tests', () => {
     stack.set('a', 1);
     stack.set('b', 2);
     stack.set('c', 3);
-    stack.tap(c => expect(c === stack).toBeTruthy());
+    stack.tap((c) => expect(c === stack).toBeTruthy());
   });
 
   test('shallow clone the Stack', () => {

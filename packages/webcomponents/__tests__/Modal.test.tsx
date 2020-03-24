@@ -46,12 +46,7 @@ describe('Content Testing', () => {
   });
 
   test('should contain content', () => {
-    expect(
-      modal
-        .find('[data-qa="modal-content"]')
-        .children()
-        .exists()
-    ).toBe(true);
+    expect(modal.find('[data-qa="modal-content"]').children().exists()).toBe(true);
     expect(modal.find('[data-qa="modal-content"]').children()).toMatchSnapshot();
   });
 

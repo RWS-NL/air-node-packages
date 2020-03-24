@@ -73,7 +73,7 @@ const propsForTable: TableProps = {
   },
   tablebodycontent: (
     <Fragment>
-      {dataForTable.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map(row => (
+      {dataForTable.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => (
         <TableRow hover tabIndex={-1} key={4567893} data-qa='table-body-row'>
           <BodyCell content={row.name} />
           <BodyCell content={row.email} />
@@ -100,10 +100,7 @@ describe('Component Tests', () => {
   });
 
   test('should request sorting on header click', () => {
-    const firstColumnHeaderCell = table
-      .find(HeaderCell)
-      .at(0)
-      .shallow();
+    const firstColumnHeaderCell = table.find(HeaderCell).at(0).shallow();
     const tableSortHeader = firstColumnHeaderCell.find(`[data-qa="tableSortLabel_${tableHeaders[0].label}"]`);
 
     tableSortHeader.simulate('click');
@@ -113,10 +110,7 @@ describe('Component Tests', () => {
   });
 
   test('should not request sorting on action header click', () => {
-    const lastColumnHeaderCell = table
-      .find(HeaderCell)
-      .last()
-      .shallow();
+    const lastColumnHeaderCell = table.find(HeaderCell).last().shallow();
     const tableSortHeader = lastColumnHeaderCell.find(`[data-qa="tableSortLabel_${tableHeaders[3].label}"]`);
 
     tableSortHeader.simulate('click');
@@ -157,24 +151,9 @@ describe('Component Tests', () => {
       const firstRow = table.find('[data-qa="table-body-row"]').first();
       expect(firstRow.find(BodyCell)).toHaveLength(3);
 
-      expect(
-        firstRow
-          .find(BodyCell)
-          .at(0)
-          .prop('content')
-      ).toBe(dataForTable[0].name);
-      expect(
-        firstRow
-          .find(BodyCell)
-          .at(1)
-          .prop('content')
-      ).toBe(dataForTable[0].email);
-      expect(
-        firstRow
-          .find(BodyCell)
-          .at(2)
-          .prop('content')
-      ).toBe(dataForTable[0].id);
+      expect(firstRow.find(BodyCell).at(0).prop('content')).toBe(dataForTable[0].name);
+      expect(firstRow.find(BodyCell).at(1).prop('content')).toBe(dataForTable[0].email);
+      expect(firstRow.find(BodyCell).at(2).prop('content')).toBe(dataForTable[0].id);
     });
   });
 });

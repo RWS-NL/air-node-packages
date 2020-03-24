@@ -12,7 +12,7 @@ const target = document.querySelector('#root');
 ReactDOM.render(<App />, target);
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.ready.then(registration => {
+  navigator.serviceWorker.ready.then((registration) => {
     registration.unregister();
   });
 }

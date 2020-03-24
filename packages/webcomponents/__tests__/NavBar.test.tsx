@@ -12,7 +12,7 @@ const tabs: LinkTabProps[] = [
   { label: 'Rijkswaterstaat', external: true, to: 'https://rijkswaterstaat.nl', openInNewTab: true }
 ];
 
-describe('NavBar Tests', function() {
+describe('NavBar Tests', function () {
   describe('Component Testing', () => {
     let navBar: ShallowWrapper<NavBarProps>;
 

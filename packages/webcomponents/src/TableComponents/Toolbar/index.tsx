@@ -115,7 +115,7 @@ export const Toolbar = memo(
               clearSearch={clearSearch}
               data-qa='table-search-bar'
               placeholder={`${searchplaceholderlabel}...`}
-              onChange={e => debouncedSearch(e.target.value)}
+              onChange={(e) => debouncedSearch(e.target.value)}
               onCancelSearch={onsearchclear}
               className={classnames(css.searchFieldContent, css.ie11SearchBarTextCorrection, customSearchbarClasses)}
               paperElevation={paperElevation}

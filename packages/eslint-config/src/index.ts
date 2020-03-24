@@ -5,7 +5,7 @@ export const config = {
     project: './tsconfig.eslint.json',
     sourceType: 'module',
     ecmaVersion: 2019,
-    ecmaFeatures: {jsx: true},
+    ecmaFeatures: { jsx: true }
   },
   extends: [
     'eslint:recommended',
@@ -18,15 +18,14 @@ export const config = {
     es6: true,
     jest: true,
     browser: true,
-    commonjs: true,
+    commonjs: true
   },
   rules: {
-
     // Disable some rules
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/ban-ts-ignore': 'off',
-    '@typescript-eslint/explicit-function-return-type': 'off',
-  },
+    '@typescript-eslint/explicit-function-return-type': 'off'
+  }
 };
 
 module.exports = config;

@@ -58,7 +58,7 @@ export const PaginationActions = memo(
 
     const renderPages = () =>
       [...Array(Math.ceil(count / rowsPerPage)).keys()]
-        .map(x => ++x)
+        .map((x) => ++x)
         .map((page, key) => {
           if (page + 1 === page) {
             return renderCurrentPage(key, page, handlePageClick);

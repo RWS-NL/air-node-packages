@@ -63,13 +63,13 @@ export class UsermanagementAdder {
           email: user.email,
           firstName: user.firstname,
           lastName: user.lastname,
-          middleName: user.middlename ? user.middlename : '',
+          middleName: user.middlename ? user.middlename : ''
         }),
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Basic ${Buffer.from(`${this.username}:${this.password}`).toString('base64')}`,
-        },
+          Authorization: `Basic ${Buffer.from(`${this.username}:${this.password}`).toString('base64')}`
+        }
       });
       const data: ResponseData = await response.json();
 
@@ -90,8 +90,8 @@ export class UsermanagementAdder {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Basic ${Buffer.from(`${this.username}:${this.password}`).toString('base64')}`,
-        },
+          Authorization: `Basic ${Buffer.from(`${this.username}:${this.password}`).toString('base64')}`
+        }
       });
 
       console.log(`Added role ${role} to user with id ${userId}`);
@@ -109,7 +109,8 @@ export class UsermanagementAdder {
  */
 export const exec = () => {
   const argv = yargs
-    .usage(stripIndent`
+    .usage(
+      stripIndent`
           ${chalk.yellow('Usermanagement user adding script')}
 
           Usage:
@@ -121,27 +122,26 @@ export const exec = () => {
       alias: 'f',
       describe: 'The YAML file to use as users list',
       type: 'string',
-      demand: true,
+      demand: true
     })
     .option('username', {
       alias: 'u',
       describe: 'The username to use as "root" user when uploading',
       type: 'string',
-      demand: true,
+      demand: true
     })
     .option('password', {
       alias: 'p',
       describe: 'The password to use as "root" user when uploading',
       type: 'string',
-      demand: true,
+      demand: true
     })
     .option('url', {
       alias: 's',
       describe: 'The url to upload to',
       type: 'string',
-      demand: true,
-    })
-    .argv;
+      demand: true
+    }).argv;
 
   if (argv.url.slice(-1) === '/') argv.url = argv.url.slice(0, -1);
 

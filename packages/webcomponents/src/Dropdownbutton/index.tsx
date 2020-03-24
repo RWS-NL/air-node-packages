@@ -68,7 +68,7 @@ export const Dropdownbutton = memo((props: DropdownbuttonProps) => {
   };
 
   const handleToggle = () => {
-    setOpen(prevOpen => !prevOpen);
+    setOpen((prevOpen) => !prevOpen);
   };
 
   const handleClose = (event: ReactMouseEvent<Document, MouseEvent>) => {
@@ -139,7 +139,7 @@ export const Dropdownbutton = memo((props: DropdownbuttonProps) => {
                         key={option}
                         disabled={props.disabledOptionIds ? props.disabledOptionIds.includes(index) : false}
                         selected={index === selectedIndex}
-                        onClick={event => handleMenuItemClick(event, index)}
+                        onClick={(event) => handleMenuItemClick(event, index)}
                       >
                         {option}
                       </MenuItem>

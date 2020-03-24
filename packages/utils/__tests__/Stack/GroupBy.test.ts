@@ -7,8 +7,8 @@ describe('groupBy', () => {
 
     const result = groupBy(
       input,
-      i => i % 2 === 0,
-      i => i + 10
+      (i) => i % 2 === 0,
+      (i) => i + 10
     );
 
     expect(result).toStrictEqual(

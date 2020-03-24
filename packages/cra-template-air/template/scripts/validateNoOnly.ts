@@ -6,7 +6,7 @@ import chalk from 'chalk';
 const onlyPattern = /(?:describe\.only|it\.only|test\.only)/gm;
 const files = glob
   .sync('**/*.test.?(j|t)s?(x)', { cwd: path.join(__dirname, '../src/__tests__') })
-  .map(file => path.join(__dirname, '../src/__tests__', file));
+  .map((file) => path.join(__dirname, '../src/__tests__', file));
 
 let shouldError = false;
 const badFiles: string[] = [];
