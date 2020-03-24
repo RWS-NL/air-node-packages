@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.1.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@12.0.1...@rws-air/webcomponents@12.1.0) (2020-03-24)
+
+
+### Features
+
+* **commitizen-config,commitlint-config:** add these 2 new packages ([16013ae](https://github.com/RWS-NL/air-node-packages/commit/16013aefedc5a20c5a0fa0a77ca11ce232b980ad))
+
+
+
+
+
 ## [12.0.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@12.0.0...@rws-air/webcomponents@12.0.1) (2020-03-24)
 
 ### Bug Fixes
