@@ -3,7 +3,7 @@ export const config = {
   extends: ['stylelint-config-standard', 'stylelint-config-recommended', 'stylelint-config-sass-guidelines'],
   plugins: ['stylelint-scss'],
   rules: {
-    'color-hex-case': 'upper',
+    'color-hex-case': 'lower',
     'color-hex-length': 'long',
     'color-named': 'never',
     'declaration-block-no-redundant-longhand-properties': true,
