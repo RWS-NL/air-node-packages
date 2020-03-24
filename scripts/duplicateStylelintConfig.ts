@@ -1,15 +1,20 @@
 import chalk from 'chalk';
-import stylelintConfig from '../packages/stylelint-config/src/';
 import { writeJSONAtomic } from 'fs-nextra';
-import path from 'path';
+import { sync as glob } from 'glob';
+import { join } from 'path';
+import stylelintConfig from '../packages/stylelint-config/src/';
 
 (async () => {
   try {
-    const webcomponentConfigPath = path.join(__dirname, '../packages/webcomponents/.stylelintrc');
-    const localComponentConfigPath = path.join(__dirname, '../packages/local-components-test/.stylelintrc');
-
-    await writeJSONAtomic(webcomponentConfigPath, stylelintConfig);
-    await writeJSONAtomic(localComponentConfigPath, stylelintConfig);
+    await Promise.all(
+      glob('**/.stylelintrc', {
+        cwd: join(__dirname, '../'),
+        ignore: ['node_modules/**', '**/packages/cra-template-air/**'],
+        dot: true
+      })
+        .map((file) => join(__dirname, '../', file))
+        .map((file) => writeJSONAtomic(file, stylelintConfig))
+    );
 
     // eslint-disable-next-line no-console
     console.log(chalk.green('Duplicated StyleLint config'));

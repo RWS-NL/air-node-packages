@@ -7,9 +7,13 @@ import eslintConfig from '../packages/eslint-config/src/';
 (async () => {
   try {
     await Promise.all(
-      glob('**/.eslintrc', { cwd: join(__dirname, '../'), ignore: 'node_modules/**', dot: true })
-        .map(file => join(__dirname, '../', file))
-        .map(file => writeJSONAtomic(file, eslintConfig))
+      glob('**/.eslintrc', {
+        cwd: join(__dirname, '../'),
+        ignore: ['node_modules/**', '**/packages/cra-template-air/**'],
+        dot: true
+      })
+        .map((file) => join(__dirname, '../', file))
+        .map((file) => writeJSONAtomic(file, eslintConfig))
     );
 
     // eslint-disable-next-line no-console
