@@ -42,7 +42,7 @@ export const PaginationActions = memo(
     const renderCurrentPage = (
       key: number,
       page: number,
-      clickEvent: (page: number) => (event: React.SyntheticEvent<Element, Event>) => void
+      clickEvent: (page: number) => (event: SyntheticEvent<Element, Event>) => void
     ): JSX.Element => {
       return (
         <Chip
