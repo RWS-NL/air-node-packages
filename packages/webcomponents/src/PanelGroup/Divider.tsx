@@ -22,6 +22,7 @@
  * SOFTWARE.
  */
 
+import Box from '@material-ui/core/Box';
 import React, {
   Component,
   CSSProperties,
@@ -217,6 +218,7 @@ export class Divider extends Component<DividerProps, DividerState> {
         zIndex: 100
       }
     };
+
     Object.assign(style.divider, { backgroundColor: this.props.borderColor });
 
     // Add custom role if dragging
@@ -226,9 +228,9 @@ export class Divider extends Component<DividerProps, DividerState> {
     }
 
     return (
-      <div role={role} style={style.divider} onMouseDown={this.onMouseDown} onTouchStart={this.onTouchStart}>
-        <div style={style.handle} />
-      </div>
+      <Box role={role} style={style.divider} onMouseDown={this.onMouseDown} onTouchStart={this.onTouchStart}>
+        <Box style={style.handle} />
+      </Box>
     );
   }
 }

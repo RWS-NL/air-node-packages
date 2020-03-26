@@ -23,10 +23,10 @@
  */
 
 import classnames from 'classnames';
-import React, { CSSProperties } from 'react';
+import React, { Component, CSSProperties, HTMLAttributes } from 'react';
 import { ResizeModes } from './types';
 
-interface PanelProps extends React.HTMLAttributes<Element> {
+interface PanelProps extends HTMLAttributes<Element> {
   resize?: ResizeModes;
   onWindowResize?:
     | ((panelIndex: number, size: { x: number; y: number }, callback?: () => void, node?: any) => void)
@@ -37,7 +37,7 @@ interface PanelProps extends React.HTMLAttributes<Element> {
   panelWrapperClasses?: string | string[];
 }
 
-export class Panel extends React.Component<PanelProps, {}> {
+export class Panel extends Component<PanelProps, {}> {
   node: any;
 
   static defaultProps = {

@@ -23,26 +23,58 @@
  */
 
 import classnames from 'classnames';
-import React, { Children, CSSProperties, ReactNodeArray } from 'react';
+import React, { Children, Component, CSSProperties, HTMLAttributes, ReactNodeArray } from 'react';
 import { DeepRequired } from 'utility-types';
 import { Divider } from './Divider';
 import { Panel } from './Panel';
 import { PanelType, ResizeModes, WindowCoordinates } from './types';
 
-export interface PanelGroupProps extends React.HTMLAttributes<Element> {
+/**
+ * Props available for the PanelGroup component
+ * @remark All properties are optional
+ */
+export interface PanelGroupProps extends HTMLAttributes<Element> {
+  /** sets the width of the border between each panel */
   spacing?: number;
-  direction?: CSSProperties['flexDirection'];
-  panelWidths?: PanelType[];
-  onUpdate?: (data: PanelType[]) => any;
-  onResizeStart?: (...args: any[]) => any;
-  onResizeEnd?: (...args: any[]) => any;
-  panelColor?: string;
+  /**
+   * Optionally defines a border color for panel dividers
+   * @default transparent
+   */
   borderColor?: string;
-  showHandles?: boolean;
-  length?: any;
-
+  /**
+   * Optionally defines a background color for the panels
+   * @default transparent
+   */
+  panelColor?: string;
+  /**
+   * Sets the orientation of the panel group
+   */
+  direction?: CSSProperties['flexDirection'];
+  /**
+   * An array of panel objects to initialize each panel with.
+   * @remark If a property is missing, or an index is null, it will resort to default values
+   */
+  panelWidths?: PanelType[];
+  /**
+   * Callback to receive state updates from PanelGroup to allow controlling state externally.
+   * @returns An array of panelWidths
+   */
+  onUpdate?: (data: PanelType[]) => any;
+  /**
+   * Callback fired when resizing started
+   * @remark Receives panels in current state
+   */
+  onResizeStart?: (panels: PanelType[]) => any;
+  /**
+   * Callback fired when resizing ends
+   * @remark receives panels in current state
+   */
+  onResizeEnd?: (panels: PanelType[]) => any;
   /** Custom classes to apply to the PanelGroup component */
   panelGroupClasses?: string | string[];
+
+  showHandles?: boolean;
+  length?: any;
 }
 
 export type PanelGroupState = {
@@ -64,8 +96,87 @@ type MaybeDivideArgs = {
   index: number;
 };
 
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
-export class PanelGroup extends React.Component<PanelGroupProps, PanelGroupState> {
+/**
+ * React component for resizable panel group layouts
+ * @copyright Dan Fessler 2018
+ * @see https://github.com/DanFessler/react-panelgroup
+ *
+ * @features
+ * PanelGroup has various features to note
+ *
+ * * **Absolute & Relative Sizing:**
+ * Choose between absolute pixel sizing and relative weights to describe your layout.
+ * Even mix the two per panel for more complex layouts. Supports fixed-size,
+ * dynamic (absolute pixel), and stretchy (relative weights) resizing
+ * * **Neighbor-Aware Resizing:**
+ * When a panel is resized beyond it's extents, it will begin to push or pull at it's neighbors recursively.
+ * * **Column & Row Orientations:**
+ * Supports vertical and horizontal orientations. Nest them together to produce grid-like layouts
+ * * **Snap points:**
+ * If supplied, panels can snap to pre-defined sizes
+ *
+ * @example
+ * ```jsx
+ * // When not specifying any props, the panel group defaults
+ * // to a horizontal orientation with panels of equal (stretchy) widths.
+ * // PanelGroup will always try to entirely fill it's container.
+ *
+ * <PanelGroup>
+ *   <div>panel 1</div>
+ *   <div>panel 2</div>
+ *   <div>panel 3</div>
+ * </PanelGroup>
+ * ```
+ *
+ * @example
+ * ```jsx
+ * // Setting the direction prop to "column" will result in a vertical layout
+ *
+ * <PanelGroup direction="column">
+ *   <div>panel 1</div>
+ *   <div>panel 2</div>
+ *   <div>panel 3</div>
+ * </PanelGroup>
+ * ```
+ *
+ * @example
+ * ```jsx
+ * // Nest multiple panelGroups for more complex layouts
+ *
+ * <PanelGroup direction="row">
+ *   <PanelGroup direction="column">
+ *     <div>panel 1</div>
+ *     <div>panel 2</div>
+ *     <div>panel 3</div>
+ *   </PanelGroup>
+ *   <div>panel 4</div>
+ *   <PanelGroup direction="column">
+ *     <div>panel 5</div>
+ *     <div>panel 6</div>
+ *   </PanelGroup>
+ * </PanelGroup>
+ * ```
+ *
+ * @example
+ * ```jsx
+ * // Providing `panelWidths` with an array of objects defining each panel's size
+ * // parameters will set the initial sizing for each panel.
+ * // If any property is missing, it will resort to the default for that property.
+ *
+ * <PanelGroup
+ *   panelWidths={[
+ *     { size: 100, minSize: 50, resize: 'dynamic' },
+ *     { minSize: 100, resize: 'stretch' },
+ *     { size: 100, minSize: 50, resize: 'dynamic' }
+ *   ]}
+ * >
+ *   <div>panel 1</div>
+ *   <div>panel 2</div>
+ *   <div>panel 3</div>
+ * </PanelGroup>
+ * ```
+ */
+export class PanelGroup extends Component<PanelGroupProps, PanelGroupState> {
   node: any;
 
   static defaultProps = {
@@ -525,7 +636,7 @@ export class PanelGroup extends React.Component<PanelGroupProps, PanelGroupState
     const style = this.getStyle();
 
     // lets build up a new children array with added resize borders
-    const initialChildren = React.Children.toArray(children);
+    const initialChildren = Children.toArray(children);
     const newChildren = [];
 
     for (let i = 0; i < initialChildren.length; i++) {
