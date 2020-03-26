@@ -8,5 +8,13 @@
   "jsxSingleQuote": true,
   "tabWidth": 2,
   "trailingComma": "none",
-  "useTabs": false
+  "useTabs": false,
+  "overrides": [
+    {
+      "files": "apiClient.ts",
+      "options": {
+        "printWidth": 300
+      }
+    }
+  ]
 }

@@ -13,7 +13,8 @@
     "downlevelIteration": true,
     "resolveJsonModule": true,
     "allowJs": false,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "incremental": false
   },
   "include": ["src", "src/**/*.json"]
 }

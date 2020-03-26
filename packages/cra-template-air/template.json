@@ -1,12 +1,16 @@
 {
   "package": {
+    "author": "@rws-air",
+    "version": "1.0.0",
+    "private": true,
+    "proxy": "http://localhost:9009",
     "scripts": {
       "postbuild": "yarn copy:nginx",
       "test:actions": "yarn test --testPathIgnorePatterns=src/__tests__/stubrunner.test.ts",
       "lint": "run-p lint:**",
       "lint:js": "eslint src scripts --fix --ext ts,tsx",
       "lint:scss": "stylelint --fix ./src/styles/**/*.scss ./src/styles/*.scss",
-      "style": "pretty-quick",
+      "style": "prettier --config .prettierrc --write src/**/*.{scss,tsx,ts,json}",
       "copy:nginx": "copyfiles -u 2 src/config/nginx.conf src/config/mime.types build/",
       "stub:start": "docker-compose up -d",
       "stub:stop": "docker-compose down",
@@ -104,6 +108,33 @@
       "ts-node": "^8.6.2",
       "typescript": "^3.7.5",
       "utility-types": "^3.10.0"
+    },
+    "husky": {
+      "hooks": {
+        "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+        "pre-commit": "yarn scripts:validateNoOnly && yarn pretty-quick --staged && yarn lint-staged",
+        "post-merge": "yarn scripts:yarnAfterPull"
+      }
+    },
+    "commitlint": {
+      "extends": ["@rws-air"]
+    },
+    "lint-staged": {
+      "*.{ts,tsx}": ["eslint --fix --ext ts,tsx"],
+      "*.{scss,css}": ["stylelint --fix"]
+    },
+    "config": {
+      "commitizen": {
+        "path": "./node_modules/@rws-air/commitizen-config"
+      }
+    },
+    "jest": {
+      "coveragePathIgnorePatterns": ["<rootDir>/src/index.tsx", "<rootDir>/src/store/root-action.ts"]
+    },
+    "resolutions": {
+      "serialize-javascript": "^3.0.0",
+      "acorn": "^6.4.1",
+      "minimist": "^1.2.2"
     }
   }
 }

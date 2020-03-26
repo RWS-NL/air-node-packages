@@ -2,7 +2,21 @@ import { BAD_REQUEST, FORBIDDEN, INTERNAL_SERVER_ERROR, NOT_FOUND, UNAUTHORIZED 
 import { API_METHOD } from './apiPaths';
 import { AIRHandledError } from './constants';
 
-export default class ApiClient implements ApiClientInterface {
+export enum FetchResultTypes {
+  JSON,
+  Blob,
+  Text,
+  Result
+}
+
+export interface FetchResponse<T> {
+  data: T;
+  status: number;
+  statusText: string;
+  headers: Headers;
+}
+
+export default class ApiClient {
   public static accessToken: string | undefined;
   private static apiUrl: string | undefined;
 
@@ -26,26 +40,51 @@ export default class ApiClient implements ApiClientInterface {
     this.apiUrl = apiUrl || '';
   }
 
-  public static async request<T>(method: API_METHOD, path: string, body?: any): Promise<FetchResponse<T>> {
+  public static async fetch(method: API_METHOD, url: string, type: FetchResultTypes.Blob, body?: any): Promise<FetchResponse<Blob>>;
+  public static async fetch(method: API_METHOD, url: string, type: FetchResultTypes.Text, body?: any): Promise<FetchResponse<string>>;
+  public static async fetch(method: API_METHOD, url: string, type: FetchResultTypes.Result, body?: any): Promise<Response>;
+  public static async fetch<T extends unknown>(method: API_METHOD, url: string, type: FetchResultTypes.JSON, body?: any): Promise<FetchResponse<T>>;
+  public static async fetch<T extends unknown>(method: API_METHOD, url: string, type: FetchResultTypes, body?: any): Promise<Response | FetchResponse<Blob> | FetchResponse<string> | FetchResponse<T>>;
+  public static async fetch<T extends unknown>(method: API_METHOD, url: string, type: FetchResultTypes, body?: any) {
     try {
-      const response = await fetch(`${ApiClient.apiUrl || ''}${path}`, {
+      const response: Response = await fetch(`${ApiClient.apiUrl || ''}${url}`, {
         method,
-        body: JSON.stringify(body),
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${ApiClient.accessToken}`
-        }
+        },
+        body: JSON.stringify(body)
       });
 
       if (!response.ok) throw new AIRHandledError(response.status, `${response.status} error`);
 
-      const data = await ApiClient.parseBody<T>(response);
-
-      return {
-        data: data || ({} as any),
-        status: response.status,
-        statusText: response.statusText
-      };
+      switch (type) {
+        case FetchResultTypes.Result:
+          return response;
+        case FetchResultTypes.Blob:
+          return {
+            data: await response.blob(),
+            status: response.status,
+            statusText: response.statusText,
+            headers: response.headers
+          } as FetchResponse<Blob>;
+        case FetchResultTypes.JSON:
+          return {
+            data: await ApiClient.parseBody<T>(response),
+            status: response.status,
+            statusText: response.statusText,
+            headers: response.headers
+          } as FetchResponse<T>;
+        case FetchResultTypes.Text:
+          return {
+            data: await response.text(),
+            status: response.status,
+            statusText: response.statusText,
+            headers: response.headers
+          } as FetchResponse<string>;
+        default:
+          throw new TypeError(`Unknown fetch type ${type}`);
+      }
     } catch (err) {
       if (err.toString().includes(BAD_REQUEST.toString())) throw new AIRHandledError(BAD_REQUEST, '400 error');
       if (err.toString().includes(UNAUTHORIZED.toString())) throw new AIRHandledError(UNAUTHORIZED, '401 error');
@@ -56,27 +95,22 @@ export default class ApiClient implements ApiClientInterface {
     }
   }
 
-  private static parseBody<T>(response: Response): Promise<T> | undefined {
+  private static async parseBody<T>(response: Response): Promise<T | undefined> {
     const contentType = response.headers.get('content-type');
 
     if (contentType && contentType.includes('application/json')) {
-      return response.json() as Promise<T>;
+      return (await response.json()) as Promise<T>;
     }
 
     return undefined;
   }
 
-  public async request<T>(method: API_METHOD, path: string, body?: any): Promise<FetchResponse<T>> {
-    return ApiClient.request<T>(method, path, body);
+  public async fetch(method: API_METHOD, url: string, type: FetchResultTypes.Blob, body?: any): Promise<FetchResponse<Blob>>;
+  public async fetch(method: API_METHOD, url: string, type: FetchResultTypes.Text, body?: any): Promise<FetchResponse<string>>;
+  public async fetch(method: API_METHOD, url: string, type: FetchResultTypes.Result, body?: any): Promise<Response>;
+  public async fetch<T extends unknown>(method: API_METHOD, url: string, type: FetchResultTypes.JSON, body?: any): Promise<FetchResponse<T>>;
+  public async fetch<T extends unknown>(method: API_METHOD, url: string, type: FetchResultTypes, body?: any): Promise<Response | FetchResponse<Blob> | FetchResponse<string> | FetchResponse<T>>;
+  public async fetch<T extends unknown>(method: API_METHOD, url: string, type: FetchResultTypes, body?: any) {
+    return ApiClient.fetch<T>(method, url, type, body);
   }
-}
-
-export interface FetchResponse<T> {
-  data: T;
-  status: number;
-  statusText: string;
-}
-
-export interface ApiClientInterface {
-  request: <T, B = object>(method: API_METHOD, path: string, body?: B) => Promise<FetchResponse<T>>;
 }

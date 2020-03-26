@@ -29,6 +29,10 @@
   width: 20px !important;
 }
 
+.redux-toastr * {
+  @extend %fontNormal;
+}
+
 /* stylelint-enable selector-class-pattern  */
 // Defining RWS Font Faces
 @font-face {
@@ -92,11 +96,6 @@ h3 {
   font-size: 1.8rem;
   line-height: 2.8rem;
   margin: 1rem 0 2rem;
-}
-
-// stylelint-disable-next-line selector-class-pattern
-.redux-toastr * {
-  @extend %fontNormal;
 }
 
 pre {

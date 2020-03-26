@@ -1,5 +1,6 @@
 import { go, goBack, goForward, push, replace } from 'connected-react-router';
 import { actions as toastrActions } from 'react-redux-toastr';
+import * as configActions from 'store/config/configActions';
 
 const routerActions = {
   push: typeof push,
@@ -20,5 +21,6 @@ const ToastrActions = {
 
 export default {
   router: routerActions,
-  toastr: ToastrActions
+  toastr: ToastrActions,
+  config: configActions
 };

@@ -2,11 +2,11 @@ import { isDevEnv } from '@rws-air/utils';
 import App from 'App';
 import 'config/i18n';
 import 'core-js';
-import { HotNodeModule } from '{{APP_NAME_REDUX}}';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'styles/styles.scss';
 import 'whatwg-fetch';
+import { HotNodeModule } from '{{APP_NAME_REDUX}}';
 
 const target = document.querySelector('#root');
 ReactDOM.render(<App />, target);

@@ -2,7 +2,7 @@ import { routerMiddleware as createRouterMiddleware } from 'connected-react-rout
 import { createBrowserHistory } from 'history';
 import { HotNodeModule, RootAction, RootState } from '{{APP_NAME_REDUX}}';
 import { applyMiddleware, createStore } from 'redux';
-import { createLogger, LogEntryObject } from 'redux-logger';
+import { createLogger } from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
 import rootReducer from './root-reducer';
 import { rootSaga } from './root-sagas';
@@ -20,7 +20,7 @@ const enhancer = composeEnhancers(applyMiddleware(...middlewares));
 const store = createStore(rootReducer(history), initialState, enhancer);
 
 const logger = createLogger({
-  collapsed: (_getState: () => RootState, _action: RootAction, _logEntry?: LogEntryObject) => true,
+  collapsed: (_getState: () => RootState) => true,
   predicate: (_getState: () => RootState) => {
     return !isTestEnv;
   }

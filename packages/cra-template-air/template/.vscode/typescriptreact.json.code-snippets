@@ -45,7 +45,7 @@
     "body": [
       "describe('Snapshot Testing', () => {",
       "  let providerComponent: {",
-      "    providerMount: ReactWrapper<any, Readonly<{}>, React.Component<{}, {}, any>>;",
+      "    providerMount: ReactWrapper<any, Readonly<{}>, Component<{}, {}, any>>;",
       "    component: ReactWrapper<any, any, typeof $2>;",
       "    store: Store<RootState> | MockStoreEnhanced<RootState>;",
       "  };",

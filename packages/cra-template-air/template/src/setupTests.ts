@@ -1,8 +1,8 @@
-import 'jest-extended';
-import 'jest-enzyme';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { createSerializer } from 'enzyme-to-json';
+import 'jest-enzyme';
+import 'jest-extended';
 import { expectSaga } from 'redux-saga-test-plan';
 
 window.matchMedia = jest.fn().mockImplementation((query) => {
