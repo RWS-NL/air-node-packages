@@ -3,13 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [3.0.10](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/eslint-config@3.0.9...@rws-air/eslint-config@3.0.10) (2020-03-24)
+## [3.0.11](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/eslint-config@3.0.10...@rws-air/eslint-config@3.0.11) (2020-03-30)
 
 **Note:** Version bump only for package @rws-air/eslint-config
 
+## [3.0.10](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/eslint-config@3.0.9...@rws-air/eslint-config@3.0.10) (2020-03-24)
 
-
-
+**Note:** Version bump only for package @rws-air/eslint-config
 
 ## [3.0.9](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/eslint-config@3.0.8...@rws-air/eslint-config@3.0.9) (2020-03-24)
 

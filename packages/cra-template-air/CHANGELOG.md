@@ -3,13 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/RWS-NL/air-node-packages/compare/cra-template-air@1.0.3...cra-template-air@1.1.0) (2020-03-30)
+
+### Features
+
+- panelgroup ([#323](https://github.com/RWS-NL/air-node-packages/issues/323)) ([cdc6876](https://github.com/RWS-NL/air-node-packages/commit/cdc68765e9a4ebbdb990d7c47ee67d113ccb03eb))
+
 ## [1.0.3](https://github.com/RWS-NL/air-node-packages/compare/cra-template-air@1.0.2...cra-template-air@1.0.3) (2020-03-24)
 
 **Note:** Version bump only for package cra-template-air
-
-
-
-
 
 ## [1.0.2](https://github.com/RWS-NL/air-node-packages/compare/cra-template-air@1.0.1...cra-template-air@1.0.2) (2020-03-18)
 
