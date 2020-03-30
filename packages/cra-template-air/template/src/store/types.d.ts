@@ -1,6 +1,8 @@
 declare module '{{APP_NAME_REDUX}}' {
-  import { ActionType, StateType } from 'typesafe-actions';
   import { RouteComponentProps } from 'react-router';
+  import { ActionType, StateType } from 'typesafe-actions';
+  import { NonUndefined } from 'utility-types';
+
   export type RootAction = ActionType<typeof import('./root-action').default>;
   export type RootState = StateType<ReturnType<typeof import('./root-reducer').default>>;
 
@@ -9,8 +11,8 @@ declare module '{{APP_NAME_REDUX}}' {
   }
 
   export type ComponentOwnProps<CP extends object, Params extends { [K in keyof Params]?: string } = object> = CP &
-    Partial<RouteComponentProps<Params>>;
-  export type RouteProps<Params extends { [K in keyof Params]?: string } = object> = Partial<
+    NonUndefined<RouteComponentProps<Params>>;
+  export type RouteProps<Params extends { [K in keyof Params]?: string } = object> = NonUndefined<
     RouteComponentProps<Params>
   >;
 }

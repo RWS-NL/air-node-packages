@@ -6,6 +6,7 @@
   ],
   "plugins": [
     "@babel/plugin-proposal-optional-chaining",
-    "transform-export-extensions"
+    "transform-export-extensions",
+    "babel-plugin-transform-class-properties"
   ]
 }
