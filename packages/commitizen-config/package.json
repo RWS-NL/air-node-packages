@@ -19,7 +19,7 @@
     "!dist/.tsbuildinfo"
   ],
   "dependencies": {
-    "chalk": "^3.0.0",
+    "chalk": "^4.0.0",
     "commitizen": "^4.0.3",
     "lodash.map": "^4.6.0",
     "longest": "^2.0.1",
