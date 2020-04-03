@@ -36,7 +36,7 @@
     "@date-io/moment": "^1.3.13",
     "@favware/ts-config": "^1.1.2",
     "@joseph184/rollup-plugin-node-builtins": "^2.1.4",
-    "@material-ui/core": "4.9.7",
+    "@material-ui/core": "4.9.8",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/pickers": "^3.2.9",
     "@rollup/plugin-commonjs": "^11.0.2",
