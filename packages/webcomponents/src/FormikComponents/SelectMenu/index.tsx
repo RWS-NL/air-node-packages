@@ -85,7 +85,6 @@ export const SelectMenu = <T extends SelectMenuOptionValues>({
           IconComponent={() => <ArrowDropIcon color={selectFieldHasErrors ? 'error' : 'primary'} />}
           fullWidth
           displayEmpty
-          // value={value || ''}
           onChange={onChange}
           onBlur={onBlur}
           autoFocus={autoFocus}
