@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Router Component Snapshot Testing Required Props 1`] = `
+<Switch>
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/"
+  />
+  <Route
+    component={[Function]}
+  />
+</Switch>
+`;
+
+exports[`Router Component Snapshot Testing With Empty OtherComponents 1`] = `
+<Switch>
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/"
+  />
+  <Route
+    component={[Function]}
+  />
+</Switch>
+`;
+
+exports[`Router Component Snapshot Testing With OtherComponents 1`] = `
+<Switch>
+  <Route
+    component={[Function]}
+    data-qa="TestRouter"
+    exact={true}
+    path="/"
+  />
+  <Route
+    component={[Function]}
+    exact={true}
+    key="0"
+    path="/app"
+  />
+  <Route
+    component={[Function]}
+    exact={true}
+    key="1"
+    path="/contact"
+  />
+  <Route
+    component={[Function]}
+    data-qa="TestRouter"
+  />
+</Switch>
+`;

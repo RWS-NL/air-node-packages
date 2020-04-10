@@ -27,17 +27,18 @@
     "@material-ui/pickers": "^3",
     "@rws-air/utils": "^4",
     "classnames": "^2",
-    "formik": "^2",
-    "formik-material-ui": "2.0.0-beta.1",
     "formik-material-ui-pickers": "0.0.8",
+    "formik-material-ui": "2.0.0-beta.1",
+    "formik": "^2",
     "i18next": "^19",
     "lodash.debounce": "^4",
     "moment": "^2",
-    "react": "^16",
     "react-dom": "^16",
     "react-i18next": "^11",
     "react-if": "^3",
-    "react-router-dom": "^5"
+    "react-router-dom": "^5",
+    "react": "^16",
+    "utility-types": "3.10.0"
   },
   "browserslist": {
     "production": [
