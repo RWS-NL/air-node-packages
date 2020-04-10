@@ -1,16 +1,15 @@
 import Grid from '@material-ui/core/Grid';
-import { LinkTabProps, Logo, NavBar, UserInfo } from '@rws-air/webcomponents';
-import classnames from 'classnames';
-import Bar from 'components/Bar';
+import { Bar, LinkTabProps, Logo, NavBar, UserInfo } from '@rws-air/webcomponents';
+import clsx from 'clsx';
 import Router from 'config/Router';
 import { ConfigContextDefaults, ConfigContextProvider } from 'contexts/ConfigContext';
 import { PermissionContextDefaults, PermissionContextProvider } from 'contexts/PermissionContext';
 import React, { ChangeEvent, FC, useEffect, useState } from 'react';
+import { Trans } from 'react-i18next';
 import { handleGetConfig } from 'store/config/configActions';
 import { ConfigResponseType } from 'store/config/configTypes';
 import { Oauth2Permissions } from 'store/oauth2/oauth2Types';
 import css from 'styles/modules/AppBase.module.scss';
-import { Trans } from 'react-i18next';
 
 export interface AppBaseProps {
   email?: string;
@@ -54,7 +53,7 @@ export const AppBase: FC<AppBaseProps> = ({ handleGetConfig: getConfig, ...props
               />
             </Bar>
           </Grid>
-          <Grid key={2} item xs={12} className={classnames(css.ie11BlueBarCorrection, css.tabBar)}>
+          <Grid key={2} item xs={12} className={clsx(css.ie11BlueBarCorrection, css.tabBar)}>
             <NavBar actionBarTitle='{{REPLACE_ME}}' tabs={tabs} activeTab={activeTab} onTabChange={handleTabChange} />
             <Router />
           </Grid>
