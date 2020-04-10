@@ -22,8 +22,8 @@
     "!dist/.tsbuildinfo"
   ],
   "dependencies": {
-    "@favware/yamlreader": "^1.1.4",
-    "chalk": "^3.0.0",
+    "@favware/yamlreader": "^1.1.5",
+    "chalk": "^4.0.0",
     "common-tags": "^1.8.0",
     "node-fetch": "^2.6.0",
     "yargs": "^15.3.1"
