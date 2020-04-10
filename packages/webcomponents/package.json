@@ -1,6 +1,6 @@
 {
   "name": "@rws-air/webcomponents",
-  "version": "12.2.1",
+  "version": "12.3.0",
   "description": "Standard Webcomponents for AIR projects",
   "author": "@rws-air",
   "license": "AGPL-3.0-or-later",
@@ -27,13 +27,13 @@
     "@material-ui/icons": "^4.9.1",
     "@material-ui/pickers": "^3.2.10",
     "@rws-air/utils": "^4.2.4",
-    "formik-material-ui-pickers": "0.0.8",
-    "formik-material-ui": "2.0.0-beta.1",
     "formik": "^2.1.4",
+    "formik-material-ui": "2.0.0-beta.1",
+    "formik-material-ui-pickers": "0.0.8",
+    "react": "^16",
     "react-dom": "^16",
     "react-if": "^3.4.3",
-    "react-router-dom": "^5",
-    "react": "^16"
+    "react-router-dom": "^5"
   },
   "dependencies": {
     "@favware/querystring": "^4.3.1",

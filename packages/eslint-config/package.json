@@ -1,6 +1,6 @@
 {
   "name": "@rws-air/eslint-config",
-  "version": "3.0.12",
+  "version": "3.0.13",
   "description": "Standard ESLint config for RWS-NL ReactJS projects written in TypeScript",
   "author": "@rws-air",
   "license": "AGPL-3.0-or-later",

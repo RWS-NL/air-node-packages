@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/RWS-NL/air-node-packages/compare/cra-template-air@1.1.1...cra-template-air@1.2.0) (2020-04-10)
+
+### Features
+
+- **cra-template-air:** replace classnames with clsx for performance ([fbe7d58](https://github.com/RWS-NL/air-node-packages/commit/fbe7d58605d0eb2a5d44f88b0efa0d3723268f2d))
+
 ## [1.1.1](https://github.com/RWS-NL/air-node-packages/compare/cra-template-air@1.1.0...cra-template-air@1.1.1) (2020-04-01)
 
 **Note:** Version bump only for package cra-template-air

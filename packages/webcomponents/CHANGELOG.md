@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.3.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@12.2.1...@rws-air/webcomponents@12.3.0) (2020-04-10)
+
+### Bug Fixes
+
+- **webcomponents:** fixed export of Router component ([1ea93ad](https://github.com/RWS-NL/air-node-packages/commit/1ea93adc1f5f72dfc94f9460e53f7439feeead48))
+
+### Features
+
+- **webcomponents:** add Router component ([06faf39](https://github.com/RWS-NL/air-node-packages/commit/06faf39818215dc88fa77b56a1e1de279692b8fc))
+
+### Performance Improvements
+
+- **webcomponents:** greatly optimize bundle generation ([557fa4b](https://github.com/RWS-NL/air-node-packages/commit/557fa4bf0a01d673f5407df3850360167e3a75f0))
+
 ## [12.2.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@12.2.0...@rws-air/webcomponents@12.2.1) (2020-04-01)
 
 **Note:** Version bump only for package @rws-air/webcomponents

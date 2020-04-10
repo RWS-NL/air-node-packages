@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.3.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@4.2.4...@rws-air/utils@4.3.0) (2020-04-10)
+
+### Features
+
+- **utils:** added WindowLocationService ([d6301e4](https://github.com/RWS-NL/air-node-packages/commit/d6301e4159eef5cc59ac23c9572b7330d16427cc))
+
 ## [4.2.4](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@4.2.3...@rws-air/utils@4.2.4) (2020-04-01)
 
 **Note:** Version bump only for package @rws-air/utils
