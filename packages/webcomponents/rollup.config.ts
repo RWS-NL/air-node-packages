@@ -36,7 +36,7 @@ export default {
     terser({
       ecma: 5,
       // eslint-disable-next-line @typescript-eslint/camelcase
-      compress: { drop_console: true, booleans_as_integers: true },
+      compress: { drop_console: true },
       output: { comments: false }
     })
   ]
