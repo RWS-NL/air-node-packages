@@ -7,6 +7,37 @@ import { Stack } from './Stack';
  * @param keyExtractor A function that describes where to find the key to use for the Stack
  * @param valueExtractor A function that describes where to find the value to use for the Stack
  * @see Stack
+ * @example
+ * ```ts
+ *  type HumanGenders = 'male' | 'female' | 'unknown';
+ *
+ *  interface Human {
+ *    id: number;
+ *    name: string;
+ *    age: number;
+ *    gender: HumanGenders;
+ *  }
+ *
+ *  const humans: Human[] = [
+ *    { id: 1, name: 'John Connor', age: 9001, gender: 'male' },
+ *    { id: 2, name: 'Sarah Connor', age: 300, gender: 'female' },
+ *    { id: 3, name: 'Luke Skywalker', age: 30, gender: 'male' }
+ *  ];
+ *
+ *  const humansGroupedByGender = groupBy<Human, HumanGenders, Human>(
+ *    humans,
+ *    (h) => h.gender,
+ *    (h) => h
+ *  ); // Stack<HumanGenders, Human[]>
+ *
+ *  //  Stack(2) [Map] {
+ *  //   'male' => [
+ *  //     { id: 1, name: 'John Connor', age: 9001, gender: 'male' },
+ *  //     { id: 3, name: 'Luke Skywalker', age: 30, gender: 'male' }
+ *  //   ],
+ *  //   'female' => [ { id: 2, name: 'Sarah Connor', age: 300, gender: 'female' } ]
+ *  // }
+ * ```
  * @returns A `Stack<Key, Value[]>` of the grouped values
  */
 export function groupBy<I, K, V>(
