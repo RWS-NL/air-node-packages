@@ -5,7 +5,7 @@ import FirstPageIcon from '@material-ui/icons/FirstPage';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import LastPageIcon from '@material-ui/icons/LastPage';
-import classnames from 'classnames';
+import clsx from 'clsx';
 import React, { memo, SyntheticEvent } from 'react';
 import { Else, If, Then } from 'react-if';
 import css from './PaginationActions.scss';
@@ -51,7 +51,7 @@ export const PaginationActions = memo(
           color='primary'
           variant='default'
           onClick={clickEvent(page - 1)}
-          className={classnames(css.activePageChip, css.ie11ChipCorrection)}
+          className={clsx(css.activePageChip, css.ie11ChipCorrection)}
         />
       );
     };
@@ -65,12 +65,7 @@ export const PaginationActions = memo(
           }
 
           return (
-            <Box
-              component='span'
-              key={key}
-              onClick={handlePageClick(page - 1)}
-              className={classnames(css.paginationNumbers)}
-            >
+            <Box component='span' key={key} onClick={handlePageClick(page - 1)} className={clsx(css.paginationNumbers)}>
               {page}
             </Box>
           );

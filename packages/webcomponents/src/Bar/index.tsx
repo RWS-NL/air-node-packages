@@ -1,5 +1,5 @@
 import { Box } from '@material-ui/core';
-import classnames from 'classnames';
+import clsx from 'clsx';
 import React, { memo, PropsWithChildren } from 'react';
 import css from './Bar.scss';
 
@@ -18,7 +18,7 @@ interface BarProps {
  * ```
  */
 export const Bar = memo(({ classes, children, ...props }: PropsWithChildren<BarProps>) => (
-  <Box {...props} component='div' className={classnames(css.bar, classes)}>
+  <Box {...props} component='div' className={clsx(css.bar, classes)}>
     {children}
   </Box>
 ));

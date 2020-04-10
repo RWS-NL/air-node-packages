@@ -8,7 +8,7 @@ import Paper from '@material-ui/core/Paper';
 import Popper from '@material-ui/core/Popper';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import { cutText } from '@rws-air/utils';
-import classnames from 'classnames';
+import clsx from 'clsx';
 import React, { memo, MouseEvent as ReactMouseEvent, ReactNode, useRef, useState } from 'react';
 import { Button } from '../Button';
 import css from './Dropdownbutton.scss';
@@ -87,8 +87,8 @@ export const Dropdownbutton = memo((props: DropdownbuttonProps) => {
           ref={anchorRef}
           aria-label='split button'
           data-qa={props.buttonGroupDataQa}
-          className={classnames(css.buttonGroup, props.buttonGroupCustomClasses)}
-          classes={{ root: classnames({ [css.buttonGroupDisabled]: props.disabled }) }}
+          className={clsx(css.buttonGroup, props.buttonGroupCustomClasses)}
+          classes={{ root: clsx({ [css.buttonGroupDisabled]: props.disabled }) }}
           disabled={props.disabled}
         >
           <Button

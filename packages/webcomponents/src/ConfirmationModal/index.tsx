@@ -4,7 +4,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import CheckCircle from '@material-ui/icons/CheckCircle';
 import WarningIcon from '@material-ui/icons/Warning';
-import classnames from 'classnames';
+import clsx from 'clsx';
 import React, { Fragment, KeyboardEvent, memo, useMemo } from 'react';
 import { Button } from '../Button';
 import { ModalProps, ModalQAs } from '../Modal';
@@ -89,9 +89,9 @@ export const ConfirmationModal = memo((props: ConfirmationModalProps) => {
   }, [props.modalqas, props.closeAction, props.cancelButtonText, props.confirmAction, props.okButtonText]);
 
   const renderModalTitleIcon = useMemo(() => {
-    if (props.modalType === 'warning') return <WarningIcon color='error' className={classnames(css.titleIcon)} />;
+    if (props.modalType === 'warning') return <WarningIcon color='error' className={clsx(css.titleIcon)} />;
 
-    return <CheckCircle color='inherit' className={classnames(css.titleIcon, css.titleIconCheckCircle)} />;
+    return <CheckCircle color='inherit' className={clsx(css.titleIcon, css.titleIconCheckCircle)} />;
   }, [props.modalType]);
 
   return (
@@ -103,10 +103,7 @@ export const ConfirmationModal = memo((props: ConfirmationModalProps) => {
       onKeyPress={handleConfirmKeyPress}
       data-qa={props.modalqas?.modal || 'modal'}
     >
-      <DialogTitle
-        data-qa={props.modalqas?.title || 'modal-title'}
-        className={classnames(css.title, css.titleIconOffset)}
-      >
+      <DialogTitle data-qa={props.modalqas?.title || 'modal-title'} className={clsx(css.title, css.titleIconOffset)}>
         <Fragment>
           {renderModalTitleIcon}
           {props.topic}

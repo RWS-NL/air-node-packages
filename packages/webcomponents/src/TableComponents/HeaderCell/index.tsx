@@ -1,6 +1,6 @@
 import MUITableCell, { TableCellProps as MUITableCellProps } from '@material-ui/core/TableCell';
 import TableSortLabel from '@material-ui/core/TableSortLabel';
-import classnames from 'classnames';
+import clsx from 'clsx';
 import React, { memo, ReactNode } from 'react';
 import { Tooltip, TooltipProps } from '../../Tooltip';
 import css from './HeaderCell.scss';
@@ -81,7 +81,7 @@ export const HeaderCell = memo((props: HeaderCellProps) => {
       align={props.header.numeric ? 'right' : 'left'}
       padding={props.header.disablePadding ? 'none' : 'default'}
       sortDirection={props.orderby === props.header.label ? props.order : false}
-      className={classnames(css.tableCells, { [css.actionHeaderCell]: props.isActionButtonCell }, props.customclasses)}
+      className={clsx(css.tableCells, { [css.actionHeaderCell]: props.isActionButtonCell }, props.customclasses)}
     >
       {renderTableHeaderCell()}
     </MUITableCell>

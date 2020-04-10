@@ -3,8 +3,8 @@ import MUITablePagination, {
   TablePaginationTypeMap
 } from '@material-ui/core/TablePagination';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import classnames from 'classnames';
-import React, { memo, ReactNode, ComponentType } from 'react';
+import clsx from 'clsx';
+import React, { ComponentType, memo, ReactNode } from 'react';
 import { PaginationActions } from '../PaginationActions';
 import css from './Pagination.scss';
 
@@ -56,7 +56,7 @@ export const Pagination = memo((props: PaginationProps) => {
       }
       onChangePage={props.onChangePage}
       onChangeRowsPerPage={props.onChangeRowsPerPage}
-      className={classnames(css.tablePagination, { [css.tablePaginationMobile]: isOnMobile }, props.customClasses)}
+      className={clsx(css.tablePagination, { [css.tablePaginationMobile]: isOnMobile }, props.customClasses)}
       classes={{ root: css.text, selectIcon: css.selectIcon, menuItem: css.text }}
       rowsPerPage={props.rowsPerPage}
       rowsPerPageOptions={props.rowsPerPageOptions}

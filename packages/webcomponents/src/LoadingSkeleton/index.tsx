@@ -1,5 +1,5 @@
 import { CSSProperties } from '@material-ui/styles';
-import classnames from 'classnames';
+import clsx from 'clsx';
 import React, { memo } from 'react';
 import css from './LoadingSkeleton.scss';
 
@@ -50,7 +50,7 @@ export const LoadingSkeleton = memo(
 
     // Content is a zero-width-non-joiner
     return (
-      <span {...props} data-qa={dataQa} className={classnames(css.skeleton, props.customclasses)} style={cssStyle}>
+      <span {...props} data-qa={dataQa} className={clsx(css.skeleton, props.customclasses)} style={cssStyle}>
         &zwnj;
       </span>
     );

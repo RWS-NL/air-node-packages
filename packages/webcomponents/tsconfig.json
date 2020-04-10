@@ -1,15 +1,15 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "target": "es5",
-    "outDir": "build",
+    "target": "ES5",
+    "outDir": "./dist",
     "rootDir": "src",
-    "baseUrl": "src",
     "resolveJsonModule": true,
     "noEmit": true,
     "downlevelIteration": true,
     "jsx": "react",
-    "incremental": false
+    "incremental": false,
+    "declarationMap": true
   },
   "include": ["src"],
   "exclude": ["src/__tests__", "src/setupTests.ts"]

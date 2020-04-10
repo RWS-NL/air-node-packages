@@ -1,5 +1,5 @@
 import MUITableCell, { TableCellProps as MUITableCellProps } from '@material-ui/core/TableCell';
-import classnames from 'classnames';
+import clsx from 'clsx';
 import React, { memo, ReactNode } from 'react';
 import css from './BodyCell.scss';
 
@@ -37,7 +37,7 @@ export const BodyCell = memo(
     <MUITableCell
       {...props}
       data-qa={dataQa}
-      className={classnames(css.tableCells, customclasses)}
+      className={clsx(css.tableCells, customclasses)}
       component={component}
       scope={scope}
     >

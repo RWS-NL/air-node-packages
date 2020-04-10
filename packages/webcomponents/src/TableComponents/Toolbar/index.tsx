@@ -1,5 +1,5 @@
 import Grid from '@material-ui/core/Grid/Grid';
-import classnames from 'classnames';
+import clsx from 'clsx';
 import debouncer from 'lodash.debounce';
 import React, { Fragment, memo, ReactNode } from 'react';
 import { SearchBar, SearchBarProps } from '../SearchBar';
@@ -106,7 +106,7 @@ export const Toolbar = memo(
     const debouncedSearch = debouncer((input: string) => onsearchinput(input), searchdebounce || 400);
 
     return (
-      <div {...props} className={classnames(css.toolbar, customclasses)} data-qa={dataQa}>
+      <div {...props} className={clsx(css.toolbar, customclasses)} data-qa={dataQa}>
         <Grid container direction='row' justify='flex-end' alignItems='center' spacing={2}>
           {extraIcons && extraIcons.length ? renderIcons(extraIcons) : <Fragment />}
           <Grid item key={2}>
@@ -117,7 +117,7 @@ export const Toolbar = memo(
               placeholder={`${searchplaceholderlabel}...`}
               onChange={(e) => debouncedSearch(e.target.value)}
               onCancelSearch={onsearchclear}
-              className={classnames(css.searchFieldContent, css.ie11SearchBarTextCorrection, customSearchbarClasses)}
+              className={clsx(css.searchFieldContent, css.ie11SearchBarTextCorrection, customSearchbarClasses)}
               paperElevation={paperElevation}
             />
           </Grid>

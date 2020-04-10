@@ -1,6 +1,6 @@
 import { IconButton, Paper } from '@material-ui/core';
 import { objectHasProperty } from '@rws-air/utils';
-import classnames from 'classnames';
+import clsx from 'clsx';
 import React, { memo, useMemo } from 'react';
 import { Tooltip, TooltipProps } from '../../Tooltip';
 import css from './ToolbarButton.scss';
@@ -78,7 +78,7 @@ export const ToolbarButton = memo((props: ToolbarButtonProps) => {
         <IconButton
           disabled={props.disabled}
           data-qa={props['iconButton-data-qa']}
-          className={classnames(css.inputButton, props.iconButtonCustomclasses)}
+          className={clsx(css.inputButton, props.iconButtonCustomclasses)}
           onClick={props.onClick}
           size='small'
           color='primary'
@@ -95,7 +95,7 @@ export const ToolbarButton = memo((props: ToolbarButtonProps) => {
       <IconButton
         disabled={props.disabled}
         data-qa={props['iconButton-data-qa']}
-        className={classnames(css.inputButton, props.iconButtonCustomclasses)}
+        className={clsx(css.inputButton, props.iconButtonCustomclasses)}
         onClick={props.onClick}
         size='small'
         color='primary'
@@ -115,7 +115,7 @@ export const ToolbarButton = memo((props: ToolbarButtonProps) => {
 
   return (
     <Paper
-      className={classnames(css.paper, props.paperCustomclasses)}
+      className={clsx(css.paper, props.paperCustomclasses)}
       elevation={elevation}
       data-qa={props['paper-data-qa']}
       square

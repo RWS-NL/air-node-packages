@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import classnames from 'classnames';
+import clsx from 'clsx';
 import React, { Component, CSSProperties, HTMLAttributes } from 'react';
 import { ResizeModes } from './types';
 
@@ -117,7 +117,7 @@ export class Panel extends Component<PanelProps, {}> {
         ref={(node) => {
           this.node = node;
         }}
-        className={classnames('panelWrapper', this.props.panelWrapperClasses)}
+        className={clsx('panelWrapper', this.props.panelWrapperClasses)}
         style={this.props.style}
       >
         {resizeObject}

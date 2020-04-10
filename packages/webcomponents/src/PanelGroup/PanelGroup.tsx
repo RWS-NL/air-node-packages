@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import classnames from 'classnames';
+import clsx from 'clsx';
 import React, { Children, Component, CSSProperties, HTMLAttributes, ReactNodeArray } from 'react';
 import { DeepRequired } from 'utility-types';
 import { Divider } from './Divider';
@@ -652,7 +652,7 @@ export class PanelGroup extends Component<PanelGroupProps, PanelGroupState> {
 
     return (
       <div
-        className={classnames('panelGroup', this.props.panelGroupClasses)}
+        className={clsx('panelGroup', this.props.panelGroupClasses)}
         style={style.container}
         ref={(node) => {
           this.node = node;

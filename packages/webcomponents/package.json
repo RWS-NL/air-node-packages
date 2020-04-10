@@ -5,7 +5,8 @@
   "author": "@rws-air",
   "license": "AGPL-3.0-or-later",
   "main": "dist/index.js",
-  "module": "dist/index.es.js",
+  "module": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "homepage": "https://github.com/RWS-NL/air-node-packages/tree/master/packages/webcomponents#readme",
   "scripts": {
     "test": "jest",
@@ -13,31 +14,34 @@
     "lint:js": "eslint src __tests__ --fix --ext ts,tsx",
     "lint:scss": "stylelint --fix ./src/styles/*.scss ./src/**/*.scss",
     "prebuild": "yarn lint && yarn test",
-    "build": "rollup -c rollup.config.js",
-    "start": "rollup -wc rollup.config.js"
+    "build": "rollup -c rollup.config.ts",
+    "start": "rollup -wc rollup.config.ts"
   },
   "files": [
     "dist"
   ],
   "peerDependencies": {
-    "@date-io/core": "^1",
-    "@date-io/moment": "^1",
-    "@material-ui/core": "^4",
-    "@material-ui/icons": "^4",
-    "@material-ui/pickers": "^3",
-    "@rws-air/utils": "^4",
-    "classnames": "^2",
+    "@date-io/core": "^1.x",
+    "@date-io/moment": "^1.x",
+    "@material-ui/core": "^4.9.9",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/pickers": "^3.2.10",
+    "@rws-air/utils": "^4.2.4",
     "formik-material-ui-pickers": "0.0.8",
     "formik-material-ui": "2.0.0-beta.1",
-    "formik": "^2",
-    "i18next": "^19",
-    "lodash.debounce": "^4",
-    "moment": "^2",
+    "formik": "^2.1.4",
     "react-dom": "^16",
-    "react-i18next": "^11",
-    "react-if": "^3",
+    "react-if": "^3.4.3",
     "react-router-dom": "^5",
-    "react": "^16",
+    "react": "^16"
+  },
+  "dependencies": {
+    "@favware/querystring": "^4.3.1",
+    "clsx": "^1.1.0",
+    "i18next": "^19.4.0",
+    "lodash.debounce": "^4.0.8",
+    "moment": "^2.24.0",
+    "react-i18next": "^11.3.4",
     "utility-types": "3.10.0"
   },
   "browserslist": {

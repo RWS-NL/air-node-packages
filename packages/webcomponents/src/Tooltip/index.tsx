@@ -1,7 +1,7 @@
 import Box from '@material-ui/core/Box';
 import MUITooltip, { TooltipProps as MUITooltipProps } from '@material-ui/core/Tooltip';
 import { CSSProperties } from '@material-ui/styles';
-import classnames from 'classnames';
+import clsx from 'clsx';
 import React, { memo } from 'react';
 import css from './Tooltip.scss';
 
@@ -37,7 +37,7 @@ export const Tooltip = memo(
       }
       placement={placement || 'top'}
       enterDelay={enterDelay || 300}
-      classes={{ tooltip: classnames(css.tooltip, customclasses), popper: css.popper }}
+      classes={{ tooltip: clsx(css.tooltip, customclasses), popper: css.popper }}
       style={style}
     >
       {children}

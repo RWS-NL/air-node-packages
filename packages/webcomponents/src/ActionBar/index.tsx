@@ -1,6 +1,6 @@
-import { Typography, TypographyProps, Box } from '@material-ui/core';
+import { Box, Typography, TypographyProps } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid/Grid';
-import classnames from 'classnames';
+import clsx from 'clsx';
 import React, { memo, ReactNode, useMemo } from 'react';
 import { When } from 'react-if';
 import { Button } from '../Button';
@@ -58,7 +58,7 @@ export const ActionBar = memo(
             variant={typographyVariant}
             data-qa='action-bar-title'
             color='textPrimary'
-            className={classnames(css.actionHeader, customclasses)}
+            className={clsx(css.actionHeader, customclasses)}
           >
             {title}
           </Typography>
@@ -71,7 +71,7 @@ export const ActionBar = memo(
     }, [customclasses, title, typographyVariant]);
 
     return (
-      <Box component='div' className={classnames(css.actionBar)} data-qa={dataQa}>
+      <Box component='div' className={clsx(css.actionBar)} data-qa={dataQa}>
         <Grid container direction='row' justify='space-between' alignItems='center' className={css.actionGridLeft}>
           <Grid item key={1} xs={6}>
             {getTitle}

@@ -1,6 +1,6 @@
 import { createStyles, makeStyles, Theme } from '@material-ui/core';
 import MUIButton, { ButtonProps as MUIButtonProps } from '@material-ui/core/Button';
-import classnames from 'classnames';
+import clsx from 'clsx';
 import React, { memo, ReactNode } from 'react';
 import css from './Button.scss';
 
@@ -46,16 +46,16 @@ export const Button = memo((props: MUIButtonProps<'button', ButtonProps>) => {
       variant={props.variant}
       color={props.color}
       disabled={props.disabled}
-      className={classnames(props.customclasses)}
+      className={clsx(props.customclasses)}
       classes={{
         root: css.button,
-        label: classnames(css.buttonLabel, props.customlabelclasses),
+        label: clsx(css.buttonLabel, props.customlabelclasses),
         disabled: css.buttonDisabled,
-        containedPrimary: classnames(css.buttonPrimary, classes.buttonShadow),
-        containedSecondary: classnames(css.buttonSecondary, classes.buttonShadow),
-        outlined: classnames(css.buttonOutlined, classes.buttonShadow),
-        outlinedPrimary: classnames(css.buttonOutlined, classes.buttonShadow),
-        outlinedSecondary: classnames(css.buttonOutlinedSecondary, classes.buttonShadow)
+        containedPrimary: clsx(css.buttonPrimary, classes.buttonShadow),
+        containedSecondary: clsx(css.buttonSecondary, classes.buttonShadow),
+        outlined: clsx(css.buttonOutlined, classes.buttonShadow),
+        outlinedPrimary: clsx(css.buttonOutlined, classes.buttonShadow),
+        outlinedSecondary: clsx(css.buttonOutlinedSecondary, classes.buttonShadow)
       }}
       href={undefined}
     >

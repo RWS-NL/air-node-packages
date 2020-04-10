@@ -1,5 +1,5 @@
 import { TextField as MUITextField } from '@material-ui/core';
-import classnames from 'classnames';
+import clsx from 'clsx';
 import { useField } from 'formik';
 import { fieldToTextField, TextFieldProps } from 'formik-material-ui';
 import React, { FC } from 'react';
@@ -48,7 +48,7 @@ export const TextField: FC<TextFieldProps> = (props) => {
           notchedOutline: css.outline
         }
       }}
-      classes={{ root: classnames([{ [css.errorInput]: textFieldHasErrors }]) }}
+      classes={{ root: clsx([{ [css.errorInput]: textFieldHasErrors }]) }}
       InputLabelProps={{
         shrink: true,
         classes: { root: css.inputLabel }

@@ -3,7 +3,7 @@ import TableBody from '@material-ui/core/TableBody';
 import TableHead from '@material-ui/core/TableHead';
 import { TablePaginationProps as MUITablePaginationProps } from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
-import classnames from 'classnames';
+import clsx from 'clsx';
 import React, { Fragment, memo, ReactNode } from 'react';
 import { When } from 'react-if';
 import { HeaderCell, HeaderCellProps, HeaderProps } from '../HeaderCell';
@@ -205,25 +205,25 @@ export const Table = memo(
             onsearchclear={props.onsearchclear}
             searchdebounce={props.searchdebounce}
             data-qa={props.tableqas.toolbar}
-            customclasses={classnames(addCustomClasses('tableToolbar'))}
-            customSearchbarClasses={classnames(addCustomClasses('tableSearchbar'))}
+            customclasses={clsx(addCustomClasses('tableToolbar'))}
+            customSearchbarClasses={clsx(addCustomClasses('tableSearchbar'))}
             paperElevation={props.paperElevation}
             extraIcons={props.extraIcons}
           />
         </When>
 
         <When condition={showTopPagination}>
-          {renderTablePagination(classnames(addCustomClasses('tablePagination', css.tableTopPagination)))}
+          {renderTablePagination(clsx(addCustomClasses('tablePagination', css.tableTopPagination)))}
         </When>
 
         <MUITable
           {...props.TableProps}
           stickyHeader={props.stickyHeader}
-          className={classnames(addCustomClasses('table', css.table))}
+          className={clsx(addCustomClasses('table', css.table))}
           data-qa={props.tableqas.table}
         >
-          <TableHead data-qa={props.tableqas.header} className={classnames(addCustomClasses('tableHeader'))}>
-            <TableRow data-qa={props.tableqas.headerRow} className={classnames(addCustomClasses('tableHeaderRow'))}>
+          <TableHead data-qa={props.tableqas.header} className={clsx(addCustomClasses('tableHeader'))}>
+            <TableRow data-qa={props.tableqas.headerRow} className={clsx(addCustomClasses('tableHeaderRow'))}>
               {props.headers.map((header, index) => (
                 <HeaderCell
                   {...props.HeaderCellProps}
@@ -235,20 +235,18 @@ export const Table = memo(
                   tooltipplacement={props.tooltipplacement}
                   onRequestSort={props.onRequestSort}
                   data-qa={props.tableqas.headerCell}
-                  customclasses={classnames(addCustomClasses('tableHeaderCell'))}
+                  customclasses={clsx(addCustomClasses('tableHeaderCell'))}
                   isActionButtonCell={header.isActionButtonCell}
                 />
               ))}
             </TableRow>
           </TableHead>
-          <TableBody data-qa={props.tableqas.tableBody} className={classnames(addCustomClasses('tableBody'))}>
+          <TableBody data-qa={props.tableqas.tableBody} className={clsx(addCustomClasses('tableBody'))}>
             {props.tablebodycontent}
           </TableBody>
         </MUITable>
 
-        <When condition={showBottomPagination}>
-          {renderTablePagination(classnames(addCustomClasses('tablePagination')))}
-        </When>
+        <When condition={showBottomPagination}>{renderTablePagination(clsx(addCustomClasses('tablePagination')))}</When>
       </Fragment>
     );
   }
