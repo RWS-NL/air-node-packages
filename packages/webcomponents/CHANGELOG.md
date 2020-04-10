@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.3.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@12.3.0...@rws-air/webcomponents@12.3.1) (2020-04-10)
+
+### Bug Fixes
+
+- **webcomponents:** change published bundle to CommonJS to support Jest ([9eb26cb](https://github.com/RWS-NL/air-node-packages/commit/9eb26cbd5c1a7f3f9ce5b909b481769f0b850191))
+
 # [12.3.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@12.2.1...@rws-air/webcomponents@12.3.0) (2020-04-10)
 
 ### Bug Fixes
