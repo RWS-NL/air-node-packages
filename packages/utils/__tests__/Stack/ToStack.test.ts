@@ -19,4 +19,32 @@ describe('toStack', () => {
       ])
     );
   });
+
+  test('GIVEN data from example THEN should validate all modifications', () => {
+    type HumanGenders = 'male' | 'female' | 'unknown';
+
+    interface Human {
+      id: number;
+      name: string;
+      age: number;
+      gender: HumanGenders;
+    }
+
+    const humans: Human[] = [
+      { id: 1, name: 'John Connor', age: 9001, gender: 'male' },
+      { id: 2, name: 'Sarah Connor', age: 300, gender: 'female' },
+      { id: 3, name: 'Luke Skywalker', age: 30, gender: 'male' }
+    ];
+
+    const humansGroupedByGender = toStack<Human, HumanGenders, Human>(
+      humans,
+      (h) => h.gender,
+      (h) => h
+    ); // Stack<HumanGenders, Human>
+
+    expect(humansGroupedByGender.size).toBe(2);
+    expect(humansGroupedByGender.get('male')).toMatchObject<Human>(humans[2]);
+    expect(humansGroupedByGender.get('female')).toMatchObject<Human>(humans[1]);
+    expect(humansGroupedByGender.array()).not.toContainEqual<Human>(humans[0]);
+  });
 });

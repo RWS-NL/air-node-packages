@@ -16,3 +16,4 @@ export * from './Stack';
 export * from './Testing';
 export * from './TimeUtils';
 export * from './UseWindowSize';
+export * from './WindowLocationService';
