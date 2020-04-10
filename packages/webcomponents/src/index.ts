@@ -13,6 +13,7 @@ export * from './Modal';
 export * from './ModalContent';
 export * from './NavBar';
 export * from './PanelGroup';
+export * from './Router';
 export * from './TableComponents';
 export * from './Tooltip';
 export * from './UserInfo';

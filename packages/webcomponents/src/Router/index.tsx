@@ -1,7 +1,6 @@
 import stringify, { QuerystringObject } from '@favware/querystring';
 import React, { memo, PropsWithChildren } from 'react';
-import { Route as AppRoute, RouteProps as ReactRouterProps, Switch } from 'react-router';
-import { RouteComponentProps } from 'react-router-dom';
+import { Route as AppRoute, RouteComponentProps, RouteProps as ReactRouterProps, Switch } from 'react-router-dom';
 import { NonUndefined } from 'utility-types';
 
 /**
