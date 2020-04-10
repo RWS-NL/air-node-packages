@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ItalicTransProps | RWS-NL AIR Node Packages</title>
+	<title>Route | RWS-NL AIR Node Packages</title>
 	<meta name="description" content="Documentation for RWS-NL AIR Node Packages">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,10 +55,10 @@
 					<a href="../modules/_rws_air_webcomponents.html">@rws-air/webcomponents</a>
 				</li>
 				<li>
-					<a href="_rws_air_webcomponents.italictransprops-2.html">ItalicTransProps</a>
+					<a href="_rws_air_webcomponents.route-1.html">Route</a>
 				</li>
 			</ul>
-			<h1>Interface ItalicTransProps</h1>
+			<h1>Interface Route</h1>
 		</div>
 	</div>
 </header>
@@ -69,7 +69,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">ItalicTransProps</span>
+						<span class="target">Route</span>
 					</li>
 				</ul>
 			</section>
@@ -80,8 +80,10 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.italictransprops-2.html#italickey" class="tsd-kind-icon">italic<wbr>Key</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.italictransprops-2.html#titlekey" class="tsd-kind-icon">title<wbr>Key</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.route-1.html#component" class="tsd-kind-icon">component</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.route-1.html#data_qa" class="tsd-kind-icon">data-<wbr>qa</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.route-1.html#path" class="tsd-kind-icon">path</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.route-1.html#reactrouterprops" class="tsd-kind-icon">react<wbr>Router<wbr>Props</a></li>
 							</ul>
 						</section>
 					</div>
@@ -90,22 +92,47 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="italickey" class="tsd-anchor"></a>
-					<h3>italic<wbr>Key</h3>
-					<div class="tsd-signature tsd-kind-icon">italic<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="component" class="tsd-anchor"></a>
+					<h3>component</h3>
+					<div class="tsd-signature tsd-kind-icon">component<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ReactRouterProps</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"component"</span><span class="tsd-signature-symbol">]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/a69db32/packages/webcomponents/src/I18nComponents/ItalicTrans/index.tsx#L6">packages/webcomponents/src/I18nComponents/ItalicTrans/index.tsx:6</a></li>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/a69db32/packages/webcomponents/src/Router/index.tsx#L58">packages/webcomponents/src/Router/index.tsx:58</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="titlekey" class="tsd-anchor"></a>
-					<h3>title<wbr>Key</h3>
-					<div class="tsd-signature tsd-kind-icon">title<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="data_qa" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> data-<wbr>qa</h3>
+					<div class="tsd-signature tsd-kind-icon">data-<wbr>qa<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/a69db32/packages/webcomponents/src/I18nComponents/ItalicTrans/index.tsx#L5">packages/webcomponents/src/I18nComponents/ItalicTrans/index.tsx:5</a></li>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/a69db32/packages/webcomponents/src/Router/index.tsx#L61">packages/webcomponents/src/Router/index.tsx:61</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Data-qa tag to apply to the route</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="path" class="tsd-anchor"></a>
+					<h3>path</h3>
+					<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ReactRouterProps</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"path"</span><span class="tsd-signature-symbol">]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/a69db32/packages/webcomponents/src/Router/index.tsx#L57">packages/webcomponents/src/Router/index.tsx:57</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="reactrouterprops" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> react<wbr>Router<wbr>Props</h3>
+					<div class="tsd-signature tsd-kind-icon">react<wbr>Router<wbr>Props<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Omit</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ReactRouterProps</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">"exact"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"component"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"path"</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/a69db32/packages/webcomponents/src/Router/index.tsx#L59">packages/webcomponents/src/Router/index.tsx:59</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -145,13 +172,19 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="_rws_air_webcomponents.italictransprops-2.html" class="tsd-kind-icon">Italic<wbr>Trans<wbr>Props</a>
+						<a href="_rws_air_webcomponents.route-1.html" class="tsd-kind-icon">Route</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_rws_air_webcomponents.italictransprops-2.html#italickey" class="tsd-kind-icon">italic<wbr>Key</a>
+								<a href="_rws_air_webcomponents.route-1.html#component" class="tsd-kind-icon">component</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_rws_air_webcomponents.italictransprops-2.html#titlekey" class="tsd-kind-icon">title<wbr>Key</a>
+								<a href="_rws_air_webcomponents.route-1.html#data_qa" class="tsd-kind-icon">data-<wbr>qa</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_rws_air_webcomponents.route-1.html#path" class="tsd-kind-icon">path</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_rws_air_webcomponents.route-1.html#reactrouterprops" class="tsd-kind-icon">react<wbr>Router<wbr>Props</a>
 							</li>
 						</ul>
 					</li>
