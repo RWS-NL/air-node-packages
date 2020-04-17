@@ -12,7 +12,7 @@ exports[`Snapshot Testing Disabling Tooltip 1`] = `
 exports[`Snapshot Testing Optional Props 1`] = `
 <Memo()
   id="tooltip"
-  title="Sample"
+  title=""
 >
   <WithStyles(ForwardRef(Fab))
     className="makeStyles-fab-1"

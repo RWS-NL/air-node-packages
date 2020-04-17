@@ -58,7 +58,7 @@ export const HeaderCell = memo((props: HeaderCellProps) => {
 
     return (
       <Tooltip
-        title={props.tooltiplabel}
+        title={props.tooltiplabel ?? ''}
         placement={props.tooltipplacement || 'top'}
         data-qa={`table-header-${props['data-qa']}`}
       >

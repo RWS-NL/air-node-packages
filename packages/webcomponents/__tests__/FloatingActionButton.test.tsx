@@ -51,12 +51,7 @@ describe('Snapshot Testing', () => {
 
   test('Optional Props', () => {
     const floatingActionButton = shallow(
-      <FloatingActionButton
-        icon={<AccessAlarm />}
-        tooltipContent='Sample'
-        TooltipProps={{ id: 'tooltip' }}
-        onClick={mockButtonClick}
-      />
+      <FloatingActionButton icon={<AccessAlarm />} TooltipProps={{ id: 'tooltip' }} onClick={mockButtonClick} />
     );
     expect(floatingActionButton).toMatchSnapshot();
   });

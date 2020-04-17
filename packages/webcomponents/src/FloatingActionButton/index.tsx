@@ -9,7 +9,7 @@ export interface FabProps extends MFabProps {
   /** When true, FAB will not have a Tooltip on hover */
   disableTooltip?: boolean;
   /** The content to put in the on-hover tooltip */
-  tooltipContent?: ReactNode;
+  tooltipContent?: TooltipProps['title'];
   /** Props applied to the `Tooltip` element */
   TooltipProps?: Partial<Omit<TooltipProps, 'title'>>;
 }
@@ -50,7 +50,7 @@ export const FloatingActionButton = memo(
     }
 
     return (
-      <Tooltip {...TooltipProps} title={tooltipContent}>
+      <Tooltip {...TooltipProps} title={tooltipContent ?? ''}>
         <Fab {...props} className={classes.fab} color='primary'>
           {icon}
         </Fab>
