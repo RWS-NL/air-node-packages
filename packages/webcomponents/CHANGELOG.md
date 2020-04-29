@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.3.2](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@12.3.1...@rws-air/webcomponents@12.3.2) (2020-04-29)
+
+### Bug Fixes
+
+- **webcomponents:** fix tooltip title potentially undefined ([b09cf0e](https://github.com/RWS-NL/air-node-packages/commit/b09cf0e5f252ff38b539efea4763340f23e8ad5a))
+
 ## [12.3.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@12.3.0...@rws-air/webcomponents@12.3.1) (2020-04-10)
 
 ### Bug Fixes

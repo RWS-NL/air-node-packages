@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.4.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@4.3.0...@rws-air/utils@4.4.0) (2020-04-29)
+
+### Features
+
+- **utils:** add findByReactDataQa for ReactWrapper ([83b608b](https://github.com/RWS-NL/air-node-packages/commit/83b608b194c7d48b8800b398d52f34ad6f7eac31))
+
 # [4.3.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@4.2.4...@rws-air/utils@4.3.0) (2020-04-10)
 
 ### Features
