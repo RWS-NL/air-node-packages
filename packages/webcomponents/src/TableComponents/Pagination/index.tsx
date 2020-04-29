@@ -14,8 +14,6 @@ export type MutatedMUITablePaginationProps = TablePaginationTypeMap<
 >['props'];
 
 export interface PaginationProps extends MutatedMUITablePaginationProps {
-  /** The label in the displayed rows per page, for example "5 rows per page" */
-  labelRowsPerPage: ReactNode;
   /** The label in the displayed pages, for example "of" in "page 1 of 10" */
   labelPaginationOf: ReactNode;
   /** Data-qa tag to apply to the search bar and input element */
