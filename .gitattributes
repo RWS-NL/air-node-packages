@@ -1,5 +1,7 @@
 #pattern  filter=crypt diff=crypt
 sample-user.yml filter=crypt diff=crypt
+user.yml filter=crypt diff=crypt
+users.yml filter=crypt diff=crypt
 *.env filter=crypt diff=crypt
 *.env.local filter=crypt diff=crypt
 *.env.development.local filter=crypt diff=crypt
