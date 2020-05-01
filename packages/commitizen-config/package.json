@@ -20,7 +20,7 @@
   ],
   "dependencies": {
     "chalk": "^4.0.0",
-    "commitizen": "^4.0.4",
+    "commitizen": "^4.0.5",
     "lodash.map": "^4.6.0",
     "longest": "^2.0.1",
     "right-pad": "^1.0.1",
