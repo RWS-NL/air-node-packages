@@ -7,24 +7,5 @@
     "skipLibCheck": true,
     "jsx": "react"
   },
-  "exclude": ["**/node_modules/**", "**/dist/**"],
-  "typedocOptions": {
-    "out": "./docs/",
-    "readme": "./README.md",
-    "name": "RWS-NL AIR Node Packages",
-    "exclude": [
-      "**/node_modules/**",
-      "**/dist/**",
-      "**/__tests__/**",
-      "**/*.js",
-      "packages/cra-template-air/**",
-      "packages/local-components-test/**"
-    ],
-    "mode": "modules",
-    "excludeExternals": true,
-    "excludePrivate": true,
-    "excludeProtected": true,
-    "excludeNotExported": true,
-    "lernaExclude": ["cra-template-air", "@rws-air/local-components-test"]
-  }
+  "exclude": ["**/node_modules/**", "**/dist/**"]
 }
