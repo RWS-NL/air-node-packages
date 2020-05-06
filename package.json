@@ -22,7 +22,7 @@
     "scripts:duplicateESLintConfig": "yarn scripts:runner scripts/duplicateESLintConfig",
     "scripts:duplicateStylelintConfig": "yarn scripts:runner scripts/duplicateStylelintConfig",
     "scripts:yarnAfterPull": "yarn scripts:runner scripts/yarnAfterPull",
-    "now.sh": "rm -rf packages scripts node_modules"
+    "now.sh": "yarn ci:build && yarn docs && rm -rf packages scripts node_modules .git-authors"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
