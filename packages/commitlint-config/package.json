@@ -1,6 +1,6 @@
 {
   "name": "@rws-air/commitlint-config",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Rules to write conventional commits for AIR packages",
   "author": "@rws-air",
   "license": "AGPL-3.0-or-later",
