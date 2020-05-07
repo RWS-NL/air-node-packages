@@ -1,0 +1,12 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "target": "ES5",
+    "outDir": "../dist",
+    "rootDir": ".",
+    "downlevelIteration": true,
+    "composite": true,
+    "declarationMap": true
+  },
+  "include": ["."]
+}

@@ -1,5 +1,5 @@
+import { ModalContent } from '@src/ModalContent';
 import { shallow } from 'enzyme';
-import { ModalContent } from '../src/ModalContent';
 import React from 'react';
 
 describe('Component Testing', () => {

@@ -1,8 +1,8 @@
+import { IconButton } from '@material-ui/core';
+import { Button } from '@src/Button';
+import { Modal, ModalProps } from '@src/Modal';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React, { Fragment } from 'react';
-import { Button } from '../src/Button';
-import { Modal, ModalProps } from '../src/Modal';
-import { IconButton } from '@material-ui/core';
 
 let modal: ShallowWrapper<ModalProps, any>;
 const mockCloseAction = jest.fn();

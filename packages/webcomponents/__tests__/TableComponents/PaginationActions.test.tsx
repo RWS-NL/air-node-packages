@@ -1,6 +1,6 @@
+import { PaginationActions } from '@TableComponents/PaginationActions';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
-import { PaginationActions } from '../../src/TableComponents/PaginationActions';
 
 const onChangePage = jest.fn();
 

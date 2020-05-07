@@ -1,6 +1,7 @@
+import { PanelGroup } from '@PanelGroup/PanelGroup';
+import { ResizeModes } from '@PanelGroup/types';
 import { shallow } from 'enzyme';
 import React from 'react';
-import { PanelGroup, ResizeModes } from '../../src/PanelGroup';
 
 describe('PanelGroup', () => {
   describe('Snapshot Testing', () => {

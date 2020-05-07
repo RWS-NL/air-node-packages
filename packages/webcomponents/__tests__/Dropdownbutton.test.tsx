@@ -1,6 +1,6 @@
-import { Dropdownbutton, DropdownbuttonProps } from '../src/Dropdownbutton';
-import { shallow, ShallowWrapper } from 'enzyme';
 import CloudDownload from '@material-ui/icons/CloudDownload';
+import { Dropdownbutton, DropdownbuttonProps } from '@src/Dropdownbutton';
+import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
 
 const mockButtonClick = jest.fn();

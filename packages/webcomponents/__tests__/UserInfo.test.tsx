@@ -1,7 +1,7 @@
 import { toBeCalled } from '@rws-air/utils';
+import { UserInfo } from '@src/UserInfo';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
-import { UserInfo } from '../src/UserInfo';
 
 describe('UserInfo tests', () => {
   const mockRelogin = jest.fn();

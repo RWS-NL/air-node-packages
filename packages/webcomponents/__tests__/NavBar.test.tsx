@@ -1,8 +1,8 @@
-import { NavBar, NavBarProps } from '../src/NavBar';
+import { Tabs } from '@material-ui/core';
+import { LinkTabProps } from '@src/LinkTab';
+import { NavBar, NavBarProps } from '@src/NavBar';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React, { ChangeEvent } from 'react';
-import { LinkTabProps } from '../src/LinkTab';
-import { Tabs } from '@material-ui/core';
 
 let currentValue = 0;
 const onTabChange = jest.fn((_event: ChangeEvent<object>, newVal: number) => (currentValue = newVal));
