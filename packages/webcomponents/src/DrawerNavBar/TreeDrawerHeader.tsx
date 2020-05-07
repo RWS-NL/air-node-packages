@@ -74,51 +74,7 @@ export const TreeDrawerHeader = memo((treeDrawer: TreeDrawerProps) => {
             <When condition={treeDrawer.open}>
               <Grid item xs={1} />
               <Grid item xs={8} classes={{ root: classes.treeDropdownGrid }}>
-                <ListItemText
-                  disableTypography
-                  primary={
-                    <FormControl className={classes.treeSelector} size='small'>
-                      <Select
-                        value={treeDrawer.currentDropdownValue}
-                        onChange={(event) => {
-                          event.preventDefault();
-                          treeDrawer.hanbdleDropdownChange(event);
-                          event.stopPropagation();
-                        }}
-                        onClose={(event) => {
-                          event.preventDefault();
-                          event.stopPropagation();
-                        }}
-                        onOpen={(event) => {
-                          event.preventDefault();
-                          event.stopPropagation();
-                        }}
-                        fullWidth
-                        displayEmpty
-                        disableUnderline
-                        MenuProps={{
-                          getContentAnchorEl: null,
-                          anchorOrigin: {
-                            vertical: 'bottom',
-                            horizontal: 'center'
-                          },
-                          transformOrigin: {
-                            vertical: 'top',
-                            horizontal: 'center'
-                          },
-                          elevation: 2
-                        }}
-                        renderValue={(value) => <b>{value as string}</b>}
-                      >
-                        {treeDrawer.dropdownValues.map(({ value, label }, index) => (
-                          <MenuItem key={index} value={value}>
-                            {label}
-                          </MenuItem>
-                        ))}
-                      </Select>
-                    </FormControl>
-                  }
-                />
+                <ListItemText disableTypography primary={<TreeDrawerHeaderDropdown {...treeDrawer} />} />
               </Grid>
               <Grid item xs={1}>
                 <Tooltip title={treeDrawer.tooltipText}>
@@ -145,5 +101,52 @@ export const TreeDrawerHeader = memo((treeDrawer: TreeDrawerProps) => {
       </List>
       <Divider classes={{ root: classes.divider }} />
     </>
+  );
+});
+
+export const TreeDrawerHeaderDropdown = memo((treeDrawer: TreeDrawerProps) => {
+  const classes = useStyles();
+
+  return (
+    <FormControl className={classes.treeSelector} size='small'>
+      <Select
+        value={treeDrawer.currentDropdownValue}
+        onChange={(event) => {
+          event.preventDefault();
+          treeDrawer.hanbdleDropdownChange(event);
+          event.stopPropagation();
+        }}
+        onClose={(event) => {
+          event.preventDefault();
+          event.stopPropagation();
+        }}
+        onOpen={(event) => {
+          event.preventDefault();
+          event.stopPropagation();
+        }}
+        fullWidth
+        displayEmpty
+        disableUnderline
+        MenuProps={{
+          getContentAnchorEl: null,
+          anchorOrigin: {
+            vertical: 'bottom',
+            horizontal: 'center'
+          },
+          transformOrigin: {
+            vertical: 'top',
+            horizontal: 'center'
+          },
+          elevation: 2
+        }}
+        renderValue={(value) => <b>{value as string}</b>}
+      >
+        {treeDrawer.dropdownValues.map(({ value, label }, index) => (
+          <MenuItem key={index} value={value}>
+            {label}
+          </MenuItem>
+        ))}
+      </Select>
+    </FormControl>
   );
 });

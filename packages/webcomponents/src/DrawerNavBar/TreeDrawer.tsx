@@ -4,7 +4,8 @@ import Drawer from '@material-ui/core/Drawer';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import React, { memo } from 'react';
-import { StyledProps } from './DrawerProps';
+import { DetailsPane } from './DetailsPane';
+import { TreeAndNavProps } from './DrawerProps';
 import { TreeDrawerHeader } from './TreeDrawerHeader';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -14,7 +15,7 @@ const useStyles = makeStyles((theme: Theme) =>
       whiteSpace: 'nowrap'
     },
     treeDrawerOpen: {
-      width: ({ treeDrawer }: StyledProps) => treeDrawer.width,
+      width: ({ treeDrawer }: TreeAndNavProps) => treeDrawer.width,
       transition: theme.transitions.create('width', {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.enteringScreen
@@ -38,24 +39,24 @@ const useStyles = makeStyles((theme: Theme) =>
       }
     },
     treeDrawerPaper: {
-      paddingRight: ({ treeDrawer }: StyledProps) => theme.spacing(treeDrawer.open ? 1 : 0),
-      left: ({ navigationDrawer }: StyledProps) =>
+      paddingRight: ({ treeDrawer }: TreeAndNavProps) => theme.spacing(treeDrawer.open ? 1 : 0),
+      left: ({ navigationDrawer }: TreeAndNavProps) =>
         navigationDrawer.open ? navigationDrawer.width + 2 : theme.spacing(7) + 2,
       [theme.breakpoints.up('sm')]: {
-        left: ({ navigationDrawer }: StyledProps) =>
+        left: ({ navigationDrawer }: TreeAndNavProps) =>
           navigationDrawer.open ? navigationDrawer.width + 2 : theme.spacing(9) + 2
       }
     },
     resizeDivider: {
-      cursor: 'ew-resize',
+      cursor: 'col-resize',
       width: theme.spacing(1),
       zIndex: theme.zIndex.drawer + 1,
-      left: ({ treeDrawer }: StyledProps) => `calc(${treeDrawer.width}px + ${theme.spacing(0.5)}px)`
+      left: ({ treeDrawer }: TreeAndNavProps) => `calc(${treeDrawer.width}px + ${theme.spacing(0.5)}px)`
     }
   })
 );
 
-export interface TreeDrawerComponentProps extends StyledProps {
+export interface TreeDrawerComponentProps extends TreeAndNavProps {
   onMouseDown: (event: React.MouseEvent<HTMLHRElement>) => void;
   onTouchStart: (event: React.TouchEvent<HTMLHRElement>) => void;
 }
@@ -65,35 +66,38 @@ export const TreeDrawer = memo(
     const classes = useStyles({ treeDrawer, navigationDrawer });
 
     return (
-      <Drawer
-        {...props}
-        variant='permanent'
-        className={clsx(classes.treeDrawer, {
-          [classes.treeDrawerOpen]: treeDrawer.open,
-          [classes.treeDrawerClose]: !treeDrawer.open
-        })}
-        classes={{
-          paper: clsx(classes.drawerPaper, classes.treeDrawerPaper, {
+      <>
+        <DetailsPane treeDrawer={treeDrawer} navigationDrawer={navigationDrawer} />
+        <Drawer
+          {...props}
+          variant='permanent'
+          className={clsx(classes.treeDrawer, {
             [classes.treeDrawerOpen]: treeDrawer.open,
             [classes.treeDrawerClose]: !treeDrawer.open
-          })
-        }}
-      >
-        <TreeDrawerHeader {...treeDrawer} />
-        <Divider
-          data-qa='draggable-divider'
-          onMouseDown={onMouseDown}
-          onTouchStart={onTouchStart}
-          classes={{ root: classes.resizeDivider }}
-          orientation='vertical'
-          draggable
-          absolute
-          light
-        />
-        <Box component='div' {...treeDrawer.ContentBoxProps}>
-          {treeDrawer.content}
-        </Box>
-      </Drawer>
+          })}
+          classes={{
+            paper: clsx(classes.drawerPaper, classes.treeDrawerPaper, {
+              [classes.treeDrawerOpen]: treeDrawer.open,
+              [classes.treeDrawerClose]: !treeDrawer.open
+            })
+          }}
+        >
+          <TreeDrawerHeader {...treeDrawer} />
+          <Divider
+            data-qa='draggable-divider'
+            onMouseDown={onMouseDown}
+            onTouchStart={onTouchStart}
+            classes={{ root: classes.resizeDivider }}
+            orientation='vertical'
+            draggable
+            absolute
+            light
+          />
+          <Box component='div' {...treeDrawer.ContentBoxProps}>
+            {treeDrawer.content}
+          </Box>
+        </Drawer>
+      </>
     );
   }
 );

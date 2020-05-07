@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavigationDrawerItem Snapshot Testing Required Props 1`] = `
+<WithStyles(ForwardRef(ListItem))
+  button={true}
+  onClick={[MockFunction]}
+>
+  <MenuIcon />
+  Menu!
+</WithStyles(ForwardRef(ListItem))>
+`;

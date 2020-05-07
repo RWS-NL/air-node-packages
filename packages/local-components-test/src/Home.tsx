@@ -1,4 +1,14 @@
-import { List, ListItem, ListItemIcon, ListItemText, Paper, Typography } from '@material-ui/core';
+import {
+  createStyles,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  makeStyles,
+  Paper,
+  Theme,
+  Typography
+} from '@material-ui/core';
 import DraftsIcon from '@material-ui/icons/Drafts';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import SendIcon from '@material-ui/icons/Send';
@@ -10,12 +20,10 @@ import {
   DropdownValue,
   LinkTabProps,
   NavigationDrawerProps,
-  SelectMenu,
   TreeDrawerProps
 } from '@rws-air/webcomponents';
-import { Field, Formik } from 'formik';
 import throttle from 'lodash.throttle';
-import React, { FC, useMemo, useState } from 'react';
+import React, { FC, useCallback, useMemo, useState } from 'react';
 
 const treeDrawerItems: DrawerItem[] = [
   {
@@ -231,12 +239,22 @@ const boomTypes: DropdownValue[] = [
   { value: 'Hybride boom', label: 'Hybride boom' }
 ];
 
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    detailsContent: {
+      padding: theme.spacing(2)
+    }
+  })
+);
+
 const Home: FC = () => {
+  const classes = useStyles();
   const [navigationDrawerOpen, setNavigationDrawerOpen] = useState(false);
   const [treeDrawerOpen, setTreeDrawerOpen] = useState(false);
   const [navigationDrawerWidth] = useState(240);
   const [treeDrawerWidth, setTreeDrawerWidth] = useState(400);
   const [activeTab, setActiveTab] = useState(1);
+  const [detailsPaneOpen, setDetailsPaneOpen] = useState(false);
 
   const [currentBoomType, setCurrentBoomType] = React.useState('Functionele objectenboom');
   const handleBoomChange = (event: React.ChangeEvent<{ name?: string; value: unknown }>) =>
@@ -258,6 +276,10 @@ const Home: FC = () => {
     { leading: true, trailing: true }
   );
 
+  const handleToggleDetailsPane = useCallback(() => {
+    setDetailsPaneOpen(!detailsPaneOpen);
+  }, [detailsPaneOpen]);
+
   const navigationDrawerProps: NavigationDrawerProps = {
     open: navigationDrawerOpen,
     width: navigationDrawerWidth,
@@ -275,12 +297,13 @@ const Home: FC = () => {
     currentDropdownValue: currentBoomType,
     dropdownValues: boomTypes,
     hanbdleDropdownChange: handleBoomChange,
+    detailsPaneOpen,
     content: useMemo(
       () => (
         <Paper elevation={2}>
           <List>
             {treeDrawerItems.map(({ icon, label }, index) => (
-              <ListItem button key={index}>
+              <ListItem button key={index} onClick={handleToggleDetailsPane}>
                 {icon}
                 {label}
               </ListItem>
@@ -288,7 +311,37 @@ const Home: FC = () => {
           </List>
         </Paper>
       ),
-      []
+      [handleToggleDetailsPane]
+    ),
+    detailsPaneContent: useMemo(
+      () => (
+        <Typography classes={{ root: classes.detailsContent }}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae lectus ipsum. Sed rhoncus risus a
+          hendrerit fringilla. Vivamus ultrices, neque a volutpat vulputate, nulla nibh accumsan magna, vitae accumsan
+          velit arcu ac est. Fusce volutpat lacus non lorem commodo, eget viverra purus accumsan. Nulla commodo, eros
+          vitae consequat blandit, nisl est accumsan purus, eget scelerisque magna erat nec sem. Mauris vehicula eu mi
+          vitae posuere. Vivamus malesuada laoreet turpis sed vehicula. Fusce vitae magna vulputate, scelerisque elit
+          in, luctus turpis. Nunc tempus enim ultrices vulputate aliquam. Morbi sit amet finibus augue. Mauris in erat
+          nec quam efficitur laoreet. Integer pharetra accumsan viverra. Proin rutrum tempus magna, ac pharetra turpis
+          congue eget. Fusce bibendum diam felis, at cursus nisl accumsan id. Donec quis convallis lectus. Sed
+          pellentesque magna sem.
+          <br />
+          <br />
+          Ut eu luctus est, vitae hendrerit enim. Sed sodales augue tortor, sed convallis ipsum euismod et. Vivamus
+          aliquet mi in orci congue convallis. Donec feugiat, urna eu efficitur accumsan, eros dolor tincidunt ante, nec
+          vulputate tortor diam quis leo. Donec ac nibh orci. Donec bibendum tortor eu enim venenatis, vitae posuere
+          urna fringilla. Integer non nunc sit amet purus fringilla aliquet.
+          <br />
+          <br />
+          Duis tincidunt hendrerit dignissim. Praesent eget ligula eros. Vivamus in magna non est lobortis dignissim
+          sollicitudin eget turpis. Nulla posuere, mauris vel sollicitudin consectetur, nulla nisi eleifend est, ut
+          feugiat quam urna ut lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+          himenaeos. Nulla tellus justo, sagittis a facilisis sit amet, laoreet nec neque. Suspendisse tristique velit
+          accumsan, sollicitudin ante non, mattis nibh. Nunc id diam turpis. In magna libero, consectetur non luctus
+          non, porta vel ex.
+        </Typography>
+      ),
+      [classes.detailsContent]
     ),
     onBorderDrag: handleDragTreeBorder
   };
@@ -323,22 +376,6 @@ const Home: FC = () => {
         eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices
         sagittis orci a.
       </Typography>
-      <Formik initialValues={{ type: 'JOHN' }} onSubmit={console.log}>
-        <Field
-          component={SelectMenu}
-          name='type'
-          type='text'
-          required
-          placeholder='Example Placeholder'
-          variant='outlined'
-          data-qa='sample-select-menu'
-          label='Example'
-          options={[
-            { value: 'JOHN', label: 'John' },
-            { value: 'CONNOR', label: 'Connor' }
-          ]}
-        />
-      </Formik>
     </DrawerNavBar>
   );
 };
