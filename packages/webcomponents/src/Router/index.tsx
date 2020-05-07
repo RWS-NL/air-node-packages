@@ -1,4 +1,3 @@
-import stringify, { QuerystringObject } from '@favware/querystring';
 import React, { memo, PropsWithChildren } from 'react';
 import { Route as AppRoute, RouteComponentProps, RouteProps as ReactRouterProps, Switch } from 'react-router-dom';
 import { NonUndefined } from 'utility-types';
@@ -72,20 +71,6 @@ export interface RouterProps extends ReactRouterProps {
 }
 
 /**
- * Safely stringifies queryparameters and prefixes a `?`.
- * Applies URL encoding with `encodeURIComponent()`.
- * In case an empty object was provided an empty string is returned
- * @param params Queryparams to stringify
- * @returns Stringified params or empty string
- * @see [`@favware/querystring`](https://favware.tech/querystring)
- */
-export const routeQueryParser = <T extends QuerystringObject>(params: T) => {
-  const encodedUriParams = stringify(params);
-
-  return encodedUriParams ? `?${encodedUriParams}` : '';
-};
-
-/**
  * Constructs a Router with provided routes and components
  * @param params Includes list of paths and components as well as the option to pass data-qa and additional props
  * @example
@@ -113,3 +98,5 @@ export const Router = memo(({ defaultComponent, otherComponents, ...props }: Pro
     </Switch>
   );
 });
+
+export * from './routeQueryParser';
