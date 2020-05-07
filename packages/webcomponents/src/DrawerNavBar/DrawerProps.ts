@@ -100,6 +100,13 @@ export interface TreeDrawerProps extends DrawerProps {
    * const handleChange = (event: React.ChangeEvent<{ name?: string; value: unknown }>) => setTreeValue(event.target.value);
    */
   hanbdleDropdownChange: (event: React.ChangeEvent<{ name?: string; value: unknown }>) => void;
+  /** Whether the details pane should be open */
+  detailsPaneOpen: boolean;
+  /**
+   * The content to display in the details pane popper
+   * @remark This gets wrapped in a Paper element so it falls over the rest of the content
+   */
+  detailsPaneContent: ReactNode;
   /** Props applied to the `Box` element containing the content of the tree */
   ContentBoxProps?: BoxProps;
 }
@@ -160,4 +167,4 @@ export interface DrawerItem {
   onClick?: () => void;
 }
 
-export type StyledProps = Pick<DrawerNavBarProps, 'treeDrawer' | 'navigationDrawer'>;
+export type TreeAndNavProps = Pick<DrawerNavBarProps, 'treeDrawer' | 'navigationDrawer'>;

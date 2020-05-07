@@ -6,7 +6,8 @@
     "module": "CommonJS",
     "tsBuildInfoFile": "dist/.tsbuildinfo",
     "sourceMap": false,
-    "declaration": false
+    "declaration": false,
+    "declarationMap": false
   },
   "include": ["src"]
 }

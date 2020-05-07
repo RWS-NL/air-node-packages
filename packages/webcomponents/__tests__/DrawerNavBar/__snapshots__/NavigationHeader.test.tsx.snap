@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavigationHeader Snapshot Testing Optional Props 1`] = `
+<WithStyles(ForwardRef(AppBar))
+  className="makeStyles-appBar-1 makeStyles-appBarResize-5 makeStyles-appBarShift-2"
+  color="secondary"
+  position="fixed"
+>
+  <WithStyles(ForwardRef(Toolbar))
+    classes={
+      Object {
+        "root": "makeStyles-appBarResize-5 makeStyles-tabsBar-6",
+      }
+    }
+    variant="dense"
+  >
+    <WithStyles(ForwardRef(Tabs))
+      classes={
+        Object {
+          "indicator": "makeStyles-hide-3",
+        }
+      }
+      onChange={[MockFunction]}
+      value={0}
+      variant="standard"
+    >
+      <Memo()
+        data-qa="link-tab-0"
+        key="0"
+        label="Home"
+        to="/"
+      />
+      <Memo()
+        data-qa="link-tab-1"
+        key="1"
+        label="Projectenoverzicht"
+        to="/"
+      />
+      <Memo()
+        data-qa="link-tab-2"
+        key="2"
+        label="Contact"
+        to="/"
+      />
+    </WithStyles(ForwardRef(Tabs))>
+  </WithStyles(ForwardRef(Toolbar))>
+</WithStyles(ForwardRef(AppBar))>
+`;
+
+exports[`NavigationHeader Snapshot Testing Required Props 1`] = `
+<WithStyles(ForwardRef(AppBar))
+  className="makeStyles-appBar-1 makeStyles-appBarResize-5 makeStyles-appBarShift-2"
+  color="secondary"
+  position="fixed"
+>
+  <WithStyles(ForwardRef(Toolbar))
+    classes={
+      Object {
+        "root": "makeStyles-appBarResize-5 makeStyles-tabsBar-6",
+      }
+    }
+    variant="dense"
+  >
+    <WithStyles(ForwardRef(Tabs))
+      classes={
+        Object {
+          "indicator": "makeStyles-hide-3",
+        }
+      }
+      onChange={[MockFunction]}
+      value={0}
+      variant="standard"
+    >
+      <Memo()
+        data-qa="link-tab-0"
+        key="0"
+        label="Home"
+        to="/"
+      />
+      <Memo()
+        data-qa="link-tab-1"
+        key="1"
+        label="Projectenoverzicht"
+        to="/"
+      />
+      <Memo()
+        data-qa="link-tab-2"
+        key="2"
+        label="Contact"
+        to="/"
+      />
+    </WithStyles(ForwardRef(Tabs))>
+  </WithStyles(ForwardRef(Toolbar))>
+</WithStyles(ForwardRef(AppBar))>
+`;

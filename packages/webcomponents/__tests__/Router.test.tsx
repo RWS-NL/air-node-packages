@@ -60,8 +60,8 @@ describe('Router Component', () => {
   describe('routeQueryParser Testing', () => {
     test('GIVEN object with keys THEN stringifies', () => {
       const obj = {
-        redirectUri: '/',
-        accessToken: '1635-4654-69789a4987-a6sd41656c799a645'
+        accessToken: '1635-4654-69789a4987-a6sd41656c799a645',
+        redirectUri: '/'
       };
 
       expect(routeQueryParser(obj)).toBe('?accessToken=1635-4654-69789a4987-a6sd41656c799a645&redirectUri=%2F');

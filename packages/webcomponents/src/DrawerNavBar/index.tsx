@@ -19,6 +19,9 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: theme.spacing(0, 1),
       // necessary for content to be below app bar
       ...theme.mixins.toolbar
+    },
+    resizeCursor: {
+      cursor: 'col-resize !important'
     }
   })
 );
@@ -303,8 +306,14 @@ export const DrawerNavBar = memo(
     );
 
     useEffect(() => {
+      // Get access to the HTML element to globally change the cursor style while dragging
+      const reactRootSelector = document.querySelector('html');
+
       // If the user is dragging we add events to the draggable divider to process that
       if (isDragging === true) {
+        // Set the cursor to column resize mode
+        if (reactRootSelector !== null) reactRootSelector.classList.add(classes.resizeCursor);
+
         window.addEventListener('mousemove', onMouseMove as any);
         window.addEventListener('touchmove', onTouchMove as any, {
           passive: false
@@ -317,6 +326,9 @@ export const DrawerNavBar = memo(
 
       // Whenever the user stops dragging we need to clean up events
       return () => {
+        // Set the cursor to regular mode
+        if (reactRootSelector !== null) reactRootSelector.classList.remove(classes.resizeCursor);
+
         window.removeEventListener('mousemove', onMouseMove as any);
         window.removeEventListener('touchmove', onTouchMove as any);
         window.removeEventListener('mouseup', handleDragEnd as any);
