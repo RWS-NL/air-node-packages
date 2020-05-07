@@ -5,7 +5,6 @@
   "description": "Local testing app for webcomponents",
   "author": "@rws-air",
   "license": "AGPL-3.0-or-later",
-  "homepage": "https://github.com/RWS-NL/air-node-packages/tree/master/packages/local-components-test#readme",
   "scripts": {
     "start": "react-scripts start"
   },
@@ -43,5 +42,9 @@
     "react",
     "material-ui",
     "webcomponents"
-  ]
+  ],
+  "dependencies": {
+    "@types/lodash.throttle": "^4.1.6",
+    "lodash.throttle": "^4.1.1"
+  }
 }
