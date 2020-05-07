@@ -1,8 +1,8 @@
-import stringify, { QuerystringObject } from '@favware/querystring';
+import stringify from '@favware/querystring';
 
 export type RouteParamId = string | number;
 
-export const query = <T extends QuerystringObject>(params: T) => {
+export const query = <T>(params: T) => {
   const encodedUriParams = stringify(params);
 
   return encodedUriParams ? `?${encodedUriParams}` : '';
