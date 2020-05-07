@@ -1,6 +1,6 @@
+import { Bar } from '@src/Bar';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
-import { Bar } from '../src/Bar';
 
 const children = <p>child</p>;
 let bar: ShallowWrapper;

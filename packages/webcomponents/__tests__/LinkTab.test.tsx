@@ -1,6 +1,6 @@
+import { LinkTab } from '@src/LinkTab';
 import { shallow } from 'enzyme';
 import React from 'react';
-import { LinkTab } from '../src/LinkTab';
 
 describe('LinkTab Tests', function () {
   describe('Snapshot Testing', () => {

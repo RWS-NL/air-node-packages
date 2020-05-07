@@ -1,5 +1,5 @@
+import { ZeroWidthSpace } from '@src/ZeroWidthSpace';
 import { shallow } from 'enzyme';
-import { ZeroWidthSpace } from '../src/ZeroWidthSpace';
 import React from 'react';
 
 describe('Snapshot Testing', () => {

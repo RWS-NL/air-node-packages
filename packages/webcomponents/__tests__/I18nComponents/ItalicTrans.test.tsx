@@ -1,7 +1,7 @@
+import { ItalicTrans, ItalicTransProps } from '@I18nComponents/ItalicTrans';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
 import { Trans } from 'react-i18next';
-import { ItalicTrans, ItalicTransProps } from '../../src/I18nComponents/ItalicTrans';
 
 describe('Component Testing', () => {
   let italicTrans: ShallowWrapper<ItalicTransProps>;

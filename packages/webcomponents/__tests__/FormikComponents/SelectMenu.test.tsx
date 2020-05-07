@@ -1,7 +1,7 @@
+import { SelectMenu } from '@FormikComponents/SelectMenu';
 import { shallow } from 'enzyme';
 import { Field, Formik } from 'formik';
 import React from 'react';
-import { SelectMenu } from '../../src/FormikComponents/SelectMenu';
 
 describe('Snapshot Testing', () => {
   test('Required Props', () => {

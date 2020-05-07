@@ -1,8 +1,8 @@
+import { Checkbox } from '@FormikComponents/Checkbox';
 import { toBeCalled } from '@rws-air/utils';
 import { shallow, ShallowWrapper } from 'enzyme';
 import { Field, Formik } from 'formik';
 import React, { createRef, FC } from 'react';
-import { Checkbox } from '../../src/FormikComponents/Checkbox';
 
 const mockCheckboxOnChange = jest.fn();
 const mockCheckboxOnBlur = jest.fn();

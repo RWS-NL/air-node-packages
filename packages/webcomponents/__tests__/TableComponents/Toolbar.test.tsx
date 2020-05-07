@@ -1,6 +1,6 @@
+import { Toolbar } from '@TableComponents/Toolbar';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
-import { Toolbar } from '../../src/TableComponents/Toolbar';
 
 const mockOnSearchInput = jest.fn();
 const mockOnSearchClear = jest.fn();

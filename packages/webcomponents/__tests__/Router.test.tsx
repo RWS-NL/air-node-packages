@@ -1,7 +1,7 @@
+import { routeQueryParser, Router } from '@src/Router';
 import { shallow } from 'enzyme';
 import React, { FC } from 'react';
 import { Route } from 'react-router-dom';
-import { routeQueryParser, Router } from '../src/Router';
 
 const Contact: FC = () => <div>CONTACT</div>;
 

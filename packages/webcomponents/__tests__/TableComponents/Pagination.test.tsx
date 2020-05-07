@@ -1,6 +1,6 @@
+import { Pagination } from '@TableComponents/Pagination';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
-import { Pagination } from '../../src/TableComponents/Pagination';
 
 let tablePaginations: ShallowWrapper;
 const mockOnChangePage = jest.fn();

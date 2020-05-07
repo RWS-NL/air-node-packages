@@ -1,0 +1,19 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2019",
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "@Resource/*": ["./resource/*"],
+      "@TableComponents/*": ["../src/TableComponents/*"],
+      "@DrawerNavBar/*": ["../src/DrawerNavBar/*"],
+      "@I18nComponents/*": ["../src/I18nComponents/*"],
+      "@PanelGroup/*": ["../src/PanelGroup/*"],
+      "@FormikComponents/*": ["../src/FormikComponents/*"],
+      "@src/*": ["../src/*"]
+    }
+  },
+  "include": ["."],
+  "references": [{ "path": "../src" }]
+}
