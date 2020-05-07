@@ -10,8 +10,10 @@ import {
   DropdownValue,
   LinkTabProps,
   NavigationDrawerProps,
+  SelectMenu,
   TreeDrawerProps
 } from '@rws-air/webcomponents';
+import { Field, Formik } from 'formik';
 import throttle from 'lodash.throttle';
 import React, { FC, useMemo, useState } from 'react';
 
@@ -267,7 +269,8 @@ const Home: FC = () => {
     open: treeDrawerOpen,
     width: treeDrawerWidth,
     minWidth: 400,
-    tooltipText: 'Hier kunt u andere type bomen selecteren. Druk op het menu links van deze knop en selecteer dan uw gewenste boom type.',
+    tooltipText:
+      'Hier kunt u andere type bomen selecteren. Druk op het menu links van deze knop en selecteer dan uw gewenste boom type.',
     toggleDrawer: handleToggleTreeDrawer,
     currentDropdownValue: currentBoomType,
     dropdownValues: boomTypes,
@@ -320,6 +323,22 @@ const Home: FC = () => {
         eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices
         sagittis orci a.
       </Typography>
+      <Formik initialValues={{ type: 'JOHN' }} onSubmit={console.log}>
+        <Field
+          component={SelectMenu}
+          name='type'
+          type='text'
+          required
+          placeholder='Example Placeholder'
+          variant='outlined'
+          data-qa='sample-select-menu'
+          label='Example'
+          options={[
+            { value: 'JOHN', label: 'John' },
+            { value: 'CONNOR', label: 'Connor' }
+          ]}
+        />
+      </Formik>
     </DrawerNavBar>
   );
 };

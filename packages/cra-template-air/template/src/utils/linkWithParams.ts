@@ -1,7 +1,7 @@
-import { parse, QuerystringObject, stringify } from '@favware/querystring';
+import { parse, stringify } from '@favware/querystring';
 import windowLocationService from './WindowLocationService';
 
-export const linkWithParams = <T extends QuerystringObject>(
+export const linkWithParams = <T>(
   path: string,
   paramsToAdd: T,
   shouldMerge?: boolean,
