@@ -1,29 +1,7 @@
 @import '../styles/vars';
 
-.menuItem {
-  font-size: $fontSizeDefault;
-}
-
-.darkLinkText {
-  color: $textBlack;
-}
-
-.logoutButton {
-  padding: 0;
-  text-transform: none;
-}
-
-.logoutButton:hover {
-  background-color: unset;
-}
-
 .tabIndicator {
   display: none;
-}
-
-.titleSkeleton {
-  align-items: center;
-  display: flex;
 }
 
 .appBar {

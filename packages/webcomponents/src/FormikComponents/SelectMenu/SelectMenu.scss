@@ -5,6 +5,18 @@
   border-width: 1px;
   height: 2.5rem;
   min-height: 2.5rem;
+
+  :focus {
+    background-color: transparent;
+  }
+
+  :focus-within {
+    background-color: transparent;
+  }
+
+  :active {
+    background-color: transparent;
+  }
 }
 
 .input {
