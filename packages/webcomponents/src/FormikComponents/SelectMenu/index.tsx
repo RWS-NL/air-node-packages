@@ -90,6 +90,21 @@ export const SelectMenu = <T extends SelectMenuOptionValues>({
           autoFocus={autoFocus}
           required={required}
           inputProps={{ classes: { root: css.input } }}
+          MenuProps={{
+            getContentAnchorEl: null,
+            anchorOrigin: {
+              vertical: 'bottom',
+              horizontal: 'center'
+            },
+            transformOrigin: {
+              vertical: 'top',
+              horizontal: 'center'
+            },
+            elevation: 2,
+            classes: {
+              list: css.selectEntry
+            }
+          }}
         >
           {options.map((item, index) => (
             <MenuItem
