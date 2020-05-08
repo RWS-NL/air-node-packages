@@ -1322,10 +1322,10 @@
     unique-filename "^1.1.1"
     which "^1.3.1"
 
-"@favware/querystring@^4.3.1":
-  version "4.3.1"
-  resolved "https://registry.yarnpkg.com/@favware/querystring/-/querystring-4.3.1.tgz#e84b203afa63eec326c4225431f9c84e1d49f43c"
-  integrity sha512-XguYzQ3klJgEfA+XIGlm2cf9x57Hly4FnM6C9HBQ0AFuRJQsvMkwH3dHYKZ4NzwbRUDr7DOYYgWwQpbsnHcu+g==
+"@favware/querystring@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@favware/querystring/-/querystring-5.0.0.tgz#bbac9ff22dbe59cfd79a22b4d1d7a7fb19ecba52"
+  integrity sha512-v7LpwUsMf3ed/flyZPu/bUSEmt6Zeh2Tn9y93Eko4aaQ+BY3APm9XzO7rZJCdk5wT8VIaJkNa33T1mJdJU/aHw==
 
 "@favware/ts-config@^1.1.3":
   version "1.1.3"
