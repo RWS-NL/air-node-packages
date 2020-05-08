@@ -1327,10 +1327,10 @@
   resolved "https://registry.yarnpkg.com/@favware/querystring/-/querystring-4.3.1.tgz#e84b203afa63eec326c4225431f9c84e1d49f43c"
   integrity sha512-XguYzQ3klJgEfA+XIGlm2cf9x57Hly4FnM6C9HBQ0AFuRJQsvMkwH3dHYKZ4NzwbRUDr7DOYYgWwQpbsnHcu+g==
 
-"@favware/ts-config@^1.1.3":
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/@favware/ts-config/-/ts-config-1.1.3.tgz#2376d8fc5838e71a4eed66f8ffc6b6b99be6cbf5"
-  integrity sha512-d3syi4sDrfrqoT7LJXZvscFTrerhC7DLu1vMUhudK5pj5wouuOV5u8aeMhK+YY6P7fz+rw28dSeZDFHf9aui1w==
+"@favware/ts-config@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@favware/ts-config/-/ts-config-2.0.0.tgz#86016e8153797c1efe95cf8510ec600d74c0a3d7"
+  integrity sha512-+eoC/njDDtTaxNUP9v6u2XMO7VW/f97UuQeUTL2ybV8kQHZX6I7LNxPSsVnrSdP+05Rb1rayU/UKjp1a0w4xoA==
 
 "@favware/yamlreader@^1.1.5":
   version "1.1.5"
