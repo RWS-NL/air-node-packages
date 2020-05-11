@@ -387,6 +387,12 @@ exports[`TreeDrawerHeader Snapshot Testing Required Props 1`] = `
                     </WithStyles(ForwardRef(Paper))>
                   }
                   currentDropdownValue="THREE"
+                  detailsPaneContent={
+                    <div>
+                      SAMPLE
+                    </div>
+                  }
+                  detailsPaneOpen={true}
                   dropdownValues={
                     Array [
                       Object {
@@ -461,7 +467,7 @@ exports[`TreeDrawerHeader Snapshot Testing Required Props 1`] = `
                   open={true}
                   toggleDrawer={[MockFunction]}
                   tooltipText="Hier kunt u andere type bomen selecteren. Druk op het menu links van deze knop en selecteer dan uw gewenste boom type."
-                  width={240}
+                  width={400}
                 />
               }
             />

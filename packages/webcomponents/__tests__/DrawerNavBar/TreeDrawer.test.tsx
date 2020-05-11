@@ -1,8 +1,8 @@
-import { TreeDrawer, TreeDrawerComponentProps } from '@DrawerNavBar/TreeDrawer';
+import { TreeDrawerComponentProps } from '@DrawerNavBar/DrawerProps';
+import { TreeDrawer } from '@DrawerNavBar/TreeDrawer';
 import { TreeDrawerHeader } from '@DrawerNavBar/TreeDrawerHeader';
 import { ListItem } from '@material-ui/core';
 import { navigationDrawerProps, treeDrawerItems, treeDrawerProps } from '@Resource/commonDrawerNavBarProps';
-import { findShallowByDataQa, toBeCalled } from '@rws-air/utils';
 import { shallow } from 'enzyme';
 import React from 'react';
 
@@ -25,18 +25,6 @@ describe('TreeDrawer', () => {
 
     test('GIVEN TreeDrawer THEN contains ListItems', () => {
       expect(treeDrawer.find(ListItem)).toHaveLength(treeDrawerItems.length);
-    });
-
-    test('GIVEN mouseDown event on draggable divider THEN triggers function', () => {
-      findShallowByDataQa(treeDrawer, 'draggable-divider').simulate('mousedown');
-
-      toBeCalled(mockOnMouseDown, 1);
-    });
-
-    test('GIVEN touchStart event on draggable divider THEN triggers function', () => {
-      findShallowByDataQa(treeDrawer, 'draggable-divider').simulate('touchstart');
-
-      toBeCalled(mockOnTouchStart, 1);
     });
   });
 

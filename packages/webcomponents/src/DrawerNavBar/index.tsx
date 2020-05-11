@@ -201,6 +201,12 @@ export const DrawerNavBar = memo(
     onTabChange,
     tabs,
     children,
+    ContentBoxProps,
+    NavigationDrawerProps,
+    NavigationDrawerItemProps,
+    NavigationHeaderProps,
+    ResizableDividerProps,
+    TreeDrawerProps,
     ...props
   }: PropsWithChildren<DrawerNavBarProps>) => {
     const classes = useStyles({ navigationDrawer, treeDrawer });
@@ -349,17 +355,24 @@ export const DrawerNavBar = memo(
           activeTab={activeTab}
           onTabChange={onTabChange}
           tabs={tabs}
+          {...NavigationHeaderProps}
         />
-        <NavigationDrawer {...navigationDrawer} />
+        <NavigationDrawer
+          NavigationDrawerItemProps={NavigationDrawerItemProps}
+          {...navigationDrawer}
+          {...NavigationDrawerProps}
+        />
         <TreeDrawer
           navigationDrawer={navigationDrawer}
           treeDrawer={treeDrawer}
           onMouseDown={onMouseDown}
           onTouchStart={onTouchStart}
+          ResizableDividerProps={ResizableDividerProps}
+          {...TreeDrawerProps}
         />
 
         {/* Start page content */}
-        <Box component='main' className={classes.content}>
+        <Box component='main' className={classes.content} {...ContentBoxProps}>
           <Box component='div' className={classes.toolbar} />
           {children}
         </Box>
@@ -371,3 +384,4 @@ export const DrawerNavBar = memo(
 
 // Re-Export the typings so they are available on top-level export
 export * from './DrawerProps';
+export { ResizeDividerProps } from './ResizeDivider';

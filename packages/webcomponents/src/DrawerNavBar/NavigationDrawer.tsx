@@ -8,6 +8,7 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import CloseIcon from '@material-ui/icons/Close';
 import MenuIcon from '@material-ui/icons/Menu';
 import clsx from 'clsx';
+import { stringify } from 'flatted';
 import React, { memo } from 'react';
 import { Else, If, Then } from 'react-if';
 import { NavigationDrawerProps } from './DrawerProps';
@@ -56,7 +57,7 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 export const NavigationDrawer = memo(
-  ({ open, items, width, toggleDrawer, ...props }: NavigationDrawerProps) => {
+  ({ open, items, width, toggleDrawer, NavigationDrawerItemProps, ...props }: NavigationDrawerProps) => {
     const classes = useStyles({ width });
 
     return (
@@ -119,7 +120,13 @@ export const NavigationDrawer = memo(
 
         <List>
           {items.map(({ icon, label, onClick }, index) => (
-            <NavigationDrawerItem key={index} icon={icon} label={label} onClick={onClick} />
+            <NavigationDrawerItem
+              key={index}
+              icon={icon}
+              label={label}
+              onClick={onClick}
+              {...NavigationDrawerItemProps}
+            />
           ))}
         </List>
       </Drawer>
@@ -128,7 +135,7 @@ export const NavigationDrawer = memo(
   (prevProps, nextProps) => {
     if (prevProps.open !== nextProps.open) return false;
     if (prevProps.items.length !== nextProps.items.length) return false;
-    if (JSON.stringify(prevProps.items) !== JSON.stringify(nextProps.items)) return false;
+    if (stringify(prevProps.items) !== stringify(nextProps.items)) return false;
     return true;
   }
 );
