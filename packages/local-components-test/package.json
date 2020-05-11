@@ -45,7 +45,8 @@
   ],
   "dependencies": {
     "@types/lodash.throttle": "^4.1.6",
-    "lodash.throttle": "^4.1.1"
+    "lodash.throttle": "^4.1.1",
+    "react-virtuoso": "^0.16.2"
   },
   "devDependencies": {
     "react-scripts": "^3.4.1"

@@ -1,9 +1,8 @@
-import React, { memo, Fragment, ChangeEvent } from 'react';
-import css from './NavBar.scss';
-
-import { AppBar, Tabs, Toolbar, Grid, AppBarProps, ToolbarProps, TabsProps } from '@material-ui/core';
+import { AppBar, AppBarProps, Grid, Tabs, TabsProps, Toolbar, ToolbarProps } from '@material-ui/core';
+import React, { ChangeEvent, Fragment, memo } from 'react';
 import { ActionBar, ActionBarProps } from '../ActionBar';
 import { LinkTab, LinkTabProps } from '../LinkTab';
+import css from './NavBar.scss';
 
 export interface NavBarProps {
   /** The tabs to render */

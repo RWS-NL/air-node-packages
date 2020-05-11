@@ -406,6 +406,10 @@ exports[`NavigationDrawer Snapshot Testing Passed as spread syntax 1`] = `
           </WithStyles(ForwardRef(List))>
         </WithStyles(ForwardRef(Paper))>,
         "currentDropdownValue": "ONE",
+        "detailsPaneContent": <div>
+          SAMPLE
+        </div>,
+        "detailsPaneOpen": true,
         "dropdownValues": Array [
           Object {
             "label": "ONE",
@@ -438,7 +442,7 @@ exports[`NavigationDrawer Snapshot Testing Passed as spread syntax 1`] = `
         "open": true,
         "toggleDrawer": [MockFunction],
         "tooltipText": "Hier kunt u andere type bomen selecteren. Druk op het menu links van deze knop en selecteer dan uw gewenste boom type.",
-        "width": 240,
+        "width": 400,
       }
     }
   />
@@ -864,6 +868,10 @@ exports[`NavigationDrawer Snapshot Testing Passed as spread syntax 1`] = `
           </WithStyles(ForwardRef(List))>
         </WithStyles(ForwardRef(Paper))>,
         "currentDropdownValue": "ONE",
+        "detailsPaneContent": <div>
+          SAMPLE
+        </div>,
+        "detailsPaneOpen": true,
         "dropdownValues": Array [
           Object {
             "label": "ONE",
@@ -896,7 +904,7 @@ exports[`NavigationDrawer Snapshot Testing Passed as spread syntax 1`] = `
         "open": true,
         "toggleDrawer": [MockFunction],
         "tooltipText": "Hier kunt u andere type bomen selecteren. Druk op het menu links van deze knop en selecteer dan uw gewenste boom type.",
-        "width": 240,
+        "width": 400,
       }
     }
   />
@@ -1318,6 +1326,10 @@ exports[`NavigationDrawer Snapshot Testing Required Props 1`] = `
           </WithStyles(ForwardRef(List))>
         </WithStyles(ForwardRef(Paper))>,
         "currentDropdownValue": "ONE",
+        "detailsPaneContent": <div>
+          SAMPLE
+        </div>,
+        "detailsPaneOpen": true,
         "dropdownValues": Array [
           Object {
             "label": "ONE",
@@ -1350,7 +1362,7 @@ exports[`NavigationDrawer Snapshot Testing Required Props 1`] = `
         "open": true,
         "toggleDrawer": [MockFunction],
         "tooltipText": "Hier kunt u andere type bomen selecteren. Druk op het menu links van deze knop en selecteer dan uw gewenste boom type.",
-        "width": 240,
+        "width": 400,
       }
     }
   />
@@ -1776,6 +1788,10 @@ exports[`NavigationDrawer Snapshot Testing Required Props 1`] = `
           </WithStyles(ForwardRef(List))>
         </WithStyles(ForwardRef(Paper))>,
         "currentDropdownValue": "ONE",
+        "detailsPaneContent": <div>
+          SAMPLE
+        </div>,
+        "detailsPaneOpen": true,
         "dropdownValues": Array [
           Object {
             "label": "ONE",
@@ -1808,7 +1824,7 @@ exports[`NavigationDrawer Snapshot Testing Required Props 1`] = `
         "open": true,
         "toggleDrawer": [MockFunction],
         "tooltipText": "Hier kunt u andere type bomen selecteren. Druk op het menu links van deze knop en selecteer dan uw gewenste boom type.",
-        "width": 240,
+        "width": 400,
       }
     }
   />

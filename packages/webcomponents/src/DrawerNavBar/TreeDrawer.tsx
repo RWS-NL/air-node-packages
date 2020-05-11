@@ -1,11 +1,12 @@
 import Box from '@material-ui/core/Box';
-import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import React, { memo } from 'react';
+import { When } from 'react-if';
 import { DetailsPane } from './DetailsPane';
-import { TreeAndNavProps } from './DrawerProps';
+import { TreeAndNavProps, TreeDrawerComponentProps } from './DrawerProps';
+import { ResizableDivider } from './ResizeDivider';
 import { TreeDrawerHeader } from './TreeDrawerHeader';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -39,30 +40,26 @@ const useStyles = makeStyles((theme: Theme) =>
       }
     },
     treeDrawerPaper: {
-      paddingRight: ({ treeDrawer }: TreeAndNavProps) => theme.spacing(treeDrawer.open ? 1 : 0),
+      paddingRight: ({ treeDrawer }: TreeAndNavProps) => theme.spacing(treeDrawer.open ? 1.2 : 0),
       left: ({ navigationDrawer }: TreeAndNavProps) =>
         navigationDrawer.open ? navigationDrawer.width + 2 : theme.spacing(7) + 2,
       [theme.breakpoints.up('sm')]: {
         left: ({ navigationDrawer }: TreeAndNavProps) =>
           navigationDrawer.open ? navigationDrawer.width + 2 : theme.spacing(9) + 2
       }
-    },
-    resizeDivider: {
-      cursor: 'col-resize',
-      width: theme.spacing(1),
-      zIndex: theme.zIndex.drawer + 1,
-      left: ({ treeDrawer }: TreeAndNavProps) => `calc(${treeDrawer.width}px + ${theme.spacing(0.5)}px)`
     }
   })
 );
 
-export interface TreeDrawerComponentProps extends TreeAndNavProps {
-  onMouseDown: (event: React.MouseEvent<HTMLHRElement>) => void;
-  onTouchStart: (event: React.TouchEvent<HTMLHRElement>) => void;
-}
-
 export const TreeDrawer = memo(
-  ({ treeDrawer, navigationDrawer, onMouseDown, onTouchStart, ...props }: TreeDrawerComponentProps) => {
+  ({
+    treeDrawer,
+    navigationDrawer,
+    onMouseDown,
+    onTouchStart,
+    ResizableDividerProps,
+    ...props
+  }: TreeDrawerComponentProps) => {
     const classes = useStyles({ treeDrawer, navigationDrawer });
 
     return (
@@ -71,6 +68,8 @@ export const TreeDrawer = memo(
         <Drawer
           {...props}
           variant='permanent'
+          // Selector that can be used by the resizable divider to determine size for spacing of the divider
+          data-selector='tree-drawer'
           className={clsx(classes.treeDrawer, {
             [classes.treeDrawerOpen]: treeDrawer.open,
             [classes.treeDrawerClose]: !treeDrawer.open
@@ -83,19 +82,17 @@ export const TreeDrawer = memo(
           }}
         >
           <TreeDrawerHeader {...treeDrawer} />
-          <Divider
-            data-qa='draggable-divider'
+          <ResizableDivider
+            treeDrawer={treeDrawer}
             onMouseDown={onMouseDown}
             onTouchStart={onTouchStart}
-            classes={{ root: classes.resizeDivider }}
-            orientation='vertical'
-            draggable
-            absolute
-            light
+            {...ResizableDividerProps}
           />
-          <Box component='div' {...treeDrawer.ContentBoxProps}>
-            {treeDrawer.content}
-          </Box>
+          <When condition={treeDrawer.open}>
+            <Box component='div' {...treeDrawer.TreeContentBoxProps}>
+              {treeDrawer.content}
+            </Box>
+          </When>
         </Drawer>
       </>
     );

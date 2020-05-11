@@ -3,6 +3,7 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Toolbar from '@material-ui/core/Toolbar';
 import clsx from 'clsx';
+import { stringify } from 'flatted';
 import React, { memo } from 'react';
 import { LinkTab } from '../LinkTab';
 import { DrawerNavBarProps } from './DrawerProps';
@@ -95,7 +96,7 @@ export const NavigationHeader = memo(
     if (prevProps.navigationDrawer.open !== nextProps.navigationDrawer.open) return false;
     if (prevProps.treeDrawer.open !== nextProps.treeDrawer.open) return false;
     if (prevProps.activeTab !== nextProps.activeTab) return false;
-    if (JSON.stringify(prevProps.tabs) !== JSON.stringify(nextProps.tabs)) return false;
+    if (stringify(prevProps.tabs) !== stringify(nextProps.tabs)) return false;
 
     return true;
   }

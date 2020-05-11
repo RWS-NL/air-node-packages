@@ -1,7 +1,7 @@
-import React, { PropsWithChildren, memo } from 'react';
+import { createStyles, Fade, makeStyles, Paper, Theme, useTheme } from '@material-ui/core';
 import Popper from '@material-ui/core/Popper';
+import React, { memo, PropsWithChildren } from 'react';
 import { TreeAndNavProps } from './DrawerProps';
-import { makeStyles, Theme, createStyles, Fade, Paper, useTheme } from '@material-ui/core';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

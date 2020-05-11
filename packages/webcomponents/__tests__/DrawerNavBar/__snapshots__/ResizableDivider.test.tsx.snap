@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResizableDivider Snapshot Testing Optional Props 1`] = `
+<WithStyles(ForwardRef(Divider))
+  absolute={true}
+  classes={
+    Object {
+      "root": "makeStyles-resizeDivider-1 makeStyles-resizeDivider-4",
+    }
+  }
+  data-qa="draggable-divider"
+  draggable={true}
+  id="draggable-divider"
+  light={true}
+  onMouseDown={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  onTouchStart={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  orientation="vertical"
+/>
+`;
+
+exports[`ResizableDivider Snapshot Testing Required Props 1`] = `
+<WithStyles(ForwardRef(Divider))
+  absolute={true}
+  classes={
+    Object {
+      "root": "makeStyles-resizeDivider-1 makeStyles-resizeDivider-3",
+    }
+  }
+  data-qa="draggable-divider"
+  draggable={true}
+  light={true}
+  onMouseDown={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  onTouchStart={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  orientation="vertical"
+/>
+`;

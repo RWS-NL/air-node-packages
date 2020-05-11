@@ -32,6 +32,8 @@ export const mockHandleToggleTreeDrawer = jest.fn().mockImplementation(() => {
   mockTreeDrawerOpen = !mockTreeDrawerOpen;
 });
 
+export const mockDetailsPaneOpen = true;
+
 export const mockHandleBoomChange = jest
   .fn()
   .mockImplementation((event: React.ChangeEvent<{ name?: string; value: unknown }>) => {
@@ -260,7 +262,7 @@ export const navigationDrawerProps: NavigationDrawerProps = {
 
 export const treeDrawerProps: TreeDrawerProps = {
   open: mockTreeDrawerOpen,
-  width: 240,
+  width: 400,
   minWidth: 400,
   tooltipText:
     'Hier kunt u andere type bomen selecteren. Druk op het menu links van deze knop en selecteer dan uw gewenste boom type.',
@@ -268,6 +270,8 @@ export const treeDrawerProps: TreeDrawerProps = {
   currentDropdownValue: mockDropdownValues[0].value,
   dropdownValues: mockDropdownValues,
   hanbdleDropdownChange: mockHandleBoomChange,
+  detailsPaneOpen: mockDetailsPaneOpen,
+  detailsPaneContent: <div>SAMPLE</div>,
   content: (
     <Paper elevation={2}>
       <List>

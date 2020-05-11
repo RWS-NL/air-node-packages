@@ -1,4 +1,13 @@
-import { AppBarProps, BoxProps, TabsProps, ToolbarProps, TooltipProps } from '@material-ui/core';
+import {
+  AppBarProps as MAppBarProps,
+  BoxProps as MBoxProps,
+  DividerProps as MDividerProps,
+  DrawerProps as MDrawerProps,
+  ListItemProps as MListItemProps,
+  TabsProps as MTabsProps,
+  ToolbarProps as MToolbarProps,
+  TooltipProps as MTooltipProps
+} from '@material-ui/core';
 import { ChangeEvent, ReactNode } from 'react';
 import { LinkTabProps } from '../LinkTab';
 
@@ -38,11 +47,24 @@ export interface DrawerNavBarProps {
   onTabChange(_event: ChangeEvent<object>, newValue: number): void;
 
   /** Additional props to pass to the AppBar component */
-  AppBarProps?: AppBarProps;
+  AppBarProps?: MAppBarProps;
   /** Additional props to pass to the Toolbar component */
-  ToolbarProps?: ToolbarProps;
+  ToolbarProps?: MToolbarProps;
   /** Additional props to pass to the Tabs component */
-  TabsProps?: TabsProps;
+  TabsProps?: MTabsProps;
+
+  /** Additional props to pass to the NavigationHeader component */
+  NavigationHeaderProps?: MAppBarProps;
+  /** Additional props to pass to the NavigationDrawer component */
+  NavigationDrawerProps?: MDrawerProps;
+  /** Additional props to pass to each NavigationDrawerItem component */
+  NavigationDrawerItemProps?: MListItemProps;
+  /** Additional props to pass to the TreeDrawer component */
+  TreeDrawerProps?: MDrawerProps;
+  /** Additional props to pass to the ResizableDrawer component */
+  ResizableDividerProps?: MDividerProps;
+  /** Additional props to pass to the Content component */
+  ContentBoxProps?: MBoxProps;
 }
 
 export interface NavigationDrawerProps extends DrawerProps {
@@ -50,6 +72,8 @@ export interface NavigationDrawerProps extends DrawerProps {
    * The items to show in the navigation drawer
    */
   items: DrawerItem[];
+  /** Additional props to pass to each NavigationDrawerItem component */
+  NavigationDrawerItemProps?: MListItemProps;
 }
 
 export interface DropdownValue {
@@ -67,7 +91,7 @@ export interface TreeDrawerProps extends DrawerProps {
   /** The content of the tree */
   content: ReactNode;
   /** The text to be displayed in the Tooltip when hovering over the info icon */
-  tooltipText: TooltipProps['title'];
+  tooltipText: MTooltipProps['title'];
   /**
    * Event to trigger when dragging the right-most border of the drawer
    * @example
@@ -108,7 +132,7 @@ export interface TreeDrawerProps extends DrawerProps {
    */
   detailsPaneContent: ReactNode;
   /** Props applied to the `Box` element containing the content of the tree */
-  ContentBoxProps?: BoxProps;
+  TreeContentBoxProps?: MBoxProps;
 }
 
 /**
@@ -164,7 +188,14 @@ export interface DrawerItem {
    * () => history.push('/projects')
    * ```
    */
-  onClick?: () => void;
+  onClick?: (event: React.MouseEvent<HTMLLIElement & HTMLDivElement, MouseEvent>) => void;
 }
 
 export type TreeAndNavProps = Pick<DrawerNavBarProps, 'treeDrawer' | 'navigationDrawer'>;
+
+export interface TreeDrawerComponentProps extends TreeAndNavProps {
+  onMouseDown: (event: React.MouseEvent<HTMLHRElement>) => void;
+  onTouchStart: (event: React.TouchEvent<HTMLHRElement>) => void;
+  /** Additional props to pass to the ResizableDrawer component */
+  ResizableDividerProps?: MDividerProps;
+}
