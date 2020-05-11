@@ -38,28 +38,26 @@ export const DetailsPane = memo(
     };
 
     return (
-      <>
-        <Popper
-          className={classes.root}
-          open={treeDrawer.detailsPaneOpen}
-          anchorEl={bodySelector}
-          placement='top-start'
-          disablePortal
-          transition
-          modifiers={{
-            offset: {
-              enabled: true,
-              offset: `${calculateLeftOffset()}px, -95.5vh`
-            }
-          }}
-        >
-          {({ TransitionProps }) => (
-            <Fade {...TransitionProps} timeout={350}>
-              <Paper elevation={4}>{treeDrawer.detailsPaneContent}</Paper>
-            </Fade>
-          )}
-        </Popper>
-      </>
+      <Popper
+        className={classes.root}
+        open={treeDrawer.detailsPaneOpen}
+        anchorEl={bodySelector}
+        placement='top-start'
+        disablePortal
+        transition
+        modifiers={{
+          offset: {
+            enabled: true,
+            offset: `${calculateLeftOffset()}px, -95.5vh`
+          }
+        }}
+      >
+        {({ TransitionProps }) => (
+          <Fade {...TransitionProps} timeout={350}>
+            <Paper elevation={4}>{treeDrawer.detailsPaneContent}</Paper>
+          </Fade>
+        )}
+      </Popper>
     );
   },
   (prevProps, nextProps) => {

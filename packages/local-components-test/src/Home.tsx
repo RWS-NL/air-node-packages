@@ -22,8 +22,10 @@ import {
   NavigationDrawerProps,
   TreeDrawerProps
 } from '@rws-air/webcomponents';
+import clsx from 'clsx';
 import throttle from 'lodash.throttle';
 import React, { FC, useCallback, useMemo, useState } from 'react';
+import { Virtuoso } from 'react-virtuoso';
 
 const treeDrawerItems: DrawerItem[] = [
   {
@@ -243,6 +245,17 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     detailsContent: {
       padding: theme.spacing(2)
+    },
+    virtualizedList: {
+      margin: theme.spacing(1)
+    },
+    list: {
+      margin: 0,
+      padding: 0
+    },
+    treeContent: {
+      paddingRight: theme.spacing(0.5),
+      paddingLeft: theme.spacing(0.5)
     }
   })
 );
@@ -250,15 +263,13 @@ const useStyles = makeStyles((theme: Theme) =>
 const Home: FC = () => {
   const classes = useStyles();
   const [navigationDrawerOpen, setNavigationDrawerOpen] = useState(false);
-  const [treeDrawerOpen, setTreeDrawerOpen] = useState(false);
+  const [treeDrawerOpen, setTreeDrawerOpen] = useState(true);
   const [navigationDrawerWidth] = useState(240);
   const [treeDrawerWidth, setTreeDrawerWidth] = useState(400);
   const [activeTab, setActiveTab] = useState(1);
   const [detailsPaneOpen, setDetailsPaneOpen] = useState(false);
 
   const [currentBoomType, setCurrentBoomType] = React.useState('Functionele objectenboom');
-  const handleBoomChange = (event: React.ChangeEvent<{ name?: string; value: unknown }>) =>
-    setCurrentBoomType(event.target.value as string);
 
   const handleToggleNavigationDrawer = () => {
     setNavigationDrawerOpen(!navigationDrawerOpen);
@@ -296,22 +307,42 @@ const Home: FC = () => {
     toggleDrawer: handleToggleTreeDrawer,
     currentDropdownValue: currentBoomType,
     dropdownValues: boomTypes,
-    hanbdleDropdownChange: handleBoomChange,
+    hanbdleDropdownChange: (event) => setCurrentBoomType(event.target.value as string),
     detailsPaneOpen,
     content: useMemo(
       () => (
-        <Paper elevation={2}>
-          <List>
-            {treeDrawerItems.map(({ icon, label }, index) => (
-              <ListItem button key={index} onClick={handleToggleDetailsPane}>
-                {icon}
-                {label}
-              </ListItem>
-            ))}
-          </List>
-        </Paper>
+        <>
+          <Paper elevation={2}>
+            <Virtuoso
+              totalCount={treeDrawerItems.length}
+              className={classes.virtualizedList}
+              overscan={20}
+              style={{ height: '80vh', width: '100%' }}
+              ListContainer={({ listRef, style, className, children, ...props }: any) => {
+                return (
+                  <List {...props} ref={listRef} style={style} className={clsx(className, classes.list)}>
+                    {children}
+                  </List>
+                );
+              }}
+              ItemContainer={({ children, ...props }) => {
+                return (
+                  <ListItem {...props} button style={{ margin: 0 }} onClick={handleToggleDetailsPane}>
+                    {children}
+                  </ListItem>
+                );
+              }}
+              item={(index) => (
+                <>
+                  {treeDrawerItems[index].icon}
+                  {treeDrawerItems[index].label}
+                </>
+              )}
+            />
+          </Paper>
+        </>
       ),
-      [handleToggleDetailsPane]
+      [classes.list, classes.virtualizedList, handleToggleDetailsPane]
     ),
     detailsPaneContent: useMemo(
       () => (
@@ -343,7 +374,10 @@ const Home: FC = () => {
       ),
       [classes.detailsContent]
     ),
-    onBorderDrag: handleDragTreeBorder
+    onBorderDrag: handleDragTreeBorder,
+    TreeContentBoxProps: {
+      className: classes.treeContent
+    }
   };
 
   const drawerNavBarProps: DrawerNavBarProps = {
