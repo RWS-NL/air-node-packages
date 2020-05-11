@@ -44,7 +44,7 @@ export interface DrawerNavBarProps {
    */
   activeTab: number;
   /** Function to trigger when changing tabs */
-  onTabChange(_event: ChangeEvent<object>, newValue: number): void;
+  onTabChange(_event: ChangeEvent<unknown>, newValue: number): void;
 
   /** Additional props to pass to the AppBar component */
   AppBarProps?: MAppBarProps;
@@ -95,7 +95,15 @@ export interface TreeDrawerProps extends DrawerProps {
   /**
    * Event to trigger when dragging the right-most border of the drawer
    * @example
-   * const handleDrag = (_event: MouseEvent | TouchEvent, value: number) => setWidth(value)
+   * // Using lodash.throttle to throttle the event for performance
+   *
+   * const handleDragTreeBorder = throttle(
+   *   (_, value: unknown) => {
+   *     setWidth(value as number);
+   *   },
+   *   10,
+   *   { leading: true, trailing: true }
+   * );
    */
   onBorderDrag?: (
     event: React.MouseEvent<HTMLDivElement, MouseEvent> | React.TouchEvent<HTMLDivElement>,
@@ -121,7 +129,7 @@ export interface TreeDrawerProps extends DrawerProps {
   /**
    * Event to trigger when changing the value in the dropdown menu atop the drawer
    * @example
-   * const handleChange = (event: React.ChangeEvent<{ name?: string; value: unknown }>) => setTreeValue(event.target.value);
+   * const handleChange = (event: React.ChangeEvent<{ name?: string; value: unknown }>) => setDropdownValue(event.target.value);
    */
   hanbdleDropdownChange: (event: React.ChangeEvent<{ name?: string; value: unknown }>) => void;
   /** Whether the details pane should be open */

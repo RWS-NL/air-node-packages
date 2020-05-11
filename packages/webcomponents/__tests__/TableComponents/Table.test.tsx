@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { TableRow } from '@material-ui/core';
 import { BodyCell } from '@TableComponents/BodyCell';
 import { HeaderCell, HeaderProps } from '@TableComponents/HeaderCell';

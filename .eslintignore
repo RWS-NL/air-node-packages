@@ -1,5 +1,5 @@
-packages/**/dist
-packages/eslint-config/dist
+packages/**/coverage/
+packages/**/dist/
 **/node_modules/
 **/.github/
 **/.vscode/
