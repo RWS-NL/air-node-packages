@@ -149,11 +149,11 @@
 					<h3>Publishing new versions</h3>
 				</a>
 				<ol>
-					<li>Run <code>yarn build</code> to ensure lint, test and build succeeds</li>
-					<li>Run <code>lerna publish</code> to start the publishing process. This automatically runs lint, test, build, version bump, and publish to npm (in that order).</li>
+					<li>Run <code>yarn build</code> to ensure you&#39;re about to publish all latest versions. This repo has TypeScript code that needs to be compiled to JavaScript before it can be published!</li>
+					<li>Run <code>lerna publish</code> to start the publishing process. This will publish packages to NPM.</li>
 				</ol>
-				<a href="#if-publish-fails-in-build" id="if-publish-fails-in-build" style="color: inherit; text-decoration: none;">
-					<h4>If publish fails in build</h4>
+				<a href="#if-lerna-publish-fails" id="if-lerna-publish-fails" style="color: inherit; text-decoration: none;">
+					<h4>If <code>lerna publish</code> fails</h4>
 				</a>
 				<ol>
 					<li>Go to GitHub repository -&gt; releases: <a href="https://github.com/RWS-NL/air-node-packages/releases">https://github.com/RWS-NL/air-node-packages/releases</a>.</li>
