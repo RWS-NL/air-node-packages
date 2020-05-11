@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0-alpha.0](https://github.com/RWS-NL/air-node-packages/compare/cra-template-air@1.2.0...cra-template-air@1.3.0-alpha.0) (2020-05-11)
+
+
+### Features
+
+* **cra-template-air:** bump dependencies ([9cc72e7](https://github.com/RWS-NL/air-node-packages/commit/9cc72e792398a0148def5f180dabd2c28fc7a423))
+
+
+
+
+
 # [1.2.0](https://github.com/RWS-NL/air-node-packages/compare/cra-template-air@1.1.1...cra-template-air@1.2.0) (2020-04-10)
 
 ### Features

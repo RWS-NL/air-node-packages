@@ -1,6 +1,6 @@
 {
   "name": "@rws-air/usercreator",
-  "version": "5.0.7",
+  "version": "5.1.0-alpha.0",
   "description": "Script to add users to usermanagement environments",
   "author": "@rws-air",
   "license": "AGPL-3.0-or-later",

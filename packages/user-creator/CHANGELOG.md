@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.1.0-alpha.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/usercreator@5.0.7...@rws-air/usercreator@5.1.0-alpha.0) (2020-05-11)
+
+**Note:** Version bump only for package @rws-air/usercreator
+
+
+
+
+
 ## [5.0.7](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/usercreator@5.0.6...@rws-air/usercreator@5.0.7) (2020-05-06)
 
 **Note:** Version bump only for package @rws-air/usercreator

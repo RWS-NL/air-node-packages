@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0-alpha.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/jestscreenshot@4.0.5...@rws-air/jestscreenshot@4.1.0-alpha.0) (2020-05-11)
+
+**Note:** Version bump only for package @rws-air/jestscreenshot
+
+
+
+
+
 ## [4.0.5](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/jestscreenshot@4.0.4...@rws-air/jestscreenshot@4.0.5) (2020-05-06)
 
 **Note:** Version bump only for package @rws-air/jestscreenshot

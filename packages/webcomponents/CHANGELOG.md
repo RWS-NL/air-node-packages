@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.4.0-alpha.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@12.3.3...@rws-air/webcomponents@12.4.0-alpha.0) (2020-05-11)
+
+
+### Bug Fixes
+
+* **webcomponents:** Drop down menu below select box ([ac92a84](https://github.com/RWS-NL/air-node-packages/commit/ac92a849b93ddf00ce8f63d782cea2de4b73f7b0))
+* **webcomponents:** Fix RouteQueryParser ([ad92719](https://github.com/RWS-NL/air-node-packages/commit/ad92719e23a811cbf247dec1c0a86eedd22bdbdb))
+
+
+### Features
+
+* **utils:** add "createEvent" test util ([566feb2](https://github.com/RWS-NL/air-node-packages/commit/566feb21347060594f0a2a2bc131c47ab29d461d))
+* **webcomponents:** add double-drawer-navigation ([1991f16](https://github.com/RWS-NL/air-node-packages/commit/1991f163292b60cd5121d0e17e1c80cae32aecb1))
+
+
+
+
+
 ## [12.3.3](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@12.3.2...@rws-air/webcomponents@12.3.3) (2020-05-06)
 
 **Note:** Version bump only for package @rws-air/webcomponents

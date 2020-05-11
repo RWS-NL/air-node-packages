@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.5.0-alpha.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@4.4.0...@rws-air/utils@4.5.0-alpha.0) (2020-05-11)
+
+
+### Features
+
+* **utils:** add "createEvent" test util ([566feb2](https://github.com/RWS-NL/air-node-packages/commit/566feb21347060594f0a2a2bc131c47ab29d461d))
+
+
+
+
+
 # [4.4.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@4.3.0...@rws-air/utils@4.4.0) (2020-04-29)
 
 ### Features

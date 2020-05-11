@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0-alpha.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/local-components-test@3.1.5...@rws-air/local-components-test@3.2.0-alpha.0) (2020-05-11)
+
+
+### Features
+
+* **cra-template-air:** bump dependencies ([9cc72e7](https://github.com/RWS-NL/air-node-packages/commit/9cc72e792398a0148def5f180dabd2c28fc7a423))
+* **webcomponents:** add double-drawer-navigation ([1991f16](https://github.com/RWS-NL/air-node-packages/commit/1991f163292b60cd5121d0e17e1c80cae32aecb1))
+
+
+
+
+
 ## [3.1.5](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/local-components-test@3.1.4...@rws-air/local-components-test@3.1.5) (2020-05-06)
 
 **Note:** Version bump only for package @rws-air/local-components-test

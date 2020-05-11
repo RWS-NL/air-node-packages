@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0-alpha.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/commitlint-config@1.1.3...@rws-air/commitlint-config@1.2.0-alpha.0) (2020-05-11)
+
+
+### Features
+
+* **webcomponents:** add double-drawer-navigation ([1991f16](https://github.com/RWS-NL/air-node-packages/commit/1991f163292b60cd5121d0e17e1c80cae32aecb1))
+
+
+
+
+
 ## [1.1.3](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/commitlint-config@1.1.2...@rws-air/commitlint-config@1.1.3) (2020-05-06)
 
 **Note:** Version bump only for package @rws-air/commitlint-config
