@@ -106,10 +106,10 @@ Run `yarn build` from repository root
 
 ### Publishing new versions
 
-1. Run `yarn build` to ensure lint, test and build succeeds
-2. Run `lerna publish` to start the publishing process. This automatically runs lint, test, build, version bump, and publish to npm (in that order).
+1. Run `yarn build` to ensure you're about to publish all latest versions. This repo has TypeScript code that needs to be compiled to JavaScript before it can be published!
+2. Run `lerna publish` to start the publishing process. This will publish packages to NPM.
 
-#### If publish fails in build
+#### If `lerna publish` fails
 
 1. Go to GitHub repository -> releases: https://github.com/RWS-NL/air-node-packages/releases.
 2. Delete any tags created by the publish script.
