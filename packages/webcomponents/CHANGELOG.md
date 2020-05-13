@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.4.0-alpha.2](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@12.4.0-alpha.1...@rws-air/webcomponents@12.4.0-alpha.2) (2020-05-13)
+
+
+### Bug Fixes
+
+* **webcomponents:** remove border from table cells as per design ([69bef8d](https://github.com/RWS-NL/air-node-packages/commit/69bef8dd2adbe6daf04b5dad55a9b05b7f86dc31))
+
+
+
+
+
 # [12.4.0-alpha.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@12.4.0-alpha.0...@rws-air/webcomponents@12.4.0-alpha.1) (2020-05-11)
 
 **Note:** Version bump only for package @rws-air/webcomponents
