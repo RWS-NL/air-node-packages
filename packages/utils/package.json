@@ -11,8 +11,8 @@
     "lint": "eslint src __tests__ --fix --ext ts",
     "test": "jest",
     "prebuild": "yarn lint && yarn test",
-    "build": "tsc",
-    "ci:build": "tsc",
+    "build": "tsc -b src",
+    "ci:build": "tsc -b src",
     "start": "tsc -w"
   },
   "files": [

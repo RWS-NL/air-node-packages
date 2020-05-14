@@ -1,0 +1,11 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2019",
+    "incremental": false,
+    "noEmit": true,
+    "composite": false
+  },
+  "references": [{ "path": "../src" }],
+  "include": ["./"]
+}

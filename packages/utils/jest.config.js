@@ -5,7 +5,12 @@ module.exports = {
       testMatch: ['<rootDir>/__tests__/**/*.ts'],
       preset: 'ts-jest',
       testEnvironment: 'node',
-      testRunner: 'jest-circus/runner'
+      testRunner: 'jest-circus/runner',
+      globals: {
+        'ts-jest': {
+          tsConfig: '<rootDir>/__tests__/tsconfig.json'
+        }
+      }
     },
     {
       displayName: 'react-test',

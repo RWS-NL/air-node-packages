@@ -5,8 +5,9 @@
     "rootDir": "src",
     "module": "CommonJS",
     "moduleResolution": "Node",
-    "target": "ES6",
-    "tsBuildInfoFile": "dist/.tsbuildinfo"
+    "target": "ES5",
+    "tsBuildInfoFile": "dist/.tsbuildinfo",
+    "composite": true
   },
   "include": ["src"]
 }
