@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.5.0-alpha.2](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@4.5.0-alpha.1...@rws-air/utils@4.5.0-alpha.2) (2020-05-14)
+
+
+### Bug Fixes
+
+* **utils:** fixed building for IE11 (now targets ES5) ([caa6b23](https://github.com/RWS-NL/air-node-packages/commit/caa6b23e40d6497bd367b5223c49dbc96954ad7b))
+
+
+
+
+
 # [4.5.0-alpha.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@4.5.0-alpha.0...@rws-air/utils@4.5.0-alpha.1) (2020-05-11)
 
 **Note:** Version bump only for package @rws-air/utils
