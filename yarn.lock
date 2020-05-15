@@ -2682,6 +2682,11 @@
   dependencies:
     any-observable "^0.3.0"
 
+"@scarf/scarf@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@scarf/scarf/-/scarf-1.0.5.tgz#accee0bce88a9047672f7c8faf3cada59c996b81"
+  integrity sha512-9WKaGVpQH905Aqkk+BczFEeLQxS07rl04afFRPUG9IcSlOwmo5EVVuuNu0d4M9LMYucObvK0LoAe+5HfMW2QhQ==
+
 "@sinonjs/commons@^1.7.0":
   version "1.7.2"
   resolved "https://registry.yarnpkg.com/@sinonjs/commons/-/commons-1.7.2.tgz#505f55c74e0272b43f6c52d81946bed7058fc0e2"
@@ -14238,10 +14243,11 @@ react-transition-group@^4.0.0, react-transition-group@^4.3.0:
     prop-types "^15.6.2"
 
 react-virtuoso@^0.16.2:
-  version "0.16.2"
-  resolved "https://registry.yarnpkg.com/react-virtuoso/-/react-virtuoso-0.16.2.tgz#7aa1ec9c10bd61adab6a2dbfe0c1ddc76f52f026"
-  integrity sha512-ZelVvd7IHJMho/WZBvgfafQFbnFbVbTX3LGv8p55QVX2f8Z3cr9D/sUK8vGX3CLFnGmSNHDMVI9FozYxOtZzyQ==
+  version "0.16.4"
+  resolved "https://registry.yarnpkg.com/react-virtuoso/-/react-virtuoso-0.16.4.tgz#e47a0fbeb764f4c4c7d8a6d8863dcc5e6a0f5f96"
+  integrity sha512-7VDhmeREf4Wcb0N43jNVUTZUz31qWjsM8TMPm2qQJuBurosCYfF2vcIq9r8yZN4DMooCyHAMYeOcTAQAOL0vfA==
   dependencies:
+    "@scarf/scarf" "^1.0.5"
     resize-observer-polyfill "^1.5.1"
     tslib "^1.11.1"
 
