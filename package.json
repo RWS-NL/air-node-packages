@@ -61,7 +61,7 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.3",
     "execa": "^4.0.0",
-    "fs-nextra": "^0.4.7",
+    "fs-nextra": "^0.5.1",
     "fuse.js": "^3.4.6",
     "glob": "^7.1.6",
     "husky": "^4.2.5",
