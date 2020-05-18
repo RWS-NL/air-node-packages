@@ -7,7 +7,7 @@
   "scripts": {
     "build": "lerna run build --parallel",
     "ci:build": "lerna run ci:build --parallel",
-    "lint": "eslint scripts/ packages/** --fix --ext js,ts,tsx",
+    "lint": "eslint scripts/ packages --fix --ext js,jsx,ts,tsx",
     "lint:parallel": "lerna run lint --parallel",
     "style": "prettier --config .prettierrc --write packages/**/*.{scss,tsx,ts,json}",
     "test": "lerna run test --parallel",
