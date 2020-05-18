@@ -8,14 +8,24 @@
     "**/dist/**",
     "**/__tests__/**",
     "**/*.js",
+    "**/*.test.ts",
+    "**/rollup.config.ts",
+    "packages/webcomponents/src/**/index.ts",
+    "packages/utils/src/**/index.ts",
     "packages/cra-template-air/**",
     "packages/local-components-test/**"
   ],
-  "pathExclude": ["scripts/duplicateESLintConfig", "scripts/duplicateStylelintConfig", "scripts/validateNoOnly", "scripts/yarnAfterPull"],
+  "pathExclude": [
+    "scripts/duplicateESLintConfig",
+    "scripts/duplicateStylelintConfig",
+    "scripts/validateNoOnly",
+    "scripts/yarnAfterPull"
+  ],
+  "lernaExclude": ["cra-template-air", "@rws-air/local-components-test"],
   "mode": "modules",
   "excludeExternals": true,
   "excludePrivate": true,
   "excludeProtected": true,
   "excludeNotExported": true,
-  "lernaExclude": ["cra-template-air", "@rws-air/local-components-test"]
+  "tsconfig": "./tsconfig.base.json"
 }

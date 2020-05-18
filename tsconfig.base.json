@@ -1,6 +1,7 @@
 {
   "extends": "./packages/ts-config/src/tsconfig.json",
   "compilerOptions": {
-    "target": "ES2019"
+    "target": "ES2019",
+    "jsx": "react"
   }
 }

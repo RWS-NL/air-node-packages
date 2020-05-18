@@ -1,5 +1,5 @@
 declare module 'longest' {
-  function longest(arr: any[]);
+  function longest(arr: any[]): any;
 
   export default longest;
 }
