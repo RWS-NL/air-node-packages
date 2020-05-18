@@ -11,6 +11,7 @@
     "**/*.test.ts",
     "**/rollup.config.ts",
     "packages/webcomponents/src/**/index.ts",
+    "packages/webcomponents/src/Router/routeQueryParser.ts",
     "packages/utils/src/**/index.ts",
     "packages/cra-template-air/**",
     "packages/local-components-test/**"

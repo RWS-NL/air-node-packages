@@ -98,5 +98,3 @@ export const Router = memo(({ defaultComponent, otherComponents, ...props }: Pro
     </Switch>
   );
 });
-
-export * from './routeQueryParser';
