@@ -1,6 +1,6 @@
 {
   "name": "@rws-air/ts-config",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Shareable TypeScript configuration for all RWS projects",
   "author": "@rws-air",
   "license": "MIT",
