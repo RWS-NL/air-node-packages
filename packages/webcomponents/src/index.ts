@@ -2,7 +2,6 @@ export * from './ActionBar';
 export * from './Bar';
 export * from './Button';
 export * from './ConfirmationModal';
-export * from './DrawerNavBar';
 export * from './Dropdownbutton';
 export * from './FloatingActionButton';
 export * from './FormikComponents';
