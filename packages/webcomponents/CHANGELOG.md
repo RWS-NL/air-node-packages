@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@13.0.0...@rws-air/webcomponents@13.0.1) (2020-05-18)
+
+
+### Bug Fixes
+
+* **webcomponents:** remove flatted dependency ([7546667](https://github.com/RWS-NL/air-node-packages/commit/75466672f4667cb75ab59545924d98040e2fb2d8))
+
+
+
+
+
 # [13.0.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@12.4.0-alpha.5...@rws-air/webcomponents@13.0.0) (2020-05-18)
 
 
