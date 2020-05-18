@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>SlackResponse | RWS-NL AIR Node Packages</title>
+	<title>LoadingSkeletonProps | RWS-NL AIR Node Packages</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,31 +52,24 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_rws_air_jestscreenshot.html">@rws-air/jestscreenshot</a>
+					<a href="../modules/_rws_air_webcomponents.html">@rws-air/webcomponents</a>
 				</li>
 				<li>
-					<a href="_rws_air_jestscreenshot.slackresponse.html">SlackResponse</a>
+					<a href="_rws_air_webcomponents.loadingskeletonprops.html">LoadingSkeletonProps</a>
 				</li>
 			</ul>
-			<h1>Interface SlackResponse</h1>
+			<h1>Interface LoadingSkeletonProps</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Represents the response by Slack when uploading a file</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">SlackResponse</span>
+						<span class="target">LoadingSkeletonProps</span>
 					</li>
 				</ul>
 			</section>
@@ -87,8 +80,12 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_jestscreenshot.slackresponse.html#file" class="tsd-kind-icon">file</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_jestscreenshot.slackresponse.html#ok" class="tsd-kind-icon">ok</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.loadingskeletonprops.html#circle" class="tsd-kind-icon">circle</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.loadingskeletonprops.html#customclasses" class="tsd-kind-icon">customclasses</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.loadingskeletonprops.html#data_qa" class="tsd-kind-icon">data-<wbr>qa</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.loadingskeletonprops.html#height" class="tsd-kind-icon">height</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.loadingskeletonprops.html#style" class="tsd-kind-icon">style</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.loadingskeletonprops.html#width" class="tsd-kind-icon">width</a></li>
 							</ul>
 						</section>
 					</div>
@@ -97,24 +94,98 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="file" class="tsd-anchor"></a>
-					<h3>file</h3>
-					<div class="tsd-signature tsd-kind-icon">file<span class="tsd-signature-symbol">:</span> <a href="_rws_air_jestscreenshot.slackfile.html" class="tsd-signature-type">SlackFile</a></div>
+					<a name="circle" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> circle</h3>
+					<div class="tsd-signature tsd-kind-icon">circle<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/jestscreenshot/src/index.ts#L115">packages/jestscreenshot/src/index.ts:115</a></li>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/webcomponents/src/LoadingSkeleton/index.tsx#L22">packages/webcomponents/src/LoadingSkeleton/index.tsx:22</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Prop for making the skeleton look like a circle
+							for when you are creating a user card with a profile picture for instance</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="ok" class="tsd-anchor"></a>
-					<h3>ok</h3>
-					<div class="tsd-signature tsd-kind-icon">ok<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<a name="customclasses" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> customclasses</h3>
+					<div class="tsd-signature tsd-kind-icon">customclasses<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/jestscreenshot/src/index.ts#L114">packages/jestscreenshot/src/index.ts:114</a></li>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/webcomponents/src/LoadingSkeleton/index.tsx#L28">packages/webcomponents/src/LoadingSkeleton/index.tsx:28</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Custom CSS classes to pass to the button</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="data_qa" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> data-<wbr>qa</h3>
+					<div class="tsd-signature tsd-kind-icon">data-<wbr>qa<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/webcomponents/src/LoadingSkeleton/index.tsx#L26">packages/webcomponents/src/LoadingSkeleton/index.tsx:26</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Data-qa tag to apply to the search bar and input element</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="height" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> height</h3>
+					<div class="tsd-signature tsd-kind-icon">height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/webcomponents/src/LoadingSkeleton/index.tsx#L12">packages/webcomponents/src/LoadingSkeleton/index.tsx:12</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Height of the skeleton
+								Useful when you don&#39;t want to adapt the skeleton to a text element but for instance a card
+							Also needed for the prop circle (see below).</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="style" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> style</h3>
+					<div class="tsd-signature tsd-kind-icon">style<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">CSSProperties</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/webcomponents/src/LoadingSkeleton/index.tsx#L24">packages/webcomponents/src/LoadingSkeleton/index.tsx:24</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Any additional CSSProperties to pass to the component</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="width" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> width</h3>
+					<div class="tsd-signature tsd-kind-icon">width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/webcomponents/src/LoadingSkeleton/index.tsx#L17">packages/webcomponents/src/LoadingSkeleton/index.tsx:17</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Width of the skeleton
+							Useful when the skeleton is inside an inline element with no width of its own</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -133,7 +204,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_rws_air_eslint_config_node.html">@rws-<wbr>air/eslint-<wbr>config-<wbr>node</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/_rws_air_jestscreenshot.html">@rws-<wbr>air/jestscreenshot</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -145,35 +216,35 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_rws_air_utils.html">@rws-<wbr>air/utils</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/_rws_air_webcomponents.html">@rws-<wbr>air/webcomponents</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/_rws_air_jestscreenshot.jestscreenshot.html" class="tsd-kind-icon">Jest<wbr>Screenshot</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/_rws_air_jestscreenshot.jestscreenshoterror.html" class="tsd-kind-icon">Jest<wbr>Screenshot<wbr>Error</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="_rws_air_jestscreenshot.jestscreenshotoptions.html" class="tsd-kind-icon">Jest<wbr>Screenshot<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="_rws_air_jestscreenshot.slackfile.html" class="tsd-kind-icon">Slack<wbr>File</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="_rws_air_jestscreenshot.slackresponse.html" class="tsd-kind-icon">Slack<wbr>Response</a>
+						<a href="_rws_air_webcomponents.loadingskeletonprops.html" class="tsd-kind-icon">Loading<wbr>Skeleton<wbr>Props</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_rws_air_jestscreenshot.slackresponse.html#file" class="tsd-kind-icon">file</a>
+								<a href="_rws_air_webcomponents.loadingskeletonprops.html#circle" class="tsd-kind-icon">circle</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_rws_air_jestscreenshot.slackresponse.html#ok" class="tsd-kind-icon">ok</a>
+								<a href="_rws_air_webcomponents.loadingskeletonprops.html#customclasses" class="tsd-kind-icon">customclasses</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_rws_air_webcomponents.loadingskeletonprops.html#data_qa" class="tsd-kind-icon">data-<wbr>qa</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_rws_air_webcomponents.loadingskeletonprops.html#height" class="tsd-kind-icon">height</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_rws_air_webcomponents.loadingskeletonprops.html#style" class="tsd-kind-icon">style</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_rws_air_webcomponents.loadingskeletonprops.html#width" class="tsd-kind-icon">width</a>
 							</li>
 						</ul>
 					</li>

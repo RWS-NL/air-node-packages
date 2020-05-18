@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>SlackResponse | RWS-NL AIR Node Packages</title>
+	<title>Route | RWS-NL AIR Node Packages</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,31 +52,24 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_rws_air_jestscreenshot.html">@rws-air/jestscreenshot</a>
+					<a href="../modules/_rws_air_webcomponents.html">@rws-air/webcomponents</a>
 				</li>
 				<li>
-					<a href="_rws_air_jestscreenshot.slackresponse.html">SlackResponse</a>
+					<a href="_rws_air_webcomponents.route.html">Route</a>
 				</li>
 			</ul>
-			<h1>Interface SlackResponse</h1>
+			<h1>Interface Route</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Represents the response by Slack when uploading a file</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">SlackResponse</span>
+						<span class="target">Route</span>
 					</li>
 				</ul>
 			</section>
@@ -87,8 +80,10 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_jestscreenshot.slackresponse.html#file" class="tsd-kind-icon">file</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_jestscreenshot.slackresponse.html#ok" class="tsd-kind-icon">ok</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.route.html#component" class="tsd-kind-icon">component</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.route.html#data_qa" class="tsd-kind-icon">data-<wbr>qa</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.route.html#path" class="tsd-kind-icon">path</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.route.html#reactrouterprops" class="tsd-kind-icon">react<wbr>Router<wbr>Props</a></li>
 							</ul>
 						</section>
 					</div>
@@ -97,22 +92,47 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="file" class="tsd-anchor"></a>
-					<h3>file</h3>
-					<div class="tsd-signature tsd-kind-icon">file<span class="tsd-signature-symbol">:</span> <a href="_rws_air_jestscreenshot.slackfile.html" class="tsd-signature-type">SlackFile</a></div>
+					<a name="component" class="tsd-anchor"></a>
+					<h3>component</h3>
+					<div class="tsd-signature tsd-kind-icon">component<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ReactRouterProps</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"component"</span><span class="tsd-signature-symbol">]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/jestscreenshot/src/index.ts#L115">packages/jestscreenshot/src/index.ts:115</a></li>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/webcomponents/src/Router/index.tsx#L57">packages/webcomponents/src/Router/index.tsx:57</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="ok" class="tsd-anchor"></a>
-					<h3>ok</h3>
-					<div class="tsd-signature tsd-kind-icon">ok<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<a name="data_qa" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> data-<wbr>qa</h3>
+					<div class="tsd-signature tsd-kind-icon">data-<wbr>qa<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/jestscreenshot/src/index.ts#L114">packages/jestscreenshot/src/index.ts:114</a></li>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/webcomponents/src/Router/index.tsx#L60">packages/webcomponents/src/Router/index.tsx:60</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Data-qa tag to apply to the route</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="path" class="tsd-anchor"></a>
+					<h3>path</h3>
+					<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ReactRouterProps</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"path"</span><span class="tsd-signature-symbol">]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/webcomponents/src/Router/index.tsx#L56">packages/webcomponents/src/Router/index.tsx:56</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="reactrouterprops" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> react<wbr>Router<wbr>Props</h3>
+					<div class="tsd-signature tsd-kind-icon">react<wbr>Router<wbr>Props<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Omit</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ReactRouterProps</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">"exact"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"component"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"path"</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/webcomponents/src/Router/index.tsx#L58">packages/webcomponents/src/Router/index.tsx:58</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -133,7 +153,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_rws_air_eslint_config_node.html">@rws-<wbr>air/eslint-<wbr>config-<wbr>node</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/_rws_air_jestscreenshot.html">@rws-<wbr>air/jestscreenshot</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -145,35 +165,29 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_rws_air_utils.html">@rws-<wbr>air/utils</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/_rws_air_webcomponents.html">@rws-<wbr>air/webcomponents</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/_rws_air_jestscreenshot.jestscreenshot.html" class="tsd-kind-icon">Jest<wbr>Screenshot</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/_rws_air_jestscreenshot.jestscreenshoterror.html" class="tsd-kind-icon">Jest<wbr>Screenshot<wbr>Error</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="_rws_air_jestscreenshot.jestscreenshotoptions.html" class="tsd-kind-icon">Jest<wbr>Screenshot<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="_rws_air_jestscreenshot.slackfile.html" class="tsd-kind-icon">Slack<wbr>File</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="_rws_air_jestscreenshot.slackresponse.html" class="tsd-kind-icon">Slack<wbr>Response</a>
+						<a href="_rws_air_webcomponents.route.html" class="tsd-kind-icon">Route</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_rws_air_jestscreenshot.slackresponse.html#file" class="tsd-kind-icon">file</a>
+								<a href="_rws_air_webcomponents.route.html#component" class="tsd-kind-icon">component</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_rws_air_jestscreenshot.slackresponse.html#ok" class="tsd-kind-icon">ok</a>
+								<a href="_rws_air_webcomponents.route.html#data_qa" class="tsd-kind-icon">data-<wbr>qa</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_rws_air_webcomponents.route.html#path" class="tsd-kind-icon">path</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_rws_air_webcomponents.route.html#reactrouterprops" class="tsd-kind-icon">react<wbr>Router<wbr>Props</a>
 							</li>
 						</ul>
 					</li>

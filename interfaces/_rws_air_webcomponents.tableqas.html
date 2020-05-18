@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>SlackResponse | RWS-NL AIR Node Packages</title>
+	<title>TableQAs | RWS-NL AIR Node Packages</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,31 +52,24 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_rws_air_jestscreenshot.html">@rws-air/jestscreenshot</a>
+					<a href="../modules/_rws_air_webcomponents.html">@rws-air/webcomponents</a>
 				</li>
 				<li>
-					<a href="_rws_air_jestscreenshot.slackresponse.html">SlackResponse</a>
+					<a href="_rws_air_webcomponents.tableqas.html">TableQAs</a>
 				</li>
 			</ul>
-			<h1>Interface SlackResponse</h1>
+			<h1>Interface TableQAs</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Represents the response by Slack when uploading a file</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">SlackResponse</span>
+						<span class="target">TableQAs</span>
 					</li>
 				</ul>
 			</section>
@@ -87,8 +80,13 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_jestscreenshot.slackresponse.html#file" class="tsd-kind-icon">file</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_jestscreenshot.slackresponse.html#ok" class="tsd-kind-icon">ok</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.tableqas.html#header" class="tsd-kind-icon">header</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.tableqas.html#headercell" class="tsd-kind-icon">header<wbr>Cell</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.tableqas.html#headerrow" class="tsd-kind-icon">header<wbr>Row</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.tableqas.html#pagination" class="tsd-kind-icon">pagination</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.tableqas.html#table" class="tsd-kind-icon">table</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.tableqas.html#tablebody" class="tsd-kind-icon">table<wbr>Body</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.tableqas.html#toolbar" class="tsd-kind-icon">toolbar</a></li>
 							</ul>
 						</section>
 					</div>
@@ -97,24 +95,109 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="file" class="tsd-anchor"></a>
-					<h3>file</h3>
-					<div class="tsd-signature tsd-kind-icon">file<span class="tsd-signature-symbol">:</span> <a href="_rws_air_jestscreenshot.slackfile.html" class="tsd-signature-type">SlackFile</a></div>
+					<a name="header" class="tsd-anchor"></a>
+					<h3>header</h3>
+					<div class="tsd-signature tsd-kind-icon">header<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/jestscreenshot/src/index.ts#L115">packages/jestscreenshot/src/index.ts:115</a></li>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/webcomponents/src/TableComponents/Table/index.tsx#L26">packages/webcomponents/src/TableComponents/Table/index.tsx:26</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Data-qa applied to the header wrapper</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="ok" class="tsd-anchor"></a>
-					<h3>ok</h3>
-					<div class="tsd-signature tsd-kind-icon">ok<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<a name="headercell" class="tsd-anchor"></a>
+					<h3>header<wbr>Cell</h3>
+					<div class="tsd-signature tsd-kind-icon">header<wbr>Cell<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/jestscreenshot/src/index.ts#L114">packages/jestscreenshot/src/index.ts:114</a></li>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/webcomponents/src/TableComponents/Table/index.tsx#L30">packages/webcomponents/src/TableComponents/Table/index.tsx:30</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Data-qa applied to each header cell</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="headerrow" class="tsd-anchor"></a>
+					<h3>header<wbr>Row</h3>
+					<div class="tsd-signature tsd-kind-icon">header<wbr>Row<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/webcomponents/src/TableComponents/Table/index.tsx#L28">packages/webcomponents/src/TableComponents/Table/index.tsx:28</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Data-qa applied to the header row</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="pagination" class="tsd-anchor"></a>
+					<h3>pagination</h3>
+					<div class="tsd-signature tsd-kind-icon">pagination<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/webcomponents/src/TableComponents/Table/index.tsx#L22">packages/webcomponents/src/TableComponents/Table/index.tsx:22</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Data-qa applied to the pagination components</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="table" class="tsd-anchor"></a>
+					<h3>table</h3>
+					<div class="tsd-signature tsd-kind-icon">table<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/webcomponents/src/TableComponents/Table/index.tsx#L20">packages/webcomponents/src/TableComponents/Table/index.tsx:20</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Data-qa applied to the root table</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="tablebody" class="tsd-anchor"></a>
+					<h3>table<wbr>Body</h3>
+					<div class="tsd-signature tsd-kind-icon">table<wbr>Body<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/webcomponents/src/TableComponents/Table/index.tsx#L32">packages/webcomponents/src/TableComponents/Table/index.tsx:32</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Data-qa applied to the table body wrapper</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="toolbar" class="tsd-anchor"></a>
+					<h3>toolbar</h3>
+					<div class="tsd-signature tsd-kind-icon">toolbar<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/webcomponents/src/TableComponents/Table/index.tsx#L24">packages/webcomponents/src/TableComponents/Table/index.tsx:24</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Data-qa applied to the toolbar</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -133,7 +216,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_rws_air_eslint_config_node.html">@rws-<wbr>air/eslint-<wbr>config-<wbr>node</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/_rws_air_jestscreenshot.html">@rws-<wbr>air/jestscreenshot</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -145,35 +228,38 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_rws_air_utils.html">@rws-<wbr>air/utils</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/_rws_air_webcomponents.html">@rws-<wbr>air/webcomponents</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/_rws_air_jestscreenshot.jestscreenshot.html" class="tsd-kind-icon">Jest<wbr>Screenshot</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/_rws_air_jestscreenshot.jestscreenshoterror.html" class="tsd-kind-icon">Jest<wbr>Screenshot<wbr>Error</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="_rws_air_jestscreenshot.jestscreenshotoptions.html" class="tsd-kind-icon">Jest<wbr>Screenshot<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="_rws_air_jestscreenshot.slackfile.html" class="tsd-kind-icon">Slack<wbr>File</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="_rws_air_jestscreenshot.slackresponse.html" class="tsd-kind-icon">Slack<wbr>Response</a>
+						<a href="_rws_air_webcomponents.tableqas.html" class="tsd-kind-icon">TableQAs</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_rws_air_jestscreenshot.slackresponse.html#file" class="tsd-kind-icon">file</a>
+								<a href="_rws_air_webcomponents.tableqas.html#header" class="tsd-kind-icon">header</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_rws_air_jestscreenshot.slackresponse.html#ok" class="tsd-kind-icon">ok</a>
+								<a href="_rws_air_webcomponents.tableqas.html#headercell" class="tsd-kind-icon">header<wbr>Cell</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_rws_air_webcomponents.tableqas.html#headerrow" class="tsd-kind-icon">header<wbr>Row</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_rws_air_webcomponents.tableqas.html#pagination" class="tsd-kind-icon">pagination</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_rws_air_webcomponents.tableqas.html#table" class="tsd-kind-icon">table</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_rws_air_webcomponents.tableqas.html#tablebody" class="tsd-kind-icon">table<wbr>Body</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_rws_air_webcomponents.tableqas.html#toolbar" class="tsd-kind-icon">toolbar</a>
 							</li>
 						</ul>
 					</li>

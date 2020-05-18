@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>SlackResponse | RWS-NL AIR Node Packages</title>
+	<title>RenderIconProps | RWS-NL AIR Node Packages</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,31 +52,24 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_rws_air_jestscreenshot.html">@rws-air/jestscreenshot</a>
+					<a href="../modules/_rws_air_webcomponents.html">@rws-air/webcomponents</a>
 				</li>
 				<li>
-					<a href="_rws_air_jestscreenshot.slackresponse.html">SlackResponse</a>
+					<a href="_rws_air_webcomponents.rendericonprops.html">RenderIconProps</a>
 				</li>
 			</ul>
-			<h1>Interface SlackResponse</h1>
+			<h1>Interface RenderIconProps</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Represents the response by Slack when uploading a file</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">SlackResponse</span>
+						<span class="target">RenderIconProps</span>
 					</li>
 				</ul>
 			</section>
@@ -87,8 +80,12 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_jestscreenshot.slackresponse.html#file" class="tsd-kind-icon">file</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_jestscreenshot.slackresponse.html#ok" class="tsd-kind-icon">ok</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.rendericonprops.html#clickevent" class="tsd-kind-icon">click<wbr>Event</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.rendericonprops.html#disabletooltip" class="tsd-kind-icon">disable<wbr>Tooltip</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.rendericonprops.html#disabled" class="tsd-kind-icon">disabled</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.rendericonprops.html#icon" class="tsd-kind-icon">icon</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.rendericonprops.html#tooltipplacement" class="tsd-kind-icon">tooltip<wbr>Placement</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rws_air_webcomponents.rendericonprops.html#tooltiptext" class="tsd-kind-icon">tooltip<wbr>Text</a></li>
 							</ul>
 						</section>
 					</div>
@@ -97,24 +94,114 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="file" class="tsd-anchor"></a>
-					<h3>file</h3>
-					<div class="tsd-signature tsd-kind-icon">file<span class="tsd-signature-symbol">:</span> <a href="_rws_air_jestscreenshot.slackfile.html" class="tsd-signature-type">SlackFile</a></div>
+					<a name="clickevent" class="tsd-anchor"></a>
+					<h3>click<wbr>Event</h3>
+					<div class="tsd-signature tsd-kind-icon">click<wbr>Event<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ToolbarButtonProps</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"onClick"</span><span class="tsd-signature-symbol">]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/jestscreenshot/src/index.ts#L115">packages/jestscreenshot/src/index.ts:115</a></li>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/webcomponents/src/TableComponents/Toolbar/index.tsx#L13">packages/webcomponents/src/TableComponents/Toolbar/index.tsx:13</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The function to trigger when clicking this button</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="ok" class="tsd-anchor"></a>
-					<h3>ok</h3>
-					<div class="tsd-signature tsd-kind-icon">ok<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<a name="disabletooltip" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> disable<wbr>Tooltip</h3>
+					<div class="tsd-signature tsd-kind-icon">disable<wbr>Tooltip<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ToolbarButtonProps</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"disableTooltip"</span><span class="tsd-signature-symbol">]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/jestscreenshot/src/index.ts#L114">packages/jestscreenshot/src/index.ts:114</a></li>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/webcomponents/src/TableComponents/Toolbar/index.tsx#L33">packages/webcomponents/src/TableComponents/Toolbar/index.tsx:33</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Disables the inclusion of a tooltip</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>false</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="disabled" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> disabled</h3>
+					<div class="tsd-signature tsd-kind-icon">disabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ToolbarButtonProps</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"disabled"</span><span class="tsd-signature-symbol">]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/webcomponents/src/TableComponents/Toolbar/index.tsx#L18">packages/webcomponents/src/TableComponents/Toolbar/index.tsx:18</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Whether this button should be disabled or not</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>false</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="icon" class="tsd-anchor"></a>
+					<h3>icon</h3>
+					<div class="tsd-signature tsd-kind-icon">icon<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Element</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/webcomponents/src/TableComponents/Toolbar/index.tsx#L11">packages/webcomponents/src/TableComponents/Toolbar/index.tsx:11</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The Material Icon to display in this paper button</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="tooltipplacement" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> tooltip<wbr>Placement</h3>
+					<div class="tsd-signature tsd-kind-icon">tooltip<wbr>Placement<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ToolbarButtonProps</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"tooltipPlacement"</span><span class="tsd-signature-symbol">]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/webcomponents/src/TableComponents/Toolbar/index.tsx#L28">packages/webcomponents/src/TableComponents/Toolbar/index.tsx:28</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The placement for the tooltip</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>top</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="tooltiptext" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> tooltip<wbr>Text</h3>
+					<div class="tsd-signature tsd-kind-icon">tooltip<wbr>Text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ToolbarButtonProps</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"tooltipText"</span><span class="tsd-signature-symbol">]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RWS-NL/air-node-packages/blob/6c0a1d5/packages/webcomponents/src/TableComponents/Toolbar/index.tsx#L23">packages/webcomponents/src/TableComponents/Toolbar/index.tsx:23</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The text content to put in the tooltip</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>&#39;Click Me&#39;</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -133,7 +220,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_rws_air_eslint_config_node.html">@rws-<wbr>air/eslint-<wbr>config-<wbr>node</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/_rws_air_jestscreenshot.html">@rws-<wbr>air/jestscreenshot</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -145,35 +232,35 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_rws_air_utils.html">@rws-<wbr>air/utils</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/_rws_air_webcomponents.html">@rws-<wbr>air/webcomponents</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/_rws_air_jestscreenshot.jestscreenshot.html" class="tsd-kind-icon">Jest<wbr>Screenshot</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/_rws_air_jestscreenshot.jestscreenshoterror.html" class="tsd-kind-icon">Jest<wbr>Screenshot<wbr>Error</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="_rws_air_jestscreenshot.jestscreenshotoptions.html" class="tsd-kind-icon">Jest<wbr>Screenshot<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="_rws_air_jestscreenshot.slackfile.html" class="tsd-kind-icon">Slack<wbr>File</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="_rws_air_jestscreenshot.slackresponse.html" class="tsd-kind-icon">Slack<wbr>Response</a>
+						<a href="_rws_air_webcomponents.rendericonprops.html" class="tsd-kind-icon">Render<wbr>Icon<wbr>Props</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_rws_air_jestscreenshot.slackresponse.html#file" class="tsd-kind-icon">file</a>
+								<a href="_rws_air_webcomponents.rendericonprops.html#clickevent" class="tsd-kind-icon">click<wbr>Event</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_rws_air_jestscreenshot.slackresponse.html#ok" class="tsd-kind-icon">ok</a>
+								<a href="_rws_air_webcomponents.rendericonprops.html#disabletooltip" class="tsd-kind-icon">disable<wbr>Tooltip</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_rws_air_webcomponents.rendericonprops.html#disabled" class="tsd-kind-icon">disabled</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_rws_air_webcomponents.rendericonprops.html#icon" class="tsd-kind-icon">icon</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_rws_air_webcomponents.rendericonprops.html#tooltipplacement" class="tsd-kind-icon">tooltip<wbr>Placement</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_rws_air_webcomponents.rendericonprops.html#tooltiptext" class="tsd-kind-icon">tooltip<wbr>Text</a>
 							</li>
 						</ul>
 					</li>
