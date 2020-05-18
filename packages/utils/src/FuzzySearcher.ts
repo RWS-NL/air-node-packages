@@ -1,10 +1,10 @@
-import Fuse, { FuseOptions } from 'fuse.js';
+import Fuse from 'fuse.js';
 
 export class FuzzySearcher<O> {
   private readonly object: O[];
-  private readonly fuseOptions?: FuseOptions<O>;
+  private readonly fuseOptions?: Fuse.IFuseOptions<unknown>;
 
-  constructor(obj: O[], keys: (keyof O | string)[], options?: FuseOptions<O>) {
+  constructor(obj: O[], keys: string[], options?: Fuse.IFuseOptions<unknown>) {
     this.object = obj;
     this.fuseOptions = {
       threshold: 0.2,
@@ -18,6 +18,6 @@ export class FuzzySearcher<O> {
 
     const fuzzyFuze = new Fuse(this.object, this.fuseOptions);
 
-    return fuzzyFuze.search(locquery) as O[];
+    return fuzzyFuze.search<O>(locquery);
   }
 }

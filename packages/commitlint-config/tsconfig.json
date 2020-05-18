@@ -1,11 +1,11 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "../ts-config/src/tsconfig.json",
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src",
     "module": "CommonJS",
     "tsBuildInfoFile": "dist/.tsbuildinfo",
-    "sourceMap": false,
+    "sourceMap": false
   },
   "include": ["src"]
 }

@@ -1,5 +1,5 @@
 declare module 'commitizen' {
-  declare namespace configLoader {
-    declare function load(...args: any[]);
+  namespace configLoader {
+    export function load(...args: any[]): any;
   }
 }

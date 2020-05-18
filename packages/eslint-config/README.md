@@ -5,7 +5,7 @@
 
   <p>
 <h1> Rijkswaterstaat eslint-config </h1>
-<h3> An <a href="https://eslint.org/">eslint config</a> for all AIR applications using TypeScript</h3>
+<h3> An <a href="https://eslint.org/">eslint config</a> for all AIR applications using React & TypeScript</h3>
   </p>
 
 </div>
@@ -39,7 +39,7 @@
 ## Installation
 
 ```sh
-yarn add @rws-air/eslint-config
+yarn add -D @rws-air/eslint-config
 ```
 
 ## Usage

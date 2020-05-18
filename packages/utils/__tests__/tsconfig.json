@@ -2,8 +2,10 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "target": "ES2019",
-    "incremental": false,
-    "noEmit": true,
+    "rootDir": ".",
+    "outDir": "../test-out",
+    "tsBuildInfoFile": "../test-out/.tsbuildinfo",
+    "incremental": true,
     "composite": false
   },
   "references": [{ "path": "../src" }],

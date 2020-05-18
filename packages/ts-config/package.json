@@ -1,0 +1,47 @@
+{
+  "name": "@rws-air/ts-config",
+  "version": "0.0.1",
+  "description": "Shareable TypeScript configuration for all RWS projects",
+  "author": "@rws-air",
+  "license": "MIT",
+  "main": "dist/tsconfig.json",
+  "homepage": "https://github.com/RWS-NL/air-node-packages/tree/master/packages/ts-config#readme",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint __tests__ scripts --ext ts --fix -c ../../.eslintrc",
+    "prebuild": "yarn lint",
+    "build": "tsc -b __tests__ && tsc -b scripts",
+    "prepublishOnly": "node build/prepublish.js",
+    "postpublish": "node build/postpublish.js"
+  },
+  "peerDependencies": {
+    "typescript": ">=3"
+  },
+  "files": [
+    "tsconfig.json"
+  ],
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RWS-NL/air-node-packages.git",
+    "directory": "packages/ts-config"
+  },
+  "bugs": {
+    "url": "https://github.com/RWS-NL/air-node-packages/issues"
+  },
+  "keywords": [
+    "tsconfig",
+    "math",
+    "random",
+    "security",
+    "RWS-NL",
+    "typescript",
+    "ts"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

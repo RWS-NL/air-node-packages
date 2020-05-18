@@ -1,4 +1,5 @@
 import { FuzzySearcher } from '../src/FuzzySearcher';
+import { toBeCalled } from '../src/Testing/ToBeCalled';
 
 const SAMPLE_DATA = [
   {
@@ -22,14 +23,9 @@ describe('FuzzySearcher', () => {
 
     const result = fuzzySearcher.runFuzzy('john');
 
-    expect(mock).toHaveBeenCalledWith('john');
-    expect(mock).toHaveBeenCalledTimes(1);
-    expect(result).toStrictEqual([
-      {
-        firstname: 'John',
-        lastname: 'Connor'
-      }
-    ]);
+    toBeCalled(mock, 1, 'john');
+    expect(result).toStrictEqual([{ item: { firstname: 'John', lastname: 'Connor' }, refIndex: 0 }]);
+    expect(result).toMatchSnapshot();
   });
 
   test('supports custom options', () => {
@@ -38,17 +34,11 @@ describe('FuzzySearcher', () => {
 
     const result = fuzzySearcher.runFuzzy('john');
 
-    expect(mock).toHaveBeenCalledWith('john');
-    expect(mock).toHaveBeenCalledTimes(1);
+    toBeCalled(mock, 1, 'john');
     expect(result).toStrictEqual([
-      {
-        firstname: 'John',
-        lastname: 'Connor'
-      },
-      {
-        firstname: 'Johan',
-        lastname: 'Connor'
-      }
+      { item: { firstname: 'John', lastname: 'Connor' }, refIndex: 0 },
+      { item: { firstname: 'Johan', lastname: 'Connor' }, refIndex: 2 }
     ]);
+    expect(result).toMatchSnapshot();
   });
 });

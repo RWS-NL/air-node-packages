@@ -1,5 +1,5 @@
 import moment from 'moment';
-import mkdirp from 'mkdirp';
+import { mkdirp } from 'fs-nextra';
 import fetch from 'node-fetch';
 import Form from 'form-data';
 import path from 'path';
@@ -198,7 +198,7 @@ export class JestScreenshot {
    */
   public async setup(): Promise<void> {
     try {
-      mkdirp.sync(this.dirName);
+      await mkdirp(this.dirName);
     } catch {
       throw new Error('Failed to create screenshots directory, maybe check your permissions?');
     }

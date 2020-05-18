@@ -62,7 +62,7 @@
     "devDependencies": {
       "@commitlint/cli": "^8.3.5",
       "@commitlint/config-conventional": "^8.3.4",
-      "@favware/ts-config": "^1.1.2",
+      "@rws-air/ts-config": "^1.0.0",
       "@rws-air/commitizen-config": "^1.1.3",
       "@rws-air/commitlint-config": "^1.1.3",
       "@rws-air/eslint-config": "^3.0.15",
