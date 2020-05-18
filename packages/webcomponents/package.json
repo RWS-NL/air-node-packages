@@ -26,7 +26,7 @@
     "@material-ui/core": "^4.9.9",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/pickers": "^3.2.10",
-    "@rws-air/utils": "^4.2.4",
+    "@rws-air/utils": "latest",
     "formik": "^2.1.4",
     "formik-material-ui": "2.0.0-beta.1",
     "formik-material-ui-pickers": "0.0.8",
