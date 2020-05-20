@@ -20,7 +20,7 @@
     "!dist/.tsbuildinfo"
   ],
   "peerDependencies": {
-    "fuse.js": "^3",
+    "fuse.js": "^6",
     "lodash.orderby": ">=4",
     "react": ">=16",
     "react-dom": ">=16"
