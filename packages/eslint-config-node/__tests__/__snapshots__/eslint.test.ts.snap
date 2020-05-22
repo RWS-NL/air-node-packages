@@ -31,6 +31,7 @@ Object {
       "interface",
     ],
     "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/naming-convention": Array [
       "error",
       Object {
@@ -40,6 +41,7 @@ Object {
         "selector": "interface",
       },
     ],
+    "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-for-in-array": "warn",
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-unnecessary-qualifier": "warn",

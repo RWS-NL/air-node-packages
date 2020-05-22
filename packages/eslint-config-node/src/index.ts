@@ -42,6 +42,8 @@ export const config = {
     '@typescript-eslint/prefer-for-of': 'warn',
     '@typescript-eslint/prefer-includes': 'warn',
     '@typescript-eslint/unified-signatures': 'warn',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
 
     // Best Practices
     eqeqeq: ['error', 'smart'],
