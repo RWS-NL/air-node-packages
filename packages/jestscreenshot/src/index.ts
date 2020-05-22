@@ -1,7 +1,7 @@
-import moment from 'moment';
-import { mkdirp } from 'fs-nextra';
-import fetch from 'node-fetch';
 import Form from 'form-data';
+import { mkdirp } from 'fs-nextra';
+import moment from 'moment';
+import fetch from 'node-fetch';
 import path from 'path';
 import { Page } from 'puppeteer';
 
@@ -151,10 +151,10 @@ export class JestScreenshot {
    * @param options The options to pass to the instance of JestScreenshot
    */
   public constructor(options: JestScreenshotOptions) {
-    if (!this.objectHasProperty(options, 'page')) {
+    if (!Reflect.has(options, 'page')) {
       throw new JestScreenshotError('You should pass page to screenshot to options (page)!!');
     }
-    if (!this.objectHasProperty(options, 'dirName')) {
+    if (!Reflect.has(options, 'dirName')) {
       throw new JestScreenshotError(
         'You should pass the name of the directory to save images to the options (dirName)!!'
       );
@@ -177,7 +177,7 @@ export class JestScreenshot {
           'When you want to upload to slack you should either provide the slackToken option or an environment variable called "SLACK_WEBTOKEN"'
         );
 
-      if (!this.objectHasProperty(options, 'slackChannels')) {
+      if (!Reflect.has(options, 'slackChannels')) {
         throw new JestScreenshotError(
           'When you want to upload to slack you provide an array of channels to post the screenshot in through the "slackChannels" options'
         );
@@ -253,16 +253,6 @@ export class JestScreenshot {
     } catch (err) {
       throw new Error(err);
     }
-  }
-
-  /**
-   * Validates if an object has a given property
-   * @param obj The object to validate
-   * @param prop The property to try to find
-   * @returns Whether the object has this property or not
-   */
-  public objectHasProperty<O extends object, K extends keyof O>(obj: O, prop: K): boolean {
-    return obj && prop in obj;
   }
 }
 

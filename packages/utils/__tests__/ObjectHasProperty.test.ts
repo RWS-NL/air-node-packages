@@ -6,7 +6,6 @@ test('should contain property', () => {
 });
 
 test('should not contain property', () => {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-  // @ts-ignore
+  // @ts-expect-error
   expect(objectHasProperty(obj, 'notKey')).toStrictEqual(false);
 });

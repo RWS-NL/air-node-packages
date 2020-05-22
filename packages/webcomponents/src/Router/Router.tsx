@@ -34,8 +34,10 @@ export type RouteParamId = string | number;
  * )
  * ```
  */
-export type ComponentOwnProps<CP extends object, Params extends { [K in keyof Params]?: string } = object> = CP &
-  NonUndefined<RouteComponentProps<Params>>;
+export type ComponentOwnProps<
+  CP extends Record<PropertyKey, unknown>,
+  Params extends { [K in keyof Params]?: string } = Record<PropertyKey, string>
+> = CP & NonUndefined<RouteComponentProps<Params>>;
 
 /**
  * Type wrapper to set the params on Router props "match" object
@@ -48,7 +50,7 @@ export type ComponentOwnProps<CP extends object, Params extends { [K in keyof Pa
  * export const handleGetUser = createAsyncAction(...)<RouteProps<RouteParams>['match'], unknown, Error>();
  * ```
  */
-export type RouteProps<Params extends { [K in keyof Params]?: string } = object> = NonUndefined<
+export type RouteProps<Params extends { [K in keyof Params]?: string } = Record<PropertyKey, string>> = NonUndefined<
   RouteComponentProps<Params>
 >;
 

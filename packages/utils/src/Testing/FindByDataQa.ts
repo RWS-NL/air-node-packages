@@ -7,10 +7,11 @@ import { deprecate } from 'util';
  * @param selector The data-qa selector to search for
  * @returns The found component or an empty ShallowWrapper
  */
-export function findShallowByDataQa<P = {}, S = {}, C = React.Component>(
-  component: ShallowWrapper<P, S, C>,
-  selector: string
-) {
+export function findShallowByDataQa<
+  P = Record<PropertyKey, unknown>,
+  S = Record<PropertyKey, unknown>,
+  C = React.Component
+>(component: ShallowWrapper<P, S, C>, selector: string) {
   return component.find(`[data-qa="${selector}"]`);
 }
 
@@ -32,9 +33,10 @@ export const findByDataQa = deprecate(
  * @param selector The data-qa selector to search for
  * @returns The found component or an empty ReactWrapper
  */
-export function findReactByDataQa<P = {}, S = {}, C = React.Component>(
-  component: ReactWrapper<P, S, C>,
-  selector: string
-) {
+export function findReactByDataQa<
+  P = Record<PropertyKey, unknown>,
+  S = Record<PropertyKey, unknown>,
+  C = React.Component
+>(component: ReactWrapper<P, S, C>, selector: string) {
   return component.find(`[data-qa="${selector}"]`);
 }

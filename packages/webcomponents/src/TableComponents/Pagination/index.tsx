@@ -9,7 +9,7 @@ import { PaginationActions } from '../PaginationActions';
 import css from './Pagination.scss';
 
 export type MutatedMUITablePaginationProps = TablePaginationTypeMap<
-  object,
+  Record<PropertyKey, unknown>,
   ComponentType<TablePaginationBaseProps>
 >['props'];
 

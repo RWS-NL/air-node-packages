@@ -3,6 +3,6 @@
  * @param obj Object to analyze
  * @param prop Property to check for
  */
-export function objectHasProperty<O extends object>(obj: O, prop: keyof O) {
+export function objectHasProperty<O extends Record<PropertyKey, unknown>>(obj: O, prop: keyof O) {
   return obj && prop in obj;
 }

@@ -37,7 +37,7 @@ interface PanelProps extends HTMLAttributes<Element> {
   panelWrapperClasses?: string | string[];
 }
 
-export class Panel extends Component<PanelProps, {}> {
+export class Panel extends Component<PanelProps, Record<PropertyKey, unknown>> {
   node: any;
 
   static defaultProps = {

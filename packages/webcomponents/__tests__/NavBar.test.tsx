@@ -5,7 +5,9 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import React, { ChangeEvent } from 'react';
 
 let currentValue = 0;
-const onTabChange = jest.fn((_event: ChangeEvent<object>, newVal: number) => (currentValue = newVal));
+const onTabChange = jest.fn(
+  (_event: ChangeEvent<Record<PropertyKey, unknown>>, newVal: number) => (currentValue = newVal)
+);
 const tabs: LinkTabProps[] = [
   { label: 'root', external: false, to: '/root' },
   { label: 'CGI', external: true, to: 'https://cgi.com' },

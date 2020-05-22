@@ -15,7 +15,7 @@ export interface NavBarProps {
    */
   activeTab: number;
   /** Function to trigger when changing tabs */
-  onTabChange(_event: ChangeEvent<object>, newValue: number): void;
+  onTabChange(_event: ChangeEvent<Record<PropertyKey, unknown>>, newValue: number): void;
 
   /** Additional props to pass to the AppBar component */
   AppBarProps?: AppBarProps;
