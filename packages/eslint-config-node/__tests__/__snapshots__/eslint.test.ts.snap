@@ -31,10 +31,13 @@ Object {
       "interface",
     ],
     "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/interface-name-prefix": Array [
+    "@typescript-eslint/naming-convention": Array [
       "error",
       Object {
-        "prefixWithI": "never",
+        "format": Array [
+          "PascalCase",
+        ],
+        "selector": "interface",
       },
     ],
     "@typescript-eslint/no-for-in-array": "warn",

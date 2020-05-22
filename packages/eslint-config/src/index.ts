@@ -1,3 +1,4 @@
+import {} from '@typescript-eslint/parser';
 export const config = {
   root: true,
   parser: '@typescript-eslint/parser',
@@ -23,8 +24,12 @@ export const config = {
   rules: {
     // Disable some rules
     '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/ban-ts-ignore': 'off',
-    '@typescript-eslint/explicit-function-return-type': 'off'
+    '@typescript-eslint/ban-ts-comment': [
+      'off',
+      { 'ts-expect-error': false, 'ts-ignore': false, 'ts-nocheck': false, 'ts-check': true }
+    ],
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off'
   }
 };
 

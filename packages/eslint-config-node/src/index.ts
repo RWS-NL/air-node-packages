@@ -34,7 +34,7 @@ export const config = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
-    '@typescript-eslint/interface-name-prefix': ['error', { prefixWithI: 'never' }],
+    '@typescript-eslint/naming-convention': ['error', { selector: 'interface', format: ['PascalCase'] }],
     '@typescript-eslint/no-for-in-array': 'warn',
     '@typescript-eslint/no-unnecessary-qualifier': 'warn',
     '@typescript-eslint/no-unnecessary-type-assertion': 'warn',
