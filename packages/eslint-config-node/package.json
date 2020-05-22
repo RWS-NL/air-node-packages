@@ -1,6 +1,6 @@
 {
   "name": "@rws-air/eslint-config-node",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Standard ESLint config for RWS AIR projects written in TypeScript (without React)",
   "author": "@rws-air",
   "license": "MIT",

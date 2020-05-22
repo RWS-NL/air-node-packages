@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/eslint-config-node@2.0.0...@rws-air/eslint-config-node@2.0.1) (2020-05-22)
+
+
+### Bug Fixes
+
+* **eslint-config-node:** disable explicit-module-boundary-types and no-explicit-any ([547522e](https://github.com/RWS-NL/air-node-packages/commit/547522e8e8d69da9c403f11e7203fe2c67142816))
+
+
+
+
+
 # [2.0.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/eslint-config-node@1.0.0...@rws-air/eslint-config-node@2.0.0) (2020-05-22)
 
 
