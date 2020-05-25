@@ -17,7 +17,6 @@
     "packages/local-components-test/**"
   ],
   "pathExclude": [
-    "scripts/duplicateESLintConfig",
     "scripts/duplicateStylelintConfig",
     "scripts/validateNoOnly",
     "scripts/yarnAfterPull"

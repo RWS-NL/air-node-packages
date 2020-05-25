@@ -7,8 +7,7 @@
   "scripts": {
     "build": "lerna run build --parallel",
     "ci:build": "lerna run ci:build --parallel",
-    "lint": "eslint scripts/ packages --fix --ext js,jsx,ts,tsx",
-    "lint:parallel": "lerna run lint --parallel",
+    "lint": "eslint scripts/ packages --fix --ext js,jsx,ts,tsx -c packages/eslint-config/dist/index.js",
     "style": "prettier --config .prettierrc --write packages/**/*.{scss,tsx,ts,json}",
     "test": "lerna run test --parallel",
     "test:web": "pushd packages/webcomponents && yarn test --watchAll -u && popd",
@@ -18,7 +17,6 @@
     "up": "yarn upgrade-interactive --latest",
     "scripts:runner": "ts-node -P tsconfig.eslint.json",
     "scripts:validateNoOnly": "yarn scripts:runner scripts/validateNoOnly",
-    "scripts:duplicateESLintConfig": "tsc -b packages/eslint-config && yarn scripts:runner scripts/duplicateESLintConfig",
     "scripts:duplicateStylelintConfig": "yarn scripts:runner scripts/duplicateStylelintConfig",
     "scripts:yarnAfterPull": "yarn scripts:runner scripts/yarnAfterPull",
     "now.sh": "yarn ci:build && yarn docs && rm -rf packages scripts node_modules .git-authors"
@@ -109,11 +107,8 @@
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
-      "eslint --fix --ext js,ts,tsx",
+      "eslint --fix --ext js,ts,tsx -c packages/eslint-config/dist/index.js",
       "prettier --write"
-    ],
-    "packages/eslint-config/src/index.ts": [
-      "yarn scripts:duplicateESLintConfig"
     ],
     "packages/stylelint-config/src/index.ts": [
       "yarn scripts:duplicateStylelintConfig"
@@ -122,6 +117,9 @@
   "resolutions": {
     "acorn": "^6.4.1",
     "minimist": "^1.2.2",
-    "kind-of": "^6.0.3"
+    "kind-of": "^6.0.3",
+    "@typescript-eslint/eslint-plugin": "2.x",
+    "@typescript-eslint/parser": "2.x",
+    "eslint": "6.x"
   }
 }

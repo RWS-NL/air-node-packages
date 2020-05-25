@@ -10,15 +10,15 @@
   "homepage": "https://github.com/RWS-NL/air-node-packages/tree/master/packages/eslint-config-node#readme",
   "scripts": {
     "test": "jest",
-    "lint": "eslint src __tests__ --ext js,ts --fix -c ../../.eslintrc",
-    "prebuild": "yarn lint && yarn test",
+    "prelint": "yarn test && yarn build",
+    "lint": "eslint src __tests__ --ext js,ts --fix",
     "build": "tsc -b src",
-    "start": "yarn build -w"
+    "prepublishOnly": "yarn lint"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^3.0.0",
-    "@typescript-eslint/parser": "^3.0.0",
-    "eslint": "^7.0.0"
+    "@typescript-eslint/eslint-plugin": "2.x",
+    "@typescript-eslint/parser": "2.x",
+    "eslint": "6.x"
   },
   "files": [
     "dist",

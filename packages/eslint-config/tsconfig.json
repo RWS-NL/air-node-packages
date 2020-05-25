@@ -5,9 +5,7 @@
     "rootDir": "src",
     "module": "CommonJS",
     "tsBuildInfoFile": "dist/.tsbuildinfo",
-    "sourceMap": false,
-    "declaration": false,
-    "declarationMap": false
+    "composite": true
   },
   "include": ["src"]
 }
