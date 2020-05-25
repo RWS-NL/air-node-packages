@@ -1,6 +1,6 @@
 {
   "name": "@rws-air/local-components-test",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "private": true,
   "description": "Local testing app for webcomponents",
   "author": "@rws-air",

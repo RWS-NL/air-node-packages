@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@5.1.0...@rws-air/utils@5.1.1) (2020-05-25)
+
+
+### Bug Fixes
+
+* fix yarn resolutions breaking and allowing insecure transient dependencies ([4f8c41d](https://github.com/RWS-NL/air-node-packages/commit/4f8c41d2c2d7e7f5e4f213d131e539df51d34968))
+
+
+
+
+
 # [5.1.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@5.0.1...@rws-air/utils@5.1.0) (2020-05-25)
 
 

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.2](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/eslint-config-node@2.0.1...@rws-air/eslint-config-node@2.0.2) (2020-05-25)
+
+
+### Bug Fixes
+
+* **eslint-config(-node):** fixed ban-ts-ignore rule ([5cd645a](https://github.com/RWS-NL/air-node-packages/commit/5cd645af6b80de09ca0a5832847569035689a1ff))
+* **eslint-config(-node):** fixed eslint configs, they broke with eslint v7 ([c7468c0](https://github.com/RWS-NL/air-node-packages/commit/c7468c09b83dca99954bac96e6b3555429cfcef3))
+
+
+
+
+
 ## [2.0.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/eslint-config-node@2.0.0...@rws-air/eslint-config-node@2.0.1) (2020-05-22)
 
 

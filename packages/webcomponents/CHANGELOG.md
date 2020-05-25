@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.4](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@13.0.3...@rws-air/webcomponents@13.0.4) (2020-05-25)
+
+
+### Bug Fixes
+
+* **eslint-config(-node):** fixed eslint configs, they broke with eslint v7 ([c7468c0](https://github.com/RWS-NL/air-node-packages/commit/c7468c09b83dca99954bac96e6b3555429cfcef3))
+
+
+
+
+
 ## [13.0.3](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@13.0.2...@rws-air/webcomponents@13.0.3) (2020-05-25)
 
 **Note:** Version bump only for package @rws-air/webcomponents
