@@ -44,6 +44,11 @@ export const config = {
     '@typescript-eslint/unified-signatures': 'warn',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/ban-ts-comment': [
+      'off',
+      { 'ts-expect-error': false, 'ts-ignore': false, 'ts-nocheck': false, 'ts-check': true }
+    ],
+    '@typescript-eslint/ban-ts-ignore': 'off',
 
     // Best Practices
     eqeqeq: ['error', 'smart'],

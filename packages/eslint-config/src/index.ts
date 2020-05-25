@@ -27,6 +27,7 @@ export const config = {
       'off',
       { 'ts-expect-error': false, 'ts-ignore': false, 'ts-nocheck': false, 'ts-check': true }
     ],
+    '@typescript-eslint/ban-ts-ignore': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off'
   }
