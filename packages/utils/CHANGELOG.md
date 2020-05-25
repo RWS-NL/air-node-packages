@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.1.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@5.0.1...@rws-air/utils@5.1.0) (2020-05-25)
+
+
+### Features
+
+* **utils:** deprecate objHasProperty ([f2140d7](https://github.com/RWS-NL/air-node-packages/commit/f2140d7edf139964d44e60f4e6b2cc8af0bec5b7))
+
+
+
+
+
 ## [5.0.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@5.0.0...@rws-air/utils@5.0.1) (2020-05-22)
 
 **Note:** Version bump only for package @rws-air/utils
