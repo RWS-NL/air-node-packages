@@ -1,4 +1,3 @@
-import {} from '@typescript-eslint/parser';
 export const config = {
   root: true,
   parser: '@typescript-eslint/parser',

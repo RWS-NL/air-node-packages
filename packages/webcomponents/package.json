@@ -41,7 +41,7 @@
     "i18next": "^19.4.4",
     "lodash.debounce": "^4.0.8",
     "moment": "^2.26.0",
-    "react-i18next": "^11.4.0",
+    "react-i18next": "^11.5.0",
     "utility-types": "3.10.0"
   },
   "browserslist": {
@@ -91,14 +91,13 @@
     "formik-material-ui-pickers": "0.0.8",
     "i18next": "^19.4.4",
     "identity-obj-proxy": "^3.0.0",
-    "react-i18next": "^11.4.0",
     "react-if": "^3.4.3",
-    "rollup": "^2.10.7",
+    "rollup": "^2.10.9",
     "rollup-plugin-cleaner": "^1.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.2",
     "rollup-plugin-postcss": "^3.1.1",
     "rollup-plugin-progress": "^1.1.1",
-    "rollup-plugin-terser": "^5.3.0",
+    "rollup-plugin-terser": "^6.1.0",
     "rollup-plugin-typescript2": "^0.27.0"
   }
 }

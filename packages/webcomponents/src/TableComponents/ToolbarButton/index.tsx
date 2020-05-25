@@ -1,5 +1,4 @@
 import { IconButton, Paper } from '@material-ui/core';
-import { objectHasProperty } from '@rws-air/utils';
 import clsx from 'clsx';
 import React, { memo, useMemo } from 'react';
 import { Tooltip, TooltipProps } from '../../Tooltip';
@@ -65,7 +64,7 @@ export interface ToolbarButtonProps {
  * ```
  */
 export const ToolbarButton = memo((props: ToolbarButtonProps) => {
-  const elevation = useMemo(() => (objectHasProperty(props, 'paperElevation') ? props.paperElevation : 2), [props]);
+  const elevation = useMemo(() => (Reflect.has(props, 'paperElevation') ? props.paperElevation : 2), [props]);
 
   const renderWithTooltip = useMemo(
     () => (

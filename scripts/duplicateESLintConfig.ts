@@ -1,4 +1,4 @@
-import { green, red } from 'chalk';
+import chalk from 'chalk';
 import { writeJSONAtomic } from 'fs-nextra';
 import { sync as glob } from 'glob';
 import { join } from 'path';
@@ -17,10 +17,10 @@ import eslintConfig from '../packages/eslint-config/src/';
     );
 
     // eslint-disable-next-line no-console
-    console.log(green('Duplicated ESLint config'));
+    console.log(chalk.green('Duplicated ESLint config'));
     process.exit(0);
   } catch (error) {
-    console.error(red(error));
+    console.error(chalk.red(error));
     process.exit(1);
   }
 })();
