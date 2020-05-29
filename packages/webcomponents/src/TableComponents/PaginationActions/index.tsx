@@ -31,10 +31,12 @@ export interface PaginationActionsProps {
  * @param props Props to pass to the table pagination
  */
 export const PaginationActions = memo(
-  ({ onChangePage, count, rowsPerPage, page, 'data-qa': dataQa }: PaginationActionsProps) => {
+  ({ onChangePage, count, rowsPerPage, page: propPage, 'data-qa': dataQa }: PaginationActionsProps) => {
+    const isOnMobile = useMediaQuery('(max-width: 1024px)');
+
     const handleFirstPageButtonclick = <T extends unknown>(event: T): void => onChangePage(event, 0);
-    const handleBackButtonClick = <T extends unknown>(event: T): void => onChangePage(event, page - 1);
-    const handleNextButtonClick = <T extends unknown>(event: T): void => onChangePage(event, page + 1);
+    const handleBackButtonClick = <T extends unknown>(event: T): void => onChangePage(event, propPage - 1);
+    const handleNextButtonClick = <T extends unknown>(event: T): void => onChangePage(event, propPage + 1);
     const handleLastPageButtonClick = <T extends unknown>(event: T): void =>
       onChangePage(event, Math.max(0, Math.ceil(count / rowsPerPage) - 1));
     const handlePageClick = (page: number) => (event: SyntheticEvent): void => onChangePage(event, page);
@@ -60,7 +62,7 @@ export const PaginationActions = memo(
       [...Array(Math.ceil(count / rowsPerPage)).keys()]
         .map((x) => ++x)
         .map((page, key) => {
-          if (page + 1 === page) {
+          if (propPage + 1 === page) {
             return renderCurrentPage(key, page, handlePageClick);
           }
 
@@ -71,9 +73,8 @@ export const PaginationActions = memo(
           );
         });
 
-    const isOnMobile = useMediaQuery('(max-width: 1024px)');
-    const nextButtonShouldBeDisabled = page >= Math.ceil(count / rowsPerPage) - 1;
-    const previousButtonShouldBeDisabled = page === 0;
+    const nextButtonShouldBeDisabled = propPage >= Math.ceil(count / rowsPerPage) - 1;
+    const previousButtonShouldBeDisabled = propPage === 0;
 
     return (
       <Box style={{ display: 'flex', alignItems: 'center' }} data-qa={dataQa}>
@@ -91,7 +92,7 @@ export const PaginationActions = memo(
         />
 
         <If condition={isOnMobile}>
-          <Then>{renderCurrentPage(1, page + 1, handlePageClick)}</Then>
+          <Then>{renderCurrentPage(1, propPage + 1, handlePageClick)}</Then>
           <Else>{renderPages()}</Else>
         </If>
 

@@ -35,14 +35,14 @@ exports[`Snapshot Testing Optional Props 1`] = `
       />
     </Then>
     <Else>
-      <Styled(MuiBox)
-        className="paginationNumbers"
-        component="span"
+      <WithStyles(ForwardRef(Chip))
+        className="activePageChip ie11ChipCorrection"
+        color="primary"
         key="0"
+        label={1}
         onClick={[Function]}
-      >
-        1
-      </Styled(MuiBox)>
+        variant="default"
+      />
       <Styled(MuiBox)
         className="paginationNumbers"
         component="span"
@@ -127,14 +127,14 @@ exports[`Snapshot Testing Required Props 1`] = `
       />
     </Then>
     <Else>
-      <Styled(MuiBox)
-        className="paginationNumbers"
-        component="span"
+      <WithStyles(ForwardRef(Chip))
+        className="activePageChip ie11ChipCorrection"
+        color="primary"
         key="0"
+        label={1}
         onClick={[Function]}
-      >
-        1
-      </Styled(MuiBox)>
+        variant="default"
+      />
       <Styled(MuiBox)
         className="paginationNumbers"
         component="span"
