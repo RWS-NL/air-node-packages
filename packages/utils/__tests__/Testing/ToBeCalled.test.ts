@@ -8,6 +8,10 @@ describe('ToBeCalled Tests', () => {
     jest.clearAllMocks();
   });
 
+  test('should call given zero times', () => {
+    toBeCalled(mockFunction, 0);
+  });
+
   test('should call given amount of times', () => {
     mockFunction();
 

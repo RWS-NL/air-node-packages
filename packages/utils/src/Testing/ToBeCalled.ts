@@ -10,5 +10,7 @@ export function toBeCalled<A, B extends any[]>(
   ...args: any[]
 ) {
   expect(functionToBeCalled).toBeCalledTimes(calledTimes);
-  expect(functionToBeCalled).toBeCalledWith(...args);
+  if (calledTimes > 0) {
+    expect(functionToBeCalled).toBeCalledWith(...args);
+  }
 }
