@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.5](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@13.0.4...@rws-air/webcomponents@13.0.5) (2020-05-29)
+
+
+### Bug Fixes
+
+* **webcomponents:** fixed current page parsing in TablePagination ([ac6e4e8](https://github.com/RWS-NL/air-node-packages/commit/ac6e4e816fb9b7adbba2429dfb7be0838123a00a))
+
+
+
+
+
 ## [13.0.4](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@13.0.3...@rws-air/webcomponents@13.0.4) (2020-05-25)
 
 
