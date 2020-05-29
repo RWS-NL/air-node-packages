@@ -16,7 +16,7 @@
     "prepublishOnly": "yarn lint"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "2.x",
+    "@typescript-eslint/eslint-plugin": "3.x",
     "@typescript-eslint/parser": "2.x",
     "eslint": "6.x"
   },
