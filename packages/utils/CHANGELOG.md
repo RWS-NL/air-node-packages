@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.2](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@5.1.1...@rws-air/utils@5.1.2) (2020-05-29)
+
+
+### Bug Fixes
+
+* **utils:** toBeCalled function didn't work when zero mocks are expected ([26ca41b](https://github.com/RWS-NL/air-node-packages/commit/26ca41b618e19a6868979a6b4667edcdaaf95866))
+
+
+
+
+
 ## [5.1.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@5.1.0...@rws-air/utils@5.1.1) (2020-05-25)
 
 
