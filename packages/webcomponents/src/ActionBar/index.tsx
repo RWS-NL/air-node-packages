@@ -1,4 +1,4 @@
-import { Box, Typography, TypographyProps } from '@material-ui/core';
+import { Box, BoxProps, Typography, TypographyProps } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid/Grid';
 import clsx from 'clsx';
 import React, { memo, ReactNode, useMemo } from 'react';
@@ -22,10 +22,12 @@ export interface ActionBarProps {
   shouldDisableButton?: boolean;
   /** The text that should be shown in the button */
   buttonLabel?: string;
-  /** Typography variant for the header to take */
-  typographyVariant?: TypographyProps['variant'];
-  /** Custom CSS classes to pass to the title */
-  customclasses?: string | string[];
+
+  /** Additional props to apply to the Typography component */
+  TypographyProps?: TypographyProps;
+  /** Additional props to pass to the encompasing Box component */
+  BoxProps?: BoxProps;
+
   /** Data-qa tag to apply action bar bounding box */
   'data-qa'?: string;
   /** The action that should be invoked when the button is clicked */
@@ -48,17 +50,18 @@ export const ActionBar = memo(
     shouldHaveButton = false,
     buttonAction,
     buttonLabel,
-    typographyVariant = 'h1',
-    customclasses
+    BoxProps,
+    TypographyProps
   }: ActionBarProps) => {
     const getTitle = useMemo<ActionBarProps['title']>(() => {
       if (typeof title === 'string') {
         return (
           <Typography
-            variant={typographyVariant}
+            variant='h1'
             data-qa='action-bar-title'
             color='textPrimary'
-            className={clsx(css.actionHeader, customclasses)}
+            {...TypographyProps}
+            className={clsx(css.actionHeader, TypographyProps?.className, TypographyProps?.classes)}
           >
             {title}
           </Typography>
@@ -68,10 +71,10 @@ export const ActionBar = memo(
       if (typeof title === 'function') return title();
 
       return title;
-    }, [customclasses, title, typographyVariant]);
+    }, [TypographyProps, title]);
 
     return (
-      <Box component='div' className={clsx(css.actionBar)} data-qa={dataQa}>
+      <Box component='div' data-qa={dataQa} {...BoxProps} className={clsx(css.actionBar, BoxProps?.className)}>
         <Grid container direction='row' justify='space-between' alignItems='center' className={css.actionGridLeft}>
           <Grid item key={1} xs={6}>
             {getTitle}
