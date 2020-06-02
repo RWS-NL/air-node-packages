@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.6](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@13.0.5...@rws-air/webcomponents@13.0.6) (2020-06-02)
+
+
+### Bug Fixes
+
+* **webcomponents:** fixed the way props are passed to the ActionBar component ([565e6e1](https://github.com/RWS-NL/air-node-packages/commit/565e6e19d67673b75eab674b1d4599720afba201))
+
+
+
+
+
 ## [13.0.5](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@13.0.4...@rws-air/webcomponents@13.0.5) (2020-05-29)
 
 
