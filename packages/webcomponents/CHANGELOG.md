@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.1.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@13.0.6...@rws-air/webcomponents@13.1.0) (2020-06-03)
+
+
+### Features
+
+* **webcomponents:** add SelectMenuMultiple formik component ([4923cc4](https://github.com/RWS-NL/air-node-packages/commit/4923cc433a54088edbc2aea619bf256c116b03e8))
+
+
+
+
+
 ## [13.0.6](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@13.0.5...@rws-air/webcomponents@13.0.6) (2020-06-02)
 
 
