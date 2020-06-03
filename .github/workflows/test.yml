@@ -23,7 +23,7 @@ jobs:
           key: ${{ runner.os }}-12-${{ hashFiles('**/yarn.lock') }}
       - name: Install Dependencies
         run: yarn --ignore-scripts
-      - name: Build Utils
-        run: yarn ci:build --scope @rws-air/utils
+      - name: Build Utils and Lint config
+        run: yarn tsc -b packages/utils/src packages/eslint-config/src
       - name: Run Unit Tests
         run: yarn test
