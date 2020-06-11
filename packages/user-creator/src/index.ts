@@ -1,12 +1,15 @@
 #!/usr/bin/env node
-
-/* eslint-disable no-console */
 import readYaml from '@favware/yamlreader';
-import chalk from 'chalk';
-import { stripIndent } from 'common-tags';
+import { KlasaConsole } from '@klasa/console';
 import fetch from 'node-fetch';
 import path from 'path';
 import yargs from 'yargs';
+
+const kConsole = new KlasaConsole({
+  useColor: true,
+  timestamps: true,
+  utc: false
+});
 
 export interface User {
   /** The e-mail for this user */
@@ -73,16 +76,16 @@ export class UsermanagementAdder {
       });
       const data: ResponseData = await response.json();
 
-      console.log(`Added user with email ${user.email}, they got ID ${data.id}`);
+      kConsole.log(`Added user with email ${user.email}, they got ID ${data.id}`);
 
       for (const role of user.roles) await this.addRoleToUser(data.id, role);
     } catch (err) {
-      console.error(err);
+      kConsole.error(err);
     }
   }
 
   private async addRoleToUser(userId: string, role: string) {
-    console.log(`Adding ${role} to user with ID ${userId}`);
+    kConsole.log(`Adding ${role} to user with ID ${userId}`);
 
     try {
       await fetch(`${this.url}/api/v1/users/${userId}/roles`, {
@@ -94,11 +97,11 @@ export class UsermanagementAdder {
         }
       });
 
-      console.log(`Added role ${role} to user with id ${userId}`);
-      console.log('');
+      kConsole.log(`Added role ${role} to user with id ${userId}`);
+      kConsole.log('');
     } catch (err) {
-      console.error(chalk.red(`an error occurred adding ${role} to user with ID ${userId}. Stacktrace:`));
-      console.error(err);
+      kConsole.error(`an error occurred adding ${role} to user with ID ${userId}. Stacktrace:`);
+      kConsole.debug(err);
     }
   }
 }
@@ -110,12 +113,13 @@ export class UsermanagementAdder {
 export const exec = () => {
   const argv = yargs
     .usage(
-      stripIndent`
-          ${chalk.yellow('Usermanagement user adding script')}
-
-          Usage:
-              usercreator -f /path/to/yaml/file -u <username> -p <password> --url <url>
-              usercreator --help`
+      [
+        'Usermanagement user adding script',
+        '',
+        '\tUsage:',
+        '\t\tusercreator -f /path/to/yaml/file -u <username> -p <password> --url <url>',
+        '\t\tusercreator --help'
+      ].join('')
     )
     .example('', 'usercreator -f users.yaml -u root -p root --url http://localhost:9003')
     .option('file', {
@@ -148,7 +152,7 @@ export const exec = () => {
   try {
     new UsermanagementAdder(path.resolve(argv.file), argv.username, argv.password, argv.url).run();
   } catch (err) {
-    console.error(err);
+    kConsole.error(err);
   }
 };
 

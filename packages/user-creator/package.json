@@ -22,9 +22,8 @@
     "!dist/.tsbuildinfo"
   ],
   "dependencies": {
-    "@favware/yamlreader": "^2.0.0",
-    "chalk": "^4.0.0",
-    "common-tags": "^1.8.0",
+    "@favware/yamlreader": "^3.0.0",
+    "@klasa/console": "^0.0.3",
     "node-fetch": "^2.6.0",
     "yargs": "^15.3.1"
   },
