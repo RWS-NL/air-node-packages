@@ -19,6 +19,7 @@ export class Stack<K extends string | number | unknown, V> extends Collection<K,
   public static readonly default: typeof Stack = Stack;
   public ['constructor']: typeof Stack;
 
+  // eslint-disable-next-line no-useless-constructor
   public constructor(entries?: ReadonlyArray<readonly [K, V]> | null) {
     super(entries);
   }

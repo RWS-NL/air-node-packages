@@ -36,7 +36,7 @@
     "react-router-dom": "^5"
   },
   "dependencies": {
-    "@favware/querystring": "^5.0.0",
+    "@favware/querystring": "^6.0.0",
     "clsx": "^1.1.1",
     "i18next": "^19.4.5",
     "lodash.debounce": "^4.0.8",
@@ -82,19 +82,19 @@
     "ts"
   ],
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^12.0.0",
-    "@rollup/plugin-node-resolve": "^8.0.0",
-    "@rollup/plugin-url": "^5.0.0",
+    "@rollup/plugin-commonjs": "^13.0.0",
+    "@rollup/plugin-node-resolve": "^8.0.1",
+    "@rollup/plugin-url": "^5.0.1",
     "@svgr/rollup": "^5.4.0",
     "formik": "^2.1.4",
     "formik-material-ui": "2.0.0-beta.1",
     "formik-material-ui-pickers": "0.0.8",
     "identity-obj-proxy": "^3.0.0",
     "react-if": "^3.4.3",
-    "rollup": "^2.12.0",
+    "rollup": "^2.15.0",
     "rollup-plugin-cleaner": "^1.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.2",
-    "rollup-plugin-postcss": "^3.1.1",
+    "rollup-plugin-postcss": "^3.1.2",
     "rollup-plugin-progress": "^1.1.2",
     "rollup-plugin-terser": "^6.1.0",
     "rollup-plugin-typescript2": "^0.27.1"

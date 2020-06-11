@@ -1,20 +1,28 @@
-import path from 'path';
-import execa from 'execa';
-import chalk from 'chalk';
+import { exec } from '@klasa/utils';
+import { resolve } from 'path';
+import kConsole from './scriptUtils';
 
-(async () => {
-  const ROOT_DIR = path.join(__dirname, '..');
-  const log = console.log; // eslint-disable-line no-console, @typescript-eslint/unbound-method
+async function main() {
+  const ROOT_DIR = resolve(__dirname, '..');
 
-  const { stdout } = await execa('git', ['show', '--name-only'], { cwd: ROOT_DIR });
+  const { stdout } = await exec('git show --name-only', { cwd: ROOT_DIR });
   const lastCommitFiles = stdout.split('\n').slice(6);
 
-  const hasLockfileInCommit = lastCommitFiles.some(commitFile => commitFile.toLowerCase() === 'yarn.lock');
+  const hasLockfileInCommit = lastCommitFiles.some((commitFile) => commitFile.toLowerCase() === 'yarn.lock');
 
-  if (hasLockfileInCommit) {
-    log(chalk.cyan('Yarn lockfile was updated, running Yarn for you'));
+  if (!hasLockfileInCommit) {
+    kConsole.log('Yarn lockfile was updated, running Yarn for you');
 
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    execa('yarn', { cwd: ROOT_DIR }).stdout!.pipe(process.stdout);
+    const { stdout, stderr } = await exec('yarn', { cwd: ROOT_DIR });
+
+    if (stderr) {
+      kConsole.error('An error occurred while running "yarn install"!');
+      kConsole.error(stderr);
+    } else {
+      kConsole.log(stdout);
+      kConsole.log('Successfully ran yarn for you!');
+    }
   }
-})();
+}
+
+main();
