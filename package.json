@@ -17,7 +17,6 @@
     "up": "yarn upgrade-interactive --latest",
     "scripts:runner": "ts-node -P tsconfig.eslint.json",
     "scripts:validateNoOnly": "yarn scripts:runner scripts/validateNoOnly",
-    "scripts:duplicateStylelintConfig": "yarn scripts:runner scripts/duplicateStylelintConfig",
     "scripts:yarnAfterPull": "yarn scripts:runner scripts/yarnAfterPull",
     "now.sh": "yarn ci:build && yarn docs && rm -rf packages scripts node_modules .git-authors"
   },
@@ -109,9 +108,6 @@
     "*.{js,ts,tsx}": [
       "eslint --fix --ext js,ts,tsx -c packages/eslint-config/dist/index.js",
       "prettier --write"
-    ],
-    "packages/stylelint-config/src/index.ts": [
-      "yarn scripts:duplicateStylelintConfig"
     ]
   },
   "resolutions": {
