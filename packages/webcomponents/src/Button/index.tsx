@@ -50,16 +50,17 @@ export const Button = memo(
         variant={props.variant}
         color={props.color}
         disabled={props.disabled}
-        className={clsx(props.customclasses)}
+        className={clsx(props.customclasses, props.className)}
         classes={{
-          root: css.button,
+          ...props.classes,
+          root: clsx(css.button, props.classes?.root),
           label: clsx(css.buttonLabel, props.customlabelclasses),
-          disabled: css.buttonDisabled,
-          containedPrimary: clsx(css.buttonPrimary, classes.buttonShadow),
-          containedSecondary: clsx(css.buttonSecondary, classes.buttonShadow),
-          outlined: clsx(css.buttonOutlined, classes.buttonShadow),
-          outlinedPrimary: clsx(css.buttonOutlined, classes.buttonShadow),
-          outlinedSecondary: clsx(css.buttonOutlinedSecondary, classes.buttonShadow)
+          disabled: clsx(css.buttonDisabled, props.classes?.disabled),
+          containedPrimary: clsx(css.buttonPrimary, classes.buttonShadow, props.classes?.containedPrimary),
+          containedSecondary: clsx(css.buttonSecondary, classes.buttonShadow, props.classes?.containedSecondary),
+          outlined: clsx(css.buttonOutlined, classes.buttonShadow, props.classes?.outlined),
+          outlinedPrimary: clsx(css.buttonOutlined, classes.buttonShadow, props.classes?.outlinedPrimary),
+          outlinedSecondary: clsx(css.buttonOutlinedSecondary, classes.buttonShadow, props.classes?.outlinedSecondary)
         }}
         href={undefined}
       >

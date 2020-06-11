@@ -1409,12 +1409,12 @@
   resolved "https://registry.yarnpkg.com/@favware/querystring/-/querystring-6.0.0.tgz#1cf9d96eb4e40181d059e0f805b2f3b6294fbfc9"
   integrity sha512-5HgQ33Jtx9IJb84TZU3Dx+COs8NEtAyayDYrShVRq88gH1o4itQad4E7yChKipWKgDA3zhTW9PHhyKOnx7FkPQ==
 
-"@favware/yamlreader@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@favware/yamlreader/-/yamlreader-2.0.0.tgz#4005158a80e9904b6cfda8d19064bbfc9a8b3289"
-  integrity sha512-Z6BG59pgvXxFuDKmSdtxc0RM6sg6NHNvG6cdWfTXK7u8dwvDtqqYYTGBNVA9WqJRzIk4UssJLTdm5O0sQz159A==
+"@favware/yamlreader@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@favware/yamlreader/-/yamlreader-3.0.0.tgz#7d5e342b1bbcc351f9ed432948666792fadb9e35"
+  integrity sha512-JQpLIBlVX0ZoXVBWqGca03Xi7Zqagt1yxnKnhp0DE599JF4voFNdyBlTvMFW/GKS1YEJuTUQQl0bVZN6HjAkkA==
   dependencies:
-    js-yaml "^3.13.1"
+    js-yaml "^3.14.0"
 
 "@hapi/address@2.x.x":
   version "2.1.4"
@@ -3062,10 +3062,10 @@
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
   integrity sha512-rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ==
 
-"@types/common-tags@^1.8.0":
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/@types/common-tags/-/common-tags-1.8.0.tgz#79d55e748d730b997be5b7fce4b74488d8b26a6b"
-  integrity sha512-htRqZr5qn8EzMelhX/Xmx142z218lLyGaeZ3YR8jlze4TATRU9huKKvuBmAJEW4LCC4pnY1N6JAm6p85fMHjhg==
+"@types/common-tags@1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@types/common-tags/-/common-tags-1.4.0.tgz#28c1be61e352dde38936018984e2885caef087c1"
+  integrity sha512-HI1tSO87vmd1sPS3DOVSK4gvVKROvCBFvAnXlLiQtAus/+1xXMQcNyu9TX2ChwRXFeQZeB9+f+nMo99xLd5DdA==
 
 "@types/enzyme-adapter-react-16@^1.0.6":
   version "1.0.6"
@@ -5365,7 +5365,7 @@ commitizen@^4.0.3, commitizen@^4.1.2:
     strip-bom "4.0.0"
     strip-json-comments "3.0.1"
 
-common-tags@^1.8.0:
+common-tags@1.8.0, common-tags@^1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/common-tags/-/common-tags-1.8.0.tgz#8e3153e542d4a39e9b10554434afaaf98956a937"
   integrity sha512-6P6g0uetGpW/sdyUy/iQQCbFF0kWVMSIVSyYz7Zgjcgh8mgw8PQzDNZeyZ5DQ2gM7LBoZPHmnjz8rUthkBG5tw==
@@ -10550,7 +10550,7 @@ js-tokens@^3.0.2:
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
   integrity sha1-mGbfOVECEw449/mWvOtlRDIJwls=
 
-js-yaml@^3.13.1:
+js-yaml@^3.13.1, js-yaml@^3.14.0:
   version "3.14.0"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.14.0.tgz#a7a34170f26a21bb162424d8adacb4113a69e482"
   integrity sha512-/4IbIeHcD9VMHFqDR/gQ7EdZdLimOvW2DdcxFjdyyZ9NsbS+ccrXqVWDtab/lRl5AlUqmpBx8EhPaWR+OtY17A==
