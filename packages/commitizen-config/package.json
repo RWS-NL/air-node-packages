@@ -1,6 +1,6 @@
 {
   "name": "@rws-air/commitizen-config",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Commitizen adapter following the @rws-air/commitlint-config format",
   "author": "@rws-air",
   "license": "AGPL-3.0-or-later",
@@ -27,9 +27,9 @@
     "word-wrap": "^1.2.3"
   },
   "devDependencies": {
+    "@types/common-tags": "1.4.0",
     "@types/lodash.map": "^4.6.13",
-    "common-tags": "1.8.0",
-    "@types/common-tags": "1.4.0"
+    "common-tags": "1.8.0"
   },
   "publishConfig": {
     "access": "public"

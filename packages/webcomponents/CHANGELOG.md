@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.1.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@13.1.0...@rws-air/webcomponents@13.1.1) (2020-06-11)
+
+
+### Bug Fixes
+
+* **webcomponents:** added a forwardref to button to allow tooltip wrapping ([fa7cc0b](https://github.com/RWS-NL/air-node-packages/commit/fa7cc0b66f93470a1e2de5991aae17e20121f7dd))
+
+
+
+
+
 # [13.1.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@13.0.6...@rws-air/webcomponents@13.1.0) (2020-06-03)
 
 
