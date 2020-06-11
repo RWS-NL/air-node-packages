@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.1.2](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@13.1.1...@rws-air/webcomponents@13.1.2) (2020-06-11)
+
+
+### Bug Fixes
+
+* **webcomponents:** properly pass down styles to Button component ([d24eca6](https://github.com/RWS-NL/air-node-packages/commit/d24eca623444b54d67a39d70626c05fd7a4fc123))
+
+
+
+
+
 ## [13.1.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@13.1.0...@rws-air/webcomponents@13.1.1) (2020-06-11)
 
 
