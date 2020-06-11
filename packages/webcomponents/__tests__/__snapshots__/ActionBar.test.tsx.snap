@@ -34,7 +34,7 @@ exports[`Snapshot Testing AdditionalTest 1`] = `
         sm={6}
         xs={5}
       >
-        <Memo()
+        <Memo([object Object])
           color="primary"
           data-qa="action-bar-button"
           disabled={false}
@@ -84,7 +84,7 @@ exports[`Snapshot Testing Required Props 1`] = `
         sm={6}
         xs={5}
       >
-        <Memo()
+        <Memo([object Object])
           color="primary"
           data-qa="action-bar-button"
           disabled={false}
@@ -130,7 +130,7 @@ exports[`Snapshot Testing With Button 1`] = `
         sm={6}
         xs={5}
       >
-        <Memo()
+        <Memo([object Object])
           color="primary"
           data-qa="action-bar-button"
           disabled={false}

@@ -22,7 +22,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
       disabled={true}
       variant="outlined"
     >
-      <Memo()
+      <Memo([object Object])
         aria-haspopup="true"
         className="buttonOverwritesLeft"
         color="secondary"
@@ -33,7 +33,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
         startIcon={<Memo(ArrowDropDownIcon) />}
         variant="outlined"
       />
-      <Memo()
+      <Memo([object Object])
         className="buttonOverwritesRight"
         color="secondary"
         label={<Memo(CloudDownloadIcon) />}
@@ -75,7 +75,7 @@ exports[`Snapshot Testing Required Props 1`] = `
       color="primary"
       variant="contained"
     >
-      <Memo()
+      <Memo([object Object])
         aria-haspopup="true"
         className="buttonOverwritesLeft"
         color="primary"
@@ -86,7 +86,7 @@ exports[`Snapshot Testing Required Props 1`] = `
         startIcon={<Memo(ArrowDropDownIcon) />}
         variant="contained"
       />
-      <Memo()
+      <Memo([object Object])
         className="buttonOverwritesRight"
         color="primary"
         label={<Memo(CloudDownloadIcon) />}
