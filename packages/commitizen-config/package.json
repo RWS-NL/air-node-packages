@@ -19,7 +19,7 @@
     "!dist/.tsbuildinfo"
   ],
   "dependencies": {
-    "chalk": "^4.0.0",
+    "chalk": "^4.1.0",
     "commitizen": "^4.1.2",
     "lodash.map": "^4.6.0",
     "longest": "^2.0.1",
@@ -27,7 +27,9 @@
     "word-wrap": "^1.2.3"
   },
   "devDependencies": {
-    "@types/lodash.map": "^4.6.13"
+    "@types/lodash.map": "^4.6.13",
+    "common-tags": "1.8.0",
+    "@types/common-tags": "1.4.0"
   },
   "publishConfig": {
     "access": "public"
