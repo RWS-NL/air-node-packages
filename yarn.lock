@@ -1405,9 +1405,9 @@
     which "^1.3.1"
 
 "@favware/querystring@^6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@favware/querystring/-/querystring-6.0.0.tgz#1cf9d96eb4e40181d059e0f805b2f3b6294fbfc9"
-  integrity sha512-5HgQ33Jtx9IJb84TZU3Dx+COs8NEtAyayDYrShVRq88gH1o4itQad4E7yChKipWKgDA3zhTW9PHhyKOnx7FkPQ==
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/@favware/querystring/-/querystring-6.0.2.tgz#7494d0e4b3d0f2f45b9de063dbd51054bd68fb12"
+  integrity sha512-Jl46xM82xnZlHLg/gazf2+6k7x7SYryQmoYg4pxMvy7qBs1lxDf+1VfIGakIBbRvq51vDloJ+nhXj8bSCBoaVQ==
 
 "@favware/yamlreader@^3.0.0":
   version "3.0.0"
