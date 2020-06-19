@@ -14327,9 +14327,9 @@ react-transition-group@^4.0.0, react-transition-group@^4.4.0:
     prop-types "^15.6.2"
 
 react-virtuoso@^0.17.1:
-  version "0.17.2"
-  resolved "https://registry.yarnpkg.com/react-virtuoso/-/react-virtuoso-0.17.2.tgz#c488230905901755ddfb8298e9e8aa68b9025ca9"
-  integrity sha512-V0OMMu93OqPzvxj0lcs/7CaBtMhmZghqHoc2PnwAMt+sVIhGKO/NWG50y8nKaagLsEk8y2yXbUdkAN2r8CSoLQ==
+  version "0.17.3"
+  resolved "https://registry.yarnpkg.com/react-virtuoso/-/react-virtuoso-0.17.3.tgz#373b7bbb8a81087a6df255855fcb1e9006691668"
+  integrity sha512-terKMw3uZ8UerBa9sjeP2B6TGgL5dbKDtZlg63teRPyi9AJrJ9vdAmGxPrQ1FhWwXKLFB61aK57FZ7K1KYHRPA==
   dependencies:
     "@scarf/scarf" "^1.0.5"
     resize-observer-polyfill "^1.5.1"
