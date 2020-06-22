@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.3](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/commitizen-config@2.0.2...@rws-air/commitizen-config@2.0.3) (2020-06-22)
+
+
+### Bug Fixes
+
+* add commitlint/load as dependency ([82f0d9e](https://github.com/RWS-NL/air-node-packages/commit/82f0d9e5f481a839cd35590ba5a632f4731d283a))
+
+
+
+
+
 ## [2.0.2](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/commitizen-config@2.0.1...@rws-air/commitizen-config@2.0.2) (2020-06-11)
 
 **Note:** Version bump only for package @rws-air/commitizen-config
