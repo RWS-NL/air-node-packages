@@ -1,6 +1,7 @@
 import { configLoader } from 'commitizen';
 import commitTypes from './commit-types';
 import engine from './engine';
+import commitlintLoad from '@commitlint/load';
 
 const config = configLoader.load();
 const options = {
@@ -18,9 +19,6 @@ const options = {
 
 (function (options) {
   try {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const commitlintLoad = require('@commitlint/load');
-
     commitlintLoad().then(function (clConfig: { rules: { [x: string]: any } }) {
       if (clConfig.rules) {
         const maxHeaderLengthRule = clConfig.rules['header-max-length'];
