@@ -1,7 +1,5 @@
 import { CSSProperties } from '@material-ui/styles';
-import clsx from 'clsx';
 import React, { memo, SVGProps } from 'react';
-import css from './Logo.scss';
 import { ReactComponent as LogoSVG } from './logo.svg';
 
 export interface LogoProps extends SVGProps<any> {
@@ -9,8 +7,6 @@ export interface LogoProps extends SVGProps<any> {
   style?: CSSProperties;
   /** Data-qa tag to apply to the search bar and input element */
   'data-qa'?: string;
-  /** Custom CSS classes to pass to the button */
-  customclasses?: string | string[];
 }
 
 /**
@@ -20,4 +16,4 @@ export interface LogoProps extends SVGProps<any> {
  * <Logo height={200} width={500}/>
  * ```
  */
-export const Logo = memo((props: LogoProps) => <LogoSVG {...props} className={clsx(css.logo, css.customclasses)} />);
+export const Logo = memo((props: LogoProps) => <LogoSVG {...props} />);

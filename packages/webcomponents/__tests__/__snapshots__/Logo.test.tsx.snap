@@ -2,15 +2,10 @@
 
 exports[`Snapshot Testing Optional Props 1`] = `
 <IconMock
-  className="logo customclasses"
   cursor="pointer"
   height={500}
   width={500}
 />
 `;
 
-exports[`Snapshot Testing Required Props 1`] = `
-<IconMock
-  className="logo customclasses"
-/>
-`;
+exports[`Snapshot Testing Required Props 1`] = `<IconMock />`;
