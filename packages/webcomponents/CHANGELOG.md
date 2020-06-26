@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.2.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@13.1.2...@rws-air/webcomponents@13.2.0) (2020-06-26)
+
+
+### Features
+
+* new logo added [[#173374801](https://github.com/RWS-NL/air-node-packages/issues/173374801)] ([d3c4800](https://github.com/RWS-NL/air-node-packages/commit/d3c4800a73cd7492088b4a24831df61d348132d6))
+
+
+
+
+
 ## [13.1.2](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@13.1.1...@rws-air/webcomponents@13.1.2) (2020-06-11)
 
 
