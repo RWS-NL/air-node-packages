@@ -107,7 +107,8 @@ Run `yarn build` from repository root
 ### Publishing new versions
 
 1. Run `yarn build` to ensure you're about to publish all latest versions. This repo has TypeScript code that needs to be compiled to JavaScript before it can be published!
-2. Run `lerna publish` to start the publishing process. This will publish packages to NPM.
+2. Prepare a git commit for your changes. But instead of using `git push` to finish the commit, go to the next step using `lerna publish`.
+3. Run `lerna publish` to start the publishing process. This will publish packages to NPM and commit the change to github.
 
 #### If `lerna publish` fails
 
