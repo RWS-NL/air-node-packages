@@ -13,7 +13,7 @@ export interface LogoProps extends SVGProps<any> {
  * Creates a logo using pre-defined Rijkswaterstaat SVG
  * @example
  * ```jsx
- * <Logo height={200} width={500}/>
+ * <Logo height={125} width={314}/>
  * ```
  */
 export const Logo = memo((props: LogoProps) => <LogoSVG {...props} />);
