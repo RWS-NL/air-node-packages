@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.3.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@13.2.2...@rws-air/webcomponents@13.3.0) (2020-07-03)
+
+
+### Features
+
+* update license descriptor ([ef457dd](https://github.com/RWS-NL/air-node-packages/commit/ef457ddc48c34f0bcac3bbce49c901fa4be88147))
+
+
+
+
+
 ## [13.2.2](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@13.2.1...@rws-air/webcomponents@13.2.2) (2020-07-02)
 
 **Note:** Version bump only for package @rws-air/webcomponents
