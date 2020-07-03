@@ -3,7 +3,7 @@
   "version": "5.1.3",
   "description": "Utilities for rws-air libraries and applications",
   "author": "@rws-air",
-  "license": "AGPL-3.0-or-later",
+  "license": "Apache-2.0",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "homepage": "https://github.com/RWS-NL/air-node-packages/tree/master/packages/utils#readme",
