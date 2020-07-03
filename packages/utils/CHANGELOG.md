@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.2.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@5.1.3...@rws-air/utils@5.2.0) (2020-07-03)
+
+
+### Features
+
+* update license descriptor ([96b4090](https://github.com/RWS-NL/air-node-packages/commit/96b4090705039149c348e9f85aa24b33b3ab73e6))
+
+
+
+
+
 ## [5.1.3](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/utils@5.1.2...@rws-air/utils@5.1.3) (2020-06-11)
 
 **Note:** Version bump only for package @rws-air/utils
