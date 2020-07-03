@@ -3,7 +3,7 @@
   "version": "13.2.2",
   "description": "Standard Webcomponents for AIR projects",
   "author": "@rws-air",
-  "license": "AGPL-3.0-or-later",
+  "license": "Apache-2.0",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "typings": "dist/index.d.ts",
