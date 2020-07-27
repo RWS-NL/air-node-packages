@@ -13,18 +13,6 @@ export interface BodyCellProps extends MUITableCellProps {
 }
 
 /**
- * Splits the text in table cell over multiple lines when it's longer than 75 characters
- * @param text Text to split
- */
-export const splitTableCellText = (text: string) => {
-  const splitContent = text.match(/.{1,75}/g);
-
-  if (splitContent) return splitContent.join(' ');
-
-  return text;
-};
-
-/**
  * Constructs a table body cell using pre-defined Rijkswaterstaat styling
  * @param props Props to pass to the body cell
  * @example
@@ -41,7 +29,7 @@ export const BodyCell = memo(
       component={component}
       scope={scope}
     >
-      {typeof content === 'string' ? splitTableCellText(content) : content}
+      {content}
     </MUITableCell>
   )
 );
