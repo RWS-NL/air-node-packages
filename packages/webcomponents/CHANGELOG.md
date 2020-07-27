@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.4.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@13.3.0...@rws-air/webcomponents@13.4.0) (2020-07-27)
+
+
+### Features
+
+* remove splittext function from BodyCell ([3f3f78f](https://github.com/RWS-NL/air-node-packages/commit/3f3f78f6901a780e0ba4bb26b47bcd4201db94c7))
+
+
+
+
+
 # [13.3.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@13.2.2...@rws-air/webcomponents@13.3.0) (2020-07-03)
 
 
