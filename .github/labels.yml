@@ -1,6 +1,3 @@
-- name: 'Package: @rws-air/jestscreenshot'
-  description: Issues and PRs related to @rws-air/jestscreenshot.
-  color: '124387'
 - name: 'Package: @rws-air/stylelint-config'
   description: Issues and PRs related to @rws-air/stylelint-config.
   color: '124387'
