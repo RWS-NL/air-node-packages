@@ -20,8 +20,6 @@
 
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@rws-air/eslint-config?label=eslint-config%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@rws-air/eslint-config)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@rws-air/eslint-config?label=eslint-config%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@rws-air/eslint-config)
-[![npm bundle size](https://img.shields.io/bundlephobia/min/@rws-air/jestscreenshot?label=jestscreenshot%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@rws-air/jestscreenshot)
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@rws-air/jestscreenshot?label=jestscreenshot%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@rws-air/jestscreenshot)
 
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@rws-air/stylelint-config?label=stylelint-config%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@rws-air/stylelint-config)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@rws-air/stylelint-config?label=stylelint-config%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@rws-air/stylelint-config)
@@ -44,7 +42,6 @@
 **Versions**
 
 [![npm](https://img.shields.io/npm/v/@rws-air/eslint-config?color=crimson&label=eslint-config%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@rws-air/eslint-config)
-[![npm](https://img.shields.io/npm/v/@rws-air/jestscreenshot?color=crimson&label=jestscreenshot%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@rws-air/jestscreenshot)
 [![npm](https://img.shields.io/npm/v/@rws-air/stylelint-config?color=crimson&label=stylelint-config%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@rws-air/stylelint-config)
 [![npm](https://img.shields.io/npm/v/@rws-air/tslint-config?color=crimson&label=tslint-config%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@rws-air/tslint-config)
 [![npm](https://img.shields.io/npm/v/@rws-air/usercreator?color=crimson&label=usercreator%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@rws-air/usercreator)

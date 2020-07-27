@@ -4,7 +4,6 @@
 
 - My changes affect:
   - [ ] eslint-config
-  - [ ] jestscreenshot
   - [ ] local-components-test
   - [ ] stylelint-config
   - [ ] tslint-config
