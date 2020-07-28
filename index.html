@@ -169,6 +169,14 @@
 					<li>Run <code>yarn build</code> to ensure your fixes fix everything.</li>
 					<li>Re-run the publish process as described above.</li>
 				</ol>
+				<a href="#if-you-have-the-message--quotdo-you-need-a-configbasedirquot" id="if-you-have-the-message--quotdo-you-need-a-configbasedirquot" style="color: inherit; text-decoration: none;">
+					<h4>If you have the message  &quot;Do you need a <code>configBasedir</code>&quot;</h4>
+				</a>
+				<p>See this message: Error: Could not find &quot;../stylelint-config/dist/index.js&quot;. Do you need a <code>configBasedir</code>?
+				Here is how to solve it:</p>
+				<p><code>yarn install --frozen-lockfile</code>
+					<code>yarn tsc -b packages/utils packages/eslint-config packages/stylelint-config</code>
+				<code>yarn build</code></p>
 				<a href="#api-documentation" id="api-documentation" style="color: inherit; text-decoration: none;">
 					<h2>API Documentation</h2>
 				</a>
