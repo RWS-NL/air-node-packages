@@ -122,6 +122,14 @@ Run `yarn build` from repository root
 7. Run `yarn build` to ensure your fixes fix everything.
 8. Re-run the publish process as described above.
 
+#### If you have the message  "Do you need a `configBasedir`" ####
+See this message: Error: Could not find "../stylelint-config/dist/index.js". Do you need a `configBasedir`?
+Here is how to solve it:
+
+`yarn install --frozen-lockfile`
+`yarn tsc -b packages/utils packages/eslint-config packages/stylelint-config`
+`yarn build`
+
 ## API Documentation
 
 Check out [the docs on github pages](https://rws-nl.github.io/air-node-packages/)
