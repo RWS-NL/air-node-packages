@@ -14,6 +14,7 @@ export interface BodyCellProps extends MUITableCellProps {
 
 /**
  * Constructs a table body cell using pre-defined Rijkswaterstaat styling
+ *
  * @param props Props to pass to the body cell
  * @example
  * ```jsx
