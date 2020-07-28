@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.5.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@13.4.0...@rws-air/webcomponents@13.5.0) (2020-07-28)
+
+
+### Features
+
+* trigger new build ([fc82c95](https://github.com/RWS-NL/air-node-packages/commit/fc82c9565c3d6b20af638efedfea443f07492f74))
+
+
+
+
+
 # [13.4.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@13.3.0...@rws-air/webcomponents@13.4.0) (2020-07-27)
 
 
