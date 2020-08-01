@@ -2866,11 +2866,6 @@
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
 
-"@scarf/scarf@^1.0.5":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@scarf/scarf/-/scarf-1.0.6.tgz#52011dfb19187b53b75b7b6eac20da0810ddd88f"
-  integrity sha512-y4+DuXrAd1W5UIY3zTcsosi/1GyYT8k5jGnZ/wG7UUHVrU+MHlH4Mp87KK2/lvMW4+H7HVcdB+aJhqywgXksjA==
-
 "@sinonjs/commons@^1.7.0":
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/@sinonjs/commons/-/commons-1.8.0.tgz#c8d68821a854c555bba172f3b06959a0039b236d"
@@ -14422,12 +14417,11 @@ react-transition-group@^4.0.0, react-transition-group@^4.4.0:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react-virtuoso@^0.17.1:
-  version "0.17.2"
-  resolved "https://registry.yarnpkg.com/react-virtuoso/-/react-virtuoso-0.17.2.tgz#c488230905901755ddfb8298e9e8aa68b9025ca9"
-  integrity sha512-V0OMMu93OqPzvxj0lcs/7CaBtMhmZghqHoc2PnwAMt+sVIhGKO/NWG50y8nKaagLsEk8y2yXbUdkAN2r8CSoLQ==
+react-virtuoso@^0.18.0:
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/react-virtuoso/-/react-virtuoso-0.18.0.tgz#9a5ac94e68c9e71c4beb3036d93e6e36ea75f4ca"
+  integrity sha512-da0rTp3ERMUXzRPw0jC7yoqwqlKb+kM9pH4WX1sIEQjJ+Td9QJTx8S3zjJlR5p7oFy8piILui+fzmrLO2jsGQA==
   dependencies:
-    "@scarf/scarf" "^1.0.5"
     resize-observer-polyfill "^1.5.1"
     tslib "^1.11.1"
 
