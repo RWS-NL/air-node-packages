@@ -53,6 +53,6 @@
     "ts"
   ],
   "dependencies": {
-    "@discordjs/collection": "^0.1.5"
+    "@discordjs/collection": "^0.1.6"
   }
 }

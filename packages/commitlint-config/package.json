@@ -19,7 +19,7 @@
     "!dist/.tsbuildinfo"
   ],
   "devDependencies": {
-    "@commitlint/lint": "^9.0.1",
+    "@commitlint/lint": "^9.1.1",
     "@commitlint/utils": "^9.0.1"
   },
   "dependencies": {
