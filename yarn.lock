@@ -1459,9 +1459,9 @@
   integrity sha512-BinAoev1ZVTuH3BeSHq8EF3SARSMC/whzsPT3/V2Ib8zEsl3UAhuUIKpJlPQEtvH0pM8yuGbWbe1vrqK/4UvFw==
 
 "@favware/yamlreader@^3.0.2":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@favware/yamlreader/-/yamlreader-3.0.2.tgz#0d7a7610c83788953e1e0e1907de25e23a83535d"
-  integrity sha512-HXIUDpF0b3vs1RXC9leNjUZmQblxK8vUJxy2XDojXRhkEb3JQRq6BoQNDsNC8BsKTUy86TDSGNny3DlMjhZ1iQ==
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@favware/yamlreader/-/yamlreader-3.0.3.tgz#19b21677b12e54b698c8ed9adec97a77d8981a6d"
+  integrity sha512-fFkYno5BoJCTCLwUPcJAtdGdrwOJmgOAtAqSIkTF47GePTESiTehlqzGnzIBEtrTvZaYswe3efgtPEz3N3fl4Q==
   dependencies:
     js-yaml "^3.14.0"
 
