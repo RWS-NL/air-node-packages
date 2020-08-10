@@ -3,7 +3,7 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import React, { memo, ReactNode } from 'react';
 import { Tooltip, TooltipProps } from '../Tooltip';
 
-export interface FabProps extends MFabProps {
+export interface FabProps extends Exclude<MFabProps, 'children'> {
   /** The icon to show inside the Floating Action Button */
   icon: ReactNode;
   /** When true, FAB will not have a Tooltip on hover */
