@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.5.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@13.5.0...@rws-air/webcomponents@13.5.1) (2020-08-10)
+
+
+### Bug Fixes
+
+* fix build error for FloatingActionButton ([edead46](https://github.com/RWS-NL/air-node-packages/commit/edead4698c619d6d8081b6d89cd2855a88e6d4bb))
+
+
+
+
+
 # [13.5.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@13.4.0...@rws-air/webcomponents@13.5.0) (2020-07-28)
 
 
