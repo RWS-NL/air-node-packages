@@ -1,11 +1,9 @@
 import Fab, { FabProps as MFabProps } from '@material-ui/core/Fab';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import React, { memo, ReactNode } from 'react';
+import React, { memo } from 'react';
 import { Tooltip, TooltipProps } from '../Tooltip';
 
-export interface FabProps extends Exclude<MFabProps, 'children'> {
-  /** The icon to show inside the Floating Action Button */
-  icon: ReactNode;
+export interface FabProps extends MFabProps {
   /** When true, FAB will not have a Tooltip on hover */
   disableTooltip?: boolean;
   /** The content to put in the on-hover tooltip */
@@ -34,17 +32,17 @@ const useStyles = makeStyles((theme: Theme) =>
  *
  * @example
  * ```jsx
- * <FloatingActionButton tooltipContent='Cool Tooltip' icon={<SearchIcon/>}/>
+ * <FloatingActionButton tooltipContent='Cool Tooltip' children={<SearchIcon/>}/>
  * ```
  */
 export const FloatingActionButton = memo(
-  ({ tooltipContent, icon, disableTooltip, TooltipProps, ...props }: FabProps) => {
+  ({ children, tooltipContent, disableTooltip, TooltipProps, ...props }: FabProps) => {
     const classes = useStyles();
 
     if (disableTooltip) {
       return (
         <Fab {...props} className={classes.fab} color='primary'>
-          {icon}
+          {children}
         </Fab>
       );
     }
@@ -52,7 +50,7 @@ export const FloatingActionButton = memo(
     return (
       <Tooltip {...TooltipProps} title={tooltipContent ?? ''}>
         <Fab {...props} className={classes.fab} color='primary'>
-          {icon}
+          {children}
         </Fab>
       </Tooltip>
     );

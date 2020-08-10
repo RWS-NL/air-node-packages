@@ -12,7 +12,9 @@ describe('Component Tests', () => {
 
   beforeAll(() => {
     floatingActionButton = shallow(
-      <FloatingActionButton icon={<AccessAlarm />} tooltipContent='Tooltip Sample' onClick={mockButtonClick} />
+      <FloatingActionButton tooltipContent='Tooltip Sample' onClick={mockButtonClick}>
+        <AccessAlarm />
+      </FloatingActionButton>
     );
   });
 
@@ -33,7 +35,11 @@ describe('Component Tests', () => {
   });
 
   test('GIVEN disableToolthen THEN has no Tooltip', () => {
-    floatingActionButton = shallow(<FloatingActionButton icon={<AccessAlarm />} disableTooltip />);
+    floatingActionButton = shallow(
+      <FloatingActionButton disableTooltip>
+        <AccessAlarm />
+      </FloatingActionButton>
+    );
 
     const tooltip = floatingActionButton.find(Tooltip);
 
@@ -44,20 +50,28 @@ describe('Component Tests', () => {
 describe('Snapshot Testing', () => {
   test('Required Props', () => {
     const floatingActionButton = shallow(
-      <FloatingActionButton icon={<AccessAlarm />} tooltipContent='Sample' onClick={mockButtonClick} />
+      <FloatingActionButton tooltipContent='Sample' onClick={mockButtonClick}>
+        <AccessAlarm />
+      </FloatingActionButton>
     );
     expect(floatingActionButton).toMatchSnapshot();
   });
 
   test('Optional Props', () => {
     const floatingActionButton = shallow(
-      <FloatingActionButton icon={<AccessAlarm />} TooltipProps={{ id: 'tooltip' }} onClick={mockButtonClick} />
+      <FloatingActionButton TooltipProps={{ id: 'tooltip' }} onClick={mockButtonClick}>
+        <AccessAlarm />
+      </FloatingActionButton>
     );
     expect(floatingActionButton).toMatchSnapshot();
   });
 
   test('Disabling Tooltip', () => {
-    const floatingActionButton = shallow(<FloatingActionButton icon={<AccessAlarm />} disableTooltip />);
+    const floatingActionButton = shallow(
+      <FloatingActionButton disableTooltip>
+        <AccessAlarm />
+      </FloatingActionButton>
+    );
 
     expect(floatingActionButton).toMatchSnapshot();
   });
