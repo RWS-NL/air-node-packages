@@ -83,7 +83,7 @@
   ],
   "devDependencies": {
     "@rollup/plugin-commonjs": "^15.0.0",
-    "@rollup/plugin-node-resolve": "^8.4.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
     "@rollup/plugin-url": "^5.0.1",
     "@svgr/rollup": "^5.4.0",
     "formik": "^2.1.5",
