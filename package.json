@@ -113,9 +113,6 @@
     "acorn": "^6.4.1",
     "minimist": "^1.2.2",
     "kind-of": "^6.0.3",
-    "@typescript-eslint/eslint-plugin": "2.x",
-    "@typescript-eslint/parser": "2.x",
-    "eslint": "6.x",
     "websocket-extensions": "^0.1.4",
     "lodash": "^4.17.19",
     "dot-prop": "^5.2.0"
