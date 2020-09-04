@@ -4,7 +4,7 @@ import { Grid } from '@material-ui/core';
 
 const Home: FC = () => {
   const [activeTab, setActiveTab] = useState(1);
-  const handleTabChange = (_event: ChangeEvent<object>, newValue: number) => setActiveTab(newValue);
+  const handleTabChange = (_event: ChangeEvent<unknown>, newValue: number) => setActiveTab(newValue);
 
   const tabs: LinkTabProps[] = [
     { label: 'Tab 1', to: '/', external: true },

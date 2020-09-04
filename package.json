@@ -7,7 +7,7 @@
   "scripts": {
     "build": "lerna run build --parallel",
     "ci:build": "lerna run ci:build --parallel",
-    "lint": "eslint scripts/ packages --fix --ext js,jsx,ts,tsx -c packages/eslint-config/dist/index.js",
+    "lint": "eslint scripts/ packages --fix --ext js,jsx,ts,tsx -c packages/eslint-config/dist/index.js --resolve-plugins-relative-to packages/eslint-config",
     "style": "prettier --config .prettierrc --write packages/**/*.{scss,tsx,ts,json}",
     "test": "lerna run test --parallel",
     "test:web": "pushd packages/webcomponents && yarn test --watchAll -u && popd",
@@ -105,7 +105,7 @@
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
-      "eslint --fix --ext js,ts,tsx -c packages/eslint-config/dist/index.js",
+      "eslint --fix --ext js,ts,tsx -c packages/eslint-config/dist/index.js --resolve-plugins-relative-to packages/eslint-config",
       "prettier --write"
     ]
   },
