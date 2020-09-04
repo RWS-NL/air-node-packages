@@ -1,6 +1,6 @@
 {
   "name": "@rws-air/utils",
-  "version": "5.2.2",
+  "version": "5.2.3",
   "description": "Utilities for rws-air libraries and applications",
   "author": "@rws-air",
   "license": "Apache-2.0",
