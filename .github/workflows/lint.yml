@@ -7,7 +7,7 @@ on:
 
 jobs:
   ESLint:
-    name: ESLint
+    name: Lint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Project
@@ -24,6 +24,6 @@ jobs:
       - name: Install Dependencies
         run: yarn --ignore-scripts
       - name: Build Lint config
-        run: yarn tsc -b packages/eslint-config/src packages/stylelint-config
+        run: yarn tsc -b packages/stylelint-config
       - name: Lint code
         run: yarn lint

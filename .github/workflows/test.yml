@@ -24,6 +24,6 @@ jobs:
       - name: Install Dependencies
         run: yarn --ignore-scripts
       - name: Build Utils and Lint config
-        run: yarn tsc -b packages/utils/src packages/eslint-config/src packages/stylelint-config
+        run: yarn tsc -b packages/utils/src packages/stylelint-config
       - name: Run Unit Tests
         run: yarn test
