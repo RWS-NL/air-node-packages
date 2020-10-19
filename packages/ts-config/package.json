@@ -8,7 +8,7 @@
   "homepage": "https://github.com/RWS-NL/air-node-packages/tree/master/packages/ts-config#readme",
   "scripts": {
     "test": "jest",
-    "lint": "eslint __tests__ scripts --ext ts --fix -c ../../.eslintrc",
+    "lint": "eslint __tests__ scripts --ext ts --fix",
     "prebuild": "yarn lint",
     "build": "tsc -b __tests__ && tsc -b scripts",
     "prepublishOnly": "node build/prepublish.js",

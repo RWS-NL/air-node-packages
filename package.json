@@ -7,7 +7,7 @@
   "scripts": {
     "build": "lerna run build --parallel",
     "ci:build": "lerna run ci:build --parallel",
-    "lint": "eslint scripts/ packages --fix --ext js,jsx,ts,tsx -c packages/eslint-config/dist/index.js --resolve-plugins-relative-to packages/eslint-config",
+    "lint": "eslint scripts/ packages --fix --ext js,jsx,ts,tsx",
     "style": "prettier --config .prettierrc --write packages/**/*.{scss,tsx,ts,json}",
     "test": "lerna run test --parallel",
     "test:web": "pushd packages/webcomponents && yarn test --watchAll -u && popd",
@@ -20,7 +20,7 @@
     "scripts:yarnAfterPull": "yarn scripts:runner scripts/yarnAfterPull"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.2",
+    "@babel/core": "^7.12.3",
     "@babel/plugin-proposal-optional-chaining": "^7.10.1",
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-react": "^7.10.1",
@@ -50,15 +50,26 @@
     "@types/react-dom": "^16.9.7",
     "@types/react-router-dom": "^5.1.5",
     "@types/yargs": "^15.0.7",
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.4.1",
+    "babel-core": "^7.0.0-0",
+    "babel-eslint": "10.x",
+    "babel-jest": "^26.6.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-export-extensions": "^6.22.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "1.15.2",
     "enzyme-to-json": "^3.6.0",
+    "eslint": "6.x",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-plugin-flowtype": "4.x",
+    "eslint-plugin-import": "2.x",
+    "eslint-plugin-jsx-a11y": "6.x",
+    "eslint-plugin-react": "7.x",
+    "eslint-plugin-react-hooks": "2.x",
     "fs-nextra": "^0.5.1",
     "fuse.js": "^6.0.4",
     "glob": "^7.1.6",
-    "husky": "^4.3.0",
     "jest": "^26.0.1",
     "jest-circus": "^26.0.1",
     "jest-environment-puppeteer": "4.4.0",
@@ -91,13 +102,6 @@
       "path": "./node_modules/@rws-air/commitizen-config"
     }
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn scripts:validateNoOnly && yarn lint-staged",
-      "post-merge": "yarn scripts:yarnAfterPull"
-    }
-  },
   "commitlint": {
     "extends": [
       "@rws-air"
@@ -105,7 +109,7 @@
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
-      "eslint --fix --ext js,ts,tsx -c packages/eslint-config/dist/index.js --resolve-plugins-relative-to packages/eslint-config",
+      "eslint --fix --ext js,ts,tsx",
       "prettier --write"
     ]
   },
@@ -113,7 +117,6 @@
     "acorn": "^6.4.1",
     "minimist": "^1.2.2",
     "kind-of": "^6.0.3",
-    "websocket-extensions": "^0.1.4",
-    "lodash": "^4.17.19"
+    "websocket-extensions": "^0.1.4"
   }
 }

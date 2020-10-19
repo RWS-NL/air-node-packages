@@ -18,9 +18,6 @@
 
 **Bundle Sizes**
 
-[![npm bundle size](https://img.shields.io/bundlephobia/min/@rws-air/eslint-config?label=eslint-config%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@rws-air/eslint-config)
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@rws-air/eslint-config?label=eslint-config%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@rws-air/eslint-config)
-
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@rws-air/stylelint-config?label=stylelint-config%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@rws-air/stylelint-config)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@rws-air/stylelint-config?label=stylelint-config%20-%20minzipped&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@rws-air/stylelint-config)
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@rws-air/tslint-config?label=tslint-config%20-%20minified&logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@rws-air/tslint-config)
@@ -41,7 +38,6 @@
 
 **Versions**
 
-[![npm](https://img.shields.io/npm/v/@rws-air/eslint-config?color=crimson&label=eslint-config%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@rws-air/eslint-config)
 [![npm](https://img.shields.io/npm/v/@rws-air/stylelint-config?color=crimson&label=stylelint-config%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@rws-air/stylelint-config)
 [![npm](https://img.shields.io/npm/v/@rws-air/tslint-config?color=crimson&label=tslint-config%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@rws-air/tslint-config)
 [![npm](https://img.shields.io/npm/v/@rws-air/usercreator?color=crimson&label=usercreator%20version&logo=npm&style=flat-square)](https://www.npmjs.com/package/@rws-air/usercreator)
@@ -122,15 +118,11 @@ Run `yarn build` from repository root
 7. Run `yarn build` to ensure your fixes fix everything.
 8. Re-run the publish process as described above.
 
-#### If you have the message  "Do you need a `configBasedir`" ####
-See this message: Error: Could not find "../stylelint-config/dist/index.js". Do you need a `configBasedir`?
-Here is how to solve it:
-
-```
-yarn install --frozen-lockfile
-yarn tsc -b packages/utils packages/eslint-config packages/stylelint-config
-yarn build
-```
+#### If you have the error: Could not find "packages/*/dist/index.js"`?  
+Here is how to solve it:  
+- `yarn install --frozen-lockfile`  
+- `yarn tsc -b packages/utils packages/stylelint-config packages/user-creator packages/ts-config packages/commitizen-config packages/commitlint-config packages/local-components-test packages/webcomponents`  
+- `yarn build`  
 
 ## API Documentation
 
