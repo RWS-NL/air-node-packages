@@ -1,4 +1,4 @@
-import stringify from '@favware/querystring';
+import { stringify } from '@favware/querystring';
 
 /**
  * Safely stringifies queryparameters and prefixes a `?`.

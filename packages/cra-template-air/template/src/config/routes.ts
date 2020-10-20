@@ -1,4 +1,4 @@
-import stringify from '@favware/querystring';
+import { stringify } from '@favware/querystring';
 
 export type RouteParamId = string | number;
 
