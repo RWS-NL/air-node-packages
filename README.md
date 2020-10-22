@@ -126,9 +126,11 @@ Run `yarn build` from repository root
 See this message: Error: Could not find "../stylelint-config/dist/index.js". Do you need a `configBasedir`?
 Here is how to solve it:
 
-`yarn install --frozen-lockfile`
-`yarn tsc -b packages/utils packages/eslint-config packages/stylelint-config`
-`yarn build`
+```
+yarn install --frozen-lockfile
+yarn tsc -b packages/utils packages/eslint-config packages/stylelint-config
+yarn build
+```
 
 ## API Documentation
 
