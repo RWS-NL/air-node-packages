@@ -73,8 +73,6 @@
 				<p><strong>Project Status</strong></p>
 				<p><a href="https://github.com/RWS-NL/air-node-packages/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/RWS-NL/air-node-packages?logo=github&style=flat-square" alt="GitHub"></a></p>
 				<p><strong>Bundle Sizes</strong></p>
-				<p><a href="https://bundlephobia.com/result?p=@rws-air/eslint-config"><img src="https://img.shields.io/bundlephobia/min/@rws-air/eslint-config?label=eslint-config%20-%20minified&logo=webpack&style=flat-square" alt="npm bundle size"></a>
-				<a href="https://bundlephobia.com/result?p=@rws-air/eslint-config"><img src="https://img.shields.io/bundlephobia/minzip/@rws-air/eslint-config?label=eslint-config%20-%20minzipped&logo=webpack&style=flat-square" alt="npm bundle size"></a></p>
 				<p><a href="https://bundlephobia.com/result?p=@rws-air/stylelint-config"><img src="https://img.shields.io/bundlephobia/min/@rws-air/stylelint-config?label=stylelint-config%20-%20minified&logo=webpack&style=flat-square" alt="npm bundle size"></a>
 					<a href="https://bundlephobia.com/result?p=@rws-air/stylelint-config"><img src="https://img.shields.io/bundlephobia/minzip/@rws-air/stylelint-config?label=stylelint-config%20-%20minzipped&logo=webpack&style=flat-square" alt="npm bundle size"></a>
 					<a href="https://bundlephobia.com/result?p=@rws-air/tslint-config"><img src="https://img.shields.io/bundlephobia/min/@rws-air/tslint-config?label=tslint-config%20-%20minified&logo=webpack&style=flat-square" alt="npm bundle size"></a>
@@ -90,8 +88,7 @@
 				<p><a href="https://bundlephobia.com/result?p=@rws-air/commitizen-config"><img src="https://img.shields.io/bundlephobia/min/@rws-air/commitizen-config?label=commitizen-config%20-%20minified&logo=webpack&style=flat-square" alt="npm bundle size"></a>
 				<a href="https://bundlephobia.com/result?p=@rws-air/commitizen-config"><img src="https://img.shields.io/bundlephobia/minzip/@rws-air/commitizen-config?label=commitizen-config%20-%20minzipped&logo=webpack&style=flat-square" alt="npm bundle size"></a></p>
 				<p><strong>Versions</strong></p>
-				<p><a href="https://www.npmjs.com/package/@rws-air/eslint-config"><img src="https://img.shields.io/npm/v/@rws-air/eslint-config?color=crimson&label=eslint-config%20version&logo=npm&style=flat-square" alt="npm"></a>
-					<a href="https://www.npmjs.com/package/@rws-air/stylelint-config"><img src="https://img.shields.io/npm/v/@rws-air/stylelint-config?color=crimson&label=stylelint-config%20version&logo=npm&style=flat-square" alt="npm"></a>
+				<p><a href="https://www.npmjs.com/package/@rws-air/stylelint-config"><img src="https://img.shields.io/npm/v/@rws-air/stylelint-config?color=crimson&label=stylelint-config%20version&logo=npm&style=flat-square" alt="npm"></a>
 					<a href="https://www.npmjs.com/package/@rws-air/tslint-config"><img src="https://img.shields.io/npm/v/@rws-air/tslint-config?color=crimson&label=tslint-config%20version&logo=npm&style=flat-square" alt="npm"></a>
 					<a href="https://www.npmjs.com/package/@rws-air/usercreator"><img src="https://img.shields.io/npm/v/@rws-air/usercreator?color=crimson&label=usercreator%20version&logo=npm&style=flat-square" alt="npm"></a>
 					<a href="https://www.npmjs.com/package/@rws-air/webcomponents"><img src="https://img.shields.io/npm/v/@rws-air/webcomponents?color=crimson&label=webcomponents%20version&logo=npm&style=flat-square" alt="npm"></a>
@@ -169,14 +166,15 @@
 					<li>Run <code>yarn build</code> to ensure your fixes fix everything.</li>
 					<li>Re-run the publish process as described above.</li>
 				</ol>
-				<a href="#if-you-have-the-message--quotdo-you-need-a-configbasedirquot" id="if-you-have-the-message--quotdo-you-need-a-configbasedirquot" style="color: inherit; text-decoration: none;">
-					<h4>If you have the message  &quot;Do you need a <code>configBasedir</code>&quot;</h4>
+				<a href="#if-you-have-the-error-could-not-find-quotpackagesdistindexjsquot" id="if-you-have-the-error-could-not-find-quotpackagesdistindexjsquot" style="color: inherit; text-decoration: none;">
+					<h4>If you have the error: Could not find &quot;packages/*/dist/index.js&quot;`?</h4>
 				</a>
-				<p>See this message: Error: Could not find &quot;../stylelint-config/dist/index.js&quot;. Do you need a <code>configBasedir</code>?
-				Here is how to solve it:</p>
-				<pre><code>yarn install <span class="hljs-comment">--frozen-lockfile</span>
-yarn tsc -b packages/utils packages/eslint-<span class="hljs-built_in">config</span> packages/stylelint-<span class="hljs-built_in">config</span>
-yarn build</code></pre>
+				<p>Here is how to solve it:  </p>
+				<ul>
+					<li><code>yarn install --frozen-lockfile</code>  </li>
+					<li><code>yarn tsc -b packages/utils packages/stylelint-config packages/user-creator packages/ts-config packages/commitizen-config packages/commitlint-config packages/local-components-test packages/webcomponents</code>  </li>
+					<li><code>yarn build</code>  </li>
+				</ul>
 				<a href="#api-documentation" id="api-documentation" style="color: inherit; text-decoration: none;">
 					<h2>API Documentation</h2>
 				</a>
@@ -194,12 +192,6 @@ yarn build</code></pre>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/_rws_air_commitlint_config.html">@rws-<wbr>air/commitlint-<wbr>config</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/_rws_air_eslint_config.html">@rws-<wbr>air/eslint-<wbr>config</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/_rws_air_eslint_config_node.html">@rws-<wbr>air/eslint-<wbr>config-<wbr>node</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/_rws_air_stylelint_config.html">@rws-<wbr>air/stylelint-<wbr>config</a>
