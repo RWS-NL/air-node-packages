@@ -95,7 +95,9 @@ To easily update failing snapshots for webcomponents run this command from repos
 
 ### Creating a build
 
-Run `yarn build` from repository root
+Run `yarn build` from repository root.  
+If it fails, try running `yarn clean`, `yarn`, and `yarn pre-build` before. This will clean up install and build files.  
+It is important webcomponents is build before building all others.
 
 ### Publishing new versions
 
@@ -119,10 +121,8 @@ Run `yarn build` from repository root
 8. Re-run the publish process as described above.
 
 #### If you have the error: Could not find "packages/*/dist/index.js"`?  
-Here is how to solve it:  
-- `yarn install --frozen-lockfile`  
-- `yarn tsc -b packages/utils packages/stylelint-config packages/user-creator packages/ts-config packages/commitizen-config packages/commitlint-config packages/local-components-test packages/webcomponents`  
-- `yarn build`  
+
+Run `yarn pre-build`. This will compile all typescript files and create dist folders.  
 
 ## API Documentation
 
