@@ -138,7 +138,7 @@
 				<a href="#creating-a-build" id="creating-a-build" style="color: inherit; text-decoration: none;">
 					<h3>Creating a build</h3>
 				</a>
-				<p>Run <code>yarn build</code> from repository root</p>
+				<p>Run <code>yarn build</code> from repository root.<br>If it fails, try running <code>yarn clean</code>, <code>yarn</code>, and <code>yarn pre-build</code> before. This will clean up install and build files.<br>It is important webcomponents is build before building all others.</p>
 				<a href="#publishing-new-versions" id="publishing-new-versions" style="color: inherit; text-decoration: none;">
 					<h3>Publishing new versions</h3>
 				</a>
@@ -169,12 +169,7 @@
 				<a href="#if-you-have-the-error-could-not-find-quotpackagesdistindexjsquot" id="if-you-have-the-error-could-not-find-quotpackagesdistindexjsquot" style="color: inherit; text-decoration: none;">
 					<h4>If you have the error: Could not find &quot;packages/*/dist/index.js&quot;`?</h4>
 				</a>
-				<p>Here is how to solve it:  </p>
-				<ul>
-					<li><code>yarn install --frozen-lockfile</code>  </li>
-					<li><code>yarn tsc -b packages/utils packages/stylelint-config packages/user-creator packages/ts-config packages/commitizen-config packages/commitlint-config packages/local-components-test packages/webcomponents</code>  </li>
-					<li><code>yarn build</code>  </li>
-				</ul>
+				<p>Run <code>yarn pre-build</code>. This will compile all typescript files and create dist folders.  </p>
 				<a href="#api-documentation" id="api-documentation" style="color: inherit; text-decoration: none;">
 					<h2>API Documentation</h2>
 				</a>
