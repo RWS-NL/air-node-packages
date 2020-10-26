@@ -52,8 +52,8 @@
     "@types/react-dom": "^16.9.7",
     "@types/react-router-dom": "^5.1.5",
     "@types/yargs": "^15.0.7",
-    "@typescript-eslint/eslint-plugin": "^4.4.1",
-    "@typescript-eslint/parser": "^4.4.1",
+    "@typescript-eslint/eslint-plugin": "2.x",
+    "@typescript-eslint/parser": "2.x",
     "babel-core": "^7.0.0-0",
     "babel-eslint": "10.x",
     "babel-jest": "^26.6.0",
@@ -93,9 +93,8 @@
     "ts-jest": "^26.4.0",
     "ts-node": "^9.0.0",
     "tslint": "^6.1.2",
-    "typedoc": "~0.17",
+    "typedoc": "^0.17.0",
     "typedoc-plugin-lerna-packages": "^0.3.0",
-    "typedoc-plugin-nojekyll": "^1.0.1",
     "typescript": "^4.0.3",
     "utility-types": "^3.10.0"
   },
@@ -119,6 +118,8 @@
     "acorn": "^6.4.1",
     "minimist": "^1.2.2",
     "kind-of": "^6.0.3",
-    "websocket-extensions": "^0.1.4"
+    "websocket-extensions": "^0.1.4",
+    "**/@typescript-eslint/eslint-plugin": "^4.1.1",
+    "**/@typescript-eslint/parser": "^4.1.1"
   }
 }
