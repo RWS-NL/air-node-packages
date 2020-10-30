@@ -23,9 +23,8 @@
   "peerDependencies": {
     "@date-io/core": "^1.x",
     "@date-io/moment": "^1.x",
-    "@rws-air/utils": "^5.2.3",
-    "tiny-warning": "^1.0.2",
-    "@octokit/core": "^3.1.4"
+    "@octokit/core": "^3.1.4",
+    "tiny-warning": "^1.0.2"
   },
   "dependencies": {
     "@favware/querystring": "^6.0.7",
@@ -33,12 +32,12 @@
     "i18next": "^19.6.3",
     "lodash.debounce": "^4.0.8",
     "moment": "^2.28.0",
-    "react-i18next": "^11.7.3",
-    "utility-types": "3.10.0",
     "react": "^16",
     "react-dom": "^16",
+    "react-i18next": "^11.7.3",
     "react-if": "^3.4.3",
-    "react-router-dom": "^5"
+    "react-router-dom": "^5",
+    "utility-types": "3.10.0"
   },
   "browserslist": {
     "production": [
