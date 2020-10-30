@@ -4,6 +4,6 @@
     "allowJs": true,
     "checkJs": true
   },
-  "include": ["src", "test", "tests", "typings", "**/__tests__", "**/*.tsx", "**/*.ts", "**/*.js"],
+  "include": ["src", "**/__tests__", "**/*.tsx", "**/*.ts"],
   "exclude": ["**/node_modules", "**/build", "**/bin", "**/out", "**/dist", "**/coverage"]
 }

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import readYaml from '@favware/yamlreader';
+import { readYaml } from '@favware/yamlreader';
 import { KlasaConsole } from '@klasa/console';
 import fetch from 'node-fetch';
 import path from 'path';

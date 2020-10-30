@@ -1499,7 +1499,7 @@
   resolved "https://registry.yarnpkg.com/@favware/querystring/-/querystring-6.0.7.tgz#d3d254b45f31bf3d900d453d74db2156ff87499d"
   integrity sha512-3easjpfDIGhs06ckbOb864M7+I2dC+Vikkvd35uhVfa/MjU6ADIpaBfdrdoJ7425LQFWcS1NlOUs5A+VJ2nBTw==
 
-"@favware/yamlreader@^3.0.2":
+"@favware/yamlreader@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@favware/yamlreader/-/yamlreader-3.1.0.tgz#9eaeec06dbeb1c7ffd8afa56464a49bf79e87521"
   integrity sha512-qa3lqTZP+VFeEDs/JbUx+Ijn7QnvJUDmuQ8ylC4AvrEABlBAvazUtcho/hxooDpL+WRkNnO07HUxGZL1eMvz4g==
@@ -3142,18 +3142,10 @@
   dependencies:
     "@types/enzyme" "*"
 
-"@types/enzyme@*":
+"@types/enzyme@*", "@types/enzyme@3.10.7":
   version "3.10.7"
   resolved "https://registry.yarnpkg.com/@types/enzyme/-/enzyme-3.10.7.tgz#ebdf3b972d293095e09af479e36c772025285e3a"
   integrity sha512-J+0wduPGAkzOvW7sr6hshGv1gBI3WXLRTczkRKzVPxLP3xAkYxZmvvagSBPw8Z452fZ8TGUxCmAXcb44yLQksw==
-  dependencies:
-    "@types/cheerio" "*"
-    "@types/react" "*"
-
-"@types/enzyme@3.10.6":
-  version "3.10.6"
-  resolved "https://registry.yarnpkg.com/@types/enzyme/-/enzyme-3.10.6.tgz#a34a6b09ff732be29c194dc8d786555f4717fd85"
-  integrity sha512-Jxyn2U+UfhmrE7EaeZYfV1sPA5OEDuZmg9Lxj8TxOnfCn71flf0Cn1136LWdCVYj7yapLFmUWqKCcgplWNZCJg==
   dependencies:
     "@types/cheerio" "*"
     "@types/react" "*"
@@ -14376,7 +14368,7 @@ react-dev-utils@^10.2.1:
     strip-ansi "6.0.0"
     text-table "0.2.0"
 
-react-dom@^16.13.1:
+react-dom@^16, react-dom@^16.13.1:
   version "16.14.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.14.0.tgz#7ad838ec29a777fb3c75c3a190f661cf92ab8b89"
   integrity sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw==
@@ -14404,6 +14396,11 @@ react-i18next@^11.7.3:
     "@babel/runtime" "^7.3.1"
     html-parse-stringify2 "2.0.1"
 
+react-if@^3.4.3:
+  version "3.4.3"
+  resolved "https://registry.yarnpkg.com/react-if/-/react-if-3.4.3.tgz#bab45478dd0374b1c5fe44aa972a2fa921416a57"
+  integrity sha512-DddMrbjAA4lkVhhYJgoeKC9+dj950I9hx4KClhJXySTL3GsQ7hxl9eWkcqS2i/qWvfPiQheJOwTYQ+Wv2BNdMA==
+
 react-is@^16.12.0, react-is@^16.13.1, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
@@ -14414,7 +14411,7 @@ react-is@^17.0.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.1.tgz#5b3531bd76a645a4c9fb6e693ed36419e3301339"
   integrity sha512-NAnt2iGDXohE5LI7uBnLnqvLQMtzhkiAOLXTmv+qnF9Ky7xAPcX8Up/xWIhxvLVGJvuLiNc4xQLtuqDRzb4fSA==
 
-react-router-dom@^5.1.2:
+react-router-dom@^5, react-router-dom@^5.1.2:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-5.2.0.tgz#9e65a4d0c45e13289e66c7b17c7e175d0ea15662"
   integrity sha512-gxAmfylo2QUjcwxI63RhQ5G85Qqt4voZpUXSEqCwykV0baaOTQDR1f0PmY8AELqIyVc0NEZUj0Gov5lNGcXgsA==
@@ -14531,7 +14528,7 @@ react-virtuoso@^0.20.0:
     resize-observer-polyfill "^1.5.1"
     tslib "^1.11.1"
 
-react@^16.13.1:
+react@^16, react@^16.13.1:
   version "16.14.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"
   integrity sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==
