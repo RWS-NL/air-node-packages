@@ -35,7 +35,7 @@
     "react": "^16",
     "react-dom": "^16",
     "react-i18next": "^11.7.3",
-    "react-if": "^3.4.3",
+    "react-if": "^4.0.1",
     "react-router-dom": "^5",
     "utility-types": "3.10.0"
   },
