@@ -1,6 +1,6 @@
 {
   "name": "@rws-air/webcomponents",
-  "version": "13.7.5",
+  "version": "13.7.6",
   "description": "Standard Webcomponents for AIR projects",
   "author": "@rws-air",
   "license": "Apache-2.0",
@@ -32,8 +32,8 @@
     "i18next": "^19.6.3",
     "lodash.debounce": "^4.0.8",
     "moment": "^2.28.0",
-    "react-if": "^3.4.3",
     "react-i18next": "^11.7.3",
+    "react-if": "^3.4.3",
     "utility-types": "3.10.0"
   },
   "browserslist": {
