@@ -5,7 +5,7 @@ import css from './UserInfo.scss';
 
 export interface UserInfoProps {
   /** The email to display as current user */
-  email: string;
+  email: string | ReactNode;
   /** The text to display for the relogin button */
   reloginText: ReactNode;
   /** Additional props to pass to the Typography component that renders the email */
