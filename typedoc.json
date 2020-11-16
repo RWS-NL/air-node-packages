@@ -13,7 +13,6 @@
     "packages/webcomponents/src/**/index.ts",
     "packages/webcomponents/src/Router/routeQueryParser.ts",
     "packages/utils/src/**/index.ts",
-    "packages/cra-template-air/**",
     "packages/local-components-test/**"
   ],
   "pathExclude": [
@@ -21,7 +20,7 @@
     "scripts/validateNoOnly",
     "scripts/yarnAfterPull"
   ],
-  "lernaExclude": ["cra-template-air", "@rws-air/local-components-test"],
+  "lernaExclude": ["@rws-air/local-components-test"],
   "mode": "modules",
   "excludeExternals": true,
   "excludePrivate": true,

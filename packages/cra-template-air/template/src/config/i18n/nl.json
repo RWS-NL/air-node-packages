@@ -1,8 +1,0 @@
-{
-  "navigation": {
-    "oauth2": {
-      "re_login": "Opnieuw inloggen",
-      "unable_to_authorize": "Fout bij het inloggen"
-    }
-  }
-}

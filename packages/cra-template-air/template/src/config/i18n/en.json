@@ -1,8 +1,0 @@
-{
-  "navigation": {
-    "oauth2": {
-      "re_login": "Retry login",
-      "unable_to_authorize": "Unable to login"
-    }
-  }
-}
