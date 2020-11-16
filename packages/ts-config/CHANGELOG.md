@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/ts-config@1.0.0...@rws-air/ts-config@1.0.1) (2020-11-16)
+
+
+### Bug Fixes
+
+* remove eslint packages ([c9c6a32](https://github.com/RWS-NL/air-node-packages/commit/c9c6a326fbdf3beb5fd716667a283023af8a08db))
+
+
+
+
+
 # 1.0.0 (2020-05-18)
 
 

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.9](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/local-components-test@4.0.8...@rws-air/local-components-test@4.0.9) (2020-11-16)
+
+
+### Bug Fixes
+
+* misc build/eslint issues ([26aa69b](https://github.com/RWS-NL/air-node-packages/commit/26aa69b9a0621ad8f13193a67614a1f6ebb99a73))
+* remove eslint packages ([c9c6a32](https://github.com/RWS-NL/air-node-packages/commit/c9c6a326fbdf3beb5fd716667a283023af8a08db))
+
+
+
+
+
 ## [4.0.8](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/local-components-test@4.0.7...@rws-air/local-components-test@4.0.8) (2020-09-04)
 
 

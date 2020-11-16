@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.7.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@13.6.8...@rws-air/webcomponents@13.7.0) (2020-11-16)
+
+
+### Bug Fixes
+
+* build issues ([b9afb70](https://github.com/RWS-NL/air-node-packages/commit/b9afb7051afa038d0d9feb7afdd722d5f4357f5a))
+* lerna tests ([b4e8bfe](https://github.com/RWS-NL/air-node-packages/commit/b4e8bfe7a907c811d24350c83ff9367484b0c1a8))
+* misc build/eslint issues ([26aa69b](https://github.com/RWS-NL/air-node-packages/commit/26aa69b9a0621ad8f13193a67614a1f6ebb99a73))
+* misc yarn warnings ([70b7e8d](https://github.com/RWS-NL/air-node-packages/commit/70b7e8daf9cf483a193ea51758b736ee86d9212a))
+* reinit yarn.lock ([fd0adf2](https://github.com/RWS-NL/air-node-packages/commit/fd0adf24950e076699204d7e363b67f91f546f2a))
+* remove eslint packages ([c9c6a32](https://github.com/RWS-NL/air-node-packages/commit/c9c6a326fbdf3beb5fd716667a283023af8a08db))
+
+
+### Features
+
+* accept ReactNodes email type so that <Skeleton/> can be used as email in UserInfo ([e808d13](https://github.com/RWS-NL/air-node-packages/commit/e808d131ea90eabc01546b069b97dee2b989c0f3))
+
+
+
+
+
 ## [13.6.8](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@13.6.7...@rws-air/webcomponents@13.6.8) (2020-09-28)
 
 **Note:** Version bump only for package @rws-air/webcomponents

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.5](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/usercreator@6.0.4...@rws-air/usercreator@6.0.5) (2020-11-16)
+
+
+### Bug Fixes
+
+* misc build/eslint issues ([26aa69b](https://github.com/RWS-NL/air-node-packages/commit/26aa69b9a0621ad8f13193a67614a1f6ebb99a73))
+
+
+
+
+
 ## [6.0.4](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/usercreator@6.0.3...@rws-air/usercreator@6.0.4) (2020-09-15)
 
 **Note:** Version bump only for package @rws-air/usercreator
