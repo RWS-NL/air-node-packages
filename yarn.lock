@@ -14332,10 +14332,10 @@ react-i18next@^11.7.3:
     "@babel/runtime" "^7.3.1"
     html-parse-stringify2 "2.0.1"
 
-react-if@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/react-if/-/react-if-4.0.1.tgz#fd60599f585a55d417d94f9a576047869994fcae"
-  integrity sha512-TyfDGdBrIAHntLM5YkRbszeqcyzucB3m2ddF46XH10wTZ8SE2ZjNPD8qNphTJ+7j36SZ4qMvqmlMntcsczLAXQ==
+react-if@^3.4.3:
+  version "3.4.3"
+  resolved "https://registry.yarnpkg.com/react-if/-/react-if-3.4.3.tgz#bab45478dd0374b1c5fe44aa972a2fa921416a57"
+  integrity sha512-DddMrbjAA4lkVhhYJgoeKC9+dj950I9hx4KClhJXySTL3GsQ7hxl9eWkcqS2i/qWvfPiQheJOwTYQ+Wv2BNdMA==
 
 react-is@^16.12.0, react-is@^16.13.1, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6:
   version "16.13.1"
