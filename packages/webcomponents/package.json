@@ -1,6 +1,6 @@
 {
   "name": "@rws-air/webcomponents",
-  "version": "13.7.4",
+  "version": "13.7.5",
   "description": "Standard Webcomponents for AIR projects",
   "author": "@rws-air",
   "license": "Apache-2.0",
@@ -24,8 +24,8 @@
     "@date-io/core": "^1.x",
     "@date-io/moment": "^1.x",
     "@octokit/core": "^3.1.4",
-    "tiny-warning": "^1.0.2",
-    "react-if": "^4.0.1"
+    "react-if": "^4.0.1",
+    "tiny-warning": "^1.0.2"
   },
   "dependencies": {
     "@favware/querystring": "^6.0.7",
