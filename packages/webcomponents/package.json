@@ -1,6 +1,6 @@
 {
   "name": "@rws-air/webcomponents",
-  "version": "13.7.0",
+  "version": "13.7.1",
   "description": "Standard Webcomponents for AIR projects",
   "author": "@rws-air",
   "license": "Apache-2.0",
@@ -92,5 +92,6 @@
     "rollup-plugin-progress": "^1.1.2",
     "rollup-plugin-terser": "^7.0.0",
     "rollup-plugin-typescript2": "^0.27.3"
-  }
+  },
+  "gitHead": "75c3ee49bab3d92e2d204287397c1fa0cf6fce73"
 }
