@@ -49,6 +49,6 @@
     "react-virtuoso": "^0.20.0"
   },
   "devDependencies": {
-    "react-scripts": "^3.4.3"
+    "react-scripts": "^4.0.0"
   }
 }
