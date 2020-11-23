@@ -29,6 +29,13 @@ describe('WindowLocationService', () => {
     expect(result).toBe(expected);
   });
 
+  test('retrieve href from current url', () => {
+    const result = WindowLocationService.href;
+    const expected = 'http://localhost/';
+
+    expect(result).toBe(expected);
+  });
+
   test('redirects to new url', () => {
     const redirectSpy = jest.spyOn(WindowLocationService, 'redirectTo').mockImplementation((url: string) => url);
     const result = WindowLocationService.redirectTo('new_url');

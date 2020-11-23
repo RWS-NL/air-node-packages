@@ -19,6 +19,10 @@ export class WindowLocationService {
     return this.getLocation().host;
   }
 
+  public static get href(): string {
+    return this.getLocation().href;
+  }
+
   public static redirectTo(url: string): void {
     this.getLocation().assign(url);
   }
