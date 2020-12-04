@@ -87,7 +87,7 @@
     "@rollup/plugin-url": "^5.0.1",
     "@svgr/rollup": "^5.4.0",
     "formik": "^2.1.5",
-    "formik-material-ui": "3.0.0",
+    "formik-material-ui": "3.0.1",
     "formik-material-ui-pickers": "0.0.11",
     "identity-obj-proxy": "^3.0.0",
     "react-if": "^3.4.3",
