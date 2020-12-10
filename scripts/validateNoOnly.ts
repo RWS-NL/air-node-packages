@@ -1,7 +1,6 @@
 import fs from 'fs';
 import glob from 'glob';
 import path from 'path';
-import kConsole from './scriptUtils';
 
 const onlyPattern = /(?:describe\.only|it\.only|test\.only)/gm;
 const files = glob
@@ -26,8 +25,8 @@ for (const file of files) {
 }
 
 if (shouldError) {
-  kConsole.error('Looks like you left focused tests, I found these hits:');
-  kConsole.error(badPatterns.map((pattern, index) => `- ${pattern}\t→\t${badFiles[index]}`).join('\n'));
-  kConsole.error('Please remove all the focused tests!');
+  console.error('Looks like you left focused tests, I found these hits:');
+  console.error(badPatterns.map((pattern, index) => `- ${pattern}\t→\t${badFiles[index]}`).join('\n'));
+  console.error('Please remove all the focused tests!');
   process.exit(1);
 }

@@ -1,15 +1,8 @@
 #!/usr/bin/env node
 import { readYaml } from '@favware/yamlreader';
-import { KlasaConsole } from '@klasa/console';
 import fetch from 'node-fetch';
 import path from 'path';
 import yargs from 'yargs';
-
-const kConsole = new KlasaConsole({
-  useColor: true,
-  timestamps: true,
-  utc: false
-});
 
 export interface User {
   /** The e-mail for this user */
@@ -76,16 +69,16 @@ export class UsermanagementAdder {
       });
       const data: ResponseData = await response.json();
 
-      kConsole.log(`Added user with email ${user.email}, they got ID ${data.id}`);
+      console.log(`Added user with email ${user.email}, they got ID ${data.id}`);
 
       for (const role of user.roles) await this.addRoleToUser(data.id, role);
     } catch (err) {
-      kConsole.error(err);
+      console.error(err);
     }
   }
 
   private async addRoleToUser(userId: string, role: string) {
-    kConsole.log(`Adding ${role} to user with ID ${userId}`);
+    console.log(`Adding ${role} to user with ID ${userId}`);
 
     try {
       await fetch(`${this.url}/api/v1/users/${userId}/roles`, {
@@ -97,11 +90,11 @@ export class UsermanagementAdder {
         }
       });
 
-      kConsole.log(`Added role ${role} to user with id ${userId}`);
-      kConsole.log('');
+      console.log(`Added role ${role} to user with id ${userId}`);
+      console.log('');
     } catch (err) {
-      kConsole.error(`an error occurred adding ${role} to user with ID ${userId}. Stacktrace:`);
-      kConsole.debug(err);
+      console.error(`an error occurred adding ${role} to user with ID ${userId}. Stacktrace:`);
+      console.debug(err);
     }
   }
 }
@@ -152,7 +145,7 @@ export const exec = () => {
   try {
     new UsermanagementAdder(path.resolve(argv.file), argv.username, argv.password, argv.url).run();
   } catch (err) {
-    kConsole.error(err);
+    console.error(err);
   }
 };
 
