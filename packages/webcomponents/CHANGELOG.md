@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.7.9](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@13.7.8...@rws-air/webcomponents@13.7.9) (2020-12-11)
+
+
+### Bug Fixes
+
+* rollback rollup/plugin-node-resolve. ([0d4d61a](https://github.com/RWS-NL/air-node-packages/commit/0d4d61a75ec5e5d93ed6a771ca9c70f427dd0d0e))
+
+
+
+
+
 ## [13.7.8](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@13.7.7...@rws-air/webcomponents@13.7.8) (2020-11-16)
 
 **Note:** Version bump only for package @rws-air/webcomponents
