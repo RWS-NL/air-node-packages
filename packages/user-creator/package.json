@@ -22,7 +22,7 @@
     "!dist/.tsbuildinfo"
   ],
   "dependencies": {
-    "@favware/yamlreader": "^3.1.0",
+    "@favware/yamlreader": "^4.0.0",
     "node-fetch": "^2.6.1",
     "yargs": "^16.2.0"
   },

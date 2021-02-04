@@ -1576,12 +1576,12 @@
   resolved "https://registry.yarnpkg.com/@favware/querystring/-/querystring-7.0.1.tgz#8c17fe76e7e53e6bdf27235cead462cb8a159a66"
   integrity sha512-Oot6TcxMK3ypLdyQcM4oNao1AhI2PM3KSPLEPKsW7tAWqDHnsAAs4iKa+Vv4lntSGNELyWvEIZT7Zqh63oB6bw==
 
-"@favware/yamlreader@^3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@favware/yamlreader/-/yamlreader-3.1.0.tgz#9eaeec06dbeb1c7ffd8afa56464a49bf79e87521"
-  integrity sha512-qa3lqTZP+VFeEDs/JbUx+Ijn7QnvJUDmuQ8ylC4AvrEABlBAvazUtcho/hxooDpL+WRkNnO07HUxGZL1eMvz4g==
+"@favware/yamlreader@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@favware/yamlreader/-/yamlreader-4.0.0.tgz#06a3e3c5612039604a441b7627b6d7a0b3713377"
+  integrity sha512-J6338pReNrTGZXZEcrf/batu0P7eQszFSpVCjhn/zy0mmcP7Gckxo6qNMIvxwvkPyjrhPkQTYUo4EoxJLpxpnw==
   dependencies:
-    js-yaml "^3.14.0"
+    js-yaml "^4.0.0"
 
 "@hapi/address@2.x.x":
   version "2.1.4"
@@ -3916,6 +3916,11 @@ argparse@^1.0.7:
   integrity sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==
   dependencies:
     sprintf-js "~1.0.2"
+
+argparse@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/argparse/-/argparse-2.0.1.tgz#246f50f3ca78a3240f6c997e8a9bd1eac49e4b38"
+  integrity sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==
 
 aria-query@^4.2.2:
   version "4.2.2"
@@ -9964,13 +9969,20 @@ js-tokens@^3.0.2:
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
   integrity sha1-mGbfOVECEw449/mWvOtlRDIJwls=
 
-js-yaml@^3.13.1, js-yaml@^3.14.0:
+js-yaml@^3.13.1:
   version "3.14.0"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.14.0.tgz#a7a34170f26a21bb162424d8adacb4113a69e482"
   integrity sha512-/4IbIeHcD9VMHFqDR/gQ7EdZdLimOvW2DdcxFjdyyZ9NsbS+ccrXqVWDtab/lRl5AlUqmpBx8EhPaWR+OtY17A==
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
+
+js-yaml@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-4.0.0.tgz#f426bc0ff4b4051926cd588c71113183409a121f"
+  integrity sha512-pqon0s+4ScYUvX30wxQi3PogGFAlUyH0awepWvwkj4jD4v+ova3RiYw8bmA6x2rDrEaj8i/oWKoRxpVNW+Re8Q==
+  dependencies:
+    argparse "^2.0.1"
 
 jsbn@~0.1.0:
   version "0.1.1"
