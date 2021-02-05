@@ -22,7 +22,7 @@
   "peerDependencies": {
     "fuse.js": "^6",
     "lodash.orderby": ">=4",
-    "react": ">=16"
+    "react": ">=17"
   },
   "publishConfig": {
     "access": "public"
