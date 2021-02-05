@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/commitizen-config@2.0.5...@rws-air/commitizen-config@3.0.0) (2021-02-05)
+
+
+### Features
+
+* upgrade to react 17. ([#824](https://github.com/RWS-NL/air-node-packages/issues/824)) ([15b0db0](https://github.com/RWS-NL/air-node-packages/commit/15b0db0870307f43d4c9d8d1975a919955b087f1))
+
+
+### BREAKING CHANGES
+
+* enzyme tight code in utils like `findShallowByDataQa`, `findByDataQa` and  `findReactByDataQa` is removed.
+This tiny piece of code needs to be implemented in the application itself if still needed.
+
+[AIRIVT-1604]
+
+* fix: linting errors which are normal since we want to export this way.
+
+
+
+
+
 ## [2.0.5](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/commitizen-config@2.0.4...@rws-air/commitizen-config@2.0.5) (2020-08-10)
 
 **Note:** Version bump only for package @rws-air/commitizen-config
