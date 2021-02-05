@@ -31,6 +31,7 @@ const filterSubject = (subject: string) => {
 // This can be any kind of SystemJS compatible module.
 // We use Commonjs here, but ES6 or AMD would do just
 // fine.
+// eslint-disable-next-line import/no-anonymous-default-export
 export default (options: {
   types?: any;
   defaultType?: any;

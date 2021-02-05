@@ -10,6 +10,7 @@ import postcss from 'rollup-plugin-postcss';
 import progress from 'rollup-plugin-progress';
 import { terser } from 'rollup-plugin-terser';
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   input: 'src/index.ts',
   output: [
