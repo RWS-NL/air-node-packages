@@ -1356,7 +1356,7 @@
     "@commitlint/rules" "^9.1.2"
     "@commitlint/types" "^9.1.2"
 
-"@commitlint/load@>6.1.1":
+"@commitlint/load@>6.1.1", "@commitlint/load@^11.0.0":
   version "11.0.0"
   resolved "https://registry.yarnpkg.com/@commitlint/load/-/load-11.0.0.tgz#f736562f0ffa7e773f8808fea93319042ee18211"
   integrity sha512-t5ZBrtgvgCwPfxmG811FCp39/o3SJ7L+SNsxFL92OR4WQxPcu6c8taD0CG2lzOHGuRyuMxZ7ps3EbngT2WpiCg==
@@ -1369,7 +1369,7 @@
     lodash "^4.17.19"
     resolve-from "^5.0.0"
 
-"@commitlint/load@^9.0.1", "@commitlint/load@^9.1.1", "@commitlint/load@^9.1.2":
+"@commitlint/load@^9.1.2":
   version "9.1.2"
   resolved "https://registry.yarnpkg.com/@commitlint/load/-/load-9.1.2.tgz#c79634e8805ab35f318c535fdbda748288bf5395"
   integrity sha512-FPL82xBuF7J3EJ57kLVoligQP4BFRwrknooP+vNT787AXmQ/Fddc/iYYwHwy67pNkk5N++/51UyDl/CqiHb6nA==
