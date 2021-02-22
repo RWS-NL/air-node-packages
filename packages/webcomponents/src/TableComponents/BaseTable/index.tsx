@@ -11,11 +11,11 @@ import { Pagination, PaginationProps } from '../Pagination';
 import { Toolbar, ToolbarProps } from '../Toolbar';
 import css from './Table.scss';
 
-export type TableLabels = Pick<ToolbarProps, 'searchplaceholderlabel'> &
+export type BaseTableLabels = Pick<ToolbarProps, 'searchplaceholderlabel'> &
   Pick<PaginationProps, 'labelRowsPerPage' | 'labelPaginationOf'> &
   Pick<HeaderCellProps, 'tooltiplabel'>;
 
-export interface TableQAs {
+export interface BaseTableQAs {
   /** Data-qa applied to the root table */
   table: string;
   /** Data-qa applied to the pagination components */
@@ -32,7 +32,7 @@ export interface TableQAs {
   tableBody: string;
 }
 
-export interface TableCustomClasses {
+export interface BaseTableCustomClasses {
   /** Custom class(es) for table */
   table?: string[];
   /** Custom class(es) for table toolbar */
@@ -53,7 +53,7 @@ export interface TableCustomClasses {
   tableSearchbar?: string[];
 }
 
-export interface TableProps
+export interface BaseTableProps
   extends Pick<
       ToolbarProps,
       'onsearchclear' | 'onsearchinput' | 'paperElevation' | 'extraIcons' | 'searchdebounce' | 'clearSearch'
@@ -71,13 +71,13 @@ export interface TableProps
   /** The amount of rows for the table (generally the length of the data) */
   rowcount: number;
   /** Labels used in the table */
-  labels: TableLabels;
+  labels: BaseTableLabels;
   /** Data-qa's used in the table */
-  tableqas: TableQAs;
+  tableqas: BaseTableQAs;
   /** Content for the table */
   tablebodycontent: ReactNode;
   /** Customization CSS classes for table components */
-  tablecss?: TableCustomClasses;
+  tablecss?: BaseTableCustomClasses;
   /**
    * Control whether the top bar pagination should be shown
    * @default false
@@ -166,9 +166,9 @@ export interface TableProps
  * />
  * ```
  */
-export const Table = memo(
-  ({ showTopPagination = false, showBottomPagination = false, disableToolbar = false, ...props }: TableProps) => {
-    const addCustomClasses = (component: keyof TableCustomClasses, baseClass?: string): string[] => {
+export const BaseTable = memo(
+  ({ showTopPagination = false, showBottomPagination = false, disableToolbar = false, ...props }: BaseTableProps) => {
+    const addCustomClasses = (component: keyof BaseTableCustomClasses, baseClass?: string): string[] => {
       const classes: string[] = [];
       if (baseClass) classes.push(baseClass);
       if (props.tablecss && props.tablecss[component]) classes.push(...props.tablecss[component]!); // eslint-disable-line @typescript-eslint/no-non-null-assertion

@@ -1,3 +1,4 @@
+export * from './BaseTable';
 export * from './BodyCell';
 export * from './HeaderCell';
 export * from './Pagination';
