@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.2.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@14.1.0...@rws-air/webcomponents@14.2.0) (2021-02-22)
+
+
+### Features
+
+* adding BaseTable exports ([ac88187](https://github.com/RWS-NL/air-node-packages/commit/ac8818701b2a8855eee5cfad23b5303bf87a6db6))
+
+
+
+
+
 # [14.1.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@14.0.1...@rws-air/webcomponents@14.1.0) (2021-02-22)
 
 
