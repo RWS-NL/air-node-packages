@@ -1,6 +1,6 @@
 {
   "name": "@rws-air/webcomponents",
-  "version": "14.0.1",
+  "version": "14.3.0",
   "description": "Standard Webcomponents for AIR projects",
   "author": "@rws-air",
   "license": "Apache-2.0",
@@ -38,7 +38,7 @@
   "dependencies": {
     "@favware/querystring": "^7.0.1",
     "clsx": "^1.1.1",
-    "i18next": "^19.6.3",
+    "i18next": "^20.1.0",
     "lodash.debounce": "^4.0.8",
     "moment": "^2.28.0",
     "react-i18next": "^11.7.3",
@@ -83,7 +83,7 @@
   ],
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
-    "@rollup/plugin-node-resolve": "11.1.1",
+    "@rollup/plugin-node-resolve": "11.2.0",
     "@rollup/plugin-url": "^6.0.0",
     "@svgr/rollup": "^5.4.0",
     "formik": "^2.1.5",
