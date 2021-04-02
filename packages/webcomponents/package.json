@@ -82,7 +82,7 @@
     "ts"
   ],
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-commonjs": "^18.0.0",
     "@rollup/plugin-node-resolve": "11.2.1",
     "@rollup/plugin-url": "^6.0.0",
     "@svgr/rollup": "^5.4.0",
