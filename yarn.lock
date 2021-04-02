@@ -3457,10 +3457,10 @@
     "@typescript-eslint/types" "4.20.0"
     eslint-visitor-keys "^2.0.0"
 
-"@virtuoso.dev/react-urx@^0.2.4":
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/@virtuoso.dev/react-urx/-/react-urx-0.2.4.tgz#68013bccc994f2756b76066d850ebc4fcebeffc6"
-  integrity sha512-rHUyHPGnra61i6kTCrAizB6qEcA4hbrnOtWgBw8sMotPcfKyE6FZHX06WE73An9g+YAI3ykWyXFr8EWyY0q3NA==
+"@virtuoso.dev/react-urx@^0.2.5":
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/@virtuoso.dev/react-urx/-/react-urx-0.2.5.tgz#41f1a8c7657a339276ecf1ff718b556010c80932"
+  integrity sha512-4C0HoPaZEqAKg3pzs3mS16kesCRvEU+TYVDxFsW+vGFi1nyPovhiQ7YVTOPBE55rjVv/rkNqL1eWqjwJM/SohA==
   dependencies:
     "@virtuoso.dev/urx" "^0.2.5"
 
@@ -15663,6 +15663,11 @@ stylelint-config-recommended@^3.0.0:
   resolved "https://registry.yarnpkg.com/stylelint-config-recommended/-/stylelint-config-recommended-3.0.0.tgz#e0e547434016c5539fe2650afd58049a2fd1d657"
   integrity sha512-F6yTRuc06xr1h5Qw/ykb2LuFynJ2IxkKfCMf+1xqPffkxh0S09Zc902XCffcsw/XMFq/OzQ1w54fLIDtmRNHnQ==
 
+stylelint-config-recommended@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-recommended/-/stylelint-config-recommended-4.0.0.tgz#665a0034065e6704d5032ba51bf4efa37d328ef9"
+  integrity sha512-sgna89Ng+25Hr9kmmaIxpGWt2LStVm1xf1807PdcWasiPDaOTkOHRL61sINw0twky7QMzafCGToGDnHT/kTHtQ==
+
 stylelint-config-sass-guidelines@^8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/stylelint-config-sass-guidelines/-/stylelint-config-sass-guidelines-8.0.0.tgz#e92279aa052a04e822dd096d7c46c8e37d4b3406"
@@ -15671,12 +15676,12 @@ stylelint-config-sass-guidelines@^8.0.0:
     stylelint-order "^4.0.0"
     stylelint-scss "^3.18.0"
 
-stylelint-config-standard@^20.0.0:
-  version "20.0.0"
-  resolved "https://registry.yarnpkg.com/stylelint-config-standard/-/stylelint-config-standard-20.0.0.tgz#06135090c9e064befee3d594289f50e295b5e20d"
-  integrity sha512-IB2iFdzOTA/zS4jSVav6z+wGtin08qfj+YyExHB3LF9lnouQht//YyB0KZq9gGz5HNPkddHOzcY8HsUey6ZUlA==
+stylelint-config-standard@^21.0.0:
+  version "21.0.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-standard/-/stylelint-config-standard-21.0.0.tgz#4942cfa27301eb6702fa8fc46a44da35d1a5cfd7"
+  integrity sha512-Yf6mx5oYEbQQJxWuW7X3t1gcxqbUx52qC9SMS3saC2ruOVYEyqmr5zSW6k3wXflDjjFrPhar3kp68ugRopmlzg==
   dependencies:
-    stylelint-config-recommended "^3.0.0"
+    stylelint-config-recommended "^4.0.0"
 
 stylelint-order@^4.0.0:
   version "4.1.0"
