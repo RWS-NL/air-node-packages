@@ -62,7 +62,7 @@ export interface ConfirmationModalProps extends ModalProps {
  */
 export const ConfirmationModal = memo((props: ConfirmationModalProps) => {
   const handleConfirmKeyPress = (event: KeyboardEvent) => {
-    return props.confirmAction && event.key.toLowerCase() === 'enter' ? props.confirmAction() : undefined;
+    return event.key.toLowerCase() === 'enter' ? props.confirmAction() : undefined;
   };
 
   const renderModalActions = useMemo(() => {
