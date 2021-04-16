@@ -104,7 +104,7 @@
     "@babel/helper-explode-assignable-expression" "^7.12.13"
     "@babel/types" "^7.12.13"
 
-"@babel/helper-compilation-targets@^7.12.1", "@babel/helper-compilation-targets@^7.13.0", "@babel/helper-compilation-targets@^7.13.10", "@babel/helper-compilation-targets@^7.13.13", "@babel/helper-compilation-targets@^7.13.8":
+"@babel/helper-compilation-targets@^7.12.1", "@babel/helper-compilation-targets@^7.13.0", "@babel/helper-compilation-targets@^7.13.13", "@babel/helper-compilation-targets@^7.13.8":
   version "7.13.13"
   resolved "https://registry.yarnpkg.com/@babel/helper-compilation-targets/-/helper-compilation-targets-7.13.13.tgz#2b2972a0926474853f41e4adbc69338f520600e5"
   integrity sha512-q1kcdHNZehBwD9jYPh3WyXcsFERi39X4I59I3NadciWtNDyZ6x+GboOxncFK0kXlKIv6BJm5acncehXWUjWQMQ==
@@ -3361,14 +3361,6 @@
     "@typescript-eslint/typescript-estree" "4.21.0"
     debug "^4.1.1"
 
-"@typescript-eslint/scope-manager@4.20.0":
-  version "4.20.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/scope-manager/-/scope-manager-4.20.0.tgz#953ecbf3b00845ece7be66246608be9d126d05ca"
-  integrity sha512-/zm6WR6iclD5HhGpcwl/GOYDTzrTHmvf8LLLkwKqqPKG6+KZt/CfSgPCiybshmck66M2L5fWSF/MKNuCwtKQSQ==
-  dependencies:
-    "@typescript-eslint/types" "4.20.0"
-    "@typescript-eslint/visitor-keys" "4.20.0"
-
 "@typescript-eslint/scope-manager@4.21.0":
   version "4.21.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/scope-manager/-/scope-manager-4.21.0.tgz#c81b661c4b8af1ec0c010d847a8f9ab76ab95b4d"
@@ -3381,11 +3373,6 @@
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-3.10.1.tgz#1d7463fa7c32d8a23ab508a803ca2fe26e758727"
   integrity sha512-+3+FCUJIahE9q0lDi1WleYzjCwJs5hIsbugIgnbB+dSCYUxl8L6PwmsyOPFZde2hc1DlTo/xnkOgiTLSyAbHiQ==
-
-"@typescript-eslint/types@4.20.0":
-  version "4.20.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-4.20.0.tgz#c6cf5ef3c9b1c8f699a9bbdafb7a1da1ca781225"
-  integrity sha512-cYY+1PIjei1nk49JAPnH1VEnu7OYdWRdJhYI5wiKOUMhLTG1qsx5cQxCUTuwWCmQoyriadz3Ni8HZmGSofeC+w==
 
 "@typescript-eslint/types@4.21.0":
   version "4.21.0"
@@ -3403,19 +3390,6 @@
     glob "^7.1.6"
     is-glob "^4.0.1"
     lodash "^4.17.15"
-    semver "^7.3.2"
-    tsutils "^3.17.1"
-
-"@typescript-eslint/typescript-estree@4.20.0":
-  version "4.20.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-4.20.0.tgz#8b3b08f85f18a8da5d88f65cb400f013e88ab7be"
-  integrity sha512-Knpp0reOd4ZsyoEJdW8i/sK3mtZ47Ls7ZHvD8WVABNx5Xnn7KhenMTRGegoyMTx6TiXlOVgMz9r0pDgXTEEIHA==
-  dependencies:
-    "@typescript-eslint/types" "4.20.0"
-    "@typescript-eslint/visitor-keys" "4.20.0"
-    debug "^4.1.1"
-    globby "^11.0.1"
-    is-glob "^4.0.1"
     semver "^7.3.2"
     tsutils "^3.17.1"
 
@@ -3438,14 +3412,6 @@
   integrity sha512-9JgC82AaQeglebjZMgYR5wgmfUdUc+EitGUUMW8u2nDckaeimzW+VsoLV6FoimPv2id3VQzfjwBxEMVz08ameQ==
   dependencies:
     eslint-visitor-keys "^1.1.0"
-
-"@typescript-eslint/visitor-keys@4.20.0":
-  version "4.20.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/visitor-keys/-/visitor-keys-4.20.0.tgz#1e84db034da13f208325e6bfc995c3b75f7dbd62"
-  integrity sha512-NXKRM3oOVQL8yNFDNCZuieRIwZ5UtjNLYtmMx2PacEAGmbaEYtGgVHUHVyZvU/0rYZcizdrWjDo+WBtRPSgq+A==
-  dependencies:
-    "@typescript-eslint/types" "4.20.0"
-    eslint-visitor-keys "^2.0.0"
 
 "@typescript-eslint/visitor-keys@4.21.0":
   version "4.21.0"
@@ -15282,9 +15248,9 @@ sshpk@^1.7.0:
     tweetnacl "~0.14.0"
 
 ssri@^6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/ssri/-/ssri-6.0.1.tgz#2a3c41b28dd45b62b63676ecb74001265ae9edd8"
-  integrity sha512-3Wge10hNcT1Kur4PDFwEieXSCMCJs/7WvSACcrMYrNp+b8kDL1/0wJch5Ni2WrtwEa2IO8OsVfeKIciKCDx/QA==
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/ssri/-/ssri-6.0.2.tgz#157939134f20464e7301ddba3e90ffa8f7728ac5"
+  integrity sha512-cepbSq/neFK7xB6A50KHN0xHDotYzq58wWCa5LeWqnPrHG8GzfEjO/4O8kpmcGW+oaxkvhEJCWgbgNk4/ZV93Q==
   dependencies:
     figgy-pudding "^3.5.1"
 
