@@ -20,7 +20,10 @@ export interface TableQAs {
   table: string;
   /** Data-qa applied to the pagination components */
   pagination: string;
-  /** Data-qa applied to the toolbar */
+  /**
+   * Data-qa applied to the toolbar
+   * @deprecated A toolbar in a table is more than a table should do.
+   */
   toolbar: string;
   /** Data-qa applied to the header wrapper */
   header: string;
@@ -35,7 +38,10 @@ export interface TableQAs {
 export interface TableCustomClasses {
   /** Custom class(es) for table */
   table?: string[];
-  /** Custom class(es) for table toolbar */
+  /**
+   * Custom class(es) for table toolbar
+   * @deprecated A toolbar in a table is more than a table component should do. See Toolbar component.
+   */
   tableToolbar?: string[];
   /** Custom class(es) for table paginations */
   tablePagination?: string[];
@@ -49,7 +55,10 @@ export interface TableCustomClasses {
   tableHeaderCell?: string[];
   /** Custom class(es) for table body */
   tableBody?: string[];
-  /** Custom class(es) for table toolbar searchbar */
+  /**
+   * Custom class(es) for table toolbar searchbar
+   * @deprecated A toolbar in a table is more than a table component should do. See Toolbar component.
+   */
   tableSearchbar?: string[];
 }
 
@@ -91,17 +100,61 @@ export interface TableProps
   /**
    * Disables the table toolbar
    * @default false
+   * @deprecated A toolbar in a table is more than a table component should do. See Toolbar component.
    */
   disableToolbar?: boolean;
   /** Additional props to pass to the Material UI Table component */
   TableProps?: MUITableProps;
   /** Additional props to pass to each of the Header cell components */
   HeaderCellProps?: HeaderCellProps;
-  /** Additional props to pass to the toolbar component */
+  /**
+   * Additional props to pass to the toolbar component
+   * @deprecated A toolbar in a table is more than a table component should do. See Toolbar component.
+   */
   ToolbarProps?: ToolbarProps;
   /** Additional props to pass the the pagination component */
   PaginationProps?: MUITablePaginationProps;
 }
+
+const renderTablePagination = (props: TableProps, customClasses: string) => {
+  return (
+    <Pagination
+      {...props.PaginationProps}
+      labelRowsPerPage={props.labels.labelRowsPerPage}
+      labelPaginationOf={props.labels.labelPaginationOf}
+      rowsPerPageOptions={props.rowsPerPageOptions}
+      rowsPerPage={props.rowsPerPage}
+      page={props.page}
+      count={props.rowcount}
+      onChangePage={props.onChangePage}
+      onChangeRowsPerPage={props.onChangeRowsPerPage}
+      customClasses={customClasses}
+      data-qa={props.tableqas.pagination}
+    />
+  );
+};
+
+const renderTableHead = (props: TableProps, addCustomClasses: (component: keyof TableCustomClasses, baseClass?: string) => string[]) =>
+  <TableHead data-qa={props.tableqas.header} className={clsx(addCustomClasses('tableHeader'))}>
+    <TableRow data-qa={props.tableqas.headerRow} className={clsx(addCustomClasses('tableHeaderRow'))}>
+      {props.headers.map((header, index) => (
+        <HeaderCell
+          {...props.HeaderCellProps}
+          key={index}
+          header={header}
+          orderby={props.orderby}
+          order={props.order || 'asc'}
+          tooltiplabel={props.labels.tooltiplabel}
+          tooltipplacement={props.tooltipplacement}
+          onRequestSort={props.onRequestSort}
+          data-qa={props.tableqas.headerCell}
+          customclasses={clsx(addCustomClasses('tableHeaderCell'))}
+          isActionButtonCell={header.isActionButtonCell}
+        />
+      ))}
+    </TableRow>
+  </TableHead>
+
 
 /**
  * Constructs a table using pre-defined Rijkswaterstaat styling
@@ -176,24 +229,8 @@ export const Table = memo(
       return classes;
     };
 
-    const renderTablePagination = (customClasses: string) => {
-      return (
-        <Pagination
-          {...props.PaginationProps}
-          labelRowsPerPage={props.labels.labelRowsPerPage}
-          labelPaginationOf={props.labels.labelPaginationOf}
-          rowsPerPageOptions={props.rowsPerPageOptions}
-          rowsPerPage={props.rowsPerPage}
-          page={props.page}
-          count={props.rowcount}
-          onChangePage={props.onChangePage}
-          onChangeRowsPerPage={props.onChangeRowsPerPage}
-          customClasses={customClasses}
-          data-qa={props.tableqas.pagination}
-        />
-      );
-    };
-
+    // TODO -as- 20210421 a toolbar in a table component is too much for one component. Deprecated the toolbar props.
+    //  use the separate Toolbar component.
     return (
       <Fragment>
         <When condition={disableToolbar === false}>
@@ -213,7 +250,7 @@ export const Table = memo(
         </When>
 
         <When condition={showTopPagination}>
-          {renderTablePagination(clsx(addCustomClasses('tablePagination', css.tableTopPagination)))}
+          {renderTablePagination(props, clsx(addCustomClasses('tablePagination', css.tableTopPagination)))}
         </When>
 
         <MUITable
@@ -222,31 +259,15 @@ export const Table = memo(
           className={clsx(addCustomClasses('table', css.table))}
           data-qa={props.tableqas.table}
         >
-          <TableHead data-qa={props.tableqas.header} className={clsx(addCustomClasses('tableHeader'))}>
-            <TableRow data-qa={props.tableqas.headerRow} className={clsx(addCustomClasses('tableHeaderRow'))}>
-              {props.headers.map((header, index) => (
-                <HeaderCell
-                  {...props.HeaderCellProps}
-                  key={index}
-                  header={header}
-                  orderby={props.orderby}
-                  order={props.order || 'asc'}
-                  tooltiplabel={props.labels.tooltiplabel}
-                  tooltipplacement={props.tooltipplacement}
-                  onRequestSort={props.onRequestSort}
-                  data-qa={props.tableqas.headerCell}
-                  customclasses={clsx(addCustomClasses('tableHeaderCell'))}
-                  isActionButtonCell={header.isActionButtonCell}
-                />
-              ))}
-            </TableRow>
-          </TableHead>
+          {renderTableHead(props, addCustomClasses)}
           <TableBody data-qa={props.tableqas.tableBody} className={clsx(addCustomClasses('tableBody'))}>
             {props.tablebodycontent}
           </TableBody>
         </MUITable>
 
-        <When condition={showBottomPagination}>{renderTablePagination(clsx(addCustomClasses('tablePagination')))}</When>
+        <When condition={showBottomPagination}>
+          {renderTablePagination(props, clsx(addCustomClasses('tablePagination')))}
+        </When>
       </Fragment>
     );
   }
