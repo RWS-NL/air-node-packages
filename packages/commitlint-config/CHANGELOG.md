@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.7](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/commitlint-config@2.0.6...@rws-air/commitlint-config@2.0.7) (2021-04-21)
+
+**Note:** Version bump only for package @rws-air/commitlint-config
+
+
+
+
+
 ## [2.0.6](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/commitlint-config@2.0.5...@rws-air/commitlint-config@2.0.6) (2021-02-22)
 
 **Note:** Version bump only for package @rws-air/commitlint-config
