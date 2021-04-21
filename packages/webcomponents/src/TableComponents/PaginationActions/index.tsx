@@ -11,6 +11,8 @@ import { Else, If, Then } from 'react-if';
 import css from './PaginationActions.scss';
 import { PaginationButton, PaginationButtonProps } from './PaginationButton';
 
+const FIRST_PAGE_INDEX = 0;
+
 export interface PaginationActionsProps {
   /** Amount of rows per page */
   rowsPerPage: number;
@@ -26,61 +28,58 @@ export interface PaginationActionsProps {
   customclasses?: string | string[];
 }
 
+type ChangePageEvent = (page: number) => (event: SyntheticEvent<Element, Event>) => void;
+
+const renderCurrentPage = (key: number, pageNumber: number, clickEvent: ChangePageEvent): JSX.Element =>
+  <Chip
+    key={key}
+    label={pageNumber}
+    color="primary"
+    variant="default"
+    onClick={clickEvent(pageNumber - 1)}
+    className={clsx(css.activePageChip, css.ie11ChipCorrection)}
+  />;
+
+const renderPages = (totalPages: number, currentPageIndex: number, handlePageClick: ChangePageEvent) =>
+  [...Array(totalPages).keys()]
+    .map((pageNumber) => ++pageNumber)
+    .map((pageNumber, pageIndex) => {
+      if (currentPageIndex === pageIndex) {
+        return renderCurrentPage(pageIndex, pageNumber, handlePageClick);
+      }
+
+      return (
+        <Box component="span" key={pageIndex} onClick={handlePageClick(pageIndex)}
+             className={clsx(css.paginationNumbers)}>
+          {pageNumber}
+        </Box>
+      );
+    });
+
 /**
  * Constructs a table pagination action navigators using pre-defined Rijkswaterstaat styling
  * @param props Props to pass to the table pagination
  */
 export const PaginationActions = memo(
-  ({ onChangePage, count, rowsPerPage, page: propPage, 'data-qa': dataQa }: PaginationActionsProps) => {
+  ({ onChangePage, count, rowsPerPage, page: currentPageIndex, 'data-qa': dataQa }: PaginationActionsProps) => {
     const isOnMobile = useMediaQuery('(max-width: 1024px)');
+    const totalPages = Math.ceil(count / rowsPerPage);
 
-    const handleFirstPageButtonclick = <T extends unknown>(event: T): void => onChangePage(event, 0);
-    const handleBackButtonClick = <T extends unknown>(event: T): void => onChangePage(event, propPage - 1);
-    const handleNextButtonClick = <T extends unknown>(event: T): void => onChangePage(event, propPage + 1);
+    const handleFirstPageButtonClick = <T extends unknown>(event: T): void => onChangePage(event, FIRST_PAGE_INDEX);
+    const handleBackButtonClick = <T extends unknown>(event: T): void => onChangePage(event, currentPageIndex - 1);
+    const handleNextButtonClick = <T extends unknown>(event: T): void => onChangePage(event, currentPageIndex + 1);
     const handleLastPageButtonClick = <T extends unknown>(event: T): void =>
-      onChangePage(event, Math.max(0, Math.ceil(count / rowsPerPage) - 1));
+      onChangePage(event, Math.max(0, totalPages - 1));
     const handlePageClick = (page: number) => (event: SyntheticEvent): void => onChangePage(event, page);
 
-    const renderCurrentPage = (
-      key: number,
-      page: number,
-      clickEvent: (page: number) => (event: SyntheticEvent<Element, Event>) => void
-    ): JSX.Element => {
-      return (
-        <Chip
-          key={key}
-          label={page}
-          color='primary'
-          variant='default'
-          onClick={clickEvent(page - 1)}
-          className={clsx(css.activePageChip, css.ie11ChipCorrection)}
-        />
-      );
-    };
-
-    const renderPages = () =>
-      [...Array(Math.ceil(count / rowsPerPage)).keys()]
-        .map((x) => ++x)
-        .map((page, key) => {
-          if (propPage + 1 === page) {
-            return renderCurrentPage(key, page, handlePageClick);
-          }
-
-          return (
-            <Box component='span' key={key} onClick={handlePageClick(page - 1)} className={clsx(css.paginationNumbers)}>
-              {page}
-            </Box>
-          );
-        });
-
-    const nextButtonShouldBeDisabled = propPage >= Math.ceil(count / rowsPerPage) - 1;
-    const previousButtonShouldBeDisabled = propPage === 0;
+    const nextButtonShouldBeDisabled = currentPageIndex >= totalPages - 1;
+    const previousButtonShouldBeDisabled = currentPageIndex === FIRST_PAGE_INDEX;
 
     return (
       <Box style={{ display: 'flex', alignItems: 'center' }} data-qa={dataQa}>
         <PaginationButton
           data-qa={`${dataQa ? `${dataQa}-` : ''}first-page-button`}
-          onClick={handleFirstPageButtonclick}
+          onClick={handleFirstPageButtonClick}
           disabled={previousButtonShouldBeDisabled}
           icon={<FirstPageIcon />}
         />
@@ -92,8 +91,8 @@ export const PaginationActions = memo(
         />
 
         <If condition={isOnMobile}>
-          <Then>{renderCurrentPage(1, propPage + 1, handlePageClick)}</Then>
-          <Else>{renderPages()}</Else>
+          <Then>{renderCurrentPage(1, currentPageIndex + 1, handlePageClick)}</Then>
+          <Else>{renderPages(totalPages, currentPageIndex, handlePageClick)}</Else>
         </If>
 
         <PaginationButton
