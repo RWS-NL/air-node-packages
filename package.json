@@ -116,6 +116,7 @@
     "@types/react": "^17.0.1"
   },
   "dependencies": {
-    "@rws-air/utils": "^5.2.3"
+    "@rws-air/utils": "^5.2.3",
+    "is-svg": "^4.2.2"
   }
 }
