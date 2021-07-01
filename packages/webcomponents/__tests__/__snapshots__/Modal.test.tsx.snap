@@ -46,7 +46,7 @@ exports[`Snapshot Testing Required Props 1`] = `
           onClick={[MockFunction]}
           size="small"
         >
-          <Memo(ForwardRef(CloseIcon))
+          <CloseIcon
             classes={
               Object {
                 "root": "closeIconSVG",

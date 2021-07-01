@@ -24,7 +24,7 @@ exports[`Snapshot Testing Disabled Tooltip 1`] = `
     }
     size="small"
   >
-    <Memo(ForwardRef(SearchIcon)) />
+    <SearchIcon />
   </WithStyles(ForwardRef(IconButton))>
 </WithStyles(ForwardRef(Paper))>
 `;
@@ -57,7 +57,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
       }
       size="small"
     >
-      <Memo(ForwardRef(SearchIcon)) />
+      <SearchIcon />
     </WithStyles(ForwardRef(IconButton))>
   </Memo()>
 </WithStyles(ForwardRef(Paper))>
@@ -91,7 +91,7 @@ exports[`Snapshot Testing Required Props 1`] = `
       }
       size="small"
     >
-      <Memo(ForwardRef(SearchIcon)) />
+      <SearchIcon />
     </WithStyles(ForwardRef(IconButton))>
   </Memo()>
 </WithStyles(ForwardRef(Paper))>

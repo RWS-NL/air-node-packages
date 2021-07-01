@@ -25,6 +25,6 @@ describe('Snapshot Testing', () => {
         onRequestSearch={jest.fn()}
       />
     );
-    expect(searchBar).toMatchSnapshot();
+    expect(toJson(searchBar)).toMatchSnapshot();
   });
 });

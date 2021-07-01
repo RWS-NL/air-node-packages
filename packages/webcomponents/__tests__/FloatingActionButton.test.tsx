@@ -55,7 +55,7 @@ describe('Snapshot Testing', () => {
         <AccessAlarm />
       </FloatingActionButton>
     );
-    expect(floatingActionButton).toMatchSnapshot();
+    expect(toJson(floatingActionButton)).toMatchSnapshot();
   });
 
   test('Optional Props', () => {
@@ -64,7 +64,7 @@ describe('Snapshot Testing', () => {
         <AccessAlarm />
       </FloatingActionButton>
     );
-    expect(floatingActionButton).toMatchSnapshot();
+    expect(toJson(floatingActionButton)).toMatchSnapshot();
   });
 
   test('Disabling Tooltip', () => {

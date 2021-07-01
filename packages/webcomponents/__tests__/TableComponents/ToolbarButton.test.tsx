@@ -3,6 +3,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import { ToolbarButton, ToolbarButtonProps } from '@TableComponents/ToolbarButton';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
+import toJson from "enzyme-to-json";
 
 const mockButtonClick = jest.fn();
 
@@ -25,7 +26,7 @@ describe('Component Tests', () => {
 describe('Snapshot Testing', () => {
   test('Required Props', () => {
     const toolbarButton = shallow(<ToolbarButton icon={<SearchIcon />} onClick={mockButtonClick} />);
-    expect(toolbarButton).toMatchSnapshot();
+    expect(toJson(toolbarButton)).toMatchSnapshot();
   });
 
   test('Optional Props', () => {
@@ -38,11 +39,11 @@ describe('Snapshot Testing', () => {
         paperElevation={5}
       />
     );
-    expect(toolbarButton).toMatchSnapshot();
+    expect(toJson(toolbarButton)).toMatchSnapshot();
   });
 
   test('Disabled Tooltip', () => {
     const toolbarButton = shallow(<ToolbarButton icon={<SearchIcon />} onClick={mockButtonClick} disableTooltip />);
-    expect(toolbarButton).toMatchSnapshot();
+    expect(toJson(toolbarButton)).toMatchSnapshot();
   });
 });

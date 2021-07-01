@@ -17,7 +17,7 @@ exports[`Snapshot Testing Required Props 1`] = `
     className="title titleIconOffset"
     data-qa="modal-title"
   >
-    <Memo(ForwardRef(WarningIcon))
+    <WarningIcon
       className="titleIcon"
       color="error"
     />

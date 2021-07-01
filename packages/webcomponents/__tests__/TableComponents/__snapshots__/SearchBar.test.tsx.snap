@@ -32,7 +32,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
     onClick={[Function]}
     size="small"
   >
-    <Memo(ForwardRef(SearchIcon))
+    <SearchIcon
       className="inputSVG"
     />
   </WithStyles(ForwardRef(IconButton))>
@@ -67,7 +67,7 @@ exports[`Snapshot Testing Required Props 1`] = `
     onClick={[Function]}
     size="small"
   >
-    <Memo(ForwardRef(SearchIcon))
+    <SearchIcon
       className="inputSVG"
     />
   </WithStyles(ForwardRef(IconButton))>
