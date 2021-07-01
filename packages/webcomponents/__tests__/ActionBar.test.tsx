@@ -63,7 +63,7 @@ describe('Component Testing', () => {
 describe('Snapshot Testing', () => {
   test('Required Props', () => {
     const actionBar = shallow(<ActionBar title='42' />);
-    expect(actionBar).toMatchSnapshot();
+    expect(toJson(actionBar)).toMatchSnapshot();
   });
 
   test('With Button', () => {
