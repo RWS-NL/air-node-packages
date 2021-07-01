@@ -1,6 +1,7 @@
 import { PaginationActions } from '@TableComponents/PaginationActions';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
+import toJson from "enzyme-to-json";
 
 const onChangePage = jest.fn();
 
@@ -47,7 +48,7 @@ describe('Snapshot Testing', () => {
     const tablePaginationActions = shallow(
       <PaginationActions rowsPerPage={10} page={0} count={42} onChangePage={onChangePage} />
     );
-    expect(tablePaginationActions).toMatchSnapshot();
+    expect(toJson(tablePaginationActions)).toMatchSnapshot();
   });
 
   test('Optional Props', () => {
@@ -60,6 +61,6 @@ describe('Snapshot Testing', () => {
         customclasses={['snapshot-class']}
       />
     );
-    expect(tablePaginationActions).toMatchSnapshot();
+    expect(toJson(tablePaginationActions)).toMatchSnapshot();
   });
 });
