@@ -4,8 +4,9 @@ import { Button } from '@src/Button';
 import { ConfirmationModal, ConfirmationModalProps } from '@src/ConfirmationModal';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React, { Fragment } from 'react';
+import toJson from "enzyme-to-json";
 
-let confirmationModal: ShallowWrapper<ConfirmationModalProps, any>;
+let confirmationModal: ShallowWrapper<any, any>;
 const closeAction = jest.fn();
 const confirmAction = jest.fn();
 
@@ -97,6 +98,6 @@ describe('Content Testing', () => {
 describe('Snapshot Testing', () => {
   test('Required Props', () => {
     setup();
-    expect(confirmationModal).toMatchSnapshot();
+    expect(toJson(confirmationModal)).toMatchSnapshot();
   });
 });

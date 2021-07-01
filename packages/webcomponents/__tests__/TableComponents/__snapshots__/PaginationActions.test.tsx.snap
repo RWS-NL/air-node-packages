@@ -12,13 +12,13 @@ exports[`Snapshot Testing Optional Props 1`] = `
   <Memo()
     data-qa="first-page-button"
     disabled={true}
-    icon={<Memo(FirstPageIcon) />}
+    icon={<Memo />}
     onClick={[Function]}
   />
   <Memo()
     data-qa="previous-page-button"
     disabled={true}
-    icon={<Memo(KeyboardArrowLeftIcon) />}
+    icon={<Memo />}
     onClick={[Function]}
   />
   <If
@@ -80,13 +80,13 @@ exports[`Snapshot Testing Optional Props 1`] = `
   <Memo()
     data-qa="next-page-button"
     disabled={false}
-    icon={<Memo(KeyboardArrowRightIcon) />}
+    icon={<Memo />}
     onClick={[Function]}
   />
   <Memo()
     data-qa="last-page-button"
     disabled={false}
-    icon={<Memo(LastPageIcon) />}
+    icon={<Memo />}
     onClick={[Function]}
   />
 </Styled(MuiBox)>
@@ -104,13 +104,13 @@ exports[`Snapshot Testing Required Props 1`] = `
   <Memo()
     data-qa="first-page-button"
     disabled={true}
-    icon={<Memo(FirstPageIcon) />}
+    icon={<Memo />}
     onClick={[Function]}
   />
   <Memo()
     data-qa="previous-page-button"
     disabled={true}
-    icon={<Memo(KeyboardArrowLeftIcon) />}
+    icon={<Memo />}
     onClick={[Function]}
   />
   <If
@@ -172,13 +172,13 @@ exports[`Snapshot Testing Required Props 1`] = `
   <Memo()
     data-qa="next-page-button"
     disabled={false}
-    icon={<Memo(KeyboardArrowRightIcon) />}
+    icon={<Memo />}
     onClick={[Function]}
   />
   <Memo()
     data-qa="last-page-button"
     disabled={false}
-    icon={<Memo(LastPageIcon) />}
+    icon={<Memo />}
     onClick={[Function]}
   />
 </Styled(MuiBox)>

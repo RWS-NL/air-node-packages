@@ -3,8 +3,9 @@ import { Button } from '@src/Button';
 import { Modal, ModalProps } from '@src/Modal';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React, { Fragment } from 'react';
+import toJson from "enzyme-to-json";
 
-let modal: ShallowWrapper<ModalProps, any>;
+let modal: ShallowWrapper<any, any>;
 const mockCloseAction = jest.fn();
 
 const setup = (isOpen = false, props?: Partial<ModalProps>, DialogContent: () => JSX.Element = () => <Fragment />) =>
@@ -63,6 +64,6 @@ describe('Content Testing', () => {
 describe('Snapshot Testing', () => {
   test('Required Props', () => {
     setup();
-    expect(modal).toMatchSnapshot();
+    expect(toJson(modal)).toMatchSnapshot();
   });
 });
