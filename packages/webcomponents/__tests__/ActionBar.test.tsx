@@ -1,5 +1,6 @@
 import { ActionBar } from '@src/ActionBar';
 import { shallow, ShallowWrapper } from 'enzyme';
+import React from 'react';
 import toJson from "enzyme-to-json";
 
 const mockCallback = jest.fn();
