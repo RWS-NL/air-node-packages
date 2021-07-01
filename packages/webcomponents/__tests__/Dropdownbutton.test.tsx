@@ -58,7 +58,7 @@ describe('Snapshot Testing', () => {
     const dropdownButton = shallow(
       <Dropdownbutton ButtonIcon={<CloudDownload />} onClick={mockButtonClick} options={['one', 'two', 'three']} />
     );
-    expect(dropdownButton).toMatchSnapshot();
+    expect(toJson(dropdownButton)).toMatchSnapshot();
   });
 
   test('Optional Props', () => {
