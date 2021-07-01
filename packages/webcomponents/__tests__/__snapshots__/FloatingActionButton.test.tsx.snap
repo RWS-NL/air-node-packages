@@ -5,7 +5,7 @@ exports[`Snapshot Testing Disabling Tooltip 1`] = `
   className="makeStyles-fab-1"
   color="primary"
 >
-  <AccessAlarmIcon />
+  <Memo(ForwardRef(AccessAlarmIcon)) />
 </WithStyles(ForwardRef(Fab))>
 `;
 
@@ -19,7 +19,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
     color="primary"
     onClick={[MockFunction]}
   >
-    <AccessAlarmIcon />
+    <Memo(ForwardRef(AccessAlarmIcon)) />
   </WithStyles(ForwardRef(Fab))>
 </Memo()>
 `;
@@ -33,7 +33,7 @@ exports[`Snapshot Testing Required Props 1`] = `
     color="primary"
     onClick={[MockFunction]}
   >
-    <AccessAlarmIcon />
+    <Memo(ForwardRef(AccessAlarmIcon)) />
   </WithStyles(ForwardRef(Fab))>
 </Memo()>
 `;

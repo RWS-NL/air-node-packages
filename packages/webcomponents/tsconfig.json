@@ -2,6 +2,14 @@
   "extends": "../ts-config/src/tsconfig.json",
   "compilerOptions": {
     "module": "ESNext",
-    "jsx": "react"
-  }
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
+  },
+  "include": [
+    "src"
+  ]
 }

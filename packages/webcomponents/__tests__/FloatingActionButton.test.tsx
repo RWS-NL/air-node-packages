@@ -4,6 +4,7 @@ import { FloatingActionButton } from '@src/FloatingActionButton';
 import { Tooltip } from '@src/Tooltip';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
+import toJson from "enzyme-to-json";
 
 const mockButtonClick = jest.fn();
 
@@ -73,6 +74,6 @@ describe('Snapshot Testing', () => {
       </FloatingActionButton>
     );
 
-    expect(floatingActionButton).toMatchSnapshot();
+    expect(toJson(floatingActionButton)).toMatchSnapshot();
   });
 });

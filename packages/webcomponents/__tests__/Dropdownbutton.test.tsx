@@ -2,6 +2,7 @@ import CloudDownload from '@material-ui/icons/CloudDownload';
 import { Dropdownbutton, DropdownbuttonProps } from '@src/Dropdownbutton';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
+import toJson from "enzyme-to-json";
 
 const mockButtonClick = jest.fn();
 
@@ -72,6 +73,6 @@ describe('Snapshot Testing', () => {
         disabled
       />
     );
-    expect(dropdownButton).toMatchSnapshot();
+    expect(toJson(dropdownButton)).toMatchSnapshot();
   });
 });

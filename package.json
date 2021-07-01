@@ -65,7 +65,6 @@
     "fs-nextra": "^0.5.1",
     "fuse.js": "^6.0.4",
     "glob": "^7.1.6",
-    "jest": "^26.0.1",
     "jest-circus": "^26.0.1",
     "lerna": "^4.0.0",
     "lint-staged": "^10.4.0",

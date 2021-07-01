@@ -1,6 +1,7 @@
 import { ActionBar } from '@src/ActionBar';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
+import toJson from "enzyme-to-json";
 
 const mockCallback = jest.fn();
 
@@ -74,7 +75,7 @@ describe('Snapshot Testing', () => {
         shouldHaveButton
       />
     );
-    expect(actionBar).toMatchSnapshot();
+    expect(toJson(actionBar)).toMatchSnapshot();
   });
 
   test('AdditionalTest', () => {
@@ -88,6 +89,6 @@ describe('Snapshot Testing', () => {
         data-qa='snapshot-qa'
       />
     );
-    expect(actionBar).toMatchSnapshot();
+    expect(toJson(actionBar)).toMatchSnapshot();
   });
 });
