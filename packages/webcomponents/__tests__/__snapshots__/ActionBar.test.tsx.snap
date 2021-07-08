@@ -2,8 +2,8 @@
 
 exports[`Snapshot Testing AdditionalTest 1`] = `
 <Styled(MuiBox)
+  _component="div"
   className="actionBar"
-  component="div"
   data-qa="snapshot-qa"
 >
   <WithStyles(ForwardRef(Grid))
@@ -50,8 +50,8 @@ exports[`Snapshot Testing AdditionalTest 1`] = `
 
 exports[`Snapshot Testing Required Props 1`] = `
 <Styled(MuiBox)
+  _component="div"
   className="actionBar"
-  component="div"
 >
   <WithStyles(ForwardRef(Grid))
     alignItems="center"
@@ -99,8 +99,8 @@ exports[`Snapshot Testing Required Props 1`] = `
 
 exports[`Snapshot Testing With Button 1`] = `
 <Styled(MuiBox)
+  _component="div"
   className="actionBar"
-  component="div"
 >
   <WithStyles(ForwardRef(Grid))
     alignItems="center"
