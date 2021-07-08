@@ -12,7 +12,7 @@
     "lint": "eslint scripts/ packages --fix --ext js,jsx,ts,tsx",
     "style": "prettier --config .prettierrc --write packages/**/*.{scss,tsx,ts,json}",
     "test": "lerna run test",
-    "test:web": "pushd packages/webcomponents && yarn test --watchAll -u && popd",
+    "test:web": "yarn --cwd packages/webcomponents test --watchAll -u",
     "docs": "typedoc",
     "commit": "git-cz",
     "cz": "git-cz",
