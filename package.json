@@ -117,7 +117,7 @@
   },
   "dependencies": {
     "@rws-air/utils": "^5.2.3",
-    "glob-parent": "^5.1.2",
+    "glob-parent": "^6.0.0",
     "is-svg": "^4.2.2"
   }
 }
