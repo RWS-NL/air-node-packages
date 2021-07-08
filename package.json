@@ -7,7 +7,7 @@
   "scripts": {
     "clean": "rm -rf node_modules && rm -rf packages/**/node_modules/ && rm -rf packages/**/dist",
     "pre-build": "tsc -b packages/stylelint-config packages/ts-config packages/user-creator packages/utils packages/commitizen-config packages/utils",
-    "build": "cd packages/webcomponents && yarn && yarn build && cd ../.. && lerna run build",
+    "build": "yarn --cwd packages/webcomponents && yarn --cwd packages/webcomponents build && lerna run build",
     "ci:build": "lerna run ci:build",
     "lint": "eslint scripts/ packages --fix --ext js,jsx,ts,tsx",
     "style": "prettier --config .prettierrc --write packages/**/*.{scss,tsx,ts,json}",
