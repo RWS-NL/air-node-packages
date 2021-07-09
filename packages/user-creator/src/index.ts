@@ -140,12 +140,16 @@ export const exec = () => {
       demand: true
     }).argv;
 
-  if (argv.url.slice(-1) === '/') argv.url = argv.url.slice(0, -1);
+  if (argv instanceof Promise) {
+    console.error('argv is of type Promise which is not supported yet');
+  } else {
+    if (argv.url.slice(-1) === '/') argv.url = argv.url.slice(0, -1);
 
-  try {
-    new UsermanagementAdder(path.resolve(argv.file), argv.username, argv.password, argv.url).run();
-  } catch (err) {
-    console.error(err);
+    try {
+      new UsermanagementAdder(path.resolve(argv.file), argv.username, argv.password, argv.url).run();
+    } catch (err) {
+      console.error(err);
+    }
   }
 };
 
