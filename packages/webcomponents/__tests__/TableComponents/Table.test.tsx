@@ -37,8 +37,8 @@ const page = 0;
 const mockOnRequestSort = jest.fn();
 const mockOnSearchInput = jest.fn();
 const mockOnSearchClear = jest.fn();
-const mockOnChangePage = jest.fn();
-const mockOnChangeRowsPerPage = jest.fn();
+const mockOnPageChange = jest.fn();
+const mockOnRowsPerPageChange = jest.fn();
 
 const propsForTable: TableProps = {
   onsearchclear: mockOnSearchClear,
@@ -50,8 +50,8 @@ const propsForTable: TableProps = {
   rowsPerPage,
   rowsPerPageOptions: [2, 4, 5, 10],
   page,
-  onChangePage: mockOnChangePage,
-  onChangeRowsPerPage: mockOnChangeRowsPerPage,
+  onPageChange: mockOnPageChange,
+  onRowsPerPageChange: mockOnRowsPerPageChange,
   headers: tableHeaders,
   headermapping: dataTableHeaderMapping,
   rowcount: dataForTable.length,
@@ -94,8 +94,8 @@ describe('Component Tests', () => {
     mockOnRequestSort.mockRestore();
     mockOnSearchInput.mockRestore();
     mockOnSearchClear.mockRestore();
-    mockOnChangePage.mockRestore();
-    mockOnChangeRowsPerPage.mockRestore();
+    mockOnPageChange.mockRestore();
+    mockOnRowsPerPageChange.mockRestore();
   });
 
   test('should request sorting on header click', () => {
