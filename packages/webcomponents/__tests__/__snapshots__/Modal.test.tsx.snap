@@ -22,7 +22,7 @@ exports[`Snapshot Testing Required Props 1`] = `
       alignContent="flex-end"
       alignItems="flex-end"
       container={true}
-      justify="space-between"
+      justifyContent="space-between"
     >
       <WithStyles(ForwardRef(Grid))
         item={true}

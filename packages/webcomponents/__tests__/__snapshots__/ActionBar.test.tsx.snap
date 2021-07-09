@@ -11,7 +11,7 @@ exports[`Snapshot Testing AdditionalTest 1`] = `
     className="actionGridLeft"
     container={true}
     direction="row"
-    justify="space-between"
+    justifyContent="space-between"
   >
     <WithStyles(ForwardRef(Grid))
       item={true}
@@ -58,7 +58,7 @@ exports[`Snapshot Testing Required Props 1`] = `
     className="actionGridLeft"
     container={true}
     direction="row"
-    justify="space-between"
+    justifyContent="space-between"
   >
     <WithStyles(ForwardRef(Grid))
       item={true}
@@ -107,7 +107,7 @@ exports[`Snapshot Testing With Button 1`] = `
     className="actionGridLeft"
     container={true}
     direction="row"
-    justify="space-between"
+    justifyContent="space-between"
   >
     <WithStyles(ForwardRef(Grid))
       item={true}

@@ -12,7 +12,7 @@ const Home: FC = () => {
   ];
 
   return (
-    <Grid container direction='column' justify='center' alignItems='stretch' alignContent='center'>
+    <Grid container direction='column' justifyContent='center' alignItems='stretch' alignContent='center'>
       <Grid key={1} item xs={12}>
         <Bar>
           <Logo />

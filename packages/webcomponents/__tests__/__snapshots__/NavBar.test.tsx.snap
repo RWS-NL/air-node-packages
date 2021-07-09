@@ -67,7 +67,7 @@ exports[`NavBar Tests Snapshot Testing Required Props 1`] = `
     alignItems="flex-start"
     container={true}
     direction="row"
-    justify="center"
+    justifyContent="center"
   >
     <WithStyles(ForwardRef(Grid))
       item={true}
