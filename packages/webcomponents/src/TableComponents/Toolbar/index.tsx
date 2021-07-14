@@ -107,7 +107,7 @@ export const Toolbar = memo(
 
     return (
       <div {...props} className={clsx(css.toolbar, customclasses)} data-qa={dataQa}>
-        <Grid container direction='row' justify='flex-end' alignItems='center' spacing={2}>
+        <Grid container direction='row' justifyContent='flex-end' alignItems='center' spacing={2}>
           {extraIcons && extraIcons.length ? renderIcons(extraIcons) : <Fragment />}
           <Grid item key={2}>
             <SearchBar

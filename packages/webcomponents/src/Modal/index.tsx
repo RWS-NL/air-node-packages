@@ -64,7 +64,7 @@ export const Modal = memo(({ DialogContentProps, DialogTitleProps, DialogProps, 
       data-qa={props.modalqas?.modal || 'modal'}
     >
       <DialogTitle {...DialogTitleProps} className={css.title} data-qa={props.modalqas?.title || 'modal-title'}>
-        <Grid container alignContent='flex-end' alignItems='flex-end' justify='space-between'>
+        <Grid container alignContent='flex-end' alignItems='flex-end' justifyContent='space-between'>
           <Grid item>{props.topic}</Grid>
           <Grid item classes={{ root: css.closeIcon }}>
             <IconButton

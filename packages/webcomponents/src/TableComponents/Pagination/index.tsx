@@ -34,8 +34,8 @@ export interface PaginationProps extends MutatedMUITablePaginationProps {
  *   rowsPerPage={10}
  *   page={0}
  *   count={20}
- *   onChangePage={console.log}
- *   onChangeRowsPerPage={console.log}
+ *   onPageChange={console.log}
+ *   onRowsPerPageChange={console.log}
  *   data-qa='table-pagination'
  * />
  * ```
@@ -52,8 +52,10 @@ export const Pagination = memo((props: PaginationProps) => {
       labelDisplayedRows={({ from, to, count }) =>
         `${from <= 9 ? `0${from}` : from}-${to} ${props.labelPaginationOf} ${count}`
       }
-      onChangePage={props.onChangePage}
-      onChangeRowsPerPage={props.onChangeRowsPerPage}
+      // TODO -as- 20210708 on next major MUI release, remove props.onPageChange
+      onPageChange={props.onPageChange || props.onChangePage}
+      // TODO -as- 20210708 on next major MUI release, remove props.onChangeRowsPerPage
+      onRowsPerPageChange={props.onRowsPerPageChange || props.onChangeRowsPerPage}
       className={clsx(css.tablePagination, { [css.tablePaginationMobile]: isOnMobile }, props.customClasses)}
       classes={{ root: css.text, selectIcon: css.selectIcon, menuItem: css.text }}
       rowsPerPage={props.rowsPerPage}
