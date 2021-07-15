@@ -1,11 +1,12 @@
 import { SearchBar } from '@TableComponents/SearchBar';
 import { shallow } from 'enzyme';
 import React from 'react';
+import toJson from "enzyme-to-json";
 
 describe('Snapshot Testing', () => {
   test('Required Props', () => {
     const searchBar = shallow(<SearchBar />);
-    expect(searchBar).toMatchSnapshot();
+    expect(toJson(searchBar)).toMatchSnapshot();
   });
 
   test('Optional Props', () => {
@@ -24,6 +25,6 @@ describe('Snapshot Testing', () => {
         onRequestSearch={jest.fn()}
       />
     );
-    expect(searchBar).toMatchSnapshot();
+    expect(toJson(searchBar)).toMatchSnapshot();
   });
 });
