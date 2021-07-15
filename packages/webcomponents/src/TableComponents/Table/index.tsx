@@ -10,6 +10,7 @@ import { HeaderCell, HeaderCellProps, HeaderProps } from '../HeaderCell';
 import { Pagination, PaginationProps } from '../Pagination';
 import { Toolbar, ToolbarProps } from '../Toolbar';
 import css from './Table.scss';
+import { Optional } from 'utility-types';
 
 export type TableLabels = Pick<ToolbarProps, 'searchplaceholderlabel'> &
   Pick<PaginationProps, 'labelRowsPerPage' | 'labelPaginationOf'> &
@@ -68,9 +69,14 @@ export interface TableProps
       'onsearchclear' | 'onsearchinput' | 'paperElevation' | 'extraIcons' | 'searchdebounce' | 'clearSearch'
     >,
     Pick<HeaderCellProps, 'onRequestSort' | 'orderby' | 'order' | 'tooltipplacement'>,
+    // TODO -as- 20210708 on next major MUI release remove deprecated onChangePage and onChangeRowsPerPage
+    Pick<MUITablePaginationProps, 'onChangePage' | 'onChangeRowsPerPage'>,
+    // TODO -as- 20210709 on next major MUI release onPageChange and onRowsPerPageChange are mandatory.
+    Optional<Pick<MUITablePaginationProps, 'onPageChange' | 'onRowsPerPageChange'>>,
     Pick<
       MUITablePaginationProps,
-      'rowsPerPage' | 'rowsPerPageOptions' | 'page' | 'onChangePage' | 'onChangeRowsPerPage'
+      // TODO -as- 20210709 on next major MUI release onPageChange and onRowsPerPageChange are mandatory.
+      'rowsPerPage' | 'rowsPerPageOptions' | 'page' // | 'onPageChange' | 'onRowsPerPageChange'
     >,
     MUITableProps {
   /** Headers for the table */
@@ -126,15 +132,20 @@ const renderTablePagination = (props: TableProps, customClasses: string) => {
       rowsPerPage={props.rowsPerPage}
       page={props.page}
       count={props.rowcount}
-      onChangePage={props.onChangePage}
-      onChangeRowsPerPage={props.onChangeRowsPerPage}
+      // TODO -as- 20210708 on next major MUI release remove deprecated props.onChangePage
+      onPageChange={(props.onPageChange || props.onChangePage) as any}
+      // TODO -as- 20210708 on next major MUI release remove deprecated props.onChangeRowsPerPage
+      onRowsPerPageChange={props.onRowsPerPageChange || props.onChangeRowsPerPage}
       customClasses={customClasses}
       data-qa={props.tableqas.pagination}
     />
   );
 };
 
-const renderTableHead = (props: TableProps, addCustomClasses: (component: keyof TableCustomClasses, baseClass?: string) => string[]) =>
+const renderTableHead = (
+  props: TableProps,
+  addCustomClasses: (component: keyof TableCustomClasses, baseClass?: string) => string[]
+) => (
   <TableHead data-qa={props.tableqas.header} className={clsx(addCustomClasses('tableHeader'))}>
     <TableRow data-qa={props.tableqas.headerRow} className={clsx(addCustomClasses('tableHeaderRow'))}>
       {props.headers.map((header, index) => (
@@ -154,7 +165,7 @@ const renderTableHead = (props: TableProps, addCustomClasses: (component: keyof 
       ))}
     </TableRow>
   </TableHead>
-
+);
 
 /**
  * Constructs a table using pre-defined Rijkswaterstaat styling
@@ -168,8 +179,8 @@ const renderTableHead = (props: TableProps, addCustomClasses: (component: keyof 
  *   onsearchclear={props.handleSearchClear}
  *   onsearchinput={props.handleSearchInput}
  *   onRequestSort={props.handleRequestSort}
- *   onChangePage={props.handleChangePage}
- *   onChangeRowsPerPage={props.handleChangeRowsPerPage}
+ *   onPageChange={props.handleChangePage}
+ *   onRowsPerPageChange={props.handleChangeRowsPerPage}
  *   tooltipplacement='bottom-start'
  *   order={props.tableOrder}
  *   orderby={props.tableOrderBy}

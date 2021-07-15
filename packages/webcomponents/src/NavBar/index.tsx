@@ -60,7 +60,7 @@ export const NavBar = memo(
           </Tabs>
         </Toolbar>
       </AppBar>
-      <Grid container direction='row' justify='center' alignItems='flex-start'>
+      <Grid container direction='row' justifyContent='center' alignItems='flex-start'>
         <Grid key={1} item xs={12}>
           <ActionBar {...ActionBarProps} title={actionBarTitle} />
         </Grid>

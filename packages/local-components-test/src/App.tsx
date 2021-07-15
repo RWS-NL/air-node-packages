@@ -1,11 +1,11 @@
-import { createMuiTheme, MuiThemeProvider, Theme } from '@material-ui/core/styles';
+import { createTheme, MuiThemeProvider, Theme } from '@material-ui/core/styles';
 import { StylesProvider } from '@material-ui/styles';
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import Home from './Home';
 import { ThemeColours } from './utils/constants';
 
-const createTheme: Theme = createMuiTheme({
+const theme: Theme = createTheme({
   ...ThemeColours,
   typography: {
     fontFamily: ['rijksoverheidsanstext', 'verdana', 'arial', 'sans-serif'].join(','),
@@ -18,7 +18,7 @@ const createTheme: Theme = createMuiTheme({
 
 const App: React.FC = () => (
   <StylesProvider injectFirst>
-    <MuiThemeProvider theme={createTheme}>
+    <MuiThemeProvider theme={theme}>
       <BrowserRouter>
         <Home />
       </BrowserRouter>
