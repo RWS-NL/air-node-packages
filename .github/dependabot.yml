@@ -7,3 +7,9 @@ updates:
     time: '04:30'
     timezone: Europe/Amsterdam
   open-pull-requests-limit: 99
+  ignore:
+    - dependency-name: "rollup-plugin-postcss"
+      # PostCSS 8 is not supported with Create react app 4:
+      # rollup-plugin-postcss requires PostCSS 8
+      # https://github.com/postcss/postcss/wiki/PostCSS-8-for-end-users#create-react-app
+      versions: [ "4.x" ]
