@@ -1471,9 +1471,9 @@
   integrity sha512-utRNxnd9kSS2qhyivo9lMlt5qgAUasH2gb7BEOn6p0efFh24gjGomHzWKMAPn2hEReOPQZCJaRKoURwRotKucQ==
 
 "@discordjs/collection@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@discordjs/collection/-/collection-0.2.0.tgz#ddf93c24956a70d4bc97bdd40027e6f0f2d5dafe"
-  integrity sha512-ZSiyfQsQmJq5EDgTocUg6n7IOft64MH/53RC8q3+Z5Ltipgc6eH1lLyDMJz2fcY/xq5zrILd9LyqFgEdragDNA==
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@discordjs/collection/-/collection-0.2.1.tgz#ea4bc7b41b7b7b6daa82e439141222ec95c469b2"
+  integrity sha512-vhxqzzM8gkomw0TYRF3tgx7SwElzUlXT/Aa41O7mOcyN6wIJfj5JmDWaO5XGKsGSsNx7F3i5oIlrucCCWV1Nog==
 
 "@emotion/hash@^0.8.0":
   version "0.8.0"
