@@ -19,7 +19,7 @@
     "!dist/.tsbuildinfo"
   ],
   "dependencies": {
-    "@commitlint/load": "^12.1.1",
+    "@commitlint/load": "^13.2.1",
     "chalk": "^4.1.0",
     "commitizen": "^4.1.2",
     "lodash.map": "^4.6.0",
