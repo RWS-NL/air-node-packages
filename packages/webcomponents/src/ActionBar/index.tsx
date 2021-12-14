@@ -75,7 +75,13 @@ export const ActionBar = memo(
 
     return (
       <Box component='div' data-qa={dataQa} {...BoxProps} className={clsx(css.actionBar, BoxProps?.className)}>
-        <Grid container direction='row' justifyContent='space-between' alignItems='center' className={css.actionGridLeft}>
+        <Grid
+          container
+          direction='row'
+          justifyContent='space-between'
+          alignItems='center'
+          className={css.actionGridLeft}
+        >
           <Grid item key={1} xs={6}>
             {getTitle}
           </Grid>
