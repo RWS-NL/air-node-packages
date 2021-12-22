@@ -40,21 +40,21 @@ exports[`NavBar Tests Snapshot Testing Required Props 1`] = `
         variant="standard"
       >
         <Memo()
-          data-qa="link-tab-0"
+          data-qa="link-tab-root"
           external={false}
           key="0"
           label="root"
           to="/root"
         />
         <Memo()
-          data-qa="link-tab-1"
+          data-qa="link-tab-cgi"
           external={true}
           key="1"
           label="CGI"
           to="https://cgi.com"
         />
         <Memo()
-          data-qa="link-tab-2"
+          data-qa="link-tab-rijkswaterstaat"
           external={true}
           key="2"
           label="Rijkswaterstaat"

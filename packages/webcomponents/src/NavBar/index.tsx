@@ -54,7 +54,7 @@ export const NavBar = memo(
                 label={tab.label}
                 to={tab.to}
                 external={tab.external}
-                data-qa={`link-tab-${index}`}
+                data-qa={`link-tab-${tab.label.toLowerCase().replace(/\s/g, '')}`}
               />
             ))}
           </Tabs>
