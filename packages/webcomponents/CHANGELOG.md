@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.3.6](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@14.3.5...@rws-air/webcomponents@14.3.6) (2021-12-22)
+
+
+### Bug Fixes
+
+* **navbar:** changed the data-qa tag for NavBar LinkTab to use label instead of ID ([e4ba010](https://github.com/RWS-NL/air-node-packages/commit/e4ba0105da1e35cff8c32e9932aad5422a98f941))
+
+
+
+
+
 ## [14.3.5](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@14.3.4...@rws-air/webcomponents@14.3.5) (2021-12-14)
 
 
