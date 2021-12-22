@@ -79,7 +79,7 @@ export const HeaderCell = memo((props: HeaderCellProps) => {
     <MUITableCell
       data-qa={props['data-qa']}
       align={props.header.numeric ? 'right' : 'left'}
-      padding={props.header.disablePadding ? 'none' : 'default'}
+      padding={props.header.disablePadding ? 'none' : 'normal'}
       sortDirection={props.orderby === props.header.label ? props.order : false}
       className={clsx(css.tableCells, { [css.actionHeaderCell]: props.isActionButtonCell }, props.customclasses)}
     >
