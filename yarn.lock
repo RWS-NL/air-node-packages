@@ -1501,10 +1501,10 @@
   resolved "https://registry.yarnpkg.com/@favware/querystring/-/querystring-7.0.3.tgz#45f54e2530f127a6fb9dfcabd573bcb7d3665c4e"
   integrity sha512-zWKHF9Ugk6GfPsgD5EBMpR29mcjCOw5WLcLCuAuG/6HdKAoz5/FZ+ZTJHBGcrsz1pl+mxZ9KbkJf4K9UmDXnOw==
 
-"@favware/yamlreader@^4.0.0":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@favware/yamlreader/-/yamlreader-4.0.1.tgz#14a7e4b2f3c986df06aad056573f23bd4732d120"
-  integrity sha512-73RZRzAh6JiImOMsUMCjcvG0Uut19zNbXEN9pRdAdxQtypNVY5l/9k25BIR6VIbl9txHcJeGnh/SwsQ7CoDBDg==
+"@favware/yamlreader@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@favware/yamlreader/-/yamlreader-4.0.2.tgz#4391e874202097f86bcbb842cf170a425a6323fd"
+  integrity sha512-EdQ1A0unrEHHbZw8hFT/seH3e+NvncdNJf1xMV69IvKs53y0nhUhCvP/ZPBteUFHUSnk3Qi6Q1BPUZlrUCNbBA==
   dependencies:
     js-yaml "^4.1.0"
 
@@ -8689,7 +8689,7 @@ html-entities@^1.3.1:
   resolved "https://registry.yarnpkg.com/html-entities/-/html-entities-1.3.1.tgz#fb9a1a4b5b14c5daba82d3e34c6ae4fe701a0e44"
   integrity sha512-rhE/4Z3hIhzHAUKbW8jVcCyuT5oJCXXqhN/6mXXVCpzTmvJnoH2HL/bt3EZ6p55jbFJBeAe1ZNpL5BugLujxNA==
 
-html-escaper@^2.0.0:
+html-escaper@^2.0.0, html-escaper@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/html-escaper/-/html-escaper-2.0.2.tgz#dfd60027da36a36dfcbe236262c00a5822681453"
   integrity sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==
@@ -14071,12 +14071,13 @@ react-fast-compare@^2.0.1:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
   integrity sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==
 
-react-i18next@^11.7.3:
-  version "11.11.3"
-  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-11.11.3.tgz#38d083bb079c3e6ee376b3321b0d6e409d798f68"
-  integrity sha512-upzG5/SpyOlYP5oSF4K8TZBvDWVhnCo38JNV+KnWjrg0+IaJCBltyh6lRGZDO5ovLyA4dU6Ip0bwbUCjb6Yyxw==
+react-i18next@^11.15.3:
+  version "11.15.3"
+  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-11.15.3.tgz#7608fb3cacc02ac75a62fc2d68b579f140b198dd"
+  integrity sha512-RSUEM4So3Tu2JHV0JsZ5Yje+4nz66YViMfPZoywxOy0xyn3L7tE2CHvJ7Y9LUsrTU7vGmZ5bwb8PpjnkatdIxg==
   dependencies:
     "@babel/runtime" "^7.14.5"
+    html-escaper "^2.0.2"
     html-parse-stringify "^3.0.1"
 
 react-if@^4.0.1:
