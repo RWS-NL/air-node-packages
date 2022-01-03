@@ -42,7 +42,7 @@ exports[`Snapshot Testing Required Props 1`] = `
     }
     data-qa="modal-actions"
   >
-    <Memo([object Object])
+    <Memo(ForwardRef)
       color="primary"
       customclasses="modalButtonCancel"
       data-qa="modal-cancel-button"
@@ -62,7 +62,7 @@ exports[`Snapshot Testing Required Props 1`] = `
       }
       variant="outlined"
     />
-    <Memo([object Object])
+    <Memo(ForwardRef)
       color="primary"
       customclasses="modalButtonOk"
       data-qa="modal-confirm-button"
