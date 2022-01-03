@@ -32,7 +32,7 @@ const options = {
         }
       }
     });
-  } catch (err) {
+  } catch (err: any) {
     throw new Error(err);
   }
 })(options);
