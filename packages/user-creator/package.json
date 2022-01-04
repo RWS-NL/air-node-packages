@@ -24,7 +24,7 @@
   "dependencies": {
     "@favware/yamlreader": "^4.0.2",
     "node-fetch": "^2.6.1",
-    "yargs": "^17.0.1"
+    "yargs": "^17.3.1"
   },
   "publishConfig": {
     "access": "public"
