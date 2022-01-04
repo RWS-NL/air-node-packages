@@ -10,7 +10,6 @@ export const config = {
     'declaration-block-no-shorthand-property-overrides': true,
     'declaration-empty-line-before': 'never',
     'font-family-name-quotes': 'always-where-recommended',
-    'function-calc-no-invalid': true,
     'max-nesting-depth': [3, { ignoreAtRules: ['each', 'media', 'supports', 'include'] }],
     'no-invalid-double-slash-comments': null,
     'number-max-precision': 2,
