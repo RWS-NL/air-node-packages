@@ -9,7 +9,8 @@
     "declaration": false,
     "declarationMap": false,
     "resolveJsonModule": true,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "skipLibCheck": true
   },
   "include": ["src"]
 }
