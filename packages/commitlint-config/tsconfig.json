@@ -5,7 +5,8 @@
     "rootDir": "src",
     "module": "CommonJS",
     "tsBuildInfoFile": "dist/.tsbuildinfo",
-    "sourceMap": false
+    "sourceMap": false,
+    "skipLibCheck": true
   },
   "include": ["src"]
 }
