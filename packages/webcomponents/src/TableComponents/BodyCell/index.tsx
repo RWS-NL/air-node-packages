@@ -1,4 +1,4 @@
-import MUITableCell, { TableCellProps as MUITableCellProps } from '@material-ui/core/TableCell';
+import MUITableCell, { TableCellProps as MUITableCellProps } from '@mui/material/TableCell';
 import clsx from 'clsx';
 import React, { memo, ReactNode } from 'react';
 import css from './BodyCell.scss';

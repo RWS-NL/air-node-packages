@@ -6,7 +6,7 @@ module.exports = {
   testRunner: 'jest-circus/runner',
   globals: {
     'ts-jest': {
-      tsConfig: '<rootDir>/__tests__/tsconfig.json'
+      tsconfig: '<rootDir>/__tests__/tsconfig.json'
     }
   }
 };

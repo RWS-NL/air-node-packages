@@ -1,27 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UserInfo tests Snapshot Testing Required Props 1`] = `
-<Styled(MuiBox)
+<ForwardRef(Box)
   className="authInfo"
   component="div"
 >
-  <Styled(MuiBox)
+  <ForwardRef(Box)
     component="div"
     data-qa="logged-in-email"
   >
     <When
       condition={true}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         align="center"
         color="textPrimary"
         variant="subtitle2"
       >
         john.connor@rws.nl
-      </WithStyles(ForwardRef(Typography))>
+      </ForwardRef(Typography)>
     </When>
-  </Styled(MuiBox)>
-  <WithStyles(ForwardRef(Button))
+  </ForwardRef(Box)>
+  <ForwardRef(Button)
     className="relogin"
     data-qa="re-login-link"
     onClick={
@@ -39,13 +39,13 @@ exports[`UserInfo tests Snapshot Testing Required Props 1`] = `
     }
     size="small"
   >
-    <WithStyles(ForwardRef(Typography))
+    <ForwardRef(Typography)
       align="center"
       color="textPrimary"
       variant="subtitle2"
     >
       relogin
-    </WithStyles(ForwardRef(Typography))>
-  </WithStyles(ForwardRef(Button))>
-</Styled(MuiBox)>
+    </ForwardRef(Typography)>
+  </ForwardRef(Button)>
+</ForwardRef(Box)>
 `;

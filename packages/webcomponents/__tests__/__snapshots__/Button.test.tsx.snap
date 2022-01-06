@@ -1,17 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Snapshot Testing Optional Props 1`] = `
-<WithStyles(ForwardRef(Button))
+<Styled(ForwardRef(Button))
   className="sample-class"
   classes={
     Object {
-      "containedPrimary": "buttonPrimary makeStyles-buttonShadow-1",
-      "containedSecondary": "buttonSecondary makeStyles-buttonShadow-1",
+      "containedPrimary": "buttonPrimary Button-buttonShadow",
+      "containedSecondary": "buttonSecondary Button-buttonShadow",
       "disabled": "buttonDisabled",
-      "label": "buttonLabel",
-      "outlined": "buttonOutlined makeStyles-buttonShadow-1",
-      "outlinedPrimary": "buttonOutlined makeStyles-buttonShadow-1",
-      "outlinedSecondary": "buttonOutlinedSecondary makeStyles-buttonShadow-1",
+      "outlined": "buttonOutlined Button-buttonShadow",
+      "outlinedPrimary": "buttonOutlined Button-buttonShadow",
+      "outlinedSecondary": "buttonOutlinedSecondary Button-buttonShadow",
       "root": "button",
     }
   }
@@ -46,21 +45,20 @@ exports[`Snapshot Testing Optional Props 1`] = `
   <div>
     snapshot label
   </div>
-</WithStyles(ForwardRef(Button))>
+</Styled(ForwardRef(Button))>
 `;
 
 exports[`Snapshot Testing Required Props 1`] = `
-<WithStyles(ForwardRef(Button))
+<Styled(ForwardRef(Button))
   className=""
   classes={
     Object {
-      "containedPrimary": "buttonPrimary makeStyles-buttonShadow-1",
-      "containedSecondary": "buttonSecondary makeStyles-buttonShadow-1",
+      "containedPrimary": "buttonPrimary Button-buttonShadow",
+      "containedSecondary": "buttonSecondary Button-buttonShadow",
       "disabled": "buttonDisabled",
-      "label": "buttonLabel",
-      "outlined": "buttonOutlined makeStyles-buttonShadow-1",
-      "outlinedPrimary": "buttonOutlined makeStyles-buttonShadow-1",
-      "outlinedSecondary": "buttonOutlinedSecondary makeStyles-buttonShadow-1",
+      "outlined": "buttonOutlined Button-buttonShadow",
+      "outlinedPrimary": "buttonOutlined Button-buttonShadow",
+      "outlinedSecondary": "buttonOutlinedSecondary Button-buttonShadow",
       "root": "button",
     }
   }
@@ -82,21 +80,20 @@ exports[`Snapshot Testing Required Props 1`] = `
   variant="contained"
 >
   test
-</WithStyles(ForwardRef(Button))>
+</Styled(ForwardRef(Button))>
 `;
 
 exports[`Snapshot Testing Varying Props 1`] = `
-<WithStyles(ForwardRef(Button))
+<Styled(ForwardRef(Button))
   className=""
   classes={
     Object {
-      "containedPrimary": "buttonPrimary makeStyles-buttonShadow-1",
-      "containedSecondary": "buttonSecondary makeStyles-buttonShadow-1",
+      "containedPrimary": "buttonPrimary Button-buttonShadow",
+      "containedSecondary": "buttonSecondary Button-buttonShadow",
       "disabled": "buttonDisabled",
-      "label": "buttonLabel",
-      "outlined": "buttonOutlined makeStyles-buttonShadow-1",
-      "outlinedPrimary": "buttonOutlined makeStyles-buttonShadow-1",
-      "outlinedSecondary": "buttonOutlinedSecondary makeStyles-buttonShadow-1",
+      "outlined": "buttonOutlined Button-buttonShadow",
+      "outlinedPrimary": "buttonOutlined Button-buttonShadow",
+      "outlinedSecondary": "buttonOutlinedSecondary Button-buttonShadow",
       "root": "button",
     }
   }
@@ -124,5 +121,5 @@ exports[`Snapshot Testing Varying Props 1`] = `
   <div>
     snapshot label
   </div>
-</WithStyles(ForwardRef(Button))>
+</Styled(ForwardRef(Button))>
 `;

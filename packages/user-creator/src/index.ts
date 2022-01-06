@@ -67,7 +67,7 @@ export class UsermanagementAdder {
           Authorization: `Basic ${Buffer.from(`${this.username}:${this.password}`).toString('base64')}`
         }
       });
-      const data: ResponseData = await response.json();
+      const data: ResponseData = await response.json() as ResponseData;
 
       console.log(`Added user with email ${user.email}, they got ID ${data.id}`);
 

@@ -1,8 +1,8 @@
-import MUITable, { TableProps as MUITableProps } from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableHead from '@material-ui/core/TableHead';
-import { TablePaginationProps as MUITablePaginationProps } from '@material-ui/core/TablePagination';
-import TableRow from '@material-ui/core/TableRow';
+import MUITable, { TableProps as MUITableProps } from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableHead from '@mui/material/TableHead';
+import { TablePaginationProps as MUITablePaginationProps } from '@mui/material/TablePagination';
+import TableRow from '@mui/material/TableRow';
 import clsx from 'clsx';
 import React, { Fragment, memo, ReactNode } from 'react';
 import { When } from 'react-if';
@@ -10,7 +10,6 @@ import { HeaderCell, HeaderCellProps, HeaderProps } from '../HeaderCell';
 import { Pagination, PaginationProps } from '../Pagination';
 import { Toolbar, ToolbarProps } from '../Toolbar';
 import css from './Table.scss';
-import { Optional } from 'utility-types';
 
 export type TableLabels = Pick<ToolbarProps, 'searchplaceholderlabel'> &
   Pick<PaginationProps, 'labelRowsPerPage' | 'labelPaginationOf'> &
@@ -69,14 +68,10 @@ export interface TableProps
       'onsearchclear' | 'onsearchinput' | 'paperElevation' | 'extraIcons' | 'searchdebounce' | 'clearSearch'
     >,
     Pick<HeaderCellProps, 'onRequestSort' | 'orderby' | 'order' | 'tooltipplacement'>,
-    // TODO -as- 20210708 on next major MUI release remove deprecated onChangePage and onChangeRowsPerPage
-    Pick<MUITablePaginationProps, 'onChangePage' | 'onChangeRowsPerPage'>,
-    // TODO -as- 20210709 on next major MUI release onPageChange and onRowsPerPageChange are mandatory.
-    Optional<Pick<MUITablePaginationProps, 'onPageChange' | 'onRowsPerPageChange'>>,
+    Pick<MUITablePaginationProps, 'onPageChange' | 'onRowsPerPageChange'>,
     Pick<
       MUITablePaginationProps,
-      // TODO -as- 20210709 on next major MUI release onPageChange and onRowsPerPageChange are mandatory.
-      'rowsPerPage' | 'rowsPerPageOptions' | 'page' // | 'onPageChange' | 'onRowsPerPageChange'
+      'rowsPerPage' | 'rowsPerPageOptions' | 'page' | 'onPageChange' | 'onRowsPerPageChange'
     >,
     MUITableProps {
   /** Headers for the table */
@@ -132,10 +127,8 @@ const renderTablePagination = (props: TableProps, customClasses: string) => {
       rowsPerPage={props.rowsPerPage}
       page={props.page}
       count={props.rowcount}
-      // TODO -as- 20210708 on next major MUI release remove deprecated props.onChangePage
-      onPageChange={(props.onPageChange || props.onChangePage) as any}
-      // TODO -as- 20210708 on next major MUI release remove deprecated props.onChangeRowsPerPage
-      onRowsPerPageChange={props.onRowsPerPageChange || props.onChangeRowsPerPage}
+      onPageChange={(props.onPageChange) as any}
+      onRowsPerPageChange={props.onRowsPerPageChange}
       customClasses={customClasses}
       data-qa={props.tableqas.pagination}
     />

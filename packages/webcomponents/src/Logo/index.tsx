@@ -1,10 +1,10 @@
-import { CSSProperties } from '@material-ui/styles';
+import { SxProps } from '@mui/material';
 import React, { memo, SVGProps } from 'react';
 import { ReactComponent as LogoSVG } from './logo.svg';
 
 export interface LogoProps extends SVGProps<any> {
   /** Any additional CSSProperties to pass to the component */
-  style?: CSSProperties;
+  sx?: SxProps;
   /** Data-qa tag to apply to the search bar and input element */
   'data-qa'?: string;
 }

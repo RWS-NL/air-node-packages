@@ -1,5 +1,5 @@
-import MUITableCell, { TableCellProps as MUITableCellProps } from '@material-ui/core/TableCell';
-import TableSortLabel from '@material-ui/core/TableSortLabel';
+import MUITableCell, { TableCellProps as MUITableCellProps } from '@mui/material/TableCell';
+import TableSortLabel from '@mui/material/TableSortLabel';
 import clsx from 'clsx';
 import React, { memo, ReactNode } from 'react';
 import { Tooltip, TooltipProps } from '../../Tooltip';

@@ -1,4 +1,4 @@
-import { IconButton } from '@material-ui/core';
+import { IconButton } from '@mui/material';
 import { Button } from '@src/Button';
 import { Modal, ModalProps } from '@src/Modal';
 import { shallow, ShallowWrapper } from 'enzyme';
@@ -27,7 +27,6 @@ describe('Render Testing', () => {
   test('should include mandatory props', () => {
     setup();
     expect(modal.find(Button)).toHaveLength(0);
-    expect(modal.prop('disableBackdropClick')).toBe(true);
     expect(modal.prop('disableEscapeKeyDown')).toBe(true);
   });
 

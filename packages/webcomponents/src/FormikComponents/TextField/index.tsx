@@ -1,7 +1,7 @@
-import { TextField as MUITextField } from '@material-ui/core';
+import { TextField as MUITextField } from '@mui/material';
 import clsx from 'clsx';
 import { useField } from 'formik';
-import { fieldToTextField, TextFieldProps } from 'formik-material-ui';
+import { fieldToTextField, TextFieldProps } from 'formik-mui';
 import React, { FC } from 'react';
 import css from './TextField.scss';
 

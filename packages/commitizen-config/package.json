@@ -19,7 +19,7 @@
     "!dist/.tsbuildinfo"
   ],
   "dependencies": {
-    "@commitlint/load": "^12.1.1",
+    "@commitlint/load": "^16.0.0",
     "chalk": "^4.1.0",
     "commitizen": "^4.1.2",
     "lodash.map": "^4.6.0",
@@ -30,7 +30,7 @@
   "devDependencies": {
     "@types/common-tags": "1.8.1",
     "@types/lodash.map": "^4.6.13",
-    "common-tags": "1.8.0"
+    "common-tags": "1.8.2"
   },
   "publishConfig": {
     "access": "public"

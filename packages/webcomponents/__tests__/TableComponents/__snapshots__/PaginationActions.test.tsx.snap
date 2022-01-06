@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Snapshot Testing Optional Props 1`] = `
-<Styled(MuiBox)
+<ForwardRef(Box)
   style={
     Object {
       "alignItems": "center",
@@ -12,88 +12,86 @@ exports[`Snapshot Testing Optional Props 1`] = `
   <Memo()
     data-qa="first-page-button"
     disabled={true}
-    icon={<Memo(FirstPageIcon) />}
+    icon={<Memo />}
     onClick={[Function]}
   />
   <Memo()
     data-qa="previous-page-button"
     disabled={true}
-    icon={<Memo(KeyboardArrowLeftIcon) />}
+    icon={<Memo />}
     onClick={[Function]}
   />
   <If
     condition={false}
   >
     <Then>
-      <WithStyles(ForwardRef(Chip))
+      <ForwardRef(Chip)
         className="activePageChip ie11ChipCorrection"
         color="primary"
         key="1"
         label={1}
         onClick={[Function]}
-        variant="default"
       />
     </Then>
     <Else>
-      <WithStyles(ForwardRef(Chip))
+      <ForwardRef(Chip)
         className="activePageChip ie11ChipCorrection"
         color="primary"
         key="0"
         label={1}
         onClick={[Function]}
-        variant="default"
       />
-      <Styled(MuiBox)
+      <ForwardRef(Box)
         className="paginationNumbers"
         component="span"
         key="1"
         onClick={[Function]}
       >
         2
-      </Styled(MuiBox)>
-      <Styled(MuiBox)
+      </ForwardRef(Box)>
+      <ForwardRef(Box)
         className="paginationNumbers"
         component="span"
         key="2"
         onClick={[Function]}
       >
         3
-      </Styled(MuiBox)>
-      <Styled(MuiBox)
+      </ForwardRef(Box)>
+      <ForwardRef(Box)
         className="paginationNumbers"
         component="span"
         key="3"
         onClick={[Function]}
       >
         4
-      </Styled(MuiBox)>
-      <Styled(MuiBox)
+      </ForwardRef(Box)>
+      <ForwardRef(Box)
         className="paginationNumbers"
         component="span"
         key="4"
         onClick={[Function]}
       >
         5
-      </Styled(MuiBox)>
+      </ForwardRef(Box)>
     </Else>
   </If>
   <Memo()
     data-qa="next-page-button"
     disabled={false}
-    icon={<Memo(KeyboardArrowRightIcon) />}
+    icon={<Memo />}
     onClick={[Function]}
   />
   <Memo()
     data-qa="last-page-button"
     disabled={false}
-    icon={<Memo(LastPageIcon) />}
+    icon={<Memo />}
     onClick={[Function]}
   />
-</Styled(MuiBox)>
+</ForwardRef(Box)>
 `;
 
 exports[`Snapshot Testing Required Props 1`] = `
-<Styled(MuiBox)
+<ForwardRef(Box)
   style={
     Object {
       "alignItems": "center",
@@ -104,82 +102,80 @@ exports[`Snapshot Testing Required Props 1`] = `
   <Memo()
     data-qa="first-page-button"
     disabled={true}
-    icon={<Memo(FirstPageIcon) />}
+    icon={<Memo />}
     onClick={[Function]}
   />
   <Memo()
     data-qa="previous-page-button"
     disabled={true}
-    icon={<Memo(KeyboardArrowLeftIcon) />}
+    icon={<Memo />}
     onClick={[Function]}
   />
   <If
     condition={false}
   >
     <Then>
-      <WithStyles(ForwardRef(Chip))
+      <ForwardRef(Chip)
         className="activePageChip ie11ChipCorrection"
         color="primary"
         key="1"
         label={1}
         onClick={[Function]}
-        variant="default"
       />
     </Then>
     <Else>
-      <WithStyles(ForwardRef(Chip))
+      <ForwardRef(Chip)
         className="activePageChip ie11ChipCorrection"
         color="primary"
         key="0"
         label={1}
         onClick={[Function]}
-        variant="default"
       />
-      <Styled(MuiBox)
+      <ForwardRef(Box)
         className="paginationNumbers"
         component="span"
         key="1"
         onClick={[Function]}
       >
         2
-      </Styled(MuiBox)>
-      <Styled(MuiBox)
+      </ForwardRef(Box)>
+      <ForwardRef(Box)
         className="paginationNumbers"
         component="span"
         key="2"
         onClick={[Function]}
       >
         3
-      </Styled(MuiBox)>
-      <Styled(MuiBox)
+      </ForwardRef(Box)>
+      <ForwardRef(Box)
         className="paginationNumbers"
         component="span"
         key="3"
         onClick={[Function]}
       >
         4
-      </Styled(MuiBox)>
-      <Styled(MuiBox)
+      </ForwardRef(Box)>
+      <ForwardRef(Box)
         className="paginationNumbers"
         component="span"
         key="4"
         onClick={[Function]}
       >
         5
-      </Styled(MuiBox)>
+      </ForwardRef(Box)>
     </Else>
   </If>
   <Memo()
     data-qa="next-page-button"
     disabled={false}
-    icon={<Memo(KeyboardArrowRightIcon) />}
+    icon={<Memo />}
     onClick={[Function]}
   />
   <Memo()
     data-qa="last-page-button"
     disabled={false}
-    icon={<Memo(LastPageIcon) />}
+    icon={<Memo />}
     onClick={[Function]}
   />
-</Styled(MuiBox)>
+</ForwardRef(Box)>
 `;

@@ -1,5 +1,5 @@
 import { SelectMenuMultiple } from '@FormikComponents/SelectMenuMultiple';
-import { Box, Chip } from '@material-ui/core';
+import { Box, Chip } from '@mui/material';
 import { shallow } from 'enzyme';
 import { Field, Formik } from 'formik';
 import React from 'react';

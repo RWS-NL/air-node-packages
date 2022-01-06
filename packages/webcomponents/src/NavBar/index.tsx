@@ -1,5 +1,5 @@
-import { AppBar, AppBarProps, Grid, Tabs, TabsProps, Toolbar, ToolbarProps } from '@material-ui/core';
-import React, { ChangeEvent, Fragment, memo } from 'react';
+import { AppBar, AppBarProps, Grid, Tabs, TabsProps, Toolbar, ToolbarProps } from '@mui/material';
+import React, { Fragment, memo, SyntheticEvent } from 'react';
 import { ActionBar, ActionBarProps } from '../ActionBar';
 import { LinkTab, LinkTabProps } from '../LinkTab';
 import css from './NavBar.scss';
@@ -15,7 +15,7 @@ export interface NavBarProps {
    */
   activeTab: number;
   /** Function to trigger when changing tabs */
-  onTabChange(_event: ChangeEvent<Record<PropertyKey, unknown>>, newValue: number): void;
+  onTabChange(_event: SyntheticEvent<Element, Event>, newValue: number): void;
 
   /** Additional props to pass to the AppBar component */
   AppBarProps?: AppBarProps;

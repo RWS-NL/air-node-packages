@@ -1,6 +1,6 @@
 import React, { FC, ChangeEvent, useState } from 'react';
 import { Bar, Logo, NavBar, UserInfo, LinkTabProps } from '@rws-air/webcomponents';
-import { Grid } from '@material-ui/core';
+import { Grid } from '@mui/material';
 
 const Home: FC = () => {
   const [activeTab, setActiveTab] = useState(1);

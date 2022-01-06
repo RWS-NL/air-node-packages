@@ -1,9 +1,9 @@
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import CheckCircle from '@material-ui/icons/CheckCircle';
-import WarningIcon from '@material-ui/icons/Warning';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogTitle from '@mui/material/DialogTitle';
+import CheckCircle from '@mui/icons-material/CheckCircle';
+import WarningIcon from '@mui/icons-material/Warning';
 import clsx from 'clsx';
 import React, { Fragment, KeyboardEvent, memo, useMemo } from 'react';
 import { Button } from '../Button';
@@ -96,12 +96,16 @@ export const ConfirmationModal = memo((props: ConfirmationModalProps) => {
 
   return (
     <Dialog
-      disableBackdropClick
       disableEscapeKeyDown
       open={Boolean(props.open)}
       classes={{ root: css.modal }}
       onKeyPress={handleConfirmKeyPress}
       data-qa={props.modalqas?.modal || 'modal'}
+      onClose={(_event, reason) => {
+        if (reason !== 'backdropClick') {
+          props.closeAction();
+        }
+      }}
     >
       <DialogTitle data-qa={props.modalqas?.title || 'modal-title'} className={clsx(css.title, css.titleIconOffset)}>
         <Fragment>

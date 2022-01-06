@@ -1,4 +1,4 @@
-import Grid from '@material-ui/core/Grid/Grid';
+import Grid from '@mui/material/Grid';
 import clsx from 'clsx';
 import debouncer from 'lodash.debounce';
 import React, { Fragment, memo, ReactNode } from 'react';

@@ -4,10 +4,10 @@ exports[`Merge Objects Function Snapshot 1`] = `
 "function mergeObjects(objTarget, objSource) {
     for (const [key, value] of Object.entries(objSource)) {
         const targetValue = objTarget[key];
-        if (IsObject_1.isObject(value)) {
-            Reflect.set(objTarget, key, IsObject_1.isObject(targetValue) ? mergeObjects(targetValue, value) : value);
+        if ((0, IsObject_1.isObject)(value)) {
+            Reflect.set(objTarget, key, (0, IsObject_1.isObject)(targetValue) ? mergeObjects(targetValue, value) : value);
         }
-        else if (!IsObject_1.isObject(targetValue)) {
+        else if (!(0, IsObject_1.isObject)(targetValue)) {
             Reflect.set(objTarget, key, value);
         }
     }

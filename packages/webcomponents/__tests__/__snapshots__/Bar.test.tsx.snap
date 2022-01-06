@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render as expected 1`] = `
-<Styled(MuiBox)
+<ForwardRef(Box)
   className="bar blue-bar"
   component="div"
 >
   <p>
     child
   </p>
-</Styled(MuiBox)>
+</ForwardRef(Box)>
 `;

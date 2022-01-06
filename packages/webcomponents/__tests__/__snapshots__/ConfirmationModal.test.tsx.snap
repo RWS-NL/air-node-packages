@@ -1,29 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Snapshot Testing Required Props 1`] = `
-<WithStyles(ForwardRef(Dialog))
+<ForwardRef(Dialog)
   classes={
     Object {
       "root": "modal",
     }
   }
   data-qa="modal"
-  disableBackdropClick={true}
   disableEscapeKeyDown={true}
+  onClose={[Function]}
   onKeyPress={[Function]}
   open={false}
 >
-  <WithStyles(ForwardRef(DialogTitle))
+  <ForwardRef(DialogTitle)
     className="title titleIconOffset"
     data-qa="modal-title"
   >
-    <WarningIcon
+    <Memo(ForwardRef(WarningIcon))
       className="titleIcon"
       color="error"
     />
     Awesome Topic
-  </WithStyles(ForwardRef(DialogTitle))>
-  <WithStyles(ForwardRef(DialogContent))
+  </ForwardRef(DialogTitle)>
+  <ForwardRef(DialogContent)
     className="modalContentSmall"
     classes={
       Object {
@@ -33,8 +33,8 @@ exports[`Snapshot Testing Required Props 1`] = `
     data-qa="modal-content"
   >
     <Component />
-  </WithStyles(ForwardRef(DialogContent))>
-  <WithStyles(ForwardRef(DialogActions))
+  </ForwardRef(DialogContent)>
+  <ForwardRef(DialogActions)
     classes={
       Object {
         "root": "modalActions",
@@ -42,7 +42,7 @@ exports[`Snapshot Testing Required Props 1`] = `
     }
     data-qa="modal-actions"
   >
-    <Memo([object Object])
+    <Memo(ForwardRef)
       color="primary"
       customclasses="modalButtonCancel"
       data-qa="modal-cancel-button"
@@ -62,7 +62,7 @@ exports[`Snapshot Testing Required Props 1`] = `
       }
       variant="outlined"
     />
-    <Memo([object Object])
+    <Memo(ForwardRef)
       color="primary"
       customclasses="modalButtonOk"
       data-qa="modal-confirm-button"
@@ -82,6 +82,6 @@ exports[`Snapshot Testing Required Props 1`] = `
       }
       variant="contained"
     />
-  </WithStyles(ForwardRef(DialogActions))>
-</WithStyles(ForwardRef(Dialog))>
+  </ForwardRef(DialogActions)>
+</ForwardRef(Dialog)>
 `;

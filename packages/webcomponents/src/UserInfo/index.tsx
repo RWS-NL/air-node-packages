@@ -1,4 +1,4 @@
-import { Box, Button, ButtonProps, Typography, TypographyProps } from '@material-ui/core';
+import { Box, Button, ButtonProps, Typography, TypographyProps } from '@mui/material';
 import React, { memo, ReactNode } from 'react';
 import { When } from 'react-if';
 import css from './UserInfo.scss';

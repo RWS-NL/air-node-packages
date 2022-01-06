@@ -1,16 +1,16 @@
-import Box from '@material-ui/core/Box';
-import Chip from '@material-ui/core/Chip';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-import FirstPageIcon from '@material-ui/icons/FirstPage';
-import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
-import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
-import LastPageIcon from '@material-ui/icons/LastPage';
+import Box from '@mui/material/Box';
+import Chip from '@mui/material/Chip';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import FirstPageIcon from '@mui/icons-material/FirstPage';
+import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
+import LastPageIcon from '@mui/icons-material/LastPage';
 import clsx from 'clsx';
 import React, { memo } from 'react';
 import { Else, If, Then } from 'react-if';
 import css from './PaginationActions.scss';
 import { PaginationButton, PaginationButtonProps } from './PaginationButton';
-import { TablePaginationActionsProps } from '@material-ui/core/TablePagination/TablePaginationActions';
+import { TablePaginationActionsProps } from '@mui/material/TablePagination/TablePaginationActions';
 
 const FIRST_PAGE_INDEX = 0;
 
@@ -26,7 +26,7 @@ const renderCurrentPage = (key: number, pageNumber: number, clickEvent: ChangePa
     key={key}
     label={pageNumber}
     color='primary'
-    variant='default'
+    variant={undefined}
     onClick={clickEvent(pageNumber - 1)}
     className={clsx(css.activePageChip, css.ie11ChipCorrection)}
   />

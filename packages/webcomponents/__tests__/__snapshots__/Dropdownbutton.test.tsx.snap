@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Snapshot Testing Optional Props 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   direction="column"
   item={true}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(ButtonGroup))
+    <ForwardRef(ButtonGroup)
       aria-label="split button"
       className="buttonGroup"
       classes={
@@ -22,7 +22,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
       disabled={true}
       variant="outlined"
     >
-      <Memo([object Object])
+      <Memo(ForwardRef)
         aria-haspopup="true"
         className="buttonOverwritesLeft"
         color="secondary"
@@ -30,17 +30,17 @@ exports[`Snapshot Testing Optional Props 1`] = `
         label="one"
         onClick={[Function]}
         size="small"
-        startIcon={<Memo(ArrowDropDownIcon) />}
+        startIcon={<Memo />}
         variant="outlined"
       />
-      <Memo([object Object])
+      <Memo(ForwardRef)
         className="buttonOverwritesRight"
         color="secondary"
-        label={<Memo(CloudDownloadIcon) />}
+        label={<Memo />}
         onClick={[Function]}
         variant="outlined"
       />
-    </WithStyles(ForwardRef(ButtonGroup))>
+    </ForwardRef(ButtonGroup)>
     <ForwardRef(Popper)
       anchorEl={null}
       disablePortal={true}
@@ -50,21 +50,21 @@ exports[`Snapshot Testing Optional Props 1`] = `
     >
       <Component />
     </ForwardRef(Popper)>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`Snapshot Testing Required Props 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   direction="column"
   item={true}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
-    <WithStyles(ForwardRef(ButtonGroup))
+    <ForwardRef(ButtonGroup)
       aria-label="split button"
       className="buttonGroup"
       classes={
@@ -75,7 +75,7 @@ exports[`Snapshot Testing Required Props 1`] = `
       color="primary"
       variant="contained"
     >
-      <Memo([object Object])
+      <Memo(ForwardRef)
         aria-haspopup="true"
         className="buttonOverwritesLeft"
         color="primary"
@@ -83,17 +83,17 @@ exports[`Snapshot Testing Required Props 1`] = `
         label="one"
         onClick={[Function]}
         size="small"
-        startIcon={<Memo(ArrowDropDownIcon) />}
+        startIcon={<Memo />}
         variant="contained"
       />
-      <Memo([object Object])
+      <Memo(ForwardRef)
         className="buttonOverwritesRight"
         color="primary"
-        label={<Memo(CloudDownloadIcon) />}
+        label={<Memo />}
         onClick={[Function]}
         variant="contained"
       />
-    </WithStyles(ForwardRef(ButtonGroup))>
+    </ForwardRef(ButtonGroup)>
     <ForwardRef(Popper)
       anchorEl={null}
       disablePortal={true}
@@ -103,6 +103,6 @@ exports[`Snapshot Testing Required Props 1`] = `
     >
       <Component />
     </ForwardRef(Popper)>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;

@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import React, { FC } from 'react';
 import { useWindowSize } from '../src/UseWindowSize';
 import { shallow } from 'enzyme';

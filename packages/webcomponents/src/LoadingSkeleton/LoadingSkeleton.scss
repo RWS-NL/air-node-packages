@@ -1,6 +1,6 @@
 @import '../styles/vars';
 
-@keyframes skeletonKeyframes {
+@keyframes skeleton-keyframes {
   from {
     background-position: -200px 0;
   }
@@ -13,7 +13,7 @@
 .skeleton {
   animation-duration: 1.2s;
   animation-iteration-count: infinite;
-  animation-name: skeletonKeyframes;
+  animation-name: skeleton-keyframes;
   animation-timing-function: ease-in-out;
   background-color: $grey10;
   background-image: linear-gradient(90deg, $grey10, $grey20, $grey10);

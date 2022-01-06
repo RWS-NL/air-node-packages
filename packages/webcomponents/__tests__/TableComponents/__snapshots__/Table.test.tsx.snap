@@ -37,15 +37,15 @@ exports[`Snapshot Testing Optional Props 1`] = `
       }
     />
   </When>
-  <WithStyles(ForwardRef(Table))
+  <ForwardRef(Table)
     className="table"
     data-qa="table"
   >
-    <WithStyles(ForwardRef(TableHead))
+    <ForwardRef(TableHead)
       className=""
       data-qa="table-header"
     >
-      <WithStyles(ForwardRef(TableRow))
+      <ForwardRef(TableRow)
         className=""
         data-qa="table-header-row"
       >
@@ -112,13 +112,13 @@ exports[`Snapshot Testing Optional Props 1`] = `
           tooltiplabel="Sort"
           tooltipplacement="bottom-start"
         />
-      </WithStyles(ForwardRef(TableRow))>
-    </WithStyles(ForwardRef(TableHead))>
-    <WithStyles(ForwardRef(TableBody))
+      </ForwardRef(TableRow)>
+    </ForwardRef(TableHead)>
+    <ForwardRef(TableBody)
       className=""
       data-qa="table-body"
     >
-      <WithStyles(ForwardRef(TableRow))
+      <ForwardRef(TableRow)
         data-qa="table-body-row"
         hover={true}
         key="4567893"
@@ -133,8 +133,8 @@ exports[`Snapshot Testing Optional Props 1`] = `
         <Memo()
           content={23456789}
         />
-      </WithStyles(ForwardRef(TableRow))>
-      <WithStyles(ForwardRef(TableRow))
+      </ForwardRef(TableRow)>
+      <ForwardRef(TableRow)
         data-qa="table-body-row"
         hover={true}
         key="4567893"
@@ -149,8 +149,8 @@ exports[`Snapshot Testing Optional Props 1`] = `
         <Memo()
           content={9876}
         />
-      </WithStyles(ForwardRef(TableRow))>
-      <WithStyles(ForwardRef(TableRow))
+      </ForwardRef(TableRow)>
+      <ForwardRef(TableRow)
         data-qa="table-body-row"
         hover={true}
         key="4567893"
@@ -165,8 +165,8 @@ exports[`Snapshot Testing Optional Props 1`] = `
         <Memo()
           content={567890}
         />
-      </WithStyles(ForwardRef(TableRow))>
-      <WithStyles(ForwardRef(TableRow))
+      </ForwardRef(TableRow)>
+      <ForwardRef(TableRow)
         data-qa="table-body-row"
         hover={true}
         key="4567893"
@@ -181,9 +181,9 @@ exports[`Snapshot Testing Optional Props 1`] = `
         <Memo()
           content={1}
         />
-      </WithStyles(ForwardRef(TableRow))>
-    </WithStyles(ForwardRef(TableBody))>
-  </WithStyles(ForwardRef(Table))>
+      </ForwardRef(TableRow)>
+    </ForwardRef(TableBody)>
+  </ForwardRef(Table)>
   <When
     condition={true}
   >
@@ -247,15 +247,15 @@ exports[`Snapshot Testing Required Props 1`] = `
       }
     />
   </When>
-  <WithStyles(ForwardRef(Table))
+  <ForwardRef(Table)
     className="table"
     data-qa="table"
   >
-    <WithStyles(ForwardRef(TableHead))
+    <ForwardRef(TableHead)
       className=""
       data-qa="table-header"
     >
-      <WithStyles(ForwardRef(TableRow))
+      <ForwardRef(TableRow)
         className=""
         data-qa="table-header-row"
       >
@@ -322,13 +322,13 @@ exports[`Snapshot Testing Required Props 1`] = `
           tooltiplabel="Sort"
           tooltipplacement="bottom-start"
         />
-      </WithStyles(ForwardRef(TableRow))>
-    </WithStyles(ForwardRef(TableHead))>
-    <WithStyles(ForwardRef(TableBody))
+      </ForwardRef(TableRow)>
+    </ForwardRef(TableHead)>
+    <ForwardRef(TableBody)
       className=""
       data-qa="table-body"
     >
-      <WithStyles(ForwardRef(TableRow))
+      <ForwardRef(TableRow)
         data-qa="table-body-row"
         hover={true}
         key="4567893"
@@ -343,8 +343,8 @@ exports[`Snapshot Testing Required Props 1`] = `
         <Memo()
           content={23456789}
         />
-      </WithStyles(ForwardRef(TableRow))>
-      <WithStyles(ForwardRef(TableRow))
+      </ForwardRef(TableRow)>
+      <ForwardRef(TableRow)
         data-qa="table-body-row"
         hover={true}
         key="4567893"
@@ -359,8 +359,8 @@ exports[`Snapshot Testing Required Props 1`] = `
         <Memo()
           content={9876}
         />
-      </WithStyles(ForwardRef(TableRow))>
-      <WithStyles(ForwardRef(TableRow))
+      </ForwardRef(TableRow)>
+      <ForwardRef(TableRow)
         data-qa="table-body-row"
         hover={true}
         key="4567893"
@@ -375,8 +375,8 @@ exports[`Snapshot Testing Required Props 1`] = `
         <Memo()
           content={567890}
         />
-      </WithStyles(ForwardRef(TableRow))>
-      <WithStyles(ForwardRef(TableRow))
+      </ForwardRef(TableRow)>
+      <ForwardRef(TableRow)
         data-qa="table-body-row"
         hover={true}
         key="4567893"
@@ -391,9 +391,9 @@ exports[`Snapshot Testing Required Props 1`] = `
         <Memo()
           content={1}
         />
-      </WithStyles(ForwardRef(TableRow))>
-    </WithStyles(ForwardRef(TableBody))>
-  </WithStyles(ForwardRef(Table))>
+      </ForwardRef(TableRow)>
+    </ForwardRef(TableBody)>
+  </ForwardRef(Table)>
   <When
     condition={false}
   >

@@ -1,5 +1,4 @@
-import Typography, { TypographyProps } from '@material-ui/core/Typography';
-import { CSSProperties } from '@material-ui/styles';
+import Typography, { TypographyProps } from '@mui/material/Typography';
 import clsx from 'clsx';
 import React, { memo } from 'react';
 
@@ -8,8 +7,6 @@ export interface ZeroWidthSpaceProps extends TypographyProps {
   'data-qa'?: string;
   /** Custom CSS classes to pass to the tooltip */
   customclasses?: string | string[];
-  /** Any additional CSSProperties to pass to the component */
-  style?: CSSProperties;
 }
 
 /**

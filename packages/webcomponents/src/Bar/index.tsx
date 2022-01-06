@@ -1,4 +1,4 @@
-import { Box } from '@material-ui/core';
+import { Box } from '@mui/material';
 import clsx from 'clsx';
 import React, { memo, PropsWithChildren } from 'react';
 import css from './Bar.scss';

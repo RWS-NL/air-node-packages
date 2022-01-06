@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Snapshot Testing Disabled Tooltip 1`] = `
-<WithStyles(ForwardRef(Paper))
+<ForwardRef(Paper)
   className="paper"
   elevation={2}
   square={true}
 >
-  <WithStyles(ForwardRef(IconButton))
+  <ForwardRef(IconButton)
     className="inputButton"
     color="primary"
     onClick={
@@ -24,13 +24,13 @@ exports[`Snapshot Testing Disabled Tooltip 1`] = `
     }
     size="small"
   >
-    <SearchIcon />
-  </WithStyles(ForwardRef(IconButton))>
-</WithStyles(ForwardRef(Paper))>
+    <Memo(ForwardRef(SearchIcon)) />
+  </ForwardRef(IconButton)>
+</ForwardRef(Paper)>
 `;
 
 exports[`Snapshot Testing Optional Props 1`] = `
-<WithStyles(ForwardRef(Paper))
+<ForwardRef(Paper)
   className="paper"
   elevation={5}
   square={true}
@@ -39,7 +39,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
     placement="bottom"
     title="tooltip"
   >
-    <WithStyles(ForwardRef(IconButton))
+    <ForwardRef(IconButton)
       className="inputButton"
       color="primary"
       onClick={
@@ -57,14 +57,14 @@ exports[`Snapshot Testing Optional Props 1`] = `
       }
       size="small"
     >
-      <SearchIcon />
-    </WithStyles(ForwardRef(IconButton))>
+      <Memo(ForwardRef(SearchIcon)) />
+    </ForwardRef(IconButton)>
   </Memo()>
-</WithStyles(ForwardRef(Paper))>
+</ForwardRef(Paper)>
 `;
 
 exports[`Snapshot Testing Required Props 1`] = `
-<WithStyles(ForwardRef(Paper))
+<ForwardRef(Paper)
   className="paper"
   elevation={2}
   square={true}
@@ -73,7 +73,7 @@ exports[`Snapshot Testing Required Props 1`] = `
     placement="top"
     title="Click Me"
   >
-    <WithStyles(ForwardRef(IconButton))
+    <ForwardRef(IconButton)
       className="inputButton"
       color="primary"
       onClick={
@@ -91,8 +91,8 @@ exports[`Snapshot Testing Required Props 1`] = `
       }
       size="small"
     >
-      <SearchIcon />
-    </WithStyles(ForwardRef(IconButton))>
+      <Memo(ForwardRef(SearchIcon)) />
+    </ForwardRef(IconButton)>
   </Memo()>
-</WithStyles(ForwardRef(Paper))>
+</ForwardRef(Paper)>
 `;

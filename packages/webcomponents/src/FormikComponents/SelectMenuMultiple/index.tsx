@@ -1,9 +1,9 @@
-import { Checkbox, FormControl, FormHelperText, InputLabel, ListItemText, MenuItem } from '@material-ui/core';
-import ArrowDropIcon from '@material-ui/icons/ArrowDropDown';
+import { Checkbox, FormControl, FormHelperText, InputLabel, ListItemText, MenuItem } from '@mui/material';
+import ArrowDropIcon from '@mui/icons-material/ArrowDropDown';
 import clsx from 'clsx';
 import { useField } from 'formik';
-import { fieldToSelect, Select } from 'formik-material-ui';
-import React, { Fragment, useEffect, useRef, useState } from 'react';
+import { fieldToSelect, Select } from 'formik-mui';
+import React, { Fragment, useRef } from 'react';
 import { When } from 'react-if';
 import { SelectMenuOptionValues, SelectMenuProps } from '../SelectMenu';
 import css from '../SelectMenu/SelectMenu.scss';
@@ -57,13 +57,6 @@ export const SelectMenuMultiple = <T extends SelectMenuOptionValues>({
   const [{ onChange, onBlur, value }, { error, touched }] = useField(props.field.name);
 
   const inputLabel = useRef<HTMLLabelElement>(null);
-  const [labelWidth, setLabelWidth] = useState(0);
-
-  useEffect(() => {
-    if (inputLabel.current) {
-      setLabelWidth(inputLabel.current.offsetWidth);
-    }
-  }, []);
 
   const selectFieldHasErrors = Boolean(error) && touched;
 
@@ -83,7 +76,6 @@ export const SelectMenuMultiple = <T extends SelectMenuOptionValues>({
           {...fieldToSelect(props)}
           type='text'
           labelId={`validated-select-menu-${label}`}
-          labelWidth={labelWidth}
           className={clsx([css.select, { [css.errorSelect]: selectFieldHasErrors }])}
           IconComponent={() => <ArrowDropIcon color={selectFieldHasErrors ? 'error' : 'primary'} />}
           fullWidth
@@ -95,7 +87,7 @@ export const SelectMenuMultiple = <T extends SelectMenuOptionValues>({
           required={required}
           inputProps={{ classes: { root: css.input } }}
           MenuProps={{
-            getContentAnchorEl: null,
+            anchorEl: null,
             PaperProps: {
               style: {
                 maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP

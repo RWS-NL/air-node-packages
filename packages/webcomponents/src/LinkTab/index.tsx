@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { Tab, TabProps } from '@material-ui/core';
+import { Tab, TabProps } from '@mui/material';
 
 import css from './LinkTab.scss';
 import { Link } from 'react-router-dom';
@@ -35,7 +35,7 @@ export const LinkTab = memo(({ to, label, external = false, openInNewTab = false
         label={label}
         target={openInNewTab ? '_blank' : '_self'}
         rel={openInNewTab ? 'noreferrer noopener' : undefined}
-        classes={{ wrapper: css.linkText, selected: css.selectedTab, textColorInherit: css.linkTextInherit }}
+        classes={{ wrapped: css.linkText, selected: css.selectedTab, textColorInherit: css.linkTextInherit }}
       />
     );
   }
@@ -46,7 +46,7 @@ export const LinkTab = memo(({ to, label, external = false, openInNewTab = false
       component={Link}
       to={to}
       label={label}
-      classes={{ wrapper: css.linkText, selected: css.selectedTab, textColorInherit: css.linkTextInherit }}
+      classes={{ wrapped: css.linkText, selected: css.selectedTab, textColorInherit: css.linkTextInherit }}
     />
   );
 });

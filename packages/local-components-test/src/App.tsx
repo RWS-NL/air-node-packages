@@ -1,5 +1,4 @@
-import { createTheme, MuiThemeProvider, Theme } from '@material-ui/core/styles';
-import { StylesProvider } from '@material-ui/styles';
+import { createTheme, ThemeProvider, Theme } from '@mui/material/styles';
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import Home from './Home';
@@ -17,13 +16,11 @@ const theme: Theme = createTheme({
 });
 
 const App: React.FC = () => (
-  <StylesProvider injectFirst>
-    <MuiThemeProvider theme={theme}>
-      <BrowserRouter>
-        <Home />
-      </BrowserRouter>
-    </MuiThemeProvider>
-  </StylesProvider>
+  <ThemeProvider theme={theme}>
+    <BrowserRouter>
+      <Home />
+    </BrowserRouter>
+  </ThemeProvider>
 );
 
 export default App;

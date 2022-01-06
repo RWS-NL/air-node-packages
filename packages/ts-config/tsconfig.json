@@ -6,7 +6,8 @@
     "composite": true,
     "tsBuildInfoFile": "./build/.tsbuildinfo",
     "sourceMap": false,
-    "declarationMap": false
+    "declarationMap": false,
+    "skipLibCheck": true
   },
   "include": ["__tests__"]
 }

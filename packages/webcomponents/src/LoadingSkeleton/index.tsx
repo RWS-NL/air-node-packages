@@ -1,4 +1,4 @@
-import { CSSProperties } from '@material-ui/styles';
+import { Box, SxProps } from '@mui/material';
 import clsx from 'clsx';
 import React, { memo } from 'react';
 import css from './LoadingSkeleton.scss';
@@ -21,7 +21,7 @@ export interface LoadingSkeletonProps {
    */
   circle?: boolean;
   /** Any additional CSSProperties to pass to the component */
-  style?: CSSProperties;
+  sx?: SxProps;
   /** Data-qa tag to apply to the search bar and input element */
   'data-qa'?: string;
   /** Custom CSS classes to pass to the button */
@@ -40,9 +40,10 @@ export interface LoadingSkeletonProps {
  * ```
  */
 export const LoadingSkeleton = memo(
-  ({ width, height, circle, style, 'data-qa': dataQa, ...props }: LoadingSkeletonProps) => {
-    const cssStyle: CSSProperties = {
-      ...style,
+  ({ width, height, circle, sx, 'data-qa': dataQa, ...props }: LoadingSkeletonProps) => {
+    const cssStyle: SxProps = {
+      ...sx,
+      display: 'inline',
       width: width,
       height: height,
       borderRadius: height && width && circle ? '50%' : '0%'
@@ -50,9 +51,9 @@ export const LoadingSkeleton = memo(
 
     // Content is a zero-width-non-joiner
     return (
-      <span {...props} data-qa={dataQa} className={clsx(css.skeleton, props.customclasses)} style={cssStyle}>
+      <Box {...props} data-qa={dataQa} className={clsx(css.skeleton, props.customclasses)} sx={cssStyle}>
         &zwnj;
-      </span>
+      </Box>
     );
   }
 );

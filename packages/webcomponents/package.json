@@ -21,27 +21,23 @@
     "dist"
   ],
   "peerDependencies": {
-    "@date-io/core": "^1.x",
-    "@date-io/moment": "^1.x",
-    "@material-ui/core": "^4.9.9",
-    "@material-ui/icons": "^4.9.1",
-    "@material-ui/pickers": "^3.2.10",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/icons-material": "^5.2.5",
+    "@mui/lab": "^5.0.0-alpha.63",
+    "@mui/material": "^5.2.7",
     "@rws-air/utils": "latest",
-    "formik": "^2.1.5",
-    "formik-material-ui": "2.0.0-beta.1",
-    "formik-material-ui-pickers": "0.0.8",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-if": "^4.0.1",
-    "react-router-dom": "^5"
+    "react-router-dom": "^5.3.0"
   },
   "dependencies": {
     "@favware/querystring": "^7.0.1",
     "clsx": "^1.1.1",
-    "i18next": "^20.1.0",
+    "i18next": "^21.6.5",
     "lodash.debounce": "^4.0.8",
     "moment": "^2.28.0",
-    "react-i18next": "^11.7.3",
+    "react-i18next": "^11.15.3",
     "utility-types": "3.10.0"
   },
   "browserslist": {
@@ -82,22 +78,22 @@
     "ts"
   ],
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^19.0.0",
-    "@rollup/plugin-node-resolve": "13.0.2",
-    "@rollup/plugin-url": "^6.0.0",
-    "@svgr/rollup": "^5.4.0",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "13.1.3",
+    "@rollup/plugin-url": "^6.1.0",
+    "@svgr/rollup": "^6.1.2",
     "formik": "^2.1.5",
-    "formik-material-ui": "3.0.1",
-    "formik-material-ui-pickers": "0.0.12",
+    "formik-mui": "^4.0.0-alpha.3",
+    "formik-mui-lab": "^1.0.0-alpha.3",
     "identity-obj-proxy": "^3.0.0",
-    "react-if": "^4.0.1",
-    "rollup": "^2.28.1",
+    "react-if": "^4.1.1",
+    "rollup": "^2.63.0",
     "rollup-plugin-cleaner": "^1.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.3",
-    "rollup-plugin-postcss": "^3.1.4",
+    "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-progress": "^1.1.2",
     "rollup-plugin-terser": "^7.0.0",
-    "rollup-plugin-typescript2": "^0.30.0"
+    "rollup-plugin-typescript2": "^0.31.1"
   },
   "gitHead": "75c3ee49bab3d92e2d204287397c1fa0cf6fce73"
 }
