@@ -2,7 +2,7 @@
 
 exports[`NavBar Tests Snapshot Testing Required Props 1`] = `
 <Fragment>
-  <WithStyles(ForwardRef(AppBar))
+  <ForwardRef(AppBar)
     classes={
       Object {
         "root": "appBar",
@@ -11,10 +11,10 @@ exports[`NavBar Tests Snapshot Testing Required Props 1`] = `
     color="secondary"
     position="static"
   >
-    <WithStyles(ForwardRef(Toolbar))
+    <ForwardRef(Toolbar)
       variant="dense"
     >
-      <WithStyles(ForwardRef(Tabs))
+      <ForwardRef(Tabs)
         classes={
           Object {
             "indicator": "tabIndicator",
@@ -60,16 +60,16 @@ exports[`NavBar Tests Snapshot Testing Required Props 1`] = `
           label="Rijkswaterstaat"
           to="https://rijkswaterstaat.nl"
         />
-      </WithStyles(ForwardRef(Tabs))>
-    </WithStyles(ForwardRef(Toolbar))>
-  </WithStyles(ForwardRef(AppBar))>
-  <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Tabs)>
+    </ForwardRef(Toolbar)>
+  </ForwardRef(AppBar)>
+  <ForwardRef(Grid)
     alignItems="flex-start"
     container={true}
     direction="row"
     justifyContent="center"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       key="1"
       xs={12}
@@ -77,7 +77,7 @@ exports[`NavBar Tests Snapshot Testing Required Props 1`] = `
       <Memo()
         title="Title"
       />
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </Fragment>
 `;

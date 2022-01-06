@@ -1,9 +1,9 @@
-import { FormControl, FormHelperText, InputLabel, MenuItem } from '@material-ui/core';
-import ArrowDropIcon from '@material-ui/icons/ArrowDropDown';
+import { FormControl, FormHelperText, InputLabel, MenuItem } from '@mui/material';
+import ArrowDropIcon from '@mui/icons-material/ArrowDropDown';
 import clsx from 'clsx';
 import { useField } from 'formik';
-import { fieldToSelect, Select, SelectProps } from 'formik-material-ui';
-import React, { Fragment, useEffect, useRef, useState } from 'react';
+import { fieldToSelect, Select, SelectProps } from 'formik-mui';
+import React, { Fragment, useRef } from 'react';
 import { When } from 'react-if';
 import css from './SelectMenu.scss';
 
@@ -54,13 +54,6 @@ export const SelectMenu = <T extends SelectMenuOptionValues>({
   const [{ onChange, onBlur }, { error, touched }] = useField(props.field.name);
 
   const inputLabel = useRef<HTMLLabelElement>(null);
-  const [labelWidth, setLabelWidth] = useState(0);
-
-  useEffect(() => {
-    if (inputLabel.current) {
-      setLabelWidth(inputLabel.current.offsetWidth);
-    }
-  }, []);
 
   const selectFieldHasErrors = Boolean(error) && touched;
 
@@ -80,7 +73,6 @@ export const SelectMenu = <T extends SelectMenuOptionValues>({
           {...fieldToSelect(props)}
           type='text'
           labelId={`validated-select-menu-${label}`}
-          labelWidth={labelWidth}
           className={clsx([css.select, { [css.errorSelect]: selectFieldHasErrors }])}
           IconComponent={() => <ArrowDropIcon color={selectFieldHasErrors ? 'error' : 'primary'} />}
           fullWidth
@@ -91,7 +83,7 @@ export const SelectMenu = <T extends SelectMenuOptionValues>({
           required={required}
           inputProps={{ classes: { root: css.input } }}
           MenuProps={{
-            getContentAnchorEl: null,
+            anchorEl: null,
             anchorOrigin: {
               vertical: 'bottom',
               horizontal: 'center'

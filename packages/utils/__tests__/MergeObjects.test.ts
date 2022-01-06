@@ -40,8 +40,7 @@ describe('Merge Objects', () => {
     expect(mergeObjects(target, source)).toMatchSnapshot();
   });
 
-  // TODO 20220103: Figure out why test passes locally but fails in pipeline
-  test.skip('Function Snapshot', () => {
+  test('Function Snapshot', () => {
     expect(mergeObjects.toString()).toMatchSnapshot();
   });
 });

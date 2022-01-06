@@ -1,4 +1,4 @@
-import { IconButton, Paper } from '@material-ui/core';
+import { IconButton, Paper } from '@mui/material';
 import clsx from 'clsx';
 import React, { memo, useMemo } from 'react';
 import { Tooltip, TooltipProps } from '../../Tooltip';

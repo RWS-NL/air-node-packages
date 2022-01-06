@@ -1,4 +1,4 @@
-import IconButton, { IconButtonProps } from '@material-ui/core/IconButton';
+import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import React, { memo, ReactNode } from 'react';
 import css from './PaginationButton.scss';
 

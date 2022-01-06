@@ -1,12 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Snapshot Testing Disabling Tooltip 1`] = `
-<WithStyles(ForwardRef(Fab))
-  className="makeStyles-fab-1"
+<ForwardRef(Fab)
   color="primary"
+  sx={
+    Object {
+      "borderRadius": 1,
+      "bottom": 2,
+      "position": "fixed",
+      "right": 2,
+      "zIndex": "speedDial",
+    }
+  }
 >
   <Memo(ForwardRef(AccessAlarmIcon)) />
-</WithStyles(ForwardRef(Fab))>
+</ForwardRef(Fab)>
 `;
 
 exports[`Snapshot Testing Optional Props 1`] = `
@@ -14,13 +22,21 @@ exports[`Snapshot Testing Optional Props 1`] = `
   id="tooltip"
   title=""
 >
-  <WithStyles(ForwardRef(Fab))
-    className="makeStyles-fab-1"
+  <ForwardRef(Fab)
     color="primary"
     onClick={[MockFunction]}
+    sx={
+      Object {
+        "borderRadius": 1,
+        "bottom": 2,
+        "position": "fixed",
+        "right": 2,
+        "zIndex": "speedDial",
+      }
+    }
   >
     <Memo(ForwardRef(AccessAlarmIcon)) />
-  </WithStyles(ForwardRef(Fab))>
+  </ForwardRef(Fab)>
 </Memo()>
 `;
 
@@ -28,12 +44,20 @@ exports[`Snapshot Testing Required Props 1`] = `
 <Memo()
   title="Sample"
 >
-  <WithStyles(ForwardRef(Fab))
-    className="makeStyles-fab-1"
+  <ForwardRef(Fab)
     color="primary"
     onClick={[MockFunction]}
+    sx={
+      Object {
+        "borderRadius": 1,
+        "bottom": 2,
+        "position": "fixed",
+        "right": 2,
+        "zIndex": "speedDial",
+      }
+    }
   >
     <Memo(ForwardRef(AccessAlarmIcon)) />
-  </WithStyles(ForwardRef(Fab))>
+  </ForwardRef(Fab)>
 </Memo()>
 `;

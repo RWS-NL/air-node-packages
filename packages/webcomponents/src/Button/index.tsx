@@ -1,5 +1,5 @@
-import { createStyles, makeStyles, Theme } from '@material-ui/core';
-import MUIButton, { ButtonProps as MUIButtonProps } from '@material-ui/core/Button';
+import { styled } from '@mui/material/styles';
+import MUIButton, { ButtonProps as MUIButtonProps } from '@mui/material/Button';
 import clsx from 'clsx';
 import React, { forwardRef, memo, ReactNode } from 'react';
 import css from './Button.scss';
@@ -8,7 +8,7 @@ export interface ButtonProps {
   /** The variant of the button */
   variant: 'text' | 'outlined' | 'contained' | undefined;
   /** The color type of the button */
-  color: 'primary' | 'secondary' | 'default' | 'inherit' | undefined;
+  color: 'primary' | 'secondary' | 'inherit' | 'error' | 'info' | 'success' | 'warning' | undefined;
   /** The label to be displayed inside the button */
   label: ReactNode;
   /** Whether this button should be disabled */
@@ -23,9 +23,16 @@ export interface ButtonProps {
   onClick(): unknown;
 }
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({ buttonShadow: { boxShadow: theme.shadows[1], border: 'transparant' } })
-);
+const PREFIX = 'Button';
+const classes = {
+  buttonShadow: `${PREFIX}-buttonShadow`
+};
+const StyledButton = styled(MUIButton)(({ theme }) => ({
+  [`&.${classes.buttonShadow}`]: {
+    boxShadow: theme.shadows[1], 
+    border: 'transparant'
+  }
+}));
 
 /**
  * Constructs a button using pre-defined Rijkswaterstaat styling
@@ -39,10 +46,8 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export const Button = memo(
   forwardRef<HTMLButtonElement, MUIButtonProps<'button', ButtonProps>>((props, ref) => {
-    const classes = useStyles();
-
     return (
-      <MUIButton
+      <StyledButton
         {...props}
         ref={ref}
         data-qa={props['data-qa']}
@@ -54,7 +59,6 @@ export const Button = memo(
         classes={{
           ...props.classes,
           root: clsx(css.button, props.classes?.root),
-          label: clsx(css.buttonLabel, props.customlabelclasses),
           disabled: clsx(css.buttonDisabled, props.classes?.disabled),
           containedPrimary: clsx(css.buttonPrimary, classes.buttonShadow, props.classes?.containedPrimary),
           containedSecondary: clsx(css.buttonSecondary, classes.buttonShadow, props.classes?.containedSecondary),
@@ -65,7 +69,7 @@ export const Button = memo(
         href={undefined}
       >
         {props.label}
-      </MUIButton>
+      </StyledButton>
     );
   })
 );

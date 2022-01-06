@@ -26,8 +26,8 @@ describe('Component Testing', () => {
     actionBar = shallow(<ActionBar title='42' buttonLabel='label' buttonAction={mockCallback} shouldHaveButton />);
     const actionButton = actionBar.find('[data-qa="action-bar-button"]');
     actionButton.simulate('click');
-    expect(mockCallback).toHaveBeenCalledWith();
-    expect(actionButton.shallow().text()).toBe('label');
+    expect(mockCallback).toHaveBeenCalled();
+    expect(actionButton.shallow().shallow().text()).toBe('label');
   });
 
   test('GIVEN button click with params THEN passes params', () => {
@@ -41,7 +41,7 @@ describe('Component Testing', () => {
     actionButton.simulate('click');
     expect(mockCallback).toHaveBeenCalledTimes(1);
     expect(mockCallback).toHaveBeenCalledWith(param);
-    expect(actionButton.shallow().text()).toBe('label');
+    expect(actionButton.shallow().shallow().text()).toBe('label');
   });
 
   test('GIVEN title as ReactNode Function THEN shows title', () => {
@@ -84,8 +84,10 @@ describe('Snapshot Testing', () => {
         buttonLabel='label'
         buttonAction={mockCallback}
         shouldHaveButton
-        customclasses={'snapshot-class'}
         data-qa='snapshot-qa'
+        BoxProps={{
+          classes: 'snapshot-class'
+        }}
       />
     );
     expect(actionBar).toMatchSnapshot();

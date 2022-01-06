@@ -1,5 +1,4 @@
-import Fab, { FabProps as MFabProps } from '@material-ui/core/Fab';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import Fab, { FabProps as MFabProps } from '@mui/material/Fab';
 import React, { memo } from 'react';
 import { Tooltip, TooltipProps } from '../Tooltip';
 
@@ -11,18 +10,6 @@ export interface FabProps extends MFabProps {
   /** Props applied to the `Tooltip` element */
   TooltipProps?: Partial<Omit<TooltipProps, 'title'>>;
 }
-
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    fab: {
-      position: 'fixed',
-      bottom: theme.spacing(2),
-      right: theme.spacing(2),
-      zIndex: theme.zIndex.speedDial,
-      borderRadius: theme.shape.borderRadius
-    }
-  })
-);
 
 /**
  * Constructs a Floating Action Button using pre-defined Rijkswaterstaat styling
@@ -37,11 +24,20 @@ const useStyles = makeStyles((theme: Theme) =>
  */
 export const FloatingActionButton = memo(
   ({ children, tooltipContent, disableTooltip, TooltipProps, ...props }: FabProps) => {
-    const classes = useStyles();
 
     if (disableTooltip) {
       return (
-        <Fab {...props} className={classes.fab} color='primary'>
+        <Fab
+          {...props}
+          color='primary'
+          sx={{
+            position: 'fixed',
+            bottom: 2,
+            right: 2,
+            zIndex: 'speedDial',
+            borderRadius: 1
+          }}
+        >
           {children}
         </Fab>
       );
@@ -49,7 +45,17 @@ export const FloatingActionButton = memo(
 
     return (
       <Tooltip {...TooltipProps} title={tooltipContent ?? ''}>
-        <Fab {...props} className={classes.fab} color='primary'>
+        <Fab
+          {...props}
+          color='primary'
+          sx={{
+            position: 'fixed',
+            bottom: 2,
+            right: 2,
+            zIndex: 'speedDial',
+            borderRadius: 1
+          }}
+        >
           {children}
         </Fab>
       </Tooltip>

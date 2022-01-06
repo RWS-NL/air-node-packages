@@ -1,28 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Snapshot Testing AdditionalTest 1`] = `
-<WithStyles(ForwardRef(Typography))
+<ForwardRef(Typography)
   className=""
   variant="caption"
 >
   ​
-</WithStyles(ForwardRef(Typography))>
+</ForwardRef(Typography)>
 `;
 
 exports[`Snapshot Testing Optional Props 1`] = `
-<WithStyles(ForwardRef(Typography))
+<ForwardRef(Typography)
   className=""
   variant="caption"
 >
   ​
-</WithStyles(ForwardRef(Typography))>
+</ForwardRef(Typography)>
 `;
 
 exports[`Snapshot Testing Required Props 1`] = `
-<WithStyles(ForwardRef(Typography))
+<ForwardRef(Typography)
   className=""
   variant="caption"
 >
   ​
-</WithStyles(ForwardRef(Typography))>
+</ForwardRef(Typography)>
 `;

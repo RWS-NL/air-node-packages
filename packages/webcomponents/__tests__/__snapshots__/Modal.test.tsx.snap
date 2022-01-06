@@ -3,33 +3,33 @@
 exports[`Content Testing should contain content 1`] = `<Component />`;
 
 exports[`Snapshot Testing Required Props 1`] = `
-<WithStyles(ForwardRef(Dialog))
+<ForwardRef(Dialog)
   classes={
     Object {
       "root": "modal",
     }
   }
   data-qa="modal"
-  disableBackdropClick={true}
   disableEscapeKeyDown={true}
+  onClose={[Function]}
   open={false}
 >
-  <WithStyles(ForwardRef(DialogTitle))
+  <ForwardRef(DialogTitle)
     className="title"
     data-qa="modal-title"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       alignContent="flex-end"
       alignItems="flex-end"
       container={true}
       justifyContent="space-between"
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
       >
         Awesome Topic
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         classes={
           Object {
             "root": "closeIcon",
@@ -37,7 +37,7 @@ exports[`Snapshot Testing Required Props 1`] = `
         }
         item={true}
       >
-        <WithStyles(ForwardRef(IconButton))
+        <ForwardRef(IconButton)
           color="primary"
           disableFocusRipple={true}
           disableRipple={true}
@@ -53,15 +53,15 @@ exports[`Snapshot Testing Required Props 1`] = `
               }
             }
           />
-        </WithStyles(ForwardRef(IconButton))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(DialogTitle))>
-  <WithStyles(ForwardRef(DialogContent))
+        </ForwardRef(IconButton)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+  </ForwardRef(DialogTitle)>
+  <ForwardRef(DialogContent)
     className="content"
     data-qa="modal-content"
   >
     <Component />
-  </WithStyles(ForwardRef(DialogContent))>
-</WithStyles(ForwardRef(Dialog))>
+  </ForwardRef(DialogContent)>
+</ForwardRef(Dialog)>
 `;

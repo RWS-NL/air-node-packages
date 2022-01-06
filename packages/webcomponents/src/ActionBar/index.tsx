@@ -1,5 +1,5 @@
-import { Box, BoxProps, Typography, TypographyProps } from '@material-ui/core';
-import Grid from '@material-ui/core/Grid/Grid';
+import { Box, BoxProps, Typography, TypographyProps } from '@mui/material';
+import Grid from '@mui/material/Grid';
 import clsx from 'clsx';
 import React, { memo, ReactNode, useMemo } from 'react';
 import { When } from 'react-if';

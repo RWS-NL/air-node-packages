@@ -1,9 +1,9 @@
-import Dialog, { DialogProps } from '@material-ui/core/Dialog';
-import DialogContent, { DialogContentProps } from '@material-ui/core/DialogContent';
-import DialogTitle, { DialogTitleProps } from '@material-ui/core/DialogTitle';
-import Grid from '@material-ui/core/Grid';
-import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close';
+import Dialog, { DialogProps } from '@mui/material/Dialog';
+import DialogContent, { DialogContentProps } from '@mui/material/DialogContent';
+import DialogTitle, { DialogTitleProps } from '@mui/material/DialogTitle';
+import Grid from '@mui/material/Grid';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 import React, { memo, ReactNode } from 'react';
 import css from './Modal.scss';
 
@@ -57,11 +57,15 @@ export const Modal = memo(({ DialogContentProps, DialogTitleProps, DialogProps, 
   return (
     <Dialog
       {...DialogProps}
-      disableBackdropClick
       disableEscapeKeyDown
       open={Boolean(props.open)}
       classes={{ root: css.modal }}
       data-qa={props.modalqas?.modal || 'modal'}
+      onClose={(_event, reason) => {
+        if (reason !== 'backdropClick') {
+          props.closeAction();
+        }
+      }}
     >
       <DialogTitle {...DialogTitleProps} className={css.title} data-qa={props.modalqas?.title || 'modal-title'}>
         <Grid container alignContent='flex-end' alignItems='flex-end' justifyContent='space-between'>

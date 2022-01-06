@@ -5,14 +5,14 @@ exports[`Snapshot Testing Optional Props 1`] = `
   className="toolbar snapshot-class"
   data-qa="snapshot-qa"
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     alignItems="center"
     container={true}
     direction="row"
     justifyContent="flex-end"
     spacing={2}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       key="2"
     >
@@ -23,12 +23,12 @@ exports[`Snapshot Testing Optional Props 1`] = `
         onChange={[Function]}
         placeholder="placeholder..."
       />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       key="1"
     />
-  </WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
 </div>
 `;
 
@@ -36,14 +36,14 @@ exports[`Snapshot Testing Required Props 1`] = `
 <div
   className="toolbar"
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     alignItems="center"
     container={true}
     direction="row"
     justifyContent="flex-end"
     spacing={2}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       key="2"
     >
@@ -54,11 +54,11 @@ exports[`Snapshot Testing Required Props 1`] = `
         onChange={[Function]}
         placeholder="placeholder..."
       />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       key="1"
     />
-  </WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
 </div>
 `;

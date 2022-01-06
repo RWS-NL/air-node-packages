@@ -1,19 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Snapshot Testing AdditionalTest 1`] = `
-<Styled(MuiBox)
+<ForwardRef(Box)
   className="actionBar"
+  classes="snapshot-class"
   component="div"
   data-qa="snapshot-qa"
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     alignItems="center"
     className="actionGridLeft"
     container={true}
     direction="row"
     justifyContent="space-between"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       key="1"
       xs={6}
@@ -23,11 +24,11 @@ exports[`Snapshot Testing AdditionalTest 1`] = `
       >
         text
       </div>
-    </WithStyles(ForwardRef(Grid))>
+    </ForwardRef(Grid)>
     <When
       condition={true}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         className="actionGridRight"
         item={true}
         key="2"
@@ -42,42 +43,42 @@ exports[`Snapshot Testing AdditionalTest 1`] = `
           onClick={[Function]}
           variant="contained"
         />
-      </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
     </When>
-  </WithStyles(ForwardRef(Grid))>
-</Styled(MuiBox)>
+  </ForwardRef(Grid)>
+</ForwardRef(Box)>
 `;
 
 exports[`Snapshot Testing Required Props 1`] = `
-<Styled(MuiBox)
+<ForwardRef(Box)
   className="actionBar"
   component="div"
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     alignItems="center"
     className="actionGridLeft"
     container={true}
     direction="row"
     justifyContent="space-between"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       key="1"
       xs={6}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         className="actionHeader"
         color="textPrimary"
         data-qa="action-bar-title"
         variant="h1"
       >
         42
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
     <When
       condition={false}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         className="actionGridRight"
         item={true}
         key="2"
@@ -91,25 +92,25 @@ exports[`Snapshot Testing Required Props 1`] = `
           onClick={[Function]}
           variant="contained"
         />
-      </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
     </When>
-  </WithStyles(ForwardRef(Grid))>
-</Styled(MuiBox)>
+  </ForwardRef(Grid)>
+</ForwardRef(Box)>
 `;
 
 exports[`Snapshot Testing With Button 1`] = `
-<Styled(MuiBox)
+<ForwardRef(Box)
   className="actionBar"
   component="div"
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     alignItems="center"
     className="actionGridLeft"
     container={true}
     direction="row"
     justifyContent="space-between"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       key="1"
       xs={6}
@@ -119,11 +120,11 @@ exports[`Snapshot Testing With Button 1`] = `
       >
         text
       </div>
-    </WithStyles(ForwardRef(Grid))>
+    </ForwardRef(Grid)>
     <When
       condition={true}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         className="actionGridRight"
         item={true}
         key="2"
@@ -138,8 +139,8 @@ exports[`Snapshot Testing With Button 1`] = `
           onClick={[Function]}
           variant="contained"
         />
-      </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
     </When>
-  </WithStyles(ForwardRef(Grid))>
-</Styled(MuiBox)>
+  </ForwardRef(Grid)>
+</ForwardRef(Box)>
 `;

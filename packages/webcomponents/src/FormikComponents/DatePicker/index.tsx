@@ -1,9 +1,10 @@
-import { KeyboardDatePicker } from '@material-ui/pickers';
-import { fieldToKeyboardDatePicker, KeyboardDatePickerProps } from 'formik-material-ui-pickers';
+import { DatePicker as MUIDatePicker} from '@mui/lab';
+import { TextField as MUITextField } from '@mui/material';
+import { fieldToDatePicker, DatePickerProps as MuiDatePickerProps } from 'formik-mui-lab';
 import React, { FC } from 'react';
 import css from './DatePicker.scss';
 
-export interface DatePickerProps extends KeyboardDatePickerProps {
+export interface DatePickerProps extends MuiDatePickerProps {
   /** The label shown in the datepicker */
   label: string;
   /** The minimum date to meet */
@@ -20,35 +21,35 @@ export interface DatePickerProps extends KeyboardDatePickerProps {
  */
 export const DatePicker: FC<DatePickerProps> = ({ minDate, label, ...props }) => {
   return (
-    <KeyboardDatePicker
+    <MUIDatePicker
       {...props}
-      {...fieldToKeyboardDatePicker(props)}
-      animateYearScrolling
-      autoOk
-      format='DD/MM/YYYY'
-      fullWidth
+      {...fieldToDatePicker(props)}
+      inputFormat='DD/MM/YYYY'
       InputAdornmentProps={{ position: 'start', className: css.datePickerIcon }}
-      inputVariant='outlined'
-      KeyboardButtonProps={{ 'aria-label': 'change date' }}
-      label={label}
       minDate={minDate}
-      type='date'
-      variant='inline'
       InputProps={{
         classes: {
           root: css.input,
           notchedOutline: css.outline
         }
       }}
-      InputLabelProps={{
-        shrink: true,
-        classes: { root: css.inputLabel }
-      }}
-      FormHelperTextProps={{
-        // @ts-ignore
-        component: 'div',
-        classes: { root: css.errorLabel }
-      }}
+      renderInput={_props => 
+        <MUITextField
+          fullWidth
+          variant='outlined'
+          label={label}
+          type='date'
+          InputLabelProps={{
+            shrink: true,
+            classes: { root: css.inputLabel }
+          }}
+          FormHelperTextProps={{
+            // @ts-ignore
+            component: 'div',
+            classes: { root: css.errorLabel }
+          }}
+        />
+      }
     />
   );
 };

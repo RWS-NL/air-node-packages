@@ -1,5 +1,5 @@
-import { IconButton } from '@material-ui/core';
-import SearchIcon from '@material-ui/icons/Search';
+import { IconButton } from '@mui/material';
+import SearchIcon from '@mui/icons-material/Search';
 import { ToolbarButton, ToolbarButtonProps } from '@TableComponents/ToolbarButton';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';

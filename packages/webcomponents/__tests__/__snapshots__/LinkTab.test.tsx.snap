@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LinkTab Tests Snapshot Testing External Tab 1`] = `
-<WithStyles(ForwardRef(Tab))
+<ForwardRef(Tab)
   classes={
     Object {
       "selected": "selectedTab",
       "textColorInherit": "linkTextInherit",
-      "wrapper": "linkText",
+      "wrapped": "linkText",
     }
   }
   component="a"
@@ -17,12 +17,12 @@ exports[`LinkTab Tests Snapshot Testing External Tab 1`] = `
 `;
 
 exports[`LinkTab Tests Snapshot Testing External Tab with Open In New Tab 1`] = `
-<WithStyles(ForwardRef(Tab))
+<ForwardRef(Tab)
   classes={
     Object {
       "selected": "selectedTab",
       "textColorInherit": "linkTextInherit",
-      "wrapper": "linkText",
+      "wrapped": "linkText",
     }
   }
   component="a"
@@ -34,12 +34,12 @@ exports[`LinkTab Tests Snapshot Testing External Tab with Open In New Tab 1`] = 
 `;
 
 exports[`LinkTab Tests Snapshot Testing Required Props 1`] = `
-<WithStyles(ForwardRef(Tab))
+<ForwardRef(Tab)
   classes={
     Object {
       "selected": "selectedTab",
       "textColorInherit": "linkTextInherit",
-      "wrapper": "linkText",
+      "wrapped": "linkText",
     }
   }
   component={

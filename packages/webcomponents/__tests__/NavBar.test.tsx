@@ -1,12 +1,12 @@
-import { Tabs } from '@material-ui/core';
+import { Tabs } from '@mui/material';
 import { LinkTabProps } from '@src/LinkTab';
 import { NavBar, NavBarProps } from '@src/NavBar';
 import { shallow, ShallowWrapper } from 'enzyme';
-import React, { ChangeEvent } from 'react';
+import React, { SyntheticEvent } from 'react';
 
 let currentValue = 0;
 const onTabChange = jest.fn(
-  (_event: ChangeEvent<Record<PropertyKey, unknown>>, newVal: number) => (currentValue = newVal)
+  (_event: SyntheticEvent<Element, Event>, newVal: number) => (currentValue = newVal)
 );
 const tabs: LinkTabProps[] = [
   { label: 'root', external: false, to: '/root' },

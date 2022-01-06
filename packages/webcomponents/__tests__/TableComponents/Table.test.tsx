@@ -1,4 +1,4 @@
-import { TableRow } from '@material-ui/core';
+import { TableRow } from '@mui/material';
 import { BodyCell } from '@TableComponents/BodyCell';
 import { HeaderCell, HeaderProps } from '@TableComponents/HeaderCell';
 import { Table, TableProps } from '@TableComponents/Table';

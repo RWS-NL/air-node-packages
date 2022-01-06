@@ -1,46 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Snapshot Testing Circular Skeleton 1`] = `
-<span
+<ForwardRef(Box)
   className="skeleton"
-  style={
+  sx={
     Object {
       "borderRadius": "50%",
+      "display": "inline",
       "height": 200,
       "width": 200,
     }
   }
 >
   ‌
-</span>
+</ForwardRef(Box)>
 `;
 
 exports[`Snapshot Testing Optional Props 1`] = `
-<span
+<ForwardRef(Box)
   className="skeleton"
-  style={
+  sx={
     Object {
       "borderRadius": "0%",
+      "display": "inline",
       "height": 200,
       "width": 200,
     }
   }
 >
   ‌
-</span>
+</ForwardRef(Box)>
 `;
 
 exports[`Snapshot Testing Required Props 1`] = `
-<span
+<ForwardRef(Box)
   className="skeleton"
-  style={
+  sx={
     Object {
       "borderRadius": "0%",
+      "display": "inline",
       "height": undefined,
       "width": undefined,
     }
   }
 >
   ‌
-</span>
+</ForwardRef(Box)>
 `;

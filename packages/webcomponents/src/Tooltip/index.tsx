@@ -1,6 +1,5 @@
-import Box from '@material-ui/core/Box';
-import MUITooltip, { TooltipProps as MUITooltipProps } from '@material-ui/core/Tooltip';
-import { CSSProperties } from '@material-ui/styles';
+import Box from '@mui/material/Box';
+import MUITooltip, { TooltipProps as MUITooltipProps } from '@mui/material/Tooltip';
 import clsx from 'clsx';
 import React, { memo } from 'react';
 import css from './Tooltip.scss';
@@ -10,8 +9,6 @@ export interface TooltipProps extends MUITooltipProps {
   'data-qa'?: string;
   /** Custom CSS classes to pass to the tooltip */
   customclasses?: string | string[];
-  /** Any additional CSSProperties to pass to the component */
-  style?: CSSProperties;
 }
 
 /**

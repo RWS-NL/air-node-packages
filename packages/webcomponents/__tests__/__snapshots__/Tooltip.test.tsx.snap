@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Snapshot Testing Optional Props 1`] = `
-<WithStyles(ForwardRef(Tooltip))
+<ForwardRef(Tooltip)
   classes={
     Object {
       "popper": "popper",
@@ -17,22 +17,22 @@ exports[`Snapshot Testing Optional Props 1`] = `
     }
   }
   title={
-    <Styled(MuiBox)
+    <ForwardRef(Box)
       className="box"
       data-qa="snap-qa"
     >
       SnapTitle
-    </Styled(MuiBox)>
+    </ForwardRef(Box)>
   }
 >
   <span>
     Snappy Text
   </span>
-</WithStyles(ForwardRef(Tooltip))>
+</ForwardRef(Tooltip)>
 `;
 
 exports[`Snapshot Testing Required Props 1`] = `
-<WithStyles(ForwardRef(Tooltip))
+<ForwardRef(Tooltip)
   classes={
     Object {
       "popper": "popper",
@@ -42,15 +42,15 @@ exports[`Snapshot Testing Required Props 1`] = `
   enterDelay={300}
   placement="top"
   title={
-    <Styled(MuiBox)
+    <ForwardRef(Box)
       className="box"
     >
       SnapTitle
-    </Styled(MuiBox)>
+    </ForwardRef(Box)>
   }
 >
   <span>
     Snappy Text
   </span>
-</WithStyles(ForwardRef(Tooltip))>
+</ForwardRef(Tooltip)>
 `;

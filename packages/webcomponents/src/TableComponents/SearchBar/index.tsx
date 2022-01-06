@@ -1,12 +1,11 @@
-/* eslint-disable */
-import IconButton from '@material-ui/core/IconButton';
-import InputBase from '@material-ui/core/InputBase';
-import Paper from '@material-ui/core/Paper';
-import CloseIcon from '@material-ui/icons/Close';
-import SearchIcon from '@material-ui/icons/Search';
-import { CSSProperties } from '@material-ui/styles';
+import IconButton from '@mui/material/IconButton';
+import InputBase from '@mui/material/InputBase';
+import Paper from '@mui/material/Paper';
+import CloseIcon from '@mui/icons-material/Close';
+import SearchIcon from '@mui/icons-material/Search';
 import React, { ChangeEvent, KeyboardEvent, memo, useState, useEffect } from 'react';
 import css from './SearchBar.scss';
+import { SxProps } from '@mui/material';
 
 export interface SearchBarProps {
   /** Whether to clear search on escape */
@@ -34,7 +33,7 @@ export interface SearchBarProps {
   /** Sets placeholder text for the embedded text field. */
   placeholder?: string;
   /** Override the inline-styles of the root element. */
-  style?: CSSProperties;
+  sx?: SxProps;
   /** Override the paper element elevation */
   paperElevation?: number;
   /** Data-qa tag to apply to the search bar and input element */

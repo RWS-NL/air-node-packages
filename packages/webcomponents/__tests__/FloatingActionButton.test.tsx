@@ -1,5 +1,5 @@
-import { Fab } from '@material-ui/core';
-import AccessAlarm from '@material-ui/icons/AccessAlarm';
+import { Fab } from '@mui/material';
+import AccessAlarm from '@mui/icons-material/AccessAlarm';
 import { FloatingActionButton } from '@src/FloatingActionButton';
 import { Tooltip } from '@src/Tooltip';
 import { shallow, ShallowWrapper } from 'enzyme';

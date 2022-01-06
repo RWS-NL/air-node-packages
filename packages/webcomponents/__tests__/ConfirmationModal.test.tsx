@@ -1,5 +1,5 @@
-import CheckCircle from '@material-ui/icons/CheckCircle';
-import WarningIcon from '@material-ui/icons/Warning';
+import CheckCircle from '@mui/icons-material/CheckCircle';
+import WarningIcon from '@mui/icons-material/Warning';
 import { Button } from '@src/Button';
 import { ConfirmationModal, ConfirmationModalProps } from '@src/ConfirmationModal';
 import { shallow, ShallowWrapper } from 'enzyme';
@@ -40,7 +40,6 @@ describe('Render Testing', () => {
   test('should include mandatory props', () => {
     setup();
     expect(confirmationModal.find(Button)).toHaveLength(2);
-    expect(confirmationModal.prop('disableBackdropClick')).toBe(true);
     expect(confirmationModal.prop('disableEscapeKeyDown')).toBe(true);
   });
 

@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Snapshot Testing Optional Props 1`] = `
-<WithStyles(ForwardRef(Paper))
+<ForwardRef(Paper)
   className="paper"
   elevation={3}
   square={true}
 >
-  <WithStyles(ForwardRef(InputBase))
+  <ForwardRef(InputBase)
     className="input"
     data-qa="snap-qa"
     disabled={true}
@@ -23,7 +23,7 @@ exports[`Snapshot Testing Optional Props 1`] = `
     placeholder="Snaptest"
     value=""
   />
-  <WithStyles(ForwardRef(IconButton))
+  <ForwardRef(IconButton)
     aria-label="Snaptest"
     className="inputButton"
     color="primary"
@@ -35,16 +35,16 @@ exports[`Snapshot Testing Optional Props 1`] = `
     <Memo(ForwardRef(SearchIcon))
       className="inputSVG"
     />
-  </WithStyles(ForwardRef(IconButton))>
-</WithStyles(ForwardRef(Paper))>
+  </ForwardRef(IconButton)>
+</ForwardRef(Paper)>
 `;
 
 exports[`Snapshot Testing Required Props 1`] = `
-<WithStyles(ForwardRef(Paper))
+<ForwardRef(Paper)
   className="paper"
   square={true}
 >
-  <WithStyles(ForwardRef(InputBase))
+  <ForwardRef(InputBase)
     className="input"
     fullWidth={true}
     inputProps={
@@ -59,7 +59,7 @@ exports[`Snapshot Testing Required Props 1`] = `
     placeholder="Search..."
     value=""
   />
-  <WithStyles(ForwardRef(IconButton))
+  <ForwardRef(IconButton)
     aria-label="Search..."
     className="inputButton"
     color="primary"
@@ -70,6 +70,6 @@ exports[`Snapshot Testing Required Props 1`] = `
     <Memo(ForwardRef(SearchIcon))
       className="inputSVG"
     />
-  </WithStyles(ForwardRef(IconButton))>
-</WithStyles(ForwardRef(Paper))>
+  </ForwardRef(IconButton)>
+</ForwardRef(Paper)>
 `;

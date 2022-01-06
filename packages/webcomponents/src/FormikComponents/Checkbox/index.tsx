@@ -1,7 +1,7 @@
-import MUICheckbox, { CheckboxProps as MUICheckboxProps } from '@material-ui/core/Checkbox';
-import FormControlLabel, { FormControlLabelProps } from '@material-ui/core/FormControlLabel';
-import CheckBoxOutlineFilledIcon from '@material-ui/icons/CheckBox';
-import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
+import MUICheckbox, { CheckboxProps as MUICheckboxProps } from '@mui/material/Checkbox';
+import FormControlLabel, { FormControlLabelProps } from '@mui/material/FormControlLabel';
+import CheckBoxOutlineFilledIcon from '@mui/icons-material/CheckBox';
+import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
 import { Field, FieldProps } from 'formik';
 import React, { ChangeEvent, forwardRef } from 'react';
 import { Tooltip, TooltipProps } from '../../Tooltip';

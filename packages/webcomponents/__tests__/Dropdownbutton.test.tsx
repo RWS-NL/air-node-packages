@@ -1,4 +1,4 @@
-import CloudDownload from '@material-ui/icons/CloudDownload';
+import CloudDownload from '@mui/icons-material/CloudDownload';
 import { Dropdownbutton, DropdownbuttonProps } from '@src/Dropdownbutton';
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';

@@ -15,8 +15,8 @@ beforeAll(() => {
       rowsPerPage={5}
       count={20}
       page={0}
-      onChangePage={mockOnChangePage}
-      onChangeRowsPerPage={mockOnchangeRowsPerPage}
+      onPageChange={mockOnChangePage}
+      onRowsPerPageChange={mockOnchangeRowsPerPage}
     />
   );
 });
@@ -35,8 +35,8 @@ describe('Snapshot Testing', () => {
         rowsPerPage={5}
         count={20}
         page={0}
-        onChangePage={mockOnChangePage}
-        onChangeRowsPerPage={mockOnchangeRowsPerPage}
+        onPageChange={mockOnChangePage}
+        onRowsPerPageChange={mockOnchangeRowsPerPage}
       />
     );
     expect(tablePagination).toMatchSnapshot();
@@ -51,8 +51,8 @@ describe('Snapshot Testing', () => {
         rowsPerPage={5}
         count={20}
         page={0}
-        onChangePage={mockOnChangePage}
-        onChangeRowsPerPage={mockOnchangeRowsPerPage}
+        onPageChange={mockOnChangePage}
+        onRowsPerPageChange={mockOnchangeRowsPerPage}
         data-qa='snapshot-qa'
         ActionsComponent='div'
         customClasses={['snapshot-class']}
