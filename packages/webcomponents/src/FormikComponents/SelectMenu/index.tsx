@@ -59,7 +59,7 @@ export const SelectMenu = <T extends SelectMenuOptionValues>({
 
   return (
     <Fragment>
-      <FormControl variant='outlined' fullWidth>
+      <FormControl variant='standard' fullWidth>
         <InputLabel
           classes={{ root: css.inputLabel, shrink: css.inputLabelShrink }}
           ref={inputLabel}

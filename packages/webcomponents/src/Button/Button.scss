@@ -8,6 +8,7 @@
   height: 3.2rem;
   line-height: initial;
   margin-right: 1%;
+  text-transform: none;
 
   &Label {
     @extend %fontNormal;
@@ -41,10 +42,21 @@
         color: $textBlack;
       }
     }
+
+    &Error {
+      background-color: $white;
+      color: $red100;
+
+      > span {
+        color: $red100;
+      }
+    }
   }
 
   &Disabled {
     background-color: $grey35;
+    border-color: $grey35;
+    box-shadow: none;
     color: $textBlack;
 
     > span {

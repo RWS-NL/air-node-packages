@@ -28,7 +28,7 @@
     "@babel/preset-env": "^7.16.7",
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
-    "@commitlint/cli": "^16.0.1",
+    "@commitlint/cli": "^16.0.2",
     "@commitlint/config-conventional": "^16.0.0",
     "@commitlint/load": "^16.0.0",
     "@emotion/react": "^11.7.1",
@@ -68,7 +68,7 @@
     "jest": "^27.4.7",
     "jest-circus": "^27.4.6",
     "lerna": "^4.0.0",
-    "lint-staged": "^12.1.5",
+    "lint-staged": "^12.1.7",
     "lodash.debounce": "^4.0.8",
     "lodash.orderby": "^4.6.0",
     "moment": "^2.29.0",
@@ -80,7 +80,7 @@
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.3.0",
     "rimraf": "^3.0.0",
-    "sass": "^1.46.0",
+    "sass": "^1.47.0",
     "serve": "^13.0.2",
     "stylelint": "^14.2.0",
     "ts-jest": "^27.1.2",
@@ -112,6 +112,7 @@
     "kind-of": "^6.0.3"
   },
   "dependencies": {
+    "@mui/styles": "^5.2.3",
     "@rws-air/utils": "^5.2.3",
     "glob-parent": "^6.0.2",
     "is-svg": "^4.3.2"

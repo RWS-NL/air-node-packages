@@ -1,4 +1,5 @@
 import { createTheme, ThemeProvider, Theme } from '@mui/material/styles';
+import { StylesProvider } from '@mui/styles';
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import Home from './Home';
@@ -16,11 +17,13 @@ const theme: Theme = createTheme({
 });
 
 const App: React.FC = () => (
-  <ThemeProvider theme={theme}>
-    <BrowserRouter>
-      <Home />
-    </BrowserRouter>
-  </ThemeProvider>
+  <StylesProvider injectFirst>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <Home />
+      </BrowserRouter>
+    </ThemeProvider>
+  </StylesProvider>
 );
 
 export default App;

@@ -37,7 +37,7 @@ export const TextField: FC<TextFieldProps> = (props) => {
       onChange={onChange}
       onBlur={onBlur}
       margin='dense'
-      variant='outlined'
+      variant='standard'
       className={props.className}
       fullWidth
       autoFocus={props.autoFocus}
