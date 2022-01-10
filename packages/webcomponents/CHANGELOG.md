@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.3.10](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@14.3.9...@rws-air/webcomponents@14.3.10) (2022-01-10)
+
+
+### Bug Fixes
+
+* **button:** don't show shadow when button is disabled ([51ec49b](https://github.com/RWS-NL/air-node-packages/commit/51ec49bb39ee341eb4b707cbdb112b6569cc7d64))
+
+
+
+
+
 ## [14.3.9](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@14.3.8...@rws-air/webcomponents@14.3.9) (2022-01-10)
 
 
