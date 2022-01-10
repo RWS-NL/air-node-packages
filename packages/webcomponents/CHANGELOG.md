@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.3.9](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@14.3.8...@rws-air/webcomponents@14.3.9) (2022-01-10)
+
+
+### Bug Fixes
+
+* **formikcomponents:** small css changes to FormikComponents and updated packages ([e64a554](https://github.com/RWS-NL/air-node-packages/commit/e64a5545cedf6c949392d43aa687e6aa721c4e8d))
+
+
+
+
+
 ## [14.3.8](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@14.3.7...@rws-air/webcomponents@14.3.8) (2022-01-06)
 
 **Note:** Version bump only for package @rws-air/webcomponents
