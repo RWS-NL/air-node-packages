@@ -42,25 +42,11 @@
         color: $textBlack;
       }
     }
-
-    &Error {
-      background-color: $white;
-      color: $red100;
-
-      > span {
-        color: $red100;
-      }
-    }
   }
 
   &Disabled {
     background-color: $grey35;
-    border-color: $grey35;
-    box-shadow: none;
-    color: $textBlack;
-
-    > span {
-      color: $textBlack;
-    }
+    border-color: $grey35 !important;
+    box-shadow: none !important;
   }
 }
