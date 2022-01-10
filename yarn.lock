@@ -1388,9 +1388,9 @@
     strip-json-comments "^3.1.1"
 
 "@favware/querystring@^7.0.1":
-  version "7.0.3"
-  resolved "https://registry.yarnpkg.com/@favware/querystring/-/querystring-7.0.3.tgz#45f54e2530f127a6fb9dfcabd573bcb7d3665c4e"
-  integrity sha512-zWKHF9Ugk6GfPsgD5EBMpR29mcjCOw5WLcLCuAuG/6HdKAoz5/FZ+ZTJHBGcrsz1pl+mxZ9KbkJf4K9UmDXnOw==
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/@favware/querystring/-/querystring-7.0.4.tgz#e7c5044ba61e54e8f5bf8139510cca8b2474c057"
+  integrity sha512-U5SVrU4NNav67REeAHA7qTJru/OxMdebJJjGNcJ7ph44lMZAAME++61n1e/W2wWiwyRg85UV4UBLGd9EcUfn2Q==
 
 "@favware/yamlreader@^4.0.2":
   version "4.0.2"
