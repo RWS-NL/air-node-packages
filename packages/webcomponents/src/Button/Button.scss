@@ -45,7 +45,7 @@
   }
 
   &Disabled {
-    background-color: $grey35;
+    background-color: $grey35 !important;
     border-color: $grey35 !important;
     box-shadow: none !important;
   }
