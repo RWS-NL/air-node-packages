@@ -36,7 +36,7 @@ export const DatePicker: FC<DatePickerProps> = ({ minDate, label, ...props }) =>
       renderInput={_props => 
         <MUITextField
           fullWidth
-          variant='standard'
+          variant='outlined'
           label={label}
           type='date'
           InputLabelProps={{
