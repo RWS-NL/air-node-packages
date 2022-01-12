@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.3.16](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@14.3.15...@rws-air/webcomponents@14.3.16) (2022-01-12)
+
+
+### Bug Fixes
+
+* **confirmationmodal:** fix: styling dialog title ([a506d97](https://github.com/RWS-NL/air-node-packages/commit/a506d97e407df0fa87cabece37ba05501279e273))
+
+
+
+
+
 ## [14.3.15](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@14.3.14...@rws-air/webcomponents@14.3.15) (2022-01-12)
 
 
