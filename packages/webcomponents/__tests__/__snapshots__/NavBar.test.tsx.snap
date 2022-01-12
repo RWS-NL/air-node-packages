@@ -36,6 +36,7 @@ exports[`NavBar Tests Snapshot Testing Required Props 1`] = `
             ],
           }
         }
+        textColor="inherit"
         value={1}
         variant="standard"
       >

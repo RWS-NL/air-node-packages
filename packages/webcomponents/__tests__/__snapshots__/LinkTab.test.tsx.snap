@@ -4,9 +4,9 @@ exports[`LinkTab Tests Snapshot Testing External Tab 1`] = `
 <ForwardRef(Tab)
   classes={
     Object {
+      "root": "linkText",
       "selected": "selectedTab",
       "textColorInherit": "linkTextInherit",
-      "wrapped": "linkText",
     }
   }
   component="a"
@@ -20,9 +20,9 @@ exports[`LinkTab Tests Snapshot Testing External Tab with Open In New Tab 1`] = 
 <ForwardRef(Tab)
   classes={
     Object {
+      "root": "linkText",
       "selected": "selectedTab",
       "textColorInherit": "linkTextInherit",
-      "wrapped": "linkText",
     }
   }
   component="a"
@@ -37,9 +37,9 @@ exports[`LinkTab Tests Snapshot Testing Required Props 1`] = `
 <ForwardRef(Tab)
   classes={
     Object {
+      "root": "linkText",
       "selected": "selectedTab",
       "textColorInherit": "linkTextInherit",
-      "wrapped": "linkText",
     }
   }
   component={
