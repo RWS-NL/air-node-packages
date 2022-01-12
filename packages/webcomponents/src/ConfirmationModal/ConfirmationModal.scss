@@ -45,17 +45,14 @@
 }
 
 .title {
+  align-content: center;
+  color: $logoBlue;
+  display: flex;
+  font-size: 1.1rem;
+  font-weight: bolder;
   margin-left: 5vw;
   margin-right: 5vw;
   padding-top: 3vw;
-
-  > * {
-    align-content: center;
-    color: $logoBlue;
-    display: flex;
-    font-size: 1.1rem;
-    font-weight: bolder;
-  }
 
   &Icon {
     box-sizing: content-box;
