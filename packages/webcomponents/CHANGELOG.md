@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.3.15](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@14.3.14...@rws-air/webcomponents@14.3.15) (2022-01-12)
+
+
+### Bug Fixes
+
+* **navbar, linktab:** updated snapshot tests ([89620ec](https://github.com/RWS-NL/air-node-packages/commit/89620ec4038a11c5c4b3ebcddfe99bc67f429868))
+
+
+
+
+
 ## [14.3.14](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@14.3.13...@rws-air/webcomponents@14.3.14) (2022-01-11)
 
 
