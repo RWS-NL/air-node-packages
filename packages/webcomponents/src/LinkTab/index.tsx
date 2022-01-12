@@ -35,7 +35,7 @@ export const LinkTab = memo(({ to, label, external = false, openInNewTab = false
         label={label}
         target={openInNewTab ? '_blank' : '_self'}
         rel={openInNewTab ? 'noreferrer noopener' : undefined}
-        classes={{ wrapped: css.linkText, selected: css.selectedTab, textColorInherit: css.linkTextInherit }}
+        classes={{ root: css.linkText, selected: css.selectedTab, textColorInherit: css.linkTextInherit }}
       />
     );
   }
@@ -46,7 +46,7 @@ export const LinkTab = memo(({ to, label, external = false, openInNewTab = false
       component={Link}
       to={to}
       label={label}
-      classes={{ wrapped: css.linkText, selected: css.selectedTab, textColorInherit: css.linkTextInherit }}
+      classes={{ root: css.linkText, selected: css.selectedTab, textColorInherit: css.linkTextInherit }}
     />
   );
 });

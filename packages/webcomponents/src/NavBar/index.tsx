@@ -47,6 +47,7 @@ export const NavBar = memo(
             value={activeTab}
             onChange={onTabChange}
             classes={{ indicator: css.tabIndicator }}
+            textColor='inherit'
           >
             {tabs.map((tab, index) => (
               <LinkTab
