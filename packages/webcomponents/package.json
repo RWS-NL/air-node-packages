@@ -38,7 +38,7 @@
   "dependencies": {
     "@favware/querystring": "^7.0.4",
     "clsx": "^1.1.1",
-    "i18next": "^21.6.5",
+    "i18next": "^21.6.6",
     "lodash.debounce": "^4.0.8",
     "moment": "^2.28.0",
     "react-i18next": "^11.15.3",
@@ -60,7 +60,7 @@
     "access": "public"
   },
   "engines": {
-    "node": ">=10",
+    "node": ">=17",
     "npm": ">=6"
   },
   "repository": {
