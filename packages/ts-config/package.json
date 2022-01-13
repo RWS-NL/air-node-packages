@@ -21,7 +21,7 @@
     "tsconfig.json"
   ],
   "engines": {
-    "node": ">=17",
+    "node": ">=16",
     "npm": ">=6"
   },
   "repository": {

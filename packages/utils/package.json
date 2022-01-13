@@ -28,7 +28,7 @@
     "access": "public"
   },
   "engines": {
-    "node": ">=17",
+    "node": ">=16",
     "npm": ">=6"
   },
   "repository": {
@@ -52,6 +52,6 @@
     "ts"
   ],
   "dependencies": {
-    "@discordjs/collection": "^0.4.0"
+    "@discordjs/collection": "^0.2.0"
   }
 }
