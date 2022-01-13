@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.16](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/local-components-test@4.0.15...@rws-air/local-components-test@4.0.16) (2022-01-13)
+
+**Note:** Version bump only for package @rws-air/local-components-test
+
+
+
+
+
 ## [4.0.15](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/local-components-test@4.0.14...@rws-air/local-components-test@4.0.15) (2022-01-13)
 
 **Note:** Version bump only for package @rws-air/local-components-test
