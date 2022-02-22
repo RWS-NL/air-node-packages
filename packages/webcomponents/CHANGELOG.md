@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.4.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@14.3.18...@rws-air/webcomponents@14.4.0) (2022-02-22)
+
+
+### Features
+
+* **textfield, paginationactions:** disabled style TextField. Limited chips for PaginationActions ([5891069](https://github.com/RWS-NL/air-node-packages/commit/5891069edba1f402dc6f7531e1751a071dddc36b))
+
+
+
+
+
 ## [14.3.18](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@14.3.17...@rws-air/webcomponents@14.3.18) (2022-01-13)
 
 **Note:** Version bump only for package @rws-air/webcomponents
