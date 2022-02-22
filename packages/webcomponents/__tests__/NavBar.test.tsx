@@ -5,9 +5,7 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import React, { SyntheticEvent } from 'react';
 
 let currentValue = 0;
-const onTabChange = jest.fn(
-  (_event: SyntheticEvent<Element, Event>, newVal: number) => (currentValue = newVal)
-);
+const onTabChange = jest.fn((_event: SyntheticEvent<Element, Event>, newVal: number) => (currentValue = newVal));
 const tabs: LinkTabProps[] = [
   { label: 'root', external: false, to: '/root' },
   { label: 'CGI', external: true, to: 'https://cgi.com' },

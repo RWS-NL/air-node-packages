@@ -1,7 +1,4 @@
-import MUITablePagination, {
-  TablePaginationBaseProps,
-  TablePaginationTypeMap
-} from '@mui/material/TablePagination';
+import MUITablePagination, { TablePaginationBaseProps, TablePaginationTypeMap } from '@mui/material/TablePagination';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import clsx from 'clsx';
 import React, { ComponentType, memo, ReactNode } from 'react';

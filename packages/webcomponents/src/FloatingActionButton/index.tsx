@@ -24,7 +24,6 @@ export interface FabProps extends MFabProps {
  */
 export const FloatingActionButton = memo(
   ({ children, tooltipContent, disableTooltip, TooltipProps, ...props }: FabProps) => {
-
     if (disableTooltip) {
       return (
         <Fab

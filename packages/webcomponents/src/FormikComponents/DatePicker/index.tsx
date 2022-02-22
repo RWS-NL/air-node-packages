@@ -1,4 +1,4 @@
-import { DatePicker as MUIDatePicker} from '@mui/lab';
+import { DatePicker as MUIDatePicker } from '@mui/lab';
 import { TextField as MUITextField } from '@mui/material';
 import { fieldToDatePicker, DatePickerProps as MuiDatePickerProps } from 'formik-mui-lab';
 import React, { FC } from 'react';
@@ -33,7 +33,7 @@ export const DatePicker: FC<DatePickerProps> = ({ minDate, label, ...props }) =>
           notchedOutline: css.outline
         }
       }}
-      renderInput={_props => 
+      renderInput={(_props) => (
         <MUITextField
           fullWidth
           variant='outlined'
@@ -49,7 +49,7 @@ export const DatePicker: FC<DatePickerProps> = ({ minDate, label, ...props }) =>
             classes: { root: css.errorLabel }
           }}
         />
-      }
+      )}
     />
   );
 };

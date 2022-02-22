@@ -127,7 +127,7 @@ const renderTablePagination = (props: TableProps, customClasses: string) => {
       rowsPerPage={props.rowsPerPage}
       page={props.page}
       count={props.rowcount}
-      onPageChange={(props.onPageChange) as any}
+      onPageChange={props.onPageChange as any}
       onRowsPerPageChange={props.onRowsPerPageChange}
       customClasses={customClasses}
       data-qa={props.tableqas.pagination}

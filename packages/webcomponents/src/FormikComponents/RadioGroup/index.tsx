@@ -1,9 +1,5 @@
 import { FormControlLabel, Radio } from '@mui/material';
-import {
-  fieldToRadioGroup,
-  RadioGroup as MUIRadioGroup,
-  RadioGroupProps as MUIRadopGroupProps
-} from 'formik-mui';
+import { fieldToRadioGroup, RadioGroup as MUIRadioGroup, RadioGroupProps as MUIRadopGroupProps } from 'formik-mui';
 import React from 'react';
 import css from './RadioGroup.scss';
 
