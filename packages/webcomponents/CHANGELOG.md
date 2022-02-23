@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.4.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@14.4.0...@rws-air/webcomponents@14.4.1) (2022-02-23)
+
+
+### Bug Fixes
+
+* **textfield, paginationactions:** reverted changes and added custom prop to table ([4ee3fc9](https://github.com/RWS-NL/air-node-packages/commit/4ee3fc9d9cbb9d19f68a3c2062b20948a1209657))
+
+
+
+
+
 # [14.4.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@14.3.18...@rws-air/webcomponents@14.4.0) (2022-02-22)
 
 
