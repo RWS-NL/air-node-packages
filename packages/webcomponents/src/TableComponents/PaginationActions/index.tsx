@@ -21,9 +21,9 @@ export type PaginationActionsProps = TablePaginationActionsProps & {
 
 type ChangePageEvent = (page: number) => (event: React.MouseEvent<any, any>) => void;
 
-const renderCurrentPage = (pageNumber: number, clickEvent: ChangePageEvent): JSX.Element => (
+const renderCurrentPage = (key: number, pageNumber: number, clickEvent: ChangePageEvent): JSX.Element => (
   <Chip
-    key={pageNumber}
+    key={key}
     label={pageNumber}
     color='primary'
     variant={undefined}
@@ -32,74 +32,25 @@ const renderCurrentPage = (pageNumber: number, clickEvent: ChangePageEvent): JSX
   />
 );
 
-const renderPage = (pageNumber: number, clickEvent: ChangePageEvent, dots?: boolean): JSX.Element => {
-  if (dots) {
-    return (
-      <Box component='span' key={pageNumber} className={clsx(css.paginationNumbers)}>
-        ...
-      </Box>
-    );
-  } else {
-    return (
-      <Box
-        component='span'
-        key={pageNumber}
-        onClick={clickEvent(pageNumber - 1)}
-        className={clsx(css.paginationNumbers)}
-      >
-        {pageNumber}
-      </Box>
-    );
-  }
-};
+const renderPages = (totalPages: number, currentPageIndex: number, handlePageClick: ChangePageEvent) =>
+  [...Array(totalPages).keys()]
+    .map((pageNumber) => ++pageNumber)
+    .map((pageNumber, pageIndex) => {
+      if (currentPageIndex === pageIndex) {
+        return renderCurrentPage(pageIndex, pageNumber, handlePageClick);
+      }
 
-const renderPages = (totalPages: number, currentPageIndex: number, handlePageClick: ChangePageEvent) => {
-  currentPageIndex = ++currentPageIndex;
-  const showSDots = currentPageIndex > 4;
-  const showEDots = currentPageIndex < totalPages - 3;
-
-  const elements = [];
-  if (currentPageIndex === 1) {
-    elements.push(renderCurrentPage(currentPageIndex, handlePageClick));
-  } else {
-    elements.push(renderPage(1, handlePageClick));
-  }
-  if (showSDots) {
-    elements.push(renderPage(5, handlePageClick, true));
-  } else {
-    for (let i = 2; i < currentPageIndex - 1; i++) {
-      elements.push(renderPage(i, handlePageClick));
-    }
-  }
-
-  if (currentPageIndex > 2) {
-    elements.push(renderPage(currentPageIndex - 1, handlePageClick));
-  }
-
-  if (currentPageIndex !== 1 && currentPageIndex !== totalPages) {
-    elements.push(renderCurrentPage(currentPageIndex, handlePageClick));
-  }
-
-  if (currentPageIndex < totalPages - 1) {
-    elements.push(renderPage(currentPageIndex + 1, handlePageClick));
-  }
-
-  if (showEDots) {
-    elements.push(renderPage(totalPages - 4, handlePageClick, true));
-  } else {
-    for (let i = currentPageIndex + 2; i < totalPages; i++) {
-      elements.push(renderPage(i, handlePageClick));
-    }
-  }
-
-  if (currentPageIndex === totalPages) {
-    elements.push(renderCurrentPage(totalPages, handlePageClick));
-  } else {
-    elements.push(renderPage(totalPages, handlePageClick));
-  }
-
-  return elements;
-};
+      return (
+        <Box
+          component='span'
+          key={pageIndex}
+          onClick={handlePageClick(pageIndex)}
+          className={clsx(css.paginationNumbers)}
+        >
+          {pageNumber}
+        </Box>
+      );
+    });
 
 /**
  * Constructs a table pagination action navigators using pre-defined Rijkswaterstaat styling
@@ -142,7 +93,7 @@ export const PaginationActions = memo(
         />
 
         <If condition={isOnMobile}>
-          <Then>{renderCurrentPage(currentPageIndex + 1, handlePageClick)}</Then>
+          <Then>{renderCurrentPage(1, currentPageIndex + 1, handlePageClick)}</Then>
           <Else>{renderPages(totalPages, currentPageIndex, handlePageClick)}</Else>
         </If>
 

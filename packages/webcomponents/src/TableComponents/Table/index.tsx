@@ -2,6 +2,7 @@ import MUITable, { TableProps as MUITableProps } from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableHead from '@mui/material/TableHead';
 import { TablePaginationProps as MUITablePaginationProps } from '@mui/material/TablePagination';
+import { TablePaginationActionsProps } from '@mui/material/TablePagination/TablePaginationActions';
 import TableRow from '@mui/material/TableRow';
 import clsx from 'clsx';
 import React, { Fragment, memo, ReactNode } from 'react';
@@ -99,6 +100,12 @@ export interface TableProps
    */
   showBottomPagination?: boolean;
   /**
+   * The component used for displaying the actions.
+   * Either a string to use a HTML element or a component.
+   * @default TablePaginationActions
+   */
+  customPagination?: React.ElementType<TablePaginationActionsProps>;
+  /**
    * Disables the table toolbar
    * @default false
    * @deprecated A toolbar in a table is more than a table component should do. See Toolbar component.
@@ -131,6 +138,7 @@ const renderTablePagination = (props: TableProps, customClasses: string) => {
       onRowsPerPageChange={props.onRowsPerPageChange}
       customClasses={customClasses}
       data-qa={props.tableqas.pagination}
+      customPagination={props.customPagination}
     />
   );
 };

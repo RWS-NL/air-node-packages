@@ -1,4 +1,5 @@
 import MUITablePagination, { TablePaginationBaseProps, TablePaginationTypeMap } from '@mui/material/TablePagination';
+import { TablePaginationActionsProps } from '@mui/material/TablePagination/TablePaginationActions';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import clsx from 'clsx';
 import React, { ComponentType, memo, ReactNode } from 'react';
@@ -17,6 +18,12 @@ export interface PaginationProps extends MutatedMUITablePaginationProps {
   'data-qa'?: string;
   /** Custom CSS classes to pass to the button */
   customClasses?: string | string[];
+  /**
+   * The component used for displaying the actions.
+   * Either a string to use a HTML element or a component.
+   * @default TablePaginationActions
+   */
+  customPagination?: React.ElementType<TablePaginationActionsProps>;
 }
 
 /**
@@ -55,7 +62,7 @@ export const Pagination = memo((props: PaginationProps) => {
       classes={{ root: css.text, selectIcon: css.selectIcon, menuItem: css.text }}
       rowsPerPage={props.rowsPerPage}
       rowsPerPageOptions={props.rowsPerPageOptions}
-      ActionsComponent={PaginationActions}
+      ActionsComponent={props.customPagination || PaginationActions}
       data-qa={props['data-qa']}
     />
   );

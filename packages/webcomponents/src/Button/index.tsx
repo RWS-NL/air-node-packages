@@ -29,7 +29,7 @@ const classes = {
 };
 const StyledButton = styled(MUIButton)(({ theme }) => ({
   [`&.${classes.buttonShadow}`]: {
-    boxShadow: theme.shadows[1], 
+    boxShadow: theme.shadows[1],
     border: 'transparant'
   }
 }));

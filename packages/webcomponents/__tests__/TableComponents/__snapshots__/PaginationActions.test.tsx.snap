@@ -37,14 +37,14 @@ exports[`Snapshot Testing Optional Props 1`] = `
       <ForwardRef(Chip)
         className="activePageChip ie11ChipCorrection"
         color="primary"
-        key="1"
+        key="0"
         label={1}
         onClick={[Function]}
       />
       <ForwardRef(Box)
         className="paginationNumbers"
         component="span"
-        key="2"
+        key="1"
         onClick={[Function]}
       >
         2
@@ -52,14 +52,23 @@ exports[`Snapshot Testing Optional Props 1`] = `
       <ForwardRef(Box)
         className="paginationNumbers"
         component="span"
-        key="1"
+        key="2"
+        onClick={[Function]}
       >
-        ...
+        3
       </ForwardRef(Box)>
       <ForwardRef(Box)
         className="paginationNumbers"
         component="span"
-        key="5"
+        key="3"
+        onClick={[Function]}
+      >
+        4
+      </ForwardRef(Box)>
+      <ForwardRef(Box)
+        className="paginationNumbers"
+        component="span"
+        key="4"
         onClick={[Function]}
       >
         5
@@ -118,14 +127,14 @@ exports[`Snapshot Testing Required Props 1`] = `
       <ForwardRef(Chip)
         className="activePageChip ie11ChipCorrection"
         color="primary"
-        key="1"
+        key="0"
         label={1}
         onClick={[Function]}
       />
       <ForwardRef(Box)
         className="paginationNumbers"
         component="span"
-        key="2"
+        key="1"
         onClick={[Function]}
       >
         2
@@ -133,14 +142,23 @@ exports[`Snapshot Testing Required Props 1`] = `
       <ForwardRef(Box)
         className="paginationNumbers"
         component="span"
-        key="1"
+        key="2"
+        onClick={[Function]}
       >
-        ...
+        3
       </ForwardRef(Box)>
       <ForwardRef(Box)
         className="paginationNumbers"
         component="span"
-        key="5"
+        key="3"
+        onClick={[Function]}
+      >
+        4
+      </ForwardRef(Box)>
+      <ForwardRef(Box)
+        className="paginationNumbers"
+        component="span"
+        key="4"
         onClick={[Function]}
       >
         5
