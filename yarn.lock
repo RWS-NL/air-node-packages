@@ -11788,9 +11788,9 @@ react-i18next@^11.15.3:
     html-parse-stringify "^3.0.1"
 
 react-if@^4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/react-if/-/react-if-4.1.1.tgz#48404d7e7f9ce18ee26b5d80baa6e26883bfb128"
-  integrity sha512-frzHswesRqVVJ2XcGRoLyTvlB2yneib4R/FCqTG8AqBQnFdLNhqNODfzEA84EQZ0XwBAVe82Oe567kxaVmwj5w==
+  version "4.1.4"
+  resolved "https://registry.yarnpkg.com/react-if/-/react-if-4.1.4.tgz#aa33d954993f9d9992f0c7ab8ca9e40c5f2509f2"
+  integrity sha512-bjufPfCdPBiBy9EO/BeoxaqGc/xCwTu0coKtHfjpJw+v85DLMbpG43IUPISh+m3DzENx1rOYLpqbp2KaDmEYlg==
 
 react-is@^16.12.0, react-is@^16.13.1, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.6:
   version "16.13.1"
