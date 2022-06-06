@@ -52,6 +52,6 @@
     "ts"
   ],
   "dependencies": {
-    "@discordjs/collection": "^0.2.0"
+    "@discordjs/collection": "^0.7.0"
   }
 }
