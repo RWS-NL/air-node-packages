@@ -17,7 +17,21 @@ exports[`UserInfo tests Snapshot Testing Required Props 1`] = `
         color="textPrimary"
         variant="subtitle2"
       >
-        john.connor@rws.nl
+        <If
+          condition={false}
+        >
+          <Then>
+            <Memo()
+              placement="top"
+              title="externalId"
+            >
+              john.connor@rws.nl
+            </Memo()>
+          </Then>
+          <Else>
+            john.connor@rws.nl
+          </Else>
+        </If>
       </ForwardRef(Typography)>
     </When>
   </ForwardRef(Box)>
