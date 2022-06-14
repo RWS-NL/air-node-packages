@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.5.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@14.4.1...@rws-air/webcomponents@14.5.0) (2022-06-14)
+
+
+### Features
+
+* **webcomponents/userinfo:** tooltip externalId on user email ([4c452b4](https://github.com/RWS-NL/air-node-packages/commit/4c452b4effabf4fff91bb89c1f60ffd070ad28e3))
+
+
+
+
+
 ## [14.4.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@14.4.0...@rws-air/webcomponents@14.4.1) (2022-02-23)
 
 
