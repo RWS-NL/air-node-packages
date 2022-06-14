@@ -18,7 +18,7 @@ exports[`UserInfo tests Snapshot Testing Required Props 1`] = `
         <Then>
           <Memo()
             placement="top"
-            title="externalId"
+            title=""
           >
             <ForwardRef(Typography)
               align="center"

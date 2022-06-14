@@ -35,7 +35,7 @@ export const UserInfo = memo(
         <When condition={email !== undefined}>
           <If condition={externalId !== undefined}>
             <Then>
-              <Tooltip title='externalId' placement='top'>
+              <Tooltip title={externalId || ''} placement='top'>
                 <Typography {...EmailProps} color='textPrimary' variant='subtitle2' align='center'>
                   {email}
                 </Typography>
