@@ -1,6 +1,6 @@
 import { Box, Button, ButtonProps, Typography, TypographyProps } from '@mui/material';
 import React, { memo, ReactNode } from 'react';
-import { When } from 'react-if';
+import { When, If, Then, Else } from 'react-if';
 import css from './UserInfo.scss';
 import { Tooltip } from '../Tooltip';
 
@@ -8,7 +8,7 @@ export interface UserInfoProps {
   /** The email to display as current user */
   email: string | ReactNode;
   /** The external id of the current user */
-  externalId: string | ReactNode;
+  externalId?: string | ReactNode;
   /** The text to display for the relogin button */
   reloginText: ReactNode;
   /** Additional props to pass to the Typography component that renders the email */
@@ -34,9 +34,16 @@ export const UserInfo = memo(
       <Box component='div' data-qa='logged-in-email'>
         <When condition={email !== undefined}>
           <Typography {...EmailProps} color='textPrimary' variant='subtitle2' align='center'>
-            <Tooltip title='externalId' placement='top'>
-              {email}
-            </Tooltip>
+            <If condition={externalId !== undefined}>
+              <Then>
+                <Tooltip title='externalId' placement='top'>
+                  {email}
+                </Tooltip>
+              </Then>
+              <Else>
+                {email}
+              </Else>
+            </If>
           </Typography>
         </When>
       </Box>
