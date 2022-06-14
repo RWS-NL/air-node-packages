@@ -2,7 +2,7 @@ import { Box, Button, ButtonProps, Typography, TypographyProps } from '@mui/mate
 import React, { memo, ReactNode } from 'react';
 import { When } from 'react-if';
 import css from './UserInfo.scss';
-import { Tooltip } from '@src/Tooltip';
+import { Tooltip } from '../Tooltip';
 
 export interface UserInfoProps {
   /** The email to display as current user */
