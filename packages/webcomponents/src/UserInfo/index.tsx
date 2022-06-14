@@ -33,18 +33,20 @@ export const UserInfo = memo(
     <Box component='div' className={css.authInfo}>
       <Box component='div' data-qa='logged-in-email'>
         <When condition={email !== undefined}>
-          <Typography {...EmailProps} color='textPrimary' variant='subtitle2' align='center'>
-            <If condition={externalId !== undefined}>
-              <Then>
-                <Tooltip title='externalId' placement='top'>
+          <If condition={externalId !== undefined}>
+            <Then>
+              <Tooltip title='externalId' placement='top'>
+                <Typography {...EmailProps} color='textPrimary' variant='subtitle2' align='center'>
                   {email}
-                </Tooltip>
-              </Then>
-              <Else>
+                </Typography>
+              </Tooltip>
+            </Then>
+            <Else>
+              <Typography {...EmailProps} color='textPrimary' variant='subtitle2' align='center'>
                 {email}
-              </Else>
-            </If>
-          </Typography>
+              </Typography>
+            </Else>
+          </If>
         </When>
       </Box>
 
