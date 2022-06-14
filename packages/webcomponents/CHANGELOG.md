@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.5.1](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@14.5.0...@rws-air/webcomponents@14.5.1) (2022-06-14)
+
+
+### Bug Fixes
+
+* **webcomponents/userinfo:** replace static string with externalId ([b75f2ea](https://github.com/RWS-NL/air-node-packages/commit/b75f2eaf5e614f24f162fdd35797ff616c652fda))
+
+
+
+
+
 # [14.5.0](https://github.com/RWS-NL/air-node-packages/compare/@rws-air/webcomponents@14.4.1...@rws-air/webcomponents@14.5.0) (2022-06-14)
 
 
