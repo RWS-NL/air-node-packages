@@ -7203,9 +7203,9 @@ formdata-polyfill@^4.0.10:
     fetch-blob "^3.1.2"
 
 formik-mui-lab@^1.0.0-alpha.3:
-  version "1.0.0-alpha.3"
-  resolved "https://registry.yarnpkg.com/formik-mui-lab/-/formik-mui-lab-1.0.0-alpha.3.tgz#b96556e82fbea6a4a138ed5abc3392b4516f0157"
-  integrity sha512-YgiOPAI9y4+/Ko4ObZfyekho/dVfO6wWSZqQtMMFhicxnePTsjHDT8cipqocf1EsRIssdfViIUZm2xiMxykAMw==
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/formik-mui-lab/-/formik-mui-lab-1.0.0.tgz#049afd4329dc8790c259dfa5a8785d7099c9d2b3"
+  integrity sha512-4YSpaFXJ4fJ+er2Eu/XNcKyrrcUEWQiwxWjnSbki9bxRjjSDiKWCrRlDgM+vdl/HEiO+XrwrxA5I9M+xU4r1tg==
 
 formik-mui@^4.0.0-alpha.3:
   version "4.0.0-alpha.3"
