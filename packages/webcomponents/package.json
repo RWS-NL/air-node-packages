@@ -97,7 +97,7 @@
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-progress": "^1.1.2",
     "rollup-plugin-terser": "^7.0.0",
-    "rollup-plugin-typescript2": "^0.31.1"
+    "rollup-plugin-typescript2": "^0.33.0"
   },
   "gitHead": "75c3ee49bab3d92e2d204287397c1fa0cf6fce73"
 }
