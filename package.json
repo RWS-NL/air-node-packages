@@ -83,7 +83,7 @@
     "sass": "^1.48.0",
     "serve": "^13.0.2",
     "stylelint": "^14.2.0",
-    "ts-jest": "^27.1.2",
+    "ts-jest": "^29.0.5",
     "ts-node": "^10.4.0",
     "typedoc": "^0.22.10",
     "typedoc-plugin-lerna-packages": "^0.3.0",
