@@ -115,6 +115,6 @@
     "@mui/styles": "^5.2.3",
     "@rws-air/utils": "^5.2.3",
     "glob-parent": "^6.0.2",
-    "is-svg": "^4.3.2"
+    "is-svg": "^5.0.0"
   }
 }
