@@ -36,7 +36,7 @@
     "@mui/icons-material": "^5.2.5",
     "@mui/lab": "^5.0.0-alpha.64",
     "@mui/material": "^5.2.8",
-    "@types/enzyme": "3.10.11",
+    "@types/enzyme": "3.10.13",
     "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/glob": "^7.2.0",
     "@types/jest": "^27.4.0",
