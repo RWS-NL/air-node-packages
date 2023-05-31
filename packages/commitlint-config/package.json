@@ -19,7 +19,7 @@
     "!dist/.tsbuildinfo"
   ],
   "devDependencies": {
-    "@commitlint/lint": "^16.0.0"
+    "@commitlint/lint": "^17.6.5"
   },
   "dependencies": {
     "conventional-changelog-conventionalcommits": "4.6.3"
