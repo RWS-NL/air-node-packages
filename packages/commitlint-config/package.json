@@ -22,7 +22,7 @@
     "@commitlint/lint": "^16.0.0"
   },
   "dependencies": {
-    "conventional-changelog-conventionalcommits": "4.6.3"
+    "conventional-changelog-conventionalcommits": "6.0.0"
   },
   "publishConfig": {
     "access": "public"
