@@ -41,7 +41,7 @@
     "i18next": "^21.6.6",
     "lodash.debounce": "^4.0.8",
     "moment": "^2.28.0",
-    "react-i18next": "^11.15.3",
+    "react-i18next": "^13.2.1",
     "utility-types": "3.10.0"
   },
   "browserslist": {
